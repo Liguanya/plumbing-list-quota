@@ -185,7 +185,9 @@
       code: '8-' + (def.start + idx),
       name: def.name + ' 公称直径' + dn + 'mm以内',
       inferred: inferred,
-      dnTier: dn
+      dnTier: dn,
+      unit: '10m',
+      factor: 10
     };
   }
 
@@ -300,6 +302,8 @@
       var quota = matchQuota(it);
       it.quotaCode = quota.code;
       it.quotaName = quota.name;
+      it.quotaUnit = quota.unit || it.unit;
+      it.quotaFactor = quota.factor || 1;
       it.codeInferred = !!quota.inferred;
       it.dnTier = quota.dnTier || null;
       it.warn = buildWarn(it, quota);
@@ -317,6 +321,8 @@
     var q = matchQuota(it);
     it.quotaCode = q.code;
     it.quotaName = q.name;
+    it.quotaUnit = q.unit || it.unit;
+    it.quotaFactor = q.factor || 1;
     it.codeInferred = !!q.inferred;
     it.dnTier = q.dnTier || null;
     it.warn = buildWarn(it, q);
@@ -429,6 +435,7 @@
   // ============================================================
   // 导出
   // ============================================================
+  function round4(v) { return Math.round(v * 10000) / 10000; }
   function num2(v) { return v === null || v === undefined ? '' : Number(Number(v).toFixed(2)); }
 
   function exportJianjing(data) {
@@ -470,9 +477,11 @@
         it.listCode, '清单行', it.name, it.features, it.unit, it.quantity,
         hasPrice ? num2(it.price) : ''
       ]);
+      var qFactor = it.quotaFactor || 1;
       wsData.push([
         it.index + '.1', '', '', '', '', '', '', '',
-        it.quotaCode, '定额行', it.quotaName, '', it.unit, it.quantity, ''
+        it.quotaCode, '定额行', it.quotaName, '', it.quotaUnit || it.unit,
+        round4(it.quantity / qFactor), ''
       ]);
       if (hasPrice) {
         zIdx++;

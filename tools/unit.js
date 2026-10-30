@@ -169,5 +169,17 @@ ck('室外排水可选接口', A.jointsOf('out', 'drain'), ['asbestos', 'cement'
 ck('室内排水可选接口', A.jointsOf('in', 'drain'), ['asbestos', 'cement']);
 ck('默认接口石棉水泥', A.defaultJoint('out', 'water'), 'asbestos');
 
+// ============================================================
+// 19. 定额单位与换算
+// ============================================================
+(function () {
+  var PK = A.getPeriods()[0].period;
+  var it = A.parseRows([[1, '室内排水铸铁管 DN100', 120]], PK, 'gld')[0];
+  ck('定额单位10m', it.quotaUnit, '10m');
+  ck('换算系数10', it.quotaFactor, 10);
+  ck('清单单位m', it.unit, 'm');
+  ck('清单工程量保留', it.quantity, 120);
+})();
+
 console.log('\n结果: ' + pass + ' 通过, ' + fail + ' 失败');
 if (fail) process.exit(1);
