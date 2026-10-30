@@ -76,9 +76,10 @@
                 <ul>
                     <li>录入给排水专业工程量清单 Excel（.xlsx/.xls），<strong>A列=序号</strong>、<strong>B列=项目名称（材质/管径/接口形式）</strong>、<strong>C列=长度（m）</strong>，首行可为表头；上传后系统按项目名称<strong>自动识别材质与公称直径</strong>并套用清单与定额，结果支持<strong>「广联达 / 建经科技」</strong>两种格式导出。</li>
                     <li><strong>铸铁管</strong>：名称含「铸铁管 / 机制离心排水铸铁管 / 离心浇筑灰口铁直管 / 柔性接口机制排水铸铁管」等关键词或相近材质，套<strong>031001001 铸铁管</strong>；结果表<strong>「安装部位/接口形式」</strong>列可切换<strong>室内/室外</strong>与<strong>青铅/膨胀水泥/石棉水泥/胶圈/水泥</strong>接口，定额与主材价实时重算；定额单位为 10m，导出广联达时已按定额单位自动换算。</li>
+                    <li><strong>镀锌钢管</strong>：名称含「镀锌钢管 / 内外壁热浸镀锌焊接普通钢管」等关键词或相近材质，套<strong>031001002 镀锌钢管</strong>；<strong>「安装部位/接口形式」</strong>列可选<strong>室内/室外</strong>与<strong>螺纹连接 / 螺纹连接（燃气）</strong>，名称含燃气、煤气、天然气、液化气时自动预选燃气；定额单位为 10m，导出广联达时已按定额单位自动换算。</li>
                     <li><strong>清单及定额</strong>：参照<strong>天津市2025清单计价规范</strong>（配套2020预算基价第八册 给排水、采暖、燃气工程）编制。</li>
                     <li><strong>价格依据</strong>：依据<strong>天津市当月造价信息</strong>以及<strong>合理市场价格标准</strong>计入主材价。</li>
-                    <li>其他材质（不锈钢管、钢管、铜管、塑料管等）的匹配逻辑陆续补充中，暂输出名称与长度供手工套用。</li>
+                    <li>其他材质（不锈钢管、焊接钢管、铜管、塑料管等）的匹配逻辑陆续补充中，暂输出名称与长度供手工套用。</li>
                 </ul>
             </div>
 
@@ -106,6 +107,7 @@
             <div class="summary" id="summaryArea" style="display:none;">
                 <div class="summary-card"><div class="number" id="totalCount">0</div><div class="label">项目总数（条）</div></div>
                 <div class="summary-card"><div class="number" id="catCast">0</div><div class="label">铸铁管</div></div>
+                <div class="summary-card"><div class="number" id="catGalv">0</div><div class="label">镀锌钢管</div></div>
                 <div class="summary-card teal2"><div class="number" id="catOther">0</div><div class="label">其他材质</div></div>
                 <div class="summary-card amber"><div class="number" id="pendingCount">0</div><div class="label">待询价</div></div>
                 <div class="summary-card"><div class="number" id="totalPrice">¥0</div><div class="label">主材费合计（元）</div></div>

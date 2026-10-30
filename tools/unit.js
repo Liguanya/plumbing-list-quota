@@ -131,7 +131,8 @@ ck('不锈钢无定额', pr('薄壁不锈钢管DN80').quotaCode, '');
 ck('不锈钢未计价', pr('薄壁不锈钢管DN80').priceSource, 'na');
 ck('不锈钢有提示', /待补充/.test(pr('薄壁不锈钢管DN80').warn), true);
 ck('PPR管→other', pr('PPR给水管 DN25').category, 'other');
-ck('镀锌钢管→other', pr('镀锌钢管 DN50').category, 'other');
+ck('镀锌钢管→galv', pr('镀锌钢管 DN50').category, 'galv');
+ck('焊接钢管→other', pr('焊接钢管 DN50').category, 'other');
 
 console.log('\n== 16. 整表解析 ==');
 var rows = A.parseRows([
@@ -163,11 +164,12 @@ ck('排水特征含通球', /通球试验/.test(rows[0].features), true);
 ck('给水特征含水压', /水压试验/.test(rows[1].features), true);
 
 console.log('\n== 18. 接口选项联动 ==');
-ck('室外给水可选接口', A.jointsOf('out', 'water'), ['asbestos', 'lead', 'expand', 'rubber']);
-ck('室内给水可选接口', A.jointsOf('in', 'water'), ['asbestos', 'lead', 'expand']);
-ck('室外排水可选接口', A.jointsOf('out', 'drain'), ['asbestos', 'cement']);
-ck('室内排水可选接口', A.jointsOf('in', 'drain'), ['asbestos', 'cement']);
-ck('默认接口石棉水泥', A.defaultJoint('out', 'water'), 'asbestos');
+function ci(loc, medium) { return { category: 'castIron', loc: loc, medium: medium, joint: null }; }
+ck('室外给水可选接口', A.jointsOf(ci('out', 'water')), ['asbestos', 'lead', 'expand', 'rubber']);
+ck('室内给水可选接口', A.jointsOf(ci('in', 'water')), ['asbestos', 'lead', 'expand']);
+ck('室外排水可选接口', A.jointsOf(ci('out', 'drain')), ['asbestos', 'cement']);
+ck('室内排水可选接口', A.jointsOf(ci('in', 'drain')), ['asbestos', 'cement']);
+ck('默认接口石棉水泥', A.defaultJoint(ci('out', 'water')), 'asbestos');
 
 // ============================================================
 // 19. 定额单位与换算
@@ -179,6 +181,96 @@ ck('默认接口石棉水泥', A.defaultJoint('out', 'water'), 'asbestos');
   ck('换算系数10', it.quotaFactor, 10);
   ck('清单单位m', it.unit, 'm');
   ck('清单工程量保留', it.quantity, 120);
+})();
+
+// ============================================================
+// 20. 镀锌钢管（031001002 / 第八册 8-1~8-11、8-173~8-183、8-1128~8-1131、8-1132~8-1140）
+// ============================================================
+(function () {
+  var PK = A.getPeriods()[0].period;
+  function mk(name) { return A.buildItem(name); }
+  function q(name) { var it = mk(name); return { it: it, q: A.matchQuota(it) }; }
+
+  // 清单编码与材质
+  ck('镀锌钢管清单编码', mk('镀锌钢管DN50').listCode, '031001002');
+  ck('镀锌钢管清单名称', mk('镀锌钢管DN50').listName, '镀锌钢管');
+  ck('内外壁热浸镀锌识别', mk('内外壁热浸镀锌焊接普通钢管DN100').material, '镀锌钢');
+  ck('热镀锌识别', mk('热镀锌钢管DN25').material, '镀锌钢');
+  ck('镀锌钢默认普通螺纹', mk('镀锌钢管DN50').joint, 'thread');
+  ck('燃气自动预选', mk('室内燃气镀锌钢管DN50').joint, 'gas_thread');
+  ck('天然气自动预选', mk('室外天然气镀锌钢管DN32').joint, 'gas_thread');
+  ck('镀锌材质类别', mk('镀锌钢管DN50').category, 'galv');
+
+  // 室外给水 8-1~8-11
+  var outDn = [15, 20, 25, 32, 40, 50, 65, 80, 100, 125, 150];
+  outDn.forEach(function (dn, i) {
+    ck('室外镀锌DN' + dn, q('室外给水镀锌钢管DN' + dn).q.code, '8-' + (1 + i));
+  });
+  ck('室外镀锌名称', q('室外镀锌钢管DN100').q.name, '室外管道 镀锌钢管(螺纹连接) 公称直径100mm以内');
+
+  // 室内给水 8-173~8-183
+  outDn.forEach(function (dn, i) {
+    ck('室内镀锌DN' + dn, q('室内给水镀锌钢管DN' + dn).q.code, '8-' + (173 + i));
+  });
+  ck('室内镀锌默认室内', q('镀锌钢管DN80').it.loc, 'in');
+
+  // 室外燃气 8-1128~8-1131（DN25/32/40/50）
+  [25, 32, 40, 50].forEach(function (dn, i) {
+    ck('室外燃气DN' + dn, q('室外燃气镀锌钢管DN' + dn).q.code, '8-' + (1128 + i));
+  });
+  // 室内燃气 8-1132~8-1140（DN15~100）
+  [15, 20, 25, 32, 40, 50, 65, 80, 100].forEach(function (dn, i) {
+    ck('室内燃气DN' + dn, q('室内燃气镀锌钢管DN' + dn).q.code, '8-' + (1132 + i));
+  });
+
+  // 档位回退与超档
+  var g1 = q('室外燃气镀锌钢管DN20');
+  ck('室外燃气DN20→DN25档', g1.q.code, '8-1128');
+  ck('室外燃气DN20标推算', g1.q.inferred, true);
+  var g2 = q('室内燃气镀锌钢管DN125');
+  ck('室内燃气DN125→DN100档', g2.q.code, '8-1140');
+  ck('室内燃气超档提示', /超出范围/.test(g2.it.warn) || /超/.test(A.buildWarn(g2.it, g2.q)), true);
+  var g3 = q('镀锌钢管DN200');
+  ck('镀锌DN200→150档', g3.q.code, '8-183');
+  ck('镀锌DN200标推算', g3.q.inferred, true);
+  var g4 = q('镀锌钢管DN70');
+  ck('镀锌DN70→DN80档', g4.q.code, '8-180');
+
+  // 连接方式可选项
+  var gItem = mk('镀锌钢管DN50');
+  ck('镀锌连接方式选项', A.jointsOf(gItem), ['thread', 'gas_thread']);
+  ck('镀锌默认连接', A.defaultJoint(gItem), 'thread');
+  ck('燃气连接中文', A.JOINT_CN.gas_thread, '螺纹连接（燃气）');
+
+  // 主材价
+  var p50 = A.lookupGalvPrice(PK, mk('镀锌钢管DN50'));
+  ck('镀锌DN50主材价', p50.price, 24.5);
+  var p70 = A.lookupGalvPrice(PK, mk('镀锌钢管DN70'));
+  ck('镀锌DN70取80档价', p70.price, 39.5);
+  var p200 = A.lookupGalvPrice(PK, mk('镀锌钢管DN200'));
+  ck('镀锌DN200超档价', p200.price, 126);
+  ck('镀锌价格来源', p50.source, 'market');
+
+  // 定额单位
+  var row = A.parseRows([[1, '室内燃气镀锌钢管 DN65', 120]], PK, 'gld')[0];
+  ck('镀锌定额单位10m', row.quotaUnit, '10m');
+  ck('镀锌换算系数', row.quotaFactor, 10);
+  ck('镀锌清单单位m', row.unit, 'm');
+  ck('镀锌工程量保留', row.quantity, 120);
+  ck('燃气特征含气压试验', /气压试验/.test(row.features), true);
+  ck('燃气特征含连接形式', /连接形式:螺纹连接/.test(row.features), true);
+
+  // 整表混合
+  var mix = A.parseRows([
+    [1, '内外壁热浸镀锌焊接普通钢管DN100', 120],
+    [2, '室外燃气镀锌钢管DN40', 30],
+    [3, '机制离心排水铸铁管DN150', 80]
+  ], PK, 'gld');
+  ck('混合表条数', mix.length, 3);
+  ck('混合表镀锌1', mix[0].quotaCode, '8-181');
+  ck('混合表镀锌燃气', mix[1].quotaCode, '8-1130');
+  ck('混合表铸铁', mix[2].quotaCode, '8-357');
+  ck('混合表主材合计', Number(mix.reduce(function (s, d) { return s + (d.price === null ? 0 : d.price * d.quantity); }, 0).toFixed(2)), 120 * 52 + 30 * 20 + 80 * 105);
 })();
 
 console.log('\n结果: ' + pass + ' 通过, ' + fail + ' 失败');

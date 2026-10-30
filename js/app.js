@@ -3,7 +3,7 @@
  * 依据：天津市安装工程工程量清单计价指引（2025版，2025-10-01施行）
  *       配套 天津市安装工程预算基价 第八册 给排水、采暖、燃气工程 DBD29-308-2020
  *
- * 首批实现：铸铁管（清单 031001001 铸铁管）
+ * 已实现：铸铁管（031001001）、镀锌钢管（031001002）
  *   第八册 第一章 给排水、采暖管道安装
  *   一、室外管道
  *     7. 承插铸铁给水管（青铅接口）      8-90 ~ 8-99   DN75~500
@@ -20,6 +20,12 @@
  *    13. 承插铸铁排水管（水泥接口）      8-360 ~ 8-365 DN50~250
  *   注：室内给水无胶圈接口子目；排水只有石棉水泥/水泥两种接口子目。
  *
+ * 镀锌钢管（清单 031001002 镀锌钢管，单位 10m）
+ *     室外管道 镀锌钢管(螺纹连接)        8-1    ~ 8-11   DN15~150（15/20/25/32/40/50/65/80/100/125/150）
+ *     室内管道 镀锌钢管(螺纹连接)        8-173  ~ 8-183  DN15~150（同上11档）
+ *     室外燃气镀锌钢管(螺纹连接)         8-1128 ~ 8-1131 DN25/32/40/50
+ *     室内燃气镀锌钢管(螺纹连接)         8-1132 ~ 8-1140 DN15/20/25/32/40/50/65/80/100
+ *
  * 价格库见 data/prices.js
  * ============================================================ */
 
@@ -29,6 +35,7 @@
   // ---------- 清单编码 ----------
   var LIST = {
     castIron: { code: '031001001', name: '铸铁管' },
+    galv: { code: '031001002', name: '镀锌钢管' },
     steel: { code: '031001002', name: '钢管' },
     stainless: { code: '031001003', name: '不锈钢管' },
     copper: { code: '031001004', name: '铜管' },
@@ -61,18 +68,37 @@
     }
   };
 
-  var JOINT_CN = { lead: '青铅接口', expand: '膨胀水泥接口', asbestos: '石棉水泥接口', rubber: '胶圈接口', cement: '水泥接口' };
-  var JOINT_ORDER = ['asbestos', 'cement', 'lead', 'expand', 'rubber'];
-  var LOC_CN = { in: '室内', out: '室外' };
-  var MEDIUM_CN = { water: '给水', drain: '排水' };
+  // ---------- 镀锌钢管定额矩阵 ----------
+  var GALV = {
+    out_water: { thread: { start: 1, dns: [15, 20, 25, 32, 40, 50, 65, 80, 100, 125, 150], name: '室外管道 镀锌钢管(螺纹连接)' } },
+    in_water: { thread: { start: 173, dns: [15, 20, 25, 32, 40, 50, 65, 80, 100, 125, 150], name: '室内管道 镀锌钢管(螺纹连接)' } },
+    out_gas: { thread: { start: 1128, dns: [25, 32, 40, 50], name: '室外燃气镀锌钢管(螺纹连接)' } },
+    in_gas: { thread: { start: 1132, dns: [15, 20, 25, 32, 40, 50, 65, 80, 100], name: '室内燃气镀锌钢管(螺纹连接)' } }
+  };
 
-  function jointsOf(loc, medium) {
-    var key = (loc === 'out' ? 'out_' : 'in_') + (medium === 'drain' ? 'drain' : 'water');
-    var tbl = CAST_IRON[key] || {};
-    return JOINT_ORDER.filter(function (j) { return !!tbl[j]; });
+  var JOINT_CN = { lead: '青铅接口', expand: '膨胀水泥接口', asbestos: '石棉水泥接口', rubber: '胶圈接口', cement: '水泥接口', thread: '螺纹连接', gas_thread: '螺纹连接（燃气）' };
+  var JOINT_ORDER = ['asbestos', 'cement', 'lead', 'expand', 'rubber'];
+  var JOINT_ORDER_GALV = ['thread', 'gas_thread'];
+  var LOC_CN = { in: '室内', out: '室外' };
+  var MEDIUM_CN = { water: '给水', drain: '排水', gas: '燃气' };
+
+  function ruleTable(it) { return it && it.category === 'galv' ? GALV : CAST_IRON; }
+  // 定额分组键：铸铁 → 室内外+给排水；镀锌 → 室内外+给水/燃气（按所选连接方式区分燃气）
+  function pipeKey(it) {
+    var loc = it.loc === 'out' ? 'out_' : 'in_';
+    if (it.category === 'galv') return loc + (it.joint === 'gas_thread' ? 'gas' : 'water');
+    return loc + (it.medium === 'drain' ? 'drain' : 'water');
   }
-  function defaultJoint(loc, medium) {
-    var list = jointsOf(loc, medium);
+  function jointsOf(it) {
+    // 镀锌钢管：室外/室内均有普通与燃气两组螺纹连接子目，故两种连接方式始终可选
+    if (it && it.category === 'galv') return ['thread', 'gas_thread'];
+    var tbl = ruleTable(it)[pipeKey(it)] || {};
+    var order = it && it.category === 'galv' ? JOINT_ORDER_GALV : JOINT_ORDER;
+    return order.filter(function (j) { return !!tbl[j]; });
+  }
+  function defaultJoint(it) {
+    var list = jointsOf(it);
+    if (it && it.category === 'galv') return list.indexOf('thread') >= 0 ? 'thread' : (list[0] || 'thread');
     return list.indexOf('asbestos') >= 0 ? 'asbestos' : (list[0] || 'asbestos');
   }
 
@@ -94,6 +120,7 @@
 
   function parseMedium(name) {
     var s = name || '';
+    if (/燃气|煤气|天然气|液化气|气源|瓦斯/.test(s)) return 'gas';
     if (/排水|污水|废水|雨水|冷凝水|冷凝|通气管|透气|地漏|潜污/.test(s)) return 'drain';
     if (/给水|生活给水|生产给水|消防|消火栓|喷淋|中水/.test(s)) return 'water';
     if (/排水/.test(s)) return 'drain';
@@ -122,7 +149,8 @@
     var s = name || '';
     if (isCastIron(s)) return '铸铁';
     if (/不锈钢/.test(s)) return '不锈钢';
-    if (/镀锌钢管|焊接钢管|无缝钢管|钢管/.test(s)) return '钢';
+    if (/镀锌钢管|热浸镀锌|热镀锌|镀锌焊接钢管|内外壁热浸镀锌|镀锌管/.test(s)) return '镀锌钢';
+    if (/焊接钢管|无缝钢管|钢管/.test(s)) return '钢';
     if (/铜管/.test(s)) return '铜';
     if (/PPR|PP-R|PE|PVC|UPVC|HDPE|PB|PEX|塑料/.test(s)) return '塑料';
     if (/复合管|钢塑|铝塑/.test(s)) return '复合';
@@ -138,7 +166,7 @@
     it.dn = parseDN(name);
     it.medium = parseMedium(name);
     it.loc = parseLoc(name);
-    it.mediumAmbiguous = !/排水|污水|废水|雨水|给水|消防|消火栓|喷淋|中水|冷凝/.test(name);
+    it.mediumAmbiguous = !/排水|污水|废水|雨水|给水|消防|消火栓|喷淋|中水|冷凝|燃气|煤气|天然气|液化气/.test(name);
     it.locAmbiguous = !/室内|室外|户外|外网|庭院|楼内|管井|地库/.test(name);
 
     if (it.material === '铸铁') {
@@ -146,14 +174,24 @@
       it.listCode = LIST.castIron.code;
       it.listName = LIST.castIron.name;
       var j = parseJoint(name);
-      it.jointAuto = j || defaultJoint(it.loc, it.medium);
+      it.jointAuto = j || defaultJoint(it);
       it.joint = it.jointAuto;
       it.jointFromName = !!j;
-      var allow = jointsOf(it.loc, it.medium);
+      var allow = jointsOf(it);
       if (allow.indexOf(it.joint) < 0) {
         it.jointFallback = it.joint;
-        it.joint = defaultJoint(it.loc, it.medium);
+        it.joint = defaultJoint(it);
       }
+    } else if (it.material === '镀锌钢') {
+      it.category = 'galv';
+      it.listCode = LIST.galv.code;
+      it.listName = LIST.galv.name;
+      var isGas = /燃气|煤气|天然气|液化气|气源|瓦斯/.test(name);
+      it.medium = isGas ? 'gas' : 'water';
+      it.jointAuto = isGas ? 'gas_thread' : 'thread';
+      it.joint = it.jointAuto;
+      it.jointFromName = isGas;
+      it.jointFallback = null;
     } else {
       it.category = 'other';
       it.listCode = '';
@@ -166,11 +204,10 @@
 
   // ---------- 定额匹配 ----------
   function matchQuota(it) {
-    if (!it || it.category !== 'castIron') return { code: '', name: '', inferred: false };
-    var key = (it.loc === 'out' ? 'out_' : 'in_') + (it.medium === 'drain' ? 'drain' : 'water');
-    var tbl = CAST_IRON[key];
+    if (!it || (it.category !== 'castIron' && it.category !== 'galv')) return { code: '', name: '', inferred: false };
+    var tbl = ruleTable(it)[pipeKey(it)];
     if (!tbl) return { code: '', name: '', inferred: false };
-    var def = tbl[it.joint] || tbl[defaultJoint(it.loc, it.medium)];
+    var def = tbl[it.joint] || tbl[defaultJoint(it)];
     if (!def) return { code: '', name: '', inferred: false };
     if (it.dn === null || it.dn === undefined || isNaN(it.dn)) {
       return { code: '', name: def.name + '（管径待识别）', inferred: false, needDn: true };
@@ -227,13 +264,30 @@
     return { price: r.price, source: 'market', basis: basis };
   }
 
+  function lookupGalvPrice(periodKey, it) {
+    var p = getPeriod(periodKey);
+    if (!p || !p.galv) return null;
+    if (it.dn === null || isNaN(it.dn)) return null;
+    var r = interpPrice(p.galv.price, it.dn);
+    if (!r) return null;
+    var basis = '镀锌钢管 DN' + it.dn + '（' + (it.joint === 'gas_thread' ? '燃气' : '给水') + '）：' + p.galv.brand +
+      '，' + r.price.toFixed(2) + '元/m（除税）' +
+      (r.exact ? '' : '；信息价无DN' + it.dn + '档，按DN' + r.tier + '档就近取定') +
+      (r.overflow ? '；已超常用最大档，请核对' : '');
+    return { price: r.price, source: 'market', basis: basis };
+  }
+
+  function isPriced(it) { return it && (it.category === 'castIron' || it.category === 'galv'); }
+
   function recomputePrice(it, periodKey) {
-    var info = it.category === 'castIron' ? lookupCastIronPrice(periodKey, it) : null;
+    var info = null;
+    if (it.category === 'castIron') info = lookupCastIronPrice(periodKey, it);
+    else if (it.category === 'galv') info = lookupGalvPrice(periodKey, it);
     if (info) {
       it.price = info.price; it.priceSource = info.source; it.priceBasis = info.basis;
     } else {
       it.price = null;
-      it.priceSource = it.category === 'castIron' ? 'pending' : 'na';
+      it.priceSource = isPriced(it) ? 'pending' : 'na';
       it.priceBasis = '';
     }
   }
@@ -248,6 +302,10 @@
       parts.push('连接形式:承插');
       parts.push('接口材料:' + (JOINT_CN[it.joint] || '石棉水泥接口'));
       parts.push(it.medium === 'drain' ? '灌水试验、通球试验' : '水压试验、水冲洗');
+    } else if (it.category === 'galv') {
+      parts.push('连接形式:螺纹连接');
+      parts.push('接口材料:' + (it.joint === 'gas_thread' ? '聚四氟乙烯生料带（燃气管道）' : '铅油麻丝、聚四氟乙烯生料带'));
+      parts.push(it.joint === 'gas_thread' ? '气压试验、空气吹扫' : '水压试验、水冲洗');
     }
     return parts.join('；');
   }
@@ -255,7 +313,7 @@
   // ---------- 核对提示 ----------
   function buildWarn(it, quota) {
     var w = [];
-    if (it.category !== 'castIron') {
+    if (!isPriced(it)) {
       w.push('该材质（' + it.material + '）的清单/定额匹配逻辑待补充，暂只输出名称与长度，请手工套用');
       return w.join('；');
     }
@@ -265,10 +323,19 @@
     if (it.jointFallback) {
       w.push('所选' + LOC_CN[it.loc] + MEDIUM_CN[it.medium] + '无' + JOINT_CN[it.jointFallback] + '子目，已按' + JOINT_CN[it.joint] + '套用，请核对');
     }
+    if (it.category === 'galv' && it.joint === 'gas_thread') {
+      var gasRange = it.loc === 'out' ? 'DN25~50' : 'DN15~100';
+      if (it.dn !== null && (it.loc === 'out' ? (it.dn < 25 || it.dn > 50) : (it.dn < 15 || it.dn > 100))) {
+        w.push('燃气镀锌钢管' + LOC_CN[it.loc] + '子目仅' + gasRange + '，DN' + it.dn + '超出范围，请核对');
+      }
+    }
     if (it.dn !== null && quota && quota.code && quota.dnTier && quota.dnTier !== it.dn) {
       w.push('DN' + it.dn + '无对应档，按 DN' + quota.dnTier + '以内子目套用，请核对');
     }
-    if (it.mediumAmbiguous) w.push('名称未注明给水/排水，按' + MEDIUM_CN[it.medium] + '套用，如不符请在名称中注明');
+    if (it.mediumAmbiguous) {
+      if (it.category === 'galv') w.push('名称未注明给水/燃气，按给水（普通螺纹连接）套用，燃气管道请在选型列切换连接方式');
+      else w.push('名称未注明给水/排水，按' + MEDIUM_CN[it.medium] + '套用，如不符请在名称中注明');
+    }
     if (it.locAmbiguous) w.push('名称未注明室内/室外，按室内套用，可在选型列切换');
     if (it.qtyWarn) w.push('工程量缺失，暂按1m计，请核对');
     return w.join('；');
@@ -332,7 +399,7 @@
   // 渲染
   // ============================================================
   function priceText(item) {
-    if (item.category !== 'castIron') return '<span class="tag tag-na">未计价</span>';
+    if (!isPriced(item)) return '<span class="tag tag-na">未计价</span>';
     if (item.price === null) return '<span class="tag tag-pending">待询价</span>';
     var tip = item.priceBasis ? ' title="' + String(item.priceBasis).replace(/"/g, '&quot;') + '"' : '';
     if (item.priceSource === 'estimated') return '<span class="tag tag-est"' + tip + '>估</span> <span' + tip + '>¥' + item.price.toFixed(2) + '</span>';
@@ -356,11 +423,11 @@
 
   // 安装部位 / 接口形式 列
   function layCell(it) {
-    if (it.category !== 'castIron') {
+    if (!isPriced(it)) {
       return '<span class="lay-static">待补充</span>';
     }
     var locHtml = opt('in', it.loc, '室内') + opt('out', it.loc, '室外');
-    var js = jointsOf(it.loc, it.medium);
+    var js = jointsOf(it);
     var jointHtml = js.map(function (j) { return opt(j, it.joint, JOINT_CN[j]); }).join('');
     return '<div style="display:flex;flex-direction:column;gap:4px;">' +
       sel('loc', it._i, locHtml) + sel('joint', it._i, jointHtml) + '</div>';
@@ -396,12 +463,15 @@
     bindRowSelects(data);
 
     var cast = data.filter(function (d) { return d.category === 'castIron'; }).length;
-    var other = data.length - cast;
-    var pending = data.filter(function (d) { return d.category === 'castIron' && d.price === null; }).length;
+    var other = data.length - cast - data.filter(function (d) { return d.category === 'galv'; }).length;
+    var pending = data.filter(function (d) { return isPriced(d) && d.price === null; }).length;
     var total = data.reduce(function (s, d) { return s + (d.price === null ? 0 : d.price * d.quantity); }, 0);
 
     document.getElementById('totalCount').textContent = data.length;
+    var galv = data.filter(function (d) { return d.category === 'galv'; }).length;
     document.getElementById('catCast').textContent = cast;
+    var galvEl = document.getElementById('catGalv');
+    if (galvEl) galvEl.textContent = galv;
     document.getElementById('catOther').textContent = other;
     document.getElementById('pendingCount').textContent = pending;
     document.getElementById('totalPrice').textContent = '¥' + total.toFixed(2);
@@ -417,8 +487,8 @@
         if (act === 'loc') {
           it.loc = s.value;
           it.locAmbiguous = false;
-          var allow = jointsOf(it.loc, it.medium);
-          if (allow.indexOf(it.joint) < 0) it.joint = defaultJoint(it.loc, it.medium);
+          var allow = jointsOf(it);
+          if (allow.indexOf(it.joint) < 0) it.joint = defaultJoint(it);
           it.jointFallback = null;
         } else if (act === 'joint') {
           it.joint = s.value;
@@ -461,7 +531,7 @@
 
     var zIdx = 0;
     data.forEach(function (it) {
-      var hasPrice = it.price !== null && it.category === 'castIron';
+      var hasPrice = it.price !== null && isPriced(it);
       var specVal = specCell(it);
 
       if (!it.quotaCode) {
@@ -537,10 +607,12 @@
       bar.style.display = 'block';
       bar.className = 'status-bar status-ok';
       var cast = exportData.filter(function (d) { return d.category === 'castIron'; }).length;
-      var other = exportData.length - cast;
+      var galv = exportData.filter(function (d) { return d.category === 'galv'; }).length;
+      var other = exportData.length - cast - galv;
       bar.textContent = '成功解析 ' + exportData.length + ' 条：铸铁管 ' + cast + ' 条' +
+        (galv ? '、镀锌钢管 ' + galv + ' 条' : '') +
         (other ? '，其他材质 ' + other + ' 条（匹配逻辑待补充，需手工套用）' : '') +
-        '；铸铁管可在「安装部位/接口形式」列切换室内外与接口形式，定额与主材价实时重算；黄色行为需人工核对项';
+        '；铸铁管/镀锌钢管可在「安装部位/接口形式」列切换室内外与接口形式（镀锌可选螺纹连接/燃气），定额与主材价实时重算；黄色行为需人工核对项';
     } else {
       area.style.display = 'none';
       btn.style.display = 'none';
@@ -638,8 +710,8 @@
       },
       setLoc: function (i, v) {
         var it = exportData[i]; it.loc = v; it.locAmbiguous = false;
-        var allow = jointsOf(it.loc, it.medium);
-        if (allow.indexOf(it.joint) < 0) it.joint = defaultJoint(it.loc, it.medium);
+        var allow = jointsOf(it);
+        if (allow.indexOf(it.joint) < 0) it.joint = defaultJoint(it);
         it.jointFallback = null;
         recomputeQuota(it); recomputePrice(it, exportData._periodKey); it.features = featureText(it);
         renderTable(exportData);
@@ -655,11 +727,12 @@
   // 暴露给Node测试
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
-      LIST: LIST, CAST_IRON: CAST_IRON, JOINT_CN: JOINT_CN,
+      LIST: LIST, CAST_IRON: CAST_IRON, GALV: GALV, JOINT_CN: JOINT_CN,
       buildItem: buildItem, matchQuota: matchQuota, parseRows: parseRows,
       parseDN: parseDN, parseMedium: parseMedium, parseLoc: parseLoc, parseJoint: parseJoint,
       materialOf: materialOf, jointsOf: jointsOf, defaultJoint: defaultJoint,
-      lookupCastIronPrice: lookupCastIronPrice, getPeriods: getPeriods,
+      lookupCastIronPrice: lookupCastIronPrice, lookupGalvPrice: lookupGalvPrice, getPeriods: getPeriods,
+      pipeKey: pipeKey, isPriced: isPriced,
       featureText: featureText, buildWarn: buildWarn
     };
   }
