@@ -363,6 +363,10 @@ ck('PPR De32主材价', pr('PPR给水管 De32').price, 14.5);
 ck('PVC排水De110主材价', pr('PVC-U排水管 De110').price, 35);
 ck('排水介质识别', pr('PVC-U排水管 De110').medium, 'drain');
 ck('排水特征通球', /通球试验/.test(pr('PVC-U排水管 De110').features), true);
+ck('钢管特征规格DN', /型号规格:DN100/.test(pr('无缝钢管 DN100').features), true);
+ck('铜管特征规格De', /型号规格:De54/.test(pr('铜管 DN54').features), true);
+ck('复合管特征规格De', /型号规格:De32/.test(pr('铝塑复合管 De32').features), true);
+ck('塑料管特征规格De', /型号规格:De25/.test(pr('PPR给水管 De25').features), true);
 
 console.log('\n== 24. 附加定额（消毒冲洗 / 沟槽管件） ==');
 var g1 = pr('无缝钢管 DN100', 100);

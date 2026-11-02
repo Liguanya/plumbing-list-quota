@@ -543,7 +543,7 @@
     var parts = [];
     parts.push('安装部位:' + (it.loc === 'out' ? '室外' : '室内'));
     parts.push('材质:' + (it.material || '铸铁'));
-    if (it.dn) parts.push('型号规格:DN' + it.dn);
+    if (it.dn) parts.push('型号规格:' + specCell(it));
     if (it.category === 'castIron') {
       parts.push('连接形式:承插');
       parts.push('接口材料:' + (JOINT_CN[it.joint] || '石棉水泥接口'));
