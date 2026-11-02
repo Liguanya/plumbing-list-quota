@@ -79,7 +79,13 @@
                     <li><strong>镀锌钢管</strong>：名称含「镀锌钢管 / 内外壁热浸镀锌焊接普通钢管」等关键词或相近材质，套<strong>031001002 镀锌钢管</strong>；<strong>「安装部位/接口形式」</strong>列可选<strong>室内/室外</strong>与<strong>螺纹连接 / 螺纹连接（燃气）</strong>，名称含燃气、煤气、天然气、液化气时自动预选燃气；定额单位为 10m，导出广联达时已按定额单位自动换算。</li>
                     <li><strong>清单及定额</strong>：参照<strong>天津市2025清单计价规范</strong>（配套2020预算基价第八册 给排水、采暖、燃气工程）编制。</li>
                     <li><strong>价格依据</strong>：依据<strong>天津市当月造价信息</strong>以及<strong>合理市场价格标准</strong>计入主材价。</li>
-                    <li>其他材质（不锈钢管、焊接钢管、铜管、塑料管等）的匹配逻辑陆续补充中，暂输出名称与长度供手工套用。</li>
+                    <li><strong>无缝钢管 / 焊接钢管</strong>：名称含「无缝钢管 / 内外壁热浸镀锌无缝钢管 / 焊接钢管 / 钢管」等关键词，分别套<strong>031001003 无缝钢管</strong>、<strong>031001004 焊接钢管</strong>；<strong>室内焊接</strong>8-195~8-205、<strong>室内沟槽（卡箍）</strong>8-206~8-212、<strong>室外焊接</strong>8-23~8-35，按公称直径就近套档。</li>
+                    <li><strong>铜管</strong>：套<strong>031001005 铜管</strong>；按名称连接方式套<strong>卡压</strong>8-309~8-317、<strong>氧乙炔焊</strong>8-318~8-326、<strong>钎焊</strong>8-327~8-335（公称外径18~108）。</li>
+                    <li><strong>不锈钢管</strong>：套<strong>031001006 不锈钢管</strong>；室内薄壁不锈钢管按<strong>卡压</strong>8-261~、<strong>卡套</strong>8-270~、<strong>承插氩弧焊</strong>8-279~、<strong>螺纹</strong>8-288~、<strong>对接电弧焊</strong>8-297~8-308（DN15~200）；名称含燃气时套室内燃气不锈钢管<strong>承插氩弧焊</strong>8-1141~、<strong>卡套</strong>8-1148~、<strong>卡压</strong>8-1154~8-1159（DN15~100）。</li>
+                    <li><strong>复合管</strong>：套<strong>031001007 复合管</strong>；室外钢骨架塑料复合管<strong>电熔</strong>8-81~8-89、室内钢骨架塑料复合管<strong>电熔</strong>8-250~8-260、室内铝塑复合管<strong>卡压</strong>8-227~、<strong>卡套</strong>8-233~、<strong>热熔</strong>8-239~8-249（De20~160）。</li>
+                    <li><strong>塑料管</strong>：套<strong>031001008 塑料管</strong>；室外塑料给水<strong>热熔</strong>8-36~、<strong>电熔</strong>8-48~、<strong>粘接</strong>8-60~8-71；室内塑料给水<strong>热熔</strong>8-410~、<strong>电熔</strong>8-421~、<strong>粘接</strong>8-432~8-442；室内塑料排水<strong>粘接</strong>8-377~8-382、<strong>热熔</strong>8-383~8-388；室内塑料雨水<strong>粘接</strong>8-405~8-409。</li>
+                    <li><strong>连接方式</strong>：名称含「卡压 / 卡套 / 氩弧焊 / 电弧焊 / 氧乙炔焊 / 钎焊 / 热熔 / 电熔 / 粘接 / 螺纹 / 沟槽（卡箍）/ 焊接」时自动匹配对应子目，未注明时按该材质常用方式预选，结果表<strong>「安装部位/接口形式」</strong>列可手动切换并实时重算。</li>
+                    <li><strong>附加定额</strong>：<strong>每条管道自动附加管道消毒冲洗</strong>（8-490~8-495，DN50~500，定额单位100m，排水/燃气管一般不计取，可在导出前删除该行）；名称含<strong>「卡箍 / 沟槽连接」</strong>时自动附加<strong>室内管道钢管沟槽连接管件</strong>（8-220~8-226，DN65~250，定额单位10个，数量按6m定尺估算，实际按图纸管件数量调整）。</li>
                 </ul>
             </div>
 
@@ -108,7 +114,7 @@
                 <div class="summary-card"><div class="number" id="totalCount">0</div><div class="label">项目总数（条）</div></div>
                 <div class="summary-card"><div class="number" id="catCast">0</div><div class="label">铸铁管</div></div>
                 <div class="summary-card"><div class="number" id="catGalv">0</div><div class="label">镀锌钢管</div></div>
-                <div class="summary-card teal2"><div class="number" id="catOther">0</div><div class="label">其他材质</div></div>
+                <div class="summary-card teal2"><div class="number" id="catOther">0</div><div class="label">其他管材</div></div>
                 <div class="summary-card amber"><div class="number" id="pendingCount">0</div><div class="label">待询价</div></div>
                 <div class="summary-card"><div class="number" id="totalPrice">¥0</div><div class="label">主材费合计（元）</div></div>
             </div>
@@ -120,7 +126,7 @@
 
             <div class="result-area" id="resultArea" style="display:none;">
                 <div class="result-header"><h2>📊 组价结果预览</h2></div>
-                <p class="legend">说明：<span class="tag tag-market">市场价</span>=天津当月造价信息缺项按国产中高档市场价参考（悬停看依据）；<span class="tag tag-pending">待询价</span>=暂无价格需人工补；<span class="tag tag-na">未计价</span>=该材质匹配逻辑待补充，暂不计主材；<span class="tag tag-infer">推</span>=定额编号按管径档位就近推算需核对基价表；⚠️黄色行请人工核对。</p>
+                <p class="legend">说明：<span class="tag tag-market">市场价</span>=天津当月造价信息缺项按国产中高档市场价参考（悬停看依据）；<span class="tag tag-pending">待询价</span>=暂无价格需人工补；<span class="tag tag-na">未计价</span>=该材质暂不计主材；<span class="tag tag-infer">推</span>=定额编号按管径档位就近推算需核对基价表；⚠️黄色行请人工核对。</p>
                 <div class="table-container">
                     <table id="resultTable">
                         <thead>

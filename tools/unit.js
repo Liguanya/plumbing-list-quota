@@ -125,14 +125,17 @@ ck('价格含依据', /铸铁排水管 DN100/.test(pr('室内排水铸铁管 石
 ck('无管径→待询价', pr('铸铁管').priceSource, 'pending');
 ck('无管径有提示', /未识别公称直径/.test(pr('铸铁管').warn), true);
 
-console.log('\n== 15. 其他材质 ==');
-ck('薄壁不锈钢管→other', pr('薄壁不锈钢管DN80').category, 'other');
-ck('不锈钢无定额', pr('薄壁不锈钢管DN80').quotaCode, '');
-ck('不锈钢未计价', pr('薄壁不锈钢管DN80').priceSource, 'na');
-ck('不锈钢有提示', /待补充/.test(pr('薄壁不锈钢管DN80').warn), true);
-ck('PPR管→other', pr('PPR给水管 DN25').category, 'other');
+console.log('\n== 15. 材质分类 ==');
+ck('薄壁不锈钢管→stainless', pr('薄壁不锈钢管DN80').category, 'stainless');
+ck('不锈钢定额8-268', pr('薄壁不锈钢管DN80').quotaCode, '8-268');
+ck('不锈钢计价', pr('薄壁不锈钢管DN80').priceSource, 'market');
+ck('PPR管→plastic', pr('PPR给水管 DN25').category, 'plastic');
 ck('镀锌钢管→galv', pr('镀锌钢管 DN50').category, 'galv');
-ck('焊接钢管→other', pr('焊接钢管 DN50').category, 'other');
+ck('焊接钢管→welded', pr('焊接钢管 DN50').category, 'welded');
+ck('无缝钢管→seamless', pr('无缝钢管 DN50').category, 'seamless');
+ck('铜管→copper', pr('铜管 DN54').category, 'copper');
+ck('铝塑复合管→composite', pr('铝塑复合管 De32').category, 'composite');
+ck('镀锌无缝钢管→seamless', pr('内外壁热浸镀锌无缝钢管 DN50').category, 'seamless');
 
 console.log('\n== 16. 整表解析 ==');
 var rows = A.parseRows([
@@ -151,10 +154,10 @@ ck('工程量缺失按1', rows[3].quantity, 1);
 ck('工程量缺失提示', /工程量缺失/.test(rows[3].warn), true);
 ck('第1行定额', rows[0].quotaCode, '8-356');
 ck('第2行定额', rows[1].quotaCode, '8-93');
-ck('第3行无定额', rows[2].quotaCode, '');
+ck('第3行薄壁不锈钢DN80', rows[2].quotaCode, '8-268');
 ck('第4行DN50室内给水', rows[3].quotaCode, '8-348');
 ck('第5行柔性排水DN150→8-357', rows[4].quotaCode, '8-357');
-ck('主材费合计', Number(rows.reduce(function (s, d) { return s + (d.price === null ? 0 : d.price * d.quantity); }, 0).toFixed(2)), 120 * 62 + 85.5 * 152 + 0 + 1 * 58 + 30 * 105);
+ck('主材费合计', Number(rows.reduce(function (s, d) { return s + (d.price === null ? 0 : d.price * d.quantity); }, 0).toFixed(2)), 120 * 62 + 85.5 * 152 + 60 * 128 + 1 * 58 + 30 * 105);
 
 console.log('\n== 17. 项目特征 ==');
 ck('特征含安装部位', /安装部位:室内/.test(rows[0].features), true);
@@ -272,6 +275,163 @@ ck('默认接口石棉水泥', A.defaultJoint(ci('out', 'water')), 'asbestos');
   ck('混合表铸铁', mix[2].quotaCode, '8-357');
   ck('混合表主材合计', Number(mix.reduce(function (s, d) { return s + (d.price === null ? 0 : d.price * d.quantity); }, 0).toFixed(2)), 120 * 52 + 30 * 20 + 80 * 105);
 })();
+
+
+console.log('\n== 19. 无缝钢管 / 焊接钢管 ==');
+ck('无缝清单码', pr('无缝钢管 DN100').listCode, '031001003');
+ck('无缝室内焊接DN32', code('无缝钢管 DN32 焊接'), '8-195');
+ck('无缝室内焊接DN100', code('无缝钢管 DN100 焊接'), '8-200');
+ck('无缝室内焊接DN300', code('无缝钢管 DN300 焊接'), '8-205');
+ck('无缝室外焊接DN32', code('无缝钢管 DN32 焊接 室外'), '8-23');
+ck('无缝室外焊接DN400', code('无缝钢管 DN400 焊接 室外'), '8-35');
+ck('无缝沟槽DN65', code('无缝钢管 DN65 沟槽连接'), '8-206');
+ck('无缝沟槽DN250', code('无缝钢管 DN250 沟槽连接'), '8-212');
+ck('镀锌无缝归无缝', pr('内外壁热浸镀锌无缝钢管 DN50').listCode, '031001003');
+ck('焊接钢管清单码', pr('焊接钢管 DN100').listCode, '031001004');
+ck('焊接钢管室内DN200', code('焊接钢管 DN200'), '8-203');
+ck('焊接钢管室外DN200', code('焊接钢管 DN200 焊接 室外'), '8-31');
+ck('焊接钢管沟槽DN200', code('焊接钢管 DN200 沟槽连接'), '8-211');
+ck('无缝单位m', pr('无缝钢管 DN100').unit, 'm');
+ck('无缝定额单位10m', pr('无缝钢管 DN100').quotaUnit, '10m');
+ck('无缝换算系数', pr('无缝钢管 DN100').quotaFactor, 10);
+ck('无缝DN32主材价', pr('无缝钢管 DN32').price, 19);
+ck('无缝DN100主材价', pr('无缝钢管 DN100').price, 60);
+ck('无缝DN400主材价', pr('无缝钢管 DN400').price, 300);
+ck('焊接DN200主材价', pr('焊接钢管 DN200').price, 100);
+ck('无缝价格来源', pr('无缝钢管 DN100').priceSource, 'market');
+ck('无缝特征连接形式', /连接形式:焊接/.test(pr('无缝钢管 DN100').features), true);
+ck('沟槽特征管件另计', /沟槽管件另计/.test(pr('无缝钢管 DN100 沟槽连接').features), true);
+
+console.log('\n== 20. 铜管 ==');
+ck('铜管清单码', pr('铜管 DN54').listCode, '031001005');
+ck('铜管默认卡压', code('铜管 DN54'), '8-314');
+ck('铜管卡压DN18', code('铜管 DN18 卡压连接'), '8-309');
+ck('铜管卡压DN108', code('铜管 DN108 卡压连接'), '8-317');
+ck('铜管氧乙炔DN54', code('铜管 DN54 氧乙炔焊'), '8-323');
+ck('铜管氧乙炔DN108', code('铜管 DN108 氧乙炔焊'), '8-326');
+ck('铜管钎焊DN54', code('铜管 DN54 钎焊'), '8-332');
+ck('铜管钎焊DN108', code('铜管 DN108 钎焊'), '8-335');
+ck('铜管DN54主材价', pr('铜管 DN54').price, 155);
+ck('铜管DN108主材价', pr('铜管 DN108').price, 430);
+ck('铜管连接形式', /连接形式:钎焊/.test(pr('铜管 DN54 钎焊').features), true);
+ck('铜管焊材', /焊条\/焊丝/.test(pr('铜管 DN54 钎焊').features), true);
+
+console.log('\n== 21. 不锈钢管 ==');
+ck('不锈钢清单码', pr('不锈钢管 DN25').listCode, '031001006');
+ck('不锈钢卡压DN15', code('不锈钢管 DN15 卡压连接'), '8-261');
+ck('不锈钢卡压DN100', code('不锈钢管 DN100 卡压连接'), '8-269');
+ck('不锈钢卡套DN15', code('不锈钢管 DN15 卡套连接'), '8-270');
+ck('不锈钢氩弧DN100', code('不锈钢管 DN100 承插氩弧焊'), '8-287');
+ck('不锈钢螺纹DN50', code('不锈钢管 DN50 螺纹连接'), '8-293');
+ck('不锈钢电弧DN200', code('不锈钢管 DN200 对接电弧焊'), '8-308');
+ck('燃气不锈钢氩弧DN25', code('室内燃气不锈钢管 DN25 承插氩弧焊'), '8-1141');
+ck('燃气不锈钢卡套DN15', code('室内燃气不锈钢管 DN15 卡套连接'), '8-1148');
+ck('燃气不锈钢卡压DN50', code('燃气不锈钢管 DN50 卡压连接'), '8-1159');
+ck('燃气介质识别', pr('室内燃气不锈钢管 DN25').medium, 'gas');
+ck('不锈钢DN100主材价', pr('不锈钢管 DN100').price, 168);
+ck('不锈钢DN200主材价', pr('不锈钢管 DN200').price, 400);
+ck('燃气特征气压试验', /气压试验/.test(pr('室内燃气不锈钢管 DN25').features), true);
+
+console.log('\n== 22. 复合管 ==');
+ck('复合管清单码', pr('铝塑复合管 De32').listCode, '031001007');
+ck('室外钢骨架De32', code('钢骨架塑料复合管 De32 电熔连接 室外'), '8-81');
+ck('室外钢骨架De160', code('钢骨架塑料复合管 De160 电熔连接 室外'), '8-89');
+ck('室内钢骨架De20', code('室内钢骨架塑料复合管 De20 电熔连接'), '8-250');
+ck('室内钢骨架De160', code('室内钢骨架塑料复合管 De160 电熔连接'), '8-260');
+ck('铝塑卡压De20', code('铝塑复合管 De20 卡压连接'), '8-227');
+ck('铝塑卡套De32', code('铝塑复合管 De32 卡套连接'), '8-235');
+ck('铝塑热熔De160', code('铝塑复合管 De160 热熔连接'), '8-249');
+ck('铝塑De32主材价', pr('铝塑复合管 De32').price, 16);
+ck('钢骨架De110主材价', pr('钢骨架塑料复合管 De110').price, 105);
+ck('复合管规格De', A.parseRows([[1, '铝塑复合管 De32', 5]], '2026-10', 'gld')[0].dn, 32);
+
+console.log('\n== 23. 塑料管 ==');
+ck('塑料清单码', pr('PPR给水管 De32').listCode, '031001008');
+ck('室外给水热熔De32', code('室外塑料给水管 De32 热熔连接'), '8-36');
+ck('室外给水热熔De315', code('室外塑料给水管 De315 热熔连接'), '8-47');
+ck('室外给水电熔De110', code('室外塑料给水管 De110 电熔连接'), '8-54');
+ck('室外给水粘接De110', code('室外塑料给水管 De110 粘接'), '8-66');
+ck('室内给水热熔De20', code('室内塑料给水管 De20 热熔连接'), '8-410');
+ck('室内给水电熔De25', code('室内塑料给水管 De25 电熔连接'), '8-422');
+ck('室内给水粘接De160', code('室内塑料给水管 De160 粘接'), '8-442');
+ck('室内排水粘接De50', code('室内塑料排水管 De50 粘接'), '8-377');
+ck('室内排水粘接De160', code('室内塑料排水管 De160 粘接'), '8-380');
+ck('室内排水热熔De250', code('室内塑料排水管 De250 热熔连接'), '8-388');
+ck('室内雨水粘接De75', code('室内塑料雨水管 De75 粘接'), '8-405');
+ck('室内雨水粘接De250', code('室内塑料雨水管 De250 粘接'), '8-409');
+ck('PPR De32主材价', pr('PPR给水管 De32').price, 14.5);
+ck('PVC排水De110主材价', pr('PVC-U排水管 De110').price, 35);
+ck('排水介质识别', pr('PVC-U排水管 De110').medium, 'drain');
+ck('排水特征通球', /通球试验/.test(pr('PVC-U排水管 De110').features), true);
+
+console.log('\n== 24. 附加定额（消毒冲洗 / 沟槽管件） ==');
+var g1 = pr('无缝钢管 DN100', 100);
+ck('消毒冲洗挂出', g1.extras.length, 1);
+ck('消毒冲洗DN100→8-491', g1.extras[0].code, '8-491');
+ck('消毒冲洗单位100m', g1.extras[0].unit, '100m');
+ck('消毒冲洗系数100', g1.extras[0].factor, 100);
+ck('消毒冲洗数量=管长', g1.extras[0].qty, 100);
+ck('消毒冲洗换算量', Number((g1.extras[0].qty / g1.extras[0].factor).toFixed(4)), 1);
+ck('消毒冲洗DN50→8-490', pr('无缝钢管 DN50', 100).extras[0].code, '8-490');
+ck('消毒冲洗DN400→8-494', pr('无缝钢管 DN400 焊接 室外', 100).extras[0].code, '8-494');
+var g3 = pr('无缝钢管 DN65 沟槽连接', 100);
+ck('沟槽附加两项', g3.extras.length, 2);
+ck('沟槽管件8-220', g3.extras[0].code, '8-220');
+ck('沟槽管件单位10个', g3.extras[0].unit, '10个');
+ck('沟槽管件系数10', g3.extras[0].factor, 10);
+ck('沟槽管件数量按6m', g3.extras[0].qty, 17);
+ck('沟槽管件换算量', Number((g3.extras[0].qty / 10).toFixed(2)), 1.7);
+ck('沟槽DN80管件8-221', pr('无缝钢管 DN80 沟槽连接').extras[0].code, '8-221');
+ck('沟槽DN250管件8-226', pr('无缝钢管 DN250 沟槽连接').extras[0].code, '8-226');
+ck('管件角色', g3.extras[0].role, 'fitting');
+ck('冲洗角色', g3.extras[1].role, 'flush');
+ck('燃气也挂消毒冲洗', pr('室内燃气不锈钢管 DN25').extras.length, 1);
+ck('燃气提示不计取', /一般不计取/.test(pr('室内燃气不锈钢管 DN25').warn), true);
+ck('排水提示不计取', /一般不计取/.test(pr('室内塑料排水管 De110 粘接').warn), true);
+ck('沟槽提示管件', /沟槽连接已附加管件定额/.test(pr('无缝钢管 DN100 沟槽连接').warn), true);
+
+console.log('\n== 25. 导出多定额行 ==');
+var capG = null, capJ = null;
+global.XLSX = {
+  utils: {
+    aoa_to_sheet: function (d) { return d; },
+    book_new: function () { return {}; },
+    book_append_sheet: function (wb, ws) { wb.__rows = ws; }
+  },
+  writeFile: function (wb, name) { if (/建经/.test(name)) capJ = wb.__rows; else capG = wb.__rows; }
+};
+A.exportGLD([pr('无缝钢管 DN65 沟槽连接', 100)]);
+ck('广联达总行数', capG.length, 8);
+ck('广联达表头15列', capG[0].length, 15);
+ck('清单行项目编码', capG[1][8], '031001003');
+ck('清单行类型', capG[1][9], '清单行');
+ck('清单行单位m', capG[1][12], 'm');
+ck('清单行工程量', capG[1][13], 100);
+ck('主定额行号', capG[2][0], '1.1');
+ck('主定额编码', capG[2][8], '8-206');
+ck('主定额单位10m', capG[2][12], '10m');
+ck('主定额工程量÷10', capG[2][13], 10);
+ck('管件定额行号', capG[3][0], '1.2');
+ck('管件定额编码', capG[3][8], '8-220');
+ck('管件定额单位10个', capG[3][12], '10个');
+ck('管件定额工程量', capG[3][13], 1.7);
+ck('冲洗定额行号', capG[4][0], '1.3');
+ck('冲洗定额编码', capG[4][8], '8-491');
+ck('冲洗定额单位100m', capG[4][12], '100m');
+ck('冲洗定额工程量', capG[4][13], 1);
+ck('设备行最后', capG[5][9], '子目下设备');
+ck('设备行编码', capG[5][8], 'Z00741-001');
+ck('设备行单价', capG[5][14], 37);
+ck('合计行', capG[7][0], '合计');
+A.exportJianjing([pr('无缝钢管 DN65 沟槽连接', 100)]);
+ck('建经总行数', capJ.length, 6);
+ck('建经表头8列', capJ[0].length, 8);
+ck('建经主定额', capJ[1][3], '8-206');
+ck('建经管件另起一行', capJ[2][3], '8-220');
+ck('建经管件数量说明', /数量1\.7 10个/.test(capJ[2][4]), true);
+ck('建经冲洗行', capJ[3][3], '8-491');
+ck('建经合计', capJ[5][0], '合计');
+delete global.XLSX;
 
 console.log('\n结果: ' + pass + ' 通过, ' + fail + ' 失败');
 if (fail) process.exit(1);
