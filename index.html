@@ -67,7 +67,7 @@
     <div class="container">
         <div class="header">
             <h1>💧 给排水专业智能组价系统</h1>
-            <p>天津2025清单计价规范 · Excel上传自动识别管道材质与管径并套清单定额 · 铸铁管可选室内外与接口形式 · 主材价联动天津信息价 · 全部本地计算</p>
+            <p>天津2025清单计价规范 · Excel上传自动识别管道材质/管径/阀门并套清单定额 · 铸铁管可选室内外与接口形式 · 主材价联动天津信息价 · 全部本地计算</p>
         </div>
 
         <div class="content">
@@ -85,6 +85,7 @@
                     <li><strong>复合管</strong>：套<strong>031001007 复合管</strong>；室外钢骨架塑料复合管<strong>电熔</strong>8-81~8-89、室内钢骨架塑料复合管<strong>电熔</strong>8-250~8-260、室内铝塑复合管<strong>卡压</strong>8-227~、<strong>卡套</strong>8-233~、<strong>热熔</strong>8-239~8-249（De20~160）。</li>
                     <li><strong>塑料管</strong>：套<strong>031001008 塑料管</strong>；室外塑料给水<strong>热熔</strong>8-36~、<strong>电熔</strong>8-48~、<strong>粘接</strong>8-60~8-71；室内塑料给水<strong>热熔</strong>8-410~、<strong>电熔</strong>8-421~、<strong>粘接</strong>8-432~8-442；室内塑料排水<strong>粘接</strong>8-377~8-382、<strong>热熔</strong>8-383~8-388；室内塑料雨水<strong>粘接</strong>8-405~8-409。</li>
                     <li><strong>连接方式</strong>：名称含「卡压 / 卡套 / 氩弧焊 / 电弧焊 / 氧乙炔焊 / 钎焊 / 热熔 / 电熔 / 粘接 / 螺纹 / 沟槽（卡箍）/ 焊接」时自动匹配对应子目，未注明时按该材质常用方式预选，结果表<strong>「安装部位/接口形式」</strong>列可手动切换并实时重算。</li>
+                    <li><strong>阀门及管道附件（2026-11-03 新增，与暖通站同口径）</strong>：名称含<strong>阀 / Y型过滤器 / 过滤器 / 软接头 / 橡胶软接头 / 补偿器 / 波纹补偿器</strong>等关键词时，清单统一 <strong>031002001 金属阀门</strong>——<strong>DN15~DN50</strong> 套螺纹阀门 <strong>8-579~8-584</strong>，<strong>DN65~DN400</strong> 套焊接法兰阀 <strong>8-620~8-629</strong>，<strong>DN&gt;400 取 8-629</strong>。价格有信息价取信息价（闸阀/截止阀/蝶阀/止回阀/Y型过滤器/球阀，页面不标品牌），无信息价按市场价并给参考品牌。<strong>特殊阀单独编码</strong>：自动排气阀/放风阀 <strong>031002303</strong>＋8-682（信息价）、散热器温控阀 <strong>031002306</strong>＋8-686（市场价）、浮球阀 <strong>031002301</strong>＋8-612~8-616（DN32~150）、液压水位控制阀 <strong>031002302</strong>＋8-645~8-649（DN50~200）、口部冲洗阀 <strong>031002304</strong>＋8-1260（壁龛式，单位 套）、电磁阀 <strong>031002305</strong>——DN15~50 螺纹电磁阀 8-603~8-608，DN&gt;50 法兰电磁阀 8-630~8-644（DN32~500，&gt;500 取 8-644），均为市场价＋参考品牌。</li>
                     <li><strong>附加定额</strong>：<strong>每条管道自动附加管道消毒冲洗</strong>（8-490~8-495，DN50~500，定额单位100m，排水/燃气管一般不计取，可在导出前删除该行）；名称含<strong>「卡箍 / 沟槽连接」</strong>时自动附加<strong>室内管道钢管沟槽连接管件</strong>（8-220~8-226，DN65~250，定额单位10个，数量按6m定尺估算，实际按图纸管件数量调整）。</li>
                 </ul>
             </div>
@@ -114,7 +115,7 @@
                 <div class="summary-card"><div class="number" id="totalCount">0</div><div class="label">项目总数（条）</div></div>
                 <div class="summary-card"><div class="number" id="catCast">0</div><div class="label">铸铁管</div></div>
                 <div class="summary-card"><div class="number" id="catGalv">0</div><div class="label">镀锌钢管</div></div>
-                <div class="summary-card teal2"><div class="number" id="catOther">0</div><div class="label">其他管材</div></div>
+                <div class="summary-card teal2"><div class="number" id="catOther">0</div><div class="label">其他管材 / 阀门</div></div>
                 <div class="summary-card amber"><div class="number" id="pendingCount">0</div><div class="label">待询价</div></div>
                 <div class="summary-card"><div class="number" id="totalPrice">¥0</div><div class="label">主材费合计（元）</div></div>
             </div>

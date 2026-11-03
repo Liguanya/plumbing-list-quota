@@ -45,6 +45,119 @@
     preInsul: { code: '031001009', name: '直埋保温管' }
   };
 
+  // ---------- 阀门及管道附件（与暖通站同口径）----------
+  var V_LIST = {
+    waterValve: { code: '031002001', name: '金属阀门' },
+    autoAir: { code: '031002303', name: '自动排气阀' },
+    tempValve: { code: '031002306', name: '散热器温控阀' },
+    floatValve: { code: '031002301', name: '法兰浮球阀' },
+    levelValve: { code: '031002302', name: '液压水位控制阀' },
+    flushValve: { code: '031002304', name: '口部冲洗阀' },
+    solenoidValve: { code: '031002305', name: '电磁阀' }
+  };
+  var V_LABEL = {
+    waterValve: '金属阀门', autoAir: '自动排气阀', tempValve: '散热器温控阀',
+    floatValve: '法兰浮球阀', levelValve: '液压水位控制阀', flushValve: '口部冲洗阀', solenoidValve: '电磁阀'
+  };
+  var V_WORK = {
+    waterValve: '阀体安装、螺纹/法兰连接、试压、调试',
+    autoAir: '阀体安装、螺纹连接、试压、调试',
+    tempValve: '温控阀及传感器安装、连接、调试',
+    floatValve: '阀体安装、法兰连接、试压、调试',
+    levelValve: '阀体安装、法兰连接、试压、调试',
+    flushValve: '壁龛（地坑）门框及扇（盖）制作安装、阀安装、刷油、水压试验',
+    solenoidValve: '阀体安装、螺纹/法兰连接、接线、试压、调试'
+  };
+  function TT(max, code, label) { return { max: max, code: code, label: label }; }
+  var V_WTHREAD = [TT(15, '8-579', '15mm以内'), TT(20, '8-580', '20mm以内'), TT(25, '8-581', '25mm以内'),
+    TT(32, '8-582', '32mm以内'), TT(40, '8-583', '40mm以内'), TT(50, '8-584', '50mm以内')];
+  var V_WFLANGE = [TT(65, '8-620', '65mm以内'), TT(80, '8-621', '80mm以内'), TT(100, '8-622', '100mm以内'),
+    TT(125, '8-623', '125mm以内'), TT(150, '8-624', '150mm以内'), TT(200, '8-625', '200mm以内'),
+    TT(250, '8-626', '250mm以内'), TT(300, '8-627', '300mm以内'), TT(350, '8-628', '350mm以内'),
+    TT(400, '8-629', '400mm以内')];
+  var V_FLOAT = [TT(32, '8-612', '32mm以内'), TT(50, '8-613', '50mm以内'), TT(80, '8-614', '80mm以内'),
+    TT(100, '8-615', '100mm以内'), TT(150, '8-616', '150mm以内')];
+  var V_LEVEL = [TT(50, '8-645', '50mm以内'), TT(80, '8-646', '80mm以内'), TT(100, '8-647', '100mm以内'),
+    TT(150, '8-648', '150mm以内'), TT(200, '8-649', '200mm以内')];
+  var V_STHREAD = [TT(15, '8-603', '15mm以内'), TT(20, '8-604', '20mm以内'), TT(25, '8-605', '25mm以内'),
+    TT(32, '8-606', '32mm以内'), TT(40, '8-607', '40mm以内'), TT(50, '8-608', '50mm以内')];
+  var V_SFLANGE = [TT(32, '8-630', '32mm以内'), TT(40, '8-631', '40mm以内'), TT(50, '8-632', '50mm以内'),
+    TT(65, '8-633', '65mm以内'), TT(80, '8-634', '80mm以内'), TT(100, '8-635', '100mm以内'),
+    TT(125, '8-636', '125mm以内'), TT(150, '8-637', '150mm以内'), TT(200, '8-638', '200mm以内'),
+    TT(250, '8-639', '250mm以内'), TT(300, '8-640', '300mm以内'), TT(350, '8-641', '350mm以内'),
+    TT(400, '8-642', '400mm以内'), TT(450, '8-643', '450mm以内'), TT(500, '8-644', '500mm以内')];
+
+  function valveCfg() {
+    return (typeof window !== 'undefined' && window.PIPE_VALVE_PRICES) || {};
+  }
+  function isValveCat(c) { return !!V_LIST[c]; }
+  function parseVDn(name) {
+    var s2 = String(name || '');
+    var m = s2.match(/(?:DN|dn|De|de|D|Φ|φ|Ø)\s*[-－]?\s*(\d{2,4})/);
+    if (m) return parseInt(m[1], 10);
+    m = s2.match(/(\d{2,4})\s*(?:mm|MM|毫米)/);
+    if (m) return parseInt(m[1], 10);
+    return null;
+  }
+  function valveKindOf(name) {
+    var s2 = String(name || '');
+    if (/闸阀/.test(s2)) return 'gate';
+    if (/截止阀/.test(s2)) return 'globe';
+    if (/蝶阀/.test(s2)) return 'butterfly';
+    if (/止回阀|逆止阀/.test(s2)) return 'check';
+    if (/Y型过滤器|y型过滤器|过滤器/.test(s2)) return 'strainer';
+    if (/球阀/.test(s2)) return 'ball';
+    return 'market';
+  }
+  // 阀门识别（给排水站无风阀，含"阀"且带 DN 即可判为水阀）
+  function valveCatOf(name) {
+    var n = String(name || '');
+    if (/口部冲洗/.test(n)) return 'flushValve';
+    if (/电磁阀/.test(n)) return 'solenoidValve';
+    if (/自动排气阀|放风阀/.test(n)) return 'autoAir';
+    if (/温控阀/.test(n)) return 'tempValve';
+    if (/浮球阀/.test(n)) return 'floatValve';
+    if (/水位控制阀/.test(n)) return 'levelValve';
+    if (/闸阀|截止阀|蝶阀|球阀|止回阀|逆止阀|Y型过滤器|y型过滤器|过滤器|软接头|橡胶软接头|补偿器|波纹补偿器|平衡阀|减压阀|水阀/.test(n)) return 'waterValve';
+    if (/阀/.test(n) && parseVDn(n) && !/阀门井|阀室|阀门套/.test(n)) return 'waterValve';
+    return null;
+  }
+  function buildValveItem(name, cat) {
+    var it = {};
+    it.name = name;
+    it.category = cat;
+    it.isValve = true;
+    it.listCode = V_LIST[cat].code;
+    it.listName = V_LIST[cat].name;
+    it.material = V_LABEL[cat];
+    it.dn = parseVDn(name);
+    it.unit = (cat === 'flushValve') ? '套' : '个';
+    it.valveKind = valveKindOf(name);
+    var vc = valveCfg();
+    if (cat === 'waterValve') {
+      var inf = (vc.info || {})[it.valveKind];
+      it.brand = inf ? '' : (vc.brand || '');
+    } else if (cat === 'solenoidValve') {
+      it.brand = (vc.solenoid || {}).brand || '';
+    } else if (cat === 'flushValve') {
+      it.brand = ((vc.special || {}).flush || {}).brand || '';
+    } else {
+      var key = { autoAir: 'autoAir', tempValve: 'temp', floatValve: 'float', levelValve: 'level' }[cat];
+      var sp = (vc.special || {})[key] || {};
+      it.brand = (sp.source === 'info') ? '' : (sp.brand || vc.brand || '');
+    }
+    return it;
+  }
+  function nearIdxV(arr, v) {
+    if (!(v > 0)) return 0;
+    for (var i = 0; i < arr.length; i++) if (v <= arr[i]) return i;
+    return arr.length - 1;
+  }
+  function tierIdxV(tiers, dn) {
+    for (var i = 0; i < tiers.length; i++) if (dn <= tiers[i].max) return i;
+    return tiers.length - 1;
+  }
+
   // ---------- 其他管材定额组（2026-11-02 补充）----------
   // 每组：loc 室内/室外；joint 连接方式；medium 介质（water/gas/drain/rain，默认 water）
   //       start 首个子目号；dns 依次对应的管径档；name 子目名称
@@ -276,6 +389,9 @@
   // ---------- 建条目 ----------
   function buildItem(name) {
     if (!name) return null;
+    // 阀门及管道附件优先（与暖通站同口径）
+    var vcat = valveCatOf(name);
+    if (vcat) return buildValveItem(name, vcat);
     var it = {};
     it.name = name;
     it.material = materialOf(name);
@@ -365,8 +481,96 @@
   }
 
   // ---------- 定额匹配 ----------
+  // 阀门定额：通用 8-579~584/8-620~629；特殊阀 8-682/8-686/8-612~616/8-645~649/8-1260；电磁阀 8-603~608/8-630~644
+  function matchValveQuota(it) {
+    var dn = it.dn, noDn = !(dn > 0);
+    var c = it.category;
+    if (c === 'waterValve') {
+      if (noDn) return { code: '8-579', name: '螺纹阀门 公称直径15mm以内', inferred: false, noDn: true, unit: '个', factor: 1 };
+      if (dn <= 50) {
+        var wi = tierIdxV(V_WTHREAD, dn);
+        return { code: V_WTHREAD[wi].code, name: '螺纹阀门 公称直径' + V_WTHREAD[wi].label, inferred: V_WTHREAD[wi].max !== dn, unit: '个', factor: 1 };
+      }
+      var wf = tierIdxV(V_WFLANGE, dn);
+      return {
+        code: V_WFLANGE[wf].code, name: '焊接法兰阀门 公称直径' + V_WFLANGE[wf].label,
+        inferred: V_WFLANGE[wf].max !== dn, overRange: dn > 400, unit: '个', factor: 1
+      };
+    }
+    if (c === 'autoAir') return { code: '8-682', name: '自动排气阀、手动放风阀 公称直径25mm以内', inferred: false, unit: '个', factor: 1 };
+    if (c === 'tempValve') return { code: '8-686', name: '散热器温控阀 公称直径25mm以内', inferred: false, unit: '个', factor: 1 };
+    if (c === 'flushValve') return { code: '8-1260', name: '口部冲洗阀制作、安装 壁龛式', inferred: false, unit: '套', factor: 1 };
+    if (c === 'floatValve') {
+      var fi = noDn ? 0 : tierIdxV(V_FLOAT, dn);
+      return { code: V_FLOAT[fi].code, name: '法兰浮球阀 公称直径' + V_FLOAT[fi].label, inferred: !noDn && V_FLOAT[fi].max !== dn, noDn: noDn, overRange: !noDn && dn > 150, unit: '个', factor: 1 };
+    }
+    if (c === 'levelValve') {
+      var li = noDn ? 0 : tierIdxV(V_LEVEL, dn);
+      return { code: V_LEVEL[li].code, name: '法兰液压水位控制阀 公称直径' + V_LEVEL[li].label, inferred: !noDn && V_LEVEL[li].max !== dn, noDn: noDn, overRange: !noDn && dn > 200, unit: '个', factor: 1 };
+    }
+    if (c === 'solenoidValve') {
+      if (noDn) return { code: '8-603', name: '螺纹电磁阀安装 公称直径15mm以内', inferred: false, noDn: true, unit: '个', factor: 1 };
+      if (dn <= 50) {
+        var si = tierIdxV(V_STHREAD, dn);
+        return { code: V_STHREAD[si].code, name: '螺纹电磁阀安装 公称直径' + V_STHREAD[si].label, inferred: V_STHREAD[si].max !== dn, unit: '个', factor: 1 };
+      }
+      var sf = tierIdxV(V_SFLANGE, dn);
+      return {
+        code: V_SFLANGE[sf].code, name: '法兰电磁阀安装 公称直径' + V_SFLANGE[sf].label,
+        inferred: V_SFLANGE[sf].max !== dn, overRange: dn > 500, unit: '个', factor: 1
+      };
+    }
+    return { code: '', name: '', inferred: false };
+  }
+
+  // 阀门主材价：有信息价取信息价（不标品牌），无信息价取市场价并给参考品牌
+  function valvePrice(it) {
+    var vc = valveCfg(), dn = it.dn, c = it.category;
+    if (c === 'waterValve') {
+      var t = (vc.info || {})[it.valveKind || 'market'];
+      if (t) {
+        var i1 = nearIdxV(t.dns, dn);
+        return {
+          price: t.prices[i1], source: 'info',
+          basis: '信息价：' + t.name + ' DN' + t.dns[i1] + ' ' + t.prices[i1] + '元/个' +
+            (dn > 0 && t.dns[i1] !== dn ? '（DN' + dn + '按相邻档取定）' : '')
+        };
+      }
+      var mk = vc.market || { dns: [15], prices: [40] };
+      var i2 = nearIdxV(mk.dns, dn);
+      return {
+        price: mk.prices[i2], source: 'market', brand: vc.brand,
+        basis: '市场价（' + vc.brand + '）：' + it.name + ' DN' + mk.dns[i2] + ' ' + mk.prices[i2] + '元/个（该阀种无信息价，按市场价计）'
+      };
+    }
+    if (c === 'flushValve') {
+      var fl = (vc.special || {}).flush || { prices: [480], brand: '' };
+      return { price: fl.prices[0], source: 'market', brand: fl.brand, basis: '市场价（' + fl.brand + '）：口部冲洗阀 成套 ' + fl.prices[0] + '元/套（定额 8-1260 按套计）' };
+    }
+    if (c === 'solenoidValve') {
+      var so = vc.solenoid || { dns: [15], prices: [180], brand: '' };
+      var i4 = nearIdxV(so.dns, dn);
+      return {
+        price: so.prices[i4], source: 'market', brand: so.brand,
+        basis: '市场价（' + so.brand + '）：电磁阀 DN' + so.dns[i4] + ' ' + so.prices[i4] + '元/个' +
+          (dn > 0 && so.dns[i4] !== dn ? '（DN' + dn + '按相邻档取定）' : '')
+      };
+    }
+    var key = { autoAir: 'autoAir', tempValve: 'temp', floatValve: 'float', levelValve: 'level' }[c];
+    var sp = (vc.special || {})[key] || { dns: [25], prices: [0], source: 'market' };
+    var i3 = nearIdxV(sp.dns, dn);
+    if (sp.source === 'info') {
+      return { price: sp.prices[i3], source: 'info', basis: '信息价：' + sp.name + ' DN' + sp.dns[i3] + ' ' + sp.prices[i3] + '元/个' };
+    }
+    return {
+      price: sp.prices[i3], source: 'market', brand: sp.brand || vc.brand,
+      basis: '市场价（' + (sp.brand || vc.brand) + '）：' + sp.name + ' DN' + sp.dns[i3] + ' ' + sp.prices[i3] + '元/个'
+    };
+  }
+
   function matchQuota(it) {
     if (!it) return { code: '', name: '', inferred: false };
+    if (isValveCat(it.category)) return matchValveQuota(it);
     if (PIPE_GROUPS[it.category]) {
       var g = groupOf(it);
       if (!g) return { code: '', name: '', inferred: false };
@@ -413,6 +617,7 @@
   function buildExtraQuotas(it, quota) {
     var arr = [];
     if (!quota || !quota.code) return arr;
+    if (isValveCat(it.category)) return arr;   // 阀门及附件不计管道消毒冲洗/沟槽管件
     var tierDn = quota.dnTier || it.dn;
     if (it.joint === 'groove') {
       var f = tierOf(GROOVE_FITTING.dns, tierDn);
@@ -522,9 +727,14 @@
     return { price: r.price, source: 'market', basis: basis };
   }
 
-  function isPriced(it) { return it && (it.category === 'castIron' || it.category === 'galv' || !!PIPE_GROUPS[it.category]); }
+  function isPriced(it) { return it && (it.category === 'castIron' || it.category === 'galv' || !!PIPE_GROUPS[it.category] || isValveCat(it.category)); }
 
   function recomputePrice(it, periodKey) {
+    if (isValveCat(it.category)) {
+      var vp = valvePrice(it);
+      it.price = vp.price; it.priceSource = vp.source; it.priceBasis = vp.basis; it.priceBrand = vp.brand || '';
+      return;
+    }
     var info = null;
     if (it.category === 'castIron') info = lookupCastIronPrice(periodKey, it);
     else if (it.category === 'galv') info = lookupGalvPrice(periodKey, it);
@@ -540,6 +750,15 @@
 
   // ---------- 项目特征 ----------
   function featureText(it) {
+    if (isValveCat(it.category)) {
+      var vf = [];
+      vf.push('名称:' + it.name);
+      vf.push('类型:' + V_LABEL[it.category]);
+      if (it.dn) vf.push('规格型号:DN' + it.dn);
+      vf.push('品牌参考:' + (it.brand || '信息价（不标品牌）'));
+      vf.push('其他:' + (V_WORK[it.category] || ''));
+      return vf.join('；');
+    }
     var parts = [];
     parts.push('安装部位:' + (it.loc === 'out' ? '室外' : '室内'));
     parts.push('材质:' + (it.material || '铸铁'));
@@ -566,6 +785,13 @@
   // ---------- 核对提示 ----------
   function buildWarn(it, quota) {
     var w = [];
+    if (isValveCat(it.category)) {
+      if (!it.dn && it.category !== 'flushValve') w.push('名称未注公称直径（如 DN100），已按本类最小档 ' + quota.code + ' 计列，请核对');
+      if (quota.overRange) w.push('公称直径超本类最大档，已取顶档 ' + quota.code + '，请核对');
+      if (it.category === 'flushValve') w.push('口部冲洗阀按 8-1260（壁龛式）计列，如为地坑式请改选 8-1261');
+      if (it.category === 'waterValve' && !it.brand) w.push('该阀种取信息价，页面不标品牌');
+      return w.join('；');
+    }
     if (!isPriced(it)) {
       w.push('该材质（' + it.material + '）的清单/定额匹配逻辑待补充，暂只输出名称与长度，请手工套用');
       return w.join('；');
@@ -685,6 +911,7 @@
 
   // 安装部位 / 接口形式 列
   function layCell(it) {
+    if (isValveCat(it.category)) return '<span class="lay-static">—</span>';
     if (!isPriced(it)) {
       return '<span class="lay-static">待补充</span>';
     }
@@ -696,6 +923,7 @@
   }
 
   function specCell(it) {
+    if (isValveCat(it.category)) return it.dn ? 'DN' + it.dn : (it.category === 'flushValve' ? '成套' : '—');
     if (it.dn === null || it.dn === undefined || isNaN(it.dn)) return '—';
     var p = (it.category === 'plastic' || it.category === 'composite' || it.category === 'copper') ? 'De' : 'DN';
     return p + it.dn;
@@ -1013,7 +1241,11 @@
       pipeKey: pipeKey, isPriced: isPriced, PIPE_GROUPS: PIPE_GROUPS,
       parsePipeJoint: parsePipeJoint, JOINT_CN2: JOINT_CN2,
       featureText: featureText, buildWarn: buildWarn,
-      exportGLD: exportGLD, exportJianjing: exportJianjing
+      exportGLD: exportGLD, exportJianjing: exportJianjing,
+      V_LIST: V_LIST, V_LABEL: V_LABEL, isValveCat: isValveCat, valveCatOf: valveCatOf,
+      buildValveItem: buildValveItem, matchValveQuota: matchValveQuota, valvePrice: valvePrice,
+      V_WTHREAD: V_WTHREAD, V_WFLANGE: V_WFLANGE, V_FLOAT: V_FLOAT, V_LEVEL: V_LEVEL,
+      V_STHREAD: V_STHREAD, V_SFLANGE: V_SFLANGE
     };
   }
 })();
