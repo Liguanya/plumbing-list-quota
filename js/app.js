@@ -158,6 +158,96 @@
     return tiers.length - 1;
   }
 
+  // ---------- 管道支架 / 保温绝热（与暖通站同口径）----------
+  var AUX_LIST = {
+    bracket: { code: '031301005', name: '支/吊架、基础型钢' },
+    insulRubber: { code: '031208002', name: '其他管道绝热' },
+    insulGlass: { code: '031208002', name: '其他管道绝热' }
+  };
+  var AUX_LABEL = { bracket: '管道支架', insulRubber: '橡塑保温', insulGlass: '离心玻璃棉' };
+  function auxCfg() {
+    return (typeof window !== 'undefined' && window.PIPE_AUX_PRICES) || {};
+  }
+  function isAuxCat(c) { return !!AUX_LIST[c]; }
+  // 保温/支架优先于管道识别（"橡塑保温管""管道支架"都含"管"）
+  function auxCatOf(name) {
+    var n = String(name || '');
+    if (/橡塑/.test(n)) return 'insulRubber';
+    if (/玻璃棉/.test(n)) return 'insulGlass';
+    if (/管道支架|支吊架|支架制作|支架安装|支架制安/.test(n)) return 'bracket';
+    return null;
+  }
+  function buildAuxItem(name, cat) {
+    var it = {};
+    it.name = name;
+    it.category = cat;
+    it.isAux = true;
+    it.listCode = AUX_LIST[cat].code;
+    it.listName = AUX_LIST[cat].name;
+    it.material = AUX_LABEL[cat];
+    it.dn = parseDN(name);
+    it.unit = (cat === 'bracket') ? 'kg' : 'm³';
+    var cfg = auxCfg();
+    if (cat === 'insulRubber') it.insulThk = (cfg.insul && cfg.insul.rubber.thk) || 30;
+    if (cat === 'insulGlass') it.insulThk = (cfg.insul && cfg.insul.glass.thk) || 40;
+    return it;
+  }
+  function matchAuxQuota(it) {
+    var c = it.category;
+    if (c === 'bracket') return { code: '7-138', name: '管道支吊架制作、安装 管道支吊架', inferred: false, unit: '100kg', factor: 100 };
+    if (c === 'insulRubber') return { code: '11-582', name: '管道橡塑保温壳安装（管道） D133以内', inferred: false, unit: 'm³', factor: 1 };
+    if (c === 'insulGlass') return { code: '11-647', name: '带铝箔离心玻璃棉安装 通风管道 厚度40mm', inferred: false, unit: 'm³', factor: 1 };
+    return { code: '', name: '', inferred: false };
+  }
+  function auxPrice(it) {
+    var cfg = auxCfg();
+    if (it.category === 'bracket') {
+      var b = cfg.bracket || { steel: 4.2 };
+      return { price: b.steel, source: 'info', basis: '信息价：型钢（角钢、槽钢）' + b.steel + '元/kg' };
+    }
+    var k = it.category === 'insulRubber' ? 'rubber' : 'glass';
+    var m = (cfg.insul || {})[k] || { price: 0, brand: '', name: '' };
+    return {
+      price: m.price, source: 'market', brand: m.brand,
+      basis: '市场价（' + m.brand + '）：' + m.name + ' ' + m.price + '元/m³'
+    };
+  }
+  function bracketWeightPerM(dn) {
+    var t = (auxCfg().bracket || {}).weightPerM || [{ max: 9999, w: 0.6 }];
+    if (!(dn > 0)) return 0.60;
+    for (var i = 0; i < t.length; i++) if (dn <= t[i].max) return t[i].w;
+    return t[t.length - 1].w;
+  }
+  // 管道清单全部套完后自动补「管道支架」一行；原表已含支架则不重复
+  function withBracket(items) {
+    var totalM = 0, kg = 0, hasPipe = false, hasBracket = false;
+    items.forEach(function (it) {
+      if (it.category === 'bracket') hasBracket = true;
+      if (isAuxCat(it.category) || isValveCat(it.category)) return;
+      if (!(it.quantity > 0)) return;
+      hasPipe = true;
+      totalM += it.quantity;
+      kg += it.quantity * bracketWeightPerM(it.dn);
+    });
+    if (!hasPipe || hasBracket) return items;
+    kg = Math.round(kg * 10) / 10;
+    if (!(kg > 0)) return items;
+    var it = buildAuxItem('管道支架', 'bracket');
+    it.index = String(items.length + 1);
+    it.quantity = kg;
+    it.loc = null; it.joint = null;
+    var q = matchAuxQuota(it);
+    it.quotaCode = q.code; it.quotaName = q.name; it.quotaUnit = q.unit; it.quotaFactor = q.factor;
+    it.codeInferred = false; it.extras = [];
+    var pr = auxPrice(it);
+    it.price = pr.price; it.priceSource = pr.source; it.priceBasis = pr.basis; it.priceBrand = pr.brand || '';
+    it.warn = '管道支架为自动补项：按管道总长 ' + Math.round(totalM) + 'm 与管径分档含量估算约 ' + kg +
+      'kg（0.45~3.2kg/m），定额 7-138 计量单位为 100kg，请按图纸支架实际重量调整';
+    it.features = featureText(it);
+    items.push(it);
+    return items;
+  }
+
   // ---------- 其他管材定额组（2026-11-02 补充）----------
   // 每组：loc 室内/室外；joint 连接方式；medium 介质（water/gas/drain/rain，默认 water）
   //       start 首个子目号；dns 依次对应的管径档；name 子目名称
@@ -389,6 +479,9 @@
   // ---------- 建条目 ----------
   function buildItem(name) {
     if (!name) return null;
+    // 保温绝热 / 管道支架优先（名称里也含"管"字）
+    var acat = auxCatOf(name);
+    if (acat) return buildAuxItem(name, acat);
     // 阀门及管道附件优先（与暖通站同口径）
     var vcat = valveCatOf(name);
     if (vcat) return buildValveItem(name, vcat);
@@ -570,6 +663,7 @@
 
   function matchQuota(it) {
     if (!it) return { code: '', name: '', inferred: false };
+    if (isAuxCat(it.category)) return matchAuxQuota(it);
     if (isValveCat(it.category)) return matchValveQuota(it);
     if (PIPE_GROUPS[it.category]) {
       var g = groupOf(it);
@@ -618,6 +712,7 @@
     var arr = [];
     if (!quota || !quota.code) return arr;
     if (isValveCat(it.category)) return arr;   // 阀门及附件不计管道消毒冲洗/沟槽管件
+    if (isAuxCat(it.category)) return arr;     // 支架/保温不计管道消毒冲洗/沟槽管件
     var tierDn = quota.dnTier || it.dn;
     if (it.joint === 'groove') {
       var f = tierOf(GROOVE_FITTING.dns, tierDn);
@@ -727,9 +822,14 @@
     return { price: r.price, source: 'market', basis: basis };
   }
 
-  function isPriced(it) { return it && (it.category === 'castIron' || it.category === 'galv' || !!PIPE_GROUPS[it.category] || isValveCat(it.category)); }
+  function isPriced(it) { return it && (it.category === 'castIron' || it.category === 'galv' || !!PIPE_GROUPS[it.category] || isValveCat(it.category) || isAuxCat(it.category)); }
 
   function recomputePrice(it, periodKey) {
+    if (isAuxCat(it.category)) {
+      var ap = auxPrice(it);
+      it.price = ap.price; it.priceSource = ap.source; it.priceBasis = ap.basis; it.priceBrand = ap.brand || '';
+      return;
+    }
     if (isValveCat(it.category)) {
       var vp = valvePrice(it);
       it.price = vp.price; it.priceSource = vp.source; it.priceBasis = vp.basis; it.priceBrand = vp.brand || '';
@@ -750,6 +850,22 @@
 
   // ---------- 项目特征 ----------
   function featureText(it) {
+    if (isAuxCat(it.category)) {
+      var af = [];
+      af.push('名称:' + it.name);
+      af.push('类型:' + AUX_LABEL[it.category]);
+      if (it.category === 'bracket') {
+        af.push('计量:按型钢重量 kg 计');
+        af.push('主材:型钢（信息价 4.20 元/kg）');
+        af.push('其他:除锈、刷油、制作、安装、固定');
+      } else {
+        if (it.dn) af.push('规格型号:DN' + it.dn + ' 厚度' + it.insulThk + 'mm');
+        else af.push('厚度:' + it.insulThk + 'mm');
+        af.push('品牌参考:' + (it.priceBrand || ''));
+        af.push('其他:' + (it.category === 'insulRubber' ? '保温壳安装、粘接、接缝处理' : '带铝箔玻璃棉铺贴、绑扎、接缝处理'));
+      }
+      return af.join('；');
+    }
     if (isValveCat(it.category)) {
       var vf = [];
       vf.push('名称:' + it.name);
@@ -785,6 +901,15 @@
   // ---------- 核对提示 ----------
   function buildWarn(it, quota) {
     var w = [];
+    if (it.category === 'bracket') {
+      w.push('管道支架工程量按管道长度与管径分档含量估算，定额 7-138 计量单位 100kg，请按图纸支架实际重量调整');
+      return w.join('；');
+    }
+    if (it.category === 'insulRubber' || it.category === 'insulGlass') {
+      w.push((it.category === 'insulRubber' ? '橡塑保温' : '离心玻璃棉') + '按保温体积（m³）计，厚度按 ' + it.insulThk +
+        'mm 取定；单位列填 m² 按面积×厚度折算，填 m 且含 DN 按 π×(DN+δ)×δ×L 折算');
+      return w.join('；');
+    }
     if (isValveCat(it.category)) {
       if (!it.dn && it.category !== 'flushValve') w.push('名称未注公称直径（如 DN100），已按本类最小档 ' + quota.code + ' 计列，请核对');
       if (quota.overRange) w.push('公称直径超本类最大档，已取顶档 ' + quota.code + '，请核对');
@@ -850,6 +975,19 @@
       var qty = parseFloat(qtyRaw);
       it.qtyWarn = false;
       if (isNaN(qty) || qty <= 0) { qty = 1; it.qtyWarn = true; }
+      // 保温绝热：D 列可填 m²（面积）或 m（管长），自动折算为 m³
+      var unitRaw = row[3] === undefined || row[3] === null ? '' : String(row[3]).trim();
+      if (it.category === 'insulRubber' || it.category === 'insulGlass') {
+        var delta = (it.insulThk || 30) / 1000;
+        if (/m²|㎡|平方米|平米/.test(unitRaw)) {
+          qty = qty * delta;
+          it.unitFrom = 'm²';
+        } else if (/^(m|米|延米|延长米)$/.test(unitRaw) && it.dn) {
+          qty = Math.PI * (it.dn / 1000 + delta) * delta * qty;
+          it.unitFrom = 'm';
+        }
+        qty = Math.round(qty * 1000) / 1000;
+      }
       it.quantity = qty;
 
       var quota = matchQuota(it);
@@ -866,9 +1004,10 @@
       it.features = featureText(it);
       results.push(it);
     }
-    results._periodKey = periodKey;
-    results._format = format;
-    return results;
+    var out = withBracket(results);
+    out._periodKey = periodKey;
+    out._format = format;
+    return out;
   }
 
   function recomputeQuota(it) {
@@ -911,6 +1050,7 @@
 
   // 安装部位 / 接口形式 列
   function layCell(it) {
+    if (isAuxCat(it.category)) return '<span class="lay-static">—</span>';
     if (isValveCat(it.category)) return '<span class="lay-static">—</span>';
     if (!isPriced(it)) {
       return '<span class="lay-static">待补充</span>';
@@ -923,6 +1063,10 @@
   }
 
   function specCell(it) {
+    if (isAuxCat(it.category)) {
+      if (it.category === 'bracket') return '—';
+      return (it.dn ? 'DN' + it.dn + ' ' : '') + 'δ' + it.insulThk;
+    }
     if (isValveCat(it.category)) return it.dn ? 'DN' + it.dn : (it.category === 'flushValve' ? '成套' : '—');
     if (it.dn === null || it.dn === undefined || isNaN(it.dn)) return '—';
     var p = (it.category === 'plastic' || it.category === 'composite' || it.category === 'copper') ? 'De' : 'DN';
@@ -1034,14 +1178,14 @@
 
       if (!it.quotaCode) {
         wsData.push([
-          it.index, it.name, '管道', it.material, '', specVal, '', it.quantity,
+          it.index, it.name, (isAuxCat(it.category) ? AUX_LABEL[it.category] : '管道'), it.material, '', specVal, '', it.quantity,
           '', '待人工处理', it.name, it.features, it.unit, it.quantity,
           hasPrice ? num2(it.price) : ''
         ]);
         return;
       }
       wsData.push([
-        it.index, it.name, '管道', it.material, '', specVal, '', it.quantity,
+        it.index, it.name, (isAuxCat(it.category) ? AUX_LABEL[it.category] : '管道'), it.material, '', specVal, '', it.quantity,
         it.listCode, '清单行', it.name, it.features, it.unit, it.quantity,
         hasPrice ? num2(it.price) : ''
       ]);
@@ -1113,7 +1257,7 @@
       bar.className = 'status-bar status-ok';
       var cnt = {};
       exportData.forEach(function (d) { cnt[d.category] = (cnt[d.category] || 0) + 1; });
-      var nameMap = { castIron: '铸铁管', galv: '镀锌钢管', seamless: '无缝钢管', welded: '焊接钢管', copper: '铜管', stainless: '不锈钢管', composite: '复合管', plastic: '塑料管', other: '其他材质' };
+      var nameMap = { castIron: '铸铁管', galv: '镀锌钢管', seamless: '无缝钢管', welded: '焊接钢管', copper: '铜管', stainless: '不锈钢管', composite: '复合管', plastic: '塑料管', waterValve: '阀门', bracket: '管道支架', insulRubber: '橡塑保温', insulGlass: '玻璃棉', other: '其他材质' };
       var parts = [];
       Object.keys(nameMap).forEach(function (k) { if (cnt[k]) parts.push(nameMap[k] + ' ' + cnt[k] + ' 条'); });
       bar.textContent = '成功解析 ' + exportData.length + ' 条：' + parts.join('、') +
@@ -1245,7 +1389,10 @@
       V_LIST: V_LIST, V_LABEL: V_LABEL, isValveCat: isValveCat, valveCatOf: valveCatOf,
       buildValveItem: buildValveItem, matchValveQuota: matchValveQuota, valvePrice: valvePrice,
       V_WTHREAD: V_WTHREAD, V_WFLANGE: V_WFLANGE, V_FLOAT: V_FLOAT, V_LEVEL: V_LEVEL,
-      V_STHREAD: V_STHREAD, V_SFLANGE: V_SFLANGE
+      V_STHREAD: V_STHREAD, V_SFLANGE: V_SFLANGE,
+      AUX_LIST: AUX_LIST, AUX_LABEL: AUX_LABEL, isAuxCat: isAuxCat, auxCatOf: auxCatOf,
+      buildAuxItem: buildAuxItem, matchAuxQuota: matchAuxQuota, auxPrice: auxPrice,
+      bracketWeightPerM: bracketWeightPerM, withBracket: withBracket
     };
   }
 })();

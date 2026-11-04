@@ -74,7 +74,7 @@
             <div class="instructions">
                 <h3>📋 使用说明</h3>
                 <ul>
-                    <li>录入给排水专业工程量清单 Excel（.xlsx/.xls），<strong>A列=序号</strong>、<strong>B列=项目名称（材质/管径/接口形式）</strong>、<strong>C列=长度（m）</strong>，首行可为表头；上传后系统按项目名称<strong>自动识别材质与公称直径</strong>并套用清单与定额，结果支持<strong>「广联达 / 建经科技」</strong>两种格式导出。</li>
+                    <li>录入给排水专业工程量清单 Excel（.xlsx/.xls），<strong>A列=序号</strong>、<strong>B列=项目名称（材质/管径/接口形式）</strong>、<strong>C列=数量</strong>、<strong>D列=单位（可选，m/m²/m³）</strong>，首行可为表头；上传后系统按项目名称<strong>自动识别材质与公称直径</strong>并套用清单与定额，结果支持<strong>「广联达 / 建经科技」</strong>两种格式导出。</li>
                     <li><strong>铸铁管</strong>：名称含「铸铁管 / 机制离心排水铸铁管 / 离心浇筑灰口铁直管 / 柔性接口机制排水铸铁管」等关键词或相近材质，套<strong>031001001 铸铁管</strong>；结果表<strong>「安装部位/接口形式」</strong>列可切换<strong>室内/室外</strong>与<strong>青铅/膨胀水泥/石棉水泥/胶圈/水泥</strong>接口，定额与主材价实时重算；定额单位为 10m，导出广联达时已按定额单位自动换算。</li>
                     <li><strong>镀锌钢管</strong>：名称含「镀锌钢管 / 内外壁热浸镀锌焊接普通钢管」等关键词或相近材质，套<strong>031001002 镀锌钢管</strong>；<strong>「安装部位/接口形式」</strong>列可选<strong>室内/室外</strong>与<strong>螺纹连接 / 螺纹连接（燃气）</strong>，名称含燃气、煤气、天然气、液化气时自动预选燃气；定额单位为 10m，导出广联达时已按定额单位自动换算。</li>
                     <li><strong>清单及定额</strong>：参照<strong>天津市2025清单计价规范</strong>（配套2020预算基价第八册 给排水、采暖、燃气工程）编制。</li>
@@ -86,6 +86,8 @@
                     <li><strong>塑料管</strong>：套<strong>031001008 塑料管</strong>；室外塑料给水<strong>热熔</strong>8-36~、<strong>电熔</strong>8-48~、<strong>粘接</strong>8-60~8-71；室内塑料给水<strong>热熔</strong>8-410~、<strong>电熔</strong>8-421~、<strong>粘接</strong>8-432~8-442；室内塑料排水<strong>粘接</strong>8-377~8-382、<strong>热熔</strong>8-383~8-388；室内塑料雨水<strong>粘接</strong>8-405~8-409。</li>
                     <li><strong>连接方式</strong>：名称含「卡压 / 卡套 / 氩弧焊 / 电弧焊 / 氧乙炔焊 / 钎焊 / 热熔 / 电熔 / 粘接 / 螺纹 / 沟槽（卡箍）/ 焊接」时自动匹配对应子目，未注明时按该材质常用方式预选，结果表<strong>「安装部位/接口形式」</strong>列可手动切换并实时重算。</li>
                     <li><strong>阀门及管道附件（2026-11-03 新增，与暖通站同口径）</strong>：名称含<strong>阀 / Y型过滤器 / 过滤器 / 软接头 / 橡胶软接头 / 补偿器 / 波纹补偿器</strong>等关键词时，清单统一 <strong>031002001 金属阀门</strong>——<strong>DN15~DN50</strong> 套螺纹阀门 <strong>8-579~8-584</strong>，<strong>DN65~DN400</strong> 套焊接法兰阀 <strong>8-620~8-629</strong>，<strong>DN&gt;400 取 8-629</strong>。价格有信息价取信息价（闸阀/截止阀/蝶阀/止回阀/Y型过滤器/球阀，页面不标品牌），无信息价按市场价并给参考品牌。<strong>特殊阀单独编码</strong>：自动排气阀/放风阀 <strong>031002303</strong>＋8-682（信息价）、散热器温控阀 <strong>031002306</strong>＋8-686（市场价）、浮球阀 <strong>031002301</strong>＋8-612~8-616（DN32~150）、液压水位控制阀 <strong>031002302</strong>＋8-645~8-649（DN50~200）、口部冲洗阀 <strong>031002304</strong>＋8-1260（壁龛式，单位 套）、电磁阀 <strong>031002305</strong>——DN15~50 螺纹电磁阀 8-603~8-608，DN&gt;50 法兰电磁阀 8-630~8-644（DN32~500，&gt;500 取 8-644），均为市场价＋参考品牌。</li>
+                    <li><strong>管道支架（2026-11-04 新增，与暖通站同口径·自动补项）</strong>：<strong>全部管道清单套完后自动补一行</strong>「管道支架」，无论原表是否已含；原表已带支架则不重复补。清单 <strong>031301005 支/吊架、基础型钢</strong>，定额 <strong>7-138 管道支吊架制作、安装</strong>（第七册，定额单位 <strong>100kg</strong>，清单单位 kg），主材按<strong>型钢信息价 4.20 元/kg</strong> 计入。工程量按管道总长 × 管径分档含量估算（≤50 0.45、DN65~100 0.90、DN125~200 1.50、DN250~400 2.40、&gt;400 3.20 kg/m），<strong>请按图纸支架实际重量调整</strong>。</li>
+                    <li><strong>保温绝热（2026-11-04 新增，与暖通站同口径）</strong>：名称含<strong>「橡塑」</strong>→ 清单 <strong>031208002 其他管道绝热</strong> ＋ 定额 <strong>11-582 管道橡塑保温壳安装（D133以内）</strong>，主材 <strong>1000 元/m³</strong>；名称含<strong>「玻璃棉 / 离心玻璃棉」</strong>→ 清单 <strong>031208002</strong> ＋ 定额 <strong>11-647 带铝箔离心玻璃棉安装 通风管道 厚度40mm</strong>，主材 <strong>450 元/m³</strong>。均按保温体积 <strong>m³</strong> 计，D 列可填 m²（面积×厚度）或 m（π×(DN+δ)×δ×L）自动折算。</li>
                     <li><strong>附加定额</strong>：<strong>每条管道自动附加管道消毒冲洗</strong>（8-490~8-495，DN50~500，定额单位100m，排水/燃气管一般不计取，可在导出前删除该行）；名称含<strong>「卡箍 / 沟槽连接」</strong>时自动附加<strong>室内管道钢管沟槽连接管件</strong>（8-220~8-226，DN65~250，定额单位10个，数量按6m定尺估算，实际按图纸管件数量调整）。</li>
                 </ul>
             </div>
@@ -115,7 +117,7 @@
                 <div class="summary-card"><div class="number" id="totalCount">0</div><div class="label">项目总数（条）</div></div>
                 <div class="summary-card"><div class="number" id="catCast">0</div><div class="label">铸铁管</div></div>
                 <div class="summary-card"><div class="number" id="catGalv">0</div><div class="label">镀锌钢管</div></div>
-                <div class="summary-card teal2"><div class="number" id="catOther">0</div><div class="label">其他管材 / 阀门</div></div>
+                <div class="summary-card teal2"><div class="number" id="catOther">0</div><div class="label">其他（管材/阀/保温）</div></div>
                 <div class="summary-card amber"><div class="number" id="pendingCount">0</div><div class="label">待询价</div></div>
                 <div class="summary-card"><div class="number" id="totalPrice">¥0</div><div class="label">主材费合计（元）</div></div>
             </div>

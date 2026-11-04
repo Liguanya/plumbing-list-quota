@@ -146,7 +146,12 @@ var rows = A.parseRows([
   [4, '室内铸铁给水管 石棉水泥接口 DN50', ''],
   ['', '柔性接口机制排水铸铁管 DN150', 30]
 ], '2026-10', 'guanglianda');
-ck('解析条数', rows.length, 5);
+ck('解析条数（含自动补支架）', rows.length, 6);
+ck('末行为自动补管道支架', rows[5].category, 'bracket');
+ck('支架估算重量 335.7kg', rows[5].quantity, 335.7);
+ck('支架清单031301005', rows[5].listCode, '031301005');
+ck('支架定额7-138/100kg', rows[5].quotaCode + '/' + rows[5].quotaFactor, '7-138/100');
+ck('支架型钢信息价4.2', rows[5].price, 4.2);
 ck('序号保留', rows[0].index, '1');
 ck('空序号自动编号', rows[4].index, '5');
 ck('工程量小数', rows[1].quantity, 85.5);
@@ -157,7 +162,7 @@ ck('第2行定额', rows[1].quotaCode, '8-93');
 ck('第3行薄壁不锈钢DN80', rows[2].quotaCode, '8-268');
 ck('第4行DN50室内给水', rows[3].quotaCode, '8-348');
 ck('第5行柔性排水DN150→8-357', rows[4].quotaCode, '8-357');
-ck('主材费合计', Number(rows.reduce(function (s, d) { return s + (d.price === null ? 0 : d.price * d.quantity); }, 0).toFixed(2)), 120 * 62 + 85.5 * 152 + 60 * 128 + 1 * 58 + 30 * 105);
+ck('主材费合计（管道）', Number(rows.filter(function (d) { return d.category !== 'bracket'; }).reduce(function (s, d) { return s + (d.price === null ? 0 : d.price * d.quantity); }, 0).toFixed(2)), 120 * 62 + 85.5 * 152 + 60 * 128 + 1 * 58 + 30 * 105);
 
 console.log('\n== 17. 项目特征 ==');
 ck('特征含安装部位', /安装部位:室内/.test(rows[0].features), true);
@@ -269,11 +274,13 @@ ck('默认接口石棉水泥', A.defaultJoint(ci('out', 'water')), 'asbestos');
     [2, '室外燃气镀锌钢管DN40', 30],
     [3, '机制离心排水铸铁管DN150', 80]
   ], PK, 'gld');
-  ck('混合表条数', mix.length, 3);
+  ck('混合表条数（含自动补支架）', mix.length, 4);
+  ck('混合表末行支架', mix[3].category, 'bracket');
   ck('混合表镀锌1', mix[0].quotaCode, '8-181');
   ck('混合表镀锌燃气', mix[1].quotaCode, '8-1130');
   ck('混合表铸铁', mix[2].quotaCode, '8-357');
-  ck('混合表主材合计', Number(mix.reduce(function (s, d) { return s + (d.price === null ? 0 : d.price * d.quantity); }, 0).toFixed(2)), 120 * 52 + 30 * 20 + 80 * 105);
+  ck('混合表主材合计（管道）', Number(mix.filter(function (d) { return d.category !== 'bracket'; }).reduce(function (s, d) { return s + (d.price === null ? 0 : d.price * d.quantity); }, 0).toFixed(2)), 120 * 52 + 30 * 20 + 80 * 105);
+  ck('混合表支架 241.5kg', mix[3].quantity, 241.5);
 })();
 
 
@@ -494,6 +501,57 @@ ck('电磁阀DN500市场价6500', v14.price, 6500);
 ck('阀门不影响管道识别', A.buildItem('球墨铸铁给水管 DN200').category, 'castIron');
 ck('阀门特征含类型', /类型:金属阀门/.test(v1.features), true);
 ck('阀门无部位下拉', A.isValveCat(v1.category), true);
+
+console.log('\n== 27. 管道支架 / 保温绝热（与暖通站同口径） ==');
+ck('橡塑识别', A.buildItem('橡塑保温 DN100').category, 'insulRubber');
+ck('橡塑保温壳识别', A.buildItem('橡塑保温壳').category, 'insulRubber');
+ck('玻璃棉识别', A.buildItem('离心玻璃棉 40mm').category, 'insulGlass');
+ck('玻璃棉简写识别', A.buildItem('玻璃棉').category, 'insulGlass');
+ck('管道支架识别', A.buildItem('管道支架').category, 'bracket');
+ck('支吊架识别', A.buildItem('管道支吊架制安').category, 'bracket');
+var ir = A.buildItem('橡塑保温 DN100');
+ck('橡塑清单031208002', ir.listCode, '031208002');
+ck('橡塑定额11-582', A.matchQuota(ir).code, '11-582');
+ck('橡塑单位m³', ir.unit, 'm³');
+ck('橡塑厚度30', ir.insulThk, 30);
+ck('橡塑市场价1000', A.auxPrice(ir).price, 1000);
+ck('橡塑标品牌', /华美/.test(A.auxPrice(ir).brand || ''), true);
+var ig = A.buildItem('离心玻璃棉');
+ck('玻璃棉定额11-647', A.matchQuota(ig).code, '11-647');
+ck('玻璃棉厚度40', ig.insulThk, 40);
+ck('玻璃棉市场价450', A.auxPrice(ig).price, 450);
+var bk = A.buildItem('管道支架');
+ck('支架定额7-138', A.matchQuota(bk).code, '7-138');
+ck('支架定额单位100kg', A.matchQuota(bk).unit, '100kg');
+ck('支架单位kg', bk.unit, 'kg');
+ck('支架型钢信息价4.2', A.auxPrice(bk).price, 4.2);
+ck('支架信息价来源', A.auxPrice(bk).source, 'info');
+ck('含量DN50', A.bracketWeightPerM(50), 0.45);
+ck('含量DN100', A.bracketWeightPerM(100), 0.9);
+ck('含量DN200', A.bracketWeightPerM(200), 1.5);
+ck('含量DN400', A.bracketWeightPerM(400), 2.4);
+ck('含量DN500', A.bracketWeightPerM(500), 3.2);
+ck('无管径0.6', A.bracketWeightPerM(null), 0.6);
+
+// 自动补支架 + 已有支架不重复
+var d1 = A.parseRows([[1, '球墨铸铁给水管 DN200', 80], [2, '镀锌钢管 DN50', 60]], '2026-10', 'glodon');
+ck('自动补支架行数', d1.length, 3);
+ck('支架 147kg', d1[2].quantity, 147);
+ck('支架不附消毒冲洗', (d1[2].extras || []).length, 0);
+var d2 = A.parseRows([[1, '球墨铸铁给水管 DN200', 80], [2, '管道支架', 200]], '2026-10', 'glodon');
+ck('已带支架不重复补', d2.length, 2);
+ck('已带支架工程量保留', d2[1].quantity, 200);
+var d3 = A.parseRows([[1, '闸阀 DN100', 4]], '2026-10', 'glodon');
+ck('仅阀门不补支架', d3.length, 1);
+
+// 保温单位折算
+var d4 = A.parseRows([[1, '橡塑保温 DN100', 20, 'm²']], '2026-10', 'glodon');
+ck('橡塑m²折算m³', d4[0].quantity, 0.6);
+var d5 = A.parseRows([[1, '离心玻璃棉 DN200', 10, 'm']], '2026-10', 'glodon');
+ck('玻璃棉m折算m³', d5[0].quantity, Math.round(Math.PI * (0.2 + 0.04) * 0.04 * 10 * 1000) / 1000);
+var d6 = A.parseRows([[1, '橡塑保温 DN100', 5, 'm³']], '2026-10', 'glodon');
+ck('橡塑m³原样', d6[0].quantity, 5);
+ck('保温特征含厚度', /厚度30mm/.test(A.buildItem('橡塑保温 DN100').features || A.featureText(A.buildItem('橡塑保温 DN100'))), true);
 
 console.log('\n结果: ' + pass + ' 通过, ' + fail + ' 失败');
 if (fail) process.exit(1);
