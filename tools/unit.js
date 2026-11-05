@@ -553,5 +553,219 @@ var d6 = A.parseRows([[1, '橡塑保温 DN100', 5, 'm³']], '2026-10', 'glodon')
 ck('橡塑m³原样', d6[0].quantity, 5);
 ck('保温特征含厚度', /厚度30mm/.test(A.buildItem('橡塑保温 DN100').features || A.featureText(A.buildItem('橡塑保温 DN100'))), true);
 
+console.log('\n== 13. 卫生器具（洁具）清单定额 ==');
+function sp(n, qty) { return pr(n, qty === undefined ? 10 : qty); }
+// 浴缸 / 净身盆 / 洗脸盆 / 洗涤盆 / 化验盆 / 大便器 / 小便器
+var t1 = sp('搪瓷浴缸 1700×750');
+ck('浴缸清单031003001', t1.listCode, '031003001');
+ck('浴缸定额8-831', t1.quotaCode, '8-831');
+ck('浴缸市场价2400', t1.price, 2400);
+ck('浴缸来源market', t1.priceSource, 'market');
+ck('浴缸品牌含箭牌', /箭牌/.test(t1.priceBrand || ''), true);
+ck('浴缸清单单位组', t1.unit, '组');
+ck('浴缸定额单位10组', t1.quotaUnit, '10组');
+ck('浴缸定额系数10', t1.quotaFactor, 10);
+ck('浴缸无附加定额', (t1.extras || []).length, 0);
+ck('浴缸不补支架', A.parseRows([[1, '搪瓷浴缸', 2]], '2026-10', 'glodon').length, 1);
+ck('浴缸特征含品牌', /品牌参考:/.test(t1.features || ''), true);
+
+ck('浴盆同浴缸', sp('浴盆 1500').quotaCode, '8-831');
+var t2 = sp('净身盆 冷热水');
+ck('净身盆清单031003002', t2.listCode, '031003002');
+ck('净身盆定额8-837', t2.quotaCode, '8-837');
+ck('净身盆价1200', t2.price, 1200);
+
+var t3 = sp('台式洗脸盆 冷热水');
+ck('洗脸盆清单031003003', t3.listCode, '031003003');
+ck('洗脸盆定额8-839', t3.quotaCode, '8-839');
+ck('洗脸盆价800', t3.price, 800);
+ck('洗脸盆默认普通', t3.sanOpt, 'normal');
+var t3b = sp('感应洗手盆 冷热水');
+ck('感应洗手盆定额8-846', t3b.quotaCode, '8-846');
+ck('感应洗手盆价1800', t3b.price, 1800);
+ck('感应洗手盆清单不变', t3b.listCode, '031003003');
+ck('手盆识别洗脸盆', sp('洗手盆 单冷水').quotaCode, '8-839');
+
+var t4 = sp('不锈钢洗涤盆 单槽');
+ck('洗涤盆清单031003004', t4.listCode, '031003004');
+ck('洗涤盆定额8-848', t4.quotaCode, '8-848');
+ck('洗涤盆价700', t4.price, 700);
+ck('洗涤池同洗涤盆', sp('洗涤池 双槽').quotaCode, '8-848');
+ck('盥洗池同洗涤盆', sp('盥洗池').quotaCode, '8-848');
+
+var t5 = sp('化验盆 单联');
+ck('化验盆清单031003005', t5.listCode, '031003005');
+ck('化验盆定额8-855', t5.quotaCode, '8-855');
+ck('化验盆价900', t5.price, 900);
+ck('化验池同化验盆', sp('化验池').quotaCode, '8-855');
+
+var t6 = sp('蹲式大便器 瓷高水箱');
+ck('大便器清单031003006', t6.listCode, '031003006');
+ck('大便器定额8-875', t6.quotaCode, '8-875');
+ck('大便器价750', t6.price, 750);
+ck('坐便器同大便器', sp('坐便器 连体').quotaCode, '8-875');
+
+var t7 = sp('挂斗式小便器 感应冲洗阀');
+ck('小便器清单031003007', t7.listCode, '031003007');
+ck('小便器定额8-889', t7.quotaCode, '8-889');
+ck('小便器价1300', t7.price, 1300);
+
+console.log('\n== 14. 洁具：031003008 其他成品卫生器具 ==');
+var f1 = sp('水龙头 DN15');
+ck('水龙头清单031003008', f1.listCode, '031003008');
+ck('水龙头定额8-938', f1.quotaCode, '8-938');
+ck('水龙头价120', f1.price, 120);
+ck('水龙头清单单位个', f1.unit, '个');
+ck('龙头同水龙头', sp('铜质龙头 DN20').quotaCode, '8-938');
+
+var h1 = sp('电热水器 挂式');
+ck('电热水器默认RS50挂式', h1.quotaCode, '8-961');
+ck('电热水器默认价2600', h1.price, 2600);
+ck('电热水器清单031003008', h1.listCode, '031003008');
+ck('电热水器RS15→8-959', sp('电热水器 RS15').quotaCode, '8-959');
+ck('电热水器RS15价1200', sp('电热水器 RS15').price, 1200);
+ck('电热水器RS30→8-960', sp('电热水器 RS30').quotaCode, '8-960');
+ck('电热水器RS50立式→8-962', sp('电热水器 RS50 立式').quotaCode, '8-962');
+ck('电热水器RS50立式价3000', sp('电热水器 RS50 立式').price, 3000);
+ck('电热水器RS100→8-963', sp('电热水器 RS100').quotaCode, '8-963');
+ck('电热水器RS100价5500', sp('电热水器 RS100').price, 5500);
+ck('电热水器RS300→8-964', sp('电热水器 RS300').quotaCode, '8-964');
+ck('电热水器RS300价15000', sp('电热水器 RS300').price, 15000);
+ck('电热水器6个选项', A.S_DEF.waterHeater.opts.length, 6);
+
+var b1 = sp('电开水炉 立式 KSA');
+ck('开水炉定额8-965', b1.quotaCode, '8-965');
+ck('开水炉价4500', b1.price, 4500);
+ck('开水炉清单031003008', b1.listCode, '031003008');
+
+var st1 = sp('蒸汽间断式加热器');
+ck('蒸汽加热器默认1#', st1.quotaCode, '8-967');
+ck('蒸汽加热器1#价3800', st1.price, 3800);
+ck('蒸汽加热器2#→8-968', sp('蒸汽加热器 2#').quotaCode, '8-968');
+ck('蒸汽加热器2#价5600', sp('蒸汽加热器 2#').price, 5600);
+ck('蒸汽加热器3#→8-969', sp('蒸汽加热器 3#').quotaCode, '8-969');
+ck('蒸汽加热器3个选项', A.S_DEF.steamHeater.opts.length, 3);
+
+var hx1 = sp('容积式热交换器');
+ck('热交换器默认1#', hx1.quotaCode, '8-970');
+ck('热交换器1#价6000', hx1.price, 6000);
+ck('热交换器5#→8-974', sp('容积式热交换器 5#').quotaCode, '8-974');
+ck('热交换器5#价26000', sp('容积式热交换器 5#').price, 26000);
+ck('热交换器7#→8-976', sp('容积式热交换器 7#').quotaCode, '8-976');
+ck('热交换器7个选项', A.S_DEF.heatExchanger.opts.length, 7);
+
+var fl1 = sp('感应式冲洗器 明装');
+ck('冲洗器定额8-988', fl1.quotaCode, '8-988');
+ck('冲洗器价900', fl1.price, 900);
+ck('冲洗器清单031003008', fl1.listCode, '031003008');
+
+var hd1 = sp('烘手器');
+ck('烘手器清单031003009', hd1.listCode, '031003009');
+ck('烘手器定额2-1878', hd1.quotaCode, '2-1878');
+ck('烘手器价600', hd1.price, 600);
+ck('烘干器同烘手器', sp('高速烘干器').quotaCode, '2-1878');
+
+var sh1 = sp('淋浴器 冷热水');
+ck('淋浴器清单031003010', sh1.listCode, '031003010');
+ck('淋浴器定额8-861', sh1.quotaCode, '8-861');
+ck('淋浴器价450', sh1.price, 450);
+ck('花洒同淋浴器', sp('花洒 恒温').quotaCode, '8-861');
+
+var sr1 = sp('淋浴间 整体');
+ck('淋浴间清单031003011', sr1.listCode, '031003011');
+ck('淋浴间定额8-869', sr1.quotaCode, '8-869');
+ck('淋浴间价4500', sr1.price, 4500);
+ck('淋浴间不误判淋浴器', sr1.quotaCode !== '8-861', true);
+
+console.log('\n== 15. 洁具：031003014 给排水附件（按管径匹配）==');
+ck('地漏DN50→8-941', sp('地漏 DN50').quotaCode, '8-941');
+ck('地漏DN50价45', sp('地漏 DN50').price, 45);
+ck('地漏DN75→8-942', sp('地漏 DN75').quotaCode, '8-942');
+ck('地漏DN100→8-943', sp('地漏 DN100').quotaCode, '8-943');
+ck('地漏DN150→8-944', sp('地漏 DN150').quotaCode, '8-944');
+ck('地漏DN150价160', sp('地漏 DN150').price, 160);
+var fd0 = sp('地漏 不锈钢防臭');
+ck('地漏无尺寸→8-943', fd0.quotaCode, '8-943');
+ck('地漏无尺寸价95', fd0.price, 95);
+ck('地漏无尺寸有提示', /未注公称直径/.test(fd0.warn || ''), true);
+ck('地漏清单031003014', fd0.listCode, '031003014');
+
+ck('扫除口DN50→8-945', sp('地面扫除口 DN50').quotaCode, '8-945');
+ck('扫除口DN75→8-946', sp('地面扫除口 DN75').quotaCode, '8-946');
+ck('扫除口DN100→8-947', sp('地面扫除口 DN100').quotaCode, '8-947');
+ck('扫除口DN125→8-948', sp('地面扫除口 DN125').quotaCode, '8-948');
+ck('扫除口DN150→8-949', sp('地面扫除口 DN150').quotaCode, '8-949');
+var co0 = sp('扫除口');
+ck('扫除口无尺寸→8-947', co0.quotaCode, '8-947');
+ck('扫除口无尺寸价110', co0.price, 110);
+
+ck('雨水斗DN100→8-950', sp('普通雨水斗 DN100').quotaCode, '8-950');
+ck('雨水斗DN125→8-951', sp('雨水斗 DN125').quotaCode, '8-951');
+ck('雨水斗DN150→8-952', sp('雨水斗 DN150').quotaCode, '8-952');
+var rh0 = sp('雨水斗');
+ck('雨水斗无尺寸→8-952', rh0.quotaCode, '8-952');
+ck('雨水斗无尺寸价380', rh0.price, 380);
+
+ck('虹吸雨水斗DN50→8-953', sp('虹吸式雨水斗 DN50').quotaCode, '8-953');
+ck('虹吸雨水斗DN150→8-955', sp('虹吸雨水斗 DN150').quotaCode, '8-955');
+ck('虹吸雨水斗DN150价1100', sp('虹吸雨水斗 DN150').price, 1100);
+var sp0 = sp('虹吸雨水斗');
+ck('虹吸无尺寸→8-955', sp0.quotaCode, '8-955');
+ck('虹吸不误判普通雨水斗', sp0.quotaCode !== '8-952', true);
+
+console.log('\n== 16. 洁具：饮水器 / 隔油器 ==');
+var wd1 = sp('直饮水机');
+ck('饮水器清单031003018', wd1.listCode, '031003018');
+ck('饮水器定额8-987', wd1.quotaCode, '8-987');
+ck('饮水器价3500', wd1.price, 3500);
+ck('饮水机同饮水器', sp('饮水机 冷热').quotaCode, '8-987');
+
+var gt1 = sp('隔油器 地上式 DN100');
+ck('隔油器清单031003019', gt1.listCode, '031003019');
+ck('隔油器地上DN100→8-1009', gt1.quotaCode, '8-1009');
+ck('隔油器地上DN100价6500', gt1.price, 6500);
+ck('隔油器地上DN50→8-1007', sp('隔油器 地上式 DN50').quotaCode, '8-1007');
+ck('隔油器悬挂DN50→8-1010', sp('隔油器 悬挂式 DN50').quotaCode, '8-1010');
+ck('隔油器悬挂DN100→8-1011', sp('隔油器 悬挂式 DN100').quotaCode, '8-1011');
+ck('隔油器悬挂DN150→8-1012', sp('隔油器 悬挂式 DN150').quotaCode, '8-1012');
+ck('隔油器悬挂DN150价9800', sp('隔油器 悬挂式 DN150').price, 9800);
+var gt0 = sp('隔油器');
+ck('隔油器无尺寸默认地上8-1009', gt0.quotaCode, '8-1009');
+ck('隔油池同隔油器', sp('隔油池').quotaCode, '8-1009');
+
+console.log('\n== 17. 洁具：交互与通用行为 ==');
+ck('洁具已计价', A.isPriced(sp('浴缸')), true);
+ck('洁具分类isSanCat', A.isSanCat('bathtub'), true);
+ck('管道非洁具', A.sanCatOf('球墨铸铁给水管 DN200'), null);
+ck('洁具不识别为管道', sp('洗脸盆').category, 'washbasin');
+var qt = sp('浴缸');
+ck('洁具待询价数为0', qt.price === null, false);
+ck('洁具选型默认RS50W标签', A.sanOptLabel(sp('电热水器')), 'RS50 挂式');
+// 手动切换选型后重算
+var m1 = sp('电热水器');
+m1.sanOpt = 'RS300';
+var mq = A.matchSanQuota(m1);
+ck('手动切RS300定额', mq.code, '8-964');
+m1.dnTier = null;
+ck('手动切RS300价', A.sanPrice(m1).price, 15000);
+// 地漏手动切档
+var m2 = sp('地漏');
+m2.sanDn = 150;
+ck('手动切DN150定额', A.matchSanQuota(m2).code, '8-944');
+m2.dnTier = A.matchSanQuota(m2).dnTier;
+ck('手动切DN150价', A.sanPrice(m2).price, 160);
+// 隔油器切悬挂
+var m3 = sp('隔油器 地上式 DN100');
+m3.sanForm = 'hang';
+var mq3 = A.matchSanQuota(m3);
+ck('切悬挂式定额', mq3.code, '8-1011');
+m3.dnTier = mq3.dnTier;
+ck('切悬挂式价', A.sanPrice(m3).price, 6800);
+// 混合清单：管道 + 洁具，支架只按管道补
+var mix = A.parseRows([[1, '球墨铸铁给水管 DN200', 80], [2, '洗脸盆', 10], [3, '地漏 DN50', 6]], '2026-10', 'glodon');
+ck('混合清单行数（含自动支架）', mix.length, 4);
+ck('混合清单支架在末行', mix[3].category, 'bracket');
+ck('混合清单支架按管道80m', mix[3].quantity, 120);
+
 console.log('\n结果: ' + pass + ' 通过, ' + fail + ' 失败');
 if (fail) process.exit(1);

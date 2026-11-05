@@ -223,7 +223,7 @@
     var totalM = 0, kg = 0, hasPipe = false, hasBracket = false;
     items.forEach(function (it) {
       if (it.category === 'bracket') hasBracket = true;
-      if (isAuxCat(it.category) || isValveCat(it.category)) return;
+      if (isAuxCat(it.category) || isValveCat(it.category) || isSanCat(it.category)) return;
       if (!(it.quantity > 0)) return;
       hasPipe = true;
       totalM += it.quantity;
@@ -474,11 +474,263 @@
     return 'water';
   }
 
+  // ============================================================
+  // 卫生器具（洁具）—— 2026-11-05 补充
+  // 清单：031003001~031003011 / 031003014 / 031003018 / 031003019
+  // 定额：第八册 卫生器具安装（8-831~8-1007…）；烘手器走第二册 2-1878
+  // 定额计量单位按 10 组 / 10 个 / 10 台（factor=10），导出时自动换算
+  // ============================================================
+  var S_DEF = {
+    bathtub:      { code: '031003001', lname: '浴缸', unit: '组', qunit: '10组', factor: 10,
+                    q: '8-831', qn: '搪瓷浴盆 冷热水' },
+    bidet:        { code: '031003002', lname: '净身盆', unit: '组', qunit: '10组', factor: 10,
+                    q: '8-837', qn: '净身盆 冷热水' },
+    washbasin:    { code: '031003003', lname: '洗脸盆', unit: '组', qunit: '10组', factor: 10,
+                    opts: [ { k: 'normal', l: '普通（钢管组成）', q: '8-839', qn: '洗脸盆 钢管组成 冷热水' },
+                            { k: 'sensor', l: '感应（光电控台式）', q: '8-846', qn: '光电控洗脸盆 台式' } ] },
+    sink:         { code: '031003004', lname: '洗涤盆', unit: '组', qunit: '10组', factor: 10,
+                    q: '8-848', qn: '洗涤盆 单嘴' },
+    labSink:      { code: '031003005', lname: '化验盆', unit: '组', qunit: '10组', factor: 10,
+                    q: '8-855', qn: '化验盆 单联' },
+    toilet:       { code: '031003006', lname: '大便器', unit: '组', qunit: '10组', factor: 10,
+                    q: '8-875', qn: '蹲式大便器 瓷高水箱' },
+    urinal:       { code: '031003007', lname: '小便器', unit: '组', qunit: '10组', factor: 10,
+                    q: '8-889', qn: '小便器 挂斗式 感应自动冲洗阀' },
+    faucet:       { code: '031003008', lname: '其他成品卫生器具', unit: '个', qunit: '10个', factor: 10,
+                    q: '8-938', qn: '水龙头 公称直径15mm以内' },
+    waterHeater:  { code: '031003008', lname: '其他成品卫生器具', unit: '台', qunit: '10台', factor: 10,
+                    opts: [ { k: 'RS15',  l: 'RS15 挂式', q: '8-959', qn: '电热水器 挂式 RS15型' },
+                            { k: 'RS30',  l: 'RS30 挂式', q: '8-960', qn: '电热水器 挂式 RS30型' },
+                            { k: 'RS50W', l: 'RS50 挂式', q: '8-961', qn: '电热水器 挂式 RS50型' },
+                            { k: 'RS50L', l: 'RS50 立式', q: '8-962', qn: '电热水器 立式 RS50型' },
+                            { k: 'RS100', l: 'RS100 立式', q: '8-963', qn: '电热水器 立式 RS100型' },
+                            { k: 'RS300', l: 'RS300 立式', q: '8-964', qn: '电热水器 立式 RS300型' } ] },
+    boiler:       { code: '031003008', lname: '其他成品卫生器具', unit: '台', qunit: '10台', factor: 10,
+                    q: '8-965', qn: '电开水炉 立式 KSA型' },
+    steamHeater:  { code: '031003008', lname: '其他成品卫生器具', unit: '台', qunit: '10台', factor: 10,
+                    opts: [ { k: '1', l: '1#', q: '8-967', qn: '蒸汽间断式加热器 1#' },
+                            { k: '2', l: '2#', q: '8-968', qn: '蒸汽间断式加热器 2#' },
+                            { k: '3', l: '3#', q: '8-969', qn: '蒸汽间断式加热器 3#' } ] },
+    heatExchanger:{ code: '031003008', lname: '其他成品卫生器具', unit: '台', qunit: '10台', factor: 10,
+                    opts: [ { k: '1', l: '1#', q: '8-970', qn: '容积式热交换器 1#' },
+                            { k: '2', l: '2#', q: '8-971', qn: '容积式热交换器 2#' },
+                            { k: '3', l: '3#', q: '8-972', qn: '容积式热交换器 3#' },
+                            { k: '4', l: '4#', q: '8-973', qn: '容积式热交换器 4#' },
+                            { k: '5', l: '5#', q: '8-974', qn: '容积式热交换器 5#' },
+                            { k: '6', l: '6#', q: '8-975', qn: '容积式热交换器 6#' },
+                            { k: '7', l: '7#', q: '8-976', qn: '容积式热交换器 7#' } ] },
+    flushDevice:  { code: '031003008', lname: '其他成品卫生器具', unit: '套', qunit: '10套', factor: 10,
+                    q: '8-988', qn: '感应式冲洗器 明装' },
+    handDryer:    { code: '031003009', lname: '烘手器', unit: '个', qunit: '10个', factor: 10,
+                    q: '2-1878', qn: '小电器安装接线 烘手器' },
+    shower:       { code: '031003010', lname: '淋浴器', unit: '组', qunit: '10组', factor: 10,
+                    q: '8-861', qn: '淋浴器 钢管组成 冷热水' },
+    showerRoom:   { code: '031003011', lname: '淋浴间', unit: '套', qunit: '10套', factor: 10,
+                    q: '8-869', qn: '淋浴间 整体淋浴室安装 冷热水' },
+    floorDrain:   { code: '031003014', lname: '给、排水附件', unit: '个', qunit: '10个', factor: 10, defDn: 100,
+                    tiers: [ { max: 50,  q: '8-941', qn: '地漏 公称直径50mm以内' },
+                             { max: 75,  q: '8-942', qn: '地漏 公称直径75mm以内' },
+                             { max: 100, q: '8-943', qn: '地漏 公称直径100mm以内' },
+                             { max: 150, q: '8-944', qn: '地漏 公称直径150mm以内' } ] },
+    cleanout:     { code: '031003014', lname: '给、排水附件', unit: '个', qunit: '10个', factor: 10, defDn: 100,
+                    tiers: [ { max: 50,  q: '8-945', qn: '地面扫除口 公称直径50mm以内' },
+                             { max: 75,  q: '8-946', qn: '地面扫除口 公称直径75mm以内' },
+                             { max: 100, q: '8-947', qn: '地面扫除口 公称直径100mm以内' },
+                             { max: 125, q: '8-948', qn: '地面扫除口 公称直径125mm以内' },
+                             { max: 150, q: '8-949', qn: '地面扫除口 公称直径150mm以内' } ] },
+    rainHead:     { code: '031003014', lname: '给、排水附件', unit: '个', qunit: '10个', factor: 10, defDn: 150,
+                    tiers: [ { max: 100, q: '8-950', qn: '普通雨水斗 公称直径100mm以内' },
+                             { max: 125, q: '8-951', qn: '普通雨水斗 公称直径125mm以内' },
+                             { max: 150, q: '8-952', qn: '普通雨水斗 公称直径150mm以内' } ] },
+    siphonHead:   { code: '031003014', lname: '给、排水附件', unit: '个', qunit: '10个', factor: 10, defDn: 150,
+                    tiers: [ { max: 50,  q: '8-953', qn: '虹吸式雨水斗 公称直径50mm以内' },
+                             { max: 100, q: '8-954', qn: '虹吸式雨水斗 公称直径100mm以内' },
+                             { max: 150, q: '8-955', qn: '虹吸式雨水斗 公称直径150mm以内' } ] },
+    waterDispenser:{ code: '031003018', lname: '饮水器', unit: '台', qunit: '10台', factor: 10,
+                    q: '8-987', qn: '饮水器' },
+    greaseTrap:   { code: '031003019', lname: '隔油器', unit: '台', qunit: '10台', factor: 10, defDn: 100,
+                    forms: { ground: { l: '地上式', tiers: [ { max: 50,  q: '8-1007', qn: '隔油器 地上式 DN50' },
+                                                             { max: 80,  q: '8-1008', qn: '隔油器 地上式 DN80' },
+                                                             { max: 100, q: '8-1009', qn: '隔油器 地上式 DN100' } ] },
+                             hang:   { l: '悬挂式', tiers: [ { max: 50,  q: '8-1010', qn: '隔油器 悬挂式 DN50' },
+                                                             { max: 100, q: '8-1011', qn: '隔油器 悬挂式 DN100' },
+                                                             { max: 150, q: '8-1012', qn: '隔油器 悬挂式 DN150' } ] } } }
+  };
+
+  var S_WORK = {
+    bathtub: '浴盆安装、冷热水连接、排水配件安装、试水',
+    bidet: '净身盆安装、冷热水连接、排水配件安装、试水',
+    washbasin: '盆体安装、冷热水龙头安装、角阀与排水配件安装、试水',
+    sink: '盆体安装、龙头安装、排水配件安装、试水',
+    labSink: '化验盆安装、化验龙头安装、排水配件安装、试水',
+    toilet: '蹲便器安装、高水箱安装、冲洗管连接、试水',
+    urinal: '小便器安装、感应冲洗阀安装、排水连接、试水',
+    faucet: '水龙头安装、生料带密封、通水试验',
+    waterHeater: '热水器就位固定、进出水管连接、安全阀安装、通电试运行',
+    boiler: '开水炉就位固定、进出水管连接、通电试运行',
+    steamHeater: '加热器就位固定、蒸汽与凝结水管连接、疏水器安装、试压',
+    heatExchanger: '换热器就位固定、冷热水与蒸汽管连接、安全阀与温控安装、试压',
+    flushDevice: '感应冲洗器安装、电磁阀接线、通水调试',
+    handDryer: '烘手器固定、电源接线、试运行',
+    shower: '淋浴器组装、冷热水管连接、花洒安装、试水',
+    showerRoom: '整体淋浴间就位、给排水连接、密封打胶、试水',
+    floorDrain: '地漏安装、找坡配合、水封检查',
+    cleanout: '扫除口安装、盖板固定、密封检查',
+    rainHead: '雨水斗安装、与雨水管连接、密封检查',
+    siphonHead: '虹吸雨水斗安装、整流器安装、与雨水管连接、密封检查',
+    waterDispenser: '饮水器就位固定、进水管连接、通电试运行',
+    greaseTrap: '隔油器就位固定、进出水管连接、通水试验'
+  };
+
+  function isSanCat(c) { return !!S_DEF[c]; }
+  function sanCfg() { return (typeof window !== 'undefined' && window.PIPE_SANITARY_PRICES) || {}; }
+
+  // 洁具识别：具体项优先（淋浴间 > 淋浴器、虹吸雨水斗 > 雨水斗、容积式热交换器 > 热交换器）
+  function sanCatOf(name) {
+    var n = String(name || '');
+    if (!n) return null;
+    if (/淋浴间|整体淋浴/.test(n)) return 'showerRoom';
+    if (/虹吸/.test(n) && /雨水斗/.test(n)) return 'siphonHead';
+    if (/雨水斗/.test(n)) return 'rainHead';
+    if (/地漏/.test(n)) return 'floorDrain';
+    if (/扫除口/.test(n)) return 'cleanout';
+    if (/隔油池|隔油器/.test(n)) return 'greaseTrap';
+    if (/热交换器/.test(n)) return 'heatExchanger';
+    if (/加热器/.test(n)) return 'steamHeater';
+    if (/开水炉/.test(n)) return 'boiler';
+    if (/热水器/.test(n)) return 'waterHeater';
+    if (/饮水机|饮水器|直饮水/.test(n)) return 'waterDispenser';
+    if (/烘手器|烘干器/.test(n)) return 'handDryer';
+    if (/冲洗器/.test(n)) return 'flushDevice';
+    if (/洗脸盆|洗手盆|手盆/.test(n)) return 'washbasin';
+    if (/洗涤盆|洗涤池|盥洗池|洗涤槽/.test(n)) return 'sink';
+    if (/化验盆|化验池/.test(n)) return 'labSink';
+    if (/净身盆/.test(n)) return 'bidet';
+    if (/浴缸|浴盆/.test(n)) return 'bathtub';
+    if (/大便器|坐便器|蹲便器/.test(n)) return 'toilet';
+    if (/小便器|小便斗/.test(n)) return 'urinal';
+    if (/淋浴器|花洒|淋浴/.test(n)) return 'shower';
+    if (/水龙头|龙头/.test(n)) return 'faucet';
+    return null;
+  }
+
+  function buildSanItem(name, cat) {
+    var d = S_DEF[cat];
+    var it = {};
+    it.name = name;
+    it.category = cat;
+    it.isSan = true;
+    it.listCode = d.code;
+    it.listName = d.lname;
+    it.material = d.lname;
+    it.unit = d.unit;
+    it.sanDn = parseVDn(name);
+    it.sanOptFromName = false;
+    if (d.opts) {
+      var pick = d.opts[0].k;
+      if (cat === 'washbasin') {
+        pick = /感应/.test(name) ? 'sensor' : 'normal';
+        it.sanOptFromName = true;
+      } else if (cat === 'waterHeater') {
+        if (/RS\s*300/i.test(name)) { pick = 'RS300'; it.sanOptFromName = true; }
+        else if (/RS\s*100/i.test(name)) { pick = 'RS100'; it.sanOptFromName = true; }
+        else if (/RS\s*50/i.test(name)) { pick = /立式/.test(name) ? 'RS50L' : 'RS50W'; it.sanOptFromName = true; }
+        else if (/RS\s*30/i.test(name)) { pick = 'RS30'; it.sanOptFromName = true; }
+        else if (/RS\s*15/i.test(name)) { pick = 'RS15'; it.sanOptFromName = true; }
+        else { pick = 'RS50W'; }
+      } else if (cat === 'steamHeater') {
+        var m1 = String(name).match(/([123])\s*#/);
+        if (m1) { pick = m1[1]; it.sanOptFromName = true; }
+      } else if (cat === 'heatExchanger') {
+        var m2 = String(name).match(/([1-7])\s*#/);
+        if (m2) { pick = m2[1]; it.sanOptFromName = true; }
+      }
+      it.sanOpt = pick;
+    }
+    if (d.forms) {
+      it.sanForm = /悬挂/.test(name) ? 'hang' : 'ground';
+      it.sanFormFromName = /悬挂|地上/.test(name);
+    }
+    return it;
+  }
+
+  function sanOptLabel(it) {
+    var d = S_DEF[it.category];
+    if (!d || !d.opts) return '';
+    for (var i = 0; i < d.opts.length; i++) if (d.opts[i].k === it.sanOpt) return d.opts[i].l;
+    return d.opts[0].l;
+  }
+
+  function matchSanQuota(it) {
+    var d = S_DEF[it.category];
+    var res = { inferred: false, unit: d.qunit, factor: d.factor };
+    if (d.opts) {
+      var o = null;
+      for (var i = 0; i < d.opts.length; i++) if (d.opts[i].k === it.sanOpt) o = d.opts[i];
+      if (!o) o = d.opts[0];
+      res.code = o.q; res.name = o.qn;
+      return res;
+    }
+    if (d.tiers) {
+      var dn = it.sanDn || d.defDn;
+      var idx = d.tiers.length - 1;
+      for (var j = 0; j < d.tiers.length; j++) { if (dn <= d.tiers[j].max) { idx = j; break; } }
+      res.code = d.tiers[idx].q; res.name = d.tiers[idx].qn;
+      res.dnTier = d.tiers[idx].max;
+      res.inferred = !it.sanDn || d.tiers[idx].max !== dn;
+      return res;
+    }
+    if (d.forms) {
+      var f = d.forms[it.sanForm] || d.forms.ground;
+      var dn2 = it.sanDn || d.defDn || 100;
+      var k2 = f.tiers.length - 1;
+      for (var k = 0; k < f.tiers.length; k++) { if (dn2 <= f.tiers[k].max) { k2 = k; break; } }
+      res.code = f.tiers[k2].q; res.name = f.tiers[k2].qn;
+      res.dnTier = f.tiers[k2].max;
+      res.inferred = !it.sanDn;
+      return res;
+    }
+    res.code = d.q; res.name = d.qn;
+    return res;
+  }
+
+  function sanPrice(it) {
+    var cfg = sanCfg();
+    var d = S_DEF[it.category];
+    var m = (cfg.items || {})[it.category] || {};
+    var brand = m.brand || cfg.brand || '';
+    var nm = m.name || d.lname;
+    if (d.opts) {
+      var p = (m.opts || {})[it.sanOpt];
+      var lbl = sanOptLabel(it);
+      return { price: p, source: 'market', brand: brand,
+        basis: '市场价（' + brand + '）：' + nm + ' ' + lbl + ' ' + p + ' 元/' + d.unit };
+    }
+    if (d.tiers) {
+      var key = String(it.dnTier || d.defDn);
+      var p2 = (m.prices || {})[key];
+      return { price: p2, source: 'market', brand: brand,
+        basis: '市场价（' + brand + '）：' + nm + ' DN' + key + ' ' + p2 + ' 元/' + d.unit };
+    }
+    if (d.forms) {
+      var fk = it.sanForm === 'hang' ? 'hang' : 'ground';
+      var key2 = String(it.dnTier || 100);
+      var p3 = ((m.forms || {})[fk] || {})[key2];
+      return { price: p3, source: 'market', brand: brand,
+        basis: '市场价（' + brand + '）：' + nm + ' ' + (fk === 'hang' ? '悬挂式' : '地上式') + ' DN' + key2 + ' ' + p3 + ' 元/' + d.unit };
+    }
+    return { price: m.price, source: 'market', brand: brand,
+      basis: '市场价（' + brand + '）：' + nm + ' ' + m.price + ' 元/' + d.unit };
+  }
+
   var MAT_CAT = { '无缝钢': 'seamless', '焊接钢': 'welded', '铜': 'copper', '不锈钢': 'stainless', '复合': 'composite', '塑料': 'plastic' };
 
   // ---------- 建条目 ----------
   function buildItem(name) {
     if (!name) return null;
+    // 卫生器具（洁具）优先识别
+    var scat = sanCatOf(name);
+    if (scat) return buildSanItem(name, scat);
     // 保温绝热 / 管道支架优先（名称里也含"管"字）
     var acat = auxCatOf(name);
     if (acat) return buildAuxItem(name, acat);
@@ -663,6 +915,7 @@
 
   function matchQuota(it) {
     if (!it) return { code: '', name: '', inferred: false };
+    if (isSanCat(it.category)) return matchSanQuota(it);
     if (isAuxCat(it.category)) return matchAuxQuota(it);
     if (isValveCat(it.category)) return matchValveQuota(it);
     if (PIPE_GROUPS[it.category]) {
@@ -709,6 +962,7 @@
 
   // ---------- 附加定额（沟槽管件 / 管道消毒冲洗）----------
   function buildExtraQuotas(it, quota) {
+    if (isSanCat(it.category)) return [];
     var arr = [];
     if (!quota || !quota.code) return arr;
     if (isValveCat(it.category)) return arr;   // 阀门及附件不计管道消毒冲洗/沟槽管件
@@ -822,9 +1076,14 @@
     return { price: r.price, source: 'market', basis: basis };
   }
 
-  function isPriced(it) { return it && (it.category === 'castIron' || it.category === 'galv' || !!PIPE_GROUPS[it.category] || isValveCat(it.category) || isAuxCat(it.category)); }
+  function isPriced(it) { return it && (it.category === 'castIron' || it.category === 'galv' || !!PIPE_GROUPS[it.category] || isValveCat(it.category) || isAuxCat(it.category) || isSanCat(it.category)); }
 
   function recomputePrice(it, periodKey) {
+    if (isSanCat(it.category)) {
+      var sp = sanPrice(it);
+      it.price = sp.price; it.priceSource = sp.source; it.priceBasis = sp.basis; it.priceBrand = sp.brand || '';
+      return;
+    }
     if (isAuxCat(it.category)) {
       var ap = auxPrice(it);
       it.price = ap.price; it.priceSource = ap.source; it.priceBasis = ap.basis; it.priceBrand = ap.brand || '';
@@ -850,6 +1109,16 @@
 
   // ---------- 项目特征 ----------
   function featureText(it) {
+    if (isSanCat(it.category)) {
+      var sf = [];
+      sf.push('名称:' + it.name);
+      sf.push('类型:' + S_DEF[it.category].lname);
+      if (S_DEF[it.category].opts) sf.push('型号:' + sanOptLabel(it));
+      if (it.dnTier) sf.push('规格:DN' + it.dnTier);
+      sf.push('品牌参考:' + (it.priceBrand || ''));
+      sf.push('其他:' + (S_WORK[it.category] || '器具安装、配件安装、试水'));
+      return sf.join('；');
+    }
     if (isAuxCat(it.category)) {
       var af = [];
       af.push('名称:' + it.name);
@@ -901,6 +1170,16 @@
   // ---------- 核对提示 ----------
   function buildWarn(it, quota) {
     var w = [];
+    if (isSanCat(it.category)) {
+      var sd = S_DEF[it.category];
+      if (sd.opts && !it.sanOptFromName) {
+        w.push('名称未注型号，已按 ' + sanOptLabel(it) + ' 计列，可在「选型」列切换（' + sd.opts.map(function (x) { return x.l; }).join(' / ') + '）');
+      }
+      if (sd.tiers && !it.sanDn) w.push('名称未注公称直径，已按 DN' + sd.defDn + '（' + quota.code + '）计列，可在「选型」列切换');
+      if (sd.tiers && it.sanDn && quota.dnTier && quota.dnTier !== it.sanDn) w.push('DN' + it.sanDn + ' 无对应档，已按 DN' + quota.dnTier + '以内子目套用，请核对');
+      if (sd.forms && !it.sanDn) w.push('名称未注公称直径，已按 DN100 计列，可在「选型」列切换');
+      return w.join('；');
+    }
     if (it.category === 'bracket') {
       w.push('管道支架工程量按管道长度与管径分档含量估算，定额 7-138 计量单位 100kg，请按图纸支架实际重量调整');
       return w.join('；');
@@ -1050,6 +1329,22 @@
 
   // 安装部位 / 接口形式 列
   function layCell(it) {
+    if (isSanCat(it.category)) {
+      var sd = S_DEF[it.category];
+      if (sd.opts) {
+        return sel('variant', it._i, sd.opts.map(function (x) { return opt(x.k, it.sanOpt, x.l); }).join(''));
+      }
+      if (sd.forms) {
+        return sel('form', it._i, opt('ground', it.sanForm, '地上式') + opt('hang', it.sanForm, '悬挂式'));
+      }
+      if (sd.tiers) {
+        var cur = String(it.dnTier || sd.defDn);
+        return sel('variant', it._i, sd.tiers.map(function (t) {
+          return opt(String(t.max), cur, 'DN' + t.max + '以内');
+        }).join(''));
+      }
+      return '<span class="lay-static">—</span>';
+    }
     if (isAuxCat(it.category)) return '<span class="lay-static">—</span>';
     if (isValveCat(it.category)) return '<span class="lay-static">—</span>';
     if (!isPriced(it)) {
@@ -1063,6 +1358,13 @@
   }
 
   function specCell(it) {
+    if (isSanCat(it.category)) {
+      var sd = S_DEF[it.category];
+      if (sd.opts) return sanOptLabel(it) || '成套';
+      if (sd.tiers) return 'DN' + (it.dnTier || sd.defDn);
+      if (sd.forms) return (it.sanForm === 'hang' ? '悬挂式' : '地上式') + ' DN' + (it.dnTier || 100);
+      return '成套';
+    }
     if (isAuxCat(it.category)) {
       if (it.category === 'bracket') return '—';
       return (it.dn ? 'DN' + it.dn + ' ' : '') + 'δ' + it.insulThk;
@@ -1132,6 +1434,16 @@
         } else if (act === 'joint') {
           it.joint = s.value;
           it.jointFallback = null;
+        } else if (act === 'variant') {
+          if (isSanCat(it.category) && S_DEF[it.category].opts) {
+            it.sanOpt = s.value;
+            it.sanOptFromName = true;
+          } else {
+            it.sanDn = parseInt(s.value, 10);
+          }
+        } else if (act === 'form') {
+          it.sanForm = s.value;
+          it.sanFormFromName = true;
         }
         recomputeQuota(it);
         recomputePrice(it, data._periodKey);
@@ -1178,14 +1490,14 @@
 
       if (!it.quotaCode) {
         wsData.push([
-          it.index, it.name, (isAuxCat(it.category) ? AUX_LABEL[it.category] : '管道'), it.material, '', specVal, '', it.quantity,
+          it.index, it.name, (isAuxCat(it.category) ? AUX_LABEL[it.category] : (isSanCat(it.category) ? '洁具' : '管道')), it.material, '', specVal, '', it.quantity,
           '', '待人工处理', it.name, it.features, it.unit, it.quantity,
           hasPrice ? num2(it.price) : ''
         ]);
         return;
       }
       wsData.push([
-        it.index, it.name, (isAuxCat(it.category) ? AUX_LABEL[it.category] : '管道'), it.material, '', specVal, '', it.quantity,
+        it.index, it.name, (isAuxCat(it.category) ? AUX_LABEL[it.category] : (isSanCat(it.category) ? '洁具' : '管道')), it.material, '', specVal, '', it.quantity,
         it.listCode, '清单行', it.name, it.features, it.unit, it.quantity,
         hasPrice ? num2(it.price) : ''
       ]);
@@ -1243,9 +1555,42 @@
     return el ? el.value : (getPeriods()[0] || {}).period;
   }
 
+  // 切换导出格式 / 信息价期号时，保留用户手选的室内外、接口形式、洁具选型
+  function snapChoices(data) {
+    var m = {};
+    (data || []).forEach(function (it) {
+      if (!it || it.index === undefined) return;
+      m[it.index + '|' + it.name] = { loc: it.loc, joint: it.joint, sanOpt: it.sanOpt, sanDn: it.sanDn, sanForm: it.sanForm };
+    });
+    return m;
+  }
+  function applyChoices(data, snap) {
+    if (!snap) return;
+    data.forEach(function (it) {
+      var s = snap[it.index + '|' + it.name];
+      if (!s) return;
+      var dirty = false;
+      if (isSanCat(it.category)) {
+        if (s.sanOpt !== undefined && s.sanOpt !== it.sanOpt) { it.sanOpt = s.sanOpt; it.sanOptFromName = true; dirty = true; }
+        if (s.sanDn !== undefined && s.sanDn !== it.sanDn) { it.sanDn = s.sanDn; dirty = true; }
+        if (s.sanForm !== undefined && s.sanForm !== it.sanForm) { it.sanForm = s.sanForm; it.sanFormFromName = true; dirty = true; }
+      } else if (it.loc !== undefined && s.loc) {
+        if (s.loc !== it.loc) { it.loc = s.loc; it.locAmbiguous = false; dirty = true; }
+        if (s.joint && s.joint !== it.joint) { it.joint = s.joint; it.jointFallback = null; dirty = true; }
+      }
+      if (dirty) {
+        recomputeQuota(it);
+        recomputePrice(it, data._periodKey);
+        it.features = featureText(it);
+      }
+    });
+  }
+
   function refreshAll() {
     if (!window._rawAOA) return;
+    var snap = snapChoices(exportData);
     exportData = parseRows(window._rawAOA, currentPeriod(), currentFormat());
+    applyChoices(exportData, snap);
     renderTable(exportData);
     var area = document.getElementById('resultArea');
     var btn = document.getElementById('btnGroup');
@@ -1258,10 +1603,12 @@
       var cnt = {};
       exportData.forEach(function (d) { cnt[d.category] = (cnt[d.category] || 0) + 1; });
       var nameMap = { castIron: '铸铁管', galv: '镀锌钢管', seamless: '无缝钢管', welded: '焊接钢管', copper: '铜管', stainless: '不锈钢管', composite: '复合管', plastic: '塑料管', waterValve: '阀门', bracket: '管道支架', insulRubber: '橡塑保温', insulGlass: '玻璃棉', other: '其他材质' };
+      var sanNames = { bathtub: '浴缸', bidet: '净身盆', washbasin: '洗脸盆', sink: '洗涤盆', labSink: '化验盆', toilet: '大便器', urinal: '小便器', faucet: '水龙头', waterHeater: '电热水器', boiler: '电开水炉', steamHeater: '蒸汽加热器', heatExchanger: '热交换器', flushDevice: '冲洗器', handDryer: '烘手器', shower: '淋浴器', showerRoom: '淋浴间', floorDrain: '地漏', cleanout: '扫除口', rainHead: '雨水斗', siphonHead: '虹吸雨水斗', waterDispenser: '饮水器', greaseTrap: '隔油器' };
       var parts = [];
       Object.keys(nameMap).forEach(function (k) { if (cnt[k]) parts.push(nameMap[k] + ' ' + cnt[k] + ' 条'); });
+      Object.keys(sanNames).forEach(function (k) { if (cnt[k]) parts.push(sanNames[k] + ' ' + cnt[k] + ' 条'); });
       bar.textContent = '成功解析 ' + exportData.length + ' 条：' + parts.join('、') +
-        '；「安装部位/接口形式」列可切换室内外与连接方式，定额、附加定额（沟槽管件、消毒冲洗）与主材价实时重算；黄色行为需人工核对项';
+        '；「安装部位/接口形式」列可切换室内外、连接方式及洁具选型，定额与主材价实时重算（洁具定额按 10 组 / 10 个 / 10 台 计量，导出自动换算）；黄色行为需人工核对项';
     } else {
       area.style.display = 'none';
       btn.style.display = 'none';
@@ -1392,7 +1739,10 @@
       V_STHREAD: V_STHREAD, V_SFLANGE: V_SFLANGE,
       AUX_LIST: AUX_LIST, AUX_LABEL: AUX_LABEL, isAuxCat: isAuxCat, auxCatOf: auxCatOf,
       buildAuxItem: buildAuxItem, matchAuxQuota: matchAuxQuota, auxPrice: auxPrice,
-      bracketWeightPerM: bracketWeightPerM, withBracket: withBracket
+      bracketWeightPerM: bracketWeightPerM, withBracket: withBracket,
+      S_DEF: S_DEF, S_WORK: S_WORK, isSanCat: isSanCat, sanCatOf: sanCatOf,
+      buildSanItem: buildSanItem, matchSanQuota: matchSanQuota, sanPrice: sanPrice,
+      sanOptLabel: sanOptLabel
     };
   }
 })();

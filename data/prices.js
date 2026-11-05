@@ -202,3 +202,111 @@ window.PIPE_AUX_PRICES = {
     glass: { price: 450, name: '离心玻璃棉', thk: 40, brand: '河北华美/山东鲁阳/河北国美（带铝箔离心玻璃棉，40mm）' }
   }
 };
+
+/* ============================================================
+ * 卫生器具（洁具）主材价 —— 2026-11 参考市场价（国产中高档，含税）
+ * 清单：031003001~031003011、031003014、031003018、031003019
+ * 单位：元 / 清单计量单位（组、个、台、套）
+ * 价格随行就市，可直接改数字；页面标「市场价」并给出参考品牌
+ * ============================================================ */
+window.PIPE_SANITARY_PRICES = {
+  brand: '国产中高档（九牧JOMOO / 箭牌ARROW / 惠达HUIDA）',
+  items: {
+    bathtub: {
+      name: '搪瓷浴缸 1700×750 含排水配件、溢流口', price: 2400,
+      brand: '九牧JOMOO / 箭牌ARROW'
+    },
+    bidet: {
+      name: '净身盆 含进水阀、排水配件', price: 1200,
+      brand: '箭牌ARROW / 惠达HUIDA'
+    },
+    washbasin: {
+      name: '台式洗脸盆 含冷热水龙头、角阀、排水配件',
+      brand: '九牧JOMOO / 箭牌ARROW / 惠达HUIDA',
+      opts: { normal: 800, sensor: 1800 }
+    },
+    sink: {
+      name: '不锈钢洗涤盆 单槽 含冷热水龙头、排水配件', price: 700,
+      brand: '九牧JOMOO / 惠达HUIDA'
+    },
+    labSink: {
+      name: '化验盆 单联 含化验龙头、排水配件', price: 900,
+      brand: '惠达HUIDA / 科恩KERN'
+    },
+    toilet: {
+      name: '蹲式大便器 瓷高水箱成套（含冲洗阀、排水配件）', price: 750,
+      brand: '惠达HUIDA / 箭牌ARROW'
+    },
+    urinal: {
+      name: '挂斗式小便器 含感应自动冲洗阀', price: 1300,
+      brand: '九牧JOMOO / 箭牌ARROW'
+    },
+    faucet: {
+      name: '水龙头 DN15 铜质（冷水）', price: 120,
+      brand: '九牧JOMOO / 摩恩MOEN'
+    },
+    waterHeater: {
+      name: '电热水器（储水式，含安全阀、混水阀）',
+      brand: '海尔Haier / 美的Midea / A.O.史密斯',
+      opts: { RS15: 1200, RS30: 1800, RS50W: 2600, RS50L: 3000, RS100: 5500, RS300: 15000 }
+    },
+    boiler: {
+      name: '电开水炉 立式 KSA型（含自动进水、温控）', price: 4500,
+      brand: '碧丽 / 沁园 / 吉之美'
+    },
+    steamHeater: {
+      name: '蒸汽间断式加热器（含疏水器）',
+      brand: '国产中高档（容积式换热器专业厂）',
+      opts: { '1': 3800, '2': 5600, '3': 7800 }
+    },
+    heatExchanger: {
+      name: '容积式热交换器（含安全阀、温控、疏水）',
+      brand: '国产中高档（四平/蓝海/华源换热）',
+      opts: { '1': 6000, '2': 9000, '3': 13000, '4': 18000, '5': 26000, '6': 36000, '7': 48000 }
+    },
+    flushDevice: {
+      name: '感应式冲洗器 明装（含电磁阀、感应面板）', price: 900,
+      brand: '九牧JOMOO / 箭牌ARROW'
+    },
+    handDryer: {
+      name: '烘手器（高速，含接线）', price: 600,
+      brand: '松下Panasonic / 戴森Dyson / 莫顿MODUN'
+    },
+    shower: {
+      name: '淋浴器 钢管组成 冷热水（含花洒、混水阀、软管）', price: 450,
+      brand: '九牧JOMOO / 箭牌ARROW'
+    },
+    showerRoom: {
+      name: '整体淋浴间（含底盘、围板、门、花洒）', price: 4500,
+      brand: '箭牌ARROW / 朗斯LANS'
+    },
+    floorDrain: {
+      name: '地漏（不锈钢防臭芯）', brand: '九牧JOMOO / 潜水艇Submarine',
+      prices: { '50': 45, '75': 65, '100': 95, '150': 160 }
+    },
+    cleanout: {
+      name: '地面扫除口（铸铁/不锈钢盖）', brand: '国产中高档（排水配件专业厂）',
+      prices: { '50': 55, '75': 75, '100': 110, '125': 150, '150': 200 }
+    },
+    rainHead: {
+      name: '普通雨水斗（铸铁/铝合金）', brand: '国产中高档（排水配件专业厂）',
+      prices: { '100': 180, '125': 260, '150': 380 }
+    },
+    siphonHead: {
+      name: '虹吸式雨水斗（含整流器）', brand: '吉博力Geberit / 捷流 / 国产中高档',
+      prices: { '50': 420, '100': 680, '150': 1100 }
+    },
+    waterDispenser: {
+      name: '饮水器（直饮水机，含过滤、加热）', price: 3500,
+      brand: '沁园 / 安吉尔 / 美的Midea'
+    },
+    greaseTrap: {
+      name: '隔油器（不锈钢，含格栅、排油）',
+      brand: '国产中高档（油水分离设备厂）',
+      forms: {
+        ground: { '50': 3200, '80': 4800, '100': 6500 },
+        hang: { '50': 3800, '100': 6800, '150': 9800 }
+      }
+    }
+  }
+};
