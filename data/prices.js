@@ -234,8 +234,9 @@ window.PIPE_SANITARY_PRICES = {
       brand: '惠达HUIDA / 科恩KERN'
     },
     toilet: {
-      name: '蹲式大便器 瓷高水箱成套（含冲洗阀、排水配件）', price: 750,
-      brand: '惠达HUIDA / 箭牌ARROW'
+      name: '大便器（含冲洗阀、水箱、排水配件）',
+      brand: '惠达HUIDA / 箭牌ARROW / 九牧JOMOO',
+      opts: { squat: 750, seat: 1200 }
     },
     urinal: {
       name: '挂斗式小便器 含感应自动冲洗阀', price: 1300,

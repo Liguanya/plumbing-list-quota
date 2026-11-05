@@ -493,7 +493,8 @@
     labSink:      { code: '031003005', lname: '化验盆', unit: '组', qunit: '10组', factor: 10,
                     q: '8-855', qn: '化验盆 单联' },
     toilet:       { code: '031003006', lname: '大便器', unit: '组', qunit: '10组', factor: 10,
-                    q: '8-875', qn: '蹲式大便器 瓷高水箱' },
+                    opts: [ { k: 'squat', l: '蹲式（脚踏阀冲洗）', q: '8-879', qn: '蹲式大便器 脚踏阀冲洗' },
+                            { k: 'seat',  l: '坐式（带水箱坐便器）', q: '8-884', qn: '坐式大便器 带水箱坐便器' } ] },
     urinal:       { code: '031003007', lname: '小便器', unit: '组', qunit: '10组', factor: 10,
                     q: '8-889', qn: '小便器 挂斗式 感应自动冲洗阀' },
     faucet:       { code: '031003008', lname: '其他成品卫生器具', unit: '个', qunit: '10个', factor: 10,
@@ -563,7 +564,7 @@
     washbasin: '盆体安装、冷热水龙头安装、角阀与排水配件安装、试水',
     sink: '盆体安装、龙头安装、排水配件安装、试水',
     labSink: '化验盆安装、化验龙头安装、排水配件安装、试水',
-    toilet: '蹲便器安装、高水箱安装、冲洗管连接、试水',
+    toilet: '大便器安装、水箱及冲洗阀安装、冲洗管连接、试水',
     urinal: '小便器安装、感应冲洗阀安装、排水连接、试水',
     faucet: '水龙头安装、生料带密封、通水试验',
     waterHeater: '热水器就位固定、进出水管连接、安全阀安装、通电试运行',
@@ -607,7 +608,7 @@
     if (/化验盆|化验池/.test(n)) return 'labSink';
     if (/净身盆/.test(n)) return 'bidet';
     if (/浴缸|浴盆/.test(n)) return 'bathtub';
-    if (/大便器|坐便器|蹲便器/.test(n)) return 'toilet';
+    if (/大便器|坐便器|座便器|蹲便器/.test(n)) return 'toilet';
     if (/小便器|小便斗/.test(n)) return 'urinal';
     if (/淋浴器|花洒|淋浴/.test(n)) return 'shower';
     if (/水龙头|龙头/.test(n)) return 'faucet';
@@ -628,7 +629,11 @@
     it.sanOptFromName = false;
     if (d.opts) {
       var pick = d.opts[0].k;
-      if (cat === 'washbasin') {
+      if (cat === 'toilet') {
+        if (/坐便|坐式|座便/.test(name)) { pick = 'seat'; it.sanOptFromName = true; }
+        else if (/蹲/.test(name)) { pick = 'squat'; it.sanOptFromName = true; }
+        else { pick = 'squat'; }
+      } else if (cat === 'washbasin') {
         pick = /感应/.test(name) ? 'sensor' : 'normal';
         it.sanOptFromName = true;
       } else if (cat === 'waterHeater') {

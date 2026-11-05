@@ -601,9 +601,21 @@ ck('化验池同化验盆', sp('化验池').quotaCode, '8-855');
 
 var t6 = sp('蹲式大便器 瓷高水箱');
 ck('大便器清单031003006', t6.listCode, '031003006');
-ck('大便器定额8-875', t6.quotaCode, '8-875');
-ck('大便器价750', t6.price, 750);
-ck('坐便器同大便器', sp('坐便器 连体').quotaCode, '8-875');
+ck('蹲式大便器定额8-879', t6.quotaCode, '8-879');
+ck('蹲式大便器价750', t6.price, 750);
+ck('蹲式默认squat', t6.sanOpt, 'squat');
+ck('蹲便器→8-879', sp('蹲便器').quotaCode, '8-879');
+var t6s = sp('坐式大便器 带水箱');
+ck('坐式大便器定额8-884', t6s.quotaCode, '8-884');
+ck('坐式大便器价1200', t6s.price, 1200);
+ck('坐式清单031003006', t6s.listCode, '031003006');
+ck('坐便器→8-884', sp('坐便器 连体').quotaCode, '8-884');
+ck('座便器同坐便器', sp('座便器').quotaCode, '8-884');
+ck('坐式选型seat', t6s.sanOpt, 'seat');
+ck('大便器两档选项', A.S_DEF.toilet.opts.length, 2);
+var t6n = sp('大便器');
+ck('未注明默认蹲式', t6n.quotaCode, '8-879');
+ck('未注明有提示', /未注型号/.test(t6n.warn || ''), true);
 
 var t7 = sp('挂斗式小便器 感应冲洗阀');
 ck('小便器清单031003007', t7.listCode, '031003007');
