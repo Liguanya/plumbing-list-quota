@@ -1027,6 +1027,12 @@
     if (!grp) return null;
     var r = interpPrice(grp.price, it.dn);
     if (!r) return null;
+    var isInfo = !!(grp.infoDns && grp.infoDns.indexOf(r.tier) >= 0);
+    if (isInfo) {
+      return { price: r.price, source: 'info',
+        basis: '铸铁' + MEDIUM_CN[it.medium] + '管 DN' + it.dn + '：天津市工程造价信息（除税）' + r.price.toFixed(2) + '元/m' +
+          (r.exact ? '' : '；信息价无DN' + it.dn + '档，按DN' + r.tier + '档取定') };
+    }
     var basis = '铸铁' + MEDIUM_CN[it.medium] + '管 DN' + it.dn + '：' + grp.brand + '，' + r.price.toFixed(2) + '元/m（除税）' +
       (r.exact ? '' : '；信息价无DN' + it.dn + '档，按DN' + r.tier + '档就近取定') +
       (r.overflow ? '；已超常用最大档，请核对' : '');
@@ -1075,6 +1081,12 @@
     var r = interpPrice(grp.price, it.dn);
     if (!r) return null;
     var dnLabel = (it.category === 'plastic' || it.category === 'composite') ? 'De' : 'DN';
+    var isInfo = !!(grp.infoDns && grp.infoDns.indexOf(r.tier) >= 0);
+    if (isInfo) {
+      return { price: r.price, source: 'info',
+        basis: label + ' ' + dnLabel + it.dn + '：天津市工程造价信息（除税）' + r.price.toFixed(2) + '元/m' +
+          (r.exact ? '' : '；信息价无' + dnLabel + it.dn + '档，按' + dnLabel + r.tier + '档取定') };
+    }
     var basis = label + ' ' + dnLabel + it.dn + '：' + grp.brand + '，' + r.price.toFixed(2) + '元/m（除税）' +
       (r.exact ? '' : '；价格库无' + dnLabel + it.dn + '档，按' + dnLabel + r.tier + '档就近取定') +
       (r.overflow ? '；已超常用最大档，请核对' : '');
