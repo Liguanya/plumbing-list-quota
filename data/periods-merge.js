@@ -7,8 +7,8 @@
   var T = (typeof window !== 'undefined' && window.TJ_PERIODS_2026) || [];
   var P = (typeof window !== 'undefined' && window.PIPE_PRICE_PERIODS) || [];
   if (!T.length || !P.length) return;
-  var tpl = P[0];
   function cp(o) { return JSON.parse(JSON.stringify(o)); }
+  var tpl = cp(P[0]);   // 模板快照：避免首个信息价期写入后污染后续期
   function mg(dst, src) {
     if (!dst || !src) return 0;
     var n = 0;
