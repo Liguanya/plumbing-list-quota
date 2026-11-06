@@ -91,12 +91,23 @@
     return (typeof window !== 'undefined' && window.PIPE_VALVE_PRICES) || {};
   }
   function isValveCat(c) { return !!V_LIST[c]; }
+  // 国标公称直径系列（用于「阀门-300」这类只给数字的写法校验）
+  var DN_STD = [15,20,25,32,40,50,65,80,100,125,150,200,250,300,350,400,450,500,600,700,800,900,1000,1200,1400,1600,1800,2000];
   function parseVDn(name) {
     var s2 = String(name || '');
     var m = s2.match(/(?:DN|dn|De|de|D|Φ|φ|Ø)\s*[-－]?\s*(\d{2,4})/);
     if (m) return parseInt(m[1], 10);
     m = s2.match(/(\d{2,4})\s*(?:mm|MM|毫米)/);
     if (m) return parseInt(m[1], 10);
+    // 水阀「阀门-300」写法：-300 即 DN300（与暖通站圆形风道阀门同口径）
+    // 只认国标 DN 系列，避免 -16(压力) / -220(电压) 之类被误判为公称直径
+    m = s2.match(/[-－—–_]\s*(\d{2,4})\s*(MPa|Mpa|mpa|PN|℃|°C|V|伏|公斤|元|个|台|套|片)?\s*$/);
+    if (m) {
+      var dv = parseInt(m[1], 10);
+      var isPress = /MPa|Mpa|mpa|PN|公斤|压力/.test(s2);
+      var isVolt = /电动|电磁/.test(s2) && [12, 24, 36, 110, 220, 380].indexOf(dv) >= 0;
+      if (!m[2] && !isPress && !isVolt && DN_STD.indexOf(dv) >= 0) return dv;
+    }
     return null;
   }
   function valveKindOf(name) {
@@ -745,7 +756,7 @@
     var it = {};
     it.name = name;
     it.material = materialOf(name);
-    it.dn = parseDN(name);
+    it.dn = parseDN(name) || parseVDn(name);   // 水表/倒流防止器等「-150」写法兜底
     it.medium = parseMedium(name);
     it.loc = parseLoc(name);
     it.isRain = /雨水/.test(name);
