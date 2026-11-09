@@ -375,6 +375,81 @@ ck('铜管特征规格De', /型号规格:De54/.test(pr('铜管 DN54').features),
 ck('复合管特征规格De', /型号规格:De32/.test(pr('铝塑复合管 De32').features), true);
 ck('塑料管特征规格De', /型号规格:De25/.test(pr('PPR给水管 De25').features), true);
 
+console.log('\n== 23B. 塑料管 031001008 三级联动（PVDF/聚乙烯/聚丙烯/聚丁烯/聚氯乙烯）==');
+// 材质识别
+ck('PVDF→塑料', A.materialOf('PVDF(聚偏二氟乙烯)管-DN15'), '塑料');
+ck('PVDF复合管→塑料', A.materialOf('PVDF复合管 DN50'), '塑料');
+ck('聚乙烯→塑料', A.materialOf('室内聚乙烯PE给水管 De110'), '塑料');
+ck('聚丙烯→塑料', A.materialOf('聚丙烯PP-R给水管 De25'), '塑料');
+ck('聚丁烯→塑料', A.materialOf('聚丁烯PB管 De20'), '塑料');
+ck('聚氯乙烯→塑料', A.materialOf('聚氯乙烯PVC-U给水管 De32'), '塑料');
+ck('钢骨架复合仍为复合', A.materialOf('钢骨架塑料复合管 De110'), '复合');
+ck('铝塑复合仍为复合', A.materialOf('铝塑复合管 De25'), '复合');
+// 清单与细分
+var pv = pr('PVDF(聚偏二氟乙烯)管-DN15');
+ck('PVDF清单码', pv.listCode, '031001008');
+ck('PVDF细分', pv.plasticKind, 'pvdf');
+ck('PVDF材质标签', pv.materialLabel, 'PVDF（聚偏二氟乙烯）');
+ck('PVDF特征材质', /材质:PVDF（聚偏二氟乙烯）/.test(pv.features), true);
+ck('PVDF De15主材价', pv.price, 22);
+ck('PE细分', pr('室内聚乙烯PE给水管 De110').plasticKind, 'pe');
+ck('PPR细分', pr('聚丙烯PP-R给水管 De25').plasticKind, 'ppr');
+ck('PB细分', pr('聚丁烯PB管 De20').plasticKind, 'pb');
+ck('PVC给水细分', pr('聚氯乙烯PVC-U给水管 De32').plasticKind, 'pvc');
+ck('PVC排水细分', pr('PVC-U排水管 De110').plasticKind, 'pvcDrain');
+ck('PVDF主材市场价', pr('PVDF管 De50').priceSource, 'market');
+// 室外三档连接方式（8-36~8-47 / 8-48~8-59 / 8-60~8-71）
+ck('室外热熔De32', code('室外聚乙烯PE给水管 De32 热熔连接'), '8-36');
+ck('室外热熔De315', code('室外聚乙烯PE给水管 De315 热熔连接'), '8-47');
+ck('室外电熔De32', code('室外聚乙烯PE给水管 De32 电熔连接'), '8-48');
+ck('室外电熔De110', code('室外聚乙烯PE给水管 De110 电熔连接'), '8-54');
+ck('室外电熔De315', code('室外聚乙烯PE给水管 De315 电熔连接'), '8-59');
+ck('室外粘接De32', code('室外塑料给水管 De32 粘接'), '8-60');
+ck('室外粘接De110', code('室外塑料给水管 De110 粘接'), '8-66');
+ck('室外粘接De315', code('室外塑料给水管 De315 粘接'), '8-71');
+// 室内给水三档（8-410~420 / 8-421~431 / 8-432~442）
+ck('室内给水热熔De20', code('室内聚乙烯PE给水管 De20 热熔连接'), '8-410');
+ck('室内给水热熔De160', code('室内聚乙烯PE给水管 De160 热熔连接'), '8-420');
+ck('室内给水电熔De20', code('室内聚乙烯PE给水管 De20 电熔连接'), '8-421');
+ck('室内给水电熔De160', code('室内聚乙烯PE给水管 De160 电熔连接'), '8-431');
+ck('室内给水粘接De20', code('室内塑料给水管 De20 粘接'), '8-432');
+ck('室内给水粘接De160', code('室内塑料给水管 De160 粘接'), '8-442');
+// 室内排水三档（粘接377~382 / 热熔383~388 / 螺母密封圈389~394）
+ck('室内排水粘接De50', code('室内塑料排水管 De50 粘接'), '8-377');
+ck('室内排水粘接De250', code('室内塑料排水管 De250 粘接'), '8-382');
+ck('室内排水热熔De50', code('室内塑料排水管 De50 热熔连接'), '8-383');
+ck('室内排水热熔De250', code('室内塑料排水管 De250 热熔连接'), '8-388');
+ck('室内排水螺母密封圈De50', code('室内塑料排水管 De50 螺母密封圈连接'), '8-389');
+ck('室内排水螺母密封圈De110', code('室内塑料排水管 De110 螺母密封圈连接'), '8-391');
+ck('室内排水螺母密封圈De250', code('室内塑料排水管 De250 螺母密封圈连接'), '8-394');
+ck('螺母密封圈定额名', /螺母密封圈连接/.test(pr('室内塑料排水管 De110 螺母密封圈连接').quotaName), true);
+ck('螺母密封圈连接名解析', A.parsePipeJoint('塑料排水管 螺母密封圈连接'), 'nut');
+// 室内雨水（8-405~8-409）
+ck('室内雨水粘接De75', code('室内塑料雨水管 De75 粘接'), '8-405');
+ck('室内雨水粘接De110', code('室内塑料雨水管 De110 粘接'), '8-406');
+ck('室内雨水粘接De250', code('室内塑料雨水管 De250 粘接'), '8-409');
+ck('雨水无热熔子目回退粘接', code('室内塑料雨水管 De160 热熔连接'), '8-407');
+ck('雨水回退提示', /无热熔连接子目/.test(pr('室内塑料雨水管 De160 热熔连接').warn), true);
+// 三级联动候选
+var jd = pr('室内塑料排水管 De110');
+ck('室内排水候选连接', A.jointsOf(jd), ['glue', 'fusion', 'nut']);
+var jr = pr('室内塑料雨水管 De110');
+ck('室内雨水候选连接', A.jointsOf(jr), ['glue']);
+var jo = pr('室外塑料给水管 De110');
+ck('室外候选连接', A.jointsOf(jo), ['fusion', 'electro', 'glue']);
+ck('室内排水默认粘接', jd.joint, 'glue');
+ck('室内给水默认热熔', pr('室内聚乙烯PE给水管 De110').joint, 'fusion');
+ck('PVC给水默认粘接', pr('室内聚氯乙烯PVC-U给水管 De110').joint, 'glue');
+ck('室外排水名固定给水', pr('室外塑料排水管 De160 粘接').medium, 'water');
+ck('室外排水名提示给水子目', /仅设给水管子目/.test(pr('室外塑料排水管 De160 粘接').warn), true);
+ck('介质中文雨水管', A.MEDIUM_CN3.rain, '雨水管');
+ck('介质中文排水管', A.MEDIUM_CN3.drain, '排水管');
+ck('介质中文给水管', A.MEDIUM_CN3.water, '给水管');
+// 项目特征（输出界面列）
+ck('塑料特征含输送介质', /输送介质:给水/.test(pr('室内聚乙烯PE给水管 De110').features), true);
+ck('塑料特征含连接形式', /连接形式:热熔连接/.test(pr('室内聚乙烯PE给水管 De110').features), true);
+ck('提示去重', (function () { var w = pr('PVDF(聚偏二氟乙烯)管-DN15').warn; return w.split('；').filter(function (x, i, a) { return a.indexOf(x) === i; }).length === w.split('；').length; })(), true);
+
 console.log('\n== 24. 附加定额（消毒冲洗 / 沟槽管件） ==');
 var g1 = pr('无缝钢管 DN100', 100);
 ck('消毒冲洗挂出', g1.extras.length, 1);

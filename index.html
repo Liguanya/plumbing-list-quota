@@ -42,6 +42,8 @@
         .cell-qname { text-align: left !important; white-space: normal !important; min-width: 220px; }
         .cell-price { white-space: nowrap !important; font-weight: 600; color: #0d3d44; }
         .cell-warn { font-size: 12px; color: #b9770e; text-align: left !important; white-space: normal !important; max-width: 260px; }
+        .cell-feature { font-size: 12px; color: #37505a; text-align: left !important; white-space: normal !important; min-width: 240px; max-width: 360px; line-height: 1.55; }
+        .lay-stack { display: flex; flex-direction: column; gap: 4px; }
         tr.row-warn { background: #fff8e6; }
         tr.row-warn:hover { background: #fdeec4; }
 
@@ -75,6 +77,7 @@
                 <h3>📋 使用说明与价格参考</h3>
                 <ul>
                     <li>上传给排水工程量清单 Excel（.xlsx/.xls），<strong>A列=序号</strong>、<strong>B列=项目名称（材质/管径/接口形式）</strong>、<strong>C列=数量</strong>、<strong>D列=单位（可选，m/m²/m³）</strong>，首行可为表头；阀门写 <code>蝶阀-300</code> 时，-300 即 DN300（也可写 <code>DN300</code>），按国标 DN 系列识别，压力/电压等后缀不按管径处理；系统按项目名称<strong>自动识别材质、公称直径与连接方式</strong>并套用清单与定额，结果支持<strong>「广联达 / 建经科技」</strong>两种格式导出。</li>
+                    <li><strong>塑料管</strong>：名称含 PVDF、聚乙烯（PE）、聚丙烯（PP-R）、聚丁烯（PB）、聚氯乙烯（PVC-U）等关键词的管道按塑料管组价，<strong>「安装部位/接口形式」列为三级联动</strong>——一级选<strong>室内/室外</strong>；室外二级直接选<strong>连接方式</strong>（热熔 / 电熔 / 粘接，公称外径 32~315mm）；室内二级选<strong>雨水管 / 排水管 / 给水管</strong>，三级选<strong>连接方式</strong>（排水：粘接 / 热熔 / 螺母密封圈；雨水：粘接；给水：热熔 / 电熔 / 粘接），切换后定额、主材价与项目特征实时重算。名称中也可直接写明，如 <code>室内聚乙烯PE给水管 De110 热熔连接</code>。</li>
                     <li><strong>价格参考</strong>：天津市工程造价信息（2026年1—10期）及市场价——页面顶部「信息价期号」可选择期次（默认最新一期），切换后主材价按该期信息价重新计算；信息价有的按信息价计入（页面不标品牌），信息价缺项的按国产中高档市场价并给出参考品牌。</li>
                 </ul>
             </div>
@@ -124,13 +127,12 @@
                                 <th>序号</th>
                                 <th>清单编码</th>
                                 <th>项目名称</th>
-                                <th>安装部位/接口形式</th>
-                                <th>材质</th>
-                                <th>规格<br>(DN)</th>
+                                <th>安装部位<br>/接口形式</th>
+                                <th>项目特征</th>
                                 <th>定额编码</th>
                                 <th>定额名称</th>
-                                <th>主材单价<br>(元/m)</th>
-                                <th>工程量<br>(m)</th>
+                                <th>主材单价</th>
+                                <th>工程量</th>
                                 <th>核对提示</th>
                             </tr>
                         </thead>

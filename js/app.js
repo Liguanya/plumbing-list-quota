@@ -309,14 +309,21 @@
       { loc: 'in', joint: 'glue', start: 432, dns: PLASTIC_IN_DNS, name: '室内管道 塑料给水管(粘接)' },
       { loc: 'in', joint: 'glue', medium: 'drain', start: 377, dns: PLASTIC_DRAIN_DNS, name: '室内管道 塑料排水管(粘接)' },
       { loc: 'in', joint: 'fusion', medium: 'drain', start: 383, dns: PLASTIC_DRAIN_DNS, name: '室内管道 塑料排水管(热熔连接)' },
+      { loc: 'in', joint: 'nut', medium: 'drain', start: 389, dns: PLASTIC_DRAIN_DNS, name: '室内管道 塑料排水管(螺母密封圈连接)' },
       { loc: 'in', joint: 'glue', medium: 'rain', start: 405, dns: [75, 110, 160, 200, 250], name: '室内管道 塑料雨水管(粘接)' }
     ]
   };
   var JOINT_CN2 = {
     weld: '焊接', groove: '沟槽连接（卡箍）', press: '卡压连接', sleeve: '卡套连接',
     argon: '承插氩弧焊', thread: '螺纹连接', arc: '对接电弧焊', oxy: '氧乙炔焊',
-    braze: '钎焊', fusion: '热熔连接', electro: '电熔连接', glue: '粘接'
+    braze: '钎焊', fusion: '热熔连接', electro: '电熔连接', glue: '粘接', nut: '螺母密封圈连接'
   };
+  // 塑料管连接方式展示顺序：室外按热熔/电熔/粘接，室内按粘接/热熔/电熔/螺母密封圈
+  var PLASTIC_JOINT_ORDER = {
+    out: ['fusion', 'electro', 'glue'],
+    in: ['glue', 'fusion', 'electro', 'nut']
+  };
+  var MEDIUM_CN3 = { rain: '雨水管', drain: '排水管', water: '给水管' };
 
   // ---------- 铸铁管定额矩阵 ----------
   // start：该接口形式第一个子目号；dns：依次对应的公称直径档
@@ -354,7 +361,7 @@
   var JOINT_ORDER = ['asbestos', 'cement', 'lead', 'expand', 'rubber'];
   var JOINT_ORDER_GALV = ['thread', 'gas_thread'];
   var LOC_CN = { in: '室内', out: '室外' };
-  var MEDIUM_CN = { water: '给水', drain: '排水', gas: '燃气' };
+  var MEDIUM_CN = { water: '给水', drain: '排水', rain: '雨水', gas: '燃气' };
 
   function ruleTable(it) { return it && it.category === 'galv' ? GALV : CAST_IRON; }
   // 定额分组键：铸铁 → 室内外+给排水；镀锌 → 室内外+给水/燃气（按所选连接方式区分燃气）
@@ -376,14 +383,19 @@
         if ((g.medium || 'water') !== mk) return;
         if (out.indexOf(g.joint) < 0) out.push(g.joint);
       });
-      if (!out.length) {
-        // 介质无对应子目（如塑料雨水管无热熔子目）：回退到同部位给水/排水组
+      if (!out.length && it.category !== 'plastic') {
+        // 介质无对应子目：回退到同部位给水/排水组（塑料管不回落，介质由用户在选型列指定）
         gs.forEach(function (g) {
           if (g.loc !== it.loc) return;
           var m = g.medium || 'water';
           if (m === 'gas') return;
           if (out.indexOf(g.joint) < 0) out.push(g.joint);
         });
+      }
+      if (it.category === 'plastic') {
+        var ord = PLASTIC_JOINT_ORDER[it.loc] || PLASTIC_JOINT_ORDER.in;
+        out.sort(function (a, b) { return ord.indexOf(a) - ord.indexOf(b); });
+        return out;
       }
       out.sort(function (a, b) { return JOINT_PREFER.indexOf(a) - JOINT_PREFER.indexOf(b); });
       return out;
@@ -399,6 +411,14 @@
       // 优先名称中已注明的连接方式
       var pj = parsePipeJoint(it.name || '');
       if (pj && list.indexOf(pj) >= 0) return pj;
+      if (it.category === 'plastic') {
+        // 名称未注明时：排水/雨水按粘接，PVC-U 给水按粘接，其余给水按热熔
+        var mk = mediumKeyOf(it);
+        if (mk === 'drain' || mk === 'rain' || it.plasticKind === 'pvc' || it.plasticKind === 'pvcDrain') {
+          if (list.indexOf('glue') >= 0) return 'glue';
+        }
+        if (list.indexOf('fusion') >= 0) return 'fusion';
+      }
       return list[0] || '';
     }
     return list.indexOf('asbestos') >= 0 ? 'asbestos' : (list[0] || 'asbestos');
@@ -453,11 +473,31 @@
     if (/不锈钢/.test(s)) return '不锈钢';
     if (/无缝/.test(s)) return '无缝钢';       // 含"内外壁热浸镀锌无缝钢管"
     if (/镀锌钢管|热浸镀锌|热镀锌|镀锌焊接钢管|内外壁热浸镀锌|镀锌管/.test(s)) return '镀锌钢';
+    // 塑料管：PVDF / 聚乙烯 / 聚丙烯 / 聚丁烯 / 聚氯乙烯 等通用塑料及工程塑料（031001008）
+    // 钢骨架、钢塑、铝塑、衬塑、涂塑属复合管，须先排除
+    if (!/钢骨架|钢塑|铝塑|衬塑|涂塑|钢带增强/.test(s) &&
+      /PVDF|聚偏二氟乙烯|聚乙烯|聚丙烯|聚丁烯|聚氯乙烯|PPR|PP-R|PE管|HDPE|PVC|UPVC|U-PVC|PB管|PEX|塑料管|塑料给水|塑料排水|塑料雨水/.test(s)) return '塑料';
     if (/复合管|钢塑|铝塑|衬塑|涂塑/.test(s)) return '复合';
     if (/铜管|紫铜|黄铜管/.test(s)) return '铜';
-    if (/PPR|PP-R|PE管|HDPE|PVC|UPVC|U-PVC|PB管|PEX|塑料管|塑料给水|塑料排水|塑料雨水/.test(s)) return '塑料';
     if (/焊接钢管|钢管/.test(s)) return '焊接钢';
     return '其他';
+  }
+
+  // 塑料管细分：pvdf 聚偏二氟乙烯 / ppr / pe / pb 聚丁烯 / pvc 给水 / pvcDrain 排水
+  var PLASTIC_LABEL = {
+    pvdf: 'PVDF（聚偏二氟乙烯）', ppr: 'PP-R（聚丙烯）', pe: 'PE（聚乙烯）',
+    pb: 'PB（聚丁烯）', pvc: 'PVC-U（聚氯乙烯）', pvcDrain: 'PVC-U（聚氯乙烯）'
+  };
+  function plasticKindOf(name, medium) {
+    var s = String(name || '');
+    if (medium === 'drain' || /排水|雨水|污水|废水|冷凝水/.test(s)) medium = 'drain';
+    if (/PVDF|聚偏二氟乙烯/.test(s)) return 'pvdf';
+    if (/PB管|聚丁烯/.test(s)) return 'pb';
+    if (/PPR|PP-R|聚丙烯/.test(s)) return 'ppr';
+    if (/PE管|HDPE|聚乙烯/.test(s)) return 'pe';
+    if (/PVC|UPVC|U-PVC|聚氯乙烯/.test(s)) return (medium === 'drain') ? 'pvcDrain' : 'pvc';
+    if (medium === 'drain') return 'pvcDrain';
+    return 'ppr';
   }
 
   // 连接方式解析（其他管材）
@@ -473,6 +513,7 @@
     if (/电熔/.test(s)) return 'electro';
     if (/热熔/.test(s)) return 'fusion';
     if (/粘接|胶粘|承插粘接/.test(s)) return 'glue';
+    if (/螺母密封圈|螺母压紧|密封圈连接|压盖密封/.test(s)) return 'nut';
     if (/螺纹|丝扣|丝接/.test(s)) return 'thread';
     if (/焊接|焊口/.test(s)) return 'weld';
     return null;
@@ -792,6 +833,16 @@
       it.listName = LIST[it.category].name;
       it.isRain = /雨水/.test(name);
       it.medium = /燃气|煤气|天然气|液化气|气源|瓦斯/.test(name) ? 'gas' : (it.isRain ? 'drain' : it.medium);
+      // 室外塑料管仅有给水管子目（8-36~8-71），介质固定为给水（须在连接方式解析前确定）
+      if (it.category === 'plastic' && it.loc === 'out') {
+        it.wasDrainName = (it.medium === 'drain' || it.isRain);
+        it.medium = 'water'; it.isRain = false;
+      }
+      // 塑料管细分（用于主材价、项目特征与默认连接方式），须在连接方式解析前确定
+      if (it.category === 'plastic') {
+        it.plasticKind = plasticKindOf(name, it.medium);
+        it.materialLabel = PLASTIC_LABEL[it.plasticKind] || '塑料';
+      }
       var pj = parsePipeJoint(name);
       it.jointAuto = pj || defaultJoint(it);
       it.joint = it.jointAuto;
@@ -801,14 +852,7 @@
         it.jointFallback = it.joint;
         it.joint = defaultJoint(it);
       }
-      // 塑料管材质细分（用于主材价）
-      if (it.category === 'plastic') {
-        if (it.medium === 'drain') it.plasticKind = 'pvcDrain';
-        else if (/PPR|PP-R/.test(name)) it.plasticKind = 'ppr';
-        else if (/PE|HDPE/.test(name)) it.plasticKind = 'pe';
-        else if (/PVC|UPVC|U-PVC/.test(name)) it.plasticKind = 'pvc';
-        else it.plasticKind = 'ppr';
-      }
+      // 塑料管材质细分（用于主材价与项目特征）
       if (it.category === 'composite') {
         it.compositeKind = /钢骨架|钢塑|衬塑|涂塑/.test(name) ? 'steelmesh' : 'alplastic';
       }
@@ -1086,7 +1130,8 @@
       label = it.compositeKind === 'steelmesh' ? '钢骨架塑料复合管' : '铝塑复合管';
     } else if (it.category === 'plastic') {
       grp = (p.plastic || {})[it.plasticKind || 'ppr'];
-      label = { ppr: 'PPR给水管', pe: 'PE给水管', pvc: 'PVC-U给水管', pvcDrain: 'PVC-U排水管' }[it.plasticKind || 'ppr'];
+      label = { ppr: 'PP-R给水管', pe: 'PE给水管', pvc: 'PVC-U给水管', pvcDrain: 'PVC-U排水管',
+        pvdf: 'PVDF管', pb: 'PB给水管' }[it.plasticKind || 'ppr'];
     }
     if (!grp || !grp.price) return null;
     var r = interpPrice(grp.price, it.dn);
@@ -1174,8 +1219,11 @@
     }
     var parts = [];
     parts.push('安装部位:' + (it.loc === 'out' ? '室外' : '室内'));
-    parts.push('材质:' + (it.material || '铸铁'));
+    parts.push('材质:' + (it.materialLabel || it.material || '铸铁'));
     if (it.dn) parts.push('型号规格:' + specCell(it));
+    if (it.category === 'plastic') {
+      parts.push('输送介质:' + (it.isRain ? '雨水' : (it.medium === 'drain' ? '排水' : '给水')));
+    }
     if (it.category === 'castIron') {
       parts.push('连接形式:承插');
       parts.push('接口材料:' + (JOINT_CN[it.joint] || '石棉水泥接口'));
@@ -1196,6 +1244,15 @@
   }
 
   // ---------- 核对提示 ----------
+  // 核对提示去重（同一提示只保留一次）
+  function wjoin(w) {
+    var seen = {}, out = [];
+    (w || []).forEach(function (x) {
+      if (!x || seen[x]) return;
+      seen[x] = 1; out.push(x);
+    });
+    return out.join('；');
+  }
   function buildWarn(it, quota) {
     var w = [];
     if (isSanCat(it.category)) {
@@ -1206,33 +1263,36 @@
       if (sd.tiers && !it.sanDn) w.push('名称未注公称直径，已按 DN' + sd.defDn + '（' + quota.code + '）计列，可在「选型」列切换');
       if (sd.tiers && it.sanDn && quota.dnTier && quota.dnTier !== it.sanDn) w.push('DN' + it.sanDn + ' 无对应档，已按 DN' + quota.dnTier + '以内子目套用，请核对');
       if (sd.forms && !it.sanDn) w.push('名称未注公称直径，已按 DN100 计列，可在「选型」列切换');
-      return w.join('；');
+      return wjoin(w);
     }
     if (it.category === 'bracket') {
       w.push('管道支架工程量按管道长度与管径分档含量估算，定额 7-138 计量单位 100kg，请按图纸支架实际重量调整');
-      return w.join('；');
+      return wjoin(w);
     }
     if (it.category === 'insulRubber' || it.category === 'insulGlass') {
       w.push((it.category === 'insulRubber' ? '橡塑保温' : '离心玻璃棉') + '按保温体积（m³）计，厚度按 ' + it.insulThk +
         'mm 取定；单位列填 m² 按面积×厚度折算，填 m 且含 DN 按 π×(DN+δ)×δ×L 折算');
-      return w.join('；');
+      return wjoin(w);
     }
     if (isValveCat(it.category)) {
       if (!it.dn && it.category !== 'flushValve') w.push('名称未注公称直径（如 DN100），已按本类最小档 ' + quota.code + ' 计列，请核对');
       if (quota.overRange) w.push('公称直径超本类最大档，已取顶档 ' + quota.code + '，请核对');
       if (it.category === 'flushValve') w.push('口部冲洗阀按 8-1260（壁龛式）计列，如为地坑式请改选 8-1261');
       if (it.category === 'waterValve' && !it.brand) w.push('该阀种取信息价，页面不标品牌');
-      return w.join('；');
+      return wjoin(w);
     }
     if (!isPriced(it)) {
       w.push('该材质（' + it.material + '）的清单/定额匹配逻辑待补充，暂只输出名称与长度，请手工套用');
-      return w.join('；');
+      return wjoin(w);
     }
     if (it.dn === null || it.dn === undefined || isNaN(it.dn)) {
       w.push('未识别公称直径，请在项目名称中注明（如 DN100 / DN150）');
     }
     if (it.jointFallback) {
-      w.push('所选' + LOC_CN[it.loc] + MEDIUM_CN[it.medium] + '无' + JOINT_CN[it.jointFallback] + '子目，已按' + JOINT_CN[it.joint] + '套用，请核对');
+      var jf = JOINT_CN2[it.jointFallback] || JOINT_CN[it.jointFallback] || '该连接方式';
+      var jt = JOINT_CN2[it.joint] || JOINT_CN[it.joint] || '默认连接方式';
+      var mcn = it.isRain ? '雨水' : MEDIUM_CN[it.medium];
+      w.push('所选' + LOC_CN[it.loc] + mcn + '无' + jf + '子目，已按' + jt + '套用，请核对');
     }
     if (it.category === 'galv' && it.joint === 'gas_thread') {
       var gasRange = it.loc === 'out' ? 'DN25~50' : 'DN15~100';
@@ -1246,17 +1306,22 @@
     if (PIPE_GROUPS[it.category]) {
       if (it.category === 'copper' && it.loc === 'out') w.push('第八册铜管无室外子目，已按室内铜管子目套用，请核对');
       if (it.loc === 'out' && it.joint === 'groove') w.push('室外管道无沟槽连接子目，已按室外钢管(焊接)套用，请核对');
-      if (it.category === 'plastic' && it.isRain && it.joint === 'fusion') w.push('塑料雨水管无热熔子目，已按粘接或排水热熔子目套用，请核对');
+      if (it.category === 'plastic') {
+        if (!it.jointFromName && !it.jointPicked) w.push('名称未注明连接方式，已按' + (JOINT_CN2[it.joint] || '粘接') + '计列，可在「安装部位/接口形式」列切换');
+        if (it.joint === 'nut') w.push('螺母密封圈连接子目 8-389~8-394 按子目序号连续推定，请对照基价表核对');
+        if (it.loc === 'out' && it.wasDrainName) w.push('第八册室外塑料管仅设给水管子目（8-36~8-71），已按室外塑料给水管套用，请核对');
+      }
       if (it.joint === 'groove') w.push('沟槽连接已附加管件定额' + ((it.extras || [])[0] ? ' ' + it.extras[0].code : '') + '，管件数量按6m定尺估算');
       if (it.medium === 'drain' || it.medium === 'gas') w.push('已附加管道消毒冲洗，排水/燃气管一般不计取，如无需请删除该定额行');
     }
     if (it.mediumAmbiguous) {
       if (it.category === 'galv') w.push('名称未注明给水/燃气，按给水（普通螺纹连接）套用，燃气管道请在选型列切换连接方式');
+      else if (it.category === 'plastic') w.push('名称未注明给水/排水，按' + MEDIUM_CN[it.medium] + '套用，可在「安装部位/接口形式」列改选管道类型');
       else w.push('名称未注明给水/排水，按' + MEDIUM_CN[it.medium] + '套用，如不符请在名称中注明');
     }
     if (it.locAmbiguous) w.push('名称未注明室内/室外，按室内套用，可在选型列切换');
     if (it.qtyWarn) w.push('工程量缺失，暂按1m计，请核对');
-    return w.join('；');
+    return wjoin(w);
   }
 
   // ---------- 解析整表 ----------
@@ -1381,7 +1446,18 @@
     var locHtml = opt('in', it.loc, '室内') + opt('out', it.loc, '室外');
     var js = jointsOf(it);
     var jointHtml = js.map(function (j) { return opt(j, it.joint, JOINT_CN2[j] || JOINT_CN[j] || j); }).join('');
-    return '<div style="display:flex;flex-direction:column;gap:4px;">' +
+    // 塑料管三级联动：室内外 →（室内）雨水/排水/给水管 → 连接方式；（室外）室内外 → 连接方式
+    if (it.category === 'plastic') {
+      var medSel = '';
+      if (it.loc !== 'out') {
+        var mk0 = mediumKeyOf(it);
+        medSel = sel('medium', it._i, ['rain', 'drain', 'water'].map(function (m) {
+          return opt(m, mk0, MEDIUM_CN3[m]);
+        }).join(''));
+      }
+      return '<div class="lay-stack">' + sel('loc', it._i, locHtml) + medSel + sel('joint', it._i, jointHtml) + '</div>';
+    }
+    return '<div class="lay-stack">' +
       sel('loc', it._i, locHtml) + sel('joint', it._i, jointHtml) + '</div>';
   }
 
@@ -1415,8 +1491,7 @@
         '<td>' + (item.listCode || '—') + '</td>' +
         '<td class="cell-name" title="' + escapeHtml(item.name) + '">' + escapeHtml(item.name) + '</td>' +
         '<td>' + layCell(item) + '</td>' +
-        '<td>' + escapeHtml(item.material || '—') + '</td>' +
-        '<td>' + specCell(item) + '</td>' +
+        '<td class="cell-feature" title="' + escapeHtml(item.features || '') + '">' + escapeHtml(item.features || '—') + '</td>' +
         '<td class="cell-qcode">' + (item.quotaCode || '—') + ' ' + inferTag(item) + '</td>' +
         '<td class="cell-qname" title="' + escapeHtml(item.quotaName + ((item.extras && item.extras.length) ? ' ＋ ' + item.extras.map(function (x) { return x.code + ' ' + x.name; }).join(' ＋ ') : '')) + '">' +
           escapeHtml(item.quotaName || '—') +
@@ -1454,13 +1529,34 @@
         var it = data[idx];
         if (!it) return;
         if (act === 'loc') {
+          var prevLoc = it.loc;
           it.loc = s.value;
           it.locAmbiguous = false;
+          if (it.category === 'plastic') {
+            if (it.loc === 'out') {
+              // 室外仅有给水管子目：记住室内所选介质，切回室内时恢复
+              if (prevLoc !== 'out') it.mediumInKey = mediumKeyOf(it);
+              it.wasDrainName = (it.medium === 'drain' || it.isRain);
+              it.medium = 'water'; it.isRain = false;
+            } else if (prevLoc === 'out' && it.mediumInKey) {
+              it.medium = it.mediumInKey === 'rain' ? 'drain' : it.mediumInKey;
+              it.isRain = it.mediumInKey === 'rain';
+            }
+          }
           var allow = jointsOf(it);
           if (allow.indexOf(it.joint) < 0) it.joint = defaultJoint(it);
           it.jointFallback = null;
+        } else if (act === 'medium') {
+          it.medium = s.value;
+          it.isRain = s.value === 'rain';
+          it.mediumAmbiguous = false;
+          it.mediumFromSel = true;
+          var allowM = jointsOf(it);
+          if (allowM.indexOf(it.joint) < 0) it.joint = defaultJoint(it);
+          it.jointFallback = null;
         } else if (act === 'joint') {
           it.joint = s.value;
+          it.jointPicked = true;
           it.jointFallback = null;
         } else if (act === 'variant') {
           if (isSanCat(it.category) && S_DEF[it.category].opts) {
@@ -1518,14 +1614,14 @@
 
       if (!it.quotaCode) {
         wsData.push([
-          it.index, it.name, (isAuxCat(it.category) ? AUX_LABEL[it.category] : (isSanCat(it.category) ? '洁具' : '管道')), it.material, '', specVal, '', it.quantity,
+          it.index, it.name, (isAuxCat(it.category) ? AUX_LABEL[it.category] : (isSanCat(it.category) ? '洁具' : '管道')), (it.materialLabel || it.material), '', specVal, '', it.quantity,
           '', '待人工处理', it.name, it.features, it.unit, it.quantity,
           hasPrice ? num2(it.price) : ''
         ]);
         return;
       }
       wsData.push([
-        it.index, it.name, (isAuxCat(it.category) ? AUX_LABEL[it.category] : (isSanCat(it.category) ? '洁具' : '管道')), it.material, '', specVal, '', it.quantity,
+        it.index, it.name, (isAuxCat(it.category) ? AUX_LABEL[it.category] : (isSanCat(it.category) ? '洁具' : '管道')), (it.materialLabel || it.material), '', specVal, '', it.quantity,
         it.listCode, '清单行', it.name, it.features, it.unit, it.quantity,
         hasPrice ? num2(it.price) : ''
       ]);
@@ -1588,7 +1684,7 @@
     var m = {};
     (data || []).forEach(function (it) {
       if (!it || it.index === undefined) return;
-      m[it.index + '|' + it.name] = { loc: it.loc, joint: it.joint, sanOpt: it.sanOpt, sanDn: it.sanDn, sanForm: it.sanForm };
+      m[it.index + '|' + it.name] = { loc: it.loc, joint: it.joint, medium: it.medium, isRain: it.isRain, mediumFromSel: it.mediumFromSel, sanOpt: it.sanOpt, sanDn: it.sanDn, sanForm: it.sanForm };
     });
     return m;
   }
@@ -1604,7 +1700,10 @@
         if (s.sanForm !== undefined && s.sanForm !== it.sanForm) { it.sanForm = s.sanForm; it.sanFormFromName = true; dirty = true; }
       } else if (it.loc !== undefined && s.loc) {
         if (s.loc !== it.loc) { it.loc = s.loc; it.locAmbiguous = false; dirty = true; }
-        if (s.joint && s.joint !== it.joint) { it.joint = s.joint; it.jointFallback = null; dirty = true; }
+        if (s.mediumFromSel && s.medium && s.medium !== it.medium) {
+          it.medium = s.medium; it.isRain = s.medium === 'rain'; it.mediumAmbiguous = false; it.mediumFromSel = true; dirty = true;
+        }
+        if (s.joint && s.joint !== it.joint) { it.joint = s.joint; it.jointPicked = true; it.jointFallback = null; dirty = true; }
       }
       if (dirty) {
         recomputeQuota(it);
@@ -1758,7 +1857,7 @@
       lookupCastIronPrice: lookupCastIronPrice, lookupGalvPrice: lookupGalvPrice,
       lookupPipePrice: lookupPipePrice, getPeriods: getPeriods,
       pipeKey: pipeKey, isPriced: isPriced, PIPE_GROUPS: PIPE_GROUPS,
-      parsePipeJoint: parsePipeJoint, JOINT_CN2: JOINT_CN2,
+      parsePipeJoint: parsePipeJoint, JOINT_CN2: JOINT_CN2, plasticKindOf: plasticKindOf, MEDIUM_CN3: MEDIUM_CN3,
       featureText: featureText, buildWarn: buildWarn,
       exportGLD: exportGLD, exportJianjing: exportJianjing,
       V_LIST: V_LIST, V_LABEL: V_LABEL, isValveCat: isValveCat, valveCatOf: valveCatOf,
