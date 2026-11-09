@@ -480,9 +480,9 @@
     if (/镀锌钢管|热浸镀锌|热镀锌|镀锌焊接钢管|内外壁热浸镀锌|镀锌管/.test(s)) return '镀锌钢';
     // 塑料管：PVDF / 聚乙烯 / 聚丙烯 / 聚丁烯 / 聚氯乙烯 等通用塑料及工程塑料（031001008）
     // 钢骨架、钢塑、铝塑、衬塑、涂塑属复合管，须先排除
-    if (!/钢骨架|钢塑|铝塑|衬塑|涂塑|钢带增强/.test(s) &&
+    if (!/钢骨架|钢丝网骨架|钢网骨架|钢塑|铝塑|衬塑|涂塑|钢带增强/.test(s) &&
       /PVDF|聚偏二氟乙烯|聚乙烯|聚丙烯|聚丁烯|聚氯乙烯|PPR|PP-R|PE管|HDPE|PVC|UPVC|U-PVC|PB管|PEX|塑料管|塑料给水|塑料排水|塑料雨水/.test(s)) return '塑料';
-    if (/复合管|钢塑|铝塑|衬塑|涂塑/.test(s)) return '复合';
+    if (/复合管|复合给水管|复合排水管|钢塑|铝塑|衬塑|涂塑|钢丝网骨架|钢网骨架|钢骨架/.test(s)) return '复合';
     if (/铜管|紫铜|黄铜管/.test(s)) return '铜';
     if (/焊接钢管|钢管/.test(s)) return '焊接钢';
     return '其他';
@@ -859,7 +859,7 @@
       }
       // 塑料管材质细分（用于主材价与项目特征）
       if (it.category === 'composite') {
-        it.compositeKind = /钢骨架|钢塑|衬塑|涂塑/.test(name) ? 'steelmesh' : 'alplastic';
+        it.compositeKind = /钢骨架|钢丝网骨架|钢网骨架|钢塑|衬塑|涂塑/.test(name) ? 'steelmesh' : 'alplastic';
       }
     } else {
       it.category = 'other';
@@ -1276,7 +1276,7 @@
     if (it.locFromSpec) w.push('安装部位依图纸说明（' + (it.loc === 'out' ? '室外' : '室内') + '）');
     if (it.mediumFromSpec) {
       if (it.specSystem === 'fire') w.push('依图纸说明为消防给水管道，本站按给水口径套用（消防水建议用消防专业站）');
-      else w.push('系统/介质依图纸说明（' + (it.isRain ? '雨水' : MEDIUM_CN[it.medium]) + '）');
+      else w.push('系统/介质依图纸说明（' + (it.specMedium === 'rain' ? '雨水' : it.specMedium === 'drain' ? '排水' : (it.isRain ? '雨水' : MEDIUM_CN[it.medium])) + '）');
     }
     if (isSanCat(it.category)) {
       var sd = S_DEF[it.category];
@@ -1728,6 +1728,7 @@
         it.medium = (r.medium === 'rain') ? 'drain' : r.medium;
         it.isRain = r.medium === 'rain';
         it.mediumFromSpec = true;
+        it.specMedium = r.medium;
         it.mediumAmbiguous = false;
       }
     }
@@ -1735,6 +1736,7 @@
     if (it.category === 'plastic') {
       if (it.loc === 'out') {
         it.wasDrainName = it.wasDrainName || (it.medium === 'drain' || it.isRain);
+        if (it.medium === 'drain' || it.isRain) it.specMediumForced = it.isRain ? 'rain' : 'drain';
         it.medium = 'water'; it.isRain = false;
       }
       it.plasticKind = plasticKindOf(it.name, it.medium);
@@ -1817,16 +1819,32 @@
     });
     var rulesHtml = order.map(function (k) {
       var g = groups[k];
-      var txt = g.items.map(function (r) {
-        var parts = [];
-        if (r.loc) parts.push(r.loc === 'out' ? '室外' : '室内');
-        if (r.medium) parts.push(MED[r.medium] || '');
-        parts.push(r.jointLabel);
-        if (r.dnCond) parts.push((r.dnCond.op === 'ge' ? 'DN≥' : 'DN≤') + r.dnCond.val);
+      // 同材质下「同连接方式+同介质+同管径条件」的多条合并，部位取交集
+      var byKey = {}, keyOrder = [];
+      g.items.forEach(function (r) {
+        var kk = [r.joint, r.medium || '-', r.dnCond ? (r.dnCond.op + r.dnCond.val) : '-'].join('|');
+        if (!byKey[kk]) { byKey[kk] = []; keyOrder.push(kk); }
+        byKey[kk].push(r);
+      });
+      var txt = keyOrder.map(function (kk) {
+        var arr = byKey[kk], r0 = arr[0], parts = [];
+        var locs = arr.map(function (x) { return x.loc; });
+        var allHaveLoc = locs.every(Boolean);
+        if (allHaveLoc) {
+          var uniq = locs.filter(function (v, i) { return locs.indexOf(v) === i; });
+          parts.push(uniq.length > 1 ? '室内外' : (uniq[0] === 'out' ? '室外' : '室内'));
+        }
+        if (r0.medium) parts.push(MED[r0.medium] || '');
+        parts.push(r0.jointLabel);
+        if (r0.dnCond) {
+          var opCn = { ge: 'DN≥', gt: 'DN>', le: 'DN≤', lt: 'DN<' }[r0.dnCond.op] || 'DN';
+          parts.push(opCn + r0.dnCond.val);
+        }
+        if (arr.some(function (x) { return x.inferred; })) parts.push('（推断）');
         return parts.filter(Boolean).join(' ');
       }).join(' ／ ');
       return '<div class="spec-rule"><b>' + escapeHtml(g.label) + '</b> → ' + escapeHtml(txt) +
-        '<span class="ev">依据：' + escapeHtml((g.items[0].evidence || '').slice(0, 80)) + '</span></div>';
+        '<span class="ev">依据：' + escapeHtml((g.items[0].evidence || '').slice(0, 90)) + '</span></div>';
     }).join('');
     card.className = 'spec-card show';
     card.innerHTML =
@@ -1835,6 +1853,10 @@
       '<div class="spec-tags">' + tags + '</div>' +
       (rulesHtml ? '<div class="spec-rules">' + rulesHtml + '</div>'
         : '<div class="spec-rule" style="color:#b9770e">未识别到「管材 + 连接方式」的明确表述，可在「安装部位/接口形式」列手动选择。</div>') +
+      ((spec.conf && spec.conf.lowRatio > 0.35)
+        ? '<div class="spec-status warn" style="margin:6px 0 0">有 ' + spec.conf.low + ' 条连接方式未能在邻近位置找到对应管材（文字顺序可能被打乱），已按就近配对，建议逐条核对。</div>' : '') +
+      ((spec.frag && spec.frag.avgLine && spec.frag.avgLine < 10)
+        ? '<div class="spec-status warn" style="margin:6px 0 0">文字提取较碎片（' + spec.frag.lines + ' 行，平均每行 ' + spec.frag.avgLine + ' 字），已按上下文就近配对，识别结果建议核对。</div>' : '') +
       '<div class="spec-actions">' +
       '<label><input type="checkbox" id="specApplyChk" ' + (SPEC_APPLY ? 'checked' : '') + '> 按说明自动套用连接方式</label>' +
       '<button type="button" id="specClearBtn">清除说明</button></div>';

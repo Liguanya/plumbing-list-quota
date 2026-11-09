@@ -956,6 +956,59 @@ ck('分析含管径越界', /管径范围\|warn/.test(anTxt), false);
 var items2 = A.parseRows([[1, '室内聚乙烯PE给水管 De315', 50]], '2026-10', 'guanglianda');
 var an2 = A.analyzeSpec(sp, items2);
 ck('分析管径越界提示', an2.some(function (x) { return x.title === '管径范围'; }), true);
+// DWG 图纸说明：文字实体逐行提取，材质句与连接方式句常被换行割裂
+var DWG_TXT = [
+  '1.1 管材',
+  '1.1.1 给水、热水系统：',
+  '原设计生活给水及热水管道均采用PP-R管',
+  '接口为热熔连接',
+  '本次改造',
+  '入户管埋地部分采用钢塑复合管',
+  '管径≥DN65（70）时卡箍连接',
+  '管径<DN65（70）时采用螺纹连接',
+  '干管及立管采用薄壁304（S30408）不锈钢管',
+  '双卡压或螺纹卡扣式连接',
+  '与设备和阀门等附件采用法兰连接',
+  '与其它管材的连接时',
+  '采用专用过渡接头',
+  '卫生间、诊室、办公室等部位暗敷支管（以支管入墙前200mm为分界点）采用PPR管（给水采用S5级；热水采用S2级）',
+  '热熔连接',
+  '室外给水：DN≥100mm采用钢丝网骨架PE复合给水管',
+  '电热熔接',
+  'DN<100mm采用PE给水管',
+  '电热熔接',
+  '低温补充水机组回水管：采用 PVDF（聚偏二氟乙烯）管道',
+  '管件应与管材同品牌、同材质体系',
+  '不得混用不同制造商产品',
+  '管径 DN80 及以下',
+  '优先采用热熔连接'
+].join('\n');
+var spD = SP.parseText(DWG_TXT);
+var dOf = function (mat, joint) {
+  return spD.rules.filter(function (r) { return r.materialKey === mat && r.joint === joint; })[0] || null;
+};
+ck('DWG换行不割裂材质与连接', spD.rules.length >= 8, true);
+ck('DWG PP-R热熔', !!dOf('ppr', 'fusion'), true);
+ck('DWG 钢塑卡箍DN≥65', (function () { var r = dOf('composite', 'groove'); return r ? r.dnCond.op + r.dnCond.val : null; })(), 'ge65');
+ck('DWG 钢塑卡箍室外', (dOf('composite', 'groove') || {}).loc, 'out');
+ck('DWG 钢塑螺纹DN<65', (function () { var r = dOf('composite', 'thread'); return r ? r.dnCond.op + r.dnCond.val : null; })(), 'lt65');
+ck('DWG 续句继承材质部位', (dOf('composite', 'thread') || {}).loc, 'out');
+ck('DWG 不锈钢双卡压', !!dOf('stainless', 'press'), true);
+ck('DWG 暗敷支管PPR室内热熔', (dOf('ppr', 'fusion') || {}).loc, null);
+ck('DWG 钢丝网骨架PE属复合管', spD.materials.some(function (m) { return m.key === 'composite'; }), true);
+ck('DWG 钢网电熔DN≥100', (function () { var r = dOf('composite', 'electro'); return r ? r.dnCond.op + r.dnCond.val : null; })(), 'ge100');
+ck('DWG PE电熔DN<100', (function () { var r = dOf('pe', 'electro'); return r ? r.dnCond.op + r.dnCond.val : null; })(), 'lt100');
+ck('DWG PVDF热熔DN≤80', (function () { var r = dOf('pvdf', 'fusion'); return r ? r.dnCond.op + r.dnCond.val : null; })(), 'le80');
+ck('DWG 附件法兰不作管道规则', spD.rules.every(function (r) { return r.joint !== 'flange'; }), true);
+// 套用：按管径分档选连接方式
+A.setSpec(spD, true);
+ck('DWG钢塑DN50命中螺纹规则', (pr('室外钢塑复合管 DN50').specRule || {}).joint, 'thread');
+ck('DWG钢塑DN80命中卡箍规则', (pr('室外钢塑复合管 DN80').specRule || {}).joint, 'groove');
+ck('DWG钢塑DN50螺纹本站无子目时提示', pr('室外钢塑复合管 DN50').specJointUnavailable, 'thread');
+ck('DWG室内钢塑不套室外入户管规则', pr('室内钢塑复合管 DN50').specRule || null, null);
+ck('DWG套用钢网PE管识别为复合', pr('室内钢丝网骨架PE复合给水管 De110').category, 'composite');
+ck('DWG套用不锈钢卡压', pr('室内薄壁不锈钢管 DN50').joint, 'press');
+ck('DWG套用PPR热熔', pr('室内PP-R给水管 De25').joint, 'fusion');
 A.setSpec(null, true);
 
 console.log('\n结果: ' + pass + ' 通过, ' + fail + ' 失败');

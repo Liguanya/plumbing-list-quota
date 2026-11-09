@@ -11,7 +11,7 @@
 (function (global) {
   'use strict';
 
-  var VERSION = '1.0.0';
+  var VERSION = '1.1.0';
 
   /* ==================== 词典 ==================== */
 
@@ -20,13 +20,14 @@
     { key: 'pvdf', label: 'PVDF（聚偏二氟乙烯）', re: /PVDF|聚偏二氟乙烯/i },
     { key: 'pb', label: 'PB（聚丁烯）', re: /PB\s*管|聚丁烯/i },
     { key: 'ppr', label: 'PP-R（聚丙烯）', re: /PP-?R|聚丙烯/i },
+    // 复合管必须排在 PE 之前：「钢丝网骨架PE复合给水管」含 PE 字样但属复合管
+    { key: 'composite', label: '钢塑/钢网复合管', re: /钢塑|铝塑|衬塑|涂塑|钢骨架|钢丝网骨架|钢网骨架|复合管/ },
     { key: 'pe', label: 'PE（聚乙烯）', re: /HDPE|聚乙烯|(?<![A-Za-z])PE(?![A-Za-z])/i },
     { key: 'pvc', label: 'PVC-U（聚氯乙烯）', re: /UPVC|U-PVC|PVC|聚氯乙烯/i },
     { key: 'stainless', label: '不锈钢管', re: /不锈钢/ },
     { key: 'galv', label: '镀锌钢管', re: /镀锌/ },
     { key: 'cast', label: '铸铁管', re: /铸铁/ },
     { key: 'copper', label: '铜管', re: /铜管|紫铜/ },
-    { key: 'composite', label: '钢塑/铝塑复合管', re: /钢塑|铝塑|衬塑|涂塑|钢骨架|复合管/ },
     { key: 'steel', label: '焊接钢管', re: /无缝钢管|焊接钢管|碳钢管/ },
     { key: 'frp', label: '玻璃钢管', re: /玻璃钢|FRP/i }
   ];
@@ -35,7 +36,7 @@
   var JOINTS = [
     { key: 'groove', label: '沟槽连接（卡箍）', re: /沟槽|卡箍/ },
     { key: 'nut', label: '螺母密封圈连接', re: /螺母密封圈|密封圈连接|橡胶圈密封|橡胶密封圈|螺母压紧/ },
-    { key: 'electro', label: '电熔连接', re: /电熔/ },
+    { key: 'electro', label: '电熔连接', re: /电熔|电热熔/ },
     { key: 'fusion', label: '热熔连接', re: /热熔/ },
     { key: 'glue', label: '粘接', re: /粘接|胶粘|溶剂粘接|承插粘接/ },
     { key: 'press', label: '卡压连接', re: /卡压|卡套|环压/ },
@@ -47,7 +48,7 @@
     { key: 'flange', label: '法兰连接', re: /法兰/ },
     { key: 'sleeve', label: '卡套连接', re: /卡套(?!连接)/ },
     { key: 'oxy', label: '氧乙炔焊', re: /氧乙炔|气焊/ },
-    { key: 'rubber', label: '胶圈接口', re: /胶圈接口/ },
+    { key: 'rubber', label: '胶圈接口', re: /胶圈接口|橡胶圈|胶圈承插|橡胶圈承插/ },
     { key: 'asbestos', label: '石棉水泥接口', re: /石棉水泥/ },
     { key: 'cement', label: '水泥接口', re: /水泥捻口|水泥接口/ }
   ];
@@ -60,7 +61,7 @@
     { key: 'reclaim', label: '中水系统', medium: 'water', re: /中水|再生水/ },
     { key: 'fire', label: '消防系统', medium: 'fire', re: /消火栓|喷淋|消防/ },
     { key: 'gas', label: '燃气系统', medium: 'gas', re: /燃气|煤气|天然气|液化气/ },
-    { key: 'water', label: '生活给水系统', medium: 'water', re: /给水|冷水|热水|直饮水/ }
+    { key: 'water', label: '生活给水系统', medium: 'water', re: /给水|冷水|热水|直饮水|回水|补水/ }
   ];
 
   // 措施 / 试验要求
@@ -91,19 +92,92 @@
       .trim();
   }
 
+  // 按分隔符切分，但跳过括号内的分隔符（如「（给水S5级；热水S2级）」不能被切开）
+  function splitOutside(text, sepRe) {
+    var src = String(text), out = [], buf = '', depth = 0;
+    for (var i = 0; i < src.length; i++) {
+      var ch = src.charAt(i);
+      if (ch === '（' || ch === '(' || ch === '【' || ch === '《') depth++;
+      else if (ch === '）' || ch === ')' || ch === '】' || ch === '》') depth = depth > 0 ? depth - 1 : 0;
+      if (depth === 0 && sepRe.test(ch)) { out.push(buf); buf = ''; }
+      else buf += ch;
+    }
+    out.push(buf);
+    return out.map(function (x) { return x.trim(); }).filter(Boolean);
+  }
+
+  // 图纸说明里的换行大多是排版/文字实体边界，不是语义边界：
+  // 「均采用PP-R管」与「接口为热熔连接」常分处两行，按行硬切会把材质与连接方式割裂。
+  // 因此句子只按 。；; 切，换行在段落内合并。
   function splitSentences(text) {
-    return normalize(text)
-      .split(/[。；;\n]+/)
-      .map(function (x) { return x.trim(); })
-      .filter(function (x) { return x.length >= 4; });
+    return splitOutside(normalize(text), /[。；;]/)
+      .filter(function (x) { return x.replace(/\s/g, '').length >= 4; });
   }
 
   function splitClauses(sentence) {
-    return String(sentence)
-      .split(/[，,、：:]+/)
-      .map(function (x) { return x.trim(); })
-      .filter(Boolean);
+    return splitOutside(sentence, /[，,、：:]/);
   }
+
+  // 编号/小标题行：1.1、1.1.1、一、、（1）、以及「给水系统：」这类短标题
+  function isHeading(t) {
+    var s = String(t).trim();
+    if (!s || s.length > 40) return false;
+    if (/^\d+(\.\d+)*[\s、.．]/.test(s)) return true;
+    if (/^[一二三四五六七八九十]+[、.．]/.test(s)) return true;
+    if (/^[（(]\d+[）)]/.test(s)) return true;
+    if (s.length <= 26 && /[：:]$/.test(s)) return true;
+    return false;
+  }
+
+  // 切成「标题 + 正文行」的段落，标题携带的系统/介质供后文继承
+  function splitSections(text) {
+    var lines = normalize(text).split('\n');
+    var secs = [], cur = { title: '', lines: [] };
+    function flush() {
+      if (cur.title || cur.lines.length) secs.push(cur);
+      cur = { title: '', lines: [] };
+    }
+    lines.forEach(function (ln) {
+      var t = ln.trim();
+      if (!t) { flush(); return; }
+      if (isHeading(t)) { flush(); cur.title = t; return; }
+      cur.lines.push(t);
+    });
+    flush();
+    return secs;
+  }
+
+  // 段落正文按长度分块，避免整章合并成一个超长块导致跨段错配
+  function chunkLines(lines, limit) {
+    var out = [], buf = [], len = 0;
+    lines.forEach(function (ln) {
+      if (buf.length && (len + ln.length) > limit) { out.push(buf.join('\n')); buf = []; len = 0; }
+      buf.push(ln);
+      len += ln.length + 1;
+    });
+    if (buf.length) out.push(buf.join('\n'));
+    return out;
+  }
+
+  // 行是文字实体边界，行内再按标点切：DWG 说明常整行无标点，只按逗号切会把整段并成一个 token
+  // 同时保留字符位置，便于把「依据」定位到命中处而不是整段开头
+  function tokensOfChunk(body) {
+    var src = String(body), out = [], depth = 0, start = 0;
+    for (var i = 0; i <= src.length; i++) {
+      var ch = i < src.length ? src.charAt(i) : '\n';
+      if (ch === '（' || ch === '(') depth++;
+      else if (ch === '）' || ch === ')') depth = depth > 0 ? depth - 1 : 0;
+      if (depth === 0 && /[。；;，,、：:\n]/.test(ch)) {
+        var seg = src.slice(start, i).trim();
+        if (seg) out.push({ text: seg, idx: start });
+        start = i + 1;
+      }
+    }
+    return out;
+  }
+
+  // 这些词表示「换了一类管段」，此前的部位/管径条件不应再往下继承
+  var SEG_RESET = /干管|立管|支管|横管|总管|机组|设备间|机房|泵房/;
 
   function firstHit(list, text) {
     for (var i = 0; i < list.length; i++) {
@@ -137,9 +211,24 @@
     return PLASTIC_MATS[normMat(key)] ? 'plastic' : (key ? 'metal' : null);
   }
 
+  // 管径分档条件：支持「DN≥100」「≥DN65」「DN<100」「DN65（70）」「DN80及以下」「不大于」等写法
   function dnCondOf(s) {
-    var m = String(s).match(/(?:DN|De|dn|de|Φ|φ|D)\s*(\d{2,4})\s*(及以上|以上|≥|>=|及以下|以下|≤|<=)/);
-    if (m) return { op: /及以下|以下|≤|<=/.test(m[2]) ? 'le' : 'ge', val: parseInt(m[1], 10) };
+    var t = String(s), m;
+    m = t.match(/(?:DN|De|dn|de|Φ|φ)\s*(≥|>=|≤|<=|>|＞|<|＜)\s*(\d{2,4})/);
+    if (m) {
+      var op = /≥|>=/.test(m[1]) ? 'ge' : (/≤|<=/.test(m[1]) ? 'le' : (/[>＞]/.test(m[1]) ? 'gt' : 'lt'));
+      return { op: op, val: parseInt(m[2], 10) };
+    }
+    m = t.match(/(?:≥|>=|不小于|大于等于|不低于)\s*(?:DN|De|dn|de|Φ|φ)?\s*(\d{2,4})/);
+    if (m) return { op: 'ge', val: parseInt(m[1], 10) };
+    m = t.match(/(?:≤|<=|不大于|小于等于|不超过)\s*(?:DN|De|dn|de|Φ|φ)?\s*(\d{2,4})/);
+    if (m) return { op: 'le', val: parseInt(m[1], 10) };
+    m = t.match(/(?:DN|De|dn|de|Φ|φ)\s*(\d{2,4})\s*(?:mm)?\s*(及以上|以上|及以下|以下)/);
+    if (m) return { op: /以下/.test(m[2]) ? 'le' : 'ge', val: parseInt(m[1], 10) };
+    m = t.match(/(?:>|＞|大于)\s*(?:DN|De|dn|de|Φ|φ)?\s*(\d{2,4})/);
+    if (m) return { op: 'gt', val: parseInt(m[1], 10) };
+    m = t.match(/(?:<|＜|小于)\s*(?:DN|De|dn|de|Φ|φ)?\s*(\d{2,4})/);
+    if (m) return { op: 'lt', val: parseInt(m[1], 10) };
     return null;
   }
 
@@ -160,7 +249,7 @@
       };
     }
     // 只有「DN50及以下 / DN65及以上」这类分档条件、没有显式区间时，不构成管径范围
-    if (/(?:及以上|以上|≥|>=|及以下|以下|≤|<=)/.test(text)) return null;
+    if (/(?:及以上|以上|≥|>=|及以下|以下|≤|<=|不小于|不大于|大于等于|小于等于|[<>＜＞])/.test(text)) return null;
     var all = [], re = /(?:DN|De|dn|de|Φ|φ)\s*(\d{2,4})/gi, mm;
     while ((mm = re.exec(text)) !== null) {
       var v = parseInt(mm[1], 10);
@@ -173,8 +262,8 @@
   }
 
   function clauseLoc(s) {
-    if (/室外|户外|外网|庭院|埋地/.test(s)) return 'out';
-    if (/室内|楼内|管井|管廊|吊顶内|地库|明装|暗装/.test(s)) return 'in';
+    if (/室外|户外|外网|庭院|埋地|室外埋地/.test(s)) return 'out';
+    if (/室内|楼内|管井|管廊|吊顶内|地库|明装|暗装|暗敷|明敷/.test(s)) return 'in';
     return null;
   }
 
@@ -330,13 +419,76 @@
 
   /* ==================== 规则抽取 ==================== */
 
-  function contextOf(sentence) {
-    var s = String(sentence);
-    return {
-      material: firstHit(MATERIALS, s),
-      system: firstHit(SYSTEMS, s),
-      loc: clauseLoc(s)
+  // 连接方式若与材质不在同一子句，需就近回溯（「PP-R管，接口为热熔连接」这类列举式说明）
+  var JOINT_SKIP = { flange: 1 };   // 「与设备、阀门采用法兰连接」说的是附件，不是管道本体
+
+  function extractChunk(body, ctx, out) {
+    var toks = tokensOfChunk(body).map(function (t) {
+      return {
+        text: t.text,
+        idx: t.idx,
+        mat: firstHit(MATERIALS, t.text),
+        joint: firstJoint(t.text),
+        cond: dnCondOf(t.text),
+        loc: clauseLoc(t.text),
+        sys: firstHit(SYSTEMS, t.text)
+      };
+    });
+    // 逐子句推进上下文：材质/管径条件/部位/系统都可被后续子句继承
+    var cur = {
+      material: ctx.material || null,
+      matIdx: null,
+      cond: null,
+      loc: ctx.loc || null,
+      system: ctx.system || null
     };
+    toks.forEach(function (tk) {
+      if (tk.mat) {
+        if (!cur.material || cur.material.key !== tk.mat.key) cur.cond = null;  // 换材质即换管段，管径条件作废
+        cur.material = tk.mat;
+        cur.matIdx = tk.idx;
+      }
+      if (tk.cond) cur.cond = tk.cond;
+      if (tk.loc) cur.loc = tk.loc;
+      else if (SEG_RESET.test(tk.text)) { cur.loc = null; cur.cond = null; }
+      if (tk.sys) cur.system = tk.sys;
+      if (!tk.joint) return;
+      if (JOINT_SKIP[tk.joint.key] && !/管道|管材/.test(tk.text)) return;
+      // 材质离得太远（文字实体顺序被打乱时会出现）就不强行配对，避免张冠李戴
+      var mat = cur.material;
+      if (mat && cur.matIdx != null && Math.abs(tk.idx - cur.matIdx) > 120) mat = ctx.material || null;
+      out.push({
+        materialKey: mat ? mat.key : null,
+        materialLabel: mat ? mat.label : '',
+        conf: tk.mat ? 'high' : 'low',
+        joint: tk.joint.key,
+        jointLabel: tk.joint.label,
+        medium: cur.system ? cur.system.medium : null,
+        loc: cur.loc,
+        dnCond: tk.cond || cur.cond || null,
+        evidence: String(body).slice(Math.max(0, tk.idx - 40), tk.idx + tk.text.length + 60).replace(/\s+/g, ' ').trim()
+      });
+    });
+    // 只回写材质/系统：部位（室内外）跨句继承极易串味，改由管径分档规则补全
+    ctx.material = cur.material;
+    ctx.system = cur.system;
+  }
+
+  // 「管径<DN65时采用螺纹连接」这类续句本身不带部位，按同材质同介质的分档规则补
+  function fillRuleLoc(rules) {
+    var byKey = {};
+    rules.forEach(function (r) {
+      if (!r.loc) return;
+      var k = (r.materialKey || '-') + '|' + (r.medium || '-');
+      byKey[k] = byKey[k] || [];
+      if (byKey[k].indexOf(r.loc) < 0) byKey[k].push(r.loc);
+    });
+    rules.forEach(function (r) {
+      if (r.loc || !r.dnCond) return;
+      var k = (r.materialKey || '-') + '|' + (r.medium || '-');
+      if (byKey[k] && byKey[k].length === 1) r.loc = byKey[k][0];
+    });
+    return rules;
   }
 
   function dedupeRules(rules) {
@@ -355,7 +507,7 @@
     var spec = {
       version: VERSION, ok: false, textLen: text.length,
       materials: [], systems: [], joints: [], locs: [],
-      rules: [], measures: {}, dnRange: null, sentences: [], keywords: []
+      rules: [], measures: {}, dnRange: null, sentences: [], keywords: [], frag: null
     };
     if (text.replace(/\s/g, '').length < 20) return spec;
     spec.ok = true;
@@ -368,47 +520,30 @@
     MEASURES.forEach(function (m) { if (m.re.test(text)) spec.measures[m.key] = true; });
     spec.dnRange = dnRangeOf(text);
 
-    var sents = splitSentences(text);
-    spec.sentences = sents;
+    var rawLines = text.split('\n').filter(function (l) { return l.trim(); });
+    spec.frag = {
+      lines: rawLines.length,
+      avgLine: rawLines.length ? Math.round(text.replace(/\s/g, '').length / rawLines.length) : 0
+    };
 
-    sents.forEach(function (sent) {
-      var ctx = contextOf(sent);
-      var cls = splitClauses(sent);
-      var sentJoint = null;
-      cls.forEach(function (cl) {
-        var jj = firstJoint(cl);
-        if (!jj) return;
-        sentJoint = jj;
-        var cond = dnCondOf(cl) || dnCondOf(sent);
-        spec.rules.push({
-          materialKey: ctx.material ? ctx.material.key : null,
-          materialLabel: ctx.material ? ctx.material.label : '',
-          joint: jj.key,
-          jointLabel: jj.label,
-          medium: clauseMedium(cl) || (ctx.system ? ctx.system.medium : null),
-          loc: clauseLoc(cl) || ctx.loc,
-          dnCond: cond,
-          evidence: sent.trim().slice(0, 140)
-        });
+    spec.sentences = [];
+    splitSections(text).forEach(function (sec) {
+      // 小标题（如「1.1.1 给水、热水系统：」）携带的系统/部位供整段继承
+      var ctx = {
+        material: firstHit(MATERIALS, sec.title),
+        system: firstHit(SYSTEMS, sec.title),
+        loc: clauseLoc(sec.title)
+      };
+      chunkLines(sec.lines, 1200).forEach(function (body) {
+        splitSentences(body).forEach(function (sent) { spec.sentences.push(sent); });
+        extractChunk(body, ctx, spec.rules);
       });
-      // 整句有材质+连接方式但子句未拆出（如「PPR管热熔连接」）时补一条
-      if (!sentJoint && ctx.material) {
-        var j2 = firstJoint(sent);
-        if (j2) {
-          spec.rules.push({
-            materialKey: ctx.material.key,
-            materialLabel: ctx.material.label,
-            joint: j2.key, jointLabel: j2.label,
-            medium: ctx.system ? ctx.system.medium : null,
-            loc: ctx.loc,
-            dnCond: dnCondOf(sent),
-            evidence: sent.trim().slice(0, 140)
-          });
-        }
-      }
     });
 
-    spec.rules = dedupeRules(spec.rules);
+    spec.rules = fillRuleLoc(dedupeRules(spec.rules));
+    var hi = 0, lo = 0;
+    spec.rules.forEach(function (r) { if (r.materialKey) hi++; else lo++; });
+    spec.conf = { high: hi, low: lo, lowRatio: (hi + lo) ? lo / (hi + lo) : 0 };
 
     // 关键信息摘要（给界面卡片用）
     spec.keywords = [];
@@ -462,8 +597,12 @@
       }
       if (r.dnCond) {
         if (!dn) return;
-        if (r.dnCond.op === 'ge' && dn < r.dnCond.val) return;
-        if (r.dnCond.op === 'le' && dn > r.dnCond.val) return;
+        var cv = r.dnCond.val, okDn = true;
+        if (r.dnCond.op === 'ge') okDn = dn >= cv;
+        else if (r.dnCond.op === 'gt') okDn = dn > cv;
+        else if (r.dnCond.op === 'le') okDn = dn <= cv;
+        else if (r.dnCond.op === 'lt') okDn = dn < cv;
+        if (!okDn) return;
         sc += 3;
       }
       if (r.loc) {
