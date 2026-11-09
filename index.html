@@ -62,7 +62,53 @@
         .tag-na { background: #eceff1; color: #607d8b; }
         .tag-infer { background: #e3f2fd; color: #1565c0; cursor: help; }
         .legend { font-size: 12px; color: #888; margin: 6px 0 0; }
-        @media (max-width: 900px) { .summary { grid-template-columns: repeat(2, 1fr); } }
+        /* ===== 左右双输入端 ===== */
+        .input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; align-items: start; margin-bottom: 18px; }
+        .input-col { min-width: 0; }
+        .col-title { font-size: 15px; font-weight: 700; color: #0d3d44; margin: 0 0 10px; display: flex; align-items: center; gap: 8px; }
+        .col-title .step { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: linear-gradient(135deg,#2bb3a0,#1a5e63); color: #fff; font-size: 12px; }
+        .col-title .opt { font-weight: 400; font-size: 12px; color: #8a9ba1; }
+        .input-col .upload-area { margin-bottom: 0; }
+        .spec-status { display: none; margin-top: 10px; border-radius: 8px; padding: 9px 12px; font-size: 13px; line-height: 1.6; }
+        .spec-status.loading { display: block; background: #e0f2f1; color: #00695c; }
+        .spec-status.ok { display: block; background: #d4edda; color: #155724; }
+        .spec-status.err { display: block; background: #f8d7da; color: #721c24; }
+        .spec-status.warn { display: block; background: #fff3cd; color: #856404; }
+        .spec-card { display: none; margin-top: 12px; border: 1.5px solid #cfe8e4; border-radius: 12px; padding: 14px 16px; background: #f7fdfc; }
+        .spec-card.show { display: block; }
+        .spec-card h4 { margin: 0 0 10px; font-size: 14px; color: #0d3d44; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+        .spec-card h4 .file { font-weight: 600; font-size: 13px; color: #1a5e63; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .spec-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+        .spec-tag { font-size: 12px; padding: 3px 9px; border-radius: 10px; background: #e0f2f1; color: #00695c; font-weight: 600; }
+        .spec-tag.material { background: #e3f2fd; color: #1565c0; }
+        .spec-tag.joint { background: #fff3e0; color: #b26a00; }
+        .spec-tag.measure { background: #f3e5f5; color: #6a1b9a; }
+        .spec-tag.dn { background: #e8f5e9; color: #2e7d32; }
+        .spec-rules { border-top: 1px dashed #cfe8e4; padding-top: 10px; display: flex; flex-direction: column; gap: 6px; }
+        .spec-rule { font-size: 12.5px; color: #37505a; line-height: 1.6; }
+        .spec-rule b { color: #0d3d44; }
+        .spec-rule .ev { display: block; color: #90a4ae; font-size: 11.5px; margin-top: 1px; }
+        .spec-card h4 .meta { font-size: 12px; color: #78909c; font-weight: 400; }
+        .spec-rule .sr-main { color: #0d3d44; font-weight: 600; }
+        .upload-area.mini { padding: 14px 16px; }
+        .upload-area.mini .upload-icon { display: none; }
+        .upload-area.mini .upload-text { font-size: 13px; color: #1a5e63; }
+        .upload-area.mini .upload-hint { display: none; }
+        .spec-actions { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 12px; border-top: 1px dashed #cfe8e4; padding-top: 10px; font-size: 12.5px; color: #37505a; }
+        .spec-actions label { display: flex; align-items: center; gap: 6px; cursor: pointer; }
+        .spec-actions input[type=checkbox] { accent-color: #2bb3a0; transform: scale(1.1); }
+        .spec-actions button { border: 1px solid #cfd8dc; background: #fff; color: #607d8b; border-radius: 8px; padding: 5px 12px; font-size: 12px; cursor: pointer; }
+        .spec-actions button:hover { border-color: #b0bec5; color: #37474f; }
+
+        .analysis-area { border: 1.5px solid #ffe0a3; background: #fffdf5; border-radius: 12px; padding: 14px 18px; margin-bottom: 20px; }
+        .analysis-area .an-head { font-size: 15px; font-weight: 700; color: #8a5a00; margin-bottom: 10px; }
+        .an-item { font-size: 13px; line-height: 1.7; padding: 6px 0; border-bottom: 1px dashed #f0e2c0; color: #4e3d12; }
+        .an-item:last-child { border-bottom: none; }
+        .an-item b { color: #6d4a00; }
+        .an-item.an-ok { color: #2e6b3a; }
+        .an-item.an-info { color: #35506b; }
+
+        @media (max-width: 900px) { .summary { grid-template-columns: repeat(2, 1fr); } .input-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -77,6 +123,7 @@
                 <h3>📋 使用说明与价格参考</h3>
                 <ul>
                     <li>上传给排水工程量清单 Excel（.xlsx/.xls），<strong>A列=序号</strong>、<strong>B列=项目名称（材质/管径/接口形式）</strong>、<strong>C列=数量</strong>、<strong>D列=单位（可选，m/m²/m³）</strong>，首行可为表头；阀门写 <code>蝶阀-300</code> 时，-300 即 DN300（也可写 <code>DN300</code>），按国标 DN 系列识别，压力/电压等后缀不按管径处理；系统按项目名称<strong>自动识别材质、公称直径与连接方式</strong>并套用清单与定额，结果支持<strong>「广联达 / 建经科技」</strong>两种格式导出。</li>
+                    <li><strong>图纸说明优先</strong>：左侧可先上传<strong>图纸说明</strong>（PDF / DWG / DXF / TXT），平台自动提取<strong>管材、连接方式、安装部位、系统、管径范围、试验与措施要求</strong>，再上传右侧工程量清单，管道连接方式等按说明自动套用，无需逐条手选；说明与清单不一致时会给出<strong>对比分析</strong>（漏系统、漏材质、漏保温套管、管径越界等）。说明解析全部在本地完成，文件不上传服务器。</li>
                     <li><strong>塑料管</strong>：名称含 PVDF、聚乙烯（PE）、聚丙烯（PP-R）、聚丁烯（PB）、聚氯乙烯（PVC-U）等关键词的管道按塑料管组价，<strong>「安装部位/接口形式」列为三级联动</strong>——一级选<strong>室内/室外</strong>；室外二级直接选<strong>连接方式</strong>（热熔 / 电熔 / 粘接，公称外径 32~315mm）；室内二级选<strong>雨水管 / 排水管 / 给水管</strong>，三级选<strong>连接方式</strong>（排水：粘接 / 热熔 / 螺母密封圈；雨水：粘接；给水：热熔 / 电熔 / 粘接），切换后定额、主材价与项目特征实时重算。名称中也可直接写明，如 <code>室内聚乙烯PE给水管 De110 热熔连接</code>。</li>
                     <li><strong>价格参考</strong>：天津市工程造价信息（2026年1—10期）及市场价——页面顶部「信息价期号」可选择期次（默认最新一期），切换后主材价按该期信息价重新计算；信息价有的按信息价计入（页面不标品牌），信息价缺项的按国产中高档市场价并给出参考品牌。</li>
                 </ul>
@@ -94,11 +141,29 @@
                 </div>
             </div>
 
-            <div class="upload-area" id="uploadArea">
-                <div class="upload-icon">📁</div>
-                <div class="upload-text">点击上传或拖拽工程量清单到此处</div>
-                <div class="upload-hint">支持 .xlsx、.xls 格式（铸铁管 / 给排水管道，按 A序号 B名称 C长度 三列读取）</div>
-                <input type="file" id="excelFile" accept=".xlsx,.xls">
+            <div class="input-grid">
+                <div class="input-col">
+                    <div class="col-title"><span class="step">①</span> 上传图纸说明 <span class="opt">（可选 · 先传说明再传清单）</span></div>
+                    <div class="upload-area" id="specArea">
+                        <div class="upload-icon">📐</div>
+                        <div class="upload-text">点击上传或拖拽图纸说明</div>
+                        <div class="upload-hint">支持 .pdf、.dwg、.dxf、.txt；自动提取管材、连接方式、安装部位、试验要求</div>
+                        <input type="file" id="specFile" accept=".pdf,.dwg,.dxf,.txt,.md">
+                    </div>
+                    <div class="spec-status" id="specStatus"></div>
+                    <div class="spec-card" id="specCard"></div>
+                </div>
+                <div class="input-col">
+                    <div class="col-title"><span class="step">②</span> 上传工程量清单</div>
+                    <div class="upload-area" id="uploadArea">
+                        <div class="upload-icon">📁</div>
+                        <div class="upload-text">点击上传或拖拽工程量清单到此处</div>
+                        <div class="upload-hint">支持 .xlsx、.xls 格式（按 A序号 B名称 C长度 三列读取）</div>
+                        <input type="file" id="excelFile" accept=".xlsx,.xls">
+                    </div>
+                    <div class="spec-status" id="qtyStatus"></div>
+                    <div class="spec-card" id="qtyCard"></div>
+                </div>
             </div>
 
             <div class="status-bar" id="statusBar"></div>
@@ -115,6 +180,11 @@
             <div class="btn-group" id="btnGroup" style="display:none;">
                 <button class="btn btn-export" id="exportBtn">📥 导出Excel</button>
                 <button class="btn btn-secondary" id="resetBtn">🔄 重新上传</button>
+            </div>
+
+            <div class="analysis-area" id="analysisArea" style="display:none;">
+                <div class="an-head">🔍 说明与工程量对比分析</div>
+                <div id="analysisList"></div>
             </div>
 
             <div class="result-area" id="resultArea" style="display:none;">
@@ -144,6 +214,8 @@
     </div>
 
     <script src="js/xlsx.full.min.js"></script>
+    <script src="js/pdf.min.js"></script>
+    <script src="js/spec.js"></script>
     <script src="data/periods-2026.js"></script>
     <script src="data/prices.js"></script>
     <script src="data/periods-merge.js"></script>

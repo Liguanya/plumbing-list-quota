@@ -246,8 +246,11 @@ ck('默认接口石棉水泥', A.defaultJoint(ci('out', 'water')), 'asbestos');
 
   // 连接方式可选项
   var gItem = mk('镀锌钢管DN50');
-  ck('镀锌连接方式选项', A.jointsOf(gItem), ['thread', 'gas_thread']);
+  ck('镀锌连接方式选项', A.jointsOf(gItem), ['thread', 'groove', 'gas_thread']);
   ck('镀锌默认连接', A.defaultJoint(gItem), 'thread');
+  ck('镀锌室内沟槽DN100', A.matchQuota(Object.assign(mk('镀锌钢管DN100'), { joint: 'groove' })).code, '8-208');
+  var gOut = mk('镀锌钢管DN100'); gOut.loc = 'out';
+  ck('镀锌室外无沟槽', A.jointsOf(gOut), ['thread', 'gas_thread']);
   ck('燃气连接中文', A.JOINT_CN.gas_thread, '螺纹连接（燃气）');
 
   // 主材价
@@ -473,7 +476,9 @@ ck('管件角色', g3.extras[0].role, 'fitting');
 ck('冲洗角色', g3.extras[1].role, 'flush');
 ck('燃气也挂消毒冲洗', pr('室内燃气不锈钢管 DN25').extras.length, 1);
 ck('燃气提示不计取', /一般不计取/.test(pr('室内燃气不锈钢管 DN25').warn), true);
-ck('排水提示不计取', /一般不计取/.test(pr('室内塑料排水管 De110 粘接').warn), true);
+ck('排水不挂消毒冲洗', (pr('室内塑料排水管 De110 粘接').extras || []).length, 0);
+ck('排水提示灌水试验', /灌水\/通球试验/.test(pr('室内塑料排水管 De110 粘接').warn), true);
+ck('雨水不挂消毒冲洗', (pr('室内PVC-U塑料雨水管 De110').extras || []).length, 0);
 ck('沟槽提示管件', /沟槽连接已附加管件定额/.test(pr('无缝钢管 DN100 沟槽连接').warn), true);
 
 console.log('\n== 25. 导出多定额行 ==');
@@ -853,6 +858,105 @@ var mix = A.parseRows([[1, '球墨铸铁给水管 DN200', 80], [2, '洗脸盆', 
 ck('混合清单行数（含自动支架）', mix.length, 4);
 ck('混合清单支架在末行', mix[3].category, 'bracket');
 ck('混合清单支架按管道80m', mix[3].quantity, 120);
+
+console.log('\n== 26. 图纸说明解析与自动套用 ==');
+var SP = require('../js/spec.js');
+var SPEC_TXT = [
+  '给排水设计施工说明',
+  '一、管材及连接方式',
+  '1. 生活给水管采用PE聚乙烯管，室内部分采用热熔连接，室外埋地部分采用电熔连接，公称外径De20~De160。',
+  '2. 室内生活排水管采用PVC-U塑料排水管，粘接连接，公称外径De50~De250。',
+  '3. 室内雨水管采用PVC-U塑料雨水管，粘接连接，公称外径De75~De250。',
+  '4. 消防给水管采用热浸镀锌钢管，DN100及以上沟槽连接，DN80及以下螺纹连接。',
+  '5. 压力排水管采用钢塑复合管，螺纹连接。',
+  '二、试验与验收',
+  '6. 给水管道安装完毕后应进行水压试验，并做消毒冲洗。',
+  '7. 排水管道应做灌水试验及通球试验。',
+  '8. 管道穿楼板处设钢套管。',
+  '9. 生活给水管做橡塑保温防结露，厚度30mm。',
+  '10. 管道支架除锈后刷防锈漆两道。'
+].join('\n');
+var sp = SP.parseText(SPEC_TXT);
+ck('说明解析ok', sp.ok, true);
+ck('说明材质含PE', sp.materials.some(function (m) { return m.key === 'pe'; }), true);
+ck('说明材质含PVC', sp.materials.some(function (m) { return m.key === 'pvc'; }), true);
+ck('说明材质含镀锌', sp.materials.some(function (m) { return m.key === 'galv'; }), true);
+ck('说明系统含雨水', sp.systems.some(function (m) { return m.key === 'rain'; }), true);
+ck('说明系统含消防', sp.systems.some(function (m) { return m.key === 'fire'; }), true);
+ck('说明部位双选', sp.locs.sort().join(','), 'in,out');
+ck('说明管径范围', [sp.dnRange.min, sp.dnRange.max], [20, 250]);
+ck('说明措施水压试验', !!sp.measures.test, true);
+ck('说明措施消毒', !!sp.measures.disinfect, true);
+ck('说明措施保温', !!sp.measures.insulation, true);
+ck('说明措施套管', !!sp.measures.sleeve, true);
+var ruleOf = function (mat, joint) {
+  return sp.rules.filter(function (r) { return r.materialKey === mat && r.joint === joint; })[0] || null;
+};
+ck('PE室内热熔规则', !!ruleOf('pe', 'fusion'), true);
+ck('PE室外电熔规则', !!ruleOf('pe', 'electro'), true);
+ck('PVC排水粘接规则', (ruleOf('pvc', 'glue') || {}).medium, 'drain');
+ck('镀锌沟槽DN≥100', (function () { var r = ruleOf('galv', 'groove'); return r ? r.dnCond.op + r.dnCond.val : null; })(), 'ge100');
+ck('镀锌螺纹DN≤80', (function () { var r = ruleOf('galv', 'thread'); return r ? r.dnCond.op + r.dnCond.val : null; })(), 'le80');
+ck('无材质句不误判', sp.rules.every(function (r) { return !!r.joint; }), true);
+
+// 应用：说明优先
+A.setSpec(sp, true);
+var e1 = pr('聚乙烯PE给水管 De110');
+ck('说明套用室内热熔', e1.quotaCode, '8-418');
+ck('说明标注依据', /依图纸说明/.test(e1.warn), true);
+ck('说明覆盖部位', e1.loc, 'in');
+var e2 = pr('室外聚乙烯PE给水管 De110');
+ck('说明套用室外电熔', e2.quotaCode, '8-54');
+var e3 = pr('塑料排水管 De110');
+ck('说明套用排水粘接', e3.quotaCode, '8-379');
+var e4 = pr('塑料雨水管 De110');
+ck('说明套用雨水粘接', e4.quotaCode, '8-406');
+ck('雨水介质依说明', e4.isRain, true);
+var e5 = pr('镀锌钢管 DN100');
+ck('说明套用沟槽DN100', e5.quotaCode, '8-208');
+ck('沟槽依说明', e5.joint, 'groove');
+var e6 = pr('镀锌钢管 DN80');
+ck('说明套用螺纹DN80', e6.quotaCode, '8-180');
+var e7 = pr('聚乙烯PE给水管 De110 粘接连接');
+ck('说明覆盖名称连接方式', e7.joint, 'fusion');
+ck('冲突提示', /与说明不一致/.test(e7.warn), true);
+ck('冲突标记', e7.specJointConflict, 'glue');
+// 手选连接方式覆盖说明
+var e8 = pr('室外聚乙烯PE给水管 De110');
+ck('手选前依说明电熔', e8.joint, 'electro');
+e8.joint = 'fusion'; e8.jointPicked = true; e8.jointFromSpec = false;
+e8.warn = A.buildWarn(e8, e8);
+ck('手选覆盖提示', /已手选热熔连接，覆盖图纸说明（电熔连接）/.test(e8.warn), true);
+// 部位明确冲突时不套用（说明只写室外，室内管走名称规则）
+var spOut = SP.parseText('室外给水管采用PE管，电熔连接。');
+A.setSpec(spOut, true);
+ck('室外规则不覆盖室内管', pr('室内聚乙烯PE给水管 De110').quotaCode, '8-418');
+ck('室外规则套室外管', pr('室外聚乙烯PE给水管 De110').quotaCode, '8-42');
+// 条件式管径（DN50及以下/65及以上）不构成范围
+var spCond = SP.parseText('给水管采用薄壁不锈钢管，DN50及以下卡压连接，DN65及以上沟槽连接。');
+ck('条件式管径不误判范围', spCond.dnRange, null);
+A.setSpec(sp, true);
+// 关闭说明
+A.setSpec(sp, false);
+ck('关闭说明回退名称规则', pr('室外聚乙烯PE给水管 De110').quotaCode, '8-42');
+A.setSpec(sp, true);
+
+// 对比分析
+var items = A.parseRows([
+  [1, '室内聚乙烯PE给水管 De110', 100],
+  [2, '室内塑料排水管 De110', 80]
+], '2026-10', 'guanglianda');
+var an = A.analyzeSpec(sp, items);
+var anTxt = an.map(function (x) { return x.title + '|' + x.level; }).join(';');
+ck('分析含雨水漏项', /雨水系统\|warn/.test(anTxt), true);
+ck('分析含保温建议', /保温\/防结露\|info/.test(anTxt), true);
+ck('分析含消防提示', /消防系统\|info/.test(anTxt), true);
+ck('分析含管径越界', /管径范围\|warn/.test(anTxt), false);
+// 管径越界场景
+var items2 = A.parseRows([[1, '室内聚乙烯PE给水管 De315', 50]], '2026-10', 'guanglianda');
+var an2 = A.analyzeSpec(sp, items2);
+ck('分析管径越界提示', an2.some(function (x) { return x.title === '管径范围'; }), true);
+A.setSpec(null, true);
 
 console.log('\n结果: ' + pass + ' 通过, ' + fail + ' 失败');
 if (fail) process.exit(1);
