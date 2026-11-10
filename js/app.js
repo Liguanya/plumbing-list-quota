@@ -230,32 +230,47 @@
     return t[t.length - 1].w;
   }
   // 管道清单全部套完后自动补「管道支架」一行；原表已含支架则不重复
+  // 管道支架：按系统分别补项（系统来自清单里的分组标题行，如「给水管道」「中水管道」；
+  // 无分组标题时全表算一个系统），每个系统在其最后一条管道清单之后插入一条支架，
+  // 位置紧跟管道，不放到全表末尾
   function withBracket(items) {
-    var totalM = 0, kg = 0, hasPipe = false, hasBracket = false;
-    items.forEach(function (it) {
-      if (it.category === 'bracket') hasBracket = true;
-      if (isAuxCat(it.category) || isValveCat(it.category) || isSanCat(it.category)) return;
-      if (!(it.quantity > 0)) return;
-      hasPipe = true;
-      totalM += it.quantity;
-      kg += it.quantity * bracketWeightPerM(it.dn);
+    var hasBracket = false;
+    for (var i = 0; i < items.length; i++) if (items[i].category === 'bracket') hasBracket = true;
+    if (hasBracket) return items;
+    var order = [], map = {};
+    for (var j = 0; j < items.length; j++) {
+      var it = items[j];
+      var key = it.system || '';
+      if (!map[key]) { map[key] = { key: key, lastPipe: -1, len: 0, kg: 0 }; order.push(map[key]); }
+      if (isAuxCat(it.category) || isValveCat(it.category) || isSanCat(it.category)) continue;
+      if (!(it.quantity > 0)) continue;
+      map[key].lastPipe = j;
+      map[key].len += it.quantity;
+      map[key].kg += it.quantity * bracketWeightPerM(it.dn);
+    }
+    var groups = order.filter(function (g) { return g.lastPipe >= 0 && g.kg > 0; });
+    if (!groups.length) return items;
+    // 从后往前插，避免插入后前面分组的下标失效
+    groups.sort(function (a, b) { return b.lastPipe - a.lastPipe; });
+    groups.forEach(function (g) {
+      var kg = Math.round(g.kg * 10) / 10;
+      if (!(kg > 0)) return;
+      var it = buildAuxItem('管道支架', 'bracket');
+      it.index = '';
+      it.quantity = kg;
+      it.loc = null; it.joint = null;
+      var q = matchAuxQuota(it);
+      it.quotaCode = q.code; it.quotaName = q.name; it.quotaUnit = q.unit; it.quotaFactor = q.factor;
+      it.codeInferred = false; it.extras = [];
+      var pr = auxPrice(it);
+      it.price = pr.price; it.priceSource = pr.source; it.priceBasis = pr.basis; it.priceBrand = pr.brand || '';
+      it.system = g.key;
+      it.autoAdded = true;
+      it.warn = '管道支架为自动补项' + (g.key ? '（' + g.key + '）' : '') + '：按管道总长 ' + Math.round(g.len) +
+        'm 与管径分档含量估算约 ' + kg + 'kg（0.45~3.2kg/m），定额 7-138 计量单位为 100kg，请按图纸支架实际重量调整';
+      it.features = featureText(it);
+      items.splice(g.lastPipe + 1, 0, it);
     });
-    if (!hasPipe || hasBracket) return items;
-    kg = Math.round(kg * 10) / 10;
-    if (!(kg > 0)) return items;
-    var it = buildAuxItem('管道支架', 'bracket');
-    it.index = String(items.length + 1);
-    it.quantity = kg;
-    it.loc = null; it.joint = null;
-    var q = matchAuxQuota(it);
-    it.quotaCode = q.code; it.quotaName = q.name; it.quotaUnit = q.unit; it.quotaFactor = q.factor;
-    it.codeInferred = false; it.extras = [];
-    var pr = auxPrice(it);
-    it.price = pr.price; it.priceSource = pr.source; it.priceBasis = pr.basis; it.priceBrand = pr.brand || '';
-    it.warn = '管道支架为自动补项：按管道总长 ' + Math.round(totalM) + 'm 与管径分档含量估算约 ' + kg +
-      'kg（0.45~3.2kg/m），定额 7-138 计量单位为 100kg，请按图纸支架实际重量调整';
-    it.features = featureText(it);
-    items.push(it);
     return items;
   }
 
@@ -1352,6 +1367,7 @@
   function parseRows(aoa, periodKey, format) {
     var results = [];
     var autoIdx = 0;
+    var curSystem = '';   // 当前系统分组名（来自清单里的分组标题行，如「给水管道」「中水管道」）
     for (var r = 0; r < aoa.length; r++) {
       var row = aoa[r] || [];
       var rawName = row[1];
@@ -1359,6 +1375,13 @@
       if (!name) continue;
       if (/序号/.test(String(row[0] || '')) && /名称/.test(name)) continue;
       if (/项目名称|管道名称|名称规格/.test(name) && !/\d/.test(name) && r < 5) continue;
+
+      // 分组标题行（如「给水管道」「中水管道」「排水管道」）：无序号、无工程量、名称不含数字，
+      // 不是清单项——记为当前系统分组名后跳过，管道支架按系统分别补项
+      var qtyPre = parseFloat(row[2]);
+      if (!(qtyPre > 0) && !/\d/.test(name) && String(row[0] === undefined || row[0] === null ? '' : row[0]).trim() === '') {
+        curSystem = name; continue;
+      }
 
       var it = buildItem(name);
       if (!it) continue;
@@ -1398,9 +1421,14 @@
 
       recomputePrice(it, periodKey);
       it.features = featureText(it);
+      it.system = curSystem;   // 所属系统分组，管道支架按系统分套
       results.push(it);
     }
     var out = withBracket(results);
+    // 有自动补项（支架）插入时，清单序号统一重排为连续 1..n
+    var hasAuto = false;
+    for (var qa = 0; qa < out.length; qa++) if (out[qa].autoAdded) hasAuto = true;
+    if (hasAuto) for (var qb = 0; qb < out.length; qb++) out[qb].index = String(qb + 1);
     out._periodKey = periodKey;
     out._format = format;
     return out;

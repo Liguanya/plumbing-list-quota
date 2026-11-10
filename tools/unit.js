@@ -859,8 +859,9 @@ ck('切悬挂式价', A.sanPrice(m3).price, 6800);
 // 混合清单：管道 + 洁具，支架只按管道补
 var mix = A.parseRows([[1, '球墨铸铁给水管 DN200', 80], [2, '洗脸盆', 10], [3, '地漏 DN50', 6]], '2026-10', 'glodon');
 ck('混合清单行数（含自动支架）', mix.length, 4);
-ck('混合清单支架在末行', mix[3].category, 'bracket');
-ck('混合清单支架按管道80m', mix[3].quantity, 120);
+ck('混合清单支架紧跟管道', mix[1].category, 'bracket');
+ck('混合清单支架按管道80m', mix[1].quantity, 120);
+ck('洁具排在支架之后', mix[2].category !== 'bracket', true);
 
 console.log('\n== 26. 图纸说明解析与自动套用 ==');
 var SP = require('../js/spec.js');
@@ -1013,6 +1014,24 @@ ck('DWG套用钢网PE管识别为复合', pr('室内钢丝网骨架PE复合给�
 ck('DWG套用不锈钢卡压', pr('室内薄壁不锈钢管 DN50').joint, 'press');
 ck('DWG套用PPR热熔', pr('室内PP-R给水管 De25').joint, 'fusion');
 A.setSpec(null, true);
+
+console.log('\n== 27. 管道支架按系统分组（每个系统各补一条，紧跟该系统管道）==');
+var sysP = A.parseRows([
+  ['', '给水管道', ''],
+  [1, '球墨铸铁给水管 DN200', 80],
+  [2, '截止阀 DN50', 5],
+  ['', '中水管道', ''],
+  [3, '球墨铸铁给水管 DN100', 60]
+], '2026-10', 'glodon');
+var sysB = sysP.filter(function (x) { return x.category === 'bracket'; });
+ck('两个系统各一条支架', sysB.length, 2);
+ck('给水系统支架80*1.5=120', sysB[0].quantity, 120);
+ck('中水系统支架60*0.9=54', sysB[1].quantity, 54);
+ck('给水支架紧跟给水管', sysP[1].category, 'bracket');
+ck('给水支架在阀门之前', sysP.map(function (x) { return x.category; }).indexOf('waterValve') > 1, true);
+ck('中水支架序号连续', sysB[1].index, '5');
+ck('支架行带定额单位100kg', sysB[0].quotaUnit, '100kg');
+ck('分组标题不进清单', sysP.some(function (x) { return x.name === '给水管道'; }), false);
 
 console.log('\n结果: ' + pass + ' 通过, ' + fail + ' 失败');
 if (fail) process.exit(1);
