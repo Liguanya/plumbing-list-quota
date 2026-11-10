@@ -1657,12 +1657,8 @@
         it.quotaCode, '定额行', it.quotaName, '', it.quotaUnit || it.unit,
         round4(it.quantity / qFactor), ''
       ]);
-      (it.extras || []).forEach(function (x) {
-        wsData.push([
-          it.index + '.' + (++sub), '', '', '', '', '', '', '',
-          x.code, '定额行', x.name, '', x.unit, round4(x.qty / (x.factor || 1)), ''
-        ]);
-      });
+      // 主材行紧跟其对应定额行；附加定额（消毒冲洗/沟槽管件等无主材）排在其后，
+      // 避免导入软件时把主材误判为挂在冲洗定额下
       if (hasPrice) {
         zIdx++;
         wsData.push([
@@ -1670,6 +1666,12 @@
           'Z00741-' + String(zIdx).padStart(3, '0'), '子目下设备', it.name, '', it.unit, it.quantity, num2(it.price)
         ]);
       }
+      (it.extras || []).forEach(function (x) {
+        wsData.push([
+          it.index + '.' + (++sub), '', '', '', '', '', '', '',
+          x.code, '定额行', x.name, '', x.unit, round4(x.qty / (x.factor || 1)), ''
+        ]);
+      });
     });
 
     var total = data.reduce(function (s, d) { return s + (d.price === null ? 0 : d.price * d.quantity); }, 0);
