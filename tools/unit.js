@@ -494,7 +494,7 @@ global.XLSX = {
 A.exportGLD([pr('无缝钢管 DN65 沟槽连接', 100)]);
 ck('广联达总行数', capG.length, 8);
 ck('广联达表头15列', capG[0].length, 15);
-ck('清单行项目编码', capG[1][8], '031001003');
+ck('清单行项目编码', capG[1][8], '031001003001');
 ck('清单行类型', capG[1][9], '清单行');
 ck('清单行单位m', capG[1][12], 'm');
 ck('清单行工程量', capG[1][13], 100);
@@ -1032,6 +1032,35 @@ ck('给水支架在阀门之前', sysP.map(function (x) { return x.category; }).
 ck('中水支架序号连续', sysB[1].index, '5');
 ck('支架行带定额单位100kg', sysB[0].quotaUnit, '100kg');
 ck('分组标题不进清单', sysP.some(function (x) { return x.name === '给水管道'; }), false);
+
+console.log('\n== 28. 清单编码补足12位（同码递增、异码各自001）==');
+global.XLSX = {
+  utils: {
+    aoa_to_sheet: function (d) { return d; },
+    book_new: function () { return {}; },
+    book_append_sheet: function (wb, ws) { wb.__rows = ws; }
+  },
+  writeFile: function (wb, name) { if (/建经/.test(name)) capJ = wb.__rows; else capG = wb.__rows; }
+};
+var c12 = A.parseRows([
+  [1, '无缝钢管 DN65 沟槽连接', 100],
+  [2, '无缝钢管 DN65 沟槽连接', 50],
+  [3, '截止阀 DN50', 5]
+], '2026-10', 'glodon');
+A.exportGLD(c12);
+var lr = capG.filter(function (r) { return r[9] === '清单行'; });
+var lc = lr.map(function (r) { return r[8]; });
+ck('同码第1条=001', lc[0], '031001003001');
+ck('同码第2条=002', lc.indexOf('031001003002') > -1, true);
+ck('异码从001起', lc.indexOf('031002001001') > -1, true);
+ck('支架码也各自001起', lc.indexOf('031301005001') > -1, true);
+ck('同码恰好两条', lc.filter(function (c) { return /^031001003/.test(c); }).length, 2);
+ck('12位编码长度', String(lc[0]).length, 12);
+A.exportJianjing(c12);
+var jc = capJ.slice(1).map(function (r) { return r[1]; }).filter(Boolean);
+ck('建经首条001', jc[0], '031001003001');
+ck('建经同码002', jc.indexOf('031001003002') > -1, true);
+ck('建经编码均12位', jc.every(function (c) { return /^\d{12}$/.test(c); }), true);
 
 console.log('\n结果: ' + pass + ' 通过, ' + fail + ' 失败');
 if (fail) process.exit(1);
