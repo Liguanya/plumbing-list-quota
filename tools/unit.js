@@ -1116,5 +1116,53 @@ A2.exportGLD(A2.parseRows([[1, '无缝钢管 DN65 沟槽连接', 100]], '2026-10
 ck('mode=gs 自动走概算导出', capG2[0].indexOf('项目特征'), -1);
 delete global.location;
 
+
+console.log('\n== 价格数据库联动（信息价 > 数据库价 > 市场价）==');
+
+// 无数据库时前面全部用例已隐式验证：取价逻辑零变化
+var _dbStore = {};
+window.localStorage = {
+  getItem: function (k) { return Object.prototype.hasOwnProperty.call(_dbStore, k) ? _dbStore[k] : null; },
+  setItem: function (k, v) { _dbStore[k] = String(v); },
+  removeItem: function (k) { delete _dbStore[k]; }
+};
+var PDB = require('../../jidian-system/price-db/js/db.js');
+ck('价格库模块可加载', typeof PDB.lookupBatch, 'function');
+ck('接入前为空库', PDB.stats().total, 0);
+
+var _mk = pr('PPR给水管 DN50');
+ck('接入前为市场价', _mk.priceSource, 'market');
+ck('接入前价格', _mk.price, 30);
+
+PDB.addItems([
+  { prof: 'plumbing', cat: '管道类', brand: '联塑', name: 'PPR给水管 DN50', price: 99.99, date: '2026-11-01' },
+  { prof: 'plumbing', cat: '管道类', brand: '测试品牌', name: '闸阀 DN50', price: 1.23, date: '2026-11-02' },
+  { prof: 'hvac', cat: '通风空调设备类', brand: '串味品牌', name: 'PPR给水管 DN50', price: 7.77, date: '2026-11-03' }
+]);
+ck('入库三条', PDB.stats().total, 3);
+window.__priceDbRefresh();
+
+var _db = pr('PPR给水管 DN50');
+ck('市场价被数据库价覆盖', _db.priceSource, 'db');
+ck('数据库价取数', Math.round(_db.price * 100) / 100, 99.99);
+ck('显示数据库品牌', _db.priceBrand, '联塑');
+ck('价格依据含品牌与日期', /价格数据库/.test(_db.priceBasis) && /联塑/.test(_db.priceBasis) && /2026-11-01/.test(_db.priceBasis), true);
+ck('专业隔离：不取其它专业同名条目', Math.round(_db.price * 100) / 100, 99.99);
+
+var _if = pr('闸阀 DN50');
+ck('信息价不被数据库价覆盖', _if.priceSource !== 'db', true);
+ck('信息价数值不变', _if.price, 145);
+
+var _ms = pr('洗脸盆');
+ck('库中无匹配保持原价源', _ms.priceSource !== 'db', true);
+ck('库中无匹配价格不变', Math.round(_ms.price * 100) / 100, 800);
+
+// 数据更新后（价格改动）重新组价即取新价
+PDB.addItems([{ prof: 'plumbing', cat: '管道类', brand: '联塑', name: 'PPR给水管 DN50', price: 108.88, date: '2026-11-10' }]);
+window.__priceDbRefresh();
+var _db2 = pr('PPR给水管 DN50');
+ck('库价更新后重取', Math.round(_db2.price * 100) / 100, 108.88);
+ck('更新后仍为数据库价', _db2.priceSource, 'db');
+
 console.log('\n结果: ' + pass + ' 通过, ' + fail + ' 失败');
 if (fail) process.exit(1);
