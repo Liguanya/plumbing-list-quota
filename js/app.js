@@ -32,6 +32,12 @@
 (function () {
   'use strict';
 
+  // ---------- 概算模式 ----------
+  // 概算计价不套清单编码、不生成项目特征：URL 带 ?mode=gs 时启用。
+  // 界面隐藏「清单编码」「项目特征」两列；广联达导出删清单行与项目特征列；
+  // 建经导出删清单编码列与项目特征列。无该参数（预算模式）时行为完全不变。
+  var GS_MODE = /[?&]mode=gs(?:&|$)/.test((typeof location !== 'undefined' && location.search) || '');
+
   // ---------- 清单编码 ----------
   var LIST = {
     castIron: { code: '031001001', name: '铸铁管' },
@@ -1541,10 +1547,10 @@
       if (item.warn) tr.className = 'row-warn';
       tr.innerHTML =
         '<td>' + escapeHtml(item.index) + '</td>' +
-        '<td>' + (item.listCode12 || item.listCode || '—') + '</td>' +
+        '<td class="col-lc">' + (item.listCode12 || item.listCode || '—') + '</td>' +
         '<td class="cell-name" title="' + escapeHtml(item.name) + '">' + escapeHtml(item.name) + '</td>' +
         '<td>' + layCell(item) + '</td>' +
-        '<td class="cell-feature" title="' + escapeHtml(item.features || '') + '">' + escapeHtml(item.features || '—') + '</td>' +
+        '<td class="cell-feature col-feat" title="' + escapeHtml(item.features || '') + '">' + escapeHtml(item.features || '—') + '</td>' +
         '<td class="cell-qcode">' + (item.quotaCode || '—') + ' ' + inferTag(item) + '</td>' +
         '<td class="cell-qname" title="' + escapeHtml(item.quotaName + ((item.extras && item.extras.length) ? ' ＋ ' + item.extras.map(function (x) { return x.code + ' ' + x.name; }).join(' ＋ ') : '')) + '">' +
           escapeHtml(item.quotaName || '—') +
@@ -1638,6 +1644,7 @@
   function num2(v) { return v === null || v === undefined ? '' : Number(Number(v).toFixed(2)); }
 
   function exportJianjing(data) {
+    if (GS_MODE) return exportJianjingGs(data);
     var wsData = [['序号', '清单编码', '项目名称', '定额编码', '定额名称', '主材价格', '数量', '项目特征']];
     data.forEach(function (it) {
       wsData.push([it.index, it.listCode12 || it.listCode, it.name, it.quotaCode, it.quotaName,
@@ -1657,6 +1664,28 @@
     XLSX.writeFile(wb, '清单定额报价表_建经_' + today() + '.xlsx');
   }
 
+  // 概算模式建经导出：删除「清单编码」「项目特征」两列，其余列与预算模式一致
+  function exportJianjingGs(data) {
+    annotateListCode12(data);
+    var wsData = [['序号', '项目名称', '定额编码', '定额名称', '主材价格', '数量']];
+    data.forEach(function (it) {
+      wsData.push([it.index, it.name, it.quotaCode, it.quotaName,
+        it.price === null ? '' : num2(it.price), it.quantity]);
+      (it.extras || []).forEach(function (x) {
+        wsData.push(['', '', x.code, x.name + '（数量' + round4(x.qty / (x.factor || 1)) + ' ' + x.unit + '）', '', '']);
+      });
+    });
+    var total = data.reduce(function (s, d) { return s + (d.price === null ? 0 : d.price * d.quantity); }, 0);
+    wsData.push([]);
+    wsData.push(['合计', '', '', '', num2(total), '']);
+
+    var ws = XLSX.utils.aoa_to_sheet(wsData);
+    ws['!cols'] = [{ wch: 8 }, { wch: 42 }, { wch: 10 }, { wch: 40 }, { wch: 12 }, { wch: 8 }];
+    var wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, '定额报价表');
+    XLSX.writeFile(wb, '概算_定额报价表_建经_' + today() + '.xlsx');
+  }
+
   // 清单编码统一补足 12 位：9 位标准码直接追加三位顺序号；
   // 不足 9 位的（如补充码 03B001）先右补 0 至 9 位，再追加顺序号，保证输出恒为 12 位。
   // 同一编码按清单出现顺序 001/002/003…递增，不同编码各自从 001 起；空编码保持空。
@@ -1672,6 +1701,7 @@
   }
 
   function exportGLD(data) {
+    if (GS_MODE) return exportGLDGs(data);
     annotateListCode12(data);
     var wsData = [['序号', '项目名称', '类型', '材质', '型号', '规格', '截面mm2', '工程量',
       '项目编码', '类型', '名称', '项目特征', '单位', '工程量', '主材单价']];
@@ -1730,6 +1760,52 @@
     var wb = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb, ws, '清单定额报价表');
     XLSX.writeFile(wb, '清单定额报价表_广联达_' + today() + '.xlsx');
+  }
+
+  // 概算模式广联达导出：删除清单行（清单编码整行）与「项目特征」整列，其余列顺序不变。
+  // 每条项目以定额行为首行（A 列序号、B 列保留项目名称），主材/附加定额依次 1.1、1.2……
+  function exportGLDGs(data) {
+    var wsData = [['序号', '项目名称', '类型', '材质', '型号', '规格', '截面mm2', '工程量',
+      '项目编码', '类型', '名称', '单位', '工程量', '主材单价']];
+    var zIdx = 0;
+    data.forEach(function (it) {
+      var hasPrice = it.price !== null && isPriced(it);
+      var specVal = specCell(it);
+      var kind = isAuxCat(it.category) ? AUX_LABEL[it.category] : (isSanCat(it.category) ? '洁具' : '管道');
+      var mat = it.materialLabel || it.material;
+
+      if (!it.quotaCode) {
+        wsData.push([it.index, it.name, kind, mat, '', specVal, '', it.quantity,
+          '', '待人工处理', it.name, it.unit, it.quantity, hasPrice ? num2(it.price) : '']);
+        return;
+      }
+      var sub = 0;
+      wsData.push([it.index, it.name, kind, mat, '', specVal, '', it.quantity,
+        it.quotaCode, '定额行', it.quotaName, it.quotaUnit || it.unit,
+        round4(it.quantity / (it.quotaFactor || 1)), '']);
+      if (hasPrice) {
+        zIdx++;
+        wsData.push([it.index + '.' + (++sub), '', '', '', '', '', '', '',
+          'Z00741-' + String(zIdx).padStart(3, '0'), '子目下设备', it.name, it.unit, it.quantity, num2(it.price)]);
+      }
+      (it.extras || []).forEach(function (x) {
+        wsData.push([it.index + '.' + (++sub), '', '', '', '', '', '', '',
+          x.code, '定额行', x.name, x.unit, round4(x.qty / (x.factor || 1)), '']);
+      });
+    });
+
+    var total = data.reduce(function (s, d) { return s + (d.price === null ? 0 : d.price * d.quantity); }, 0);
+    wsData.push([]);
+    wsData.push(['合计', '', '', '', '', '', '', '', '', '', '', '', '', num2(total)]);
+
+    var ws = XLSX.utils.aoa_to_sheet(wsData);
+    ws['!cols'] = [
+      { wch: 8 }, { wch: 40 }, { wch: 10 }, { wch: 8 }, { wch: 12 }, { wch: 16 }, { wch: 9 }, { wch: 9 },
+      { wch: 13 }, { wch: 10 }, { wch: 40 }, { wch: 6 }, { wch: 9 }, { wch: 12 }
+    ];
+    var wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, '定额报价表');
+    XLSX.writeFile(wb, '概算_定额报价表_广联达_' + today() + '.xlsx');
   }
 
   function today() {
@@ -2047,6 +2123,18 @@
   }
 
   if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded', function () {
+    if (GS_MODE) {
+      document.body.classList.add('gs-mode');
+      var h1 = document.querySelector('.header h1');
+      if (h1) h1.textContent = h1.textContent.replace('智能组价系统', '概算组价系统');
+      var hd = document.querySelector('.header p');
+      if (hd) hd.textContent = '概算计价：不套清单编码、不生成项目特征，按项目名称直接套用定额与主材 · 主材价优先信息价、其次市场价 · 全部本地计算';
+      var tip = document.createElement('div');
+      tip.className = 'gs-tip';
+      tip.innerHTML = '📌 <b>概算模式</b>　不套用清单编码与项目特征：广联达导出已删除清单行与项目特征列，建经导出已删除清单编码列与项目特征列；主材价优先取天津市信息价，缺项按市场价。';
+      var content = document.querySelector('.content');
+      if (content) content.insertBefore(tip, content.firstChild);
+    }
     var selEl = document.getElementById('periodSelect');
     getPeriods().forEach(function (p) {
       var o = document.createElement('option');
@@ -2191,6 +2279,7 @@
       analyzeSpec: function (spec, items) { return SPEC.analyze(spec || ACTIVE_SPEC, items); },
       featureText: featureText, buildWarn: buildWarn,
       exportGLD: exportGLD, exportJianjing: exportJianjing,
+      exportGLDGs: exportGLDGs, exportJianjingGs: exportJianjingGs,
       V_LIST: V_LIST, V_LABEL: V_LABEL, isValveCat: isValveCat, valveCatOf: valveCatOf,
       buildValveItem: buildValveItem, matchValveQuota: matchValveQuota, valvePrice: valvePrice,
       V_WTHREAD: V_WTHREAD, V_WFLANGE: V_WFLANGE, V_FLOAT: V_FLOAT, V_LEVEL: V_LEVEL,
