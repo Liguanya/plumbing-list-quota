@@ -132,7 +132,7 @@
                     <li>上传给排水工程量清单 Excel（.xlsx/.xls），<strong>A列=序号</strong>、<strong>B列=项目名称（材质/管径/接口形式）</strong>、<strong>C列=数量</strong>、<strong>D列=单位（可选，m/m²/m³）</strong>，首行可为表头；阀门写 <code>蝶阀-300</code> 时，-300 即 DN300（也可写 <code>DN300</code>），按国标 DN 系列识别，压力/电压等后缀不按管径处理；系统按项目名称<strong>自动识别材质、公称直径与连接方式</strong>并套用清单与定额，结果支持<strong>「广联达 / 建经科技」</strong>两种格式导出。</li>
                     <li><strong>图纸说明优先</strong>：左侧可先上传<strong>图纸说明</strong>（PDF / DWG / DXF / TXT），平台按段落上下文识别<strong>管材、连接方式、安装部位、系统、管径分档、试验与措施要求</strong>——CAD 提取的换行不会割裂「管材…接口为…连接」的对应关系，同一句里多条管径分档（<code>≥DN65卡箍／&lt;DN65螺纹</code>、<code>DN100及以上／DN80及以下</code>）会分别成条，管材与连接方式分处两句时按就近上下文配对；再上传右侧工程量清单，管道连接方式等按说明自动套用，无需逐条手选；说明与清单不一致时会给出<strong>对比分析</strong>（漏系统、漏材质、漏保温套管、管径越界等）。说明解析全部在本地完成，文件不上传服务器。</li>
                     <li><strong>塑料管</strong>：名称含 PVDF、聚乙烯（PE）、聚丙烯（PP-R）、聚丁烯（PB）、聚氯乙烯（PVC-U）等关键词的管道按塑料管组价，<strong>「安装部位/接口形式」列为三级联动</strong>——一级选<strong>室内/室外</strong>；室外二级直接选<strong>连接方式</strong>（热熔 / 电熔 / 粘接，公称外径 32~315mm）；室内二级选<strong>雨水管 / 排水管 / 给水管</strong>，三级选<strong>连接方式</strong>（排水：粘接 / 热熔 / 螺母密封圈；雨水：粘接；给水：热熔 / 电熔 / 粘接），切换后定额、主材价与项目特征实时重算。名称中也可直接写明，如 <code>室内聚乙烯PE给水管 De110 热熔连接</code>。</li>
-                    <li><strong>价格参考</strong>：天津市工程造价信息（2026年1—10期）及市场价——页面顶部「信息价期号」可选择期次（默认最新一期），切换后主材价按该期信息价重新计算；信息价有的按信息价计入（页面不标品牌），信息价缺项的按国产中高档市场价并给出参考品牌。</li>
+                    <li><strong>价格参考</strong>：天津市工程造价信息（2026年1—10期）、<strong>价格数据库</strong>与市场价——取价优先级：<strong>信息价 → 数据库价 → 市场价</strong>；页面顶部「信息价期号」可选择期次（默认最新一期），切换后主材价按该期信息价重新计算；信息价有的按信息价计入（页面不标品牌）；信息价缺项的，先取门户「价格数据库」中本专业询价单价格并标注报价品牌，库中无对应条目时按国产中高档市场价并给出参考品牌。</li>
                 </ul>
             </div>
 
@@ -227,6 +227,6 @@
     <script src="data/prices.js?v=20261113a"></script>
     <script src="data/periods-merge.js?v=20261113a"></script>
     <script src="https://liguanya.github.io/jidian-list-system/price-db/js/db.js?v=20261113c"></script>
-    <script src="js/app.js?v=20261113a"></script>
+    <script src="js/app.js?v=20261113c"></script>
 </body>
 </html>
