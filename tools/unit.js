@@ -1062,5 +1062,14 @@ ck('建经首条001', jc[0], '031001003001');
 ck('建经同码002', jc.indexOf('031001003002') > -1, true);
 ck('建经编码均12位', jc.every(function (c) { return /^\d{12}$/.test(c); }), true);
 
+console.log('\n== 补充码也补足12位 ==');
+var sp12 = [{ listCode: '03B001' }, { listCode: '03B001' }, { listCode: '031001003' }, { listCode: '' }];
+A.annotateListCode12(sp12);
+ck('补充码补足12位', sp12[0].listCode12, '03B001000001');
+ck('补充码同码递增', sp12[1].listCode12, '03B001000002');
+ck('标准码不受影响', sp12[2].listCode12, '031001003001');
+ck('空编码保持空', sp12[3].listCode12, '');
+ck('长度统一12位', [sp12[0], sp12[1], sp12[2]].every(function (x) { return x.listCode12.length === 12; }), true);
+
 console.log('\n结果: ' + pass + ' 通过, ' + fail + ' 失败');
 if (fail) process.exit(1);
