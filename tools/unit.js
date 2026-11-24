@@ -718,7 +718,7 @@ ck('龙头同水龙头', sp('铜质龙头 DN20').quotaCode, '8-938');
 var h1 = sp('电热水器 挂式');
 ck('电热水器默认RS50挂式', h1.quotaCode, '8-961');
 ck('电热水器默认价2600', h1.price, 2600);
-ck('电热水器清单031003008', h1.listCode, '031003008');
+ck('电热水器清单031005013', h1.listCode, '031005013');
 ck('电热水器RS15→8-959', sp('电热水器 RS15').quotaCode, '8-959');
 ck('电热水器RS15价1200', sp('电热水器 RS15').price, 1200);
 ck('电热水器RS30→8-960', sp('电热水器 RS30').quotaCode, '8-960');
@@ -733,7 +733,7 @@ ck('电热水器6个选项', A.S_DEF.waterHeater.opts.length, 6);
 var b1 = sp('电开水炉 立式 KSA');
 ck('开水炉定额8-965', b1.quotaCode, '8-965');
 ck('开水炉价4500', b1.price, 4500);
-ck('开水炉清单031003008', b1.listCode, '031003008');
+ck('开水炉清单031005013', b1.listCode, '031005013');
 
 var st1 = sp('蒸汽间断式加热器');
 ck('蒸汽加热器默认1#', st1.quotaCode, '8-967');
@@ -837,14 +837,15 @@ ck('管道非洁具', A.sanCatOf('球墨铸铁给水管 DN200'), null);
 ck('洁具不识别为管道', sp('洗脸盆').category, 'washbasin');
 var qt = sp('浴缸');
 ck('洁具待询价数为0', qt.price === null, false);
-ck('洁具选型默认RS50W标签', A.sanOptLabel(sp('电热水器')), 'RS50 挂式');
-// 手动切换选型后重算
+ck('电热水器默认型号RS50W', sp('电热水器').specialOpt, 'RS50W');
+// 电热水器 / 电开水炉 选型切换（补充规则：走共享模块 js/special.js）
 var m1 = sp('电热水器');
-m1.sanOpt = 'RS300';
-var mq = A.matchSanQuota(m1);
-ck('手动切RS300定额', mq.code, '8-964');
-m1.dnTier = null;
-ck('手动切RS300价', A.sanPrice(m1).price, 15000);
+A.SP.setOpt(m1, 'RS300');
+ck('手动切RS300定额', A.matchQuota(m1).code, '8-964');
+ck('手动切RS300价', A.SP.price(m1).price, 15000);
+A.SP.setOpt(m1, 'BOILER');
+ck('切电开水炉定额', A.matchQuota(m1).code, '8-965');
+ck('切电开水炉清单码', m1.listCode, '031005013');
 // 地漏手动切档
 var m2 = sp('地漏');
 m2.sanDn = 150;
