@@ -48,7 +48,11 @@
     stainless: { code: '031001006', name: '不锈钢管' },
     composite: { code: '031001007', name: '复合管' },
     plastic: { code: '031001008', name: '塑料管' },
-    preInsul: { code: '031001009', name: '直埋保温管' }
+    preInsul: { code: '030801020', name: '低压直埋保温管道' },
+    levelGauge: { code: '031002001', name: '金属阀门' },
+    pressGauge: { code: '030601002', name: '压力仪表' },
+    pressGaugeElec: { code: '030601002', name: '压力仪表' },
+    flexJoint: { code: '031002008', name: '软接头（软管）' }
   };
 
   // ---------- 阀门及管道附件（与暖通站同口径）----------
@@ -809,8 +813,54 @@
   var MAT_CAT = { '无缝钢': 'seamless', '焊接钢': 'welded', '铜': 'copper', '不锈钢': 'stainless', '复合': 'composite', '塑料': 'plastic' };
 
   // ---------- 建条目 ----------
+  // ===== 补充规则（2026-11-24 主人指定口径）：直埋保温管 / PP排水管 / 液位计 / 压力表 / 软接头 =====
+  function specialCatOf(name) {
+    var n = String(name || '');
+    if (/电接点压力表/.test(n)) return 'pressGaugeElec';
+    if (/压力表|真空表/.test(n)) return 'pressGauge';
+    if (/液位计/.test(n)) return 'levelGauge';
+    if (/可曲挠|橡胶软接头|软接头|软管接头/.test(n)) return 'flexJoint';
+    if (/直埋保温管|预制直埋保温|直埋预制保温|聚氨酯保温管/.test(n)) return 'preInsul';
+    if (/PP\s*排水|PP\s*静音|静音管|PP\s*管/i.test(n)) return 'ppDrain';
+    return '';
+  }
+
+  function buildSpecialItem(name, cat) {
+    var it = {};
+    it.name = name;
+    it.category = cat;
+    it.dn = parseDN(name) || parseVDn(name);
+    it.special = true;
+    if (cat === 'preInsul') {
+      it.listCode = LIST.preInsul.code; it.listName = LIST.preInsul.name;
+      it.unit = 'm'; it.material = '保温管'; it.materialLabel = '直埋式预制保温管';
+      it.medium = 'water'; it.loc = 'out';
+    } else if (cat === 'ppDrain') {
+      it.listCode = LIST.plastic.code; it.listName = LIST.plastic.name;
+      it.unit = 'm'; it.material = '塑料';
+      it.materialLabel = /静音/.test(name) ? 'PP排水静音管' : 'PP排水管';
+      it.medium = 'drain'; it.isRain = /雨水/.test(name);
+      it.joint = 'glue'; it.jointAuto = 'glue';
+    } else if (cat === 'levelGauge') {
+      it.listCode = LIST.levelGauge.code; it.listName = LIST.levelGauge.name;
+      it.unit = '台'; it.material = '仪表'; it.materialLabel = '玻璃管（板）液位计';
+    } else if (cat === 'pressGauge') {
+      it.listCode = LIST.pressGauge.code; it.listName = LIST.pressGauge.name;
+      it.unit = '台'; it.material = '仪表'; it.materialLabel = '压力表';
+    } else if (cat === 'pressGaugeElec') {
+      it.listCode = LIST.pressGaugeElec.code; it.listName = LIST.pressGaugeElec.name;
+      it.unit = '台'; it.material = '仪表'; it.materialLabel = '电接点压力表';
+    } else if (cat === 'flexJoint') {
+      it.listCode = LIST.flexJoint.code; it.listName = LIST.flexJoint.name;
+      it.unit = '个'; it.material = '橡胶'; it.materialLabel = '可曲挠橡胶软接头';
+    }
+    return it;
+  }
+
   function buildItem(name) {
     if (!name) return null;
+    var sc = specialCatOf(name);
+    if (sc) return buildSpecialItem(name, sc);
     // 卫生器具（洁具）优先识别
     var scat = sanCatOf(name);
     if (scat) return buildSanItem(name, scat);
@@ -1006,6 +1056,44 @@
     if (isSanCat(it.category)) return matchSanQuota(it);
     if (isAuxCat(it.category)) return matchAuxQuota(it);
     if (isValveCat(it.category)) return matchValveQuota(it);
+
+    /* ===== 补充规则（2026-11-24）===== */
+    if (it.category === 'preInsul') {
+      var PINS = [32, 40, 50, 65, 80, 100, 125, 150, 200, 250, 300, 350, 400];
+      if (!(it.dn > 0)) return { code: '', name: '室外管道 直埋式预制保温管（管径待识别）', inferred: false, needDn: true, unit: '10m', factor: 10 };
+      var pi = nearIdxV(PINS, it.dn);
+      return { code: '8-' + (141 + pi), name: '室外管道 直埋式预制保温管 公称直径' + PINS[pi] + 'mm以内',
+        inferred: PINS[pi] !== it.dn, dnTier: PINS[pi], unit: '10m', factor: 10 };
+    }
+    if (it.category === 'ppDrain') {
+      var PDNS = [50, 75, 110, 160, 200, 250];
+      if (!(it.dn > 0)) return { code: '', name: '室内管道 塑料排水管（粘接）（管径待识别）', inferred: false, needDn: true, unit: '10m', factor: 10 };
+      var pj = nearIdxV(PDNS, it.dn);
+      return { code: '8-' + (377 + pj), name: '室内管道 塑料排水管（粘接）公称外径' + PDNS[pj] + 'mm以内',
+        inferred: PDNS[pj] !== it.dn, dnTier: PDNS[pj], unit: '10m', factor: 10 };
+    }
+    if (it.category === 'levelGauge') {
+      return { code: '10-77', name: '物位检测仪表 直读玻璃管（板）液位计 管（板）长度1700mm以内', inferred: false, unit: '台', factor: 1 };
+    }
+    if (it.category === 'pressGauge') {
+      return { code: '10-25', name: '压力仪表 压力表、真空表 就地', inferred: false, unit: '台', factor: 1 };
+    }
+    if (it.category === 'pressGaugeElec') {
+      return { code: '10-31', name: '压力仪表 电接点压力表', inferred: false, unit: '台', factor: 1 };
+    }
+    if (it.category === 'flexJoint') {
+      if (!(it.dn > 0)) return { code: '', name: '可曲挠橡胶软接头（管径待识别）', inferred: false, needDn: true, unit: '个', factor: 1 };
+      if (it.dn < 50) {
+        var TS = [15, 20, 25, 32, 40];
+        var ti2 = nearIdxV(TS, it.dn);
+        return { code: '8-' + (812 + ti2), name: '橡胶软接头（螺纹连接）公称直径' + TS[ti2] + 'mm以内',
+          inferred: TS[ti2] !== it.dn, dnTier: TS[ti2], unit: '个', factor: 1 };
+      }
+      var FS = [50, 65, 80, 100, 125, 150, 200, 250, 300, 350, 400];
+      var fi = nearIdxV(FS, it.dn);
+      return { code: '8-' + (819 + fi), name: '橡胶软接头（法兰连接）公称直径' + FS[fi] + 'mm以内',
+        inferred: FS[fi] !== it.dn, dnTier: FS[fi], unit: '个', factor: 1 };
+    }
     if (PIPE_GROUPS[it.category]) {
       var g = groupOf(it);
       if (!g) return { code: '', name: '', inferred: false };
@@ -1055,6 +1143,7 @@
     if (!quota || !quota.code) return arr;
     if (isValveCat(it.category)) return arr;   // 阀门及附件不计管道消毒冲洗/沟槽管件
     if (isAuxCat(it.category)) return arr;     // 支架/保温不计管道消毒冲洗/沟槽管件
+    if (it.special === true) return arr;       // 补充规则类别（保温管/PP排水/仪表/软接头）不计附加定额
     var tierDn = quota.dnTier || it.dn;
     if (it.joint === 'groove') {
       var f = tierOf(GROOVE_FITTING.dns, tierDn);
@@ -1177,7 +1266,59 @@
     return { price: r.price, source: 'market', basis: basis };
   }
 
-  function isPriced(it) { return it && (it.category === 'castIron' || it.category === 'galv' || !!PIPE_GROUPS[it.category] || isValveCat(it.category) || isAuxCat(it.category) || isSanCat(it.category)); }
+  // 直埋式预制保温管市场价（含聚氨酯保温层 + HDPE 外护管，除税，元/m）
+  var PREINSUL_PRICE = { 32: 55, 40: 65, 50: 78, 65: 98, 80: 118, 100: 145, 125: 185,
+    150: 225, 200: 320, 250: 420, 300: 530, 350: 650, 400: 780 };
+  function preInsulPrice(it) {
+    var t = it.dnTier || it.dn;
+    if (!(t > 0)) return null;
+    var p = PREINSUL_PRICE[t];
+    if (!p) return null;
+    return { price: p, source: 'market',
+      basis: '直埋式预制保温管 DN' + t + '：国产中高档市场价（聚氨酯保温+HDPE外护）' + p.toFixed(2) + '元/m（除税）' };
+  }
+
+  // PP 排水（静音）管价格体系（主人指定）：管道 + 管件双主材，其余管径分段线性折算
+  var PP_PIPE_PRICE = { 50: 12.851, 75: 24.097, 100: 40.16, 150: 58.5 };
+  var PP_FIT_PRICE = { 50: 6.108, 75: 10.682, 100: 19.867, 150: 32.54 };
+  function ppInterp(tbl, dn) {
+    var ks = [50, 75, 100, 150];
+    if (!(dn > 0)) return null;
+    if (dn <= ks[0]) return tbl[ks[0]];
+    for (var i = 0; i < ks.length - 1; i++) {
+      if (dn <= ks[i + 1]) {
+        var a = ks[i], b = ks[i + 1];
+        return tbl[a] + (dn - a) / (b - a) * (tbl[b] - tbl[a]);
+      }
+    }
+    return tbl[150] + (dn - 150) / 50 * (tbl[150] - tbl[100]);   // 超出150按100→150斜率外推
+  }
+  function ppDrainPrice(it) {
+    var d = it.dn;
+    if (!(d > 0)) return null;
+    var pp = ppInterp(PP_PIPE_PRICE, d);
+    var pf = ppInterp(PP_FIT_PRICE, d);
+    if (pp === null || pf === null) return null;
+    pp = Math.round(pp * 1000) / 1000;
+    pf = Math.round(pf * 1000) / 1000;
+    it.mat2 = { name: it.name + '管件', price: pf };
+    return { price: pp, source: 'fixed',
+      basis: 'PP排水静音管 DN' + d + '：管材 ' + pp.toFixed(3) + '元/m、管件 ' + pf.toFixed(3) + '元/m（主人指定价格体系，其余管径按同体系分段折算）' };
+  }
+
+  // 可曲挠橡胶软接头主材（信息价缺项按国产中高档市场价，除税，元/个）
+  var FLEX_JOINT_PRICE = { 15: 22, 20: 26, 25: 32, 32: 42, 40: 52, 50: 68, 65: 95, 80: 120,
+    100: 165, 125: 210, 150: 265, 200: 390, 250: 540, 300: 720, 350: 920, 400: 1150 };
+  function flexJointPrice(it) {
+    var t = it.dnTier || it.dn;
+    if (!(t > 0)) return null;
+    var p = FLEX_JOINT_PRICE[t];
+    if (!p) return null;
+    return { price: p, source: 'market',
+      basis: '可曲挠橡胶软接头 DN' + t + '：信息价缺项，按国产中高档市场价' + p.toFixed(2) + '元/个（除税）' };
+  }
+
+  function isPriced(it) { return it && (it.category === 'castIron' || it.category === 'galv' || !!PIPE_GROUPS[it.category] || isValveCat(it.category) || isAuxCat(it.category) || isSanCat(it.category) || it.special === true); }
 
   function recomputePriceCore(it, periodKey) {
     if (isSanCat(it.category)) {
@@ -1196,7 +1337,16 @@
       return;
     }
     var info = null;
-    if (it.category === 'castIron') info = lookupCastIronPrice(periodKey, it);
+    if (it.category === 'preInsul') info = preInsulPrice(it);
+    else if (it.category === 'ppDrain') info = ppDrainPrice(it);
+    else if (it.category === 'levelGauge') {
+      info = { price: 542.268, source: 'fixed', basis: '玻璃管（板）液位计 1700mm以内：主人指定主材价542.268元/台' };
+    } else if (it.category === 'pressGauge') {
+      info = { price: 47.86, source: 'fixed', basis: '压力表（就地）：主人指定主材价47.86元/台' };
+    } else if (it.category === 'pressGaugeElec') {
+      info = { price: 60.503, source: 'fixed', basis: '电接点压力表：主人指定主材价60.503元/台' };
+    } else if (it.category === 'flexJoint') info = flexJointPrice(it);
+    else if (it.category === 'castIron') info = lookupCastIronPrice(periodKey, it);
     else if (it.category === 'galv') info = lookupGalvPrice(periodKey, it);
     else if (PIPE_GROUPS[it.category]) info = lookupPipePrice(periodKey, it);
     if (info) {
@@ -1335,6 +1485,27 @@
       vf.push('其他:' + (V_WORK[it.category] || ''));
       return vf.join('；');
     }
+    if (it.category === 'preInsul') {
+      return '名称:' + it.name + '；类型:直埋式预制保温管；规格:DN' + (it.dnTier || it.dn) +
+        '；结构:工作管+聚氨酯保温层+HDPE外护管；连接形式:焊接；其他:管道安装、接口保温、水压试验、冲洗';
+    }
+    if (it.category === 'ppDrain') {
+      return '名称:' + it.name + '；类型:' + (it.materialLabel || 'PP排水管') + '；规格:De' + (it.dnTier || it.dn) +
+        '；连接形式:粘接；输送介质:' + (it.isRain ? '雨水' : '排水') + '；主材:管材+管件双主材；其他:灌水试验、通球试验';
+    }
+    if (it.category === 'levelGauge') {
+      return '名称:' + it.name + '；类型:直读玻璃管（板）液位计；规格:管（板）长度1700mm以内；其他:仪表安装、接线、调试';
+    }
+    if (it.category === 'pressGauge') {
+      return '名称:' + it.name + '；类型:压力仪表；规格:压力表、真空表 就地安装；其他:仪表安装、校验';
+    }
+    if (it.category === 'pressGaugeElec') {
+      return '名称:' + it.name + '；类型:压力仪表；规格:电接点压力表；其他:仪表安装、接线、校验';
+    }
+    if (it.category === 'flexJoint') {
+      return '名称:' + it.name + '；类型:可曲挠橡胶软接头；规格:DN' + (it.dnTier || it.dn) +
+        '；连接形式:' + ((it.dnTier || it.dn) < 50 ? '螺纹连接' : '法兰连接') + '；其他:安装、试压';
+    }
     var parts = [];
     parts.push('安装部位:' + (it.loc === 'out' ? '室外' : '室内'));
     parts.push('材质:' + (it.materialLabel || it.material || '铸铁'));
@@ -1373,6 +1544,9 @@
   }
   function buildWarn(it, quota) {
     var w = [];
+    if (it.special === true && !(it.dn > 0) && ['preInsul', 'ppDrain', 'flexJoint'].indexOf(it.category) >= 0) {
+      w.push('名称未识别到管径，请在名称中补充 DN/De 规格');
+    }
     // 图纸说明优先：连接方式/安装部位来自说明时标注依据
     if (it.jointFromSpec && it.specRule) {
       w.push('连接方式依图纸说明（' + it.specRule.jointLabel + '）');
@@ -1414,6 +1588,9 @@
       if (it.category === 'flushValve') w.push('口部冲洗阀按 8-1260（壁龛式）计列，如为地坑式请改选 8-1261');
       if (it.category === 'waterValve' && !it.brand) w.push('该阀种取信息价，页面不标品牌');
       return wjoin(w);
+    }
+    if (it.category === 'levelGauge' || it.category === 'pressGauge' || it.category === 'pressGaugeElec') {
+      return wjoin(w);   // 仪表类按台计列，无需管径
     }
     if (!isPriced(it)) {
       w.push('该材质（' + it.material + '）的清单/定额匹配逻辑待补充，暂只输出名称与长度，请手工套用');
@@ -1546,13 +1723,19 @@
   // ============================================================
   // 渲染
   // ============================================================
+  // 单行合计：主管材 + 管件主材（PP排水管双主材）
+  function lineAmt(d) {
+    if (!d || d.price === null || d.price === undefined) return 0;
+    return (d.price + (d.mat2 && d.mat2.price ? d.mat2.price : 0)) * d.quantity;
+  }
   function priceText(item) {
     if (!isPriced(item)) return '<span class="tag tag-na">未计价</span>';
     if (item.price === null) return '<span class="tag tag-pending">待询价</span>';
     var tip = item.priceBasis ? ' title="' + String(item.priceBasis).replace(/"/g, '&quot;') + '"' : '';
     if (item.priceSource === 'estimated') return '<span class="tag tag-est"' + tip + '>估</span> <span' + tip + '>¥' + item.price.toFixed(2) + '</span>';
     if (item.priceSource === 'db') return '<span class="tag tag-db"' + tip + '>数据库价</span> <span' + tip + '>¥' + item.price.toFixed(2) + '</span>' + (item.priceBrand ? ' <span class="price-brand" title="价格数据库报价品牌">' + escapeHtml(item.priceBrand) + '</span>' : '');
-    if (item.priceSource === 'market') return '<span class="tag tag-market"' + tip + '>市场价</span> <span' + tip + '>¥' + item.price.toFixed(2) + '</span>';
+    if (item.priceSource === 'market') return '<span class="tag tag-market"' + tip + '>市场价</span> <span' + tip + '>¥' + item.price.toFixed(2) + '</span>' + (item.mat2 ? ' <span class="mat2-hint">＋管件¥' + item.mat2.price.toFixed(3) + '</span>' : '');
+    if (item.priceSource === 'fixed') return '<span class="tag tag-fixed"' + tip + '>固定价</span> <span' + tip + '>¥' + item.price.toFixed(2) + '</span>' + (item.mat2 ? ' <span class="mat2-hint" title="该定额下需两个主材：管材 + 管件，导出表格分两行">＋管件¥' + item.mat2.price.toFixed(3) + '</span>' : '');
     return '<span class="tag tag-info"' + tip + '>信息价</span> <span' + tip + '>¥' + item.price.toFixed(2) + '</span>';
   }
   function inferTag(it) {
@@ -1624,6 +1807,12 @@
       return (it.dn ? 'DN' + it.dn + ' ' : '') + 'δ' + it.insulThk;
     }
     if (isValveCat(it.category)) return it.dn ? 'DN' + it.dn : (it.category === 'flushValve' ? '成套' : '—');
+    if (it.category === 'levelGauge') return '管（板）长度1700mm以内';
+    if (it.category === 'pressGauge') return '就地 0~1.6MPa';
+    if (it.category === 'pressGaugeElec') return '电接点 0~1.6MPa';
+    if (it.category === 'flexJoint') return it.dn ? 'DN' + it.dn : '—';
+    if (it.category === 'preInsul') return it.dn ? 'DN' + it.dn : '—';
+    if (it.category === 'ppDrain') return it.dn ? 'De' + it.dn : '—';
     if (it.dn === null || it.dn === undefined || isNaN(it.dn)) return '—';
     var p = (it.category === 'plastic' || it.category === 'composite' || it.category === 'copper') ? 'De' : 'DN';
     return p + it.dn;
@@ -1660,7 +1849,7 @@
     var cast = data.filter(function (d) { return d.category === 'castIron'; }).length;
     var other = data.length - cast - data.filter(function (d) { return d.category === 'galv'; }).length;
     var pending = data.filter(function (d) { return isPriced(d) && d.price === null; }).length;
-    var total = data.reduce(function (s, d) { return s + (d.price === null ? 0 : d.price * d.quantity); }, 0);
+    var total = data.reduce(function (s, d) { return s + lineAmt(d); }, 0);
 
     document.getElementById('totalCount').textContent = data.length;
     var galv = data.filter(function (d) { return d.category === 'galv'; }).length;
@@ -1741,11 +1930,15 @@
     data.forEach(function (it) {
       wsData.push([it.index, it.listCode12 || it.listCode, it.name, it.quotaCode, it.quotaName,
         it.price === null ? '' : num2(it.price), it.quantity, it.features]);
+      if (it.mat2) {
+        wsData.push(['', it.listCode12 || it.listCode, it.mat2.name, '', '（管件主材，与管道同量计列）',
+          num2(it.mat2.price), '', '']);
+      }
       (it.extras || []).forEach(function (x) {
         wsData.push(['', '', '', x.code, x.name + '（数量' + round4(x.qty / (x.factor || 1)) + ' ' + x.unit + '）', '', '', '']);
       });
     });
-    var total = data.reduce(function (s, d) { return s + (d.price === null ? 0 : d.price * d.quantity); }, 0);
+    var total = data.reduce(function (s, d) { return s + lineAmt(d); }, 0);
     wsData.push([]);
     wsData.push(['合计', '', '', '', '', num2(total), '', '']);
 
@@ -1763,11 +1956,14 @@
     data.forEach(function (it) {
       wsData.push([it.index, it.name, it.quotaCode, it.quotaName,
         it.price === null ? '' : num2(it.price), it.quantity]);
+      if (it.mat2) {
+        wsData.push(['', it.mat2.name, '', '（管件主材，与管道同量计列）', num2(it.mat2.price), '']);
+      }
       (it.extras || []).forEach(function (x) {
         wsData.push(['', '', x.code, x.name + '（数量' + round4(x.qty / (x.factor || 1)) + ' ' + x.unit + '）', '', '']);
       });
     });
-    var total = data.reduce(function (s, d) { return s + (d.price === null ? 0 : d.price * d.quantity); }, 0);
+    var total = data.reduce(function (s, d) { return s + lineAmt(d); }, 0);
     wsData.push([]);
     wsData.push(['合计', '', '', '', num2(total), '']);
 
@@ -1831,6 +2027,13 @@
           it.index + '.' + (++sub), '', '', '', '', '', '', '',
           'Z00741-' + String(zIdx).padStart(3, '0'), '子目下设备', it.name, '', it.unit, it.quantity, num2(it.price)
         ]);
+        if (it.mat2) {
+          zIdx++;
+          wsData.push([
+            it.index + '.' + (++sub), '', '', '', '', '', '', '',
+            'Z00741-' + String(zIdx).padStart(3, '0'), '子目下设备', it.mat2.name, '', it.unit, it.quantity, num2(it.mat2.price)
+          ]);
+        }
       }
       (it.extras || []).forEach(function (x) {
         wsData.push([
@@ -1840,7 +2043,7 @@
       });
     });
 
-    var total = data.reduce(function (s, d) { return s + (d.price === null ? 0 : d.price * d.quantity); }, 0);
+    var total = data.reduce(function (s, d) { return s + lineAmt(d); }, 0);
     wsData.push([]);
     wsData.push(['合计', '', '', '', '', '', '', '', '', '', '', '', '', '', num2(total)]);
 
@@ -1879,6 +2082,11 @@
         zIdx++;
         wsData.push([it.index + '.' + (++sub), '', '', '', '', '', '', '',
           'Z00741-' + String(zIdx).padStart(3, '0'), '子目下设备', it.name, it.unit, it.quantity, num2(it.price)]);
+        if (it.mat2) {
+          zIdx++;
+          wsData.push([it.index + '.' + (++sub), '', '', '', '', '', '', '',
+            'Z00741-' + String(zIdx).padStart(3, '0'), '子目下设备', it.mat2.name, it.unit, it.quantity, num2(it.mat2.price)]);
+        }
       }
       (it.extras || []).forEach(function (x) {
         wsData.push([it.index + '.' + (++sub), '', '', '', '', '', '', '',
@@ -1886,7 +2094,7 @@
       });
     });
 
-    var total = data.reduce(function (s, d) { return s + (d.price === null ? 0 : d.price * d.quantity); }, 0);
+    var total = data.reduce(function (s, d) { return s + lineAmt(d); }, 0);
     wsData.push([]);
     wsData.push(['合计', '', '', '', '', '', '', '', '', '', '', '', '', num2(total)]);
 

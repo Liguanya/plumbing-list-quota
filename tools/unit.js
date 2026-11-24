@@ -539,8 +539,10 @@ var v2 = pr('Y型过滤器 DN150', 2);
 ck('过滤器DN150定额8-624', v2.quotaCode, '8-624');
 ck('过滤器信息价500', v2.price, 500);
 var v3 = pr('橡胶软接头 DN200', 2);
-ck('软接头市场价', v3.priceSource, 'market');
-ck('软接头标品牌', /冠龙/.test(v3.priceBrand || ''), true);
+ck('软接头清单031002008', v3.listCode, '031002008');
+ck('软接头DN200定额8-825', v3.quotaCode, '8-825');
+ck('软接头市场价390', v3.price, 390);
+ck('软接头价源market', v3.priceSource, 'market');
 var v4 = pr('波纹补偿器 DN300', 1);
 ck('补偿器DN300定额8-627', v4.quotaCode, '8-627');
 var v5 = pr('闸阀 DN32', 2);
@@ -1163,6 +1165,159 @@ window.__priceDbRefresh();
 var _db2 = pr('PPR给水管 DN50');
 ck('库价更新后重取', Math.round(_db2.price * 100) / 100, 108.88);
 ck('更新后仍为数据库价', _db2.priceSource, 'db');
+
+
+console.log('\n== 30. 补充规则（2026-11-24）：直埋保温管 / PP排水管 / 液位计 / 压力表 / 软接头 ==');
+var p1 = pr('直埋保温管 DN100');
+ck('保温管清单030801020', p1.listCode, '030801020');
+ck('保温管清单名', p1.listName, '低压直埋保温管道');
+ck('保温管DN100定额8-146', p1.quotaCode, '8-146');
+ck('保温管单位m', p1.unit, 'm');
+ck('保温管市场价145', p1.price, 145);
+ck('保温管价源market', p1.priceSource, 'market');
+ck('保温管无推断标记', p1.codeInferred, false);
+var p2 = pr('预制直埋保温管 DN32');
+ck('保温管DN32定额8-141', p2.quotaCode, '8-141');
+var p3 = pr('直埋保温管 DN400');
+ck('保温管DN400定额8-153', p3.quotaCode, '8-153');
+ck('保温管DN400价780', p3.price, 780);
+var p4 = pr('直埋保温管 DN500');
+ck('保温管超档取顶档8-153', p4.quotaCode, '8-153');
+
+var q1 = pr('PP排水静音管 DN50');
+ck('PP排水清单031001008', q1.listCode, '031001008');
+ck('PP排水DN50定额8-377', q1.quotaCode, '8-377');
+ck('PP排水管主材12.851', q1.price, 12.851);
+ck('PP排水管件6.108', q1.mat2.price, 6.108);
+ck('PP排水管件名称', q1.mat2.name, 'PP排水静音管 DN50管件');
+ck('PP排水价源fixed', q1.priceSource, 'fixed');
+ck('PP排水单位m', q1.unit, 'm');
+var q2 = pr('PP排水管 DN75');
+ck('PP排水DN75定额8-378', q2.quotaCode, '8-378');
+ck('PP排水DN75管24.097', q2.price, 24.097);
+ck('PP排水DN75管件10.682', q2.mat2.price, 10.682);
+var q3 = pr('PP管 DN100');
+ck('PP管DN100定额8-379', q3.quotaCode, '8-379');
+ck('PP管DN100管40.16', q3.price, 40.16);
+ck('PP管DN100管件19.867', q3.mat2.price, 19.867);
+var q4 = pr('PP排水静音管 DN150');
+ck('PP排水DN150定额8-380(160档)', q4.quotaCode, '8-380');
+ck('PP排水DN150管58.5', q4.price, 58.5);
+ck('PP排水DN150管件32.54', q4.mat2.price, 32.54);
+var q5 = pr('PP排水静音管 DN250');
+ck('PP排水DN250定额8-382', q5.quotaCode, '8-382');
+var q6 = pr('PP排水静音管 DN110');
+ck('PP排水DN110定额8-379', q6.quotaCode, '8-379');
+ck('DN110管材插值43.828', q6.price, 43.828);
+ck('DN110管件插值22.402', q6.mat2.price, 22.402);
+var q7 = pr('PPR给水管 DN25');
+ck('PPR给水管不受影响走plastic', q7.category, 'plastic');
+
+var g1 = pr('玻璃管液位计');
+ck('液位计清单031002001', g1.listCode, '031002001');
+ck('液位计清单名金属阀门', g1.listName, '金属阀门');
+ck('液位计定额10-77', g1.quotaCode, '10-77');
+ck('液位计主材542.268', g1.price, 542.268);
+ck('液位计单位台', g1.unit, '台');
+ck('液位计价源fixed', g1.priceSource, 'fixed');
+var g2 = pr('液位计');
+ck('液位计无管径也可套', g2.quotaCode, '10-77');
+
+var m1 = pr('压力表 Y-100');
+ck('压力表清单030601002', m1.listCode, '030601002');
+ck('压力表定额10-25', m1.quotaCode, '10-25');
+ck('压力表主材47.86', m1.price, 47.86);
+ck('压力表单位台', m1.unit, '台');
+var m2 = pr('真空表');
+ck('真空表也走压力表', m2.quotaCode, '10-25');
+var m3 = pr('电接点压力表 YXC-100');
+ck('电接点清单030601002', m3.listCode, '030601002');
+ck('电接点定额10-31', m3.quotaCode, '10-31');
+ck('电接点主材60.503', m3.price, 60.503);
+ck('电接点优先于压力表', m3.category, 'pressGaugeElec');
+
+var f1 = pr('可曲挠橡胶软接头 DN40');
+ck('软接头清单031002008', f1.listCode, '031002008');
+ck('软接头清单名', f1.listName, '软接头（软管）');
+ck('软接头DN40定额8-816', f1.quotaCode, '8-816');
+ck('软接头单位个', f1.unit, '个');
+ck('软接头DN40价52', f1.price, 52);
+var f2 = pr('软接头 DN50');
+ck('软接头DN50转法兰8-819', f2.quotaCode, '8-819');
+var f3 = pr('橡胶软接头 DN400');
+ck('软接头DN400定额8-829', f3.quotaCode, '8-829');
+ck('软接头DN400价1150', f3.price, 1150);
+var f4 = pr('可曲挠橡胶软接头');
+ck('软接头无管径提示', /管径/.test(f4.warn || ''), true);
+
+var x1 = pr('直埋保温管 DN100');
+var x2 = pr('PP排水管 DN100');
+var x3 = pr('玻璃管液位计');
+A.annotateListCode12([x1, x2, x3]);
+ck('保温管12位编码', x1.listCode12, '030801020001');
+ck('PP排水12位编码', x2.listCode12, '031001008001');
+ck('液位计12位编码', x3.listCode12, '031002001001');
+
+console.log('\n== 31. 双主材（PP排水管：管材 + 管件）导出与合计 ==');
+var capX1 = null, capX2 = null;
+global.XLSX = {
+  utils: {
+    aoa_to_sheet: function (d) { return d; },
+    book_new: function () { return {}; },
+    book_append_sheet: function (wb, ws) { wb.__rows = ws; }
+  },
+  writeFile: function (wb, name) { if (/建经/.test(name)) capX2 = wb.__rows; else capX1 = wb.__rows; }
+};
+function near2(a, b, tol) { return Math.abs(a - b) <= (tol === undefined ? 0.01 : tol); }
+var dbl = A.parseRows([[1, 'PP排水静音管 DN100', 20]], '2026-10', 'glodon');
+A.exportGLD(dbl);
+var matRows = capX1.filter(function (r) { return r[9] === '子目下设备' && /PP排水静音管/.test(String(r[10])); });
+ck('双主材两行主材', matRows.length, 2);
+ck('主材第一行名称', matRows[0][10], 'PP排水静音管 DN100');
+ck('主材第二行名称附管件', matRows[1][10], 'PP排水静音管 DN100管件');
+ck('主材第二行单价19.87', matRows[1][14], 19.87);
+ck('主材第二行与管道同量', matRows[1][13], 20);
+ck('主材两行编码不同', matRows[0][8] !== matRows[1][8], true);
+ck('主材编码前缀Z00741', /^Z00741-\d{3}$/.test(matRows[1][8]), true);
+var totRow = capX1.filter(function (r) { return r[0] === '合计'; })[0];
+var noFit = A.parseRows([[1, 'PP排水静音管 DN100', 20]], '2026-10', 'glodon');
+noFit.forEach(function (r) { delete r.mat2; });
+A.exportGLD(noFit);
+var totNoFit = capX1.filter(function (r) { return r[0] === '合计'; })[0];
+ck('管件金额已计入合计(19.867*20)', near2(totRow[14] - totNoFit[14], 397.34, 0.05), true);
+ck('合计大于不含管件合计', totRow[14] > totNoFit[14], true);
+
+A.exportGLDGs(dbl);
+var matRowsG = capX1.filter(function (r) { return r[9] === '子目下设备' && /PP排水静音管/.test(String(r[10])); });
+ck('概算双主材两行', matRowsG.length, 2);
+var totRowG = capX1.filter(function (r) { return r[0] === '合计'; })[0];
+A.exportGLDGs(noFit);
+var totNoFitG = capX1.filter(function (r) { return r[0] === '合计'; })[0];
+ck('概算合计含管件', near2(totRowG[13] - totNoFitG[13], 397.34, 0.05), true);
+
+A.exportJianjing(dbl);
+var jm = capX2.filter(function (r) { return /管件/.test(String(r[2])); });
+ck('建经有管件行', jm.length, 1);
+ck('建经管件价19.87', jm[0][5], 19.87);
+ck('建经管件行编码与管道同', jm[0][1], '031001008001');
+var jt = capX2.filter(function (r) { return r[0] === '合计'; })[0];
+A.exportJianjing(noFit);
+var jtN = capX2.filter(function (r) { return r[0] === '合计'; })[0];
+ck('建经合计含管件', near2(jt[5] - jtN[5], 397.34, 0.05), true);
+
+A.exportJianjingGs(dbl);
+var jmg = capX2.filter(function (r) { return /管件/.test(String(r[1])); });
+ck('概算建经有管件行', jmg.length, 1);
+var jtg = capX2.filter(function (r) { return r[0] === '合计'; })[0];
+A.exportJianjingGs(noFit);
+var jtgN = capX2.filter(function (r) { return r[0] === '合计'; })[0];
+ck('概算建经合计含管件', near2(jtg[4] - jtgN[4], 397.34, 0.05), true);
+
+var single = A.parseRows([[1, '直埋保温管 DN100', 10]], '2026-10', 'glodon');
+A.exportGLD(single);
+var sMat = capX1.filter(function (r) { return r[9] === '子目下设备' && /直埋保温管/.test(String(r[10])); });
+ck('单主材仍只一行', sMat.length, 1);
+ck('单主材无管件行', capX1.filter(function (r) { return /管件/.test(String(r[10])); }).length, 0);
 
 console.log('\n结果: ' + pass + ' 通过, ' + fail + ' 失败');
 if (fail) process.exit(1);
