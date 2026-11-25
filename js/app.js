@@ -2291,6 +2291,11 @@
     st.textContent = '正在解析「' + file.name + '」…（PDF 逐页提取文字，文件不上传服务器）';
     try {
       var res = await SPEC.extractFile(file);
+      if (res.diag === 'image') {
+        // 截图直接进 OCR，不用再点按钮
+        runOcr();
+        return;
+      }
       if (res.empty) {
         st.className = 'spec-status err';
         var dg = res.diag;
@@ -2348,8 +2353,8 @@
     st.className = 'spec-status loading';
     st.textContent = '准备 OCR…';
     try {
-      var buf = await PENDING_FILE.arrayBuffer();
-      var res = await SPEC.ocrPdf(buf, function (o) {
+      var isImg = /^image\//.test(PENDING_FILE.type || '') || /\.(png|jpe?g|webp|bmp)$/i.test(PENDING_FILE.name || '');
+      var onProg = function (o) {
         var txt = o.note || '识别中…';
         if (o.total && o.page) {
           var pct = o.phase === 'ocr'
@@ -2359,7 +2364,10 @@
         }
         st.className = 'spec-status loading';
         st.textContent = txt;
-      });
+      };
+      var res = isImg
+        ? await SPEC.ocrImage(PENDING_FILE, onProg)
+        : await SPEC.ocrPdf(await PENDING_FILE.arrayBuffer(), onProg);
       var chars = res.text.replace(/\s/g, '').length;
       if (chars < 30) {
         st.className = 'spec-status err';

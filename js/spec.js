@@ -672,6 +672,9 @@
     } else if (ext === 'dwg') {
       buf = await readAsArrayBuffer(file);
       res = extractDwg(buf);
+    } else if (ext === 'png' || ext === 'jpg' || ext === 'jpeg' || ext === 'webp' || ext === 'bmp') {
+      // 图片：直接交给 OCR 通道，这里只做格式确认
+      return { text: '', empty: true, diag: 'image', isImage: true, pages: 1, note: '图片待 OCR', kind: ext, fileName: name, size: file.size || 0 };
     } else if (ext === 'txt' || ext === 'md' || ext === 'csv') {
       var txt = await readAsText(file, 'utf-8');
       if (!/[\u4e00-\u9fa5]/.test(txt)) {
@@ -1167,6 +1170,51 @@
     return x;
   }
 
+  // 图片 OCR：截图直接识别，不需要经过 PDF
+  async function ocrImage(file, onProgress) {
+    var report = function (o) { if (onProgress) onProgress(o); };
+    report({ phase: 'engine', page: 0, total: 1, note: '正在加载 OCR 引擎（首次约 11MB，之后走缓存）' });
+    var T = await loadTesseract();
+
+    var bmp;
+    try {
+      bmp = await createImageBitmap(file);
+    } catch (e) {
+      throw new Error('图片读取失败，换一张 PNG / JPG 试试');
+    }
+    // 字太小就先放大，太大就缩到 3600px 以内，兼顾清晰度和速度
+    var w = bmp.width, h = bmp.height;
+    var scale = 1;
+    if (w < 1200) scale = Math.min(3, 1800 / w);
+    else if (w > 3600) scale = 3600 / w;
+    var cv = document.createElement('canvas');
+    cv.width = Math.round(w * scale);
+    cv.height = Math.round(h * scale);
+    var ctx = cv.getContext('2d');
+    ctx.fillStyle = '#fff';
+    ctx.fillRect(0, 0, cv.width, cv.height);
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = 'high';
+    ctx.drawImage(bmp, 0, 0, cv.width, cv.height);
+    try { bmp.close && bmp.close(); } catch (e) {}
+
+    report({ phase: 'ocr', page: 1, total: 1, note: '正在识别图片（' + cv.width + '×' + cv.height + '）' });
+    var worker = await T.createWorker('chi_sim', 1, {
+      workerPath: tessAbs(TESS_BASE + 'worker.min.js'),
+      corePath: tessAbs(TESS_BASE),
+      langPath: tessAbs(TESS_BASE + 'lang'),
+      workerBlobURL: false,
+      logger: function () {}
+    });
+    await worker.setParameters({ preserve_interword_spaces: '0' });
+    var r = await worker.recognize(cv);
+    try { await worker.terminate(); } catch (e) {}
+    cv.width = cv.height = 0;
+
+    report({ phase: 'done', page: 1, total: 1, note: '' });
+    return { text: normalize(tidyOcr((r && r.data && r.data.text) || '')), pages: 1, engine: 'tesseract-chi_sim' };
+  }
+
   // 把 PDF 每页渲染成位图再识别。onProgress({phase,page,total,note})
   async function ocrPdf(buf, onProgress, opts) {
     opts = opts || {};
@@ -1227,6 +1275,7 @@
     parseText: parseText,
     extractFile: extractFile,
     ocrPdf: ocrPdf,
+    ocrImage: ocrImage,
     matchItem: matchItem,
     analyze: analyze,
     itemMaterialKey: itemMaterialKey,
