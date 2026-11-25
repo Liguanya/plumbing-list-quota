@@ -2283,6 +2283,84 @@
   var PENDING_FILE = null;   // 文字层读不出时留着，供 OCR 兜底
   var OCR_RUNNING = false;
 
+  // 单个文件取文本：有文字层直接提取，图片或无文字层的 PDF 走 OCR
+  async function ocrOne(file, onProg) {
+    var isImg = /^image\//.test(file.type || '') || /\.(png|jpe?g|webp|bmp)$/i.test(file.name || '');
+    if (isImg) return await SPEC.ocrImage(file, onProg);
+    var r = await SPEC.extractFile(file);
+    if (!r.empty && r.text && r.text.replace(/\s/g, '').length >= 20) {
+      return { text: r.text, pages: r.pages || 0, engine: 'text-layer' };
+    }
+    return await SPEC.ocrPdf(await file.arrayBuffer(), onProg);
+  }
+
+  // 批量：一次传多张截图 / 多个 PDF，逐个取文本后合并解析
+  async function loadSpecBatch(files) {
+    var st = document.getElementById('specStatus');
+    if (!st || typeof SPEC === 'undefined') return;
+    if (OCR_RUNNING) {
+      st.className = 'spec-status warn';
+      st.textContent = '上一个文件还在识别中，等它完成再传下一批。';
+      return;
+    }
+    var list = Array.prototype.slice.call(files || []);
+    if (!list.length) return;
+    OCR_RUNNING = true;
+    var t0 = Date.now();
+    var texts = [], okNames = [], fail = [], skipped = [], totalPages = 0;
+    try {
+      for (var i = 0; i < list.length; i++) {
+        var f = list[i];
+        var tag = '（' + (i + 1) + '/' + list.length + '）';
+        st.className = 'spec-status loading';
+        st.textContent = tag + '正在处理「' + f.name + '」…';
+        try {
+          var r = await ocrOne(f, (function (tg) {
+            return function (o) {
+              var t = tg + (o.note || '识别中…');
+              if (o.total && o.page) t += '（' + Math.round((o.page / o.total) * 100) + '%）';
+              st.className = 'spec-status loading';
+              st.textContent = t;
+            };
+          })(tag));
+          var c = ((r && r.text) || '').replace(/\s/g, '').length;
+          if (c < 20) { skipped.push(f.name); }   // 空白页/纯图页，静默跳过，不当失败
+          else { texts.push(r.text); okNames.push(f.name); totalPages += (r.pages || 0); }
+        } catch (e) {
+          fail.push(f.name);
+        }
+      }
+      var merged = texts.join('\n');
+      var chars = merged.replace(/\s/g, '').length;
+      if (chars < 30) {
+        st.className = 'spec-status err';
+        st.textContent = '这 ' + list.length + ' 个文件都没读出可用文字。可能是截图太小、字太密，或者图里本来就没有说明文字。';
+        return;
+      }
+      var spec = SPEC.parseText(merged);
+      spec.fileName = '批量 ' + okNames.length + ' 个文件';
+      spec.extract = { pages: totalPages, note: '批量识别' };
+      ACTIVE_SPEC = spec;
+      SPEC_APPLY = true;
+      var secs = Math.round((Date.now() - t0) / 1000);
+      var np = (spec.points || []).length;
+      var extra = [];
+      if (skipped.length) extra.push('另有 ' + skipped.length + ' 个文件没有文字，已跳过');
+      if (fail.length) extra.push('打不开：' + fail.join('、'));
+      st.className = fail.length ? 'spec-status warn' : 'spec-status ok';
+      st.textContent = '批量识别完成：' + okNames.length + '/' + list.length + ' 个文件 · ' + chars + ' 字 · 造价要点 ' +
+        np + ' 类 · 管材 ' + spec.materials.length + ' 类 · 连接方式 ' + spec.rules.length + ' 条 · 耗时 ' + secs + ' 秒' +
+        (extra.length ? '；' + extra.join('；') : '');
+      renderSpecCard(spec);
+      refreshAll(true);
+    } catch (e) {
+      st.className = 'spec-status err';
+      st.textContent = '批量识别失败：' + ((e && e.message) || e);
+    } finally {
+      OCR_RUNNING = false;
+    }
+  }
+
   async function loadSpec(file) {
     var st = document.getElementById('specStatus');
     if (!st || typeof SPEC === 'undefined') return;
@@ -2301,12 +2379,24 @@
         var dg = res.diag;
         var ocrRow = '<div class="ocr-row"><button type="button" class="btn-mini" id="specOcrBtn">用 OCR 识别（本地，不联网）</button>' +
           '<span class="ocr-tip">单页约 3-10 秒（首次要加载 11MB 引擎，之后走缓存）；小字准确率 85-90%，关键参数建议对照原图核</span></div>';
-        if (dg === 'vector') {
+        if (dg === 'thumb') {
+          st.innerHTML = '「' + escapeHtml(file.name) + '」是<b>图纸目录 / 索引页</b>：整页只有一张拼版缩略图，12 张图纸被缩小排在一起，每张只有两三厘米宽，原图上的字被缩到了零点几磅——<b>里面没有可读的说明正文</b>，放大多少倍都认不出来。<br>' +
+            '<b>要读说明，得拿那 12 张原图：</b>① 在 CAD 里打开说明图，<b>打印 → PDF</b>（不要用「打印到一张 A4」的拼版），每张 A1 出一页，12 页一起传上来，有文字层就直接读；② 或在快速看图里逐张放大截图，<b>一次选中多张一起拖进来</b>（现在支持批量），会自动排队识别；③ 能复制的文字直接粘到下方输入框。' + ocrRow;
+        } else if (dg === 'vector') {
           st.innerHTML = '「' + escapeHtml(file.name) + '」<b>没有文字层</b>：文件里没有字体对象、也没有嵌入图片，说明文字在导出时被转成了曲线（快速看图、部分虚拟打印机导出的 PDF 就是这样，看着清楚但机器读不出字）。<br>' +
             '<b>三个办法：</b>① 直接点下面的 OCR 识别，把曲线还原成文字；② 用 CAD「打印 → PDF」而不是截图导出，出来就是文字版；③ 把说明文字粘贴到下方输入框，解析最快。' + ocrRow;
         } else if (dg === 'scan') {
           st.innerHTML = '「' + escapeHtml(file.name) + '」是<b>扫描件 / 图片版 PDF</b>：页面是整张图片，没有文字层，浏览器读不出文字。<br>' +
             '<b>三个办法：</b>① 直接点下面的 OCR 识别；② 用 CAD 打印生成文字版 PDF；③ 把说明文字粘贴到下方输入框。' + ocrRow;
+        } else if (dg === 'badmap') {
+          var pgN = res.pages || 1;
+          st.innerHTML = '「' + escapeHtml(file.name) + '」<b>有字体，但缺编码对照表</b>：文字确实在文件里，只是没带「字形→字符」的映射（ToUnicode），任何软件提取出来都是乱码——CAD 转 PDF 时用了不嵌映射的字体就会这样。<br>' +
+            (pgN <= 12
+              ? '<b>正在自动用 OCR 还原</b>（共 ' + pgN + ' 页），也可以改用 CAD「打印 → PDF」重出一份，那样能直接读。'
+              : '共 ' + pgN + ' 页，整份 OCR 会比较慢，建议只把说明那几页单独导出来再传，或点下面按钮识别前 12 页。') + ocrRow;
+          if (pgN <= 12) {
+            setTimeout(function () { runOcr(); }, 400);
+          }
         } else {
           st.innerHTML = '未能从「' + escapeHtml(file.name) + '」提取到可读文字。可改用文字版 PDF、粘贴说明文字，或尝试 OCR。' + ocrRow;
         }
@@ -2499,8 +2589,10 @@
     var specArea = document.getElementById('specArea');
     if (specInput && specArea) {
       specInput.addEventListener('change', function (e) {
-        var f = e.target.files[0];
-        if (f) loadSpec(f);
+        var fs = e.target.files;
+        if (!fs || !fs.length) return;
+        if (fs.length > 1) loadSpecBatch(fs); else loadSpec(fs[0]);
+        try { e.target.value = ''; } catch (err) {}   // 清空，允许重复选同一批
       });
       specArea.addEventListener('click', function () { specInput.click(); });
       specArea.addEventListener('dragover', function (e) { e.preventDefault(); specArea.classList.add('dragover'); });
@@ -2508,8 +2600,9 @@
       specArea.addEventListener('drop', function (e) {
         e.preventDefault();
         specArea.classList.remove('dragover');
-        var f = e.dataTransfer.files[0];
-        if (f) loadSpec(f);
+        var fs = e.dataTransfer.files;
+        if (!fs || !fs.length) return;
+        if (fs.length > 1) loadSpecBatch(fs); else loadSpec(fs[0]);
       });
     }
 

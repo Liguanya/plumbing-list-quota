@@ -11,7 +11,7 @@
 (function (global) {
   'use strict';
 
-  var VERSION = '1.3.0';
+  var VERSION = '1.4.0';
 
   /* ==================== 词典 ==================== */
 
@@ -320,7 +320,13 @@
   /* ==================== 基础工具 ==================== */
 
   function normalize(t) {
-    return String(t || '')
+    var s = String(t || '');
+    // CAD / PDF 导出的中文常带「兼容表意文字」（U+F900、U+2F800 区），例如 度(U+FA01)=度、六(U+F9D1)=六。
+    // 这类字符看着一样，但正则匹配「厚度」「六、试验」会全部落空，先归一化回标准汉字。
+    s = s.replace(/[\uF900-\uFAFF\u2F800-\u2FA1F]/g, function (c) {
+      try { return c.normalize('NFKC'); } catch (e) { return c; }
+    });
+    return s
       .replace(/\u3000/g, ' ')
       .replace(/\r\n?/g, '\n')
       .replace(/[ \t]+/g, ' ')
@@ -541,13 +547,18 @@
       var u8 = new Uint8Array(buf);
       var dec = new TextDecoder('latin1');
       var hasFont = false, hasImage = false, CH = 65536;
+      var pathOps = 0;   // 内容流里的路径操作符（l/m/re/c）粗略计数，用来判断是不是大图/缩略图
       for (var i = 0; i < u8.length; i += CH) {
         var s = dec.decode(u8.subarray(i, Math.min(i + CH, u8.length)));
         if (!hasFont && s.indexOf('/Font') >= 0) hasFont = true;
         if (!hasImage && (s.indexOf('/Subtype/Image') >= 0 || s.indexOf('/Subtype /Image') >= 0)) hasImage = true;
-        if (hasFont && hasImage) break;
+        if (pathOps < 300000) {
+          var m = s.match(/[\s\d.\-]l[\s]/g);
+          if (m) pathOps += m.length;
+        }
+        if (hasFont && hasImage && pathOps >= 300000) break;
       }
-      return { font: hasFont, image: hasImage };
+      return { font: hasFont, image: hasImage, paths: pathOps, size: u8.length };
     } catch (e) { return null; }
   }
 
@@ -592,9 +603,13 @@
     if (empty) {
       // 区分「扫描件」与「文字被转成曲线的矢量化导出件」——两者处理方式完全不同
       if (sn) {
-        if (!sn.font && !sn.image) diag = 'vector';
-        else if (sn.image) diag = 'scan';
-        else diag = 'unknown';
+        if (!sn.font && !sn.image) {
+          // 单页 + A3 及以下的纸 + 文件却很大 → 多半是图纸目录/索引页，里面是密排缩略图，正文不在这一页
+          var pw = 0;
+          try { pw = (await doc.getPage(1)).getViewport({ scale: 1 }).width; } catch (e) { pw = 0; }
+          diag = (doc.numPages === 1 && sn.size > 3 * 1048576 && pw > 0 && pw < 900) ? 'thumb' : 'vector';
+        } else if (sn.image) diag = 'scan';
+        else diag = 'badmap';   // 有字体对象却提取不出字 → 缺 ToUnicode 映射，提出来是乱码
       } else {
         diag = 'unknown';
       }
@@ -1144,11 +1159,13 @@
   // tesseract 对中文逐字识别，字间会插入空格（「D N6 5」「0 . 6 MP a」），
   // 且常见字形混淆（耻有/既有、卡籍/卡箍）。这里做还原。
   var OCR_FIX = [
-    [/耻有/g, '既有'], [/蚂有/g, '既有'], [/蚂存/g, '既有'], [/既冇/g, '既有'],
+    [/耻有/g, '既有'], [/蚂有/g, '既有'], [/蚂存/g, '既有'], [/既冇/g, '既有'], [/皮有/g, '既有'],
+    [/水讨/g, '水压'], [/试讨/g, '试压'],
     [/卡籍/g, '卡箍'], [/卡籍连接/g, '卡箍连接'], [/卡箱连接/g, '卡箍连接'],
     [/抗晨/g, '抗震'], [/抗居/g, '抗震'], [/抗展/g, '抗震'], [/支品架/g, '支吊架'],
     [/消火检/g, '消火栓'], [/消淡/g, '消火'],
     [/薄璧/g, '薄壁'], [/热溶/g, '热熔'], [/螺绞/g, '螺纹'], [/法蓝/g, '法兰'],
+    [/保痪/g, '保温'], [/保溫/g, '保温'], [/坛验/g, '试验'], [/坛讨/g, '试压'], [/坛压/g, '试压'],
     [/水压试马验/g, '水压试验'], [/试马验/g, '试验'],
     [/(\d)\s*[Kk]\s*[Ww][Ww]/g, '$1kW'], [/(\d)\s*[Kk][Ww]\b/g, '$1kW'],
     [/(\d)\s*[Mm]\s*[Pp]\s*[Aa]/g, '$1MPa'], [/(\d)\s*[Mm]\s*[Mm]\b/g, '$1mm']
@@ -1249,8 +1266,9 @@
       report({ phase: 'render', page: i, total: maxPages, note: '正在渲染第 ' + i + '/' + maxPages + ' 页' });
       var page = await doc.getPage(i);
       var base = page.getViewport({ scale: 1 });
-      // 目标宽度约 3000px：够看清小字，又不至于撑爆内存
-      var scale = Math.min(5, Math.max(2, 3000 / base.width));
+      // A4 说明页 3000px 就够；A1/A0 大幅面的字本身小，按 A4 像素渲染会糊，得给更多像素
+      var targetW = base.width > 1500 ? 5200 : 3000;
+      var scale = Math.min(8, Math.max(2, targetW / base.width));
       var vp = page.getViewport({ scale: scale });
       var cv = document.createElement('canvas');
       cv.width = Math.round(vp.width);
