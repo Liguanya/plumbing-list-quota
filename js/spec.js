@@ -11,7 +11,7 @@
 (function (global) {
   'use strict';
 
-  var VERSION = '1.4.0';
+  var VERSION = '1.5.0';
 
   /* ==================== 词典 ==================== */
 
@@ -98,8 +98,8 @@
         var dn = t.match(/(?:不小于|大于等于|≥|>)\s*D\s*N\s*(\d+)/i) || t.match(/D\s*N\s*(\d+)\s*(?:以上|及以上)/i);
         if (dn) d.push('起设管径 DN' + dn[1]);
         // OCR 常把「24」拆成「2 4」，数字内部允许空白，取到后清掉
-        var lat = t.match(/侧\s*向[^。；]{0,26}?(\d[\d\s]*(?:\.\s*\d+)?)\s*(?:米|m(?![a-z])|M)/);
-        var lon = t.match(/纵\s*向[^。；]{0,26}?(\d[\d\s]*(?:\.\s*\d+)?)\s*(?:米|m(?![a-z])|M)/);
+        var lat = t.match(/侧\s*向[^。；]{0,26}?(\d[\d\s]*(?:\.\s*\d+)?)\s*(?:米|m(?![a-z])|M|(?=[，,;；、。\s]|$))/);
+        var lon = t.match(/纵\s*向[^。；]{0,26}?(\d[\d\s]*(?:\.\s*\d+)?)\s*(?:米|m(?![a-z])|M|(?=[，,;；、。\s]|$))/);
         var rebuild = /改建|改造|加固/.test(t);
         if (lat) d.push('侧向间距 ' + (rebuild ? '按新建 ' : '') + lat[1].replace(/\s/g, '') + 'm');
         if (lon) d.push('纵向间距 ' + (rebuild ? '按新建 ' : '') + lon[1].replace(/\s/g, '') + 'm');
@@ -364,8 +364,11 @@
   function isHeading(t) {
     var s = String(t).trim();
     if (!s || s.length > 40) return false;
-    if (/^\d+(\.\d+)*[\s、.．]/.test(s)) return true;
-    if (/^[一二三四五六七八九十]+[、.．]/.test(s)) return true;
+    // 编号行只有在「不带句读」或「以冒号收尾」时才是标题；
+    // 「2.生活给水支管采用PP-R热熔连接，压力等级S2.5。」这种是正文，误判成标题会整条丢掉
+    var tidy = /[：:]$/.test(s) || !/[，,。；;]/.test(s);
+    if (/^\d+(\.\d+)*[\s、.．]/.test(s)) return tidy;
+    if (/^[一二三四五六七八九十]+[、.．]/.test(s)) return tidy;
     if (/^[（(]\d+[）)]/.test(s)) return true;
     if (s.length <= 26 && /[：:]$/.test(s)) return true;
     return false;
@@ -1164,7 +1167,7 @@
     [/卡籍/g, '卡箍'], [/卡籍连接/g, '卡箍连接'], [/卡箱连接/g, '卡箍连接'],
     [/抗晨/g, '抗震'], [/抗居/g, '抗震'], [/抗展/g, '抗震'], [/支品架/g, '支吊架'],
     [/消火检/g, '消火栓'], [/消淡/g, '消火'],
-    [/薄璧/g, '薄壁'], [/热溶/g, '热熔'], [/螺绞/g, '螺纹'], [/法蓝/g, '法兰'],
+    [/薄璧/g, '薄壁'], [/热溶/g, '热熔'], [/螺绞/g, '螺纹'], [/法蓝/g, '法兰'], [/沟覃/g, '沟槽'], [/化数池/g, '化粪池'], [/排污奈/g, '排污泵'], [/防锈潜/g, '防锈漆'], [/卡夭/g, '卡箍'], [/法兰连管管/g, '法兰连接'], [/法兰连管(?![道])/g, '法兰连接'],
     [/保痪/g, '保温'], [/保溫/g, '保温'], [/坛验/g, '试验'], [/坛讨/g, '试压'], [/坛压/g, '试压'],
     [/水压试马验/g, '水压试验'], [/试马验/g, '试验'],
     [/(\d)\s*[Kk]\s*[Ww][Ww]/g, '$1kW'], [/(\d)\s*[Kk][Ww]\b/g, '$1kW'],
@@ -1231,7 +1234,109 @@
     cv.width = cv.height = 0;
 
     report({ phase: 'done', page: 1, total: 1, note: '' });
-    return { text: normalize(tidyOcr((r && r.data && r.data.text) || '')), pages: 1, engine: 'tesseract-chi_sim' };
+    var d1 = (r && r.data) || {};
+    return { text: normalize(tidyOcr(joinLines(wordsToLines(d1.words) || d1.text || ''))), pages: 1, engine: 'tesseract-chi_sim' };
+  }
+
+  // OCR 结果按字框重排：同一视觉行里若两字之间隔着栏间距，就断成两行，
+  // 否则多栏排版会被拼成一句（「2.不含厨 七、试验与验收3.不含室」这种）
+  function wordsToLines(words) {
+    if (!words || !words.length) return '';
+    var ws = [];
+    for (var i = 0; i < words.length; i++) {
+      var w = words[i], b = w && w.bbox;
+      if (!b || !w.text || !String(w.text).trim()) continue;
+      ws.push({ t: String(w.text), x0: b.x0, x1: b.x1, y0: b.y0, y1: b.y1, yc: (b.y0 + b.y1) / 2 });
+    }
+    if (!ws.length) return '';
+    ws.sort(function (a, b) { return a.yc - b.yc || a.x0 - b.x0; });
+    var lines = [], cur = null;
+    ws.forEach(function (w) {
+      var h = Math.max(1, w.y1 - w.y0);
+      if (!cur || Math.abs(w.yc - cur.yc) > h * 0.6) {
+        cur = { yc: w.yc, items: [w] };
+        lines.push(cur);
+      } else {
+        cur.items.push(w);
+        cur.yc = (cur.yc * (cur.items.length - 1) + w.yc) / cur.items.length;
+      }
+    });
+    var out = [];
+    lines.forEach(function (ln) {
+      ln.items.sort(function (a, b) { return a.x0 - b.x0; });
+      var buf = '', lastX1 = null;
+      ln.items.forEach(function (w) {
+        var wd = Math.max(1, w.x1 - w.x0);
+        // 只有明显大于字宽的空白才算栏/列间距，否则正常紧排也会被切碎
+        if (lastX1 !== null && (w.x0 - lastX1) > Math.max(wd * 1.5, 26)) { out.push(buf); buf = ''; }
+        buf += w.t;
+        lastX1 = w.x1;
+      });
+      if (buf) out.push(buf);
+    });
+    return out.join('\n');
+  }
+
+  // OCR 是按视觉行吐字的，一段话常被拆成好几行（「2.生活给水支管采用PP-R」/「热熔连接，压力等级S2.5。」），
+  // 直接拿去匹配规则，「PP-R热熔连接」就被拆散了。这里把明显属于同一段的行接回去：
+  // 只有「上一行已收句」或「这一行是新条目编号」时才断开。
+  function joinLines(t) {
+    var lines = String(t || '').split('\n');
+    var head = /^\s*(?:[0-9]{1,2}\s*[.、．]|[（(]\s*[0-9一二三四五六七八九十]{1,2}\s*[)）]|[一二三四五六七八九十]{1,2}\s*、|[①-⑳])/;
+    var out = [], buf = '';
+    for (var i = 0; i < lines.length; i++) {
+      var ln = String(lines[i] || '').replace(/^\s+|\s+$/g, '');
+      if (!ln) continue;
+      if (!buf) { buf = ln; continue; }
+      // 上一行是短标题（「三、管材及连接方式」这种），本身就不该跟正文粘在一起
+      // 只认「三、管材及连接方式」这类中文序号标题；「2.生活给水支管采用PP-R」是正文首行，不能当标题断开
+      var title = head.test(buf) && buf.length <= 12 && !/[，,。；;]/.test(buf) && !/^[0-9]/.test(buf);
+      if (title || /[。；;：:]$/.test(buf) || head.test(ln)) { out.push(buf); buf = ln; }
+      else buf += ln;
+    }
+    if (buf) out.push(buf);
+    return out.join('\n');
+  }
+
+  // 用垂直投影找栏边界：说明图多是 2-4 栏密排，按网格硬切会把两栏切进同一块，
+  // OCR 就会把左右栏的文字拼成一行。先找出栏间隙，再按栏切。
+  async function detectColumns(page, base) {
+    try {
+      var pw = 1400;
+      var ps = pw / base.width;
+      var vp = page.getViewport({ scale: ps });
+      var cv = document.createElement('canvas');
+      cv.width = Math.max(1, Math.round(vp.width));
+      cv.height = Math.max(1, Math.round(vp.height));
+      var ctx = cv.getContext('2d');
+      ctx.fillStyle = '#fff';
+      ctx.fillRect(0, 0, cv.width, cv.height);
+      await page.render({ canvasContext: ctx, viewport: vp }).promise;
+      var data = ctx.getImageData(0, 0, cv.width, cv.height).data;
+      var W = cv.width, H = cv.height, dark = new Int32Array(W);
+      for (var y = 0; y < H; y++) {
+        var row = y * W * 4;
+        for (var x = 0; x < W; x++) if (data[row + x * 4] < 150) dark[x]++;
+      }
+      var gaps = [], st = null;
+      for (var x2 = 0; x2 <= W; x2++) {
+        var blank = x2 < W && dark[x2] < H * 0.006;
+        if (blank) { if (st === null) st = x2; }
+        else if (st !== null) { gaps.push([st, x2]); st = null; }
+      }
+      var minGap = W * 0.012, cols = [], cursor = 0;
+      for (var g = 0; g < gaps.length; g++) {
+        var a = gaps[g][0], b = gaps[g][1];
+        if (b - a >= minGap && a > W * 0.04 && b < W * 0.96 && a - cursor > W * 0.06) {
+          cols.push([cursor, a]);
+          cursor = b;
+        }
+      }
+      if (W - cursor > W * 0.06) cols.push([cursor, W]);
+      cv.width = cv.height = 0;
+      if (cols.length < 2 || cols.length > 6) return null;
+      return cols.map(function (c) { return [c[0] / ps, c[1] / ps]; });
+    } catch (e) { return null; }
   }
 
   // 把 PDF 每页渲染成位图再识别。onProgress({phase,page,total,note})
@@ -1263,26 +1368,72 @@
 
     var chunks = [];
     for (var i = 1; i <= maxPages; i++) {
-      report({ phase: 'render', page: i, total: maxPages, note: '正在渲染第 ' + i + '/' + maxPages + ' 页' });
       var page = await doc.getPage(i);
       var base = page.getViewport({ scale: 1 });
-      // A4 说明页 3000px 就够；A1/A0 大幅面的字本身小，按 A4 像素渲染会糊，得给更多像素
-      var targetW = base.width > 1500 ? 5200 : 3000;
-      var scale = Math.min(8, Math.max(2, targetW / base.width));
-      var vp = page.getViewport({ scale: scale });
-      var cv = document.createElement('canvas');
-      cv.width = Math.round(vp.width);
-      cv.height = Math.round(vp.height);
-      var ctx = cv.getContext('2d');
-      ctx.fillStyle = '#fff';
-      ctx.fillRect(0, 0, cv.width, cv.height);
-      await page.render({ canvasContext: ctx, viewport: vp }).promise;
+      // 一块的目标像素宽度：小字（说明图常用 2.5-3mm 字高）放大到 25px 以上才认得出
+      var TILE_PX = 3200;
 
-      report({ phase: 'ocr', page: i, total: maxPages, note: '正在识别第 ' + i + '/' + maxPages + ' 页（' + cv.width + '×' + cv.height + '）' });
-      var r = await worker.recognize(cv);
-      chunks.push((r && r.data && r.data.text) || '');
-      cv.width = cv.height = 0;
-      cv = null;
+      // 先试着分出栏：说明图多是 2-4 栏密排，按网格硬切会把两栏切进同一块
+      var cols = await detectColumns(page, base);
+      var tiles = [];
+      if (cols) {
+        var maxCw = 0;
+        for (var ci = 0; ci < cols.length; ci++) maxCw = Math.max(maxCw, cols[ci][1] - cols[ci][0]);
+        var sCol = Math.min(6, Math.max(2, TILE_PX / maxCw));
+        // 一栏太高才纵向再切；上限放到 8000px，让常见 A1 栏高（约 6700px）整栏一块，
+        // 否则一段话会被切在两块里，接行接不上、顺序还会错
+        var rowsPerCol = Math.min(4, Math.max(1, Math.ceil((base.height * sCol) / 8000)));
+        var chhC = base.height / rowsPerCol;
+        for (var cj = 0; cj < cols.length; cj++) {
+          for (var rj = 0; rj < rowsPerCol; rj++) {
+            tiles.push({ x0: cols[cj][0], x1: cols[cj][1], y0: rj * chhC, y1: (rj + 1) * chhC, scale: sCol });
+          }
+        }
+      } else {
+        // 分不出栏（表格、通栏排版）：退回网格切
+        var estPx = 8 * (TILE_PX / base.width);
+        var k = estPx < 22 ? Math.min(3, Math.ceil(22 / estPx)) : 1;
+        var cwG = base.width / k, chhG = base.height / k;
+        var padX = cwG * 0.04, padY = chhG * 0.04;
+        for (var ry = 0; ry < k; ry++) {
+          for (var rx = 0; rx < k; rx++) {
+            var gx0 = Math.max(0, rx * cwG - padX), gx1 = Math.min(base.width, (rx + 1) * cwG + padX);
+            var gy0 = Math.max(0, ry * chhG - padY), gy1 = Math.min(base.height, (ry + 1) * chhG + padY);
+            tiles.push({ x0: gx0, x1: gx1, y0: gy0, y1: gy1, scale: Math.min(9, Math.max(2, TILE_PX / (gx1 - gx0))) });
+          }
+        }
+      }
+
+      for (var ti = 0; ti < tiles.length; ti++) {
+        var tl = tiles[ti];
+        var tag = '第 ' + i + '/' + maxPages + ' 页' + (tiles.length > 1 ? ' 第 ' + (ti + 1) + '/' + tiles.length + ' 块' : '');
+        report({ phase: 'render', page: i, total: maxPages, note: '正在渲染' + tag });
+        var vp = page.getViewport({ scale: tl.scale });
+        // PDF 坐标原点在左下，viewport 原点在左上，用 convertToViewportPoint 换算
+        var p0 = vp.convertToViewportPoint(tl.x0, tl.y1);
+        var p1 = vp.convertToViewportPoint(tl.x1, tl.y0);
+        var cvW = Math.max(1, Math.round(p1[0] - p0[0]));
+        var cvH = Math.max(1, Math.round(p1[1] - p0[1]));
+        var cv = document.createElement('canvas');
+        cv.width = cvW;
+        cv.height = cvH;
+        var ctx = cv.getContext('2d');
+        ctx.fillStyle = '#fff';
+        ctx.fillRect(0, 0, cvW, cvH);
+        // transform 把整页坐标系平移到这一块，canvas 只显示这块区域
+        await page.render({
+          canvasContext: ctx,
+          viewport: vp,
+          transform: [1, 0, 0, 1, -p0[0], -p0[1]]
+        }).promise;
+
+        report({ phase: 'ocr', page: i, total: maxPages, note: '正在识别' + tag + '（' + cvW + '×' + cvH + '）' });
+        var r = await worker.recognize(cv);
+        var d0 = (r && r.data) || {};
+        chunks.push(joinLines(wordsToLines(d0.words) || d0.text || ''));
+        cv.width = cv.height = 0;
+        cv = null;
+      }
     }
     try { await worker.terminate(); } catch (e) {}
 
