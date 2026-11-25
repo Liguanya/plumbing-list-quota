@@ -2280,9 +2280,13 @@
     }).join('');
   }
 
+  var PENDING_FILE = null;   // 文字层读不出时留着，供 OCR 兜底
+  var OCR_RUNNING = false;
+
   async function loadSpec(file) {
     var st = document.getElementById('specStatus');
     if (!st || typeof SPEC === 'undefined') return;
+    PENDING_FILE = file;
     st.className = 'spec-status loading';
     st.textContent = '正在解析「' + file.name + '」…（PDF 逐页提取文字，文件不上传服务器）';
     try {
@@ -2290,13 +2294,16 @@
       if (res.empty) {
         st.className = 'spec-status err';
         var dg = res.diag;
+        var ocrRow = '<div class="ocr-row"><button type="button" class="btn-mini" id="specOcrBtn">用 OCR 识别（本地，不联网）</button>' +
+          '<span class="ocr-tip">单页约 3-10 秒（首次要加载 11MB 引擎，之后走缓存）；小字准确率 85-90%，关键参数建议对照原图核</span></div>';
         if (dg === 'vector') {
           st.innerHTML = '「' + escapeHtml(file.name) + '」<b>没有文字层</b>：文件里没有字体对象、也没有嵌入图片，说明文字在导出时被转成了曲线（快速看图、部分虚拟打印机导出的 PDF 就是这样，看着清楚但机器读不出字）。<br>' +
-            '两种办法：<b>①</b> 用 CAD「打印 → PDF」而不是截图导出，出来就是文字版，一次配置长期有效；<b>②</b> 把说明文字直接粘贴到下方输入框，解析效果一样。';
+            '<b>三个办法：</b>① 直接点下面的 OCR 识别，把曲线还原成文字；② 用 CAD「打印 → PDF」而不是截图导出，出来就是文字版；③ 把说明文字粘贴到下方输入框，解析最快。' + ocrRow;
         } else if (dg === 'scan') {
-          st.innerHTML = '「' + escapeHtml(file.name) + '」是<b>扫描件 / 图片版 PDF</b>：页面是整张图片，没有文字层，浏览器读不出文字。<br>请改用 CAD 打印生成文字版 PDF，或把说明文字粘贴到下方输入框。';
+          st.innerHTML = '「' + escapeHtml(file.name) + '」是<b>扫描件 / 图片版 PDF</b>：页面是整张图片，没有文字层，浏览器读不出文字。<br>' +
+            '<b>三个办法：</b>① 直接点下面的 OCR 识别；② 用 CAD 打印生成文字版 PDF；③ 把说明文字粘贴到下方输入框。' + ocrRow;
         } else {
-          st.innerHTML = '未能从「' + escapeHtml(file.name) + '」提取到可读文字。可改用文字版 PDF，或把说明文字粘贴到下方输入框。';
+          st.innerHTML = '未能从「' + escapeHtml(file.name) + '」提取到可读文字。可改用文字版 PDF、粘贴说明文字，或尝试 OCR。' + ocrRow;
         }
         var pbox = document.getElementById('specPasteBox');
         if (pbox) pbox.open = true;
@@ -2323,6 +2330,61 @@
     } catch (err) {
       st.className = 'spec-status err';
       st.textContent = '解析失败：' + ((err && err.message) || err);
+    }
+  }
+
+
+  // OCR 兜底：文字层读不出时，把 PDF 渲染成位图再识别
+  async function runOcr() {
+    var st = document.getElementById('specStatus');
+    if (!st || !PENDING_FILE || OCR_RUNNING) return;
+    if (typeof SPEC === 'undefined' || !SPEC.ocrPdf) {
+      st.className = 'spec-status err';
+      st.textContent = 'OCR 组件未加载，请刷新页面重试。';
+      return;
+    }
+    OCR_RUNNING = true;
+    var t0 = Date.now();
+    st.className = 'spec-status loading';
+    st.textContent = '准备 OCR…';
+    try {
+      var buf = await PENDING_FILE.arrayBuffer();
+      var res = await SPEC.ocrPdf(buf, function (o) {
+        var txt = o.note || '识别中…';
+        if (o.total && o.page) {
+          var pct = o.phase === 'ocr'
+            ? Math.round(((o.page - 0.5) / o.total) * 100)
+            : Math.round(((o.page - 1) / o.total) * 100);
+          txt += '（' + pct + '%）';
+        }
+        st.className = 'spec-status loading';
+        st.textContent = txt;
+      });
+      var chars = res.text.replace(/\s/g, '').length;
+      if (chars < 30) {
+        st.className = 'spec-status err';
+        st.innerHTML = 'OCR 只识别到 ' + chars + ' 个字符，这张图可能分辨率不够或线条太密。<br>' +
+          '建议：① 在快速看图里放大到能看清文字再导出；② 把说明分区域截图后粘贴；③ 直接用文字版 PDF。';
+        return;
+      }
+      var spec = SPEC.parseText(res.text);
+      spec.fileName = (PENDING_FILE.name || 'PDF') + '（OCR）';
+      spec.extract = { pages: res.pages, note: 'OCR 识别' };
+      ACTIVE_SPEC = spec;
+      SPEC_APPLY = true;
+      var np = (spec.points || []).length;
+      var secs = Math.round((Date.now() - t0) / 1000);
+      st.className = 'spec-status ok';
+      st.textContent = 'OCR 识别完成：' + chars + ' 字 · ' + res.pages + ' 页 · 造价要点 ' + np + ' 类 · 管材 ' +
+        spec.materials.length + ' 类 · 连接方式 ' + spec.rules.length + ' 条 · 耗时 ' + secs + ' 秒。' +
+        'OCR 难免错字，关键参数（管径、功率、间距）建议对照原图核一遍。';
+      renderSpecCard(spec);
+      refreshAll(true);
+    } catch (e) {
+      st.className = 'spec-status err';
+      st.textContent = 'OCR 失败：' + ((e && e.message) || e);
+    } finally {
+      OCR_RUNNING = false;
     }
   }
 
@@ -2444,6 +2506,12 @@
     }
 
     // 粘贴文本解析：绕开 PDF 文字层
+    // OCR 按钮由 innerHTML 动态生成，用委托绑定
+    document.addEventListener('click', function (e) {
+      var t = e.target;
+      if (t && t.id === 'specOcrBtn') { e.preventDefault(); runOcr(); }
+    });
+
     var pasteBtn = document.getElementById('specPasteBtn');
     var pasteTxt = document.getElementById('specPasteText');
     if (pasteBtn && pasteTxt) {

@@ -11,7 +11,7 @@
 (function (global) {
   'use strict';
 
-  var VERSION = '1.2.0';
+  var VERSION = '1.3.0';
 
   /* ==================== 词典 ==================== */
 
@@ -1113,10 +1113,120 @@
     return out;
   }
 
+
+  /* ==================== OCR（矢量化 / 扫描件 PDF 兜底） ==================== */
+
+  var TESS_BASE = 'js/tesseract/';
+
+  // worker 内部的相对路径以 worker 脚本位置为基准，必须给绝对地址
+  function tessAbs(p) {
+    try { return new URL(p, document.baseURI).href; } catch (e) { return p; }
+  }
+  var tessLoading = null;
+
+  // 懒加载：只有真正要 OCR 时才拉 11MB 的引擎和中文语言包
+  function loadTesseract() {
+    if (global.Tesseract) return Promise.resolve(global.Tesseract);
+    if (tessLoading) return tessLoading;
+    tessLoading = new Promise(function (resolve, reject) {
+      var sc = document.createElement('script');
+      sc.src = TESS_BASE + 'tesseract.min.js';
+      sc.onload = function () { global.Tesseract ? resolve(global.Tesseract) : reject(new Error('OCR 组件未就绪')); };
+      sc.onerror = function () { tessLoading = null; reject(new Error('OCR 组件加载失败，检查 js/tesseract/ 目录是否完整')); };
+      document.head.appendChild(sc);
+    });
+    return tessLoading;
+  }
+
+  // tesseract 对中文逐字识别，字间会插入空格（「D N6 5」「0 . 6 MP a」），
+  // 且常见字形混淆（耻有/既有、卡籍/卡箍）。这里做还原。
+  var OCR_FIX = [
+    [/耻有/g, '既有'], [/卡籍/g, '卡箍'], [/卡籍连接/g, '卡箍连接'],
+    [/抗晨/g, '抗震'], [/抗居/g, '抗震'], [/支品架/g, '支吊架'],
+    [/消火检/g, '消火栓'], [/消淡/g, '消火'],
+    [/薄璧/g, '薄壁'], [/热溶/g, '热熔'],
+    [/水压试马验/g, '水压试验'], [/试马验/g, '试验'],
+    [/(\d)\s*KkW/gi, '$1kW'], [/Kkw/g, 'kW']
+  ];
+
+  function tidyOcr(t) {
+    var x = String(t || '');
+    // 只处理空格类字符（含全角空格/不换行空格），保留换行，避免段落粘连
+    x = x.replace(/(\d)[ \t\u00a0]*\.[ \t\u00a0]*(?=\d)/g, '$1.');          // 0 . 6 → 0.6
+    x = x.replace(/(\d)[ \t\u00a0]+(?=\d)/g, '$1');                            // 3 0 4 → 304
+    x = x.replace(/(\d)[ \t\u00a0]+(?=[A-Za-zµ])/g, '$1');                      // 25 mm → 25mm
+    x = x.replace(/([A-Za-z])[ \t\u00a0]+(?=\d)/g, '$1');                       // DN 65 → DN65
+    x = x.replace(/([A-Za-z])[ \t\u00a0]+(?=[A-Za-z])/g, '$1');                  // D N → DN
+    x = x.replace(/([A-Za-z0-9])[ \t\u00a0]*([-\/])[ \t\u00a0]*(?=[A-Za-z0-9])/g, '$1$2'); // PP - R → PP-R
+    x = x.replace(/([\u4e00-\u9fa5])[ \t\u00a0]+(?=[\u4e00-\u9fa5])/g, '$1');  // 薄 壁 → 薄壁
+    x = x.replace(/([\u4e00-\u9fa5])[ \t\u00a0]+(?=[A-Za-z0-9])/g, '$1');        // 中英边界
+    x = x.replace(/([A-Za-z0-9])[ \t\u00a0]+(?=[\u4e00-\u9fa5])/g, '$1');
+    x = x.replace(/[ \t\u00a0]+([，。；、：（）,;:])/g, '$1');                      // 标点前空格
+    x = x.replace(/([，。；、：（）,;:])[ \t\u00a0]+/g, '$1');                      // 标点后空格
+    OCR_FIX.forEach(function (r) { x = x.replace(r[0], r[1]); });
+    return x;
+  }
+
+  // 把 PDF 每页渲染成位图再识别。onProgress({phase,page,total,note})
+  async function ocrPdf(buf, onProgress, opts) {
+    opts = opts || {};
+    var lib = global.pdfjsLib;
+    if (!lib) throw new Error('PDF 解析组件未加载');
+    var report = function (o) { if (onProgress) onProgress(o); };
+
+    report({ phase: 'engine', page: 0, total: 0, note: '正在加载 OCR 引擎（首次约 11MB，之后走缓存）' });
+    var T = await loadTesseract();
+    if (lib.GlobalWorkerOptions && !lib.GlobalWorkerOptions.workerSrc) {
+      lib.GlobalWorkerOptions.workerSrc = 'js/pdf.worker.min.js';
+    }
+
+    // 传副本：pdf.js 会把 buffer transfer 给 worker，原件后续还要用
+    var doc = await lib.getDocument({ data: new Uint8Array(buf.slice(0)), useSystemFonts: true }).promise;
+    var maxPages = Math.min(doc.numPages, opts.maxPages || 12);
+
+    report({ phase: 'engine', page: 0, total: maxPages, note: '正在初始化中文识别模型' });
+    var worker = await T.createWorker('chi_sim', 1, {
+      workerPath: tessAbs(TESS_BASE + 'worker.min.js'),
+      corePath: tessAbs(TESS_BASE),
+      langPath: tessAbs(TESS_BASE + 'lang'),
+      workerBlobURL: false,
+      logger: function () {}
+    });
+    await worker.setParameters({ preserve_interword_spaces: '0' });
+
+    var chunks = [];
+    for (var i = 1; i <= maxPages; i++) {
+      report({ phase: 'render', page: i, total: maxPages, note: '正在渲染第 ' + i + '/' + maxPages + ' 页' });
+      var page = await doc.getPage(i);
+      var base = page.getViewport({ scale: 1 });
+      // 目标宽度约 3000px：够看清小字，又不至于撑爆内存
+      var scale = Math.min(5, Math.max(2, 3000 / base.width));
+      var vp = page.getViewport({ scale: scale });
+      var cv = document.createElement('canvas');
+      cv.width = Math.round(vp.width);
+      cv.height = Math.round(vp.height);
+      var ctx = cv.getContext('2d');
+      ctx.fillStyle = '#fff';
+      ctx.fillRect(0, 0, cv.width, cv.height);
+      await page.render({ canvasContext: ctx, viewport: vp }).promise;
+
+      report({ phase: 'ocr', page: i, total: maxPages, note: '正在识别第 ' + i + '/' + maxPages + ' 页（' + cv.width + '×' + cv.height + '）' });
+      var r = await worker.recognize(cv);
+      chunks.push((r && r.data && r.data.text) || '');
+      cv.width = cv.height = 0;
+      cv = null;
+    }
+    try { await worker.terminate(); } catch (e) {}
+
+    report({ phase: 'done', page: maxPages, total: maxPages, note: '' });
+    return { text: normalize(tidyOcr(chunks.join('\n'))), pages: maxPages, engine: 'tesseract-chi_sim' };
+  }
+
   global.SPEC = {
     version: VERSION,
     parseText: parseText,
     extractFile: extractFile,
+    ocrPdf: ocrPdf,
     matchItem: matchItem,
     analyze: analyze,
     itemMaterialKey: itemMaterialKey,
