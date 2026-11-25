@@ -2116,6 +2116,23 @@
   // ============================================================
   // 图纸说明：上传、解读卡片、对比分析
   // ============================================================
+  // 依据引用只取「含材质 + 采用」的那一句，避免把前后文整段带出来
+  function pickEvidence(ev, kw) {
+    if (!ev) return '';
+    var ps = String(ev).split(/[。；;]/).map(function (x) { return x.trim(); }).filter(function (x) { return x.length >= 4; });
+    if (!ps.length) return String(ev).slice(0, 90);
+    var k = String(kw || '').replace(/[（(].*$/, '');
+    var hit = null, i;
+    for (i = 0; i < ps.length; i++) {
+      if (k && ps[i].indexOf(k) >= 0 && ps[i].indexOf('采用') >= 0) { hit = ps[i]; break; }
+    }
+    if (!hit) {
+      for (i = 0; i < ps.length; i++) { if (ps[i].indexOf('采用') >= 0) { hit = ps[i]; break; } }
+    }
+    if (!hit) hit = ps[0];
+    return hit.length > 92 ? hit.slice(0, 92) + '…' : hit;
+  }
+
   function renderSpecCard(spec) {
     var card = document.getElementById('specCard');
     if (!card) return;
@@ -2159,13 +2176,30 @@
         return parts.filter(Boolean).join(' ');
       }).join(' ／ ');
       return '<div class="spec-rule"><b>' + escapeHtml(g.label) + '</b> → ' + escapeHtml(txt) +
-        '<span class="ev">依据：' + escapeHtml((g.items[0].evidence || '').slice(0, 90)) + '</span></div>';
+        '<span class="ev">依据：' + escapeHtml(pickEvidence(g.items[0].evidence, g.label)) + '</span></div>';
     }).join('');
+    var pts = spec.points || [];
+    var ptsHtml = '';
+    if (pts.length) {
+      var lvCn = { critical: '必查', important: '注意', normal: '参考' };
+      ptsHtml = '<div class="sp-head">造价要点<span>共 ' + pts.length + ' 类，按对造价影响排序</span></div>' +
+        pts.map(function (p) {
+          return '<div class="sp-item ' + p.level + '">' +
+            '<div class="sp-top"><span class="sp-lv">' + (lvCn[p.level] || '') + '</span>' +
+            '<b>' + escapeHtml(p.label) + '</b>' +
+            (p.detail ? '<span class="sp-detail">' + escapeHtml(p.detail) + '</span>' : '') +
+            '</div>' +
+            '<div class="sp-hint">' + escapeHtml(p.hint || '') + '</div>' +
+            ((p.evidence && p.evidence.length) ? '<div class="sp-ev">“' + escapeHtml(p.evidence[0]) + '”</div>' : '') +
+            '</div>';
+        }).join('');
+    }
     card.className = 'spec-card show';
     card.innerHTML =
       '<h4><span class="file">📄 ' + escapeHtml(spec.fileName || '图纸说明') + '</span>' +
       '<span style="font-weight:400;font-size:12px;color:#8a9ba1">' + (ex.pages ? ex.pages + ' 页 · ' : '') + '识别 ' + spec.rules.length + ' 条连接方式</span></h4>' +
       '<div class="spec-tags">' + tags + '</div>' +
+      ptsHtml +
       (rulesHtml ? '<div class="spec-rules">' + rulesHtml + '</div>'
         : '<div class="spec-rule" style="color:#b9770e">未识别到「管材 + 连接方式」的明确表述，可在「安装部位/接口形式」列手动选择。</div>') +
       ((spec.conf && spec.conf.lowRatio > 0.35)
@@ -2255,7 +2289,17 @@
       var res = await SPEC.extractFile(file);
       if (res.empty) {
         st.className = 'spec-status err';
-        st.textContent = '未能从「' + file.name + '」提取到可读文字：可能是扫描件/图片版 PDF。请在 CAD 或 PDF 阅读器中导出文字版 PDF，或上传 DXF/DWG 后再试。';
+        var dg = res.diag;
+        if (dg === 'vector') {
+          st.innerHTML = '「' + escapeHtml(file.name) + '」<b>没有文字层</b>：文件里没有字体对象、也没有嵌入图片，说明文字在导出时被转成了曲线（快速看图、部分虚拟打印机导出的 PDF 就是这样，看着清楚但机器读不出字）。<br>' +
+            '两种办法：<b>①</b> 用 CAD「打印 → PDF」而不是截图导出，出来就是文字版，一次配置长期有效；<b>②</b> 把说明文字直接粘贴到下方输入框，解析效果一样。';
+        } else if (dg === 'scan') {
+          st.innerHTML = '「' + escapeHtml(file.name) + '」是<b>扫描件 / 图片版 PDF</b>：页面是整张图片，没有文字层，浏览器读不出文字。<br>请改用 CAD 打印生成文字版 PDF，或把说明文字粘贴到下方输入框。';
+        } else {
+          st.innerHTML = '未能从「' + escapeHtml(file.name) + '」提取到可读文字。可改用文字版 PDF，或把说明文字粘贴到下方输入框。';
+        }
+        var pbox = document.getElementById('specPasteBox');
+        if (pbox) pbox.open = true;
         return;
       }
       var spec = SPEC.parseText(res.text);
@@ -2273,13 +2317,37 @@
       }
       st.className = 'spec-status ok';
       st.textContent = '已识别「' + file.name + '」：' + chars + ' 字' + (res.pages ? ' · ' + res.pages + ' 页' : '') +
-        ' · 管材 ' + spec.materials.length + ' 类 · 连接方式 ' + spec.rules.length + ' 条' + (res.note ? ' · ' + res.note : '');
+        ' · 造价要点 ' + (spec.points || []).length + ' 类 · 管材 ' + spec.materials.length + ' 类 · 连接方式 ' + spec.rules.length + ' 条' + (res.note ? ' · ' + res.note : '');
       renderSpecCard(spec);
       refreshAll(true);
     } catch (err) {
       st.className = 'spec-status err';
       st.textContent = '解析失败：' + ((err && err.message) || err);
     }
+  }
+
+  // 粘贴文本通道：绕开 PDF 文字层问题，任何来源的文字都能进来解析
+  function loadSpecText(text, name) {
+    var st = document.getElementById('specStatus');
+    if (!st || typeof SPEC === 'undefined') return;
+    var t = String(text || '').trim();
+    if (t.replace(/\s/g, '').length < 20) {
+      st.className = 'spec-status err';
+      st.textContent = '粘贴的内容太短了，至少贴一段完整的说明文字（管材、设备、施工要求都行）。';
+      return;
+    }
+    var spec = SPEC.parseText(t);
+    spec.fileName = name || '粘贴的说明文字';
+    spec.extract = { pages: 0, note: '来自粘贴文本' };
+    ACTIVE_SPEC = spec;
+    SPEC_APPLY = true;
+    var chars = t.replace(/\s/g, '').length;
+    var np = (spec.points || []).length;
+    st.className = 'spec-status ok';
+    st.textContent = '已解析粘贴文字：' + chars + ' 字 · 造价要点 ' + np + ' 类 · 管材 ' + spec.materials.length +
+      ' 类 · 连接方式 ' + spec.rules.length + ' 条';
+    renderSpecCard(spec);
+    refreshAll(true);
   }
 
   function refreshAll(skipSnap) {
@@ -2373,6 +2441,15 @@
         var f = e.dataTransfer.files[0];
         if (f) loadSpec(f);
       });
+    }
+
+    // 粘贴文本解析：绕开 PDF 文字层
+    var pasteBtn = document.getElementById('specPasteBtn');
+    var pasteTxt = document.getElementById('specPasteText');
+    if (pasteBtn && pasteTxt) {
+      pasteBtn.addEventListener('click', function () { loadSpecText(pasteTxt.value, '粘贴的说明文字'); });
+      var pcBtn = document.getElementById('specPasteClear');
+      if (pcBtn) pcBtn.addEventListener('click', function () { pasteTxt.value = ''; pasteTxt.focus(); });
     }
 
     document.querySelectorAll('input[name="software"]').forEach(function (r) {

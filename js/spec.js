@@ -11,7 +11,7 @@
 (function (global) {
   'use strict';
 
-  var VERSION = '1.1.0';
+  var VERSION = '1.2.0';
 
   /* ==================== 词典 ==================== */
 
@@ -75,6 +75,241 @@
     { key: 'anticorrosion', label: '防腐刷漆', re: /防腐|防锈|刷漆|银粉/ },
     { key: 'penetration', label: '穿墙穿板', re: /穿墙|穿楼板|穿板|穿基础/ }
   ];
+
+  /* ==================== 造价要点词典 ==================== */
+  // 说明里真正决定造价的不是「哪根管子用什么连接」，而是这些成块的钱：
+  // 拆除清运、抗震支架、设备供货、不含项边界、保温套管、试验要求。
+  // level: critical 漏了就是大钱 / important 影响单价 / normal 影响做法
+  var POINTS = [
+    {
+      key: 'demolish', level: 'critical', label: '拆除与清运',
+      re: /拆除|拆改|拆换|清运|废料|废弃|原系统|原有.{0,8}(拆除|更换|废除)|剔凿|剔槽/,
+      prefer: /(?:管道|设备|附件|箱|管线|系统|阀门|洁具)[^。；]{0,10}(?:拆除|拆改|拆换)|(?:拆除|拆改|拆换)[^。；]{0,10}(?:管道|设备|附件|箱|管线|系统|阀门|洁具)|废料[^。；]{0,8}清运|垃圾[^。；]{0,6}外运|拆除[^。；]{0,6}(?:造价|费用|清运)/,
+      hint: '改造项目最大的隐形项：拆除人工、垃圾外运、成品保护通常不在管道定额内，须单列。',
+      listRe: /拆除|清运|垃圾|剔凿|拆改/
+    },
+    {
+      key: 'seismic', level: 'critical', label: '抗震支吊架',
+      re: /抗震|支吊架|侧向支撑|纵向支撑|侧向[^。；]{0,10}(?:间距|支架|支撑)|纵向[^。；]{0,10}(?:间距|支架|支撑)/,
+      hint: '抗震支架是独立清单项（按 kg 或套计）。注意改建工程间距常为新建的一半，数量翻倍。',
+      listRe: /抗震|支吊架/,
+      detail: function (t) {
+        var d = [];
+        var dn = t.match(/(?:不小于|大于等于|≥|>)\s*D\s*N\s*(\d+)/i) || t.match(/D\s*N\s*(\d+)\s*(?:以上|及以上)/i);
+        if (dn) d.push('起设管径 DN' + dn[1]);
+        // OCR 常把「24」拆成「2 4」，数字内部允许空白，取到后清掉
+        var lat = t.match(/侧\s*向[^。；]{0,26}?(\d[\d\s]*(?:\.\s*\d+)?)\s*(?:米|m(?![a-z])|M)/);
+        var lon = t.match(/纵\s*向[^。；]{0,26}?(\d[\d\s]*(?:\.\s*\d+)?)\s*(?:米|m(?![a-z])|M)/);
+        if (lat) d.push('侧向间距 ' + lat[1].replace(/\s/g, '') + 'm');
+        if (lon) d.push('纵向间距 ' + lon[1].replace(/\s/g, '') + 'm');
+        if (/改建|改造|加固/.test(t)) d.push('改建工程（间距常减半）');
+        return d.length ? d.join(' · ') : null;
+      }
+    },
+    {
+      key: 'equipment', level: 'critical', label: '设备供货',
+      re: /水泵|水箱(?!间)|热泵|机组|消毒器|气压罐|换热器|热水器|开水器|变频|稳压|隔膜罐|膨胀罐|水处理/,
+      prefer: /[QHN]\s*[=＝]|\d+(?:\.\d+)?\s*kW|(?:容积|有效容积|流量|扬程|功率)\s*[:：]?\s*\d|(?:台|套)\s*[×x*]?\s*\d/,
+      hint: '设备单价占比最高。核对参数（流量/扬程/功率/容积）与数量是否与清单一致，避免规格降档。',
+      listRe: /泵|水箱|机组|消毒器|罐|换热|热水器|开水器|变频|稳压/,
+      detail: function (t) {
+        var d = [];
+        var q = t.match(/Q\s*[=＝]\s*(\d+(?:\.\d+)?)\s*m[³3]?\s*\/\s*h/i);
+        if (q) d.push('Q=' + q[1] + 'm³/h');
+        var h = t.match(/H\s*[=＝]\s*(\d+(?:\.\d+)?)\s*m(?![a-z])/i);
+        if (h) d.push('H=' + h[1] + 'm');
+        var n = t.match(/N\s*[=＝]\s*(\d+(?:\.\d+)?)\s*kW/i);
+        if (n) d.push('N=' + n[1] + 'kW');
+        var v = t.match(/(?:容积|有效容积)\s*(\d+(?:\.\d+)?)\s*(?:m[³3]|吨|t|L|升)/i);
+        if (v) d.push('容积 ' + v[1]);
+        return d.length ? d.join(' · ') : null;
+      }
+    },
+    {
+      key: 'exclusion', level: 'critical', label: '不含项 / 另行委托',
+      re: /不含|不在.{0,10}(范围|本次)|另行|专项设计|由.{0,12}(采购|供货|深化|负责)|本次不|暂不|不在本次/,
+      hint: '范围边界。说明写「不含」的，清单里若出现要警惕重复计价；写「另行委托」的，别算进本次报价。',
+      listRe: null
+    },
+    {
+      key: 'insulation', level: 'important', label: '保温绝热',
+      re: /保温|绝热|防结露|橡塑|玻璃棉|离心玻璃棉|聚氨酯|岩棉/,
+      prefer: /(?:保温|绝热)[^。；]{0,14}(?:厚度|δ|\d+\s*mm|\d+\s*kg)|橡塑[^。；]{0,10}(?:mm|厚)|玻璃棉[^。；]{0,10}(?:mm|厚|密度)/,
+      hint: '保温要核三件事：材质、厚度、密度。清单只写「保温」不写厚度时单价差一倍以上。',
+      listRe: /保温|绝热|橡塑|玻璃棉|岩棉|聚氨酯/,
+      detail: function (t) {
+        // 按句分别抓，避免橡塑的厚度和玻璃棉的密度串成一条
+        var parts = String(t).split('；');
+        var mats = [
+          { n: '橡塑', re: /橡塑/ },
+          { n: '玻璃棉', re: /玻璃棉/ },
+          { n: '岩棉', re: /岩棉/ },
+          { n: '聚氨酯', re: /聚氨酯/ }
+        ];
+        var out = [];
+        mats.forEach(function (m) {
+          var hit = null;
+          parts.forEach(function (x) { if (!hit && m.re.test(x)) hit = x; });
+          if (!hit) return;
+          var d = [m.n];
+          var th = hit.match(/(?:厚度|δ\s*[=＝]?)\s*(\d+(?:\.\d+)?)\s*mm/i) || hit.match(/(\d+(?:\.\d+)?)\s*mm\s*(?:厚|橡塑|玻璃棉|岩棉)/);
+          if (th) d.push('厚 ' + th[1] + 'mm');
+          var den = hit.match(/(\d+(?:\.\d+)?)\s*kg\s*\/\s*m[³3]/i);
+          if (den) d.push('密度 ' + den[1] + 'kg/m³');
+          out.push(d.join(' '));
+        });
+        return out.length ? out.join(' · ') : null;
+      }
+    },
+    {
+      key: 'penetration', level: 'important', label: '套管与防火封堵',
+      re: /套管|防水套管|阻火圈|防火封堵|穿墙|穿楼板|穿板|穿基础|密闭套管/,
+      notRe: /石英套管|石英玻璃套管|套管换热|套管式/,
+      hint: '套管、阻火圈、封堵多数定额不含或另计。刚性防水套管与一般钢套管单价差数倍，要分清。',
+      listRe: /套管|阻火圈|封堵/,
+      detail: function (t) {
+        var d = [];
+        if (/柔性防水套管/.test(t)) d.push('柔性防水套管');
+        else if (/刚性防水套管/.test(t)) d.push('刚性防水套管');
+        else if (/防水套管/.test(t)) d.push('防水套管');
+        else if (/套管/.test(t)) d.push('一般套管');
+        if (/阻火圈/.test(t)) d.push('阻火圈');
+        if (/防火封堵/.test(t)) d.push('防火封堵');
+        return d.length ? d.join(' · ') : null;
+      }
+    },
+    {
+      key: 'test', level: 'important', label: '试压 / 冲洗 / 消毒',
+      re: /水压试验|打压|压力试验|灌水试验|闭水试验|通球|冲洗(?!阀|头|嘴|水箱|设备|水量|方式)|消毒|水质/,
+      prefer: /水压试验|打压|压力试验|灌水试验|闭水试验|通球|试验压力|冲洗消毒|冲洗流速/,
+      hint: '给水须冲洗消毒并取样检验，排水须灌水通球。先确认是否已含在管道定额工作内容里，别重复计。',
+      listRe: /试验|冲洗|消毒|通球|水质/,
+      detail: function (t) {
+        var d = [];
+        var p = t.match(/(\d+(?:\.\d+)?)\s*(?:MPa|兆帕)/i);
+        if (p) d.push('试验压力 ' + p[1] + 'MPa');
+        if (/灌水试验|闭水试验/.test(t)) d.push('灌水/闭水');
+        if (/通球/.test(t)) d.push('通球');
+        if (/冲洗/.test(t)) d.push('冲洗');
+        if (/消毒/.test(t)) d.push('消毒');
+        return d.length ? d.join(' · ') : null;
+      }
+    },
+    {
+      key: 'support', level: 'important', label: '管道支架',
+      re: /支架|管卡|吊架|托架|固定支架|滑动支架|支墩/,
+      notRe: /抗震支吊架|抗震支架|抗震加固|侧向支撑|纵向支撑|抗震设防/,
+      hint: '支架形式与间距决定用量。注意「抗震支架」与「承重支架」是两笔钱，别混为一谈。',
+      listRe: /支架|管卡|吊架|托架|支墩/,
+      detail: function (t) {
+        var d = [];
+        var sp = t.match(/(?:间距|不大于|不超过)\s*(\d+(?:\.\d+)?)\s*(?:米|m(?![a-z])|M)/);
+        if (sp) d.push('间距 ' + sp[1] + 'm');
+        if (/固定支架/.test(t)) d.push('含固定支架');
+        return d.length ? d.join(' · ') : null;
+      }
+    },
+    {
+      key: 'anticorrosion', level: 'normal', label: '防腐与刷漆',
+      re: /防腐|防锈|刷漆|银粉|防锈漆|镀锌层|四油|三布/,
+      hint: '埋地管、支架、非镀锌件的防腐做法影响单价，注意「几油几布」这类具体做法。',
+      listRe: /防腐|防锈|刷漆|银粉/,
+      detail: function (t) {
+        var m = t.match(/([一二三四五])\s*油\s*([一二三四五])\s*布/);
+        return m ? (m[1] + '油' + m[2] + '布') : null;
+      }
+    },
+    {
+      key: 'boundary', level: 'important', label: '管材分界 / 界面划分',
+      re: /以.{0,16}为界|分界|界面|出户|进户|接户井|检查井前|由.{0,8}至.{0,8}(接|供)/,
+      prefer: /以[^。；]{0,18}为界|分界|界面划分|出户[^。；]{0,10}(?:检查井|管材|分界)|进户[^。；]{0,10}(?:管材|分界|阀门)/,
+      hint: '分界点决定哪段算室内、哪段算室外，两侧定额与单价完全不同。清单按室内外混编时要按界拆分。',
+      listRe: null
+    },
+    {
+      key: 'metering', level: 'normal', label: '计量与远传',
+      re: /水表|计量|远传|能耗监测|分户|分级计量/,
+      hint: '远传水表与普通水表价差明显，且常单列。',
+      listRe: /水表|计量/
+    },
+    {
+      key: 'waterquality', level: 'normal', label: '水质处理',
+      notRe: /不含|不在本次|暂不|另行/, 
+      re: /软化|除垢|过滤|紫外线|银离子|消毒设备|纯水|直饮水|RO/,
+      hint: '水处理设备与耗材常被漏，尤其消毒器、过滤器。',
+      listRe: /软化|过滤|消毒|纯水|净水|直饮水/
+    }
+  ];
+
+  var POINT_RANK = { critical: 0, important: 1, normal: 2 };
+
+  // 从全文中抽取造价要点：每类命中的句子按信息密度排序，取最短的两句作依据
+  // 句子信息量打分：越像「带具体参数的规定句」分越高，越像标题句或 OCR 噪声分越低。
+  // 只按长度排序会把「石英套管」「5.1.5给水计量」这类短噪声当成依据，必须打分。
+  function scoreSent(s) {
+    var t = s.replace(/\s+/g, '');
+    var len = t.length, sc = 0;
+    if (len < 10) sc -= 4;
+    else if (len < 16) sc -= 2;
+    else if (len <= 95) sc += 2;
+    else if (len <= 260) sc -= 1;
+    else sc -= 10;   // OCR 常把整页粘成一句，这种段落无法作为依据
+    if (/\d/.test(t)) sc += 2;
+    if (/DN\s*\d|\d+\s*(?:kW|KW|MPa|mm|m³|m3|L\/s|kg\/m|℃|米|t(?![a-z])|m(?![a-z]))/i.test(t)) sc += 3;
+    if (/采用|应|须|不小于|不大于|不得|要求|按.{0,6}(规定|规范|标准)/.test(t)) sc += 1;
+    // 中文占比过低 → OCR 拆字或规范编号堆砌，不是可用依据
+    var cn = (t.match(/[\u4e00-\u9fa5]/g) || []).length;
+    var ratio = len ? cn / len : 0;
+    if (ratio < 0.45) sc -= 6;
+    else if (ratio < 0.6) sc -= 2;
+    return sc;
+  }
+
+  function extractPoints(text) {
+    var out = [];
+    var sents = splitSentences(text);
+    POINTS.forEach(function (p) {
+      var hits = [], seen = {};
+      sents.forEach(function (s) {
+        if (!p.re.test(s) || (p.notRe && p.notRe.test(s))) return;
+        var k = s.replace(/\s+/g, '');
+        if (seen[k]) return;
+        seen[k] = 1;
+        hits.push(s);
+      });
+      if (!hits.length) return;
+      // 按信息量降序；同分时取较短的（更聚焦）
+      hits.sort(function (a, b) {
+        var sa = scoreSent(a) + (p.prefer && p.prefer.test(a) ? 5 : 0);
+        var sb = scoreSent(b) + (p.prefer && p.prefer.test(b) ? 5 : 0);
+        var d = sb - sa;
+        return d !== 0 ? d : a.length - b.length;
+      });
+      // detail 的输入放宽到前 8 句，避免关键参数句被挤掉
+      var joined = hits.slice(0, 8).join('；');
+      out.push({
+        key: p.key,
+        label: p.label,
+        level: p.level,
+        hint: p.hint,
+        count: hits.length,
+        detail: p.detail ? p.detail(joined) : null,
+        evidence: (function () {
+          var pick = hits.filter(function (s) { return s.replace(/\s+/g, '').length <= 260; });
+          if (!pick.length) pick = hits;
+          return pick.slice(0, 2).map(function (s) {
+            var t = s.replace(/\s+/g, ' ').trim();
+            return t.length > 108 ? t.slice(0, 108) + '…' : t;
+          });
+        })()
+      });
+    });
+    out.sort(function (a, b) {
+      var d = POINT_RANK[a.level] - POINT_RANK[b.level];
+      return d !== 0 ? d : b.count - a.count;
+    });
+    return out;
+  }
 
   // 连接方式 → 材质族（用于无材质说明句的兜底）
   var PLASTIC_JOINTS = { fusion: 1, electro: 1, glue: 1, nut: 1 };
@@ -297,6 +532,24 @@
   }
 
   // PDF：走 pdf.js 文字层
+  // 轻量嗅探 PDF 原始字节：只看对象字典里有没有字体、图片，不去物化内容流。
+  // 大图纸一页能有几十万条绘图指令，getOperatorList() 会把它们全展开进内存（实测峰值 1.1GB 且不释放），
+  // 普通笔记本直接卡死。扫字节是毫秒级、几十 MB 内存的事。
+  function sniffPdfBytes(buf) {
+    try {
+      var u8 = new Uint8Array(buf);
+      var dec = new TextDecoder('latin1');
+      var hasFont = false, hasImage = false, CH = 65536;
+      for (var i = 0; i < u8.length; i += CH) {
+        var s = dec.decode(u8.subarray(i, Math.min(i + CH, u8.length)));
+        if (!hasFont && s.indexOf('/Font') >= 0) hasFont = true;
+        if (!hasImage && (s.indexOf('/Subtype/Image') >= 0 || s.indexOf('/Subtype /Image') >= 0)) hasImage = true;
+        if (hasFont && hasImage) break;
+      }
+      return { font: hasFont, image: hasImage };
+    } catch (e) { return null; }
+  }
+
   async function extractPdf(buf) {
     var lib = global.pdfjsLib;
     if (!lib) throw new Error('PDF 解析组件未加载');
@@ -307,6 +560,8 @@
         lib.GlobalWorkerOptions.workerSrc = 'js/pdf.worker.min.js';
       }
     }
+    // 必须在交给 pdf.js 之前扫：它会把 ArrayBuffer transfer 给 worker，之后原 buffer 就 detached 了
+    var sn = sniffPdfBytes(buf);
     var doc;
     try {
       doc = await lib.getDocument({ data: new Uint8Array(buf), useSystemFonts: true }).promise;
@@ -331,11 +586,26 @@
       lines.push('');
     }
     var text = normalize(lines.join('\n'));
+    var empty = text.replace(/\s/g, '').length < 20;
+    var diag = null;
+    if (empty) {
+      // 区分「扫描件」与「文字被转成曲线的矢量化导出件」——两者处理方式完全不同
+      if (sn) {
+        if (!sn.font && !sn.image) diag = 'vector';
+        else if (sn.image) diag = 'scan';
+        else diag = 'unknown';
+      } else {
+        diag = 'unknown';
+      }
+    }
     return {
       text: text,
       pages: doc.numPages,
       note: doc.numPages > pages ? ('说明共 ' + doc.numPages + ' 页，已解析前 ' + pages + ' 页') : '',
-      empty: text.replace(/\s/g, '').length < 20
+      empty: empty,
+      diag: diag,
+      paths: 0,
+      images: sn && sn.image ? 1 : 0
     };
   }
 
@@ -507,7 +777,7 @@
     var spec = {
       version: VERSION, ok: false, textLen: text.length,
       materials: [], systems: [], joints: [], locs: [],
-      rules: [], measures: {}, dnRange: null, sentences: [], keywords: [], frag: null
+      rules: [], measures: {}, dnRange: null, sentences: [], keywords: [], points: [], frag: null
     };
     if (text.replace(/\s/g, '').length < 20) return spec;
     spec.ok = true;
@@ -541,6 +811,7 @@
     });
 
     spec.rules = fillRuleLoc(dedupeRules(spec.rules));
+    spec.points = extractPoints(text);
     var hi = 0, lo = 0;
     spec.rules.forEach(function (r) { if (r.materialKey) hi++; else lo++; });
     spec.conf = { high: hi, low: lo, lowRatio: (hi + lo) ? lo / (hi + lo) : 0 };
@@ -624,11 +895,117 @@
 
   var SYS_TO_MEDIUM = { water: 'water', drain: 'drain', rain: 'rain', cond: 'drain', reclaim: 'water', fire: 'fire', gas: 'gas' };
 
+  // 造价要点 × 清单比对：独立于「管材+连接方式」是否识别成功，只要说明里抽到要点就比对
+  function analyzePoints(spec, items) {
+    var out = [];
+    var pts = (spec && spec.points) || [];
+    if (!pts.length) return out;
+    var allItems = items || [];
+    var list = allItems.filter(function (i) { return i && i.category && i.category !== 'other'; });
+    var aux = { insulation: 0, sleeve: 0, support: 0 };
+    list.forEach(function (i) {
+      if (i.category === 'insulRubber' || i.category === 'insulGlass') aux.insulation++;
+      if (i.category === 'bracket') aux.support++;
+      if (/套管/.test(i.name || '')) aux.sleeve++;
+    });
+    var ptMap = {};
+    pts.forEach(function (p) { ptMap[p.key] = p; });
+    var hasName = function (re) {
+      return list.some(function (i) { return re.test(i.name || ''); });
+    };
+    var hasNameAll = function (re) {
+      return allItems.some(function (i) { return re.test(i.name || ''); });
+    };
+
+    if (ptMap.demolish) {
+      if (!hasNameAll(/拆除|清运|垃圾|剔凿|拆改|外运/)) {
+        out.push({
+          level: 'warn', title: '拆除与清运',
+          text: '说明写明需拆除原系统并清运废料（命中 ' + ptMap.demolish.count + ' 处），本清单未见拆除或垃圾外运项目。改造类项目这是整块费用，建议单列「管道及设备拆除」「垃圾外运」。'
+        });
+      } else {
+        out.push({ level: 'ok', title: '拆除与清运', text: '说明要求拆除清运，清单已有对应项目，请核对拆除范围与说明一致。' });
+      }
+    }
+
+    if (ptMap.seismic) {
+      if (!hasName(/抗震|支吊架/)) {
+        out.push({
+          level: 'warn', title: '抗震支吊架',
+          text: '说明要求设置抗震支吊架' + (ptMap.seismic.detail ? '（' + ptMap.seismic.detail + '）' : '') +
+            '，本清单未见抗震支架项目。抗震支架按 kg 或套单列，普通管道承重支架不能替代。'
+        });
+      }
+    }
+
+    if (ptMap.equipment && !hasNameAll(/泵|水箱|机组|消毒器|气压罐|换热器|热水器|开水器|变频|稳压/)) {
+      out.push({
+        level: 'warn', title: '设备供货',
+        text: '说明含设备要求（命中 ' + ptMap.equipment.count + ' 处）' + (ptMap.equipment.detail ? '，如 ' + ptMap.equipment.detail : '') +
+          '，本清单未见对应设备项目。设备按台/套单列，请核对是否漏项。'
+      });
+    }
+
+    if (ptMap.insulation) {
+      if (!aux.insulation) {
+        // 漏项由原有保温检查负责，这里只提示参数，避免同一问题报两遍
+        if (ptMap.insulation.detail) {
+          out.push({
+            level: 'info', title: '保温参数',
+            text: '说明给的保温做法是「' + ptMap.insulation.detail + '」。补保温项目时按此参数套定额——厚度与密度直接决定单价，别用默认值。'
+          });
+        }
+      } else if (ptMap.insulation.detail) {
+        var idt = ptMap.insulation.detail;
+        var rubN = list.filter(function (i) { return i.category === 'insulRubber'; }).length;
+        var glassN = list.filter(function (i) { return i.category === 'insulGlass'; }).length;
+        if (/橡塑/.test(idt) && !rubN && glassN) {
+          out.push({ level: 'warn', title: '保温材质', text: '说明要求橡塑保温，清单为玻璃棉保温，材质不一致，单价差异较大，请核对。' });
+        }
+        if (/玻璃棉/.test(idt) && !glassN && rubN) {
+          out.push({ level: 'warn', title: '保温材质', text: '说明要求玻璃棉保温，清单为橡塑保温，材质不一致，请核对。' });
+        }
+      }
+    }
+
+    if (ptMap.exclusion) {
+      var exNames = [];
+      (ptMap.exclusion.evidence || []).forEach(function (s) {
+        var m = s.match(/(?:不含|不在本次.{0,8}范围|本次不(?:含|包括)|暂不(?:含|包括))\s*(?!项)([^，。；、\s][^，。；、]{1,11})/);
+        if (m) exNames.push(m[1].replace(/[（(].*$/, '').trim());
+      });
+      if (exNames.length) {
+        var conflict = allItems.filter(function (i) {
+          return exNames.some(function (n) { return n && (i.name || '').indexOf(n) >= 0; });
+        });
+        if (conflict.length) {
+          out.push({
+            level: 'warn', title: '范围冲突',
+            text: '说明标注「不含 ' + exNames.join('、') + '」，但清单含 ' + conflict.length + ' 条相关项目（如 ' +
+              (conflict[0].name || '').slice(0, 18) + '），请确认是否属本次范围，避免重复计价。'
+          });
+        } else {
+          out.push({ level: 'info', title: '不含范围', text: '说明标注不含：' + exNames.join('、') + '，清单未出现相关项目，范围一致。' });
+        }
+      }
+    }
+
+    if (ptMap.boundary) {
+      out.push({
+        level: 'info', title: '室内外分界',
+        text: '说明含管材分界约定（' + (ptMap.boundary.evidence[0] || '').slice(0, 60) + '…），清单按室内外混编时注意分界两侧定额与单价不同，建议按界拆分。'
+      });
+    }
+
+    return out;
+  }
+
   function analyze(spec, items) {
     var out = [];
     if (!spec || !spec.ok) return out;
+    var ptAlerts = analyzePoints(spec, items);
     if (!spec.rules || !spec.rules.length) {
-      return [{ level: 'info', title: '说明未含管材/连接方式', text: '已提取到文字，但未识别到「…采用…连接」这类表述，清单按名称规则套用；上传含管材与连接方式的说明（如「生活给水管采用PE管，热熔连接」）后可自动比对与套用。' }];
+      return ptAlerts.concat([{ level: 'info', title: '说明未含管材/连接方式', text: '已提取到文字，但未识别到「…采用…连接」这类表述，清单按名称规则套用；上传含管材与连接方式的说明（如「生活给水管采用PE管，热熔连接」）后可自动比对与套用。' }]);
     }
     var list = (items || []).filter(function (i) { return i && i.category && i.category !== 'other'; });
     var pipes = list.filter(function (i) { return i.listCode && /^031001/.test(i.listCode); });
@@ -725,6 +1102,9 @@
         text: over2.length + ' 条清单名称所写连接方式与说明不一致，已按说明套用（如 ' + (over2[0].name || '').slice(0, 16) + '），如需以名称为准可在选型列改回。'
       });
     }
+
+    // 造价要点比对已在上方独立计算（analyzePoints），此处直接合并
+    out = out.concat(ptAlerts);
 
     if (!out.length) {
       out.push({ level: 'ok', title: '一致性检查', text: '说明与工程量清单未发现明显漏项，连接方式已按说明自动套用。' });
