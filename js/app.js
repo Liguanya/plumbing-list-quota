@@ -1699,7 +1699,7 @@
         '<td class="cell-name" title="' + escapeHtml(item.name) + '">' + escapeHtml(item.name) + '</td>' +
         '<td>' + layCell(item) + '</td>' +
         '<td class="cell-feature col-feat" title="' + escapeHtml(item.features || '') + '">' + escapeHtml(item.features || '—') + '</td>' +
-        '<td class="cell-qcode">' + (item.quotaCode || '—') + ' ' + inferTag(item) + '</td>' +
+        '<td class="cell-qcode">' + (item.quotaCode || '—') + (item.isFallback ? ' <span class="tag tag-fb">补项</span>' : '') + ' ' + inferTag(item) + '</td>' +
         '<td class="cell-qname" title="' + escapeHtml(item.quotaName + ((item.extras && item.extras.length) ? ' ＋ ' + item.extras.map(function (x) { return x.code + ' ' + x.name; }).join(' ＋ ') : '')) + '">' +
           escapeHtml(item.quotaName || '—') +
           ((item.extras && item.extras.length) ? item.extras.map(function (x) {
@@ -1794,6 +1794,7 @@
   function num2(v) { return v === null || v === undefined ? '' : Number(Number(v).toFixed(2)); }
 
   function exportJianjing(data) {
+    applyFallbackCodes(data);
     if (GS_MODE) return exportJianjingGs(data);
     var wsData = [['序号', '清单编码', '项目名称', '定额编码', '定额名称', '主材价格', '数量', '项目特征']];
     data.forEach(function (it) {
@@ -1821,6 +1822,7 @@
 
   // 概算模式建经导出：删除「清单编码」「项目特征」两列，其余列与预算模式一致
   function exportJianjingGs(data) {
+    applyFallbackCodes(data);
     annotateListCode12(data);
     var wsData = [['序号', '项目名称', '定额编码', '定额名称', '主材价格', '数量']];
     data.forEach(function (it) {
@@ -1848,7 +1850,50 @@
   // 清单编码统一补足 12 位：9 位标准码直接追加三位顺序号；
   // 不足 9 位的（如补充码 03B001）先右补 0 至 9 位，再追加顺序号，保证输出恒为 12 位。
   // 同一编码按清单出现顺序 001/002/003…递增，不同编码各自从 001 起；空编码保持空。
+  // ============================================================
+  // 补项兜底：清单号 / 定额号无法准确匹配时，统一按下列规则输出
+  //   清单编码 = 030801801 + 三位顺序号（001/002/003…，按补项出现顺序）
+  //   定额编码 = A-01 / A-02 / A-03…
+  //   表格与导出统一标注「补项」，便于人工复核
+  // ============================================================
+  var FB_LIST_BASE = '030801801';
+  function applyFallbackCodes(data) {
+    if (!data || !data.length) return data;
+    var lseq = 0, qseq = 0;
+    for (var i = 0; i < data.length; i++) {
+      var it = data[i];
+      if (!it) continue;
+      if (it.fallbackQuota) { it.quotaCode = ''; it.fallbackQuota = false; }
+      if (it.fallbackList) { it.listCode = ''; it.fallbackList = false; }
+      var hasQ = !!(it.quotaCode && String(it.quotaCode).trim());
+      var hasL = !!(it.listCode && String(it.listCode).trim());
+      if (!hasQ) {
+        qseq++;
+        it.quotaCode = 'A-' + ('0' + qseq).slice(-2);
+        it.quotaName = (it.name || '补项') + '（补项）';
+        it.quotaUnit = it.quotaUnit || it.unit;
+        it.quotaFactor = it.quotaFactor || 1;
+        it.fallbackQuota = true;
+      }
+      if (!hasL) {
+        lseq++;
+        it.listCode = FB_LIST_BASE + ('00' + lseq).slice(-3);
+        it.fallbackList = true;
+      }
+      if (it.fallbackQuota || it.fallbackList) {
+        it.isFallback = true;
+        if (!it.warn || it.warn.indexOf('补项：') < 0) {
+          var fbMsg = '补项：无准确匹配的清单号/定额号，已按清单 ' + String(it.listCode) +
+            ' + 定额 ' + it.quotaCode + ' 兜底，请人工核对';
+          it.warn = it.warn ? (it.warn + '；' + fbMsg) : fbMsg;
+        }
+      }
+    }
+    return data;
+  }
+
   function annotateListCode12(data) {
+    applyFallbackCodes(data);
     var seq = {};
     data.forEach(function (it) {
       var c = String(it.listCode || '').trim();
@@ -1868,6 +1913,7 @@
   }
 
   function exportGLD(data) {
+    applyFallbackCodes(data);
     if (GS_MODE) return exportGLDGs(data);
     annotateListCode12(data);
     var wsData = [['序号', '项目名称', '类型', '材质', '型号', '规格', '截面mm2', '工程量',
@@ -1947,6 +1993,7 @@
   // 概算模式广联达导出：删除清单行（清单编码整行）与「项目特征」整列，其余列顺序不变。
   // 每条项目以定额行为首行（A 列序号、B 列保留项目名称），主材/附加定额依次 1.1、1.2……
   function exportGLDGs(data) {
+    applyFallbackCodes(data);
     var wsData = [['序号', '项目名称', '类型', '材质', '型号', '规格', '截面mm2', '工程量',
       '项目编码', '类型', '名称', '单位', '工程量', '主材单价']];
     var zIdx = 0;
