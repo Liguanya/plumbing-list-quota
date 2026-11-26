@@ -1,1 +1,1465 @@
-function _0x1827(_0x12007a,_0x442eef){_0x12007a=_0x12007a-0x1d7;var _0x1edc77=_0x1edc();var _0x1827cd=_0x1edc77[_0x12007a];if(_0x1827['waQtiC']===undefined){var _0x36e1b6=function(_0x3f13f2){var _0x1b8ba4='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';var _0x1f3215='',_0x2bdb82='';for(var _0x123e0e=0x0,_0x262a5f,_0x6cd78,_0xdeac7e=0x0;_0x6cd78=_0x3f13f2['charAt'](_0xdeac7e++);~_0x6cd78&&(_0x262a5f=_0x123e0e%0x4?_0x262a5f*0x40+_0x6cd78:_0x6cd78,_0x123e0e++%0x4)?_0x1f3215+=String['fromCharCode'](0xff&_0x262a5f>>(-0x2*_0x123e0e&0x6)):0x0){_0x6cd78=_0x1b8ba4['indexOf'](_0x6cd78);}for(var _0xfea0a0=0x0,_0x5b284b=_0x1f3215['length'];_0xfea0a0<_0x5b284b;_0xfea0a0++){_0x2bdb82+='%'+('00'+_0x1f3215['charCodeAt'](_0xfea0a0)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x2bdb82);};_0x1827['CVqiIP']=_0x36e1b6,_0x1827['ELffkE']={},_0x1827['waQtiC']=!![];}var _0x5b6d40=_0x1edc77[0x0];_0x1827['lnLfxL']!==_0x5b6d40&&(_0x1827['ELffkE']={},_0x1827['lnLfxL']=_0x5b6d40);var _0x18699a=_0x1827['ELffkE'][_0x12007a];return _0x18699a===undefined?(_0x1827cd=_0x1827['CVqiIP'](_0x1827cd),_0x1827['ELffkE'][_0x12007a]=_0x1827cd):_0x1827cd=_0x18699a,_0x1827cd;}var _0x1ac087=_0x1827;(function(_0x37ce55,_0x164913){var _0x5eff8b=_0x1827,_0xf36ca6=_0x37ce55();while(!![]){try{var _0x2886a1=parseInt(_0x5eff8b(0x279))/0x1*(parseInt(_0x5eff8b(0x1fc))/0x2)+-parseInt(_0x5eff8b(0x23a))/0x3+parseInt(_0x5eff8b(0x29f))/0x4*(-parseInt(_0x5eff8b(0x202))/0x5)+-parseInt(_0x5eff8b(0x300))/0x6*(parseInt(_0x5eff8b(0x1d8))/0x7)+-parseInt(_0x5eff8b(0x236))/0x8*(-parseInt(_0x5eff8b(0x1ea))/0x9)+-parseInt(_0x5eff8b(0x233))/0xa*(-parseInt(_0x5eff8b(0x23b))/0xb)+parseInt(_0x5eff8b(0x2b2))/0xc*(parseInt(_0x5eff8b(0x2d5))/0xd);if(_0x2886a1===_0x164913)break;else _0xf36ca6['push'](_0xf36ca6['shift']());}catch(_0x85eaa6){_0xf36ca6['push'](_0xf36ca6['shift']());}}}(_0x1edc,0xc22a4),!function(_0x2bdb82){"use strict";var _0xd44314=_0x1827;var _0x123e0e=_0xd44314(0x2b7),_0x262a5f=[{'key':_0xd44314(0x2b4),'label':_0xd44314(0x1d9)+'烯）','re':/PVDF|聚偏二氟乙烯/i},{'key':'pb','label':_0xd44314(0x25c),'re':/PB\s*管|聚丁烯/i},{'key':_0xd44314(0x253),'label':_0xd44314(0x255),'re':/PP-?R|聚丙烯/i},{'key':_0xd44314(0x2f3),'label':_0xd44314(0x22f),'re':/钢塑|铝塑|衬塑|涂塑|钢骨架|钢丝网骨架|钢网骨架|复合管/},{'key':'pe','label':_0xd44314(0x231),'re':/HDPE|聚乙烯|(?<![A-Za-z])PE(?![A-Za-z])/i},{'key':_0xd44314(0x28f),'label':_0xd44314(0x2fe)+'）','re':/UPVC|U-PVC|PVC|聚氯乙烯/i},{'key':_0xd44314(0x210),'label':_0xd44314(0x266),'re':/不锈钢/},{'key':_0xd44314(0x1e3),'label':_0xd44314(0x277),'re':/镀锌/},{'key':_0xd44314(0x221),'label':_0xd44314(0x1fd),'re':/铸铁/},{'key':_0xd44314(0x2e3),'label':'铜管','re':/铜管|紫铜/},{'key':_0xd44314(0x259),'label':_0xd44314(0x20c),'re':/无缝钢管|焊接钢管|碳钢管/},{'key':_0xd44314(0x2db),'label':_0xd44314(0x219),'re':/玻璃钢|FRP/i}],_0x6cd78=[{'key':_0xd44314(0x208),'label':_0xd44314(0x282),'re':/沟槽|卡箍/},{'key':_0xd44314(0x2e2),'label':_0xd44314(0x28c),'re':/螺母密封圈|密封圈连接|橡胶圈密封|橡胶密封圈|螺母压紧/},{'key':_0xd44314(0x2cc),'label':_0xd44314(0x27e),'re':/电熔|电热熔/},{'key':_0xd44314(0x2d8),'label':_0xd44314(0x290),'re':/热熔/},{'key':_0xd44314(0x1ee),'label':'粘接','re':/粘接|胶粘|溶剂粘接|承插粘接/},{'key':_0xd44314(0x245),'label':_0xd44314(0x27b),'re':/卡压|卡套|环压/},{'key':_0xd44314(0x206),'label':_0xd44314(0x2ab),'re':/氩弧焊/},{'key':_0xd44314(0x20b),'label':'钎焊','re':/钎焊/},{'key':_0xd44314(0x2dc),'label':_0xd44314(0x22c),'re':/电弧焊/},{'key':_0xd44314(0x1ed),'label':'焊接','re':/焊接|焊口|满焊/},{'key':_0xd44314(0x304),'label':_0xd44314(0x218),'re':/螺纹|丝扣|丝接/},{'key':_0xd44314(0x2e1),'label':_0xd44314(0x205),'re':/法兰/},{'key':_0xd44314(0x25d),'label':_0xd44314(0x1f9),'re':/卡套(?!连接)/},{'key':_0xd44314(0x2ba),'label':_0xd44314(0x2c2),'re':/氧乙炔|气焊/},{'key':_0xd44314(0x281),'label':_0xd44314(0x1e7),'re':/胶圈接口|橡胶圈|胶圈承插|橡胶圈承插/},{'key':_0xd44314(0x1e2),'label':_0xd44314(0x21f),'re':/石棉水泥/},{'key':_0xd44314(0x280),'label':_0xd44314(0x1f5),'re':/水泥捻口|水泥接口/}],_0xdeac7e=[{'key':_0xd44314(0x212),'label':_0xd44314(0x275),'medium':_0xd44314(0x212),'re':/雨水/},{'key':_0xd44314(0x2bb),'label':_0xd44314(0x26c),'medium':_0xd44314(0x2b8),'re':/冷凝水|凝结水/},{'key':_0xd44314(0x2b8),'label':_0xd44314(0x287),'medium':_0xd44314(0x2b8),'re':/排水|污水|废水|污废/},{'key':_0xd44314(0x27a),'label':_0xd44314(0x2ed),'medium':_0xd44314(0x2e6),'re':/中水|再生水/},{'key':_0xd44314(0x240),'label':_0xd44314(0x2c3),'medium':_0xd44314(0x240),'re':/消火栓|喷淋|消防/},{'key':_0xd44314(0x1f1),'label':_0xd44314(0x20d),'medium':_0xd44314(0x1f1),'re':/燃气|煤气|天然气|液化气/},{'key':_0xd44314(0x2e6),'label':_0xd44314(0x22a),'medium':_0xd44314(0x2e6),'re':/给水|冷水|热水|直饮水|回水|补水/}],_0xfea0a0=[{'key':_0xd44314(0x29e),'label':_0xd44314(0x2a1),'re':/水压试验|打压|压力试验/},{'key':_0xd44314(0x1fe),'label':_0xd44314(0x27d),'re':/消毒|冲洗/},{'key':_0xd44314(0x241),'label':_0xd44314(0x25f),'re':/灌水试验|闭水试验|通球/},{'key':_0xd44314(0x25d),'label':'套管','re':/套管/},{'key':_0xd44314(0x29d),'label':_0xd44314(0x2a5),'re':/保温|防结露|绝热/},{'key':_0xd44314(0x223),'label':_0xd44314(0x242),'re':/支架|管卡|吊架|托架/},{'key':_0xd44314(0x2d4)+_0xd44314(0x234),'label':_0xd44314(0x1df),'re':/防腐|防锈|刷漆|银粉/},{'key':_0xd44314(0x2dd)+'n','label':_0xd44314(0x264),'re':/穿墙|穿楼板|穿板|穿基础/}],_0x5b284b={'fusion':0x1,'electro':0x1,'glue':0x1,'nut':0x1},_0x46f7df={'groove':0x1,'weld':0x1,'arc':0x1,'argon':0x1,'braze':0x1,'thread':0x1,'flange':0x1,'press':0x1,'sleeve':0x1,'oxy':0x1,'rubber':0x1,'asbestos':0x1,'cement':0x1},_0x197ab3={'pvdf':0x1,'pe':0x1,'ppr':0x1,'pb':0x1,'pvc':0x1};function _0x40eae5(_0x2e9d2e){var _0x3e58ab=_0xd44314;return String(_0x2e9d2e||'')[_0x3e58ab(0x207)](/\u3000/g,'\x20')[_0x3e58ab(0x207)](/\r\n?/g,'\x0a')[_0x3e58ab(0x207)](/[ \t]+/g,'\x20')[_0x3e58ab(0x207)](/\n{3,}/g,'\x0a\x0a')[_0x3e58ab(0x226)]();}function _0x17f712(_0x244f04,_0x1b3c74){var _0x7f3da=_0xd44314;for(var _0x42da88=String(_0x244f04),_0x5bdfe6=[],_0x2306b3='',_0x196a60=0x0,_0x547f05=0x0;_0x547f05<_0x42da88[_0x7f3da(0x2e7)];_0x547f05++){var _0x257b4e=_0x42da88[_0x7f3da(0x301)](_0x547f05);'（'===_0x257b4e||'('===_0x257b4e||'【'===_0x257b4e||'《'===_0x257b4e?_0x196a60++:'）'!==_0x257b4e&&')'!==_0x257b4e&&'】'!==_0x257b4e&&'》'!==_0x257b4e||(_0x196a60=_0x196a60>0x0?_0x196a60-0x1:0x0),0x0===_0x196a60&&_0x1b3c74[_0x7f3da(0x29e)](_0x257b4e)?(_0x5bdfe6[_0x7f3da(0x2b5)](_0x2306b3),_0x2306b3=''):_0x2306b3+=_0x257b4e;}return _0x5bdfe6[_0x7f3da(0x2b5)](_0x2306b3),_0x5bdfe6[_0x7f3da(0x200)](function(_0x1e0efd){var _0x4903d0=_0x7f3da;return _0x1e0efd[_0x4903d0(0x226)]();})[_0x7f3da(0x2ff)](Boolean);}function _0xef6439(_0x1ca6fd){var _0x3d8c54=_0xd44314;return _0x17f712(_0x40eae5(_0x1ca6fd),/[。；;]/)[_0x3d8c54(0x2ff)](function(_0x4b5de2){var _0x1d33c2=_0x3d8c54;return _0x4b5de2[_0x1d33c2(0x207)](/\s/g,'')[_0x1d33c2(0x2e7)]>=0x4;});}var _0x4cb8cb=/干管|立管|支管|横管|总管|机组|设备间|机房|泵房/;function _0xae7822(_0xe49603,_0x37e2dc){var _0x1b1711=_0xd44314;for(var _0x435fa3=0x0;_0x435fa3<_0xe49603[_0x1b1711(0x2e7)];_0x435fa3++)if(_0xe49603[_0x435fa3]['re'][_0x1b1711(0x29e)](_0x37e2dc))return _0xe49603[_0x435fa3];return null;}function _0x57b84a(_0xb00258){var _0x337c50=_0xd44314;for(var _0x41eb6a=String(_0xb00258)[_0x337c50(0x207)](/焊接钢管|无缝钢管|电焊钢管/g,''),_0xe6a89e=0x0;_0xe6a89e<_0x6cd78[_0x337c50(0x2e7)];_0xe6a89e++)if(_0x6cd78[_0xe6a89e]['re'][_0x337c50(0x29e)](_0x41eb6a))return _0x6cd78[_0xe6a89e];return null;}function _0xa2b602(_0x6c6004){var _0x476d63=_0xd44314;return _0x5b284b[_0x6c6004]?_0x476d63(0x2b9):_0x46f7df[_0x6c6004]?_0x476d63(0x24a):null;}function _0x1a9a23(_0x2ae2fb){var _0x2c93e3=_0xd44314;return _0x2ae2fb?_0x2c93e3(0x2a2)===_0x2ae2fb?_0x2c93e3(0x28f):_0x2ae2fb:'';}function _0x16be36(_0x16c0f9){var _0x5d7761=_0xd44314,_0x143d1c,_0x4e4f81=String(_0x16c0f9);return(_0x143d1c=_0x4e4f81[_0x5d7761(0x201)](/(?:DN|De|dn|de|Φ|φ)\s*(≥|>=|≤|<=|>|＞|<|＜)\s*(\d{2,4})/))?{'op':/≥|>=/[_0x5d7761(0x29e)](_0x143d1c[0x1])?'ge':/≤|<=/[_0x5d7761(0x29e)](_0x143d1c[0x1])?'le':/[>＞]/[_0x5d7761(0x29e)](_0x143d1c[0x1])?'gt':'lt','val':parseInt(_0x143d1c[0x2],0xa)}:(_0x143d1c=_0x4e4f81[_0x5d7761(0x201)](/(?:≥|>=|不小于|大于等于|不低于)\s*(?:DN|De|dn|de|Φ|φ)?\s*(\d{2,4})/))?{'op':'ge','val':parseInt(_0x143d1c[0x1],0xa)}:(_0x143d1c=_0x4e4f81[_0x5d7761(0x201)](/(?:≤|<=|不大于|小于等于|不超过)\s*(?:DN|De|dn|de|Φ|φ)?\s*(\d{2,4})/))?{'op':'le','val':parseInt(_0x143d1c[0x1],0xa)}:(_0x143d1c=_0x4e4f81[_0x5d7761(0x201)](/(?:DN|De|dn|de|Φ|φ)\s*(\d{2,4})\s*(?:mm)?\s*(及以上|以上|及以下|以下)/))?{'op':/以下/[_0x5d7761(0x29e)](_0x143d1c[0x2])?'le':'ge','val':parseInt(_0x143d1c[0x1],0xa)}:(_0x143d1c=_0x4e4f81[_0x5d7761(0x201)](/(?:>|＞|大于)\s*(?:DN|De|dn|de|Φ|φ)?\s*(\d{2,4})/))?{'op':'gt','val':parseInt(_0x143d1c[0x1],0xa)}:(_0x143d1c=_0x4e4f81[_0x5d7761(0x201)](/(?:<|＜|小于)\s*(?:DN|De|dn|de|Φ|φ)?\s*(\d{2,4})/))?{'op':'lt','val':parseInt(_0x143d1c[0x1],0xa)}:null;}function _0x156bda(_0x11427d){var _0x138713=_0xd44314;for(var _0x408560,_0x4c9d42=String(_0x11427d),_0x554d80=/(?:DN|De|dn|de)\s*(\d{2,4})\s*(?:[~～\-—－]|至)\s*(?:DN|De|dn|de)?\s*(\d{2,4})/gi,_0x501d2c=[],_0x348467=[],_0x4e7d30=[];null!==(_0x408560=_0x554d80[_0x138713(0x305)](_0x4c9d42));){var _0xb7a6aa=parseInt(_0x408560[0x1],0xa),_0x37dea6=parseInt(_0x408560[0x2],0xa);_0xb7a6aa&&_0x37dea6&&(_0x501d2c[_0x138713(0x2b5)](Math[_0x138713(0x244)](_0xb7a6aa,_0x37dea6)),_0x348467[_0x138713(0x2b5)](Math[_0x138713(0x2cd)](_0xb7a6aa,_0x37dea6)),_0x4e7d30[_0x138713(0x2e7)]||_0x4e7d30[_0x138713(0x2b5)](_0x408560[0x0]));}if(_0x501d2c[_0x138713(0x2e7)])return{'min':Math[_0x138713(0x244)][_0x138713(0x216)](null,_0x501d2c),'max':Math[_0x138713(0x2cd)][_0x138713(0x216)](null,_0x348467),'evidence':_0x4e7d30[0x0]+(_0x501d2c[_0x138713(0x2e7)]>0x1?_0x138713(0x2eb)+_0x501d2c[_0x138713(0x2e7)]+'\x20段':'')};if(/(?:及以上|以上|≥|>=|及以下|以下|≤|<=|不小于|不大于|大于等于|小于等于|[<>＜＞])/[_0x138713(0x29e)](_0x11427d))return null;for(var _0x1a47a1,_0x100793=[],_0x43bb3b=/(?:DN|De|dn|de|Φ|φ)\s*(\d{2,4})/gi;null!==(_0x1a47a1=_0x43bb3b[_0x138713(0x305)](_0x11427d));){var _0x2bf816=parseInt(_0x1a47a1[0x1],0xa);_0x2bf816>=0xa&&_0x2bf816<=0x7d0&&_0x100793[_0x138713(0x2b5)](_0x2bf816);}return _0x100793[_0x138713(0x2e7)]>=0x2?{'min':Math[_0x138713(0x244)][_0x138713(0x216)](null,_0x100793),'max':Math[_0x138713(0x2cd)][_0x138713(0x216)](null,_0x100793),'evidence':''}:null;}function _0x46258b(_0x2ae66b){var _0x19f9ae=_0xd44314;return/室外|户外|外网|庭院|埋地|室外埋地/[_0x19f9ae(0x29e)](_0x2ae66b)?_0x19f9ae(0x2e9):/室内|楼内|管井|管廊|吊顶内|地库|明装|暗装|暗敷|明敷/[_0x19f9ae(0x29e)](_0x2ae66b)?'in':null;}function _0x24f93e(_0x1cef17){return new Promise(function(_0x1a5736,_0x5589c2){var _0x343923=_0x1827,_0x8f330d=new FileReader();_0x8f330d[_0x343923(0x299)]=function(){var _0x541648=_0x343923;_0x1a5736(_0x8f330d[_0x541648(0x2c9)]);},_0x8f330d[_0x343923(0x1fb)]=function(){var _0x5a53de=_0x343923;_0x5589c2(_0x8f330d[_0x5a53de(0x250)]||new Error(_0x5a53de(0x2c8)));},_0x8f330d[_0x343923(0x22d)+_0x343923(0x26e)](_0x1cef17);});}function _0x41fd7c(_0x5f0830,_0xbb2d87){var _0x530754=_0xd44314;try{return new TextDecoder(_0xbb2d87)[_0x530754(0x293)](new Uint8Array(_0x5f0830));}catch(_0x11c23f){return'';}}function _0x1c938e(_0xd7a851){var _0x282ad0=_0xd44314;for(var _0x20a260,_0x435478=[],_0x4dec11=/[\u4e00-\u9fa5][\u4e00-\u9fa5A-Za-z0-9（）()、。，,.:：；;％%\/\-+~～=<>《》【】\[\]{}·_]{3,60}/g;null!==(_0x20a260=_0x4dec11[_0x282ad0(0x305)](_0xd7a851));){var _0x20b371=_0x20a260[0x0][_0x282ad0(0x226)]();_0x20b371[_0x282ad0(0x2e7)]<0x4||(_0x20b371[_0x282ad0(0x201)](/[\u4e00-\u9fa5]/g)||[])[_0x282ad0(0x2e7)]/_0x20b371[_0x282ad0(0x2e7)]<0.45||_0x435478[_0x282ad0(0x2b5)](_0x20b371);}return _0x435478;}var _0x55b5ba={'flange':0x1};function _0x514448(_0x2e9bff){var _0x162a92=_0xd44314;return _0x2e9bff?_0x162a92(0x2b9)===_0x2e9bff[_0x162a92(0x224)]?_0x1a9a23(_0x2e9bff[_0x162a92(0x1f4)+'d']||_0x162a92(0x253)):{'castIron':_0x162a92(0x221),'galv':_0x162a92(0x1e3),'stainless':_0x162a92(0x210),'copper':_0x162a92(0x2e3),'composite':_0x162a92(0x2f3),'seamless':_0x162a92(0x259),'welded':_0x162a92(0x259),'frp':_0x162a92(0x2db)}[_0x2e9bff[_0x162a92(0x224)]]||null:null;}var _0x279b80={'water':_0xd44314(0x2e6),'drain':_0xd44314(0x2b8),'rain':_0xd44314(0x212),'cond':_0xd44314(0x2b8),'reclaim':_0xd44314(0x2e6),'fire':_0xd44314(0x240),'gas':_0xd44314(0x1f1)};_0x2bdb82[_0xd44314(0x26a)]={'version':_0x123e0e,'parseText':function(_0x32c70f){var _0x203054=_0xd44314,_0x43c13e=_0x40eae5(_0x32c70f),_0x1afeb8={'version':_0x123e0e,'ok':!0x1,'textLen':_0x43c13e[_0x203054(0x2e7)],'materials':[],'systems':[],'joints':[],'locs':[],'rules':[],'measures':{},'dnRange':null,'sentences':[],'keywords':[],'frag':null};if(_0x43c13e[_0x203054(0x207)](/\s/g,'')[_0x203054(0x2e7)]<0x14)return _0x1afeb8;_0x1afeb8['ok']=!0x0,_0x262a5f[_0x203054(0x227)](function(_0x4d3d56){var _0xc955c9=_0x203054;_0x4d3d56['re'][_0xc955c9(0x29e)](_0x43c13e)&&_0x1afeb8[_0xc955c9(0x2c4)][_0xc955c9(0x2b5)]({'key':_0x4d3d56[_0xc955c9(0x243)],'label':_0x4d3d56[_0xc955c9(0x261)]});}),_0xdeac7e[_0x203054(0x227)](function(_0x4f699c){var _0x13cc2e=_0x203054;_0x4f699c['re'][_0x13cc2e(0x29e)](_0x43c13e)&&_0x1afeb8[_0x13cc2e(0x289)][_0x13cc2e(0x2b5)]({'key':_0x4f699c[_0x13cc2e(0x243)],'label':_0x4f699c[_0x13cc2e(0x261)],'medium':_0x4f699c[_0x13cc2e(0x220)]});}),_0x6cd78[_0x203054(0x227)](function(_0x1022dd){var _0x48531f=_0x203054;_0x1022dd['re'][_0x48531f(0x29e)](_0x43c13e)&&_0x1afeb8[_0x48531f(0x251)][_0x48531f(0x2b5)]({'key':_0x1022dd[_0x48531f(0x243)],'label':_0x1022dd[_0x48531f(0x261)]});}),/室内|楼内|管井|吊顶内/[_0x203054(0x29e)](_0x43c13e)&&_0x1afeb8[_0x203054(0x222)][_0x203054(0x2b5)]('in'),/室外|户外|外网|埋地|庭院/[_0x203054(0x29e)](_0x43c13e)&&_0x1afeb8[_0x203054(0x222)][_0x203054(0x2b5)](_0x203054(0x2e9)),_0xfea0a0[_0x203054(0x227)](function(_0x3d54da){var _0x4bc355=_0x203054;_0x3d54da['re'][_0x4bc355(0x29e)](_0x43c13e)&&(_0x1afeb8[_0x4bc355(0x2ad)][_0x3d54da[_0x4bc355(0x243)]]=!0x0);}),_0x1afeb8[_0x203054(0x2f9)]=_0x156bda(_0x43c13e);var _0x810d57,_0x1e787c,_0x496ca8,_0xd5a738=_0x43c13e[_0x203054(0x204)]('\x0a')[_0x203054(0x2ff)](function(_0x297cda){var _0x3948d6=_0x203054;return _0x297cda[_0x3948d6(0x226)]();});_0x1afeb8[_0x203054(0x2a0)]={'lines':_0xd5a738[_0x203054(0x2e7)],'avgLine':_0xd5a738[_0x203054(0x2e7)]?Math[_0x203054(0x2d3)](_0x43c13e[_0x203054(0x207)](/\s/g,'')[_0x203054(0x2e7)]/_0xd5a738[_0x203054(0x2e7)]):0x0},_0x1afeb8[_0x203054(0x268)]=[],function(_0x4fc1d3){var _0x41ee2e=_0x203054,_0x5ab7d4=_0x40eae5(_0x4fc1d3)[_0x41ee2e(0x204)]('\x0a'),_0x2fd23e=[],_0x2f9f4d={'title':'','lines':[]};function _0x1f1d75(){var _0x504342=_0x41ee2e;(_0x2f9f4d[_0x504342(0x1e9)]||_0x2f9f4d[_0x504342(0x2fc)][_0x504342(0x2e7)])&&_0x2fd23e[_0x504342(0x2b5)](_0x2f9f4d),_0x2f9f4d={'title':'','lines':[]};}return _0x5ab7d4[_0x41ee2e(0x227)](function(_0x2bbe35){var _0x471412=_0x41ee2e,_0x1c258e=_0x2bbe35[_0x471412(0x226)]();if(_0x1c258e)return function(_0x58b6b3){var _0x4092b1=_0x471412,_0x5b64a1=String(_0x58b6b3)[_0x4092b1(0x226)]();return!(!_0x5b64a1||_0x5b64a1[_0x4092b1(0x2e7)]>0x28||!/^\d+(\.\d+)*[\s、.．]/[_0x4092b1(0x29e)](_0x5b64a1)&&!/^[一二三四五六七八九十]+[、.．]/[_0x4092b1(0x29e)](_0x5b64a1)&&!/^[（(]\d+[）)]/[_0x4092b1(0x29e)](_0x5b64a1)&&!(_0x5b64a1[_0x4092b1(0x2e7)]<=0x1a&&/[：:]$/[_0x4092b1(0x29e)](_0x5b64a1)));}(_0x1c258e)?(_0x1f1d75(),void(_0x2f9f4d[_0x471412(0x1e9)]=_0x1c258e)):void _0x2f9f4d[_0x471412(0x2fc)][_0x471412(0x2b5)](_0x1c258e);_0x1f1d75();}),_0x1f1d75(),_0x2fd23e;}(_0x43c13e)[_0x203054(0x227)](function(_0x1f4e97){var _0x839687=_0x203054,_0x56006c,_0x403f5f,_0x4e6dda,_0x4564dc,_0x3d8993={'material':_0xae7822(_0x262a5f,_0x1f4e97[_0x839687(0x1e9)]),'system':_0xae7822(_0xdeac7e,_0x1f4e97[_0x839687(0x1e9)]),'loc':_0x46258b(_0x1f4e97[_0x839687(0x1e9)])};(_0x56006c=_0x1f4e97[_0x839687(0x2fc)],_0x403f5f=[],_0x4e6dda=[],_0x4564dc=0x0,_0x56006c[_0x839687(0x227)](function(_0x41e2f0){var _0x329935=_0x839687;_0x4e6dda[_0x329935(0x2e7)]&&_0x4564dc+_0x41e2f0[_0x329935(0x2e7)]>0x4b0&&(_0x403f5f[_0x329935(0x2b5)](_0x4e6dda[_0x329935(0x2c6)]('\x0a')),_0x4e6dda=[],_0x4564dc=0x0),_0x4e6dda[_0x329935(0x2b5)](_0x41e2f0),_0x4564dc+=_0x41e2f0[_0x329935(0x2e7)]+0x1;}),_0x4e6dda[_0x839687(0x2e7)]&&_0x403f5f[_0x839687(0x2b5)](_0x4e6dda[_0x839687(0x2c6)]('\x0a')),_0x403f5f)[_0x839687(0x227)](function(_0x45f438){var _0x5a9fef=_0x839687;_0xef6439(_0x45f438)[_0x5a9fef(0x227)](function(_0x2cdd7d){var _0x57a5b2=_0x5a9fef;_0x1afeb8[_0x57a5b2(0x268)][_0x57a5b2(0x2b5)](_0x2cdd7d);}),function(_0x10570d,_0x44bd17,_0x52bb33){var _0x4bc679=_0x5a9fef,_0x1274ce=function(_0x2e54ab){var _0x5a5753=_0x1827;for(var _0x31e0ef=String(_0x2e54ab),_0x3adef5=[],_0x16442c=0x0,_0x1a75cf=0x0,_0x15c817=0x0;_0x15c817<=_0x31e0ef[_0x5a5753(0x2e7)];_0x15c817++){var _0x56f4e3=_0x15c817<_0x31e0ef[_0x5a5753(0x2e7)]?_0x31e0ef[_0x5a5753(0x301)](_0x15c817):'\x0a';if('（'===_0x56f4e3||'('===_0x56f4e3?_0x16442c++:'）'!==_0x56f4e3&&')'!==_0x56f4e3||(_0x16442c=_0x16442c>0x0?_0x16442c-0x1:0x0),0x0===_0x16442c&&/[。；;，,、：:\n]/[_0x5a5753(0x29e)](_0x56f4e3)){var _0x13770a=_0x31e0ef[_0x5a5753(0x23c)](_0x1a75cf,_0x15c817)[_0x5a5753(0x226)]();_0x13770a&&_0x3adef5[_0x5a5753(0x2b5)]({'text':_0x13770a,'idx':_0x1a75cf}),_0x1a75cf=_0x15c817+0x1;}}return _0x3adef5;}(_0x10570d)[_0x4bc679(0x200)](function(_0x3f12d9){var _0x3845e5=_0x4bc679;return{'text':_0x3f12d9[_0x3845e5(0x2aa)],'idx':_0x3f12d9[_0x3845e5(0x26b)],'mat':_0xae7822(_0x262a5f,_0x3f12d9[_0x3845e5(0x2aa)]),'joint':_0x57b84a(_0x3f12d9[_0x3845e5(0x2aa)]),'cond':_0x16be36(_0x3f12d9[_0x3845e5(0x2aa)]),'loc':_0x46258b(_0x3f12d9[_0x3845e5(0x2aa)]),'sys':_0xae7822(_0xdeac7e,_0x3f12d9[_0x3845e5(0x2aa)])};}),_0x24ddd8={'material':_0x44bd17[_0x4bc679(0x237)]||null,'matIdx':null,'cond':null,'loc':_0x44bd17[_0x4bc679(0x286)]||null,'system':_0x44bd17[_0x4bc679(0x276)]||null};_0x1274ce[_0x4bc679(0x227)](function(_0x10559b){var _0x47bb8b=_0x4bc679;if(_0x10559b[_0x47bb8b(0x285)]&&(_0x24ddd8[_0x47bb8b(0x237)]&&_0x24ddd8[_0x47bb8b(0x237)][_0x47bb8b(0x243)]===_0x10559b[_0x47bb8b(0x285)][_0x47bb8b(0x243)]||(_0x24ddd8[_0x47bb8b(0x2bb)]=null),_0x24ddd8[_0x47bb8b(0x237)]=_0x10559b[_0x47bb8b(0x285)],_0x24ddd8[_0x47bb8b(0x1f8)]=_0x10559b[_0x47bb8b(0x26b)]),_0x10559b[_0x47bb8b(0x2bb)]&&(_0x24ddd8[_0x47bb8b(0x2bb)]=_0x10559b[_0x47bb8b(0x2bb)]),_0x10559b[_0x47bb8b(0x286)]?_0x24ddd8[_0x47bb8b(0x286)]=_0x10559b[_0x47bb8b(0x286)]:_0x4cb8cb[_0x47bb8b(0x29e)](_0x10559b[_0x47bb8b(0x2aa)])&&(_0x24ddd8[_0x47bb8b(0x286)]=null,_0x24ddd8[_0x47bb8b(0x2bb)]=null),_0x10559b[_0x47bb8b(0x21e)]&&(_0x24ddd8[_0x47bb8b(0x276)]=_0x10559b[_0x47bb8b(0x21e)]),_0x10559b[_0x47bb8b(0x2cb)]&&(!_0x55b5ba[_0x10559b[_0x47bb8b(0x2cb)][_0x47bb8b(0x243)]]||/管道|管材/[_0x47bb8b(0x29e)](_0x10559b[_0x47bb8b(0x2aa)]))){var _0x5e7a85=_0x24ddd8[_0x47bb8b(0x237)];_0x5e7a85&&null!=_0x24ddd8[_0x47bb8b(0x1f8)]&&Math[_0x47bb8b(0x1e0)](_0x10559b[_0x47bb8b(0x26b)]-_0x24ddd8[_0x47bb8b(0x1f8)])>0x78&&(_0x5e7a85=_0x44bd17[_0x47bb8b(0x237)]||null),_0x52bb33[_0x47bb8b(0x2b5)]({'materialKey':_0x5e7a85?_0x5e7a85[_0x47bb8b(0x243)]:null,'materialLabel':_0x5e7a85?_0x5e7a85[_0x47bb8b(0x261)]:'','conf':_0x10559b[_0x47bb8b(0x285)]?_0x47bb8b(0x283):_0x47bb8b(0x25a),'joint':_0x10559b[_0x47bb8b(0x2cb)][_0x47bb8b(0x243)],'jointLabel':_0x10559b[_0x47bb8b(0x2cb)][_0x47bb8b(0x261)],'medium':_0x24ddd8[_0x47bb8b(0x276)]?_0x24ddd8[_0x47bb8b(0x276)][_0x47bb8b(0x220)]:null,'loc':_0x24ddd8[_0x47bb8b(0x286)],'dnCond':_0x10559b[_0x47bb8b(0x2bb)]||_0x24ddd8[_0x47bb8b(0x2bb)]||null,'evidence':String(_0x10570d)[_0x47bb8b(0x23c)](Math[_0x47bb8b(0x2cd)](0x0,_0x10559b[_0x47bb8b(0x26b)]-0x28),_0x10559b[_0x47bb8b(0x26b)]+_0x10559b[_0x47bb8b(0x2aa)][_0x47bb8b(0x2e7)]+0x3c)[_0x47bb8b(0x207)](/\s+/g,'\x20')[_0x47bb8b(0x226)]()});}}),_0x44bd17[_0x4bc679(0x237)]=_0x24ddd8[_0x4bc679(0x237)],_0x44bd17[_0x4bc679(0x276)]=_0x24ddd8[_0x4bc679(0x276)];}(_0x45f438,_0x3d8993,_0x1afeb8[_0x5a9fef(0x23d)]);});}),_0x1afeb8[_0x203054(0x23d)]=function(_0x5acd23){var _0x294a40=_0x203054,_0x56117e={};return _0x5acd23[_0x294a40(0x227)](function(_0xce0814){var _0x3e8aff=_0x294a40;if(_0xce0814[_0x3e8aff(0x286)]){var _0x2ae4e7=(_0xce0814[_0x3e8aff(0x23e)+'y']||'-')+'|'+(_0xce0814[_0x3e8aff(0x220)]||'-');_0x56117e[_0x2ae4e7]=_0x56117e[_0x2ae4e7]||[],_0x56117e[_0x2ae4e7][_0x3e8aff(0x1ec)](_0xce0814[_0x3e8aff(0x286)])<0x0&&_0x56117e[_0x2ae4e7][_0x3e8aff(0x2b5)](_0xce0814[_0x3e8aff(0x286)]);}}),_0x5acd23[_0x294a40(0x227)](function(_0x371b69){var _0x265838=_0x294a40;if(!_0x371b69[_0x265838(0x286)]&&_0x371b69[_0x265838(0x272)]){var _0x15475f=(_0x371b69[_0x265838(0x23e)+'y']||'-')+'|'+(_0x371b69[_0x265838(0x220)]||'-');_0x56117e[_0x15475f]&&0x1===_0x56117e[_0x15475f][_0x265838(0x2e7)]&&(_0x371b69[_0x265838(0x286)]=_0x56117e[_0x15475f][0x0]);}}),_0x5acd23;}((_0x810d57=_0x1afeb8[_0x203054(0x23d)],_0x1e787c={},_0x496ca8=[],_0x810d57[_0x203054(0x227)](function(_0x309da0){var _0x32b81c=_0x203054,_0x17535c=[_0x309da0[_0x32b81c(0x23e)+'y']||'-',_0x309da0[_0x32b81c(0x2cb)],_0x309da0[_0x32b81c(0x220)]||'-',_0x309da0[_0x32b81c(0x286)]||'-',_0x309da0[_0x32b81c(0x272)]?_0x309da0[_0x32b81c(0x272)]['op']+_0x309da0[_0x32b81c(0x272)][_0x32b81c(0x2ea)]:'-'][_0x32b81c(0x2c6)]('|');_0x1e787c[_0x17535c]||(_0x1e787c[_0x17535c]=0x1,_0x496ca8[_0x32b81c(0x2b5)](_0x309da0));}),_0x496ca8));var _0x330045=0x0,_0x287874=0x0;return _0x1afeb8[_0x203054(0x23d)][_0x203054(0x227)](function(_0x29d5bf){var _0x41b267=_0x203054;_0x29d5bf[_0x41b267(0x23e)+'y']?_0x330045++:_0x287874++;}),_0x1afeb8[_0x203054(0x295)]={'high':_0x330045,'low':_0x287874,'lowRatio':_0x330045+_0x287874?_0x287874/(_0x330045+_0x287874):0x0},_0x1afeb8[_0x203054(0x1da)]=[],_0x1afeb8[_0x203054(0x2c4)][_0x203054(0x227)](function(_0x787705){var _0x4761bb=_0x203054;_0x1afeb8[_0x4761bb(0x1da)][_0x4761bb(0x2b5)]({'type':_0x4761bb(0x237),'text':_0x787705[_0x4761bb(0x261)],'key':_0x787705[_0x4761bb(0x243)]});}),_0x1afeb8[_0x203054(0x289)][_0x203054(0x227)](function(_0x2b4d10){var _0x1227f0=_0x203054;_0x1afeb8[_0x1227f0(0x1da)][_0x1227f0(0x2b5)]({'type':_0x1227f0(0x276),'text':_0x2b4d10[_0x1227f0(0x261)],'key':_0x2b4d10[_0x1227f0(0x243)]});}),_0x1afeb8[_0x203054(0x251)][_0x203054(0x227)](function(_0x16d3e3){var _0x5214e4=_0x203054;_0x1afeb8[_0x5214e4(0x1da)][_0x5214e4(0x2b5)]({'type':_0x5214e4(0x2cb),'text':_0x16d3e3[_0x5214e4(0x261)],'key':_0x16d3e3[_0x5214e4(0x243)]});}),_0x1afeb8[_0x203054(0x222)][_0x203054(0x2e7)]&&_0x1afeb8[_0x203054(0x1da)][_0x203054(0x2b5)]({'type':_0x203054(0x286),'text':_0x1afeb8[_0x203054(0x222)][_0x203054(0x200)](function(_0x212d7f){var _0x25a3ef=_0x203054;return _0x25a3ef(0x2e9)===_0x212d7f?'室外':'室内';})[_0x203054(0x2c6)](_0x203054(0x2a4)),'key':_0x1afeb8[_0x203054(0x222)][_0x203054(0x2c6)](',')}),_0x1afeb8[_0x203054(0x2f9)]&&_0x1afeb8[_0x203054(0x1da)][_0x203054(0x2b5)]({'type':'dn','text':_0x203054(0x2be)+_0x1afeb8[_0x203054(0x2f9)][_0x203054(0x244)]+'~'+_0x1afeb8[_0x203054(0x2f9)][_0x203054(0x2cd)],'key':'dn'}),Object[_0x203054(0x2d6)](_0x1afeb8[_0x203054(0x2ad)])[_0x203054(0x227)](function(_0x1c6354){var _0x3b0592=_0x203054,_0x5a6916=_0xfea0a0[_0x3b0592(0x2ff)](function(_0x44f05a){var _0x37af68=_0x3b0592;return _0x44f05a[_0x37af68(0x243)]===_0x1c6354;})[0x0];_0x5a6916&&_0x1afeb8[_0x3b0592(0x1da)][_0x3b0592(0x2b5)]({'type':_0x3b0592(0x27c),'text':_0x5a6916[_0x3b0592(0x261)],'key':_0x1c6354});}),_0x1afeb8;},'extractFile':async function(_0x1a033e){var _0x5486cf=_0xd44314,_0x104b1f,_0x4d0163,_0x3a43b2=_0x1a033e&&_0x1a033e[_0x5486cf(0x303)]||'',_0x28e3ad=(_0x3a43b2[_0x5486cf(0x204)]('.')[_0x5486cf(0x215)]()||'')[_0x5486cf(0x2bd)+'e']();if(_0x5486cf(0x2f2)===_0x28e3ad)_0x104b1f=await _0x24f93e(_0x1a033e),_0x4d0163=await async function(_0x5cac96){var _0x1780cd=_0x5486cf,_0x3d4e3a,_0x132c1=_0x2bdb82[_0x1780cd(0x1dc)];if(!_0x132c1)throw new Error(_0x1780cd(0x1e1)+'载');if(_0x132c1[_0x1780cd(0x229)+_0x1780cd(0x2e4)]&&!_0x132c1[_0x1780cd(0x229)+_0x1780cd(0x2e4)][_0x1780cd(0x271)])try{_0x132c1[_0x1780cd(0x229)+_0x1780cd(0x2e4)][_0x1780cd(0x271)]=new URL(_0x1780cd(0x2f6)+_0x1780cd(0x269),_0x2bdb82[_0x1780cd(0x2cf)]&&_0x2bdb82[_0x1780cd(0x2cf)][_0x1780cd(0x1e5)]||_0x1780cd(0x2fd)+_0x1780cd(0x249))[_0x1780cd(0x1e5)];}catch(_0x46a591){_0x132c1[_0x1780cd(0x229)+_0x1780cd(0x2e4)][_0x1780cd(0x271)]=_0x1780cd(0x2f6)+_0x1780cd(0x269);}try{_0x3d4e3a=await _0x132c1[_0x1780cd(0x256)+'t']({'data':new Uint8Array(_0x5cac96),'useSystemFonts':!0x0})[_0x1780cd(0x1db)];}catch(_0x9f4885){_0x132c1[_0x1780cd(0x229)+_0x1780cd(0x2e4)]&&(_0x132c1[_0x1780cd(0x229)+_0x1780cd(0x2e4)][_0x1780cd(0x271)]=''),_0x3d4e3a=await _0x132c1[_0x1780cd(0x256)+'t']({'data':new Uint8Array(_0x5cac96),'useSystemFonts':!0x0,'disableWorker':!0x0})[_0x1780cd(0x1db)];}for(var _0xd12584=Math[_0x1780cd(0x244)](_0x3d4e3a[_0x1780cd(0x211)],0x28),_0x582b6d=[],_0x337c3b=0x1;_0x337c3b<=_0xd12584;_0x337c3b++){for(var _0x493406=await _0x3d4e3a[_0x1780cd(0x203)](_0x337c3b),_0x5b9a8e=await _0x493406[_0x1780cd(0x2da)+_0x1780cd(0x2bc)](),_0x50ab3='',_0x50021b=0x0;_0x50021b<_0x5b9a8e[_0x1780cd(0x28a)][_0x1780cd(0x2e7)];_0x50021b++){var _0x4f9285=_0x5b9a8e[_0x1780cd(0x28a)][_0x50021b];void 0x0!==_0x4f9285[_0x1780cd(0x28d)]&&(_0x50ab3+=_0x4f9285[_0x1780cd(0x28d)],_0x4f9285[_0x1780cd(0x225)]&&(_0x582b6d[_0x1780cd(0x2b5)](_0x50ab3),_0x50ab3=''));}_0x50ab3&&_0x582b6d[_0x1780cd(0x2b5)](_0x50ab3),_0x582b6d[_0x1780cd(0x2b5)]('');}var _0x5c26ad=_0x40eae5(_0x582b6d[_0x1780cd(0x2c6)]('\x0a'));return{'text':_0x5c26ad,'pages':_0x3d4e3a[_0x1780cd(0x211)],'note':_0x3d4e3a[_0x1780cd(0x211)]>_0xd12584?_0x1780cd(0x21b)+_0x3d4e3a[_0x1780cd(0x211)]+_0x1780cd(0x217)+_0xd12584+'\x20页':'','empty':_0x5c26ad[_0x1780cd(0x207)](/\s/g,'')[_0x1780cd(0x2e7)]<0x14};}(_0x104b1f);else{if(_0x5486cf(0x296)===_0x28e3ad)_0x4d0163=function(_0x36a03b){var _0xd96073=_0x5486cf,_0x1b1c31=_0x41fd7c(_0x36a03b,_0xd96073(0x2a7));/SECTION|ENTITIES|AcDb/i[_0xd96073(0x29e)](_0x1b1c31)||(_0x1b1c31=_0x41fd7c(_0x36a03b,_0xd96073(0x209)));for(var _0x1f0a8f=[],_0x554974=_0x1b1c31[_0xd96073(0x204)](/\r\n|\n|\r/),_0x2cc3ad=0x0;_0x2cc3ad<_0x554974[_0xd96073(0x2e7)]-0x1;_0x2cc3ad++){var _0x3be1d8=_0x554974[_0x2cc3ad][_0xd96073(0x226)]();if('1'===_0x3be1d8||'3'===_0x3be1d8){var _0x548892=_0x554974[_0x2cc3ad+0x1]||'';(_0x548892=_0x548892[_0xd96073(0x207)](/\\[A-Za-z][^;]*;/g,'')[_0xd96073(0x207)](/[{}]/g,'')[_0xd96073(0x226)]())[_0xd96073(0x2e7)]>=0x2&&_0x1f0a8f[_0xd96073(0x2b5)](_0x548892);}}return{'text':_0x40eae5(_0x1f0a8f[_0xd96073(0x2c6)]('\x0a')),'note':_0xd96073(0x2b6)+_0x1f0a8f[_0xd96073(0x2e7)]+_0xd96073(0x270)};}(_0x104b1f=await _0x24f93e(_0x1a033e));else{if(_0x5486cf(0x1de)===_0x28e3ad)_0x4d0163=function(_0x722cf2){var _0x16531c=_0x5486cf,_0x411063=[],_0x325bf8=_0x41fd7c(_0x722cf2,_0x16531c(0x22b));_0x325bf8&&(_0x411063=_0x411063[_0x16531c(0x29b)](_0x1c938e(_0x325bf8)));var _0x1edd96=_0x41fd7c(_0x722cf2,_0x16531c(0x209));_0x1edd96&&(_0x411063=_0x411063[_0x16531c(0x29b)](_0x1c938e(_0x1edd96)));var _0x2650bf={},_0x28961d=[];return _0x411063[_0x16531c(0x227)](function(_0x22cdca){var _0x406201=_0x16531c;_0x2650bf[_0x22cdca]||(_0x2650bf[_0x22cdca]=0x1,_0x28961d[_0x406201(0x2b5)](_0x22cdca));}),{'text':_0x40eae5(_0x28961d[_0x16531c(0x23c)](0x0,0xfa0)[_0x16531c(0x2c6)]('\x0a')),'note':_0x16531c(0x2ef)+_0x16531c(0x2f8)+_0x16531c(0x239)+_0x28961d[_0x16531c(0x2e7)]+(_0x16531c(0x252)+_0x16531c(0x29c)+_0x16531c(0x20e)+_0x16531c(0x2d0))};}(_0x104b1f=await _0x24f93e(_0x1a033e));else{if(_0x5486cf(0x247)!==_0x28e3ad&&'md'!==_0x28e3ad&&_0x5486cf(0x292)!==_0x28e3ad)throw new Error(_0x5486cf(0x2a3)+_0x28e3ad+(_0x5486cf(0x248)+_0x5486cf(0x2c7)+_0x5486cf(0x2c5)+_0x5486cf(0x298)+_0x5486cf(0x21c)));var _0x56bbec=await function(_0x19bed4){return new Promise(function(_0x31128d,_0x399849){var _0x52c56a=_0x1827,_0x42e6de=new FileReader();_0x42e6de[_0x52c56a(0x299)]=function(){var _0x4e1a14=_0x52c56a;_0x31128d(_0x42e6de[_0x4e1a14(0x2c9)]);},_0x42e6de[_0x52c56a(0x1fb)]=function(){var _0x1e7033=_0x52c56a;_0x399849(_0x42e6de[_0x1e7033(0x250)]||new Error(_0x1e7033(0x2c8)));},_0x42e6de[_0x52c56a(0x2b1)](_0x19bed4,_0x52c56a(0x2a7));});}(_0x1a033e);if(!/[\u4e00-\u9fa5]/[_0x5486cf(0x29e)](_0x56bbec))try{_0x56bbec=_0x41fd7c(await _0x24f93e(_0x1a033e),_0x5486cf(0x209));}catch(_0x136ce2){}_0x4d0163={'text':_0x40eae5(_0x56bbec),'note':''};}}}return _0x4d0163[_0x5486cf(0x257)]=_0x28e3ad,_0x4d0163[_0x5486cf(0x24e)]=_0x3a43b2,_0x4d0163[_0x5486cf(0x273)]=_0x1a033e[_0x5486cf(0x273)]||0x0,!_0x4d0163[_0x5486cf(0x278)]&&_0x4d0163[_0x5486cf(0x2aa)][_0x5486cf(0x207)](/\s/g,'')[_0x5486cf(0x2e7)]<0x14&&(_0x4d0163[_0x5486cf(0x278)]=!0x0),_0x4d0163;},'matchItem':function(_0xa82091,_0x9c3bec){var _0x176f50=_0xd44314;if(!(_0xa82091&&_0xa82091['ok']&&_0xa82091[_0x176f50(0x23d)]&&_0xa82091[_0x176f50(0x23d)][_0x176f50(0x2e7)]))return null;if(!_0x9c3bec||!_0x9c3bec[_0x176f50(0x224)])return null;var _0x4bb307=_0x514448(_0x9c3bec);if(!_0x4bb307)return null;var _0x407692,_0x4c6f9e=_0x197ab3[_0x1a9a23(_0x407692=_0x4bb307)]?_0x176f50(0x2b9):_0x407692?_0x176f50(0x24a):null,_0x4913eb=_0x9c3bec['dn']||0x0,_0x13f69c=_0x9c3bec[_0x176f50(0x265)]?_0x176f50(0x212):_0x9c3bec[_0x176f50(0x220)]||_0x176f50(0x2e6),_0x4689e7=null,_0x2c3620=0x0;return _0xa82091[_0x176f50(0x23d)][_0x176f50(0x227)](function(_0x2f53fc){var _0x101827=_0x176f50,_0xb367db=0x0;if(_0x2f53fc[_0x101827(0x23e)+'y']){if(_0x1a9a23(_0x2f53fc[_0x101827(0x23e)+'y'])!==_0x4bb307)return;_0xb367db+=0x6;}else{var _0x54f3d9=_0xa2b602(_0x2f53fc[_0x101827(0x2cb)]);if(_0x54f3d9&&_0x4c6f9e&&_0x54f3d9!==_0x4c6f9e)return;_0xb367db+=0x2;}if(_0x2f53fc[_0x101827(0x272)]){if(!_0x4913eb)return;var _0xa842a9=_0x2f53fc[_0x101827(0x272)][_0x101827(0x2ea)],_0x19a616=!0x0;if('ge'===_0x2f53fc[_0x101827(0x272)]['op']?_0x19a616=_0x4913eb>=_0xa842a9:'gt'===_0x2f53fc[_0x101827(0x272)]['op']?_0x19a616=_0x4913eb>_0xa842a9:'le'===_0x2f53fc[_0x101827(0x272)]['op']?_0x19a616=_0x4913eb<=_0xa842a9:'lt'===_0x2f53fc[_0x101827(0x272)]['op']&&(_0x19a616=_0x4913eb<_0xa842a9),!_0x19a616)return;_0xb367db+=0x3;}if(_0x2f53fc[_0x101827(0x286)]){if(_0x2f53fc[_0x101827(0x286)]===_0x9c3bec[_0x101827(0x286)])_0xb367db+=0x1;else{if(!_0x9c3bec[_0x101827(0x2ce)+'us'])return;_0xb367db-=0x1;}}_0x2f53fc[_0x101827(0x220)]&&(_0x2f53fc[_0x101827(0x220)]===_0x13f69c?_0xb367db+=0x2:_0x101827(0x240)===_0x2f53fc[_0x101827(0x220)]||_0x101827(0x1f1)===_0x2f53fc[_0x101827(0x220)]||(_0xb367db-=0x1)),_0xb367db>_0x2c3620&&(_0x2c3620=_0xb367db,_0x4689e7=_0x2f53fc);}),_0x2c3620>=0x3?_0x4689e7:null;},'analyze':function(_0x177ed0,_0x48f73e){var _0xd914e1=_0xd44314,_0x4350fb=[];if(!_0x177ed0||!_0x177ed0['ok'])return _0x4350fb;if(!_0x177ed0[_0xd914e1(0x23d)]||!_0x177ed0[_0xd914e1(0x23d)][_0xd914e1(0x2e7)])return[{'level':_0xd914e1(0x232),'title':_0xd914e1(0x2d9)+'式','text':_0xd914e1(0x2bf)+_0xd914e1(0x1dd)+_0xd914e1(0x260)+_0xd914e1(0x1f3)+_0xd914e1(0x2fb)+_0xd914e1(0x2a9)+_0xd914e1(0x28e)+_0xd914e1(0x2a6)}];var _0x560166=(_0x48f73e||[])[_0xd914e1(0x2ff)](function(_0x188e08){var _0x489f7c=_0xd914e1;return _0x188e08&&_0x188e08[_0x489f7c(0x224)]&&_0x489f7c(0x1e8)!==_0x188e08[_0x489f7c(0x224)];}),_0x5dd0ae=_0x560166[_0xd914e1(0x2ff)](function(_0x512d95){var _0x3a7f22=_0xd914e1;return _0x512d95[_0x3a7f22(0x1ff)]&&/^031001/[_0x3a7f22(0x29e)](_0x512d95[_0x3a7f22(0x1ff)]);}),_0xf887d4={},_0x4103ec={},_0x3ac8ca={'insulation':0x0,'sleeve':0x0,'support':0x0};if(_0x5dd0ae[_0xd914e1(0x227)](function(_0x580e39){var _0x1f20b5=_0xd914e1,_0x211afb=_0x514448(_0x580e39);_0x211afb&&(_0xf887d4[_0x211afb]=(_0xf887d4[_0x211afb]||0x0)+0x1);var _0x59c69e=_0x580e39[_0x1f20b5(0x265)]?_0x1f20b5(0x212):_0x580e39[_0x1f20b5(0x220)]||_0x1f20b5(0x2e6);_0x4103ec[_0x59c69e]=(_0x4103ec[_0x59c69e]||0x0)+0x1;}),_0x560166[_0xd914e1(0x227)](function(_0x4f8238){var _0x416b0f=_0xd914e1;_0x416b0f(0x1f7)+'r'!==_0x4f8238[_0x416b0f(0x224)]&&_0x416b0f(0x2b0)!==_0x4f8238[_0x416b0f(0x224)]||_0x3ac8ca[_0x416b0f(0x29d)]++,_0x416b0f(0x2f5)===_0x4f8238[_0x416b0f(0x224)]&&_0x3ac8ca[_0x416b0f(0x223)]++,/套管/[_0x416b0f(0x29e)](_0x4f8238[_0x416b0f(0x303)]||'')&&_0x3ac8ca[_0x416b0f(0x25d)]++;}),_0x177ed0[_0xd914e1(0x289)][_0xd914e1(0x227)](function(_0x17af4c){var _0x5b3a8e=_0xd914e1;if(_0x5b3a8e(0x240)!==_0x17af4c[_0x5b3a8e(0x243)]){var _0x24a38c=_0x279b80[_0x17af4c[_0x5b3a8e(0x243)]];_0x24a38c&&(_0x5b3a8e(0x2bb)!==_0x17af4c[_0x5b3a8e(0x243)]?_0x4103ec[_0x24a38c]||_0x4350fb[_0x5b3a8e(0x2b5)]({'level':_0x5b3a8e(0x246),'title':_0x17af4c[_0x5b3a8e(0x261)],'text':_0x5b3a8e(0x228)+_0x17af4c[_0x5b3a8e(0x261)]+(_0x5b3a8e(0x27f)+_0x5b3a8e(0x1d7))}):_0x4103ec[_0x5b3a8e(0x2b8)]||_0x4350fb[_0x5b3a8e(0x2b5)]({'level':_0x5b3a8e(0x246),'title':_0x17af4c[_0x5b3a8e(0x261)],'text':_0x5b3a8e(0x228)+_0x17af4c[_0x5b3a8e(0x261)]+(_0x5b3a8e(0x1ef)+_0x5b3a8e(0x288)+'项。')}));}else _0x4103ec[_0x5b3a8e(0x240)]||(_0xf887d4[_0x5b3a8e(0x1e3)]?_0x4350fb[_0x5b3a8e(0x2b5)]({'level':_0x5b3a8e(0x232),'title':_0x5b3a8e(0x2c3),'text':_0x5b3a8e(0x25b)+_0x5b3a8e(0x2df)+_0xf887d4[_0x5b3a8e(0x1e3)]+(_0x5b3a8e(0x302)+_0x5b3a8e(0x213)+_0x5b3a8e(0x254)+_0x5b3a8e(0x2f7)+_0x5b3a8e(0x26f)+_0x5b3a8e(0x1f0)+_0x5b3a8e(0x2f1))}):_0x4350fb[_0x5b3a8e(0x2b5)]({'level':_0x5b3a8e(0x232),'title':_0x5b3a8e(0x2c3),'text':_0x5b3a8e(0x22e)+_0x5b3a8e(0x2e8)+_0x5b3a8e(0x2c1)+_0x5b3a8e(0x2af)+_0x5b3a8e(0x274)+'水。'}));}),_0x177ed0[_0xd914e1(0x2c4)][_0xd914e1(0x227)](function(_0x375977){var _0x5c5776=_0xd914e1;_0x5c5776(0x259)!==_0x375977[_0x5c5776(0x243)]&&_0x5c5776(0x2db)!==_0x375977[_0x5c5776(0x243)]&&(_0xf887d4[_0x375977[_0x5c5776(0x243)]]||_0x4350fb[_0x5c5776(0x2b5)]({'level':_0x5c5776(0x246),'title':_0x375977[_0x5c5776(0x261)],'text':_0x5c5776(0x24c)+_0x375977[_0x5c5776(0x261)]+(_0x5c5776(0x294)+_0x5c5776(0x2f4)+_0x5c5776(0x24b))}));}),_0x177ed0[_0xd914e1(0x2ad)][_0xd914e1(0x29d)]&&!_0x3ac8ca[_0xd914e1(0x29d)]&&_0x4350fb[_0xd914e1(0x2b5)]({'level':_0xd914e1(0x232),'title':_0xd914e1(0x2a5),'text':_0xd914e1(0x291)+_0xd914e1(0x2ec)+_0xd914e1(0x1f6)+_0xd914e1(0x2a8)+_0xd914e1(0x2d7)}),_0x177ed0[_0xd914e1(0x2ad)][_0xd914e1(0x25d)]&&!_0x3ac8ca[_0xd914e1(0x25d)]&&_0x4350fb[_0xd914e1(0x2b5)]({'level':_0xd914e1(0x232),'title':'套管','text':_0xd914e1(0x28b)+_0xd914e1(0x2ee)+_0xd914e1(0x24d)+_0xd914e1(0x297)+_0xd914e1(0x26d)}),_0x177ed0[_0xd914e1(0x2ad)][_0xd914e1(0x223)]&&_0x3ac8ca[_0xd914e1(0x223)]&&_0x4350fb[_0xd914e1(0x2b5)]({'level':'ok','title':_0xd914e1(0x242),'text':_0xd914e1(0x238)+_0xd914e1(0x230)+_0xd914e1(0x2e5)}),_0x177ed0[_0xd914e1(0x2ad)][_0xd914e1(0x29e)]&&_0x4350fb[_0xd914e1(0x2b5)]({'level':'ok','title':_0xd914e1(0x2a1),'text':_0xd914e1(0x2de)+_0xd914e1(0x263)+_0xd914e1(0x235)}),_0x177ed0[_0xd914e1(0x2ad)][_0xd914e1(0x1fe)]&&_0x4350fb[_0xd914e1(0x2b5)]({'level':'ok','title':_0xd914e1(0x27d),'text':_0xd914e1(0x284)+_0xd914e1(0x21d)+_0xd914e1(0x1f2)}),_0x177ed0[_0xd914e1(0x2f9)]){var _0xf84a39=_0x5dd0ae[_0xd914e1(0x2ff)](function(_0x29d755){var _0x40ed97=_0xd914e1;return _0x29d755['dn']&&(_0x29d755['dn']>_0x177ed0[_0x40ed97(0x2f9)][_0x40ed97(0x2cd)]||_0x29d755['dn']<_0x177ed0[_0x40ed97(0x2f9)][_0x40ed97(0x244)]);});_0xf84a39[_0xd914e1(0x2e7)]&&_0x4350fb[_0xd914e1(0x2b5)]({'level':_0xd914e1(0x246),'title':_0xd914e1(0x20f),'text':_0xd914e1(0x2c0)+_0x177ed0[_0xd914e1(0x2f9)][_0xd914e1(0x244)]+'~'+_0x177ed0[_0xd914e1(0x2f9)][_0xd914e1(0x2cd)]+_0xd914e1(0x21a)+_0xf84a39[_0xd914e1(0x2e7)]+_0xd914e1(0x2f0)+_0xf84a39[_0xd914e1(0x23c)](0x0,0x4)[_0xd914e1(0x200)](function(_0x4ea214){var _0x42c35b=_0xd914e1;return(_0x4ea214[_0x42c35b(0x303)]||'')[_0x42c35b(0x23c)](0x0,0x12)+_0x42c35b(0x29a)+_0x4ea214['dn']+')';})[_0xd914e1(0x2c6)]('、')+(_0xf84a39[_0xd914e1(0x2e7)]>0x4?'\x20等':'')+_0xd914e1(0x2ca)});}Object[_0xd914e1(0x2d6)](_0xf887d4)[_0xd914e1(0x227)](function(_0x3f38d0){var _0x71ea4f=_0xd914e1;if(!_0x177ed0[_0x71ea4f(0x2c4)][_0x71ea4f(0x1e6)](function(_0xc2071a){var _0x229804=_0x71ea4f;return _0xc2071a[_0x229804(0x243)]===_0x3f38d0;})){var _0x1dee04=(_0x262a5f[_0x71ea4f(0x2ff)](function(_0x25af8e){var _0x5b295b=_0x71ea4f;return _0x25af8e[_0x5b295b(0x243)]===_0x3f38d0;})[0x0]||{})[_0x71ea4f(0x261)]||_0x3f38d0;_0x4350fb[_0x71ea4f(0x2b5)]({'level':_0x71ea4f(0x232),'title':_0x1dee04,'text':_0x71ea4f(0x2ac)+_0x1dee04+(_0x71ea4f(0x2ae)+_0x71ea4f(0x267)+_0x71ea4f(0x258))});}});var _0x3066b0=_0x560166[_0xd914e1(0x2ff)](function(_0x46c843){var _0x4ffc1f=_0xd914e1;return _0x46c843[_0x4ffc1f(0x24f)+_0x4ffc1f(0x20a)];});return _0x3066b0[_0xd914e1(0x2e7)]&&_0x4350fb[_0xd914e1(0x2b5)]({'level':_0xd914e1(0x232),'title':_0xd914e1(0x1fa),'text':_0x3066b0[_0xd914e1(0x2e7)]+(_0xd914e1(0x2d2)+_0xd914e1(0x2fa)+_0xd914e1(0x1e4))+(_0x3066b0[0x0][_0xd914e1(0x303)]||'')[_0xd914e1(0x23c)](0x0,0x10)+(_0xd914e1(0x2b3)+_0xd914e1(0x25e))}),_0x4350fb[_0xd914e1(0x2e7)]||_0x4350fb[_0xd914e1(0x2b5)]({'level':'ok','title':_0xd914e1(0x23f),'text':_0xd914e1(0x2d1)+_0xd914e1(0x262)+_0xd914e1(0x2e0)}),_0x4350fb;},'itemMaterialKey':_0x514448,'MATERIALS':_0x262a5f,'JOINTS':_0x6cd78,'SYSTEMS':_0xdeac7e,'MEASURES':_0xfea0a0,'_internal':{'normalize':_0x40eae5,'splitSentences':_0xef6439,'splitClauses':function(_0xb2587a){return _0x17f712(_0xb2587a,/[，,、：:]/);},'firstJoint':_0x57b84a,'dnCondOf':_0x16be36,'dnRangeOf':_0x156bda,'clauseLoc':_0x46258b,'clauseMedium':function(_0x5885df){var _0x229047=_0xd44314,_0x1bfe5c=_0xae7822(_0xdeac7e,_0x5885df);return _0x1bfe5c?_0x1bfe5c[_0x229047(0x220)]:null;},'jointFamily':_0xa2b602}},_0xd44314(0x214)!=typeof module&&module[_0xd44314(0x1eb)]&&(module[_0xd44314(0x1eb)]=_0x2bdb82[_0xd44314(0x26a)]);}(_0x1ac087(0x214)!=typeof globalThis?globalThis:window));function _0x1edc(){var _0x3b605f=['CgXHC3rPyW','B3H5','y29Uza','DgvUDa','Dg9mB3DLCKnHCW','re4VrguG','5BEY5O+q5y+w5yIW5PAh5A2x77Ym5l2g5PYQ6k+g','6k+05PIo566H5B6e6iYd5zU05lI6ia','5RAi6zIY5Rc05BU66k6U55sO44cm5RAi6zIY5lIt','5RcN5lMz54ku54sk','5RAi6zIY57o757UF','Bwf0zxjPywXZ','rfHgic8GvfHu77Yi','AM9PBG','rIaVierxrYaVia','6k+75y+w5PAh5lU25AsX6lsL','CMvZDwX0','77Ym6k+35Qc45A+544cc','AM9PBNq','zwXLy3rYBW','Bwf4','Bg9Jqw1IAwD1BW','Bg9JyxrPB24','5OIwieryrIdLKi7KUiRKVka','6k+05PIo5lIo5BEL56Il6yEp5RIf5y2v5PYQ5y+r','ioADOEA4HEwnLEwqJEENSoAjGowgMEI/NUAoPq','CM91BMq','yw50AwnVCNjVCW','mJzPu0Psque','A2v5CW','5PYS56Uz6iEQ5yQO5Awx5A6A6AkD44cc','zNvZAw9U','6k+05PIo5PYQ5zcR566H5P2ql+I/NUAoPEAwUq','z2v0vgv4DenVBG','zNjW','yxjJ','CgvUzxrYyxrPBW','6k+05PIo6kAb5Rgc5Rc05y6l6k+v6AQm77Ym5BEY','6zsm6zkI566H77Ym5PYS5RIf5y2v5PYjia','5BEY5OYj6k+05PIo6iEQ5yQO5Awx55sO44cc','zMXHBMDL','BNv0','y29WCgvY','zxjpChrPB25Z','nY0XmZGG5Awx55sO44cc','D2f0zxi','BgvUz3rO','5RIf5y2v5PYQ6kEb5RAi6zIY566H6ygt4Ocu4Ocu','B3v0','DMfS','ioETIsa','57Ut6zYY77Yj77Ym5RIf5y2v5PYQ6kEb5l+D5RIP','5lIT5Rc057o757UF','6k6+5Awx566H77Ym5RIf5y2v5PYQ6kEb5Awx566H','rfDhios4UUs6JoI/M+wiTUwBVUE6Ua','ioADOEI2HEwhUU+8MG','5Rc05Awx55sO77Yj44cc','CgrM','y29TCg9ZAxrL','77Ym6k+35Qc45A+55PIV5zcM5RYp6Ag55OIw5P2q','yNjHy2TLDa','ANmVCgrMlNDVCG','57Ue5lU357o757UF44cn5y2v54US57Ue5lU377Yi','5Qc85BYp77Ym5Rwp6kEi5zMO56UV5lUf6io95O+q','zg5syw5Nzq','5PA55BYp5lIo6k+05PIo5lIn5lIa6iE077Ym5BEY','5lIo6l+E5O6L5PA55BYp55Qe6k+05PIo77Yi5AAc','BgLUzxm','Ahr0CdOVl2XVyW','ufzdlvxVViJOGzRMSk/KUzNNG68','zMLSDgvY','mte0ndj1AMHoAxi','y2HHCKf0','ioMHUEMvGoMuJoMsOUEUOEACQUAZQoAyJUEuQa','BMfTzq','DgHYzwfK','zxHLyW','55UU77Ym6k+35Qc45A+55PIV5zcM5RYp6Ag544cc','mtuXouz2s1DMuW','ufzerU+8IoIbMUwbJ+s6JoAWN+s5Mq','A2v5D29Yzhm','ChjVBwLZzq','CgrMANnmAwi','5yIR5yIW44cm4OcM6yEh55sO4OcM6l+E5O6L44cn','zhDN','6zIY6iwq5yI35RYg','ywjZ','uergioINO+AEKoE7Hos7TUACQUwkOa','yxnIzxn0B3m','z2fSDG','5OYj6k+05PIo5Awx55sO77Yi5AAcia','AhjLzG','C29Tzq','6io25zYi5O6L5y+J','B3rOzxi','DgL0Bgu','mJCWnJCYm1rlrNjWEG','zxHWB3j0CW','Aw5KzxHpzG','D2vSza','z2X1zq','77Ym5RIf5y2v5PYQ6kEb5O6s5Rc0l+wgT+whNq','5lIo5PYS56Uz5lIa6iE077Ym5PYS56Uz5OYj57Uz','z2fZ','5yQG5RAi5Q+s5yAY5Rsx5A2q55UU44cc','6kEe5yIz5Awx55sO77YB5lIk5lYG5zcR566H5P2q','CgXHC3rPy0TPBG','5Rc05RoL5O6L5y+J','6Ag555UU77Ym5y+V5AkE5yQG44cm5QMH5Agr5l+D','Aw5ZDwXsDwjIzq','Bwf0swr4','5y2H5Awx6l+E5O6L','6l+E5O6L5PA55BYp5lUL6k+05PIo5lI65yEg','B25LCNjVCG','mtq1mdy1ogzyCvDiqq','6zo46zob566H','zgLZAw5Mzwn0','BgLZDenVzgu','BwfW','Bwf0y2G','mtbPr2vqAg8','z2v0ugfNzq','C3bSAxq','5Rov5ywW6l+E5O6L','yxjNB24','CMvWBgfJzq','z3jVB3zL','z2jR','B25MBgLJDa','yNjHEMu','54sk5O6L6zkI566H','54Ed5Rcu57o757UF','6k+05PIo5y+M5A2y5lI6ifberIa','566H5B6e6iYd5zU0','C3rHAw5SzxnZ','BNvTugfNzxm','CMfPBG','6ycu77YB6iUL56gU5lI65RAi6zIY566H6ygt77Ym','Dw5KzwzPBMvK','Cg9W','yxbWBhK','ioMHTE+8Jow3SUINO+AEKowjJsa','6j6657Q56l+E5O6L','546755kd6zkI566H','Bw3VViZMUixLJzxMNiKG','6k+05PIo5ywXia','uerg77Yj','56Uz5BEY5A+557Uz5Rc0566H6ygt6iEQ5yQO6zMe','C3LZ','55+Z5Qoj5Rc05RoL5O6L5y+J','BwvKAxvT','y2fZDa','Bg9JCW','C3vWCg9YDa','y2f0zwDVCNK','AgfZru9m','DhjPBq','zM9YrwfJAa','6k+05PIo5zcR','r2XVyMfSv29YAW','55sF5Rs757Uz5Rc057o757UF','DxrMlte2Bgu','5A+55O6L55s15BYN54sk','CMvHzefZqxjYyq','6k+05PIo5O+q5yIW5RAi6zIY57Uz5Rc077Ym5PYS','6zkI5Agrl+MsOUE9KEwKJEwqIoEUOq','5y2v5BEY5zcR5PsV5P626Ag555UU77Ym5OYjia','uexVViJOGzRKUzNNG6/VViK','Aw5MBW','mtbovuzdBeC','Aw9U','5A655lIT77Ym5PEG6zYa5y+M5yIx44cc','mtz5A1z0Aw0','Bwf0zxjPywW','6k+05PIo6kAb5Rgc566H6ygt5PsV5P6277Ym5RIf','5y+w5zU+5lIT5PAh5A2x77Yi','nda1mZiWng1YqLzqEa','mtuZndm0nKzAAfruBG','C2XPy2u','CNvSzxm','Bwf0zxjPywXlzq','5lIa6iE05OcN5Qoa5P+L','zMLYzq','zMXVB2ruzxn0','566H6ygt5PsV5P62','A2v5','BwLU','ChjLC3m','D2fYBG','DhH0','ioAGVow8J++8JoIVT+s4IUs8Ocbqra','ywXOB3n0lW','Bwv0ywW','6lsO5yAz5Rov44cc','6k+05PIo6kAb5Rgc','6Ag555UU77Ym6k+35Qc45A+577Yi5PYS56Uz5PQc','zMLSzu5HBwu','C3bLy0PVAw50qW','zxjYB3i','AM9PBNrZ','ioAUTE+8IEoaGUwMGUIVHUwiQ+s4JEwfQo+8Ja','ChbY','5BU66k6U55sO44cm5RAi6zIY5lIt5lIA5PM66io9','ufaTuU+8IoIbMUs4MEEdR++8Iq','z2v0rg9JDw1LBG','A2LUza','5Qc45A+56l+E5O6L5PA55BYp44cc','C3rLzwW','Bg93','6k+05PIo5lIT5RAi6zIY57Uz5Rc06yEh55sO6zwa','uelVViJOGzRKUihNG6/VViK','C2XLzxzL','5zYO6ycj5z6l5yIx5Ps55zUE44cc','54gm5Rc0l+MaMUEqG+IVLEMQJa','6l+z57g76kgO6l+W77Ym5RIf5y2v5OYj5zcn56EW','BgfIzwW','546W5PIo5PI+5RYp6Ag577Ym6l+E5O6L5PA55BYp','5zcR5zYO5zce566H6ygt5A6A6AkD5BEL5l2C5yAf','56M/5Akz56M/5P2/','AxnsywLU','5lIn6zsi6zkI566H','5BEY5OYj5zcn56EW6kEe5yIz5Awx55sO77Ym6k+3','C2vUDgvUy2vZ','A2vYlM1PBI5QCW','u1bfqW','Awr4','5yA35yED5Rc057o757UF','5lU36l2V5lU25lIT6kgL5ywf77Yj44cc','Euj1zMzLCG','5RAi6zIY5Rc05RkF5QE9l+IEUUE6UEwpO+w+Ha','ioADOEAwH+wTLW','D29YA2vYu3jJ','zg5dB25K','C2L6zq','57Ue5lU377Ym5PYS56Uz5lUf5Ase55cg57Uz5O6s','6zUO5Rc057o757UF','C3LZDgvT','6zwa6zsm6zkI566H','zw1WDhK','muLyDu1mva','CMvJBgfPBq','5y2H5y6l6l+E5O6L','BwvHC3vYzq','5RAi5Q+s5yAY5Rsx','55s154Au6l+E5O6L','77Ym5RIf5y2v5PYQ6kEb5A+55BQu566H6ygt6Ag5','y2vTzw50','CNvIyMvY','5RkF5QE96l+E5O6L77Yi5y2H566n77Yj','AgLNAa','6k+05PIo6kAb5Rgc5RAi5Q+s5yAY5Rsx77Ym5PYS','Bwf0','Bg9J','55sF5Rs75O6s5Rc057o757UF','5Rc0566H6ygt77Ym6k+35Qc45A+55PIV5zcM5RYp','C3LZDgvTCW','AxrLBxm','6k+05PIo6kAb5Rgc56M/5Akzl+EPV+ALVoADVW','6j665Q+n5A+g5Bcb5zYi6l+E5O6L','C3rY','566H77Ym54oT54Au6l+E5O6L44cn77Yj5zco5y+V','ChzJ','54oT54Au6l+E5O6L','6k+05PIo6kAb5Rgc566H6ygt5l+D5RIP77Yi6zIY','y3n2','zgvJB2rL','77Ym5RIf5y2v5PYQ6kEb6k+L5P2q6lsO566H6ygt','y29UzG','zhHM','5lIn5zcR5Awx566H5A6A6AkD77Ym6zYa5zYO6k6H','5zU+54Mh54Mi6k+05PIo6k+35ywi6l2S5OIqia','B25SB2fK','kero','y29Uy2f0','5BU66k6U5zYOienbrcdKUk3MIOO','Aw5ZDwXHDgLVBG','DgvZDa','mJe1mZK2og91vKngra','zNjHzW','5Rc05y6l6k+v6AQm','ChzJrhjHAw4','5PQc5lIn5PsV5OYbic4','ic8G','5l+D5RIPl+MySUE7K+MCSG','6iEQ5yQO5Q+u5A+55lIo5Awx55sO44cc','DxrMltG','5RIPl+EoU+EsG+AJIEs/NEA4QEoaJEIHJoEuSq','44cm55sF5Rs757Uz5Rc0566H6yEh55sOueu','Dgv4Da','5OM/5O+s5RcP5BYN54sk','5RIf5y2v5zcR','BwvHC3vYzxm','77Ym6k+05PIo5PYQ5O+q5y+k6k+L5P2q6lsO77Ym','5lIA5PM66io957Ue5lU357o757UF44cn5y2v54US','Aw5ZDwXhBgfZCW','CMvHzefZvgv4Da','mtmWmJuXnZjpAwXVvvi','77Yj77Ym5AAc6zYa5lUL5zcn56EW5lI65yEg5y+V','ChzKzG','ChvZAa','5BEY5lUoieryrIdMJ5dLJ5yG','ms4XlJa','zhjHAw4'];_0x1edc=function(){return _0x3b605f;};return _0x1edc();}
+/* ============================================================
+ * 图纸说明解析引擎（给排水专业）
+ * ------------------------------------------------------------
+ * 职责：
+ *   1. 文本提取：PDF（pdf.js 文字层）/ DXF / DWG（二进制启发式）/ TXT
+ *   2. 关键信息抽取：管材、系统（给水/排水/雨水…）、连接方式、
+ *      安装部位、管径范围、试验与措施要求
+ *   3. 说明规则 → 工程量清单行的匹配（材质 + 管径条件 + 介质 + 部位）
+ * 全部在浏览器本地完成，不上传任何文件。
+ * ============================================================ */
+(function (global) {
+  'use strict';
+
+  var VERSION = '1.5.0';
+
+  /* ==================== 词典 ==================== */
+
+  // 管材：顺序即优先级，先具体后宽泛
+  var MATERIALS = [
+    { key: 'pvdf', label: 'PVDF（聚偏二氟乙烯）', re: /PVDF|聚偏二氟乙烯/i },
+    { key: 'pb', label: 'PB（聚丁烯）', re: /PB\s*管|聚丁烯/i },
+    { key: 'ppr', label: 'PP-R（聚丙烯）', re: /PP-?R|聚丙烯/i },
+    // 复合管必须排在 PE 之前：「钢丝网骨架PE复合给水管」含 PE 字样但属复合管
+    { key: 'composite', label: '钢塑/钢网复合管', re: /钢塑|铝塑|衬塑|涂塑|钢骨架|钢丝网骨架|钢网骨架|复合管/ },
+    { key: 'pe', label: 'PE（聚乙烯）', re: /HDPE|聚乙烯|(?<![A-Za-z])PE(?![A-Za-z])/i },
+    { key: 'pvc', label: 'PVC-U（聚氯乙烯）', re: /UPVC|U-PVC|PVC|聚氯乙烯/i },
+    { key: 'stainless', label: '不锈钢管', re: /不锈钢/ },
+    { key: 'galv', label: '镀锌钢管', re: /镀锌/ },
+    { key: 'cast', label: '铸铁管', re: /铸铁/ },
+    { key: 'copper', label: '铜管', re: /铜管|紫铜/ },
+    { key: 'steel', label: '焊接钢管', re: /无缝钢管|焊接钢管|碳钢管/ },
+    { key: 'frp', label: '玻璃钢管', re: /玻璃钢|FRP/i }
+  ];
+
+  // 连接方式：顺序即优先级（沟槽/电熔/热熔须先于宽泛的“焊”“承插”）
+  var JOINTS = [
+    { key: 'groove', label: '沟槽连接（卡箍）', re: /沟槽|卡箍/ },
+    { key: 'nut', label: '螺母密封圈连接', re: /螺母密封圈|密封圈连接|橡胶圈密封|橡胶密封圈|螺母压紧/ },
+    { key: 'electro', label: '电熔连接', re: /电熔|电热熔/ },
+    { key: 'fusion', label: '热熔连接', re: /热熔/ },
+    { key: 'glue', label: '粘接', re: /粘接|胶粘|溶剂粘接|承插粘接/ },
+    { key: 'press', label: '卡压连接', re: /卡压|卡套|环压/ },
+    { key: 'argon', label: '承插氩弧焊', re: /氩弧焊/ },
+    { key: 'braze', label: '钎焊', re: /钎焊/ },
+    { key: 'arc', label: '对接电弧焊', re: /电弧焊/ },
+    { key: 'weld', label: '焊接', re: /焊接|焊口|满焊/ },
+    { key: 'thread', label: '螺纹连接', re: /螺纹|丝扣|丝接/ },
+    { key: 'flange', label: '法兰连接', re: /法兰/ },
+    { key: 'sleeve', label: '卡套连接', re: /卡套(?!连接)/ },
+    { key: 'oxy', label: '氧乙炔焊', re: /氧乙炔|气焊/ },
+    { key: 'rubber', label: '胶圈接口', re: /胶圈接口|橡胶圈|胶圈承插|橡胶圈承插/ },
+    { key: 'asbestos', label: '石棉水泥接口', re: /石棉水泥/ },
+    { key: 'cement', label: '水泥接口', re: /水泥捻口|水泥接口/ }
+  ];
+
+  // 系统 / 介质
+  var SYSTEMS = [
+    { key: 'rain', label: '雨水系统', medium: 'rain', re: /雨水/ },
+    { key: 'cond', label: '冷凝水系统', medium: 'drain', re: /冷凝水|凝结水/ },
+    { key: 'drain', label: '生活排水系统', medium: 'drain', re: /排水|污水|废水|污废/ },
+    { key: 'reclaim', label: '中水系统', medium: 'water', re: /中水|再生水/ },
+    { key: 'fire', label: '消防系统', medium: 'fire', re: /消火栓|喷淋|消防/ },
+    { key: 'gas', label: '燃气系统', medium: 'gas', re: /燃气|煤气|天然气|液化气/ },
+    { key: 'water', label: '生活给水系统', medium: 'water', re: /给水|冷水|热水|直饮水|回水|补水/ }
+  ];
+
+  // 措施 / 试验要求
+  var MEASURES = [
+    { key: 'test', label: '水压试验', re: /水压试验|打压|压力试验/ },
+    { key: 'disinfect', label: '消毒冲洗', re: /消毒|冲洗/ },
+    { key: 'floodTest', label: '灌水/通球试验', re: /灌水试验|闭水试验|通球/ },
+    { key: 'sleeve', label: '套管', re: /套管/ },
+    { key: 'insulation', label: '保温/防结露', re: /保温|防结露|绝热/ },
+    { key: 'support', label: '管道支架', re: /支架|管卡|吊架|托架/ },
+    { key: 'anticorrosion', label: '防腐刷漆', re: /防腐|防锈|刷漆|银粉/ },
+    { key: 'penetration', label: '穿墙穿板', re: /穿墙|穿楼板|穿板|穿基础/ }
+  ];
+
+  /* ==================== 造价要点词典 ==================== */
+  // 说明里真正决定造价的不是「哪根管子用什么连接」，而是这些成块的钱：
+  // 拆除清运、抗震支架、设备供货、不含项边界、保温套管、试验要求。
+  // level: critical 漏了就是大钱 / important 影响单价 / normal 影响做法
+  var POINTS = [
+    {
+      key: 'demolish', level: 'critical', label: '拆除与清运',
+      re: /拆除|拆改|拆换|清运|废料|废弃|原系统|原有.{0,8}(拆除|更换|废除)|剔凿|剔槽/,
+      prefer: /(?:管道|设备|附件|箱|管线|系统|阀门|洁具)[^。；]{0,10}(?:拆除|拆改|拆换)|(?:拆除|拆改|拆换)[^。；]{0,10}(?:管道|设备|附件|箱|管线|系统|阀门|洁具)|废料[^。；]{0,8}清运|垃圾[^。；]{0,6}外运|拆除[^。；]{0,6}(?:造价|费用|清运)/,
+      hint: '改造项目最大的隐形项：拆除人工、垃圾外运、成品保护通常不在管道定额内，须单列。',
+      listRe: /拆除|清运|垃圾|剔凿|拆改/
+    },
+    {
+      key: 'seismic', level: 'critical', label: '抗震支吊架',
+      re: /抗震|支吊架|侧向支撑|纵向支撑|侧向[^。；]{0,10}(?:间距|支架|支撑)|纵向[^。；]{0,10}(?:间距|支架|支撑)|(?:间距|参数)[^。；]{0,10}(?:一半|减半)/,
+      hint: '抗震支架是独立清单项（按 kg 或套计）。注意改建工程间距常为新建的一半，数量翻倍。',
+      listRe: /抗震|支吊架/,
+      detail: function (t) {
+        var d = [];
+        var dn = t.match(/(?:不小于|大于等于|≥|>)\s*D\s*N\s*(\d+)/i) || t.match(/D\s*N\s*(\d+)\s*(?:以上|及以上)/i);
+        if (dn) d.push('起设管径 DN' + dn[1]);
+        // OCR 常把「24」拆成「2 4」，数字内部允许空白，取到后清掉
+        var lat = t.match(/侧\s*向[^。；]{0,26}?(\d[\d\s]*(?:\.\s*\d+)?)\s*(?:米|m(?![a-z])|M|(?=[，,;；、。\s]|$))/);
+        var lon = t.match(/纵\s*向[^。；]{0,26}?(\d[\d\s]*(?:\.\s*\d+)?)\s*(?:米|m(?![a-z])|M|(?=[，,;；、。\s]|$))/);
+        var rebuild = /改建|改造|加固/.test(t);
+        if (lat) d.push('侧向间距 ' + (rebuild ? '按新建 ' : '') + lat[1].replace(/\s/g, '') + 'm');
+        if (lon) d.push('纵向间距 ' + (rebuild ? '按新建 ' : '') + lon[1].replace(/\s/g, '') + 'm');
+        if (rebuild) d.push('本工程为改建，实际间距取上述的一半');
+        return d.length ? d.join(' · ') : null;
+      }
+    },
+    {
+      key: 'equipment', level: 'critical', label: '设备供货',
+      re: /水泵|水箱(?!间)|热泵|机组|消毒器|气压罐|换热器|热水器|开水器|变频|稳压|隔膜罐|膨胀罐|水处理/,
+      prefer: /[QHN]\s*[=＝]|\d+(?:\.\d+)?\s*kW|(?:容积|有效容积|流量|扬程|功率)\s*[:：]?\s*\d|(?:台|套)\s*[×x*]?\s*\d/,
+      hint: '设备单价占比最高。核对参数（流量/扬程/功率/容积）与数量是否与清单一致，避免规格降档。',
+      listRe: /泵|水箱|机组|消毒器|罐|换热|热水器|开水器|变频|稳压/,
+      detail: function (t) {
+        var d = [];
+        var q = t.match(/Q\s*[=＝]\s*(\d+(?:\.\d+)?)\s*m[³3]?\s*\/\s*h/i);
+        if (q) d.push('Q=' + q[1] + 'm³/h');
+        var h = t.match(/H\s*[=＝]\s*(\d+(?:\.\d+)?)\s*m(?![a-z])/i);
+        if (h) d.push('H=' + h[1] + 'm');
+        var n = t.match(/N\s*[=＝]\s*(\d+(?:\.\d+)?)\s*kW/i);
+        if (n) d.push('N=' + n[1] + 'kW');
+        var v = t.match(/(?:容积|有效容积)\s*(\d+(?:\.\d+)?)\s*(?:m[³3]|吨|t|L|升)/i);
+        if (v) d.push('容积 ' + v[1]);
+        return d.length ? d.join(' · ') : null;
+      }
+    },
+    {
+      key: 'exclusion', level: 'critical', label: '不含项 / 另行委托',
+      re: /不含|不在.{0,10}(范围|本次)|另行|专项设计|由.{0,12}(采购|供货|深化|负责方)|本次不|暂不|不在本次/,
+      hint: '范围边界。说明写「不含」的，清单里若出现要警惕重复计价；写「另行委托」的，别算进本次报价。',
+      listRe: null
+    },
+    {
+      key: 'insulation', level: 'important', label: '保温绝热',
+      re: /保温|绝热|防结露|橡塑|玻璃棉|离心玻璃棉|聚氨酯|岩棉/,
+      prefer: /(?:保温|绝热)[^。；]{0,14}(?:厚度|δ|\d+\s*mm|\d+\s*kg)|橡塑[^。；]{0,10}(?:mm|厚)|玻璃棉[^。；]{0,10}(?:mm|厚|密度)/,
+      hint: '保温要核三件事：材质、厚度、密度。清单只写「保温」不写厚度时单价差一倍以上。',
+      listRe: /保温|绝热|橡塑|玻璃棉|岩棉|聚氨酯/,
+      detail: function (t) {
+        // 按句分别抓，避免橡塑的厚度和玻璃棉的密度串成一条
+        var parts = String(t).split('；');
+        var mats = [
+          { n: '橡塑', re: /橡塑/ },
+          { n: '玻璃棉', re: /玻璃棉/ },
+          { n: '岩棉', re: /岩棉/ },
+          { n: '聚氨酯', re: /聚氨酯/ }
+        ];
+        var out = [];
+        mats.forEach(function (m) {
+          var hit = null;
+          parts.forEach(function (x) { if (!hit && m.re.test(x)) hit = x; });
+          if (!hit) return;
+          var d = [m.n];
+          var th = hit.match(/(?:厚度|δ\s*[=＝]?)\s*(\d+(?:\.\d+)?)\s*mm/i) || hit.match(/(\d+(?:\.\d+)?)\s*mm\s*(?:厚|橡塑|玻璃棉|岩棉)/);
+          if (th) d.push('厚 ' + th[1] + 'mm');
+          var den = hit.match(/(\d+(?:\.\d+)?)\s*kg\s*\/\s*m[³3]/i);
+          if (den) d.push('密度 ' + den[1] + 'kg/m³');
+          out.push(d.join(' '));
+        });
+        return out.length ? out.join(' · ') : null;
+      }
+    },
+    {
+      key: 'penetration', level: 'important', label: '套管与防火封堵',
+      re: /套管|防水套管|阻火圈|防火封堵|穿墙|穿楼板|穿板|穿基础|密闭套管/,
+      notRe: /石英套管|石英玻璃套管|套管换热|套管式/,
+      hint: '套管、阻火圈、封堵多数定额不含或另计。刚性防水套管与一般钢套管单价差数倍，要分清。',
+      listRe: /套管|阻火圈|封堵/,
+      detail: function (t) {
+        var d = [];
+        if (/柔性防水套管/.test(t)) d.push('柔性防水套管');
+        else if (/刚性防水套管/.test(t)) d.push('刚性防水套管');
+        else if (/防水套管/.test(t)) d.push('防水套管');
+        else if (/套管/.test(t)) d.push('一般套管');
+        if (/阻火圈/.test(t)) d.push('阻火圈');
+        if (/防火封堵/.test(t)) d.push('防火封堵');
+        return d.length ? d.join(' · ') : null;
+      }
+    },
+    {
+      key: 'test', level: 'important', label: '试压 / 冲洗 / 消毒',
+      re: /水压试验|打压|压力试验|灌水试验|闭水试验|通球|冲洗(?!阀|头|嘴|水箱|设备|水量|方式)|消毒|水质/,
+      prefer: /水压试验|打压|压力试验|灌水试验|闭水试验|通球|试验压力|冲洗消毒|冲洗流速/,
+      hint: '给水须冲洗消毒并取样检验，排水须灌水通球。先确认是否已含在管道定额工作内容里，别重复计。',
+      listRe: /试验|冲洗|消毒|通球|水质/,
+      detail: function (t) {
+        var d = [];
+        var p = t.match(/(\d+(?:\.\d+)?)\s*(?:MPa|兆帕)/i);
+        if (p) d.push('试验压力 ' + p[1] + 'MPa');
+        if (/灌水试验|闭水试验/.test(t)) d.push('灌水/闭水');
+        if (/通球/.test(t)) d.push('通球');
+        if (/冲洗/.test(t)) d.push('冲洗');
+        if (/消毒/.test(t)) d.push('消毒');
+        return d.length ? d.join(' · ') : null;
+      }
+    },
+    {
+      key: 'support', level: 'important', label: '管道支架',
+      re: /支架|管卡|吊架|托架|固定支架|滑动支架|支墩/,
+      notRe: /抗震支吊架|抗震支架|抗震加固|侧向支撑|纵向支撑|抗震设防/,
+      hint: '支架形式与间距决定用量。注意「抗震支架」与「承重支架」是两笔钱，别混为一谈。',
+      listRe: /支架|管卡|吊架|托架|支墩/,
+      detail: function (t) {
+        var d = [];
+        var sp = t.match(/(?:间距|不大于|不超过)\s*(\d+(?:\.\d+)?)\s*(?:米|m(?![a-z])|M)/);
+        if (sp) d.push('间距 ' + sp[1] + 'm');
+        if (/固定支架/.test(t)) d.push('含固定支架');
+        return d.length ? d.join(' · ') : null;
+      }
+    },
+    {
+      key: 'anticorrosion', level: 'normal', label: '防腐与刷漆',
+      re: /防腐|防锈|刷漆|银粉|防锈漆|镀锌层|四油|三布/,
+      hint: '埋地管、支架、非镀锌件的防腐做法影响单价，注意「几油几布」这类具体做法。',
+      listRe: /防腐|防锈|刷漆|银粉/,
+      detail: function (t) {
+        var m = t.match(/([一二三四五])\s*油\s*([一二三四五])\s*布/);
+        return m ? (m[1] + '油' + m[2] + '布') : null;
+      }
+    },
+    {
+      key: 'boundary', level: 'important', label: '管材分界 / 界面划分',
+      re: /以.{0,16}为界|分界|界面|出户|进户|接户井|检查井前|由.{0,8}至.{0,8}(接|供)/,
+      prefer: /以[^。；]{0,18}为界|分界|界面划分|出户[^。；]{0,10}(?:检查井|管材|分界)|进户[^。；]{0,10}(?:管材|分界|阀门)/,
+      hint: '分界点决定哪段算室内、哪段算室外，两侧定额与单价完全不同。清单按室内外混编时要按界拆分。',
+      listRe: null
+    },
+    {
+      key: 'metering', level: 'normal', label: '计量与远传',
+      re: /水表|计量|远传|能耗监测|分户|分级计量/,
+      hint: '远传水表与普通水表价差明显，且常单列。',
+      listRe: /水表|计量/
+    },
+    {
+      key: 'waterquality', level: 'normal', label: '水质处理',
+      notRe: /不含|不在本次|暂不|另行/, 
+      re: /软化|除垢|过滤|紫外线|银离子|消毒设备|纯水|直饮水|RO/,
+      hint: '水处理设备与耗材常被漏，尤其消毒器、过滤器。',
+      listRe: /软化|过滤|消毒|纯水|净水|直饮水/
+    }
+  ];
+
+  var POINT_RANK = { critical: 0, important: 1, normal: 2 };
+
+  // 从全文中抽取造价要点：每类命中的句子按信息密度排序，取最短的两句作依据
+  // 句子信息量打分：越像「带具体参数的规定句」分越高，越像标题句或 OCR 噪声分越低。
+  // 只按长度排序会把「石英套管」「5.1.5给水计量」这类短噪声当成依据，必须打分。
+  function scoreSent(s) {
+    var t = s.replace(/\s+/g, '');
+    var len = t.length, sc = 0;
+    if (len < 10) sc -= 4;
+    else if (len < 16) sc -= 2;
+    else if (len <= 95) sc += 2;
+    else if (len <= 260) sc -= 1;
+    else sc -= 10;   // OCR 常把整页粘成一句，这种段落无法作为依据
+    if (/\d/.test(t)) sc += 2;
+    if (/DN\s*\d|\d+\s*(?:kW|KW|MPa|mm|m³|m3|L\/s|kg\/m|℃|米|t(?![a-z])|m(?![a-z]))/i.test(t)) sc += 3;
+    if (/采用|应|须|不小于|不大于|不得|要求|按.{0,6}(规定|规范|标准)/.test(t)) sc += 1;
+    // 中文占比过低 → OCR 拆字或规范编号堆砌，不是可用依据
+    var cn = (t.match(/[\u4e00-\u9fa5]/g) || []).length;
+    var ratio = len ? cn / len : 0;
+    if (ratio < 0.45) sc -= 6;
+    else if (ratio < 0.6) sc -= 2;
+    return sc;
+  }
+
+  function extractPoints(text) {
+    var out = [];
+    var sents = splitSentences(text);
+    POINTS.forEach(function (p) {
+      var hits = [], seen = {};
+      sents.forEach(function (s) {
+        if (!p.re.test(s) || (p.notRe && p.notRe.test(s))) return;
+        var k = s.replace(/\s+/g, '');
+        if (seen[k]) return;
+        seen[k] = 1;
+        hits.push(s);
+      });
+      if (!hits.length) return;
+      // 按信息量降序；同分时取较短的（更聚焦）
+      hits.sort(function (a, b) {
+        var sa = scoreSent(a) + (p.prefer && p.prefer.test(a) ? 5 : 0);
+        var sb = scoreSent(b) + (p.prefer && p.prefer.test(b) ? 5 : 0);
+        var d = sb - sa;
+        return d !== 0 ? d : a.length - b.length;
+      });
+      // detail 的输入放宽到前 8 句，避免关键参数句被挤掉
+      var joined = hits.slice(0, 8).join('；');
+      out.push({
+        key: p.key,
+        label: p.label,
+        level: p.level,
+        hint: p.hint,
+        count: hits.length,
+        detail: p.detail ? p.detail(joined) : null,
+        evidence: (function () {
+          var pick = hits.filter(function (s) { return s.replace(/\s+/g, '').length <= 260; });
+          if (!pick.length) pick = hits;
+          return pick.slice(0, 2).map(function (s) {
+            var t = s.replace(/\s+/g, ' ').trim();
+            return t.length > 108 ? t.slice(0, 108) + '…' : t;
+          });
+        })()
+      });
+    });
+    out.sort(function (a, b) {
+      var d = POINT_RANK[a.level] - POINT_RANK[b.level];
+      return d !== 0 ? d : b.count - a.count;
+    });
+    return out;
+  }
+
+  // 连接方式 → 材质族（用于无材质说明句的兜底）
+  var PLASTIC_JOINTS = { fusion: 1, electro: 1, glue: 1, nut: 1 };
+  var METAL_JOINTS = { groove: 1, weld: 1, arc: 1, argon: 1, braze: 1, thread: 1, flange: 1, press: 1, sleeve: 1, oxy: 1, rubber: 1, asbestos: 1, cement: 1 };
+  var PLASTIC_MATS = { pvdf: 1, pe: 1, ppr: 1, pb: 1, pvc: 1 };
+
+  /* ==================== 基础工具 ==================== */
+
+  function normalize(t) {
+    var s = String(t || '');
+    // CAD / PDF 导出的中文常带「兼容表意文字」（U+F900、U+2F800 区），例如 度(U+FA01)=度、六(U+F9D1)=六。
+    // 这类字符看着一样，但正则匹配「厚度」「六、试验」会全部落空，先归一化回标准汉字。
+    s = s.replace(/[\uF900-\uFAFF\u2F800-\u2FA1F]/g, function (c) {
+      try { return c.normalize('NFKC'); } catch (e) { return c; }
+    });
+    return s
+      .replace(/\u3000/g, ' ')
+      .replace(/\r\n?/g, '\n')
+      .replace(/[ \t]+/g, ' ')
+      .replace(/\n{3,}/g, '\n\n')
+      .trim();
+  }
+
+  // 按分隔符切分，但跳过括号内的分隔符（如「（给水S5级；热水S2级）」不能被切开）
+  function splitOutside(text, sepRe) {
+    var src = String(text), out = [], buf = '', depth = 0;
+    for (var i = 0; i < src.length; i++) {
+      var ch = src.charAt(i);
+      if (ch === '（' || ch === '(' || ch === '【' || ch === '《') depth++;
+      else if (ch === '）' || ch === ')' || ch === '】' || ch === '》') depth = depth > 0 ? depth - 1 : 0;
+      if (depth === 0 && sepRe.test(ch)) { out.push(buf); buf = ''; }
+      else buf += ch;
+    }
+    out.push(buf);
+    return out.map(function (x) { return x.trim(); }).filter(Boolean);
+  }
+
+  // 图纸说明里的换行大多是排版/文字实体边界，不是语义边界：
+  // 「均采用PP-R管」与「接口为热熔连接」常分处两行，按行硬切会把材质与连接方式割裂。
+  // 因此句子只按 。；; 切，换行在段落内合并。
+  function splitSentences(text) {
+    return splitOutside(normalize(text), /[。；;]/)
+      .filter(function (x) { return x.replace(/\s/g, '').length >= 4; });
+  }
+
+  function splitClauses(sentence) {
+    return splitOutside(sentence, /[，,、：:]/);
+  }
+
+  // 编号/小标题行：1.1、1.1.1、一、、（1）、以及「给水系统：」这类短标题
+  function isHeading(t) {
+    var s = String(t).trim();
+    if (!s || s.length > 40) return false;
+    // 编号行只有在「不带句读」或「以冒号收尾」时才是标题；
+    // 「2.生活给水支管采用PP-R热熔连接，压力等级S2.5。」这种是正文，误判成标题会整条丢掉
+    var tidy = /[：:]$/.test(s) || !/[，,。；;]/.test(s);
+    if (/^\d+(\.\d+)*[\s、.．]/.test(s)) return tidy;
+    if (/^[一二三四五六七八九十]+[、.．]/.test(s)) return tidy;
+    if (/^[（(]\d+[）)]/.test(s)) return true;
+    if (s.length <= 26 && /[：:]$/.test(s)) return true;
+    return false;
+  }
+
+  // 切成「标题 + 正文行」的段落，标题携带的系统/介质供后文继承
+  function splitSections(text) {
+    var lines = normalize(text).split('\n');
+    var secs = [], cur = { title: '', lines: [] };
+    function flush() {
+      if (cur.title || cur.lines.length) secs.push(cur);
+      cur = { title: '', lines: [] };
+    }
+    lines.forEach(function (ln) {
+      var t = ln.trim();
+      if (!t) { flush(); return; }
+      if (isHeading(t)) { flush(); cur.title = t; return; }
+      cur.lines.push(t);
+    });
+    flush();
+    return secs;
+  }
+
+  // 段落正文按长度分块，避免整章合并成一个超长块导致跨段错配
+  function chunkLines(lines, limit) {
+    var out = [], buf = [], len = 0;
+    lines.forEach(function (ln) {
+      if (buf.length && (len + ln.length) > limit) { out.push(buf.join('\n')); buf = []; len = 0; }
+      buf.push(ln);
+      len += ln.length + 1;
+    });
+    if (buf.length) out.push(buf.join('\n'));
+    return out;
+  }
+
+  // 行是文字实体边界，行内再按标点切：DWG 说明常整行无标点，只按逗号切会把整段并成一个 token
+  // 同时保留字符位置，便于把「依据」定位到命中处而不是整段开头
+  function tokensOfChunk(body) {
+    var src = String(body), out = [], depth = 0, start = 0;
+    for (var i = 0; i <= src.length; i++) {
+      var ch = i < src.length ? src.charAt(i) : '\n';
+      if (ch === '（' || ch === '(') depth++;
+      else if (ch === '）' || ch === ')') depth = depth > 0 ? depth - 1 : 0;
+      if (depth === 0 && /[。；;，,、：:\n]/.test(ch)) {
+        var seg = src.slice(start, i).trim();
+        if (seg) out.push({ text: seg, idx: start });
+        start = i + 1;
+      }
+    }
+    return out;
+  }
+
+  // 这些词表示「换了一类管段」，此前的部位/管径条件不应再往下继承
+  var SEG_RESET = /干管|立管|支管|横管|总管|机组|设备间|机房|泵房/;
+
+  function firstHit(list, text) {
+    for (var i = 0; i < list.length; i++) {
+      if (list[i].re.test(text)) return list[i];
+    }
+    return null;
+  }
+
+  function firstJoint(clause) {
+    // 「焊接钢管」是材质不是连接方式，先剔除
+    var s = String(clause).replace(/焊接钢管|无缝钢管|电焊钢管/g, '');
+    for (var i = 0; i < JOINTS.length; i++) {
+      if (JOINTS[i].re.test(s)) return JOINTS[i];
+    }
+    return null;
+  }
+
+  function jointFamily(key) {
+    if (PLASTIC_JOINTS[key]) return 'plastic';
+    if (METAL_JOINTS[key]) return 'metal';
+    return null;
+  }
+
+  function normMat(key) {
+    if (!key) return '';
+    if (key === 'pvcDrain') return 'pvc';
+    return key;
+  }
+
+  function familyOfMat(key) {
+    return PLASTIC_MATS[normMat(key)] ? 'plastic' : (key ? 'metal' : null);
+  }
+
+  // 管径分档条件：支持「DN≥100」「≥DN65」「DN<100」「DN65（70）」「DN80及以下」「不大于」等写法
+  function dnCondOf(s) {
+    var t = String(s), m;
+    m = t.match(/(?:DN|De|dn|de|Φ|φ)\s*(≥|>=|≤|<=|>|＞|<|＜)\s*(\d{2,4})/);
+    if (m) {
+      var op = /≥|>=/.test(m[1]) ? 'ge' : (/≤|<=/.test(m[1]) ? 'le' : (/[>＞]/.test(m[1]) ? 'gt' : 'lt'));
+      return { op: op, val: parseInt(m[2], 10) };
+    }
+    m = t.match(/(?:≥|>=|不小于|大于等于|不低于)\s*(?:DN|De|dn|de|Φ|φ)?\s*(\d{2,4})/);
+    if (m) return { op: 'ge', val: parseInt(m[1], 10) };
+    m = t.match(/(?:≤|<=|不大于|小于等于|不超过)\s*(?:DN|De|dn|de|Φ|φ)?\s*(\d{2,4})/);
+    if (m) return { op: 'le', val: parseInt(m[1], 10) };
+    m = t.match(/(?:DN|De|dn|de|Φ|φ)\s*(\d{2,4})\s*(?:mm)?\s*(及以上|以上|及以下|以下)/);
+    if (m) return { op: /以下/.test(m[2]) ? 'le' : 'ge', val: parseInt(m[1], 10) };
+    m = t.match(/(?:>|＞|大于)\s*(?:DN|De|dn|de|Φ|φ)?\s*(\d{2,4})/);
+    if (m) return { op: 'gt', val: parseInt(m[1], 10) };
+    m = t.match(/(?:<|＜|小于)\s*(?:DN|De|dn|de|Φ|φ)?\s*(\d{2,4})/);
+    if (m) return { op: 'lt', val: parseInt(m[1], 10) };
+    return null;
+  }
+
+  function dnRangeOf(text) {
+    var src = String(text);
+    var reR = /(?:DN|De|dn|de)\s*(\d{2,4})\s*(?:[~～\-—－]|至)\s*(?:DN|De|dn|de)?\s*(\d{2,4})/gi;
+    var mins = [], maxs = [], ev = [], m;
+    while ((m = reR.exec(src)) !== null) {
+      var a = parseInt(m[1], 10), b = parseInt(m[2], 10);
+      if (!a || !b) continue;
+      mins.push(Math.min(a, b)); maxs.push(Math.max(a, b));
+      if (!ev.length) ev.push(m[0]);
+    }
+    if (mins.length) {
+      return {
+        min: Math.min.apply(null, mins), max: Math.max.apply(null, maxs),
+        evidence: ev[0] + (mins.length > 1 ? ' 等 ' + mins.length + ' 段' : '')
+      };
+    }
+    // 只有「DN50及以下 / DN65及以上」这类分档条件、没有显式区间时，不构成管径范围
+    if (/(?:及以上|以上|≥|>=|及以下|以下|≤|<=|不小于|不大于|大于等于|小于等于|[<>＜＞])/.test(text)) return null;
+    var all = [], re = /(?:DN|De|dn|de|Φ|φ)\s*(\d{2,4})/gi, mm;
+    while ((mm = re.exec(text)) !== null) {
+      var v = parseInt(mm[1], 10);
+      if (v >= 10 && v <= 2000) all.push(v);
+    }
+    if (all.length >= 2) {
+      return { min: Math.min.apply(null, all), max: Math.max.apply(null, all), evidence: '' };
+    }
+    return null;
+  }
+
+  function clauseLoc(s) {
+    if (/室外|户外|外网|庭院|埋地|室外埋地/.test(s)) return 'out';
+    if (/室内|楼内|管井|管廊|吊顶内|地库|明装|暗装|暗敷|明敷/.test(s)) return 'in';
+    return null;
+  }
+
+  function clauseMedium(s) {
+    var sys = firstHit(SYSTEMS, s);
+    return sys ? sys.medium : null;
+  }
+
+  /* ==================== 文本提取 ==================== */
+
+  function readAsArrayBuffer(file) {
+    return new Promise(function (resolve, reject) {
+      var r = new FileReader();
+      r.onload = function () { resolve(r.result); };
+      r.onerror = function () { reject(r.error || new Error('读取文件失败')); };
+      r.readAsArrayBuffer(file);
+    });
+  }
+
+  function readAsText(file, enc) {
+    return new Promise(function (resolve, reject) {
+      var r = new FileReader();
+      r.onload = function () { resolve(r.result); };
+      r.onerror = function () { reject(r.error || new Error('读取文件失败')); };
+      r.readAsText(file, enc || 'utf-8');
+    });
+  }
+
+  function decode(buf, enc) {
+    try { return new TextDecoder(enc).decode(new Uint8Array(buf)); } catch (e) { return ''; }
+  }
+
+  // PDF：走 pdf.js 文字层
+  // 轻量嗅探 PDF 原始字节：只看对象字典里有没有字体、图片，不去物化内容流。
+  // 大图纸一页能有几十万条绘图指令，getOperatorList() 会把它们全展开进内存（实测峰值 1.1GB 且不释放），
+  // 普通笔记本直接卡死。扫字节是毫秒级、几十 MB 内存的事。
+  function sniffPdfBytes(buf) {
+    try {
+      var u8 = new Uint8Array(buf);
+      var dec = new TextDecoder('latin1');
+      var hasFont = false, hasImage = false, CH = 65536;
+      var pathOps = 0;   // 内容流里的路径操作符（l/m/re/c）粗略计数，用来判断是不是大图/缩略图
+      for (var i = 0; i < u8.length; i += CH) {
+        var s = dec.decode(u8.subarray(i, Math.min(i + CH, u8.length)));
+        if (!hasFont && s.indexOf('/Font') >= 0) hasFont = true;
+        if (!hasImage && (s.indexOf('/Subtype/Image') >= 0 || s.indexOf('/Subtype /Image') >= 0)) hasImage = true;
+        if (pathOps < 300000) {
+          var m = s.match(/[\s\d.\-]l[\s]/g);
+          if (m) pathOps += m.length;
+        }
+        if (hasFont && hasImage && pathOps >= 300000) break;
+      }
+      return { font: hasFont, image: hasImage, paths: pathOps, size: u8.length };
+    } catch (e) { return null; }
+  }
+
+  async function extractPdf(buf) {
+    var lib = global.pdfjsLib;
+    if (!lib) throw new Error('PDF 解析组件未加载');
+    if (lib.GlobalWorkerOptions && !lib.GlobalWorkerOptions.workerSrc) {
+      try {
+        lib.GlobalWorkerOptions.workerSrc = new URL('js/pdf.worker.min.js', (global.location && global.location.href) || 'http://localhost/').href;
+      } catch (e) {
+        lib.GlobalWorkerOptions.workerSrc = 'js/pdf.worker.min.js';
+      }
+    }
+    // 必须在交给 pdf.js 之前扫：它会把 ArrayBuffer transfer 给 worker，之后原 buffer 就 detached 了
+    var sn = sniffPdfBytes(buf);
+    var doc;
+    try {
+      doc = await lib.getDocument({ data: new Uint8Array(buf), useSystemFonts: true }).promise;
+    } catch (e) {
+      // file:// 或 worker 被拦截时退回主线程解析
+      if (lib.GlobalWorkerOptions) lib.GlobalWorkerOptions.workerSrc = '';
+      doc = await lib.getDocument({ data: new Uint8Array(buf), useSystemFonts: true, disableWorker: true }).promise;
+    }
+    var pages = Math.min(doc.numPages, 40);
+    var lines = [];
+    for (var p = 1; p <= pages; p++) {
+      var page = await doc.getPage(p);
+      var tc = await page.getTextContent();
+      var line = '';
+      for (var i = 0; i < tc.items.length; i++) {
+        var item = tc.items[i];
+        if (item.str === undefined) continue;
+        line += item.str;
+        if (item.hasEOL) { lines.push(line); line = ''; }
+      }
+      if (line) lines.push(line);
+      lines.push('');
+    }
+    var text = normalize(lines.join('\n'));
+    var empty = text.replace(/\s/g, '').length < 20;
+    var diag = null;
+    if (empty) {
+      // 区分「扫描件」与「文字被转成曲线的矢量化导出件」——两者处理方式完全不同
+      if (sn) {
+        if (!sn.font && !sn.image) {
+          // 单页 + A3 及以下的纸 + 文件却很大 → 多半是图纸目录/索引页，里面是密排缩略图，正文不在这一页
+          var pw = 0;
+          try { pw = (await doc.getPage(1)).getViewport({ scale: 1 }).width; } catch (e) { pw = 0; }
+          diag = (doc.numPages === 1 && sn.size > 3 * 1048576 && pw > 0 && pw < 900) ? 'thumb' : 'vector';
+        } else if (sn.image) diag = 'scan';
+        else diag = 'badmap';   // 有字体对象却提取不出字 → 缺 ToUnicode 映射，提出来是乱码
+      } else {
+        diag = 'unknown';
+      }
+    }
+    return {
+      text: text,
+      pages: doc.numPages,
+      note: doc.numPages > pages ? ('说明共 ' + doc.numPages + ' 页，已解析前 ' + pages + ' 页') : '',
+      empty: empty,
+      diag: diag,
+      paths: 0,
+      images: sn && sn.image ? 1 : 0
+    };
+  }
+
+  // DXF：文本格式，取 group code 1/3 的内容（TEXT/MTEXT 文字）
+  function extractDxf(buf) {
+    var t = decode(buf, 'utf-8');
+    if (!/SECTION|ENTITIES|AcDb/i.test(t)) t = decode(buf, 'gbk');
+    var out = [];
+    var lines = t.split(/\r\n|\n|\r/);
+    for (var i = 0; i < lines.length - 1; i++) {
+      var code = lines[i].trim();
+      if (code === '1' || code === '3') {
+        var v = lines[i + 1] || '';
+        v = v.replace(/\\[A-Za-z][^;]*;/g, '').replace(/[{}]/g, '').trim();
+        if (v.length >= 2) out.push(v);
+      }
+    }
+    return { text: normalize(out.join('\n')), note: '已从 DXF 提取 ' + out.length + ' 条文字' };
+  }
+
+  // DWG：二进制格式，无官方浏览器解析器；按 UTF-16LE 与 GBK 双路解码后抽取文字片段
+  function pickFragments(str) {
+    var out = [];
+    var re = /[\u4e00-\u9fa5][\u4e00-\u9fa5A-Za-z0-9（）()、。，,.:：；;％%\/\-+~～=<>《》【】\[\]{}·_]{3,60}/g;
+    var m;
+    while ((m = re.exec(str)) !== null) {
+      var s = m[0].trim();
+      if (s.length < 4) continue;
+      var cjk = (s.match(/[\u4e00-\u9fa5]/g) || []).length;
+      if (cjk / s.length < 0.45) continue;
+      out.push(s);
+    }
+    return out;
+  }
+
+  function extractDwg(buf) {
+    var frags = [];
+    var u16 = decode(buf, 'utf-16le');
+    if (u16) frags = frags.concat(pickFragments(u16));
+    var gbk = decode(buf, 'gbk');
+    if (gbk) frags = frags.concat(pickFragments(gbk));
+    var seen = {}, uniq = [];
+    frags.forEach(function (f) {
+      if (seen[f]) return;
+      seen[f] = 1; uniq.push(f);
+    });
+    return {
+      text: normalize(uniq.slice(0, 4000).join('\n')),
+      note: 'DWG 为二进制图纸格式，浏览器端仅能提取图中文字（' + uniq.length + ' 段）。如识别不全，建议在 CAD 中把说明另存为 PDF 或 DXF 后上传'
+    };
+  }
+
+  async function extractFile(file) {
+    var name = (file && file.name) || '';
+    var ext = (name.split('.').pop() || '').toLowerCase();
+    var buf, res;
+    if (ext === 'pdf') {
+      buf = await readAsArrayBuffer(file);
+      res = await extractPdf(buf);
+    } else if (ext === 'dxf') {
+      buf = await readAsArrayBuffer(file);
+      res = extractDxf(buf);
+    } else if (ext === 'dwg') {
+      buf = await readAsArrayBuffer(file);
+      res = extractDwg(buf);
+    } else if (ext === 'png' || ext === 'jpg' || ext === 'jpeg' || ext === 'webp' || ext === 'bmp') {
+      // 图片：直接交给 OCR 通道，这里只做格式确认
+      return { text: '', empty: true, diag: 'image', isImage: true, pages: 1, note: '图片待 OCR', kind: ext, fileName: name, size: file.size || 0 };
+    } else if (ext === 'txt' || ext === 'md' || ext === 'csv') {
+      var txt = await readAsText(file, 'utf-8');
+      if (!/[\u4e00-\u9fa5]/.test(txt)) {
+        try { txt = decode(await readAsArrayBuffer(file), 'gbk'); } catch (e) { /* 保持原样 */ }
+      }
+      res = { text: normalize(txt), note: '' };
+    } else {
+      throw new Error('暂不支持 .' + ext + ' 格式，请上传 PDF / DWG / DXF / TXT（图片版说明请先转成 PDF）');
+    }
+    res.kind = ext;
+    res.fileName = name;
+    res.size = file.size || 0;
+    if (!res.empty && res.text.replace(/\s/g, '').length < 20) res.empty = true;
+    return res;
+  }
+
+  /* ==================== 规则抽取 ==================== */
+
+  // 连接方式若与材质不在同一子句，需就近回溯（「PP-R管，接口为热熔连接」这类列举式说明）
+  var JOINT_SKIP = { flange: 1 };   // 「与设备、阀门采用法兰连接」说的是附件，不是管道本体
+
+  function extractChunk(body, ctx, out) {
+    var toks = tokensOfChunk(body).map(function (t) {
+      return {
+        text: t.text,
+        idx: t.idx,
+        mat: firstHit(MATERIALS, t.text),
+        joint: firstJoint(t.text),
+        cond: dnCondOf(t.text),
+        loc: clauseLoc(t.text),
+        sys: firstHit(SYSTEMS, t.text)
+      };
+    });
+    // 逐子句推进上下文：材质/管径条件/部位/系统都可被后续子句继承
+    var cur = {
+      material: ctx.material || null,
+      matIdx: null,
+      cond: null,
+      loc: ctx.loc || null,
+      system: ctx.system || null
+    };
+    toks.forEach(function (tk) {
+      if (tk.mat) {
+        if (!cur.material || cur.material.key !== tk.mat.key) cur.cond = null;  // 换材质即换管段，管径条件作废
+        cur.material = tk.mat;
+        cur.matIdx = tk.idx;
+      }
+      if (tk.cond) cur.cond = tk.cond;
+      if (tk.loc) cur.loc = tk.loc;
+      else if (SEG_RESET.test(tk.text)) { cur.loc = null; cur.cond = null; }
+      if (tk.sys) cur.system = tk.sys;
+      if (!tk.joint) return;
+      if (JOINT_SKIP[tk.joint.key] && !/管道|管材/.test(tk.text)) return;
+      // 材质离得太远（文字实体顺序被打乱时会出现）就不强行配对，避免张冠李戴
+      var mat = cur.material;
+      if (mat && cur.matIdx != null && Math.abs(tk.idx - cur.matIdx) > 120) mat = ctx.material || null;
+      out.push({
+        materialKey: mat ? mat.key : null,
+        materialLabel: mat ? mat.label : '',
+        conf: tk.mat ? 'high' : 'low',
+        joint: tk.joint.key,
+        jointLabel: tk.joint.label,
+        medium: cur.system ? cur.system.medium : null,
+        loc: cur.loc,
+        dnCond: tk.cond || cur.cond || null,
+        evidence: String(body).slice(Math.max(0, tk.idx - 40), tk.idx + tk.text.length + 60).replace(/\s+/g, ' ').trim()
+      });
+    });
+    // 只回写材质/系统：部位（室内外）跨句继承极易串味，改由管径分档规则补全
+    ctx.material = cur.material;
+    ctx.system = cur.system;
+  }
+
+  // 「管径<DN65时采用螺纹连接」这类续句本身不带部位，按同材质同介质的分档规则补
+  function fillRuleLoc(rules) {
+    var byKey = {};
+    rules.forEach(function (r) {
+      if (!r.loc) return;
+      var k = (r.materialKey || '-') + '|' + (r.medium || '-');
+      byKey[k] = byKey[k] || [];
+      if (byKey[k].indexOf(r.loc) < 0) byKey[k].push(r.loc);
+    });
+    rules.forEach(function (r) {
+      if (r.loc || !r.dnCond) return;
+      var k = (r.materialKey || '-') + '|' + (r.medium || '-');
+      if (byKey[k] && byKey[k].length === 1) r.loc = byKey[k][0];
+    });
+    return rules;
+  }
+
+  function dedupeRules(rules) {
+    var seen = {}, out = [];
+    rules.forEach(function (r) {
+      var k = [r.materialKey || '-', r.joint, r.medium || '-', r.loc || '-',
+        r.dnCond ? (r.dnCond.op + r.dnCond.val) : '-'].join('|');
+      if (seen[k]) return;
+      seen[k] = 1; out.push(r);
+    });
+    return out;
+  }
+
+  function parseText(raw) {
+    var text = normalize(raw);
+    var spec = {
+      version: VERSION, ok: false, textLen: text.length,
+      materials: [], systems: [], joints: [], locs: [],
+      rules: [], measures: {}, dnRange: null, sentences: [], keywords: [], points: [], frag: null
+    };
+    if (text.replace(/\s/g, '').length < 20) return spec;
+    spec.ok = true;
+
+    MATERIALS.forEach(function (m) { if (m.re.test(text)) spec.materials.push({ key: m.key, label: m.label }); });
+    SYSTEMS.forEach(function (s) { if (s.re.test(text)) spec.systems.push({ key: s.key, label: s.label, medium: s.medium }); });
+    JOINTS.forEach(function (j) { if (j.re.test(text)) spec.joints.push({ key: j.key, label: j.label }); });
+    if (/室内|楼内|管井|吊顶内/.test(text)) spec.locs.push('in');
+    if (/室外|户外|外网|埋地|庭院/.test(text)) spec.locs.push('out');
+    MEASURES.forEach(function (m) { if (m.re.test(text)) spec.measures[m.key] = true; });
+    spec.dnRange = dnRangeOf(text);
+
+    var rawLines = text.split('\n').filter(function (l) { return l.trim(); });
+    spec.frag = {
+      lines: rawLines.length,
+      avgLine: rawLines.length ? Math.round(text.replace(/\s/g, '').length / rawLines.length) : 0
+    };
+
+    spec.sentences = [];
+    splitSections(text).forEach(function (sec) {
+      // 小标题（如「1.1.1 给水、热水系统：」）携带的系统/部位供整段继承
+      var ctx = {
+        material: firstHit(MATERIALS, sec.title),
+        system: firstHit(SYSTEMS, sec.title),
+        loc: clauseLoc(sec.title)
+      };
+      chunkLines(sec.lines, 1200).forEach(function (body) {
+        splitSentences(body).forEach(function (sent) { spec.sentences.push(sent); });
+        extractChunk(body, ctx, spec.rules);
+      });
+    });
+
+    spec.rules = fillRuleLoc(dedupeRules(spec.rules));
+    spec.points = extractPoints(text);
+    var hi = 0, lo = 0;
+    spec.rules.forEach(function (r) { if (r.materialKey) hi++; else lo++; });
+    spec.conf = { high: hi, low: lo, lowRatio: (hi + lo) ? lo / (hi + lo) : 0 };
+
+    // 关键信息摘要（给界面卡片用）
+    spec.keywords = [];
+    spec.materials.forEach(function (m) { spec.keywords.push({ type: 'material', text: m.label, key: m.key }); });
+    spec.systems.forEach(function (s) { spec.keywords.push({ type: 'system', text: s.label, key: s.key }); });
+    spec.joints.forEach(function (j) { spec.keywords.push({ type: 'joint', text: j.label, key: j.key }); });
+    if (spec.locs.length) {
+      spec.keywords.push({ type: 'loc', text: spec.locs.map(function (l) { return l === 'out' ? '室外' : '室内'; }).join(' / '), key: spec.locs.join(',') });
+    }
+    if (spec.dnRange) {
+      spec.keywords.push({ type: 'dn', text: 'DN/De ' + spec.dnRange.min + '~' + spec.dnRange.max, key: 'dn' });
+    }
+    Object.keys(spec.measures).forEach(function (k) {
+      var m = MEASURES.filter(function (x) { return x.key === k; })[0];
+      if (m) spec.keywords.push({ type: 'measure', text: m.label, key: k });
+    });
+
+    return spec;
+  }
+
+  /* ==================== 与清单行匹配 ==================== */
+
+  function itemMaterialKey(it) {
+    if (!it) return null;
+    if (it.category === 'plastic') return normMat(it.plasticKind || 'ppr');
+    var map = {
+      castIron: 'cast', galv: 'galv', stainless: 'stainless', copper: 'copper',
+      composite: 'composite', seamless: 'steel', welded: 'steel', frp: 'frp'
+    };
+    return map[it.category] || null;
+  }
+
+  function matchItem(spec, it) {
+    if (!spec || !spec.ok || !spec.rules || !spec.rules.length) return null;
+    if (!it || !it.category) return null;
+    var mk = itemMaterialKey(it);
+    if (!mk) return null;
+    var fam = familyOfMat(mk);
+    var dn = it.dn || 0;
+    var im = it.isRain ? 'rain' : (it.medium || 'water');
+    var best = null, bestScore = 0;
+    spec.rules.forEach(function (r) {
+      var sc = 0;
+      if (r.materialKey) {
+        if (normMat(r.materialKey) !== mk) return;
+        sc += 6;
+      } else {
+        var jf = jointFamily(r.joint);
+        if (jf && fam && jf !== fam) return;
+        sc += 2;
+      }
+      if (r.dnCond) {
+        if (!dn) return;
+        var cv = r.dnCond.val, okDn = true;
+        if (r.dnCond.op === 'ge') okDn = dn >= cv;
+        else if (r.dnCond.op === 'gt') okDn = dn > cv;
+        else if (r.dnCond.op === 'le') okDn = dn <= cv;
+        else if (r.dnCond.op === 'lt') okDn = dn < cv;
+        if (!okDn) return;
+        sc += 3;
+      }
+      if (r.loc) {
+        if (r.loc === it.loc) sc += 1;
+        else if (it.locAmbiguous) sc -= 1;   // 清单未注明部位，以说明为准
+        else return;                          // 部位明确冲突（室内 vs 室外），不套用该条
+      }
+      if (r.medium) {
+        if (r.medium === im) sc += 2;
+        else if (r.medium === 'fire' || r.medium === 'gas') { /* 中性 */ }
+        else sc -= 1;
+      }
+      if (sc > bestScore) { bestScore = sc; best = r; }
+    });
+    return bestScore >= 3 ? best : null;
+  }
+
+  /* ==================== 对比分析 ==================== */
+
+  var SYS_TO_MEDIUM = { water: 'water', drain: 'drain', rain: 'rain', cond: 'drain', reclaim: 'water', fire: 'fire', gas: 'gas' };
+
+  // 造价要点 × 清单比对：独立于「管材+连接方式」是否识别成功，只要说明里抽到要点就比对
+  function analyzePoints(spec, items) {
+    var out = [];
+    var pts = (spec && spec.points) || [];
+    if (!pts.length) return out;
+    var allItems = items || [];
+    var list = allItems.filter(function (i) { return i && i.category && i.category !== 'other'; });
+    var aux = { insulation: 0, sleeve: 0, support: 0 };
+    list.forEach(function (i) {
+      if (i.category === 'insulRubber' || i.category === 'insulGlass') aux.insulation++;
+      if (i.category === 'bracket') aux.support++;
+      if (/套管/.test(i.name || '')) aux.sleeve++;
+    });
+    var ptMap = {};
+    pts.forEach(function (p) { ptMap[p.key] = p; });
+    var hasName = function (re) {
+      return list.some(function (i) { return re.test(i.name || ''); });
+    };
+    var hasNameAll = function (re) {
+      return allItems.some(function (i) { return re.test(i.name || ''); });
+    };
+
+    if (ptMap.demolish) {
+      if (!hasNameAll(/拆除|清运|垃圾|剔凿|拆改|外运/)) {
+        out.push({
+          level: 'warn', title: '拆除与清运',
+          text: '说明写明需拆除原系统并清运废料（命中 ' + ptMap.demolish.count + ' 处），本清单未见拆除或垃圾外运项目。改造类项目这是整块费用，建议单列「管道及设备拆除」「垃圾外运」。'
+        });
+      } else {
+        out.push({ level: 'ok', title: '拆除与清运', text: '说明要求拆除清运，清单已有对应项目，请核对拆除范围与说明一致。' });
+      }
+    }
+
+    if (ptMap.seismic) {
+      if (!hasName(/抗震|支吊架/)) {
+        out.push({
+          level: 'warn', title: '抗震支吊架',
+          text: '说明要求设置抗震支吊架' + (ptMap.seismic.detail ? '（' + ptMap.seismic.detail + '）' : '') +
+            '，本清单未见抗震支架项目。抗震支架按 kg 或套单列，普通管道承重支架不能替代。'
+        });
+      }
+    }
+
+    if (ptMap.equipment && !hasNameAll(/泵|水箱|机组|消毒器|气压罐|换热器|热水器|开水器|变频|稳压/)) {
+      out.push({
+        level: 'warn', title: '设备供货',
+        text: '说明含设备要求（命中 ' + ptMap.equipment.count + ' 处）' + (ptMap.equipment.detail ? '，如 ' + ptMap.equipment.detail : '') +
+          '，本清单未见对应设备项目。设备按台/套单列，请核对是否漏项。'
+      });
+    }
+
+    if (ptMap.insulation) {
+      if (!aux.insulation) {
+        // 漏项由原有保温检查负责，这里只提示参数，避免同一问题报两遍
+        if (ptMap.insulation.detail) {
+          out.push({
+            level: 'info', title: '保温参数',
+            text: '说明给的保温做法是「' + ptMap.insulation.detail + '」。补保温项目时按此参数套定额——厚度与密度直接决定单价，别用默认值。'
+          });
+        }
+      } else if (ptMap.insulation.detail) {
+        var idt = ptMap.insulation.detail;
+        var rubN = list.filter(function (i) { return i.category === 'insulRubber'; }).length;
+        var glassN = list.filter(function (i) { return i.category === 'insulGlass'; }).length;
+        if (/橡塑/.test(idt) && !rubN && glassN) {
+          out.push({ level: 'warn', title: '保温材质', text: '说明要求橡塑保温，清单为玻璃棉保温，材质不一致，单价差异较大，请核对。' });
+        }
+        if (/玻璃棉/.test(idt) && !glassN && rubN) {
+          out.push({ level: 'warn', title: '保温材质', text: '说明要求玻璃棉保温，清单为橡塑保温，材质不一致，请核对。' });
+        }
+      }
+    }
+
+    if (ptMap.exclusion) {
+      var exNames = [];
+      (ptMap.exclusion.evidence || []).forEach(function (s) {
+        var m = s.match(/(?:不含|不在本次.{0,8}范围|本次不(?:含|包括)|暂不(?:含|包括))\s*(?!项)([^，。；、\s][^，。；、]{1,11})/);
+        if (m) exNames.push(m[1].replace(/[（(].*$/, '').trim());
+      });
+      if (exNames.length) {
+        var conflict = allItems.filter(function (i) {
+          return exNames.some(function (n) { return n && (i.name || '').indexOf(n) >= 0; });
+        });
+        if (conflict.length) {
+          out.push({
+            level: 'warn', title: '范围冲突',
+            text: '说明标注「不含 ' + exNames.join('、') + '」，但清单含 ' + conflict.length + ' 条相关项目（如 ' +
+              (conflict[0].name || '').slice(0, 18) + '），请确认是否属本次范围，避免重复计价。'
+          });
+        } else {
+          out.push({ level: 'info', title: '不含范围', text: '说明标注不含：' + exNames.join('、') + '，清单未出现相关项目，范围一致。' });
+        }
+      }
+    }
+
+    if (ptMap.boundary) {
+      out.push({
+        level: 'info', title: '室内外分界',
+        text: '说明含管材分界约定（' + (ptMap.boundary.evidence[0] || '').slice(0, 60) + '…），清单按室内外混编时注意分界两侧定额与单价不同，建议按界拆分。'
+      });
+    }
+
+    return out;
+  }
+
+  function analyze(spec, items) {
+    var out = [];
+    if (!spec || !spec.ok) return out;
+    var ptAlerts = analyzePoints(spec, items);
+    if (!spec.rules || !spec.rules.length) {
+      return ptAlerts.concat([{ level: 'info', title: '说明未含管材/连接方式', text: '已提取到文字，但未识别到「…采用…连接」这类表述，清单按名称规则套用；上传含管材与连接方式的说明（如「生活给水管采用PE管，热熔连接」）后可自动比对与套用。' }]);
+    }
+    var list = (items || []).filter(function (i) { return i && i.category && i.category !== 'other'; });
+    var pipes = list.filter(function (i) { return i.listCode && /^031001/.test(i.listCode); });
+    var mats = {};
+    var mediums = {};
+    var aux = { insulation: 0, sleeve: 0, support: 0 };
+    pipes.forEach(function (i) {
+      var k = itemMaterialKey(i);
+      if (k) mats[k] = (mats[k] || 0) + 1;
+      var m = i.isRain ? 'rain' : (i.medium || 'water');
+      mediums[m] = (mediums[m] || 0) + 1;
+    });
+    list.forEach(function (i) {
+      if (i.category === 'insulRubber' || i.category === 'insulGlass') aux.insulation++;
+      if (i.category === 'bracket') aux.support++;
+      if (/套管/.test(i.name || '')) aux.sleeve++;
+    });
+
+    // 1. 系统覆盖
+    spec.systems.forEach(function (s) {
+      if (s.key === 'fire') {
+        if (!mediums.fire) {
+          if (mats.galv) {
+            out.push({ level: 'info', title: '消防系统', text: '说明中消防给水采用镀锌钢管，本清单有 ' + mats.galv + ' 项镀锌钢管未注明用途；若确为消防管道，建议用「消防专业智能组价系统」单独组价（消防水沟槽/螺纹口径与本站一致，本站按给水套用）。' });
+          } else {
+            out.push({ level: 'info', title: '消防系统', text: '说明提到消防给水，本清单未见消防管道——消防水建议用「消防专业智能组价系统」单独组价，本站仅处理给排水。' });
+          }
+        }
+        return;
+      }
+      var med = SYS_TO_MEDIUM[s.key];
+      if (!med) return;
+      if (s.key === 'cond') {
+        if (!mediums.drain) out.push({ level: 'warn', title: s.label, text: '说明含' + s.label + '，清单未见排水/冷凝水管道，请核对是否漏项。' });
+        return;
+      }
+      if (!mediums[med]) {
+        out.push({ level: 'warn', title: s.label, text: '说明含' + s.label + '，清单未见对应管道项目，请核对是否漏项。' });
+      }
+    });
+
+    // 2. 管材覆盖
+    spec.materials.forEach(function (m) {
+      if (m.key === 'steel' || m.key === 'frp') return;
+      if (!mats[m.key]) {
+        out.push({ level: 'warn', title: m.label, text: '说明要求' + m.label + '，清单未见该材质管道，请核对是否漏项或材质写法。' });
+      }
+    });
+
+    // 3. 措施项
+    if (spec.measures.insulation && !aux.insulation) {
+      out.push({ level: 'info', title: '保温/防结露', text: '说明要求管道保温（防结露），清单未见保温项目，可增加「橡塑保温/玻璃棉保温」行由本站自动套定额。' });
+    }
+    if (spec.measures.sleeve && !aux.sleeve) {
+      out.push({ level: 'info', title: '套管', text: '说明要求穿墙/穿楼板设套管，清单未见套管项目，请核对（本站暂不含套管定额，需在计价软件中补充）。' });
+    }
+    if (spec.measures.support && aux.support) {
+      out.push({ level: 'ok', title: '管道支架', text: '说明要求管道支架，清单已含支架项目，按 7-138 套用。' });
+    }
+    if (spec.measures.test) {
+      out.push({ level: 'ok', title: '水压试验', text: '说明要求水压试验，已含在各管道定额工作内容中，无需另列。' });
+    }
+    if (spec.measures.disinfect) {
+      out.push({ level: 'ok', title: '消毒冲洗', text: '说明要求消毒冲洗，本站已对给水管道自动附加消毒冲洗子目。' });
+    }
+
+    // 4. 管径越界
+    if (spec.dnRange) {
+      var over = pipes.filter(function (i) { return i.dn && (i.dn > spec.dnRange.max || i.dn < spec.dnRange.min); });
+      if (over.length) {
+        out.push({
+          level: 'warn', title: '管径范围',
+          text: '说明管径范围为 ' + spec.dnRange.min + '~' + spec.dnRange.max + 'mm，清单有 ' + over.length + ' 条超出：' +
+            over.slice(0, 4).map(function (i) { return (i.name || '').slice(0, 18) + '(DN' + i.dn + ')'; }).join('、') +
+            (over.length > 4 ? ' 等' : '') + '，请核对。'
+        });
+      }
+    }
+
+    // 5. 说明未提及的材质
+    Object.keys(mats).forEach(function (k) {
+      var hit = spec.materials.some(function (m) { return m.key === k; });
+      if (!hit) {
+        var label = (MATERIALS.filter(function (m) { return m.key === k; })[0] || {}).label || k;
+        out.push({ level: 'info', title: label, text: '清单含' + label + '，说明未提及该材质，已按名称规则套用，请核对连接方式。' });
+      }
+    });
+
+    // 6. 连接方式被说明覆盖的行
+    var over2 = list.filter(function (i) { return i.specJointConflict; });
+    if (over2.length) {
+      out.push({
+        level: 'info', title: '连接方式以说明为准',
+        text: over2.length + ' 条清单名称所写连接方式与说明不一致，已按说明套用（如 ' + (over2[0].name || '').slice(0, 16) + '），如需以名称为准可在选型列改回。'
+      });
+    }
+
+    // 造价要点比对已在上方独立计算（analyzePoints），此处直接合并
+    out = out.concat(ptAlerts);
+
+    if (!out.length) {
+      out.push({ level: 'ok', title: '一致性检查', text: '说明与工程量清单未发现明显漏项，连接方式已按说明自动套用。' });
+    }
+    return out;
+  }
+
+
+  /* ==================== OCR（矢量化 / 扫描件 PDF 兜底） ==================== */
+
+  var TESS_BASE = 'js/tesseract/';
+
+  // worker 内部的相对路径以 worker 脚本位置为基准，必须给绝对地址
+  function tessAbs(p) {
+    try { return new URL(p, document.baseURI).href; } catch (e) { return p; }
+  }
+  var tessLoading = null;
+
+  // 懒加载：只有真正要 OCR 时才拉 11MB 的引擎和中文语言包
+  function loadTesseract() {
+    if (global.Tesseract) return Promise.resolve(global.Tesseract);
+    if (tessLoading) return tessLoading;
+    tessLoading = new Promise(function (resolve, reject) {
+      var sc = document.createElement('script');
+      sc.src = TESS_BASE + 'tesseract.min.js';
+      sc.onload = function () { global.Tesseract ? resolve(global.Tesseract) : reject(new Error('OCR 组件未就绪')); };
+      sc.onerror = function () { tessLoading = null; reject(new Error('OCR 组件加载失败，检查 js/tesseract/ 目录是否完整')); };
+      document.head.appendChild(sc);
+    });
+    return tessLoading;
+  }
+
+  // tesseract 对中文逐字识别，字间会插入空格（「D N6 5」「0 . 6 MP a」），
+  // 且常见字形混淆（耻有/既有、卡籍/卡箍）。这里做还原。
+  var OCR_FIX = [
+    [/耻有/g, '既有'], [/蚂有/g, '既有'], [/蚂存/g, '既有'], [/既冇/g, '既有'], [/皮有/g, '既有'],
+    [/水讨/g, '水压'], [/试讨/g, '试压'],
+    [/卡籍/g, '卡箍'], [/卡籍连接/g, '卡箍连接'], [/卡箱连接/g, '卡箍连接'],
+    [/抗晨/g, '抗震'], [/抗居/g, '抗震'], [/抗展/g, '抗震'], [/支品架/g, '支吊架'],
+    [/消火检/g, '消火栓'], [/消淡/g, '消火'],
+    [/薄璧/g, '薄壁'], [/热溶/g, '热熔'], [/螺绞/g, '螺纹'], [/法蓝/g, '法兰'], [/沟覃/g, '沟槽'], [/化数池/g, '化粪池'], [/排污奈/g, '排污泵'], [/防锈潜/g, '防锈漆'], [/卡夭/g, '卡箍'], [/法兰连管管/g, '法兰连接'], [/法兰连管(?![道])/g, '法兰连接'],
+    [/保痪/g, '保温'], [/保溫/g, '保温'], [/坛验/g, '试验'], [/坛讨/g, '试压'], [/坛压/g, '试压'],
+    [/水压试马验/g, '水压试验'], [/试马验/g, '试验'],
+    [/(\d)\s*[Kk]\s*[Ww][Ww]/g, '$1kW'], [/(\d)\s*[Kk][Ww]\b/g, '$1kW'],
+    [/(\d)\s*[Mm]\s*[Pp]\s*[Aa]/g, '$1MPa'], [/(\d)\s*[Mm]\s*[Mm]\b/g, '$1mm']
+  ];
+
+  function tidyOcr(t) {
+    var x = String(t || '');
+    // 只处理空格类字符（含全角空格/不换行空格），保留换行，避免段落粘连
+    x = x.replace(/(\d)[ \t\u00a0]*\.[ \t\u00a0]*(?=\d)/g, '$1.');          // 0 . 6 → 0.6
+    x = x.replace(/(\d)[ \t\u00a0]+(?=\d)/g, '$1');                            // 3 0 4 → 304
+    x = x.replace(/(\d)[ \t\u00a0]+(?=[A-Za-zµ])/g, '$1');                      // 25 mm → 25mm
+    x = x.replace(/([A-Za-z])[ \t\u00a0]+(?=\d)/g, '$1');                       // DN 65 → DN65
+    x = x.replace(/([A-Za-z])[ \t\u00a0]+(?=[A-Za-z])/g, '$1');                  // D N → DN
+    x = x.replace(/([A-Za-z0-9])[ \t\u00a0]*([-\/])[ \t\u00a0]*(?=[A-Za-z0-9])/g, '$1$2'); // PP - R → PP-R
+    x = x.replace(/([\u4e00-\u9fa5])[ \t\u00a0]+(?=[\u4e00-\u9fa5])/g, '$1');  // 薄 壁 → 薄壁
+    x = x.replace(/([\u4e00-\u9fa5])[ \t\u00a0]+(?=[A-Za-z0-9])/g, '$1');        // 中英边界
+    x = x.replace(/([A-Za-z0-9])[ \t\u00a0]+(?=[\u4e00-\u9fa5])/g, '$1');
+    x = x.replace(/[ \t\u00a0]+([，。；、：（）,;:])/g, '$1');                      // 标点前空格
+    x = x.replace(/([，。；、：（）,;:])[ \t\u00a0]+/g, '$1');                      // 标点后空格
+    OCR_FIX.forEach(function (r) { x = x.replace(r[0], r[1]); });
+    return x;
+  }
+
+  // 图片 OCR：截图直接识别，不需要经过 PDF
+  async function ocrImage(file, onProgress) {
+    var report = function (o) { if (onProgress) onProgress(o); };
+    report({ phase: 'engine', page: 0, total: 1, note: '正在加载 OCR 引擎（首次约 11MB，之后走缓存）' });
+    var T = await loadTesseract();
+
+    var bmp;
+    try {
+      bmp = await createImageBitmap(file);
+    } catch (e) {
+      throw new Error('图片读取失败，换一张 PNG / JPG 试试');
+    }
+    // 字太小就先放大，太大就缩到 3600px 以内，兼顾清晰度和速度
+    var w = bmp.width, h = bmp.height;
+    var scale = 1;
+    if (w < 1200) scale = Math.min(3, 1800 / w);
+    else if (w > 3600) scale = 3600 / w;
+    var cv = document.createElement('canvas');
+    cv.width = Math.round(w * scale);
+    cv.height = Math.round(h * scale);
+    var ctx = cv.getContext('2d');
+    ctx.fillStyle = '#fff';
+    ctx.fillRect(0, 0, cv.width, cv.height);
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = 'high';
+    ctx.drawImage(bmp, 0, 0, cv.width, cv.height);
+    try { bmp.close && bmp.close(); } catch (e) {}
+
+    report({ phase: 'ocr', page: 1, total: 1, note: '正在识别图片（' + cv.width + '×' + cv.height + '）' });
+    var worker = await T.createWorker('chi_sim', 1, {
+      workerPath: tessAbs(TESS_BASE + 'worker.min.js'),
+      corePath: tessAbs(TESS_BASE),
+      langPath: tessAbs(TESS_BASE + 'lang'),
+      workerBlobURL: false,
+      logger: function () {}
+    });
+    await worker.setParameters({ preserve_interword_spaces: '0' });
+    var r = await worker.recognize(cv);
+    try { await worker.terminate(); } catch (e) {}
+    cv.width = cv.height = 0;
+
+    report({ phase: 'done', page: 1, total: 1, note: '' });
+    var d1 = (r && r.data) || {};
+    return { text: normalize(tidyOcr(joinLines(wordsToLines(d1.words) || d1.text || ''))), pages: 1, engine: 'tesseract-chi_sim' };
+  }
+
+  // OCR 结果按字框重排：同一视觉行里若两字之间隔着栏间距，就断成两行，
+  // 否则多栏排版会被拼成一句（「2.不含厨 七、试验与验收3.不含室」这种）
+  function wordsToLines(words) {
+    if (!words || !words.length) return '';
+    var ws = [];
+    for (var i = 0; i < words.length; i++) {
+      var w = words[i], b = w && w.bbox;
+      if (!b || !w.text || !String(w.text).trim()) continue;
+      ws.push({ t: String(w.text), x0: b.x0, x1: b.x1, y0: b.y0, y1: b.y1, yc: (b.y0 + b.y1) / 2 });
+    }
+    if (!ws.length) return '';
+    ws.sort(function (a, b) { return a.yc - b.yc || a.x0 - b.x0; });
+    var lines = [], cur = null;
+    ws.forEach(function (w) {
+      var h = Math.max(1, w.y1 - w.y0);
+      if (!cur || Math.abs(w.yc - cur.yc) > h * 0.6) {
+        cur = { yc: w.yc, items: [w] };
+        lines.push(cur);
+      } else {
+        cur.items.push(w);
+        cur.yc = (cur.yc * (cur.items.length - 1) + w.yc) / cur.items.length;
+      }
+    });
+    var out = [];
+    lines.forEach(function (ln) {
+      ln.items.sort(function (a, b) { return a.x0 - b.x0; });
+      var buf = '', lastX1 = null;
+      ln.items.forEach(function (w) {
+        var wd = Math.max(1, w.x1 - w.x0);
+        // 只有明显大于字宽的空白才算栏/列间距，否则正常紧排也会被切碎
+        if (lastX1 !== null && (w.x0 - lastX1) > Math.max(wd * 1.5, 26)) { out.push(buf); buf = ''; }
+        buf += w.t;
+        lastX1 = w.x1;
+      });
+      if (buf) out.push(buf);
+    });
+    return out.join('\n');
+  }
+
+  // OCR 是按视觉行吐字的，一段话常被拆成好几行（「2.生活给水支管采用PP-R」/「热熔连接，压力等级S2.5。」），
+  // 直接拿去匹配规则，「PP-R热熔连接」就被拆散了。这里把明显属于同一段的行接回去：
+  // 只有「上一行已收句」或「这一行是新条目编号」时才断开。
+  function joinLines(t) {
+    var lines = String(t || '').split('\n');
+    var head = /^\s*(?:[0-9]{1,2}\s*[.、．]|[（(]\s*[0-9一二三四五六七八九十]{1,2}\s*[)）]|[一二三四五六七八九十]{1,2}\s*、|[①-⑳])/;
+    var out = [], buf = '';
+    for (var i = 0; i < lines.length; i++) {
+      var ln = String(lines[i] || '').replace(/^\s+|\s+$/g, '');
+      if (!ln) continue;
+      if (!buf) { buf = ln; continue; }
+      // 上一行是短标题（「三、管材及连接方式」这种），本身就不该跟正文粘在一起
+      // 只认「三、管材及连接方式」这类中文序号标题；「2.生活给水支管采用PP-R」是正文首行，不能当标题断开
+      var title = head.test(buf) && buf.length <= 12 && !/[，,。；;]/.test(buf) && !/^[0-9]/.test(buf);
+      if (title || /[。；;：:]$/.test(buf) || head.test(ln)) { out.push(buf); buf = ln; }
+      else buf += ln;
+    }
+    if (buf) out.push(buf);
+    return out.join('\n');
+  }
+
+  // 用垂直投影找栏边界：说明图多是 2-4 栏密排，按网格硬切会把两栏切进同一块，
+  // OCR 就会把左右栏的文字拼成一行。先找出栏间隙，再按栏切。
+  async function detectColumns(page, base) {
+    try {
+      var pw = 1400;
+      var ps = pw / base.width;
+      var vp = page.getViewport({ scale: ps });
+      var cv = document.createElement('canvas');
+      cv.width = Math.max(1, Math.round(vp.width));
+      cv.height = Math.max(1, Math.round(vp.height));
+      var ctx = cv.getContext('2d');
+      ctx.fillStyle = '#fff';
+      ctx.fillRect(0, 0, cv.width, cv.height);
+      await page.render({ canvasContext: ctx, viewport: vp }).promise;
+      var data = ctx.getImageData(0, 0, cv.width, cv.height).data;
+      var W = cv.width, H = cv.height, dark = new Int32Array(W);
+      for (var y = 0; y < H; y++) {
+        var row = y * W * 4;
+        for (var x = 0; x < W; x++) if (data[row + x * 4] < 150) dark[x]++;
+      }
+      var gaps = [], st = null;
+      for (var x2 = 0; x2 <= W; x2++) {
+        var blank = x2 < W && dark[x2] < H * 0.006;
+        if (blank) { if (st === null) st = x2; }
+        else if (st !== null) { gaps.push([st, x2]); st = null; }
+      }
+      var minGap = W * 0.012, cols = [], cursor = 0;
+      for (var g = 0; g < gaps.length; g++) {
+        var a = gaps[g][0], b = gaps[g][1];
+        if (b - a >= minGap && a > W * 0.04 && b < W * 0.96 && a - cursor > W * 0.06) {
+          cols.push([cursor, a]);
+          cursor = b;
+        }
+      }
+      if (W - cursor > W * 0.06) cols.push([cursor, W]);
+      cv.width = cv.height = 0;
+      if (cols.length < 2 || cols.length > 6) return null;
+      return cols.map(function (c) { return [c[0] / ps, c[1] / ps]; });
+    } catch (e) { return null; }
+  }
+
+  // 把 PDF 每页渲染成位图再识别。onProgress({phase,page,total,note})
+  async function ocrPdf(buf, onProgress, opts) {
+    opts = opts || {};
+    var lib = global.pdfjsLib;
+    if (!lib) throw new Error('PDF 解析组件未加载');
+    var report = function (o) { if (onProgress) onProgress(o); };
+
+    report({ phase: 'engine', page: 0, total: 0, note: '正在加载 OCR 引擎（首次约 11MB，之后走缓存）' });
+    var T = await loadTesseract();
+    if (lib.GlobalWorkerOptions && !lib.GlobalWorkerOptions.workerSrc) {
+      lib.GlobalWorkerOptions.workerSrc = 'js/pdf.worker.min.js';
+    }
+
+    // 传副本：pdf.js 会把 buffer transfer 给 worker，原件后续还要用
+    var doc = await lib.getDocument({ data: new Uint8Array(buf.slice(0)), useSystemFonts: true }).promise;
+    var maxPages = Math.min(doc.numPages, opts.maxPages || 12);
+
+    report({ phase: 'engine', page: 0, total: maxPages, note: '正在初始化中文识别模型' });
+    var worker = await T.createWorker('chi_sim', 1, {
+      workerPath: tessAbs(TESS_BASE + 'worker.min.js'),
+      corePath: tessAbs(TESS_BASE),
+      langPath: tessAbs(TESS_BASE + 'lang'),
+      workerBlobURL: false,
+      logger: function () {}
+    });
+    await worker.setParameters({ preserve_interword_spaces: '0' });
+
+    var chunks = [];
+    for (var i = 1; i <= maxPages; i++) {
+      var page = await doc.getPage(i);
+      var base = page.getViewport({ scale: 1 });
+      // 一块的目标像素宽度：小字（说明图常用 2.5-3mm 字高）放大到 25px 以上才认得出
+      var TILE_PX = 3200;
+
+      // 先试着分出栏：说明图多是 2-4 栏密排，按网格硬切会把两栏切进同一块
+      var cols = await detectColumns(page, base);
+      var tiles = [];
+      if (cols) {
+        var maxCw = 0;
+        for (var ci = 0; ci < cols.length; ci++) maxCw = Math.max(maxCw, cols[ci][1] - cols[ci][0]);
+        var sCol = Math.min(6, Math.max(2, TILE_PX / maxCw));
+        // 一栏太高才纵向再切；上限放到 8000px，让常见 A1 栏高（约 6700px）整栏一块，
+        // 否则一段话会被切在两块里，接行接不上、顺序还会错
+        var rowsPerCol = Math.min(4, Math.max(1, Math.ceil((base.height * sCol) / 8000)));
+        var chhC = base.height / rowsPerCol;
+        for (var cj = 0; cj < cols.length; cj++) {
+          for (var rj = 0; rj < rowsPerCol; rj++) {
+            tiles.push({ x0: cols[cj][0], x1: cols[cj][1], y0: rj * chhC, y1: (rj + 1) * chhC, scale: sCol });
+          }
+        }
+      } else {
+        // 分不出栏（表格、通栏排版）：退回网格切
+        var estPx = 8 * (TILE_PX / base.width);
+        var k = estPx < 22 ? Math.min(3, Math.ceil(22 / estPx)) : 1;
+        var cwG = base.width / k, chhG = base.height / k;
+        var padX = cwG * 0.04, padY = chhG * 0.04;
+        for (var ry = 0; ry < k; ry++) {
+          for (var rx = 0; rx < k; rx++) {
+            var gx0 = Math.max(0, rx * cwG - padX), gx1 = Math.min(base.width, (rx + 1) * cwG + padX);
+            var gy0 = Math.max(0, ry * chhG - padY), gy1 = Math.min(base.height, (ry + 1) * chhG + padY);
+            tiles.push({ x0: gx0, x1: gx1, y0: gy0, y1: gy1, scale: Math.min(9, Math.max(2, TILE_PX / (gx1 - gx0))) });
+          }
+        }
+      }
+
+      for (var ti = 0; ti < tiles.length; ti++) {
+        var tl = tiles[ti];
+        var tag = '第 ' + i + '/' + maxPages + ' 页' + (tiles.length > 1 ? ' 第 ' + (ti + 1) + '/' + tiles.length + ' 块' : '');
+        report({ phase: 'render', page: i, total: maxPages, note: '正在渲染' + tag });
+        var vp = page.getViewport({ scale: tl.scale });
+        // PDF 坐标原点在左下，viewport 原点在左上，用 convertToViewportPoint 换算
+        var p0 = vp.convertToViewportPoint(tl.x0, tl.y1);
+        var p1 = vp.convertToViewportPoint(tl.x1, tl.y0);
+        var cvW = Math.max(1, Math.round(p1[0] - p0[0]));
+        var cvH = Math.max(1, Math.round(p1[1] - p0[1]));
+        var cv = document.createElement('canvas');
+        cv.width = cvW;
+        cv.height = cvH;
+        var ctx = cv.getContext('2d');
+        ctx.fillStyle = '#fff';
+        ctx.fillRect(0, 0, cvW, cvH);
+        // transform 把整页坐标系平移到这一块，canvas 只显示这块区域
+        await page.render({
+          canvasContext: ctx,
+          viewport: vp,
+          transform: [1, 0, 0, 1, -p0[0], -p0[1]]
+        }).promise;
+
+        report({ phase: 'ocr', page: i, total: maxPages, note: '正在识别' + tag + '（' + cvW + '×' + cvH + '）' });
+        var r = await worker.recognize(cv);
+        var d0 = (r && r.data) || {};
+        chunks.push(joinLines(wordsToLines(d0.words) || d0.text || ''));
+        cv.width = cv.height = 0;
+        cv = null;
+      }
+    }
+    try { await worker.terminate(); } catch (e) {}
+
+    report({ phase: 'done', page: maxPages, total: maxPages, note: '' });
+    return { text: normalize(tidyOcr(chunks.join('\n'))), pages: maxPages, engine: 'tesseract-chi_sim' };
+  }
+
+  global.SPEC = {
+    version: VERSION,
+    parseText: parseText,
+    extractFile: extractFile,
+    ocrPdf: ocrPdf,
+    ocrImage: ocrImage,
+    matchItem: matchItem,
+    analyze: analyze,
+    itemMaterialKey: itemMaterialKey,
+    MATERIALS: MATERIALS,
+    JOINTS: JOINTS,
+    SYSTEMS: SYSTEMS,
+    MEASURES: MEASURES,
+    _internal: {
+      normalize: normalize, splitSentences: splitSentences, splitClauses: splitClauses,
+      firstJoint: firstJoint, dnCondOf: dnCondOf, dnRangeOf: dnRangeOf,
+      clauseLoc: clauseLoc, clauseMedium: clauseMedium, jointFamily: jointFamily
+    }
+  };
+
+  if (typeof module !== 'undefined' && module.exports) module.exports = global.SPEC;
+})(typeof globalThis !== 'undefined' ? globalThis : window);

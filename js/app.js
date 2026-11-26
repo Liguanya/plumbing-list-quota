@@ -1,1 +1,2782 @@
-function _0x8ea2(){var _0x54c996=['AgfUzW','yw4TB2S','re4Xnx4Xmda','CgvJ','5Bcp5l6/5zMO','ChzKzG','6BUy6k6K6l+E5O6L5PA55BYp','44cn4OcM77YiuergioMaKoMHTEApKa','DMfS','ioMHUtWVC3bHBJ48','55sO77Ym6k+35Qc45A+5','6j6657Q56zIa6zEOiowfRoENSoEBTow+Ha','mdmXmdaZmda0','5AsP5RsL5BIc5l+H5OgV5lU377Ym57Y66Ag55OYj','C291CMnL','lwzLyxr1CMuGyW','C2XPy2u','CxvVDgfvBML0','oc05nta','pUs/OEAbR+s7TZWVC3bHBG','5Aob6B6B77Yi5zYW5z2r77Yj6zEO5Qgg5y+k5OMh','iowTL++8Jos9HUACQUIVHUwiQ+wiSooaJokaPG','5OMR6zMK5y+J5A6j6kof44cb55Uw5P2/5zU65A6A','mtdKUkO','rv9qrvjjt0rt','77YB44cm5A6j6kof6yoO5l2nl+AoPEwpO+w9OG','Aw9UCYi+pgXHyG','yMf0Ahr1yG','zhjHAw4','mtuW','6io95PIV5OMR5O+p5lU2l+wBVUEjH+EjIca','55+Z5Qoj5Rc05RoL5O6L5y+J','5Rsx5RAK55UgiownLEwyTa','5RIP5O6N6zIa5y+k5lYG5OsF5zMO5A6j6kof44cb','FJGTnZhVViNVViZLT7lMJiNLRQq','ntbTBEs7PEwgHq','oc05ndq','6j6657Q555s156ob6zIa5A6j6kofiowfRoENSa','5A6K5Asw54Ed5Rcu6zwa6zsm6zkI566HkoIEUG','iowJGEM+M+w8JW','ndbTBEs7PEwgHq','zMLSDgvY','6zQu5Rk55zMO','y2f0r2fSDG','5zcn56EW6kEe5yIz5Awx55sO77YB5y+V5zYO6k+0','mdmWodaXodaX','5AsN5l6/5zMO','5QgJ77Ym5OYjre4','6kEe5Qc8oKro','Aw50iJ7VViVNRQhKU7BcPq','54oy5OMl5zMO5zU65A6A44cb55s15RQq5O6L57Q/','5A6K5yAf566H6ygtioAjV+ApKUMtUoMtGEE7Mq','Bwf0zxjPywW','5PM66io957Ue5lU357o757UF','CMvWBgfJzq','CMfPBKHLywq','uKLdrvm','yxnZpsjJzwXSlq','5BEY5OMl6ycj','5BEY5O+q5y+w44cm','zsi+8j+tHca','77Ym6k+35A+554wNmJaYmoMIHoEULW','C3bLy1n0yxr1CW','6AwU5Rc05zMO5BcX5l2n5zU65A6A44cb6l+B5Rc0','yw4GC3r5Bgu9iG','5zU+57Q45PsV5P625A6E6zMf6yEn6yEp6lcd5Pw0','oc02mdm','5Rcu5y6l6k+v6AQm44cb56M65Rcu5zc55OMR','yM9PBgvY','44cn5O+q5y+w5yIW5y+V6k+75PAh5A2x77YA5y+V','5lYy5ywi5l+H5OgV5lU344cb5yw25QYH5BIc5zY6','AxngywXSyMfJAW','oc02mZy','zxHWyw5K','u3bLyW','oc02mdu','5QAc566xx+wUMUMINEAkPEs7T+IHQf/LU7O','AxnbDxG','y29UzG','5lIn5Qch5zob54Mm','re4XmdaGlYbetG','C2HVD2vY','DMfYAwfUDa','6zIaiowfRoENSoEBTow+Hdi1Bw0','zxHJzwXgAwXL','oc05mZG','oc02mJm','C3rHDhvZlwjHCG','C3bLyY1JyxjK','55s154oT5Rc05zMO','CYbLCNi','pslOR6xLRPRPOP3KUiVPNidKUktKUkRKUlS','5A6K5Asw566H6ygtioAjV+ApKUMtUoMtGEAoKG','77Yi5OQL5lU3ia','CYb3yxjU','55Ug5l2t5A6j6kof44cb5yA354oT5Rc06B6z5As0','zxHWB3j0qNrU','oJeYChG7y29SBW','oc0XmdeW','5REl5Rw05zMOioMsOUEUOEE7HoAiKcdLHRC','5A6556EV5BYp54oT5lQK5O2I5zMOidCJ','zML0DgLUzW','BsdKUi7NRQhLVOtLIiBMOApLKkVPH4/KVla','5A6A6AkD6kgm','ioADOEI/NUAoPEAwUEw8JZWVC3a','6j6657Q56l+E5O6L77Yi54Ed5Rcu77Yj','C3bLy01LzgL1Bq','6Ag555UU54M55B6b','C2fUrM9YBq','AxrLBxm','oc05ntu','C3bLy0PVAw50vq','CgfYC2u','oc05nJq','5OMR6zMK5y+J','oc05nJi','ywrKrxzLBNrmAq','v0CG5zco5yAn6k+v44cc','B3b0Aw9U','mdmXmdaYmZaZ','5Bcb44cb6ycA5Rc06k+v6AQm','mdmXmdaXmda4','C3bLy0PVAw50qW','zgL2pJWVzgL2pG','DgHYzwfK','re4Ynx41ma','mtvTBEs7PEwgHq','6zIa5l2t5A6j6kof44cb5Rov5ywW6l+E5O6L44cb','ywnR','z2fZx3rOCMvHza','z3jVB3zL','DhLWzt0Iy2HLyW','l+AoPEwpO+w9OUw8J+oaJEwiL+AuUEMaIEEUOq','5Awx55sO77Ym6k+35Qc45A+5','44cb5A+g5Bcb5Qoa5P+L','pUs8SdWVC3bHBJ4G','5l+D5RIP5AoZ5A6j6kof44cb57ky5O6L44cb5O6L','D2fZAfnPBMS','ihrHzY1PBMzViG','5y6l5yQB5lUQ6kgO','lxbLBMrPBMCIpG','tg9HzgvK','5zcn56EW5PYQ5RoO5PIo5A6K5yAfl+wUPowKLG','oc01oda','Aw5K','5yw25lUwoG','z3jPza','ignSyxnZpsjZCa','D2f0zxjizwf0zq','C3m9iM1HDdiTAa','6jM55zc46zUO5Rc05PAx','yNjHBMqIihrPDa','6kof44cb5yI35Rk544cb5Rc05y6l6k+v6AQm','zYdORQe','BgfZDfbPCgu','5PMU6ycA77Yi6zkI566H57Ue5OIq77Yj','z2v0rwXLBwvUDa','pIa8C3bHBG','l2G0pJXKAxyGyW','ueLqrv9tqu5jva','57g75z6loG','zgL2','D2f0zxi','5y+w5PAh5A2x77Ym5PAh5lU25lIn5lIk5lYG5PYn','lw1HCMTLDci','5A6K5Asw566H6ygtioMsOUMQQoAETUwHKEAwMq','566x77Yi5Q+pnM3KUidKUkRNRQhKU7BVViK','C3rLyw1izwf0zq','5y2v5y+3l+wUMUMINEwpT++8Jow3SUAmIEA4Hq','C3m9iNbYAwnLlq','AM9PBNrgCM9TtG','pUA4HEMzPoIVToAyJJWVyNv0','6l+E5O6L5B2I5BYpoUAjV+ApKG','oc04odq','yMvS','55UU5zcn56EW77Ym6k+35Qoa5P+L6kgO5As05PIV','zMX1C2G','phnWyw4GDgL0Ba','5REl5Rw06zE0ioAvTos9K+A3I+A1TowUPowUIq','zM9YBq','oc04mZe','C29U','77Yi5O6O5PAT77Yj','mMTNl23VViNVViZLRPRPOP0G','5QgJ77Ym5OYj','6lAf5yE66iYd5zU077Ym6k+35Qc45A+5','DgLJiJ7LVOxOOAxLHyu8lW','6k+L6l+E5O6L5PA55BYp','C3m9iNrHzYb0yq','oc02mJe','CgfNzxm','y29Kzq','iJ7LT6xNQiVPH4/MJiKGqEwiL+w6JW','ChjVDg90ExbL','mtaW','5Rc0566HkoIgQoIdGoAWToAZPEAoPEwpOYK','6k6H5yIx77Ym5y+V5zYO44cm5A6j6kof6yoO5l2n','ic8G','oc02odi','5lI75P2q5lU35Qc8','z2v0rgf0zq','77Ym5OIw5lIk5lYGieryrI9e','jNf1B3q7','5A6K5Asw566H6ygtiowHKEAwMEE7MEAWToEUOq','CYbVAW','77Yj77YA5y+J6yoO5yAY5Rsx6zIaioAiKowLLW','y0nSzwfYqNrUiG','mdmXmdaYmda4','zsi+pgi+','566HkownOEwLL+I/NUAoPsK','77Yi5PwW6yEp','55sF5PAz5BIM','Aw5ZDwXsDwjIzq','BwvKAxvTqw1IAq','AM9PBNrgywXSyG','ChbY','6ycq6kgm6ycj5OUP44cc','lMHLywrLCIbW','idXIpG','54sk5O6L6zkI566H','oc0XmJyX','546755kd5Qoj5l+D5RIP','77Ym5OYj5A6K5yAf5Awx55sO77Ym5y+V5zYO6ycj','BgWTC2vSzwn0','5RIf5y2v6kgm','uexVViJOGzRKUzNNG6/VViK','DgfYz2v0','5zcn56EW5PYQ5RoO5PIo57Uz5Rc0l+EhG+AWLa','C3bVChq','y29SB3i6i2i5nW','5RkF5QE96l+E5O6Lkq','44cb6k+v5Rc0','koIEUUAVJEwVHUwWGEwCIoI/NUAoPsK','6z2s6zof5O6L5y+J','5RkF5QE96l+E5O6L77Yi5y2H566n77Yj','6jM55zc46zUO5Rc05PAx5A6j6kof44cb5Pw05Rwb','6zIa6zEO5y+k6zMe5lU2','566HkoAjV+ApKUAWQEw8P+EeIIK','CgfUihn0EwXLpq','AgvHDev4y2HHBG','zxHWB3j0CW','yw5HBhLZAxnbCG','B3zLCMzSB3C','Bgu9iUs7T+AGVoAvSoAnRUw6K+AkPq','6l+E5O6L44cb5O6L57Q/44cb6k+v5y6l44cb6lcd','BgfIu2LUAW','lxrHz3mIpG','mJbTBEs7PEwgHq','6ycj5z6lpc9KAxy+pc8','44cb6k+v6l+q6kgm','lMHLywrLCIbOmq','yxv0B0fKzgvK','Bu5HBwu','77YA5AsP5RsL5BIc5BEL56Il6ycG5lU35l+H5OgV','CMvHzefZqxjYyq','5Rc0566H6l+E5O6L44cb6ycA5Rc06k+v6AQm','A2FVViGWlJq1FJmU','y2XHC3nmAxn0','54gm5Rc06k+v6AQm44cb6ycA55cd6k+v6AQm','Dg90ywXdB3vUDa','zMXVB3jdBgvHBG','Aw4IpUEUOEMbK+wqIoIUOsa8','Dg90ywXqCMLJzq','zg5uAwvY','zw1WDhK','5A6K5yAf566H6ygtiowHKEAwMEMBQoAWToEUOq','DgLJiJ7IGjq8l3nW','pc9ZzwXLy3q+','yxjJ','ioADOEI/NUAoPEAwUEw8J+ACQUIdVEwCQoMcUW','oc02ndG','C2vHDa','z3mTBw9Kzq','5l6D5zU+57Q46k+05PIo5lI65RAi6zIY57Uz5Rc0','55s154oT5Rc05zMOioAmGUw8JYbsuW','zMX1C2HwywX2zq','mdmXmdaZmdeW','5OYj5l+D5RIP5l2t56EV77YiBCkZ77Yj6k6H','nJvTBEs7PEwgHq','BgfZCZ0IC3bLyW','oc02mdq','C3rHCNq','6j6657Q56zIa6zEOiowfRoENSoEBTow+Hde','5PYQ5zYOqUwiL+IVHUwiQ+wiSoEUOEMbK+MHUq','C3rHDhvZqMfY','5P2q77YA566H5P2qicSG566H5lU277Ym','77Ym566H5lU25PwW6yEp5OYjnM3LRPRLSlO','zsi+pgrPDIbJBa','oc05nJG','l+AoPEwpO+w9OUw8J+oaJEwiL+wiH+AnOG','5ywj55s15O6N5Rsx6is455UgiowpSow8JW','jMD0oW','DhjPBq','pc9ZCgfUpIa8CW','oc04nJK','zhjVCa','5Rc05y6l6k+v6AQm44cb5Rc05yAY5Rsx44cb5RAi','6l+E5O6Lkq','5A6j6kof6yoO5l2n5l6D5zU+57Q46k+05PIo77Yi','mtuW77Yj','re7IIAq','77Yj77YA55s156ob6zIaiero','phnWyw4','qNLjza','oc02ndq','oc0ZodL+oc0Zoq','56EW5lIo6zw/5BQM77Ym6k+35OMl5BEL5Awx55sO','mdmXmdaXmdaZ','ntyWrwXSEhfN','z2vUzxjPyW','5Rc05RoL5O6L5y+J','5B6f6k+I5lU3pc9ZCgfUpG','Bwf0mG','zgf0zq','6jk45Rg96zE05PAT5BYp5yQG54oT5zMOidm','5y2R55sF5zMO5yw3','oc0XmJyW','ueLqrv9wquXwrq','oc05ndG','DMfSDwu','mdmXmZaXmda1','C3rLzwW','5Qc45A+544ccpc9KAxy+','iowoMUw6PG','B2WTzMvHDciGDa','mJaWBw3KU6xLHOu','Aw5MB0rUCW','oc02nda','6k+05PIo6kAb5Rgc','5lU35zob54MmiJ4','77YB5lU35Qc85BQt5PEG','57Ueic8GmtaG5lIQic8','oc02mdy','5Rc0566HkoMDKUMtHEAoPEwpOYK','5QAc566xx+wUMUMINEAkPEs7T+IHQf/LUB8','5PwJ54oT5zMO5RIP5O6N6zIa','5A6K5yAf54Ed5Rcu5lIn6zsi6zkI566HkoAjVW','y2HLy2TLza','AM9PBNq','5OYj55U46yk75QgJ5y+w5A6A77Yj','BgfIzwW','CgX1BwjPBMC','yw9Hx3rVx3nOzq','oc02mZC','mdmXmdaZmda2','zMvHDhvYzq','z2fSDG','5y6A5BQMoG','5A6556EV5BYp54oT5lQK5O2I5zMOideJ','BgLZDenVzgu','C3rHAw5SzxnZ','77Yi55Uw77Yj5yI25l2C5A6j6kof44cb6zIa5A6j','5REl5Rw05zMO','DxbSB2fKqxjLyq','C3bLy0v2AwrLBG','y2XPy2S','ioIHJo+8Jow5S+wDH+AVJ+IHJca','ChjVzG','5PsVl+wqIUAETUoaGEwFUUEHGowEI+MsOG','6l+E5O6L5B2I5BYpoG','y2vPBa','C3bLyW','oc02mZK','yMXVy2S','C3bHBJ4','54oy5OMl5zMO','B3v0','C2HLzxrFDg9FAG','5z2q5BYp77Yi5BIM5Rc0566X5z2q5l6/5zMO77Yj','5zcn56EW5PYQ5RoO5PIo6l+E5O6L5PA55BYp77Ym','pJXIDxr0B24GDa','57Uz5Rc0566H5A2q55UU77Yioc0ZnG','mdmXmdaZmdeX','lw5HiJ7MNkRORQhKU7C8lW','5y+J6yoO5yAY5Rsx6zIa5yI25l2C44cb5A6j6kof','Bgv2zwXwywX2zq','DgfIBgvcB2r5','mtaW5z6l','5zcn56EW5PYQ6k+g5yIR5yIW566H5B6e77Ym6k+3','mdmXmdaYmZaY','Dw5PDa','5P2q6lsOoG','55Ug5l2t5A6j6kof44cb6B6z5As05A6j6kof44cb','77YiBE+8Iq','BgfZCZ0Iy29Slq','zMvHDhvYzxm','5yw25lUw5OIq5zob5y2R55sF5zMO5yw3','oc02mZq','5Rsx6is455UgioMsOUEUOEE7HoAiKcdLHRC','6Ag555UU57Yw56cb','oc02mZu','kownOEwoI+I/NUAoPsK','5B6f5lQ65BEL5Ase55cg','5OIq5yQF6kEJ5P6qia','5A6j6kof44cb6kEs6zIa5lIo5O6s5Rc06ywn5lU2','AxnwywX2zq','pgG0pJXZCgfUia','z2v0qxr0CMLIDq','77Ym5AAc5lI65zYW5z2r5BYp6k+35Ps56ycjia','5A6j6kof44cb5O6s5Rc06ywn5lU25A6j6kof44cb','z3jLyxnLvhjHCa','566H6ygt5PsV5P625BEL56Il6yEp5OYj566H6ygt','77Yj6k6H5yIx77Ym5y+V5zYO44cm6ycj5z6l44cn','imk3ioEUOEADKca','5PYQ6k+g5yIR5ywS56EW55U05B6e77Ym6k+35zYO','6zQu5Rk55zMOioAcRoAmGUw8JYbetG','6iEQ5yQO5yAY5Rsx6zIa','5RIf5y2v57Yw56cb','oc02ndy','zhjHz2XLyxzL','5Rov5ywW5RwU55cd6zIaiowfRoENSoEBTow+Ha','6l2V5O6L5As077Yi6l2V566H77Yj','pg9WDgLVBIb2yq','oc04ndy','A2v5','5OYjieromtaWioIUOEwiLW','77Yi566H5B6e5B6f6k+g5yIR77Yj','5A6K5yAf54Ed5Rcu5lIn6zsi6zkI566HkownOq','Bg9JywXtDg9Yyq','zNvUy3rPB24','5RIf5y2v5A6A6AkD5OQL5lU36kgOx+w5V+IbLa','5Asn5zci566HkoEuTEEgLoI/NUAoPsK','5OsF5BQu5BYp5yAY5Rsx5zMOioAyJUIJHq','lxnPEMu6mtjWEa','ioIUOEwiL++8JowpR+wCQooaJoMaIEwEI+oaJq','zNvZAw9U','mdmXmdaXmda1','5ywdl2TN','77Ym5BEY5y+w6Ag25QgJia','6jk45Rg96zE05PAT5BYp5yQG54oT5zMOidi','6zoD5Agr5Asn5zci566H','5PEG5A+55BQu5QgJ77Ym5OYjiero','ueLqrv9quKLdrq','5A6K5yAf566H6ygtioMsOUEUOsJNHiRMJQu','BgvUz3rO','mtbT','C3rLBMvY','mdmWnJaXmdaY','5Rw055Ug5A6j6kof44cb5yA354oT5Rc06l+E5O6L','5AsN5l6/5zMO5A6j6kof44cb5Rc0566X5y+k5yAY','u2HLzxrZ','ufzerU+8IoIbMUwbJ+s6JoAWN+s5Mq','CZ0IC3bLyY10yq','y29KzuLUzMvYCG','CgXHC3rPyW','Bgu9iG','5ywS56EW55U05B6e5QgJ5l2n5BcX6l+r5O6O566x','CMvZDwX0qxjLyq','mZmWmtjfvLPlqwC','6l6r5B6f6kgL5ywf77Ym5PQc5y+Q6l6t5yE65zcn','y2XHC3m9iNrHzW','pc9KAxy+pgrPDG','mZiWqKjSD1DI','6zkI6AQO5P625Agr5PAz5Asn5zci566H','yw5HBhL6zq','imk3iow+HEIVOUs7TYa8yJ4','5l2n6BUy6k6Kig3VVjVOR4BLIkVNU5pMNPW','566H6ygt5RAi5Q+s5yAY5RsxiowfRoENSoEBTa','u3rHDgu','AM9PBG','5QAc566x6k6H5lU377YA5lIn5Awx5RIf5y2v57Yw','owjHmsi+','6AwU5Rc05zMO','C3bLy1j1Bgu','5OsF5BQu5yAY5Rsx5zMO5A6j6kof44cb55s156ob','iIbKyxrHlwLKEa','uelVViJOGzRKUihNG6/VViK','ig3cSIdMJiNPNAlNP6/dL+woMUw6PG','zMLSzu5HBwu','zxzPzgvUy2u','Bwf0zxjPywXmyq','5PM66io957Ue5lU35BMZ5y+W','5B6emtaWBw3KU6xLHOu','5A6K5Asw566H6ygtioMvGoMuJoMsOUEUOsG','y2HHBMDL','BgLZDenVzguXmG','ntaWBw3KU6xLHOu','BMf2ywLSywjSzq','5yE66iEQ5yQO5O2I566x77Yj77YB6BUe6iMY6kgm','BwvHC3vYzq','zMf1y2v0','oc02mJa','6zQu5Rk55zMOiowCSos4IUw8JYbetG','CxvLCNLtzwXLyW','lwLUzMvYiIb0Aq','77Ym6kAg55Uw5zU+57Q46k+05PIo77Yi','5BYa5Rc054kj5BcX5l2n5zU65A6A44cb6l+B5yE6','57o757UFl+s7I+I0Qos+NEwBVUE6UoIVToAyJG','ChjLDMvUDerLzG','5OkS5OYc5BYp','oc05ndu','55s154oT5Rc05zMOioERI+w8JYbsuW','yMfSBa','oc05nde','o2nVBg9YoIm4yq','5zMO5A6j6kof44cb5lIo6zUO5Rc0566H6l+E5O6L','tMfTzq','mti1Bw3KU6xLHOu','Aw5KzxHpzG','5OsF5BQu77Yi5ywj55s15O6N5y+W5BYp77Yj','zgf0ys1PzhG','54Ed5Rcu566H5lIa6iIS5lIn6k6H5y+w77Ym5AAc','5Rc0566HkoEFS+AJIEAWToAZPEAoPEwpOYK','ioIUOEwiL++8JoIVT+AGUowVUq','5y+J6yoO5yAY5Rsx6zIa5OYjidGTmq','5A6556EV5BYp54oT5lQK5O2I5zMOidmJ','zgf0yvrYyw5ZzG','Bwf0zxjPywXZ','mZaWBw3KU6xLHOu','5PcQ55o35Rw055UgiowgT+EdREAWTa','5zYW6z2I5OMR6zMK5y+JiowfRoENSoEBTow+Ha','6l+E5O6L5PA55BYp5l6D5zU+57Q46k+05PIo77Yi','BJ4GphnWyw4','5A6A6AkD5OQL5lU36kgO','CNvIyMvY','lI9ZCgvJAwfSlG','ChjPy2vcCMfUza','5A+85yE65BEY5yIG6zMK5RIf5y2v6kgm5lIo6Ag5','uerg44cc6k+35zYOienbra','zsiGC3r5Bgu9iG','566H6l+E5O6L44cb6ycA55s16k+v6l+q6kgm','oc02ndi','566H6ygt5PsV5P62','5RAY5y6l5Rc05l2n5O6N5yI26zIa','iowfGY8','5REl5Rw06zE0','x19WCMLJzurIuG','54sk5O6L6zkI','5ywS56EW5Asw5B6e','ufaTuU+8IoIbMUs4MEEdR++8Iq','zM9UDc13zwLNAa','54Ed5Rcu6zwa6zsm6zkI566H','BwfYA2v0','5O6L44cb5O6s5Rc06ywn5lU25A6j6kof44cb6k+v','z2XHC3m','6kEe5Qc85z6l5y+3oKro','yxbWzw5Kq2HPBa','oc05nZq','ntdLNOS','C2v0tMf0AxzL','6k+L6zIa56En5y+w5l+H5OgV5lU377Ym6Ag16z2I','zxH0CMfJDa','qvjzx1bssunfuW','y2XHC3m9iMzPBa','zgf0ys1Hy3q','Aw5F','l+I/NUAoPEAwUEw8J+IHQoI/So+8Jos7JEAmIq','ChvZAa','C2HVDW','57Q56l+E5O6Lkq','zYbTyxrLCMLHBa','C3rLzwXTzxnO','BNv0','77Yire4','BgvHza','Euj1zMzLCG','5ywS56EW55U05B6e6lAf5PYS57g75PYa5AsN5QgJ','5ywdl23cSW','oc02mZm','Bwf0zxjPywXlzq','mteTnJq3','Bwf0y2HrDw90yq','mdmXmdaZmda3','54oT5lQK5O2I5zMO','C3bLyY10ywDZiG','5BEY6k+g5yIR44cm','5Rc06l+E5O6L44cb5A+g5Bcb5OMt6io244cb6k+v','5OMo44cb5O6L57YD5Ase55cg','psjZB2z0D2fYzq','6zwa6zsm6zkI566H','Aw5ZDwW','77Ym5BEY5OYj5A6K5yAf6zoC566H5A2q55UU5Awx','5REl5Rw05zMO57Ue6kof44cb5yA354oT5Rc0566H','oc0Xmda4','B3rH','oc02mti','Aw5Zzxj0qMvMBW','mdmXmdaZmda1','5y6l6l+E5O6Lkq','z++8JoIVT+AmIEwBVUE6UoAuR+AETUwUNUMzHq','DMfSDMvlAw5K','C3bLy0nSzwfYqG','5lUL5yAf5A2q55UU5Awx55sO77Ym6k+35Qc45A+5','uLm1mcdNQ4VLVi8','6io25zYi5O6L5y+J','ChjPy2veqI52mq','oc05nJu','B3v0xW','zNjHzW','ChjLC3m','z2v0rNvSBfLLyq','z2XVyMu','55cd6k+v6AQm77Ym5PYS56Uz5PYQ5zcR6k+L5A6A','yw4+pc9Ond48za','C3bLyY1ZDgf0Dq','DgXLpslLRPRPOP3NVjBLJ7FMJiK','pc90zd48DgqGyW','44cb6ycA55s16k+v6l+q6kgm','phrKpG','zxH0CMfJDezPBa','5Rsx5RAK55Ug','5zYW5RYpiowfRoENSoEBTow+Hde1ma','5A2q55UU5lIl6k6+5Ash','6k6H6yEpoUAmIEwEI+MsOUMhJEMhJYbR','y2XHC3noyw1L','Cxr5u3rHDhvZ','zxH0CMfZ','ncdMJiNLRzdNM67LUO/LJ7FOV57NU63MJQG','CM93lxDHCM4','mdmXmdaYmZa2','5Rcu566H6ygt77Yj','mdmXmdaXmda2','5Pw05l2t5REl5Rw06zE05BcX5l2n44cb57Uz5O6s','oc05ndy','C2fUrg4','oc05nte','5Rov5ywW5RAY5y6l5Rc05l2n5O6N5yI26zIaia','566x77Ym5A6A6AkDidCTmtm4','oc02mZe','ChjLsw5ZDwW','oc02ody','mZuWBw3KU6xLHOu','Dg9YqwXS','C2v0t3b0','u2vS','mdmXmdaXmda3','AxrLBq','6yEp6k6H5yIx77Yj','5z6l5y+36kEe5Qc8oG','B3H5','wJaWnZqXlq','5Rc05Bcb5Qoa5P+L','5OYj6Ag555UU5zcn56EW55U05O6L5Awx55sO5A6A','Aw5ZDwXuAgS','5lI75P2qoUwEI+MsOU+8Ios/OEAbR+s7TYa','C2vHCMnO','tgfIzwW','6k+v5y6l44cb6lcd6k+v','BwvZC2fNzq','ioEUOEMbK+AuR+wqIUAETG','oc0XmdeY','y3jLyxrLrwXLBq','mdmXmdaZmde4','566H6ygt5PsV5zck5P625yI25l2C44cb5A6j6kof','lNHSC3G','mJq1mJe2mhbXzvj1qW','psjZCgvJlxj1Ba','zsi+8j+tIIa','zY1MyIi+6kgL6Ag5pc8','uLm1meW','koEuTEEgLoI/NUAoPsK','oc04mZC','5Awx6l+E5O6Lkq','kownOEwLL+I/NUAoPsK','uLmXmdaG56Ul5BYp','oc05odC','566HkownOEwoI+I/NUAoPsK','yNv0DgvYzMX5','6j6657Q56l+E5O6Lkq','BgfZCZ0Iy2vSBa','lMnVBNrLBNq','5OM/5O+s5RcP5BYN54sk','oc02mtm','8j+tJca8yJ7MPOlNRPFMQkhLVi88','5O6L5y+J5P2q5PAzoG','Dgv4Da','yM9VA19HChbLBG','mtdLJ7a','oc05nZi','yNjHy2TLDa','5O6s5Rc0566H6ygt5BQu5ygA54gm5Rc0l+MaMG','6j6657Q56l+E5O6L','5A6K5yAf54Ed5Rcu6zwa6zsm6zkI566HkoIEUG','zgLZCgXHEq','5Bcp5l6/5zMOioAmGUAwL+w8JYdMHj/LUPq','77Ym5y+V5zYO44cm6ycj5z6l44cn5yIx5yIh5O2I','oc05ntK','BwvKAxvTrNjVBq','6l+E5O6L44cb6k+v5y6l44cb6lcd6k+v','CZ0IDgfNihrHzW','5A6A6AkD57Yw56cb','oc02mJy','B3b0CW','y29TCg9ZAxrLsW','io+8JYa','mdmXmdaXmdaX','C3bLy2LHBa','5BIc5zY65lU377Yi','5BEY6zMe5yQG566H6ygt5RAi5Q+s5yAY5Rsx77Ym','C3r5Bgu9iM1HCG','ChbeCMfPBG','AgfZt3b0CW','mdmXmdaZmde0','zxHHy3q','C2LUAW','566H5lU2WQu','5zcn56EW5PYQ5RoO5PIo57Uz5Rc0l+AoKUAWTa','mJy5mZa5nKDgqKrPqW','6l+E5O6L44cb6iQX5Rss5A6j6kof44cb6k+v5Rc0','pc9IpU+8MG','mtdNU4q','C3vTBwfYEufYzq','CgXHC3rPy0TPBG','yw4+','oc05nti','54ku54skkq','oc01ode','D2f0zxjeAxnWzq','5A6j6kof6yoO5l2noG','566Hiero','zMfSBgjHy2TrDq','6igu6l6+xW','Aw5ZDwXhBgfZCW','6zIa5O6L57Q/44cb6ycA5Rc06lcd6k+v','zwmTCNvSzxmIpG','lxDHCM4IpG','5B6emJvTBEs7PEwgHq','nduWBw3KU6xLHOu','CZ0IzxyIpUs+NEAnRU+8MG','Aw5Uzxjive1m','y2HLy2S','5PEG57YD6zkI566H','5yw25lUw5P2q6lsO','5l2o5y6l55U05z+l5l+D5RIP566H6ygt','5BEL56Il6yEp','ioAiLIbqreyG6zIf6k+75zMO','iero','uelNU5NMSltNRQe','mdmXmdaZmda4','z2vY','6lMY5BYp77Yi6isA6lIp6zIa5yAY5Rsx77Yj','6kgL6Ag577YA5PEG5yEg56gU5yY56ywn55Qe5RIf','y2vTzw50','566H6ygt77Ym5PYS56Uz5OYj57Uz5Rc05y+J5B6e','lwLUzM8I','5Rov5ywW55s156ob6zIa5A6j6kofiowfRoENSa','5ywdl20','oc05nZy','pc9IpIdIHPiG','yM9VA19UzxC','5yIx5yIh5O2I77Yi','5QE96zkI77Yj','5O6L5PA55BYppc9SywjLBa','6lMY5BYp5AsN5l6/5zMOioIeMUI4J+MyGowgSG','6zwa6zsm6zkI566Hiero','nZy1vw5NyMDe','CgvUzgLUz0nVDq','5z6l5y+3oG','nc4YmcdLHymVA2FVViK','pgjYpJXZCgfUia','5l2C44cb5A6j6kof44cb5zU65A6A','ioAxOowVUEw6LoAHO++8Jow3SUAmIsbe','pc9IpIdPOBK','5ywdl+s4QG','DgXLpsi','C3bLy0zPBgu','77Ym5BEY5OYj5BcX6l+r6ywn5A+577Ym5BU66k6U','BwvKAxvT','DMLZAwjSzq','AgSIia','koEdREEgLoI/NUAoPsK','Bg93uMf0Aw8','Dgv4DenVBNrLBG','5yEa6lQR55UgiowgT+EdREAWTa','6yEh55sO4OcM6l+E5O6L44cn6l+z57g7566H5P2q','5lU377Ym5OYj5BIc5zY65lU36k6H77Yj','54M55B6b5yIx77YB5lI75P2q5lU35lYy5ywi5y+w','CxvVDgfgywn0BW','k860kCoxZRtdL0WG5OQy566x','CgfYC2vuzxH0','5z2q5BYp5AsN5l6/5zMOiow4PUAWToEUSEwDKa','ueLqrv9bvvHFua','ioADOE+8MG','Bw3KU6xLHOu','oc02ndu','5zcn56EWoG','CgvUzgLUzW','pc9ZCgfUpJWVza','6l+r5l2n572U5OM+5yIW5A+55BQu566H5P2q77Yi','C29YDa','BhzL','zMfSBgjHy2TmAq','oc05nJa','56YS5ywR5yAm6zoC566H5PEG5A6K5Asw5A2q55UU','5Rc05lIo6jk45Rg9566H6l+E5O6L44cb5A6j5ywO','y29TCg9ZAxrL','5l+H5OgV5lU377YA5z6l6zkI77Yi6kEs6zkI44cb','ueLqrv9tuevdsq','oc01odi','5A6K5yAf566H6ygtioMvGoMuJoMsOUEUOsG','5lI6ideWmgTN77Ym6k+35OYj','5QgJ5BcX6l+r5y+w5A6A','5y+3ic8GqUwiL+wqJEENScaV','y29WCgvY','zwzYzxnO','AxyGy2XHC3m9iG','yxv0B0fPCG','77Yi5Rsb5yw35A6A6AkD5OYjideWia','B25MBgLJDa','ChjPy2vcyxnPCW','5z6l5yIx5yIh5O2I','5Awx55sO77Yi5RAi6zIY5Rc05BU66k6U55sO5RAi','55s156ob6zIa','Dw5KzwzPBMvK','5zU+57Q46k+05PIo','6zo46zob566H','imk3ia','oc05ndm','5yQG54oT5zMO5BcX5l2n5zU65A6A44cb6jk45Rg9','mdmXmdaYmdaX','uhjPy2veqG','AM9PBNrmywjLBa','5Rsx6is455Ug','546755kd5Qoj','iwnVBhm','y2f0q2fZDa','uLmZmda','oc04mZK','AM9PBNrbDxrV','y2fZDeLYB24','77Ym5y6A5BQM5OYjia','5QMH5Agr5l+D5RIP','5l+H5OgV5lU377Yi5lIn5Qch5zob54Mm77Yj','5BYp44cn5yIx5y+V5yIh5O2I5A6K5yAf5Asw44cb','5OQy566x77Ym5AgRig0G5lIu5zcRia','jMfTCdS','oc02mJu','yxzNtgLUzq','6Ag555UU5zcn56EW5lIT5RoO5PIo77Yi5AAcia','mdmXmJa4mdaY','oc0XmdeX','5BIM6zoD566u546755kd5Qoj6zo66ls044cb57Ur','5Q+s5yAY5Rsx','Bgv2zwW','yw5HBhLZAxnmAq','6iAO6ioa5Rc05RoL5O6L5y+J','Dg9UpJWVzgL2pG','ChjPy2vtB3vYyW','Cxr5v2fYBG','oc02mJK','D3jPDgvgAwXL','C3rVCMfNzq','DxjPBMfS','Bg9Jqw1IAwD1BW','BgLUzxm','5yQH5zMO77Yj','5A2q55UU77Ym5BEY5OYj','6AkD5lIo5lI75P2qimk3ios4U+ADKos7TW','iowfRoENSoEBTow+Ha','5O6L5y+J5P2q5PAzoUEeIUADOs/NHiRKUj0','yNrUr3jVDxa','5A6K5yAf5Asw','5A+85yE66kgO5Qc85yIg5lIK6kgmiJ7VViS','6ycA55sO77Yi5PYQ5OYh5A6A566H5P2q77Yj','Dg9PBgv0','q0fctevFufjjqW','oc02mJq','5A6j6kof44cb6k+v5Rc0','oc0Xmda3','5Rc06B6z5As0iowfRoENSoEBTow+Hde1','5RkF5QE96l+E5O6L5BEY6zMe5yQG566H5lU25A6A','AYi+','C2vUC29Y','l2i+44ca5lIn5Awx55sO5RIf5y2v57Yw','CMvTB3zL','oc02mJi','phnWyw4Gy2XHCW','re7IIAu','pUAvSoAnRUw6K+s7TZWVC3bH','Awr4','5zcn56EW5PYQ5RoO5ywS56EW55U05B6e77Ym5BEY','5zob54Mm5y+c6icdoG','Bwf0y2HjDgvT','psjZCgvJlwfJDa','6l+E5O6L5PA55BYp5y+k5Rsb5yw36ycj5z6l77Ym','77Yi6zMK56Io77Yj','5zYW5RYpiowfRoENSoEBTow+HduWBq','zg5dB25K','z2X1zq','C3rYywLUzxi','mJHqC1frrKu','zMXVyxrwywX2zq','ExbLpsjIDxr0BW','5zYO5zcn56EW5lIT6kgL5ywfierolW','77Yi6zMe5yQG5A6A6AkD5lI75P2q77Yj','yxjYyxK','iMzVBNqTC2L6zq','zw50','mdmXmdaZmda5','C29Tzq','mJiWmZKYyMHXDe1h','yxvSDa','5A6K5yAf566H6ygtioMtNoEUOsJLJAhLJOS','D2fZrhjHAw5oyq','6ycq5P2H5Qc45A+544ccpc9KAxy','5A6A6AkD5zcn56EW','C2vSzwn0iIbKyq','oc05ndK','mdmXmdaZmdaZ','z2fZ','6igA5zUB5RcF5lMz54oV55sF5PAz5BIM77Yi54Ed','iowTL++8IE+8Jow3SUAmIEs4IUs4I+AwH+wWSq','zxj0Eq','CxvVDgfdB2rL','566x57QMia','5yYw6AQm55UgiownLEIbLa','zt0I','5A6K5yAf566H6ygtios4JEMuIoMsOUEUOsG','ioMaMUMJJUEUOEMbKYdLJPRLUQy0ma','oc04nZK','oc02mZi','6zw/5BQM5lIo566H5B6e5yIg5QgJ5zcR6yEp5lYW','ufzerUEUOq','5zcn56EW5PYQ5RoO5z6l5y+377Ym5BEY5OYjia','ywrK','DgvTCfzHBhzL','5A6K5Asw566H6ygt5PEG5RkF5QE96l+E5O6L5A2q','5Bcp5l6/5zMO5A6j6kof44cb5OsF5BQu5yAY5Rsx','D2vSzgvK','77YB5BEY6lAf5BI455sO5PYa5AsN5QgJ77Ym6k+3','yMfZAxm','mdmXmdaXmdaY','B3rOzxi','zMLYzq','C29Szw5VAwrwyq','oc05nJe','zwXLy3rYBW','5Rc06B6z5As05A6j6kof44cb55sF5PAz5BIM5A+g','6zUO5Rc05PAx','6yEn6yEp6lcd5Pw0','56YS5ywR5yAm5A6K5Asw5Agr5PAz566H5lUf6k6+','Axy+','jImZotS','CMvSzwfZzuXHyG','mZiZnZG0nJDMqw9XAxK','55s15BYa5Rc054kjioERI+w8JYbluW','566H6ygt5PsV5P625lI66iEQ5yQO6kgL6Ag5','ihn0yxr1CY1VAW','uexNU5NMSltNRQe','Bwf0','oc02ndK','CgvUzgLUz1bYAq','nY0XmZGG6k6H6yEp5y2v5l2n','z3mTDgLW','mtxLNOS','55UU77Ym5BEY5OYj','ufzdlvxVViJOGzRMSk/KUzNNG68','5QAc566x57Ue5lU357o757UF','AMLHBMPPBMC','ioIUOEMhJ+wnLEs9JsaXmdbR','5A6556EV5BYp54oT5lQK5O2I5zMOidyJ','55UU77Ym5BEY5OYj5A6K5Asw6zkI566HkoEeIG','BgLZDe5HBwu','oc05nJK','oc05nZm','6k+L5P2q6lsO77Yi','Cxr5q2fYza','C3bLy0nHCMq','5A6K5yAf566H6ygtioMtNoEUOsJPKO7NHiO','yxjNB24','ioIHJcdcTYa','5RkF5QE9566H5lU25y+M6k6H','5PEG6zYa6k+35yIG6zMK6k+L5A6A6AkD6kgm','BgmIpG','6zUO5Rc0566H','CgvYAw9K','ihnLBgvJDgvK','z3vVDxm','mdmWodaXmdiW','5yIG6zMK5RIf5y2v57Yw56cb5yIx5lIo6Ag555UU','6ygt57g75z6l','B25SB2fK','5A6K5Asw566H6ygtioMsOUEUOsJNHiRMJQu','5Rov5ywW5RwU55cd6zIa','5z+65lU356YS5ywR5yAm5A2q55UU6kgO5Qc45A+5','5yEa6lQR55Ug5A6j6kof44cb5yA354oT5Rc06l+E','6k+g5yIRia','re9nq29UDgvUDa','5A+55O6L55s15BYN54sk','5PAh5lU26kEJ5P6q5AsX6lsL77YA','5RIf5y2v5A6A6AkD5OQL5lU36kgO','566H6ygt77YjieqXmZpKU6xLHOu','DxrPBhm','77Ym6k+35Qc45A+5','5Q2J5zYO6kEJ5P6q44cm','mdmXmdaZmde5','mdmXmdaZmdaY','6j665Q+n5A+g5Bcb5zYi6l+E5O6L','zYi+5PYQ6k+g5yIR5yIW566H5P2q6Ag5','nY0XmZG','5zMO5yw35A6j6kof44cb6ywn5lU25A6j6kof44cb','D2vSza','re4+','y2f0t2y','5A6556EV5BYp54oT5lQK5O2I5zMOiduJ','ufzdlvxNU5NMSltNRQe','mJyW77Yi5Aob6B6B5BYp77Yj6k6H5yIx','ywXWBgfZDgLJ','mtdLPzC','5lIo6k+05PIo5lIn5lIa6iE077Ym5BEY5OYj6k+0','CgfKu3rHCNq','oc05ntq','rguG6kEe5Qc8','pUwBUUwUMUs7TZWVC3bHBG','mZjTBEs7PEwgHq','5O2I54oT5zMO5BcX5l2n5zU65A6A44cb5yA354oT','oc04nJe','mZdLNOS','5Rc0566HkoIdTUwCIoAoPEwpOYK','5A+55O6L55s15BYN54skkq','lxfUyw1LiIb0Aq','5zcn56EW5OMa5yAz','x3bLCMLVzeTLEq','5yAY5Rsx5zMO','6j665Q+n5A+g5Bcb5zYi6l+E5O6L5A2q55UUia','mtmYote5meD2suTLBG','nZbLiJ7MNkROR4BLIkVLIldJGiW','CxvVDgfoyw1L','uLm1mcdMJilLVi8','yw4TAw5MBW','6zof5Rk56BQ75lID44cb6igA5zUB5RcF5lMz54oV','57YD5Ase55cg','5O6L566H5lU2iowfRoENSoEBTow+Ha','mteTntGY','5yYw6AQm55Ug5A6j6kof44cb5yYw6AQm6B6z5As0','oc05nZe','oc02mtq','oc02mJC','5Rc0566H6l+E5O6L44cb6ycA55s16k+v6l+q6kgm','DgvZDa','psjZCgvJlxn0yq','AxnsywLU','zMLSzxm','ideWiowpScdORQhPH4/VViZLR7W','6jk45Rg96zE05PAT5BYp5yQG54oT5zMOide','5Bcp55s15zMO5A6j6kof5O6L57Q/ioEdMoAjIW','oc01nZK','5lIn6zsi6zkI566H','5lI75P2q5y2v5lU3','5PEG57YD6zkI','re48','5lI66zYa5lQ65BEL5Qc45A+56Ag5','yxnZpsjZCI1Tyq','oc02ndC','oc05nJm','uLmXmda','C3f1yxq','zMXLEePVAw50','zhjHz292zxi','6Ag555UU5zcn56EW','yw1L','pc9KAxy+','iowfNow6LE+8JoIVT+s6UUw3PEAGUowVUq','6kEb5lIl5PA56kgO5Qc877Ym5y+V6ycq6kgm5Ps5','5OIQ6z2IBw0Y','BMfTzq','5yYw6AQm55Ug','z2LUoJzWEcaWia','77YB5l+H5OgV5lU35PEGre4','5QgJ5y+w5A6A','ndaWBw3KU6xLHOu','C3r5Bgu','AgfZt3DUuhjVCa','Aw5WDxrBBMfTzq','6kof6yoO5l2nl+AoPEwpO+w9OUw8J+oaJEwiLW','5PMU6ycA6zUO5Rc05PAxiowfRoENSoEBTow+Ha','6kgL6Ag577YA','5A6556EV5BYp54oT5lQK5O2I5zMOidiJ','mJvTBEs7PEwgHq','mdmXmdaYmZaX','zgvMrg4','5PYQ6io95lUo44cm','5yIx5yIh5O2I','pc90zd4','mdmXmdaYmZa1','566H6ygt5QMH5Agr5l+D5RIP5AoZ5A6j6kof77Yi','5Asn5zci566H','iJ7IMQdVUi8G','566H5P2qicSG6l+E5O6L5PA55BYp44cn','5Rsx6zIa5A6j6kof44cb5yAY5Rsx566H6l+E5O6L','lw5HBwuIihrPDa','77Ymre4','5OYjiero','54oT54Au6l+E5O6L','CYbSB2fKAw5N','BM90zq','5A6K5yAf566H6ygtioMtNEwHKEwKJEwqIoEUOq','77Yj55Qe5RIf5y2vl+wUMUMINEwmUEMfJEMaUW','C2HVD2vYuM9VBq','DgLLCNm','56A75B+d546755kd5Qoj','oc05nZa','Aw5MBW','5Awx55sO77Ym5AAc5lIn56YM6k+35zYO5zcn56EW','6iEQ5yQO5O6s5Rcu6zIa','DgL0Bgu','5l+H5OgV5lU377YA','uLmZma','A2v5CW','5y2H5y6l6l+E5O6L','yxnIzxn0B3m','oc02mZG','x2zVCM1HDa','5y+J6yoO5yAY5Rsx6zIa','oc01odm','5lIo5yED57Ut5Rc0566H6l+E5O6L44cb55Ap5Rc0','Bwv0ysi+','6l+E5O6L5B2I5BYpoUIEUUE6UEI/NUAoPq','6zQu5Rk55zMO5BcX5l2n5zU65A6A44cb6l+B5yE6','oc05nJC','io+8IYa','C2vHBwXLC3m','Bwf0y2G','y2XLyw5VDxq','Axntyw4','5O6LkEwLL+EuQo+8JoIVT+AGUowVUq','ioMHTsdcTYa','yw4Gy2XHC3m9iG','uLmXnq','C2fUt3b0','C3bLy2LHBe9WDa','6zIY5lIt5lIA56Uz77Yj','BEs7PEwgHq','5Agr5PAz566H','ChjPy2u','5yw25lUwoUMzPoMuIooaGEwiT+AYUEoaGEwiTG','zMX1C2HezxzPyW','x3jHD0fpqq','5BIc5zY65lU344cc','5zcn56EW5PYQ5RoO5ywS56EW55U05B6e77Yi5AAc','6ygt6k+35zYO6ycj5z6l5yIx5yIh5O2I6l+E5O6L','6l6t6ycb5lUl6lsOoG','zMfJDg9Y','z2v0tw9UDgG','Bg9JrNjVBvnWzq','mdmXmdaXmda0','D2f0zxjwywX2zq','55Qe5PIo56gU6kgO6l+W77Ym5y+V5zYO44cm5A6j','pgrPDIbJBgfZCW','CxvUAxq','koEYMoAoPsK','6k6H77Ym6k+35Qc45A+5','x1bssunfuW','5lU35Qc85PwW5O2U5BQt77YA','zxmIpG','Aw5MzxjYzwq','oc02ndm','54oT5Rc05zMO5BcX5l2n5zU65A6A44cb6l+B5yE6','5RcN5lMz54ku54sk','C2nVCMvg','DdO0mda7zM9UDa','yNjHBMq','zM9YrwfJAa','77Ym5OYj57Uz5Rc05Awx55sO77Ym54Ed5Rcu566H','Aw50iIb0AxrSzq','yw4TD2fYBG','5A6K5Asw566H6ygtioAjV+ApKUMtUoMtGEE7Mq','77YA5OYj566H6ygt5Oc76zw/ia','5PAh5A2x6Ag65BQp5y+V6io96kkR5OMt5lMX77Yj','AM9PBNrqAwnRzq','mci+5PAh5A2x5O+q5y+w6l6d56ko54Mh','CMfPBG','5A6K5yAf566H6ygtioMsOUMQQoAETUwHKEAwMq','iJ7MJQG8l3nWyw4+','pUw4GUwCUUs7TZWVC3bHBG','uLmZmdaG56Ul5BYp','BwvKAxvTsw5lzq','ieromtaW77Yj77Ym5BEY5OYj','6l+E5O6L44cb6lcd6k+v','5A6K5yAf566H6ygtioMtNoEUOsJMSkFKUzK','oc02mdG','icSG5A6A6AkDia','56cb5lIo6Ag555UU54M55B6b77YA5BM/6igu6l6+','6kofiowgT+EdREAWTa','5B6emtuWBw3KU6xLHOu','6zIa5lIo5RIP5O6N5A6j6kof44cb6k+v5y6l','C3LZDgvT','i3rHyMXLqM9KEq','oc01odq','5Rc05y6l6k+v6AQm44cb5Rc05yAY5Rsx','zMLYC3rdAgLSza','pc90zd48Dgq+','u2HLzxroyw1LCW','oc04ntu','AgfUzerYEwvY','y2fSBa','C29Szw5VAwq','DgvTCa','ufzdlvxMJPlMSltNRQe','yNjHEMu','CMvZzxrcDg4','BNnLCG','ihnLBgvJDc5Jzq','77YB5l+H5OgV5lU35PEG','5A6K5yAf566H6ygtiowHKEAwMEAoKUAWToEUOq','oc02mJG','5O6s5Rc0566H','5BIM6zoD566u56A75B+d546755kd5Qoj5A6j6kof','5ywdl+wLL++8IowUMUMINsa4lte','CZ0IBgf5lxn0yq','C3bSAwnL','mdmXmdaYmZa0','zxzLCNK','5O6s5Rc06ywn5lU25A6j6kof44cb6k+v5Rc0','ChzJ','lxbYAwnLiJ4','DhLWzq','C2fUrM9YBuzYBW','oc02mdC','55UUpc9ZCgfUpG','6zIa5A6j6kof44cb5O6s5Rc06l+E5O6L44cb6k+v','mtaWBw3KU6xLHOu','D2fZAgjHC2LU','5lIn6zsi6zkI','uLmXnsdMJilLVi8','6jk45Rg95yQG54oT5zMO','55s15BYa5Rc054kj','mdmXmdaZmdaX','Bw0G5y+w5A6A77YB5y2v5l2n5yIx5AgR','Cxr5','pIdMJiNOR7tMMi7OH6RLIQJLPzFNLkJOV54','oc05ndi','mci+5PYjia','CMvKDwnL','5PIo5lIT6kgL5ywf566H5P2q5lIo6l+E5O6L5PA5','5OMl5yQO6ycj5OUP44ccpc9KAxy','iL06y2HLy2TLza','mI0XodC4','mZaW5z6l','Bwf4','AxrSzt0I','DgeTywn0psi','5y2H5Awx6l+E5O6L','oc02mtu','lwzPEgvKiG','pc9ZCgfUpG','mJyWioAmIEwLL+IUOE+8Iq','6l+E5O6L44cb5A+g5Bcb5Qoa5P+L','mtuWBw3KU6xLHOu','55U05B6emtvTBEs7PEwgHq','6kEJ5P6q5AsX6lsL77YA','ihrPDgXLpsi','5zcM5lI677YAqEw6J+wpTYaViei','zM9YBxm','ufaTuUE7MEAWToEUOq','mJuWBw3KU6xLHOu','5A6A6AkD5lIo5lI75P2q5lU35A6E5PE26yEn566x','5QAc566x57Ue5lU35BMZ5y+W','oc02mZa','z2f0zq','AM9PBNrgCM9TuW','C3bLy0fYzwe','5A6556EV5BYp54oT5lQK5O2I5zMOidqJ','5PYQ5Qch5zob54Mm','yM9KEq','ignSyxnZpsjLDG','5A6K5yAf566H6ygtioAjV+ApKUMtUoMtGEAoKG','5BYp77Ym5OIw55U05O6L5zYO5lIk5PA56kgO5Qc8','5zYW5RYpiowfRoENSoEBTow+HdeWma','77Yi566H5lU25lI75P2q77Ym5lIo566H6ygt5zcm','6zwa6zsm6zkI','zMXLEa','ioEXUYdcTYdOV57MJQxMLRNLVi8G','6zIa5l2t5A6j6kof44cb6j6657Q5l+AZLEwfSa','jMX0oW','BwfUDwfS','5ywdl23VViJPMAtNQi7VViK','CJOJnwi2yJCZiG','D2fYBG','Aw5KzxG','ihn0yxr1CY1LCG','C2fUt3b0rNjVBq','5Rc0566HkoAWToAZPEAoPEwpOYK','oc04odK','6yEr5BgE6zIa6zEO','CMvHza','z3jVDw5K','Dg9gAxHLza','566H5lU25PwW6yEp5OYjnM3LRPRLSlRKVla','DgHR','5yEa6lQR55Ug','6jM55zc45BYp6zUO5Rc05PAxiowfRoENSoEBTa','DhvZihDHCM4Iia','pc9VChrPB24+','B3zLCLjHBMDL','5O+s5RcP5BYN54skkq','zMXVyxq','oc02nde','6l+r6ywn5A+577Ym6k+g5yIR57Ut5P6C5BU66k6U','BwfW','5A6K5yAf566H6ygtioMsOUEUOsJMSP/MP70','C3bLyY1JyxjKia','BgvU','mtaWBq','psjHBI1PDgvTia','zMvHDa','re4G5OYjim+aW5COre4','BM9Uzq','ChzJrhjHAw4','lwrIiG','77Yi6kgL6Ag577Yj','nw1T5lUL5yAf','5ywdl+s4QU+8IoIVPEMyGoENJEAxOos/OEAbRW','6zUO5Rc05PAx5A6j6kof44cb5lIo6zUO5Rc0566H','CgvYAw9Ku2vSzq','A2v5D29Yzhm','6AkD77Ym6k+35zYO6k6H5lU36l2V5lU25lIT6kgL','C2XLzxzL','5RIf5y2v5A6A6AkD5OQL5lU36kgOx+w7UUE7JW','5Rc0566H6l+E5O6L44cb5A6j5ywO6zIa5A6j6kof','oc05nZu','5A6K5yAf566H6ygtiowHKEAwMEE7MEAWToEUOq','zg5Z','phnLBgvJDcbJBa','zxn0Aw1HDgvK','oc05odG','77Ym6k+35OYj5zU+57Q46lcd5Pw0','oc0Xmda5','pc9IpIbT','CMvZDwX0','oc02mty','A2jVEciGAwq9iG','6zIa5l2t5A6j6kof44cb6j6657Q56l+E5O6L44cb','oc05ndC','5ywS56EW55U05B6e','D2vPz2H0ugvYtq','5BEL56Il6yEp57Y65AsX77Ym5PQc5OYjmw0','psjSyxKTC3rHyW','idXZCgfUignSyq','z3vHBMDSAwfUza','54sk5O6L5Rov5ywW6zIa6zEOiowfRoENSoEBTa','zf9ZAgvLDa','x19WAxbL','6iEQ5yQO5O6s5Rcu6zIa44cb5OMl5yQO5Ps+6Aoo','5zYW5RYp5A6j6kof44cb5OM+5z2H6ywn5zci44cb','lwvZDci','57Uz44cb5O6s5Rc06zMe5lU2','yMLKzxq','77Ym5PYS56Uz6k+L566H5P2q5PEG5A+55BQu5A2q','x1bfuKLprfm','CNvSzxm','5Rc06B6z5As0','nZvTBEs7PEwgHq','odbTBEs7PEwgHq','C3bLy0fWCgX5qW','oc04ndG','5Awx55sO77Ym5y+V5zYO44cm5A6j6kof6yoO5l2n','oc05ntm','5Asw5Agr5PAz57Uz5Rc0566H5Awx55sO77Ym6k+3','Bg93','5lIT5RoO5PIo','5A6K5yAf566H6ygtioMsOUEUOEAYN+ANVEI/NG','6Ag555UU5zcn56EWic8Gq+MvV+w6PG','5lIT5A+85yE65PAh5A2x54MiifberG','uLm1mfC','BhvLpsi','z2v0sxrLBq','zwW+pgLUChv0ia','5zMO5A6j6kof44cb6k+v5y6l','57Uz5Rc0566H','Dw5PDezYB20','zML4zwq','44cb5O6s5Rc06ywn5lU25A6j6kof44cb6k+v5Rc0','C3bLy1n5C3rLBq','Dg9Y','5zYW5lIk5BYp','C2LWAg9UsgvHza','DgLLCG','5A6K5yAf566H6ygtioIwHowJGEs4JEMuIoMsOG','DhLWzuXHyMvS','mtaWA2C','y2f0t3rOzxi','5B6entbTBEs7PEwgHq','rM9Yy2vK','lxfJB2rLiJ4','5A2q55UU5lUf','5PwJ54oT5zMO5RIP5O6N6zIaiowfRoENSoEBTa','55UU54M55B6b5yIx77Ym5BU657Up5A+85yE65BEY','DMLZAwjPBgL0Eq','5A6A77Ym6k+35A+554wN5z+65lU36kgO5Qc45A+5','CxvHBNrPDhK','BM9YBwfS','BIiGAwq9iNnWzq','pc9ZCgfUpJXZCa','zMXVB3jeCMfPBG','BwLUAq','y2f0zwDVCNK','Bg5HBwu','ChjPy2vZ','5zYW5RYpiowfRoENSoEBTow+HdC1Bq','5yw25lUw566H6ygt57UD54oT','iepLIjFMLBdPH48G6k+75y+w77Ym5y2v','Bg9J','yNvPBgrjDgvT','5lU3imk3iowfQoMdQoACRowCSoIUOEEULW','CM91BMq','55s154Au6l+E5O6L','mtK2ntjiuNHACNm','5PYS57g75PYa5Bcp5QgJia','uLmZmcdMJilLVi8','56cb44cb5lIn55sF5OIq6Ag555UU54M55B6b77Ym'];_0x8ea2=function(){return _0x54c996;};return _0x8ea2();}function _0xa0f4(_0x41ea4a,_0x1a1692){_0x41ea4a=_0x41ea4a-0x1d0;var _0x8ea20d=_0x8ea2();var _0xa0f472=_0x8ea20d[_0x41ea4a];if(_0xa0f4['ooIQMi']===undefined){var _0x82c6e7=function(_0x55c424){var _0x52aedd='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';var _0x236217='',_0xbfcce6='';for(var _0x48c40f=0x0,_0x478af2,_0x1671df,_0x3726cc=0x0;_0x1671df=_0x55c424['charAt'](_0x3726cc++);~_0x1671df&&(_0x478af2=_0x48c40f%0x4?_0x478af2*0x40+_0x1671df:_0x1671df,_0x48c40f++%0x4)?_0x236217+=String['fromCharCode'](0xff&_0x478af2>>(-0x2*_0x48c40f&0x6)):0x0){_0x1671df=_0x52aedd['indexOf'](_0x1671df);}for(var _0x3fc059=0x0,_0x1e3aea=_0x236217['length'];_0x3fc059<_0x1e3aea;_0x3fc059++){_0xbfcce6+='%'+('00'+_0x236217['charCodeAt'](_0x3fc059)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0xbfcce6);};_0xa0f4['GDVchK']=_0x82c6e7,_0xa0f4['DBbOco']={},_0xa0f4['ooIQMi']=!![];}var _0x117f6f=_0x8ea20d[0x0];_0xa0f4['QoNBSs']!==_0x117f6f&&(_0xa0f4['DBbOco']={},_0xa0f4['QoNBSs']=_0x117f6f);var _0x26bde8=_0xa0f4['DBbOco'][_0x41ea4a];return _0x26bde8===undefined?(_0xa0f472=_0xa0f4['GDVchK'](_0xa0f472),_0xa0f4['DBbOco'][_0x41ea4a]=_0xa0f472):_0xa0f472=_0x26bde8,_0xa0f472;}(function(_0x5b4190,_0x3bbc5f){var _0x5c42eb=_0xa0f4,_0x26b2e1=_0x5b4190();while(!![]){try{var _0x2d5c13=parseInt(_0x5c42eb(0x51a))/0x1+parseInt(_0x5c42eb(0x3a8))/0x2+parseInt(_0x5c42eb(0x40c))/0x3*(-parseInt(_0x5c42eb(0x698))/0x4)+-parseInt(_0x5c42eb(0x2e7))/0x5*(parseInt(_0x5c42eb(0x2e3))/0x6)+parseInt(_0x5c42eb(0x493))/0x7*(parseInt(_0x5c42eb(0x3dc))/0x8)+parseInt(_0x5c42eb(0x49d))/0x9*(parseInt(_0x5c42eb(0x257))/0xa)+-parseInt(_0x5c42eb(0x4c9))/0xb;if(_0x2d5c13===_0x3bbc5f)break;else _0x26b2e1['push'](_0x26b2e1['shift']());}catch(_0x433522){_0x26b2e1['push'](_0x26b2e1['shift']());}}}(_0x8ea2,0xb0ee2),!(function(){"use strict";var _0x261343=_0xa0f4;var _0xbfcce6=/[?&]mode=gs(?:&|$)/[_0x261343(0x528)](_0x261343(0x446)!=typeof location&&location[_0x261343(0x39e)]||''),_0x48c40f=_0x261343(0x446)!=typeof window&&window[_0x261343(0x436)+'AL']||(_0x261343(0x2c6)==typeof require?require(_0x261343(0x326)+'js'):null);_0x48c40f&&_0x48c40f[_0x261343(0x33e)]([_0x261343(0x725),_0x261343(0x227)+_0x261343(0x291)]);var _0x478af2={'castIron':{'code':_0x261343(0x3d0),'name':_0x261343(0x448)},'galv':{'code':_0x261343(0x4bc),'name':_0x261343(0x35c)},'seamless':{'code':_0x261343(0x256),'name':_0x261343(0x3f4)},'welded':{'code':_0x261343(0x592),'name':_0x261343(0x1fe)},'copper':{'code':_0x261343(0x2cd),'name':'铜管'},'stainless':{'code':_0x261343(0x386),'name':_0x261343(0x530)},'composite':{'code':_0x261343(0x394),'name':_0x261343(0x557)},'plastic':{'code':_0x261343(0x715),'name':_0x261343(0x586)},'preInsul':{'code':_0x261343(0x4eb),'name':_0x261343(0x3f6)},'levelGauge':{'code':_0x261343(0x44c),'name':_0x261343(0x61d)},'pressGauge':{'code':_0x261343(0x2d8),'name':_0x261343(0x727)},'pressGaugeElec':{'code':_0x261343(0x2d8),'name':_0x261343(0x727)},'flexJoint':{'code':_0x261343(0x1f2),'name':_0x261343(0x2be)}},_0x1671df={'waterValve':{'code':_0x261343(0x44c),'name':_0x261343(0x61d)},'autoAir':{'code':_0x261343(0x713),'name':_0x261343(0x569)},'tempValve':{'code':_0x261343(0x384),'name':_0x261343(0x272)},'floatValve':{'code':_0x261343(0x550),'name':_0x261343(0x4f0)},'levelValve':{'code':_0x261343(0x29e),'name':_0x261343(0x32e)},'flushValve':{'code':_0x261343(0x5d4),'name':_0x261343(0x572)},'solenoidValve':{'code':_0x261343(0x555),'name':_0x261343(0x445)}},_0x3726cc={'waterValve':_0x261343(0x61d),'autoAir':_0x261343(0x569),'tempValve':_0x261343(0x272),'floatValve':_0x261343(0x4f0),'levelValve':_0x261343(0x32e),'flushValve':_0x261343(0x572),'solenoidValve':_0x261343(0x445)},_0x3fc059={'waterValve':_0x261343(0x612)+_0x261343(0x3c9),'autoAir':_0x261343(0x64d)+_0x261343(0x3a0),'tempValve':_0x261343(0x6bd)+_0x261343(0x5b3),'floatValve':_0x261343(0x71b)+_0x261343(0x3a0),'levelValve':_0x261343(0x71b)+_0x261343(0x3a0),'flushValve':_0x261343(0x6b0)+_0x261343(0x282)+_0x261343(0x734),'solenoidValve':_0x261343(0x612)+_0x261343(0x217)+'试'};function _0x1e3aea(_0x325286,_0x1b0566,_0x150048){return{'max':_0x325286,'code':_0x1b0566,'label':_0x150048};}var _0x3ee6c4=[_0x1e3aea(0xf,_0x261343(0x52f),_0x261343(0x71a)),_0x1e3aea(0x14,_0x261343(0x72b),_0x261343(0x21a)),_0x1e3aea(0x19,_0x261343(0x3e5),_0x261343(0x54f)),_0x1e3aea(0x20,_0x261343(0x437),_0x261343(0x50f)),_0x1e3aea(0x28,_0x261343(0x573),_0x261343(0x6c4)),_0x1e3aea(0x32,_0x261343(0x5bd),_0x261343(0x6bf))],_0x6404f0=[_0x1e3aea(0x41,_0x261343(0x304),_0x261343(0x239)),_0x1e3aea(0x50,_0x261343(0x1e0),_0x261343(0x662)),_0x1e3aea(0x64,_0x261343(0x484),_0x261343(0x5de)),_0x1e3aea(0x7d,_0x261343(0x6f2),_0x261343(0x314)),_0x1e3aea(0x96,_0x261343(0x47b),_0x261343(0x5f9)),_0x1e3aea(0xc8,_0x261343(0x45d),_0x261343(0x268)),_0x1e3aea(0xfa,_0x261343(0x3cc),_0x261343(0x600)),_0x1e3aea(0x12c,_0x261343(0x526),_0x261343(0x31f)),_0x1e3aea(0x15e,_0x261343(0x5ce),_0x261343(0x390)),_0x1e3aea(0x190,_0x261343(0x46a),_0x261343(0x547))],_0x3d26d7=[_0x1e3aea(0x20,_0x261343(0x362),_0x261343(0x50f)),_0x1e3aea(0x32,_0x261343(0x3b9),_0x261343(0x6bf)),_0x1e3aea(0x50,_0x261343(0x525),_0x261343(0x662)),_0x1e3aea(0x64,_0x261343(0x5f4),_0x261343(0x5de)),_0x1e3aea(0x96,_0x261343(0x64b),_0x261343(0x5f9))],_0x11a794=[_0x1e3aea(0x32,_0x261343(0x429),_0x261343(0x6bf)),_0x1e3aea(0x50,_0x261343(0x2bb),_0x261343(0x662)),_0x1e3aea(0x64,_0x261343(0x536),_0x261343(0x5de)),_0x1e3aea(0x96,_0x261343(0x231),_0x261343(0x5f9)),_0x1e3aea(0xc8,_0x261343(0x4cf),_0x261343(0x268))],_0x3b836e=[_0x1e3aea(0xf,_0x261343(0x6de),_0x261343(0x71a)),_0x1e3aea(0x14,_0x261343(0x23b),_0x261343(0x21a)),_0x1e3aea(0x19,_0x261343(0x6e7),_0x261343(0x54f)),_0x1e3aea(0x20,_0x261343(0x26f),_0x261343(0x50f)),_0x1e3aea(0x28,_0x261343(0x5db),_0x261343(0x6c4)),_0x1e3aea(0x32,_0x261343(0x5b5),_0x261343(0x6bf))],_0x4e21ed=[_0x1e3aea(0x20,_0x261343(0x603),_0x261343(0x50f)),_0x1e3aea(0x28,_0x261343(0x38d),_0x261343(0x6c4)),_0x1e3aea(0x32,_0x261343(0x4b1),_0x261343(0x6bf)),_0x1e3aea(0x41,_0x261343(0x351),_0x261343(0x239)),_0x1e3aea(0x50,_0x261343(0x2a6),_0x261343(0x662)),_0x1e3aea(0x64,_0x261343(0x2a9),_0x261343(0x5de)),_0x1e3aea(0x7d,_0x261343(0x6e4),_0x261343(0x314)),_0x1e3aea(0x96,_0x261343(0x27a),_0x261343(0x5f9)),_0x1e3aea(0xc8,_0x261343(0x570),_0x261343(0x268)),_0x1e3aea(0xfa,_0x261343(0x28d),_0x261343(0x600)),_0x1e3aea(0x12c,_0x261343(0x26a),_0x261343(0x31f)),_0x1e3aea(0x15e,_0x261343(0x62a),_0x261343(0x390)),_0x1e3aea(0x190,_0x261343(0x32c),_0x261343(0x547)),_0x1e3aea(0x1c2,_0x261343(0x59d),_0x261343(0x3f0)),_0x1e3aea(0x1f4,_0x261343(0x253),_0x261343(0x2ff))];function _0x4cbb44(){var _0x4c4f81=_0x261343;return _0x4c4f81(0x446)!=typeof window&&window[_0x4c4f81(0x260)+_0x4c4f81(0x599)]||{};}function _0x3d5baa(_0x596899){return!!_0x1671df[_0x596899];}var _0x29651b=[0xf,0x14,0x19,0x20,0x28,0x32,0x41,0x50,0x64,0x7d,0x96,0xc8,0xfa,0x12c,0x15e,0x190,0x1c2,0x1f4,0x258,0x2bc,0x320,0x384,0x3e8,0x4b0,0x578,0x640,0x708,0x7d0];function _0x2163d6(_0x20a0fd){var _0x357145=_0x261343,_0x8df83=String(_0x20a0fd||''),_0x18d509=_0x8df83[_0x357145(0x57b)](/(?:DN|dn|De|de|D|Φ|φ|Ø)\s*[-－]?\s*(\d{2,4})/);if(_0x18d509)return parseInt(_0x18d509[0x1],0xa);if(_0x18d509=_0x8df83[_0x357145(0x57b)](/(\d{2,4})\s*(?:mm|MM|毫米)/))return parseInt(_0x18d509[0x1],0xa);if(_0x18d509=_0x8df83[_0x357145(0x57b)](/[-－—–_]\s*(\d{2,4})\s*(MPa|Mpa|mpa|PN|℃|°C|V|伏|公斤|元|个|台|套|片)?\s*$/)){var _0x7a28e8=parseInt(_0x18d509[0x1],0xa),_0x1b4476=/MPa|Mpa|mpa|PN|公斤|压力/[_0x357145(0x528)](_0x8df83),_0x5457a2=/电动|电磁/[_0x357145(0x528)](_0x8df83)&&[0xc,0x18,0x24,0x6e,0xdc,0x17c][_0x357145(0x315)](_0x7a28e8)>=0x0;if(!_0x18d509[0x2]&&!_0x1b4476&&!_0x5457a2&&_0x29651b[_0x357145(0x315)](_0x7a28e8)>=0x0)return _0x7a28e8;}return null;}function _0x398887(_0x409713){var _0x5c6f53=_0x261343,_0x4e28ea=String(_0x409713||'');return/口部冲洗/[_0x5c6f53(0x528)](_0x4e28ea)?_0x5c6f53(0x236):/电磁阀/[_0x5c6f53(0x528)](_0x4e28ea)?_0x5c6f53(0x4bf)+_0x5c6f53(0x42f):/自动排气阀|放风阀/[_0x5c6f53(0x528)](_0x4e28ea)?_0x5c6f53(0x43f):/温控阀/[_0x5c6f53(0x528)](_0x4e28ea)?_0x5c6f53(0x4b6):/浮球阀/[_0x5c6f53(0x528)](_0x4e28ea)?_0x5c6f53(0x494):/水位控制阀/[_0x5c6f53(0x528)](_0x4e28ea)?_0x5c6f53(0x29a):/闸阀|截止阀|蝶阀|球阀|止回阀|逆止阀|Y型过滤器|y型过滤器|过滤器|软接头|橡胶软接头|补偿器|波纹补偿器|平衡阀|减压阀|水阀/[_0x5c6f53(0x528)](_0x4e28ea)||/阀/[_0x5c6f53(0x528)](_0x4e28ea)&&_0x2163d6(_0x4e28ea)&&!/阀门井|阀室|阀门套/[_0x5c6f53(0x528)](_0x4e28ea)?_0x5c6f53(0x593):null;}function _0x1c82bc(_0x3751d4,_0x44d973){var _0x156be7=_0x261343,_0x5a2d13={};_0x5a2d13[_0x156be7(0x542)]=_0x3751d4,_0x5a2d13[_0x156be7(0x68d)]=_0x44d973,_0x5a2d13[_0x156be7(0x2ae)]=!0x0,_0x5a2d13[_0x156be7(0x280)]=_0x1671df[_0x44d973][_0x156be7(0x1e2)],_0x5a2d13[_0x156be7(0x4db)]=_0x1671df[_0x44d973][_0x156be7(0x542)],_0x5a2d13[_0x156be7(0x6d0)]=_0x3726cc[_0x44d973],_0x5a2d13['dn']=_0x2163d6(_0x3751d4),_0x5a2d13[_0x156be7(0x29f)]=_0x156be7(0x236)===_0x44d973?'套':'个',_0x5a2d13[_0x156be7(0x367)]=function(_0x5a6dd2){var _0x1faf70=_0x156be7,_0x3a86eb=String(_0x5a6dd2||'');return/闸阀/[_0x1faf70(0x528)](_0x3a86eb)?_0x1faf70(0x604):/截止阀/[_0x1faf70(0x528)](_0x3a86eb)?_0x1faf70(0x372):/蝶阀/[_0x1faf70(0x528)](_0x3a86eb)?_0x1faf70(0x3b4):/止回阀|逆止阀/[_0x1faf70(0x528)](_0x3a86eb)?_0x1faf70(0x3f3):/Y型过滤器|y型过滤器|过滤器/[_0x1faf70(0x528)](_0x3a86eb)?_0x1faf70(0x492):/球阀/[_0x1faf70(0x528)](_0x3a86eb)?_0x1faf70(0x30f):_0x1faf70(0x337);}(_0x3751d4);var _0x505e9e=_0x4cbb44();if(_0x156be7(0x593)===_0x44d973){var _0x363f5b=(_0x505e9e[_0x156be7(0x567)]||{})[_0x5a2d13[_0x156be7(0x367)]];_0x5a2d13[_0x156be7(0x5a2)]=_0x363f5b?'':_0x505e9e[_0x156be7(0x5a2)]||'';}else{if(_0x156be7(0x4bf)+_0x156be7(0x42f)===_0x44d973)_0x5a2d13[_0x156be7(0x5a2)]=(_0x505e9e[_0x156be7(0x5c5)]||{})[_0x156be7(0x5a2)]||'';else{if(_0x156be7(0x236)===_0x44d973)_0x5a2d13[_0x156be7(0x5a2)]=((_0x505e9e[_0x156be7(0x3d1)]||{})[_0x156be7(0x1d3)]||{})[_0x156be7(0x5a2)]||'';else{var _0xef1054={'autoAir':_0x156be7(0x43f),'tempValve':_0x156be7(0x5c6),'floatValve':_0x156be7(0x629),'levelValve':_0x156be7(0x464)}[_0x44d973],_0x440d21=(_0x505e9e[_0x156be7(0x3d1)]||{})[_0xef1054]||{};_0x5a2d13[_0x156be7(0x5a2)]=_0x156be7(0x567)===_0x440d21[_0x156be7(0x6aa)]?'':_0x440d21[_0x156be7(0x5a2)]||_0x505e9e[_0x156be7(0x5a2)]||'';}}}return _0x5a2d13;}function _0x2c0738(_0x37caac,_0x493772){var _0x1ac879=_0x261343;if(!(_0x493772>0x0))return 0x0;for(var _0x3e4654=0x0;_0x3e4654<_0x37caac[_0x1ac879(0x2d5)];_0x3e4654++)if(_0x493772<=_0x37caac[_0x3e4654])return _0x3e4654;return _0x37caac[_0x1ac879(0x2d5)]-0x1;}function _0x4eb26f(_0x3763f5,_0x5ed578){var _0x10b80a=_0x261343;for(var _0x199627=0x0;_0x199627<_0x3763f5[_0x10b80a(0x2d5)];_0x199627++)if(_0x5ed578<=_0x3763f5[_0x199627][_0x10b80a(0x5f0)])return _0x199627;return _0x3763f5[_0x10b80a(0x2d5)]-0x1;}var _0x1e8216={'bracket':{'code':_0x261343(0x263),'name':_0x261343(0x289)},'insulRubber':{'code':_0x261343(0x460),'name':_0x261343(0x691)},'insulGlass':{'code':_0x261343(0x460),'name':_0x261343(0x691)}},_0x1a2430={'bracket':_0x261343(0x32d),'insulRubber':_0x261343(0x458),'insulGlass':_0x261343(0x565)};function _0x395c59(){var _0x28ab2c=_0x261343;return _0x28ab2c(0x446)!=typeof window&&window[_0x28ab2c(0x426)+_0x28ab2c(0x6d4)]||{};}function _0x181832(_0x21f4a1){return!!_0x1e8216[_0x21f4a1];}function _0xa1e936(_0x3fecd0){var _0x24f1b1=_0x261343,_0x3f7d56=String(_0x3fecd0||'');return/橡塑/[_0x24f1b1(0x528)](_0x3f7d56)?_0x24f1b1(0x1f7)+'r':/玻璃棉/[_0x24f1b1(0x528)](_0x3f7d56)?_0x24f1b1(0x3eb):/管道支架|支吊架|支架制作|支架安装|支架制安/[_0x24f1b1(0x528)](_0x3f7d56)?_0x24f1b1(0x3c0):null;}function _0x10837d(_0x2ffc58,_0x48de69){var _0x90aa=_0x261343,_0x2fb6c0={};_0x2fb6c0[_0x90aa(0x542)]=_0x2ffc58,_0x2fb6c0[_0x90aa(0x68d)]=_0x48de69,_0x2fb6c0[_0x90aa(0x6e9)]=!0x0,_0x2fb6c0[_0x90aa(0x280)]=_0x1e8216[_0x48de69][_0x90aa(0x1e2)],_0x2fb6c0[_0x90aa(0x4db)]=_0x1e8216[_0x48de69][_0x90aa(0x542)],_0x2fb6c0[_0x90aa(0x6d0)]=_0x1a2430[_0x48de69],_0x2fb6c0['dn']=_0x427bfb(_0x2ffc58),_0x2fb6c0[_0x90aa(0x29f)]=_0x90aa(0x3c0)===_0x48de69?'kg':'m³';var _0x42b335=_0x395c59();return _0x90aa(0x1f7)+'r'===_0x48de69&&(_0x2fb6c0[_0x90aa(0x39c)]=_0x42b335[_0x90aa(0x35d)]&&_0x42b335[_0x90aa(0x35d)][_0x90aa(0x325)][_0x90aa(0x622)]||0x1e),_0x90aa(0x3eb)===_0x48de69&&(_0x2fb6c0[_0x90aa(0x39c)]=_0x42b335[_0x90aa(0x35d)]&&_0x42b335[_0x90aa(0x35d)][_0x90aa(0x339)][_0x90aa(0x622)]||0x28),_0x2fb6c0;}function _0x46a03a(_0x1998e8){var _0xe61a1f=_0x261343,_0xe774a6=_0x1998e8[_0xe61a1f(0x68d)];return _0xe61a1f(0x3c0)===_0xe774a6?{'code':_0xe61a1f(0x500),'name':_0xe61a1f(0x3a6)+_0xe61a1f(0x3a2),'inferred':!0x1,'unit':_0xe61a1f(0x67d),'factor':0x64}:_0xe61a1f(0x1f7)+'r'===_0xe774a6?{'code':_0xe61a1f(0x522),'name':_0xe61a1f(0x556)+_0xe61a1f(0x4f8),'inferred':!0x1,'unit':'m³','factor':0x1}:_0xe61a1f(0x3eb)===_0xe774a6?{'code':_0xe61a1f(0x353),'name':_0xe61a1f(0x5d0)+_0xe61a1f(0x4af)+'mm','inferred':!0x1,'unit':'m³','factor':0x1}:{'code':'','name':'','inferred':!0x1};}function _0x594319(_0xa1f402){var _0x1e5631=_0x261343,_0x564fd2=_0x395c59();if(_0x1e5631(0x3c0)===_0xa1f402[_0x1e5631(0x68d)]){var _0x55f647=_0x564fd2[_0x1e5631(0x3c0)]||{'steel':4.2};return{'price':_0x55f647[_0x1e5631(0x264)],'source':_0x1e5631(0x567),'basis':_0x1e5631(0x435)+_0x1e5631(0x408)+_0x55f647[_0x1e5631(0x264)]+_0x1e5631(0x2ce)};}var _0x589612=_0x1e5631(0x1f7)+'r'===_0xa1f402[_0x1e5631(0x68d)]?_0x1e5631(0x325):_0x1e5631(0x339),_0x5616d0=(_0x564fd2[_0x1e5631(0x35d)]||{})[_0x589612]||{'price':0x0,'brand':'','name':''};return{'price':_0x5616d0[_0x1e5631(0x587)],'source':_0x1e5631(0x337),'brand':_0x5616d0[_0x1e5631(0x5a2)],'basis':_0x1e5631(0x3d2)+_0x5616d0[_0x1e5631(0x5a2)]+'）：'+_0x5616d0[_0x1e5631(0x542)]+'\x20'+_0x5616d0[_0x1e5631(0x587)]+_0x1e5631(0x350)};}function _0x4c1aa1(_0x219620){var _0x1e9bec=_0x261343,_0x494771=(_0x395c59()[_0x1e9bec(0x3c0)]||{})[_0x1e9bec(0x650)]||[{'max':0x270f,'w':0.6}];if(!(_0x219620>0x0))return 0.6;for(var _0xe33ddb=0x0;_0xe33ddb<_0x494771[_0x1e9bec(0x2d5)];_0xe33ddb++)if(_0x219620<=_0x494771[_0xe33ddb][_0x1e9bec(0x5f0)])return _0x494771[_0xe33ddb]['w'];return _0x494771[_0x494771[_0x1e9bec(0x2d5)]-0x1]['w'];}function _0x3d33e3(_0x341a86){var _0x3021a6=_0x261343;for(var _0x59f498=!0x1,_0x3f4892=0x0;_0x3f4892<_0x341a86[_0x3021a6(0x2d5)];_0x3f4892++)_0x3021a6(0x3c0)===_0x341a86[_0x3f4892][_0x3021a6(0x68d)]&&(_0x59f498=!0x0);if(_0x59f498)return _0x341a86;for(var _0x4316a2=[],_0xddd39d={},_0x2254d9=0x0;_0x2254d9<_0x341a86[_0x3021a6(0x2d5)];_0x2254d9++){var _0x22b13f=_0x341a86[_0x2254d9],_0x332550=_0x22b13f[_0x3021a6(0x5bb)]||'';_0xddd39d[_0x332550]||(_0xddd39d[_0x332550]={'key':_0x332550,'lastPipe':-0x1,'len':0x0,'kg':0x0},_0x4316a2[_0x3021a6(0x346)](_0xddd39d[_0x332550])),_0x181832(_0x22b13f[_0x3021a6(0x68d)])||_0x3d5baa(_0x22b13f[_0x3021a6(0x68d)])||_0x5146df(_0x22b13f[_0x3021a6(0x68d)])||_0x22b13f[_0x3021a6(0x687)]>0x0&&(_0xddd39d[_0x332550][_0x3021a6(0x736)]=_0x2254d9,_0xddd39d[_0x332550][_0x3021a6(0x62f)]+=_0x22b13f[_0x3021a6(0x687)],_0xddd39d[_0x332550]['kg']+=_0x22b13f[_0x3021a6(0x687)]*_0x4c1aa1(_0x22b13f['dn']));}var _0x5bfa55=_0x4316a2[_0x3021a6(0x6c5)](function(_0x2cd254){var _0x400ff9=_0x3021a6;return _0x2cd254[_0x400ff9(0x736)]>=0x0&&_0x2cd254['kg']>0x0;});return _0x5bfa55[_0x3021a6(0x2d5)]?(_0x5bfa55[_0x3021a6(0x42e)](function(_0x7b1d23,_0x1274cf){var _0x5767ee=_0x3021a6;return _0x1274cf[_0x5767ee(0x736)]-_0x7b1d23[_0x5767ee(0x736)];}),_0x5bfa55[_0x3021a6(0x5a3)](function(_0x18da5c){var _0x2e1402=_0x3021a6,_0x43f3a5=Math[_0x2e1402(0x696)](0xa*_0x18da5c['kg'])/0xa;if(_0x43f3a5>0x0){var _0x73af24=_0x10837d(_0x2e1402(0x32d),_0x2e1402(0x3c0));_0x73af24[_0x2e1402(0x618)]='',_0x73af24[_0x2e1402(0x687)]=_0x43f3a5,_0x73af24[_0x2e1402(0x693)]=null,_0x73af24[_0x2e1402(0x275)]=null;var _0x89f94b=_0x46a03a(_0x73af24);_0x73af24[_0x2e1402(0x4aa)]=_0x89f94b[_0x2e1402(0x1e2)],_0x73af24[_0x2e1402(0x51c)]=_0x89f94b[_0x2e1402(0x542)],_0x73af24[_0x2e1402(0x6ad)]=_0x89f94b[_0x2e1402(0x29f)],_0x73af24[_0x2e1402(0x422)+'r']=_0x89f94b[_0x2e1402(0x58f)],_0x73af24[_0x2e1402(0x2de)+'ed']=!0x1,_0x73af24[_0x2e1402(0x381)]=[];var _0x3fe4a5=_0x594319(_0x73af24);_0x73af24[_0x2e1402(0x587)]=_0x3fe4a5[_0x2e1402(0x587)],_0x73af24[_0x2e1402(0x468)+'e']=_0x3fe4a5[_0x2e1402(0x6aa)],_0x73af24[_0x2e1402(0x442)]=_0x3fe4a5[_0x2e1402(0x4bb)],_0x73af24[_0x2e1402(0x327)]=_0x3fe4a5[_0x2e1402(0x5a2)]||'',_0x73af24[_0x2e1402(0x5bb)]=_0x18da5c[_0x2e1402(0x2c1)],_0x73af24[_0x2e1402(0x21e)]=!0x0,_0x73af24[_0x2e1402(0x617)]=_0x2e1402(0x4cb)+(_0x18da5c[_0x2e1402(0x2c1)]?'（'+_0x18da5c[_0x2e1402(0x2c1)]+'）':'')+_0x2e1402(0x5a8)+Math[_0x2e1402(0x696)](_0x18da5c[_0x2e1402(0x62f)])+(_0x2e1402(0x702)+_0x2e1402(0x4ab))+_0x43f3a5+(_0x2e1402(0x223)+_0x2e1402(0x1da)+_0x2e1402(0x4d1)+_0x2e1402(0x439)+_0x2e1402(0x6dd)),_0x73af24[_0x2e1402(0x2a4)]=_0x748928(_0x73af24),_0x341a86[_0x2e1402(0x5d3)](_0x18da5c[_0x2e1402(0x736)]+0x1,0x0,_0x73af24);}}),_0x341a86):_0x341a86;}var _0x456d82=[0x41,0x50,0x64,0x7d,0x96,0xc8,0xfa],_0x23d780=[0x32,0x64,0xc8,0x12c,0x190,0x1f4],_0x385ee8=[0x20,0x28,0x32,0x3f,0x4b,0x5a,0x6e,0x7d,0xa0,0xc8,0xfa,0x13b],_0x58f9ac=[0x14,0x19,0x20,0x28,0x32,0x3f,0x4b,0x5a,0x6e,0x7d,0xa0],_0x17b13c=[0x32,0x4b,0x6e,0xa0,0xc8,0xfa],_0x564f17={'seamless':[{'loc':_0x261343(0x291),'joint':_0x261343(0x502),'start':0x17,'dns':[0x20,0x28,0x32,0x41,0x50,0x64,0x7d,0x96,0xc8,0xfa,0x12c,0x15e,0x190],'name':_0x261343(0x4ef)+')'},{'loc':'in','joint':_0x261343(0x502),'start':0xc3,'dns':[0x20,0x28,0x32,0x41,0x50,0x64,0x7d,0x96,0xc8,0xfa,0x12c],'name':_0x261343(0x2d4)+')'},{'loc':'in','joint':_0x261343(0x71e),'start':0xce,'dns':[0x41,0x50,0x64,0x7d,0x96,0xc8,0xfa],'name':_0x261343(0x62d)+_0x261343(0x24c)}],'welded':[{'loc':_0x261343(0x291),'joint':_0x261343(0x502),'start':0x17,'dns':[0x20,0x28,0x32,0x41,0x50,0x64,0x7d,0x96,0xc8,0xfa,0x12c,0x15e,0x190],'name':_0x261343(0x4ef)+')'},{'loc':'in','joint':_0x261343(0x502),'start':0xc3,'dns':[0x20,0x28,0x32,0x41,0x50,0x64,0x7d,0x96,0xc8,0xfa,0x12c],'name':_0x261343(0x2d4)+')'},{'loc':'in','joint':_0x261343(0x71e),'start':0xce,'dns':[0x41,0x50,0x64,0x7d,0x96,0xc8,0xfa],'name':_0x261343(0x62d)+_0x261343(0x24c)}],'copper':[{'loc':'in','joint':_0x261343(0x370),'start':0x135,'dns':[0x12,0x16,0x1c,0x23,0x2a,0x36,0x4c,0x59,0x6c],'name':_0x261343(0x49f)+_0x261343(0x24c)},{'loc':'in','joint':_0x261343(0x398),'start':0x13e,'dns':[0x12,0x16,0x1c,0x23,0x2a,0x36,0x4c,0x59,0x6c],'name':_0x261343(0x5b4)+_0x261343(0x3e4)},{'loc':'in','joint':_0x261343(0x5c8),'start':0x147,'dns':[0x12,0x16,0x1c,0x23,0x2a,0x36,0x4c,0x59,0x6c],'name':_0x261343(0x4e1)+')'}],'stainless':[{'loc':'in','joint':_0x261343(0x370),'start':0x105,'dns':[0xf,0x14,0x19,0x20,0x28,0x32,0x41,0x50,0x64],'name':_0x261343(0x67b)+_0x261343(0x3b3)},{'loc':'in','joint':_0x261343(0x63e),'start':0x10e,'dns':[0xf,0x14,0x19,0x20,0x28,0x32,0x41,0x50,0x64],'name':_0x261343(0x67b)+_0x261343(0x1f4)},{'loc':'in','joint':_0x261343(0x4e2),'start':0x117,'dns':[0xf,0x14,0x19,0x20,0x28,0x32,0x41,0x50,0x64],'name':_0x261343(0x67b)+_0x261343(0x210)},{'loc':'in','joint':_0x261343(0x718),'start':0x120,'dns':[0xf,0x14,0x19,0x20,0x28,0x32,0x41,0x50,0x64],'name':_0x261343(0x4ae)+_0x261343(0x3b5)},{'loc':'in','joint':_0x261343(0x22f),'start':0x129,'dns':[0xf,0x14,0x19,0x20,0x28,0x32,0x41,0x50,0x64,0x7d,0x96,0xc8],'name':_0x261343(0x4ae)+_0x261343(0x514)},{'loc':'in','joint':_0x261343(0x4e2),'medium':_0x261343(0x4a6),'start':0x475,'dns':[0x19,0x20,0x28,0x32,0x41,0x50,0x64],'name':_0x261343(0x273)+_0x261343(0x628)},{'loc':'in','joint':_0x261343(0x63e),'medium':_0x261343(0x4a6),'start':0x47c,'dns':[0xf,0x14,0x19,0x20,0x28,0x32],'name':_0x261343(0x2c4)+_0x261343(0x3af)},{'loc':'in','joint':_0x261343(0x370),'medium':_0x261343(0x4a6),'start':0x482,'dns':[0xf,0x14,0x19,0x20,0x28,0x32],'name':_0x261343(0x2c4)+_0x261343(0x365)}],'composite':[{'loc':_0x261343(0x291),'joint':_0x261343(0x4c1),'start':0x51,'dns':[0x20,0x28,0x32,0x3f,0x4b,0x5a,0x6e,0x7d,0xa0],'name':_0x261343(0x741)+_0x261343(0x2c8)},{'loc':'in','joint':_0x261343(0x370),'start':0xe3,'dns':[0x14,0x19,0x20,0x28,0x32,0x3f],'name':_0x261343(0x561)+_0x261343(0x2aa)},{'loc':'in','joint':_0x261343(0x63e),'start':0xe9,'dns':[0x14,0x19,0x20,0x28,0x32,0x3f],'name':_0x261343(0x561)+_0x261343(0x3b0)},{'loc':'in','joint':_0x261343(0x2cc),'start':0xef,'dns':[0x14,0x19,0x20,0x28,0x32,0x3f,0x4b,0x5a,0x6e,0x7d,0xa0],'name':_0x261343(0x561)+_0x261343(0x41b)},{'loc':'in','joint':_0x261343(0x4c1),'start':0xfa,'dns':[0x14,0x19,0x20,0x28,0x32,0x3f,0x4b,0x5a,0x6e,0x7d,0xa0],'name':_0x261343(0x5ad)+_0x261343(0x2c8)}],'plastic':[{'loc':_0x261343(0x291),'joint':_0x261343(0x2cc),'start':0x24,'dns':_0x385ee8,'name':_0x261343(0x1ee)+_0x261343(0x41b)},{'loc':_0x261343(0x291),'joint':_0x261343(0x4c1),'start':0x30,'dns':_0x385ee8,'name':_0x261343(0x1ee)+_0x261343(0x3ad)},{'loc':_0x261343(0x291),'joint':_0x261343(0x491),'start':0x3c,'dns':_0x385ee8,'name':_0x261343(0x1ee)+_0x261343(0x597)},{'loc':'in','joint':_0x261343(0x2cc),'start':0x19a,'dns':_0x58f9ac,'name':_0x261343(0x642)+_0x261343(0x41b)},{'loc':'in','joint':_0x261343(0x4c1),'start':0x1a5,'dns':_0x58f9ac,'name':_0x261343(0x642)+_0x261343(0x3ad)},{'loc':'in','joint':_0x261343(0x491),'start':0x1b0,'dns':_0x58f9ac,'name':_0x261343(0x642)+_0x261343(0x597)},{'loc':'in','joint':_0x261343(0x491),'medium':_0x261343(0x6b8),'start':0x179,'dns':_0x17b13c,'name':_0x261343(0x5cd)+_0x261343(0x597)},{'loc':'in','joint':_0x261343(0x2cc),'medium':_0x261343(0x6b8),'start':0x17f,'dns':_0x17b13c,'name':_0x261343(0x5cd)+_0x261343(0x41b)},{'loc':'in','joint':_0x261343(0x34b),'medium':_0x261343(0x6b8),'start':0x185,'dns':_0x17b13c,'name':_0x261343(0x5cd)+_0x261343(0x20b)},{'loc':'in','joint':_0x261343(0x491),'medium':_0x261343(0x5ac),'start':0x195,'dns':[0x4b,0x6e,0xa0,0xc8,0xfa],'name':_0x261343(0x22c)+_0x261343(0x597)}]},_0x1be51b={'weld':'焊接','groove':_0x261343(0x20d),'press':_0x261343(0x56e),'sleeve':_0x261343(0x5f3),'argon':_0x261343(0x3b8),'thread':_0x261343(0x3c2),'arc':_0x261343(0x4f5),'oxy':_0x261343(0x59f),'braze':'钎焊','fusion':_0x261343(0x55e),'electro':_0x261343(0x697),'glue':'粘接','nut':_0x261343(0x4fe)},_0x48e81e={'out':[_0x261343(0x2cc),_0x261343(0x4c1),_0x261343(0x491)],'in':[_0x261343(0x491),_0x261343(0x2cc),_0x261343(0x4c1),_0x261343(0x34b)]},_0x592854={'rain':_0x261343(0x4e7),'drain':_0x261343(0x5cf),'water':_0x261343(0x672)},_0x4ccaa5={'out_water':{'lead':{'start':0x5a,'dns':[0x4b,0x64,0x96,0xc8,0xfa,0x12c,0x15e,0x190,0x1c2,0x1f4],'name':_0x261343(0x5a7)+_0x261343(0x270)},'expand':{'start':0x64,'dns':[0x4b,0x64,0x96,0xc8,0xfa,0x12c,0x15e,0x190,0x1c2,0x1f4],'name':_0x261343(0x5a7)+_0x261343(0x1e6)},'asbestos':{'start':0x6e,'dns':[0x4b,0x64,0x96,0xc8,0xfa,0x12c,0x15e,0x190,0x1c2,0x1f4],'name':_0x261343(0x5a7)+_0x261343(0x319)},'rubber':{'start':0x78,'dns':[0x64,0x96,0xc8,0xfa,0x12c,0x15e,0x190,0x1c2,0x1f4],'name':_0x261343(0x5a7)+_0x261343(0x513)}},'out_drain':{'asbestos':{'start':0x81,'dns':[0x32,0x4b,0x64,0x7d,0x96,0xc8],'name':_0x261343(0x6f8)+_0x261343(0x319)},'cement':{'start':0x87,'dns':[0x32,0x4b,0x64,0x7d,0x96,0xc8],'name':_0x261343(0x6f8)+_0x261343(0x61b)}},'in_water':{'lead':{'start':0x150,'dns':[0x4b,0x64,0x96,0xc8,0xfa,0x12c],'name':_0x261343(0x6cf)+_0x261343(0x270)},'expand':{'start':0x156,'dns':[0x4b,0x64,0x96,0xc8,0xfa,0x12c],'name':_0x261343(0x6cf)+_0x261343(0x1e6)},'asbestos':{'start':0x15c,'dns':[0x4b,0x64,0x96,0xc8,0xfa,0x12c],'name':_0x261343(0x6cf)+_0x261343(0x319)}},'in_drain':{'asbestos':{'start':0x162,'dns':[0x32,0x4b,0x64,0x96,0xc8,0xfa],'name':_0x261343(0x60b)+_0x261343(0x319)},'cement':{'start':0x168,'dns':[0x32,0x4b,0x64,0x96,0xc8,0xfa],'name':_0x261343(0x60b)+_0x261343(0x61b)}}},_0x2d2d1b={'out_water':{'thread':{'start':0x1,'dns':[0xf,0x14,0x19,0x20,0x28,0x32,0x41,0x50,0x64,0x7d,0x96],'name':_0x261343(0x2fc)+_0x261343(0x3b5)}},'in_water':{'thread':{'start':0xad,'dns':[0xf,0x14,0x19,0x20,0x28,0x32,0x41,0x50,0x64,0x7d,0x96],'name':_0x261343(0x438)+_0x261343(0x3b5)},'groove':{'start':0xce,'dns':[0x41,0x50,0x64,0x7d,0x96,0xc8,0xfa],'name':_0x261343(0x438)+_0x261343(0x209)}},'out_gas':{'thread':{'start':0x468,'dns':[0x19,0x20,0x28,0x32],'name':_0x261343(0x6c2)+_0x261343(0x348)}},'in_gas':{'thread':{'start':0x46c,'dns':[0xf,0x14,0x19,0x20,0x28,0x32,0x41,0x50,0x64],'name':_0x261343(0x3c3)+_0x261343(0x348)}}},_0x2fa4ed={'lead':_0x261343(0x20c),'expand':_0x261343(0x466),'asbestos':_0x261343(0x6bb),'rubber':_0x261343(0x36b),'cement':_0x261343(0x259),'thread':_0x261343(0x3c2),'gas_thread':_0x261343(0x705)},_0x2fa6d0=[_0x261343(0x56f),_0x261343(0x3ff),_0x261343(0x34d),_0x261343(0x6e5),_0x261343(0x325)],_0xaefe59=[_0x261343(0x718),_0x261343(0x71e),_0x261343(0x71d)],_0x56ba78={'in':'室内','out':'室外'},_0x3efe7b={'water':'给水','drain':'排水','rain':'雨水','gas':'燃气'};function _0x36b240(_0x53be98){var _0x438ba8=_0x261343;return _0x53be98&&_0x438ba8(0x27d)===_0x53be98[_0x438ba8(0x68d)]?_0x2d2d1b:_0x4ccaa5;}function _0x1bf0fb(_0x384304){var _0x4d5643=_0x261343,_0x353de7=_0x4d5643(0x291)===_0x384304[_0x4d5643(0x693)]?_0x4d5643(0x36e):_0x4d5643(0x344);return _0x4d5643(0x27d)===_0x384304[_0x4d5643(0x68d)]?_0x353de7+(_0x4d5643(0x71d)===_0x384304[_0x4d5643(0x275)]?_0x4d5643(0x4a6):_0x4d5643(0x73e)):_0x353de7+(_0x4d5643(0x6b8)===_0x384304[_0x4d5643(0x418)]?_0x4d5643(0x6b8):_0x4d5643(0x73e));}var _0x177ad8=[_0x261343(0x502),_0x261343(0x71e),_0x261343(0x370),_0x261343(0x2cc),_0x261343(0x4c1),_0x261343(0x491),_0x261343(0x4e2),_0x261343(0x22f),_0x261343(0x63e),_0x261343(0x718),_0x261343(0x398),_0x261343(0x5c8)];function _0x12e184(_0x3b118a){var _0x5724e9=_0x261343;if(_0x3b118a&&_0x5724e9(0x27d)===_0x3b118a[_0x5724e9(0x68d)])return'in'===_0x3b118a[_0x5724e9(0x693)]?[_0x5724e9(0x718),_0x5724e9(0x71e),_0x5724e9(0x71d)]:[_0x5724e9(0x718),_0x5724e9(0x71d)];if(_0x3b118a&&_0x564f17[_0x3b118a[_0x5724e9(0x68d)]]){var _0x1338a8=_0x564f17[_0x3b118a[_0x5724e9(0x68d)]],_0x13ffb6=_0x5c2075(_0x3b118a),_0x1aac1b=[];if(_0x1338a8[_0x5724e9(0x5a3)](function(_0x182e96){var _0x501dd0=_0x5724e9;_0x182e96[_0x501dd0(0x693)]===_0x3b118a[_0x501dd0(0x693)]&&(_0x182e96[_0x501dd0(0x418)]||_0x501dd0(0x73e))===_0x13ffb6&&_0x1aac1b[_0x501dd0(0x315)](_0x182e96[_0x501dd0(0x275)])<0x0&&_0x1aac1b[_0x501dd0(0x346)](_0x182e96[_0x501dd0(0x275)]);}),_0x1aac1b[_0x5724e9(0x2d5)]||_0x5724e9(0x2df)===_0x3b118a[_0x5724e9(0x68d)]||_0x1338a8[_0x5724e9(0x5a3)](function(_0x3ed0d2){var _0x450258=_0x5724e9;_0x3ed0d2[_0x450258(0x693)]===_0x3b118a[_0x450258(0x693)]&&_0x450258(0x4a6)!==(_0x3ed0d2[_0x450258(0x418)]||_0x450258(0x73e))&&_0x1aac1b[_0x450258(0x315)](_0x3ed0d2[_0x450258(0x275)])<0x0&&_0x1aac1b[_0x450258(0x346)](_0x3ed0d2[_0x450258(0x275)]);}),_0x5724e9(0x2df)===_0x3b118a[_0x5724e9(0x68d)]){var _0x20c957=_0x48e81e[_0x3b118a[_0x5724e9(0x693)]]||_0x48e81e['in'];return _0x1aac1b[_0x5724e9(0x42e)](function(_0x149c84,_0x451d3d){var _0x50bb91=_0x5724e9;return _0x20c957[_0x50bb91(0x315)](_0x149c84)-_0x20c957[_0x50bb91(0x315)](_0x451d3d);}),_0x1aac1b;}return _0x1aac1b[_0x5724e9(0x42e)](function(_0x57d2c1,_0x279ad9){var _0x481859=_0x5724e9;return _0x177ad8[_0x481859(0x315)](_0x57d2c1)-_0x177ad8[_0x481859(0x315)](_0x279ad9);}),_0x1aac1b;}var _0x363394=_0x36b240(_0x3b118a)[_0x1bf0fb(_0x3b118a)]||{};return(_0x3b118a&&_0x5724e9(0x27d)===_0x3b118a[_0x5724e9(0x68d)]?_0xaefe59:_0x2fa6d0)[_0x5724e9(0x6c5)](function(_0xb0a1f8){return!!_0x363394[_0xb0a1f8];});}function _0x9dd36(_0x5386f6){var _0xd01947=_0x261343,_0x2b0abe=_0x12e184(_0x5386f6);if(_0x5386f6&&_0xd01947(0x27d)===_0x5386f6[_0xd01947(0x68d)])return _0x2b0abe[_0xd01947(0x315)](_0xd01947(0x718))>=0x0?_0xd01947(0x718):_0x2b0abe[0x0]||_0xd01947(0x718);if(_0x5386f6&&_0x564f17[_0x5386f6[_0xd01947(0x68d)]]){var _0x172bf1=_0x3ce39e(_0x5386f6[_0xd01947(0x542)]||'');if(_0x172bf1&&_0x2b0abe[_0xd01947(0x315)](_0x172bf1)>=0x0)return _0x172bf1;if(_0xd01947(0x2df)===_0x5386f6[_0xd01947(0x68d)]){var _0x15c794=_0x5c2075(_0x5386f6);if((_0xd01947(0x6b8)===_0x15c794||_0xd01947(0x5ac)===_0x15c794||_0xd01947(0x5d7)===_0x5386f6[_0xd01947(0x3e1)+'d']||_0xd01947(0x635)===_0x5386f6[_0xd01947(0x3e1)+'d'])&&_0x2b0abe[_0xd01947(0x315)](_0xd01947(0x491))>=0x0)return _0xd01947(0x491);if(_0x2b0abe[_0xd01947(0x315)](_0xd01947(0x2cc))>=0x0)return _0xd01947(0x2cc);}return _0x2b0abe[0x0]||'';}return _0x2b0abe[_0xd01947(0x315)](_0xd01947(0x56f))>=0x0?_0xd01947(0x56f):_0x2b0abe[0x0]||_0xd01947(0x56f);}function _0x427bfb(_0x408d79){var _0x435f44=_0x261343,_0x5dde62=String(_0x408d79||'')[_0x435f44(0x6d2)](/[（(]/g,'\x20')[_0x435f44(0x6d2)](/[）)]/g,'\x20'),_0x552434=_0x5dde62[_0x435f44(0x57b)](/(?:DN|dn|De|de|D|Φ|φ|Ø)\s*[-－]?\s*(\d{2,4})/);return _0x552434||(_0x552434=_0x5dde62[_0x435f44(0x57b)](/(\d{2,4})\s*(?:mm|MM|毫米)/))||(_0x552434=_0x5dde62[_0x435f44(0x57b)](/[×xX*]\s*(\d{2,3})\b/))?parseInt(_0x552434[0x1],0xa):null;}function _0x55960a(_0x4b4e03){var _0x3b750f=_0x261343,_0x3ee6ec=_0x4b4e03||'';return/燃气|煤气|天然气|液化气|气源|瓦斯/[_0x3b750f(0x528)](_0x3ee6ec)?_0x3b750f(0x4a6):/排水|污水|废水|雨水|冷凝水|冷凝|通气管|透气|地漏|潜污/[_0x3b750f(0x528)](_0x3ee6ec)?_0x3b750f(0x6b8):/给水|生活给水|生产给水|消防|消火栓|喷淋|中水/[_0x3b750f(0x528)](_0x3ee6ec)?_0x3b750f(0x73e):/排水/[_0x3b750f(0x528)](_0x3ee6ec)?_0x3b750f(0x6b8):_0x3b750f(0x73e);}function _0xd650aa(_0x316be7){var _0x15ea6b=_0x261343,_0x107e0d=_0x316be7||'';return/室外|户外|室外埋地|埋地|外网|庭院|厂区|小区|室外管网/[_0x15ea6b(0x528)](_0x107e0d)?_0x15ea6b(0x291):(/室内|楼内|管井|地库|地下车库|卫生间|厨房|设备间|管道井/[_0x15ea6b(0x528)](_0x107e0d),'in');}function _0x518134(_0x3a29f2){var _0x1efd22=_0x261343,_0x70b3a2=_0x3a29f2||'';return/青铅/[_0x1efd22(0x528)](_0x70b3a2)?_0x1efd22(0x34d):/膨胀水泥/[_0x1efd22(0x528)](_0x70b3a2)?_0x1efd22(0x6e5):/石棉水泥|石棉/[_0x1efd22(0x528)](_0x70b3a2)?_0x1efd22(0x56f):/胶圈|橡胶圈|柔性接口|卡箍|机械接口|法兰接口/[_0x1efd22(0x528)](_0x70b3a2)?_0x1efd22(0x325):/水泥接口|水泥捻口|水泥/[_0x1efd22(0x528)](_0x70b3a2)?_0x1efd22(0x3ff):null;}function _0x494045(_0x3a73d4){var _0x428141=_0x261343,_0x4a7247=_0x3a73d4||'';return function(_0x3beb5a){var _0x4fb858=_0xa0f4;return/铸铁|离心浇筑灰口铁|机制离心|球墨铸铁|灰口铁/[_0x4fb858(0x528)](_0x3beb5a||'');}(_0x4a7247)?'铸铁':/不锈钢/[_0x428141(0x528)](_0x4a7247)?_0x428141(0x5e0):/无缝/[_0x428141(0x528)](_0x4a7247)?_0x428141(0x532):/镀锌钢管|热浸镀锌|热镀锌|镀锌焊接钢管|内外壁热浸镀锌|镀锌管/[_0x428141(0x528)](_0x4a7247)?_0x428141(0x60f):!/钢骨架|钢丝网骨架|钢网骨架|钢塑|铝塑|衬塑|涂塑|钢带增强/[_0x428141(0x528)](_0x4a7247)&&/PVDF|聚偏二氟乙烯|聚乙烯|聚丙烯|聚丁烯|聚氯乙烯|PPR|PP-R|PE管|HDPE|PVC|UPVC|U-PVC|PB管|PEX|塑料管|塑料给水|塑料排水|塑料雨水/[_0x428141(0x528)](_0x4a7247)?'塑料':/复合管|复合给水管|复合排水管|钢塑|铝塑|衬塑|涂塑|钢丝网骨架|钢网骨架|钢骨架/[_0x428141(0x528)](_0x4a7247)?'复合':/铜管|紫铜|黄铜管/[_0x428141(0x528)](_0x4a7247)?'铜':/焊接钢管|钢管/[_0x428141(0x528)](_0x4a7247)?_0x428141(0x332):'其他';}var _0x554d7={'pvdf':_0x261343(0x2dc)+'烯）','ppr':_0x261343(0x334),'pe':_0x261343(0x204),'pb':_0x261343(0x2f5),'pvc':_0x261343(0x4d5)+'）','pvcDrain':_0x261343(0x4d5)+'）'};function _0x176251(_0x3b4804,_0x56d9e7){var _0x1f9297=_0x261343,_0xec030b=String(_0x3b4804||'');return(_0x1f9297(0x6b8)===_0x56d9e7||/排水|雨水|污水|废水|冷凝水/[_0x1f9297(0x528)](_0xec030b))&&(_0x56d9e7=_0x1f9297(0x6b8)),/PVDF|聚偏二氟乙烯/[_0x1f9297(0x528)](_0xec030b)?_0x1f9297(0x6a1):/PB管|聚丁烯/[_0x1f9297(0x528)](_0xec030b)?'pb':/PPR|PP-R|聚丙烯/[_0x1f9297(0x528)](_0xec030b)?_0x1f9297(0x1fa):/PE管|HDPE|聚乙烯/[_0x1f9297(0x528)](_0xec030b)?'pe':/PVC|UPVC|U-PVC|聚氯乙烯/[_0x1f9297(0x528)](_0xec030b)?_0x1f9297(0x6b8)===_0x56d9e7?_0x1f9297(0x635):_0x1f9297(0x5d7):_0x1f9297(0x6b8)===_0x56d9e7?_0x1f9297(0x635):_0x1f9297(0x1fa);}function _0x3ce39e(_0x4ce452){var _0x14f60b=_0x261343,_0x2e151d=_0x4ce452||'';return/沟槽|卡箍|卡环|机械卡箍/[_0x14f60b(0x528)](_0x2e151d)?_0x14f60b(0x71e):/卡压|卡凸/[_0x14f60b(0x528)](_0x2e151d)?_0x14f60b(0x370):/卡套/[_0x14f60b(0x528)](_0x2e151d)?_0x14f60b(0x63e):/承插氩弧焊|氩弧焊|氩电联焊/[_0x14f60b(0x528)](_0x2e151d)?_0x14f60b(0x4e2):/对接电弧焊|电弧焊|手工电弧焊/[_0x14f60b(0x528)](_0x2e151d)?_0x14f60b(0x22f):/氧乙炔焊|气焊/[_0x14f60b(0x528)](_0x2e151d)?_0x14f60b(0x398):/钎焊|银钎焊/[_0x14f60b(0x528)](_0x2e151d)?_0x14f60b(0x5c8):/电熔/[_0x14f60b(0x528)](_0x2e151d)?_0x14f60b(0x4c1):/热熔/[_0x14f60b(0x528)](_0x2e151d)?_0x14f60b(0x2cc):/粘接|胶粘|承插粘接/[_0x14f60b(0x528)](_0x2e151d)?_0x14f60b(0x491):/螺母密封圈|螺母压紧|密封圈连接|压盖密封/[_0x14f60b(0x528)](_0x2e151d)?_0x14f60b(0x34b):/螺纹|丝扣|丝接/[_0x14f60b(0x528)](_0x2e151d)?_0x14f60b(0x718):/焊接|焊口/[_0x14f60b(0x528)](_0x2e151d)?_0x14f60b(0x502):null;}function _0x5c2075(_0x3672c6){var _0x11bf24=_0x261343;return _0x11bf24(0x4a6)===_0x3672c6[_0x11bf24(0x418)]?_0x11bf24(0x4a6):_0x11bf24(0x6b8)===_0x3672c6[_0x11bf24(0x418)]?_0x3672c6[_0x11bf24(0x52a)]?_0x11bf24(0x5ac):_0x11bf24(0x6b8):_0x11bf24(0x73e);}var _0x664779={'bathtub':{'code':_0x261343(0x5e4),'lname':'浴缸','unit':'组','qunit':_0x261343(0x3df),'factor':0xa,'q':_0x261343(0x1d7),'qn':_0x261343(0x320)},'bidet':{'code':_0x261343(0x4fd),'lname':_0x261343(0x623),'unit':'组','qunit':_0x261343(0x3df),'factor':0xa,'q':_0x261343(0x3ae),'qn':_0x261343(0x41e)},'washbasin':{'code':_0x261343(0x4a5),'lname':_0x261343(0x44f),'unit':'组','qunit':_0x261343(0x3df),'factor':0xa,'opts':[{'k':_0x261343(0x688),'l':_0x261343(0x737),'q':_0x261343(0x454),'qn':_0x261343(0x2a7)+'热水'},{'k':_0x261343(0x481),'l':_0x261343(0x316),'q':_0x261343(0x2c0),'qn':_0x261343(0x245)}]},'sink':{'code':_0x261343(0x6a8),'lname':_0x261343(0x37b),'unit':'组','qunit':_0x261343(0x3df),'factor':0xa,'q':_0x261343(0x664),'qn':_0x261343(0x6bc)},'labSink':{'code':_0x261343(0x364),'lname':_0x261343(0x543),'unit':'组','qunit':_0x261343(0x3df),'factor':0xa,'q':_0x261343(0x5c2),'qn':_0x261343(0x4ac)},'toilet':{'code':_0x261343(0x27b),'lname':_0x261343(0x6ca),'unit':'组','qunit':_0x261343(0x3df),'factor':0xa,'opts':[{'k':_0x261343(0x539),'l':_0x261343(0x3fd),'q':_0x261343(0x4b0),'qn':_0x261343(0x40a)+'洗'},{'k':_0x261343(0x232),'l':_0x261343(0x293),'q':_0x261343(0x1d0),'qn':_0x261343(0x425)+'便器'}]},'urinal':{'code':_0x261343(0x355),'lname':_0x261343(0x6a0),'unit':'组','qunit':_0x261343(0x3df),'factor':0xa,'q':_0x261343(0x61c),'qn':_0x261343(0x3c5)+_0x261343(0x2b9)},'faucet':{'code':_0x261343(0x3fb),'lname':_0x261343(0x2a5),'unit':'个','qunit':_0x261343(0x6b3),'factor':0xa,'q':_0x261343(0x6f1),'qn':_0x261343(0x47e)+_0x261343(0x428)},'waterHeater':{'code':_0x261343(0x3fb),'lname':_0x261343(0x2a5),'unit':'台','qunit':_0x261343(0x3be),'factor':0xa,'opts':[{'k':_0x261343(0x581),'l':_0x261343(0x5e1),'q':_0x261343(0x3c7),'qn':_0x261343(0x235)+_0x261343(0x4d3)},{'k':_0x261343(0x56c),'l':_0x261343(0x69a),'q':_0x261343(0x431),'qn':_0x261343(0x235)+_0x261343(0x512)},{'k':_0x261343(0x66d),'l':_0x261343(0x51d),'q':_0x261343(0x4c0),'qn':_0x261343(0x235)+_0x261343(0x33d)},{'k':_0x261343(0x3ac),'l':_0x261343(0x36a),'q':_0x261343(0x70f),'qn':_0x261343(0x30e)+_0x261343(0x33d)},{'k':_0x261343(0x538),'l':_0x261343(0x3b1),'q':_0x261343(0x537),'qn':_0x261343(0x30e)+_0x261343(0x29c)},{'k':_0x261343(0x453),'l':_0x261343(0x5b0),'q':_0x261343(0x70d),'qn':_0x261343(0x30e)+_0x261343(0x5ef)}]},'boiler':{'code':_0x261343(0x3fb),'lname':_0x261343(0x2a5),'unit':'台','qunit':_0x261343(0x3be),'factor':0xa,'q':_0x261343(0x36d),'qn':_0x261343(0x4ca)+'A型'},'steamHeater':{'code':_0x261343(0x3fb),'lname':_0x261343(0x2a5),'unit':'台','qunit':_0x261343(0x3be),'factor':0xa,'opts':[{'k':'1','l':'1#','q':_0x261343(0x578),'qn':_0x261343(0x52d)+'#'},{'k':'2','l':'2#','q':_0x261343(0x243),'qn':_0x261343(0x2d0)+'#'},{'k':'3','l':'3#','q':_0x261343(0x4dc),'qn':_0x261343(0x25d)+'#'}]},'heatExchanger':{'code':_0x261343(0x3fb),'lname':_0x261343(0x2a5),'unit':'台','qunit':_0x261343(0x3be),'factor':0xa,'opts':[{'k':'1','l':'1#','q':_0x261343(0x566),'qn':_0x261343(0x27f)},{'k':'2','l':'2#','q':_0x261343(0x524),'qn':_0x261343(0x54e)},{'k':'3','l':'3#','q':_0x261343(0x3bf),'qn':_0x261343(0x31c)},{'k':'4','l':'4#','q':_0x261343(0x4dd),'qn':_0x261343(0x607)},{'k':'5','l':'5#','q':_0x261343(0x33c),'qn':_0x261343(0x505)},{'k':'6','l':'6#','q':_0x261343(0x641),'qn':_0x261343(0x4d9)},{'k':'7','l':'7#','q':_0x261343(0x404),'qn':_0x261343(0x700)}]},'flushDevice':{'code':_0x261343(0x3fb),'lname':_0x261343(0x2a5),'unit':'套','qunit':_0x261343(0x509),'factor':0xa,'q':_0x261343(0x646),'qn':_0x261343(0x2c9)},'handDryer':{'code':_0x261343(0x49b),'lname':_0x261343(0x290),'unit':'个','qunit':_0x261343(0x6b3),'factor':0xa,'q':_0x261343(0x5ee),'qn':_0x261343(0x52e)+'器'},'shower':{'code':_0x261343(0x237),'lname':_0x261343(0x283),'unit':'组','qunit':_0x261343(0x3df),'factor':0xa,'q':_0x261343(0x511),'qn':_0x261343(0x6ff)+'热水'},'showerRoom':{'code':_0x261343(0x297),'lname':_0x261343(0x330),'unit':'套','qunit':_0x261343(0x509),'factor':0xa,'q':_0x261343(0x249),'qn':_0x261343(0x1d5)+_0x261343(0x5b8)},'floorDrain':{'code':_0x261343(0x3d7),'lname':_0x261343(0x65b),'unit':'个','qunit':_0x261343(0x6b3),'factor':0xa,'defDn':0x64,'tiers':[{'max':0x32,'q':_0x261343(0x310),'qn':_0x261343(0x48f)+_0x261343(0x585)},{'max':0x4b,'q':_0x261343(0x5e8),'qn':_0x261343(0x690)+_0x261343(0x585)},{'max':0x64,'q':_0x261343(0x44a),'qn':_0x261343(0x60d)+_0x261343(0x428)},{'max':0x96,'q':_0x261343(0x6c0),'qn':_0x261343(0x37c)+_0x261343(0x428)}]},'cleanout':{'code':_0x261343(0x3d7),'lname':_0x261343(0x65b),'unit':'个','qunit':_0x261343(0x6b3),'factor':0xa,'defDn':0x64,'tiers':[{'max':0x32,'q':_0x261343(0x30d),'qn':_0x261343(0x321)+_0x261343(0x6bf)},{'max':0x4b,'q':_0x261343(0x388),'qn':_0x261343(0x321)+_0x261343(0x661)},{'max':0x64,'q':_0x261343(0x64e),'qn':_0x261343(0x321)+_0x261343(0x5de)},{'max':0x7d,'q':_0x261343(0x261),'qn':_0x261343(0x321)+_0x261343(0x314)},{'max':0x96,'q':_0x261343(0x4a4),'qn':_0x261343(0x321)+_0x261343(0x5f9)}]},'rainHead':{'code':_0x261343(0x3d7),'lname':_0x261343(0x65b),'unit':'个','qunit':_0x261343(0x6b3),'factor':0xa,'defDn':0x96,'tiers':[{'max':0x64,'q':_0x261343(0x6ae),'qn':_0x261343(0x54c)+_0x261343(0x5de)},{'max':0x7d,'q':_0x261343(0x38a),'qn':_0x261343(0x54c)+_0x261343(0x314)},{'max':0x96,'q':_0x261343(0x3e3),'qn':_0x261343(0x54c)+_0x261343(0x5f9)}]},'siphonHead':{'code':_0x261343(0x3d7),'lname':_0x261343(0x65b),'unit':'个','qunit':_0x261343(0x6b3),'factor':0xa,'defDn':0x96,'tiers':[{'max':0x32,'q':_0x261343(0x666),'qn':_0x261343(0x624)+_0x261343(0x67f)},{'max':0x64,'q':_0x261343(0x50c),'qn':_0x261343(0x624)+_0x261343(0x2fb)},{'max':0x96,'q':_0x261343(0x70a),'qn':_0x261343(0x624)+_0x261343(0x5b9)}]},'waterDispenser':{'code':_0x261343(0x3a5),'lname':_0x261343(0x2f1),'unit':'台','qunit':_0x261343(0x3be),'factor':0xa,'q':_0x261343(0x3b2),'qn':_0x261343(0x2f1)},'greaseTrap':{'code':_0x261343(0x4fc),'lname':_0x261343(0x6c6),'unit':'台','qunit':_0x261343(0x3be),'factor':0xa,'defDn':0x64,'forms':{'ground':{'l':_0x261343(0x678),'tiers':[{'max':0x32,'q':_0x261343(0x47d),'qn':_0x261343(0x305)+'50'},{'max':0x50,'q':_0x261343(0x360),'qn':_0x261343(0x305)+'80'},{'max':0x64,'q':_0x261343(0x648),'qn':_0x261343(0x305)+_0x261343(0x1e5)}]},'hang':{'l':_0x261343(0x30c),'tiers':[{'max':0x32,'q':_0x261343(0x6fe),'qn':_0x261343(0x2b8)+'50'},{'max':0x64,'q':_0x261343(0x461),'qn':_0x261343(0x2b8)+_0x261343(0x1e5)},{'max':0x96,'q':_0x261343(0x3a3),'qn':_0x261343(0x2b8)+_0x261343(0x6b9)}]}}}},_0x3c02ba={'bathtub':_0x261343(0x2d9)+_0x261343(0x675),'bidet':_0x261343(0x4f2)+_0x261343(0x338)+'水','washbasin':_0x261343(0x6fb)+_0x261343(0x2ad)+_0x261343(0x47c),'sink':_0x261343(0x2a1)+_0x261343(0x5d6),'labSink':_0x261343(0x523)+_0x261343(0x2b2)+'试水','toilet':_0x261343(0x2da)+_0x261343(0x55a)+_0x261343(0x20a),'urinal':_0x261343(0x4b8)+_0x261343(0x5dd)+'水','faucet':_0x261343(0x4c2)+_0x261343(0x714),'waterHeater':_0x261343(0x59e)+_0x261343(0x640)+_0x261343(0x378),'boiler':_0x261343(0x309)+_0x261343(0x527),'steamHeater':_0x261343(0x44b)+_0x261343(0x574)+_0x261343(0x671),'heatExchanger':_0x261343(0x510)+_0x261343(0x433)+_0x261343(0x5ba),'flushDevice':_0x261343(0x2f3)+_0x261343(0x3ec),'handDryer':_0x261343(0x6ce)+_0x261343(0x21c),'shower':_0x261343(0x35f)+_0x261343(0x3dd),'showerRoom':_0x261343(0x387)+_0x261343(0x359)+'水','floorDrain':_0x261343(0x659)+_0x261343(0x39a),'cleanout':_0x261343(0x6b2)+_0x261343(0x722),'rainHead':_0x261343(0x63a)+_0x261343(0x5f8),'siphonHead':_0x261343(0x20e)+_0x261343(0x312)+_0x261343(0x722),'waterDispenser':_0x261343(0x6db)+_0x261343(0x32b),'greaseTrap':_0x261343(0x577)+_0x261343(0x222)};function _0x5146df(_0x3b4073){return!!_0x664779[_0x3b4073];}function _0x27d0e7(_0x2f4f84){var _0x4ef753=_0x261343,_0x446326=String(_0x2f4f84||'');return _0x446326?/淋浴间|整体淋浴/[_0x4ef753(0x528)](_0x446326)?_0x4ef753(0x563):/虹吸/[_0x4ef753(0x528)](_0x446326)&&/雨水斗/[_0x4ef753(0x528)](_0x446326)?_0x4ef753(0x679):/雨水斗/[_0x4ef753(0x528)](_0x446326)?_0x4ef753(0x6d3):/地漏/[_0x4ef753(0x528)](_0x446326)?_0x4ef753(0x68b):/扫除口/[_0x4ef753(0x528)](_0x446326)?_0x4ef753(0x57c):/隔油池|隔油器/[_0x4ef753(0x528)](_0x446326)?_0x4ef753(0x2b3):/热交换器/[_0x4ef753(0x528)](_0x446326)?_0x4ef753(0x212)+_0x4ef753(0x3fc):/加热器/[_0x4ef753(0x528)](_0x446326)?_0x4ef753(0x743)+'r':/开水炉/[_0x4ef753(0x528)](_0x446326)?_0x4ef753(0x6e0):/热水器/[_0x4ef753(0x528)](_0x446326)?_0x4ef753(0x730)+'r':/饮水机|饮水器|直饮水/[_0x4ef753(0x528)](_0x446326)?_0x4ef753(0x3e6)+_0x4ef753(0x5ca):/烘手器|烘干器/[_0x4ef753(0x528)](_0x446326)?_0x4ef753(0x5c3):/冲洗器/[_0x4ef753(0x528)](_0x446326)?_0x4ef753(0x589)+'e':/洗脸盆|洗手盆|手盆|洗手池|刷手池|洗脸池/[_0x4ef753(0x528)](_0x446326)?_0x4ef753(0x5df):/洗涤盆|洗涤池|盥洗池|洗涤槽/[_0x4ef753(0x528)](_0x446326)?_0x4ef753(0x3d9):/化验盆|化验池/[_0x4ef753(0x528)](_0x446326)?_0x4ef753(0x218):/净身盆/[_0x4ef753(0x528)](_0x446326)?_0x4ef753(0x65c):/浴缸|浴盆/[_0x4ef753(0x528)](_0x446326)?_0x4ef753(0x6b7):/大便器|坐便器|座便器|蹲便器/[_0x4ef753(0x528)](_0x446326)?_0x4ef753(0x479):/小便器|小便斗/[_0x4ef753(0x528)](_0x446326)?_0x4ef753(0x46d):/淋浴器|花洒|淋浴/[_0x4ef753(0x528)](_0x446326)?_0x4ef753(0x6ed):/水龙头|龙头/[_0x4ef753(0x528)](_0x446326)?_0x4ef753(0x303):null:null;}function _0x2e30e8(_0x4dccc0,_0x76b60b){var _0x2102ea=_0x261343,_0x1bcd5c=_0x664779[_0x76b60b],_0x1a6788={};if(_0x1a6788[_0x2102ea(0x542)]=_0x4dccc0,_0x1a6788[_0x2102ea(0x68d)]=_0x76b60b,_0x1a6788[_0x2102ea(0x57d)]=!0x0,_0x1a6788[_0x2102ea(0x280)]=_0x1bcd5c[_0x2102ea(0x1e2)],_0x1a6788[_0x2102ea(0x4db)]=_0x1bcd5c[_0x2102ea(0x68e)],_0x1a6788[_0x2102ea(0x6d0)]=_0x1bcd5c[_0x2102ea(0x68e)],_0x1a6788[_0x2102ea(0x29f)]=_0x1bcd5c[_0x2102ea(0x29f)],_0x1a6788[_0x2102ea(0x389)]=_0x2163d6(_0x4dccc0),_0x1a6788[_0x2102ea(0x61a)+_0x2102ea(0x313)]=!0x1,_0x1bcd5c[_0x2102ea(0x3cd)]){var _0x45e259=_0x1bcd5c[_0x2102ea(0x3cd)][0x0]['k'];if(_0x2102ea(0x479)===_0x76b60b)/坐便|坐式|座便/[_0x2102ea(0x528)](_0x4dccc0)?(_0x45e259=_0x2102ea(0x232),_0x1a6788[_0x2102ea(0x61a)+_0x2102ea(0x313)]=!0x0):/蹲/[_0x2102ea(0x528)](_0x4dccc0)?(_0x45e259=_0x2102ea(0x539),_0x1a6788[_0x2102ea(0x61a)+_0x2102ea(0x313)]=!0x0):_0x45e259=_0x2102ea(0x539);else{if(_0x2102ea(0x5df)===_0x76b60b)_0x45e259=/感应/[_0x2102ea(0x528)](_0x4dccc0)?_0x2102ea(0x481):_0x2102ea(0x688),_0x1a6788[_0x2102ea(0x61a)+_0x2102ea(0x313)]=!0x0;else{if(_0x2102ea(0x730)+'r'===_0x76b60b)/RS\s*300/i[_0x2102ea(0x528)](_0x4dccc0)?(_0x45e259=_0x2102ea(0x453),_0x1a6788[_0x2102ea(0x61a)+_0x2102ea(0x313)]=!0x0):/RS\s*100/i[_0x2102ea(0x528)](_0x4dccc0)?(_0x45e259=_0x2102ea(0x538),_0x1a6788[_0x2102ea(0x61a)+_0x2102ea(0x313)]=!0x0):/RS\s*50/i[_0x2102ea(0x528)](_0x4dccc0)?(_0x45e259=/立式/[_0x2102ea(0x528)](_0x4dccc0)?_0x2102ea(0x3ac):_0x2102ea(0x66d),_0x1a6788[_0x2102ea(0x61a)+_0x2102ea(0x313)]=!0x0):/RS\s*30/i[_0x2102ea(0x528)](_0x4dccc0)?(_0x45e259=_0x2102ea(0x56c),_0x1a6788[_0x2102ea(0x61a)+_0x2102ea(0x313)]=!0x0):/RS\s*15/i[_0x2102ea(0x528)](_0x4dccc0)?(_0x45e259=_0x2102ea(0x581),_0x1a6788[_0x2102ea(0x61a)+_0x2102ea(0x313)]=!0x0):_0x45e259=_0x2102ea(0x66d);else{if(_0x2102ea(0x743)+'r'===_0x76b60b){var _0x52b2ac=String(_0x4dccc0)[_0x2102ea(0x57b)](/([123])\s*#/);_0x52b2ac&&(_0x45e259=_0x52b2ac[0x1],_0x1a6788[_0x2102ea(0x61a)+_0x2102ea(0x313)]=!0x0);}else{if(_0x2102ea(0x212)+_0x2102ea(0x3fc)===_0x76b60b){var _0x4c9171=String(_0x4dccc0)[_0x2102ea(0x57b)](/([1-7])\s*#/);_0x4c9171&&(_0x45e259=_0x4c9171[0x1],_0x1a6788[_0x2102ea(0x61a)+_0x2102ea(0x313)]=!0x0);}}}}}_0x1a6788[_0x2102ea(0x582)]=_0x45e259;}return _0x1bcd5c[_0x2102ea(0x5fe)]&&(_0x1a6788[_0x2102ea(0x708)]=/悬挂/[_0x2102ea(0x528)](_0x4dccc0)?_0x2102ea(0x69c):_0x2102ea(0x61f),_0x1a6788[_0x2102ea(0x5da)+_0x2102ea(0x21f)]=/悬挂|地上/[_0x2102ea(0x528)](_0x4dccc0)),_0x1a6788;}function _0x30f7c5(_0x5e795a){var _0x416d46=_0x261343,_0x52ab5b=_0x664779[_0x5e795a[_0x416d46(0x68d)]];if(!_0x52ab5b||!_0x52ab5b[_0x416d46(0x3cd)])return'';for(var _0x2d438f=0x0;_0x2d438f<_0x52ab5b[_0x416d46(0x3cd)][_0x416d46(0x2d5)];_0x2d438f++)if(_0x52ab5b[_0x416d46(0x3cd)][_0x2d438f]['k']===_0x5e795a[_0x416d46(0x582)])return _0x52ab5b[_0x416d46(0x3cd)][_0x2d438f]['l'];return _0x52ab5b[_0x416d46(0x3cd)][0x0]['l'];}function _0x221e0d(_0x5b42e1){var _0x34f084=_0x261343,_0x1aa4e2=_0x664779[_0x5b42e1[_0x34f084(0x68d)]],_0x43f1a9={'inferred':!0x1,'unit':_0x1aa4e2[_0x34f084(0x596)],'factor':_0x1aa4e2[_0x34f084(0x58f)]};if(_0x1aa4e2[_0x34f084(0x3cd)]){for(var _0x729b8c=null,_0x65f2b8=0x0;_0x65f2b8<_0x1aa4e2[_0x34f084(0x3cd)][_0x34f084(0x2d5)];_0x65f2b8++)_0x1aa4e2[_0x34f084(0x3cd)][_0x65f2b8]['k']===_0x5b42e1[_0x34f084(0x582)]&&(_0x729b8c=_0x1aa4e2[_0x34f084(0x3cd)][_0x65f2b8]);return _0x729b8c||(_0x729b8c=_0x1aa4e2[_0x34f084(0x3cd)][0x0]),_0x43f1a9[_0x34f084(0x1e2)]=_0x729b8c['q'],_0x43f1a9[_0x34f084(0x542)]=_0x729b8c['qn'],_0x43f1a9;}if(_0x1aa4e2[_0x34f084(0x564)]){for(var _0x505d48=_0x5b42e1[_0x34f084(0x389)]||_0x1aa4e2[_0x34f084(0x551)],_0x12def9=_0x1aa4e2[_0x34f084(0x564)][_0x34f084(0x2d5)]-0x1,_0x4a358f=0x0;_0x4a358f<_0x1aa4e2[_0x34f084(0x564)][_0x34f084(0x2d5)];_0x4a358f++)if(_0x505d48<=_0x1aa4e2[_0x34f084(0x564)][_0x4a358f][_0x34f084(0x5f0)]){_0x12def9=_0x4a358f;break;}return _0x43f1a9[_0x34f084(0x1e2)]=_0x1aa4e2[_0x34f084(0x564)][_0x12def9]['q'],_0x43f1a9[_0x34f084(0x542)]=_0x1aa4e2[_0x34f084(0x564)][_0x12def9]['qn'],_0x43f1a9[_0x34f084(0x22a)]=_0x1aa4e2[_0x34f084(0x564)][_0x12def9][_0x34f084(0x5f0)],_0x43f1a9[_0x34f084(0x59c)]=!_0x5b42e1[_0x34f084(0x389)]||_0x1aa4e2[_0x34f084(0x564)][_0x12def9][_0x34f084(0x5f0)]!==_0x505d48,_0x43f1a9;}if(_0x1aa4e2[_0x34f084(0x5fe)]){for(var _0x47a5f7=_0x1aa4e2[_0x34f084(0x5fe)][_0x5b42e1[_0x34f084(0x708)]]||_0x1aa4e2[_0x34f084(0x5fe)][_0x34f084(0x61f)],_0x2920f3=_0x5b42e1[_0x34f084(0x389)]||_0x1aa4e2[_0x34f084(0x551)]||0x64,_0x3e30c0=_0x47a5f7[_0x34f084(0x564)][_0x34f084(0x2d5)]-0x1,_0x4a57b0=0x0;_0x4a57b0<_0x47a5f7[_0x34f084(0x564)][_0x34f084(0x2d5)];_0x4a57b0++)if(_0x2920f3<=_0x47a5f7[_0x34f084(0x564)][_0x4a57b0][_0x34f084(0x5f0)]){_0x3e30c0=_0x4a57b0;break;}return _0x43f1a9[_0x34f084(0x1e2)]=_0x47a5f7[_0x34f084(0x564)][_0x3e30c0]['q'],_0x43f1a9[_0x34f084(0x542)]=_0x47a5f7[_0x34f084(0x564)][_0x3e30c0]['qn'],_0x43f1a9[_0x34f084(0x22a)]=_0x47a5f7[_0x34f084(0x564)][_0x3e30c0][_0x34f084(0x5f0)],_0x43f1a9[_0x34f084(0x59c)]=!_0x5b42e1[_0x34f084(0x389)],_0x43f1a9;}return _0x43f1a9[_0x34f084(0x1e2)]=_0x1aa4e2['q'],_0x43f1a9[_0x34f084(0x542)]=_0x1aa4e2['qn'],_0x43f1a9;}function _0x41963d(_0x1b2661){var _0xde0641=_0x261343,_0x2cad37=_0xde0641(0x446)!=typeof window&&window[_0xde0641(0x73b)+_0xde0641(0x341)]||{},_0xf79299=_0x664779[_0x1b2661[_0xde0641(0x68d)]],_0x3cea1f=(_0x2cad37[_0xde0641(0x709)]||{})[_0x1b2661[_0xde0641(0x68d)]]||{},_0x580d51=_0x3cea1f[_0xde0641(0x5a2)]||_0x2cad37[_0xde0641(0x5a2)]||'',_0x5ea0d7=_0x3cea1f[_0xde0641(0x542)]||_0xf79299[_0xde0641(0x68e)];if(_0xf79299[_0xde0641(0x3cd)]){var _0x5022cd=(_0x3cea1f[_0xde0641(0x3cd)]||{})[_0x1b2661[_0xde0641(0x582)]];return{'price':_0x5022cd,'source':_0xde0641(0x337),'brand':_0x580d51,'basis':_0xde0641(0x3d2)+_0x580d51+'）：'+_0x5ea0d7+'\x20'+_0x30f7c5(_0x1b2661)+'\x20'+_0x5022cd+_0xde0641(0x32f)+_0xf79299[_0xde0641(0x29f)]};}if(_0xf79299[_0xde0641(0x564)]){var _0x57dc0b=String(_0x1b2661[_0xde0641(0x22a)]||_0xf79299[_0xde0641(0x551)]),_0x1094b6=(_0x3cea1f[_0xde0641(0x68f)]||{})[_0x57dc0b];return{'price':_0x1094b6,'source':_0xde0641(0x337),'brand':_0x580d51,'basis':_0xde0641(0x3d2)+_0x580d51+'）：'+_0x5ea0d7+_0xde0641(0x3f9)+_0x57dc0b+'\x20'+_0x1094b6+_0xde0641(0x32f)+_0xf79299[_0xde0641(0x29f)]};}if(_0xf79299[_0xde0641(0x5fe)]){var _0x5d17fe=_0xde0641(0x69c)===_0x1b2661[_0xde0641(0x708)]?_0xde0641(0x69c):_0xde0641(0x61f),_0x2ab9df=String(_0x1b2661[_0xde0641(0x22a)]||0x64),_0x3c1c7e=((_0x3cea1f[_0xde0641(0x5fe)]||{})[_0x5d17fe]||{})[_0x2ab9df];return{'price':_0x3c1c7e,'source':_0xde0641(0x337),'brand':_0x580d51,'basis':_0xde0641(0x3d2)+_0x580d51+'）：'+_0x5ea0d7+'\x20'+(_0xde0641(0x69c)===_0x5d17fe?_0xde0641(0x30c):_0xde0641(0x678))+_0xde0641(0x3f9)+_0x2ab9df+'\x20'+_0x3c1c7e+_0xde0641(0x32f)+_0xf79299[_0xde0641(0x29f)]};}return{'price':_0x3cea1f[_0xde0641(0x587)],'source':_0xde0641(0x337),'brand':_0x580d51,'basis':_0xde0641(0x3d2)+_0x580d51+'）：'+_0x5ea0d7+'\x20'+_0x3cea1f[_0xde0641(0x587)]+_0xde0641(0x32f)+_0xf79299[_0xde0641(0x29f)]};}var _0x11c420={'无缝钢':_0x261343(0x57a),'焊接钢':_0x261343(0x4b9),'铜':_0x261343(0x43c),'不锈钢':_0x261343(0x281),'复合':_0x261343(0x434),'塑料':_0x261343(0x2df)};function _0x6945a6(_0x164a75){var _0x4fc57e=_0x261343;if(!_0x164a75)return null;var _0x52d76f=function(_0x398429){var _0x463964=_0xa0f4;return _0x48c40f?_0x48c40f[_0x463964(0x504)](_0x398429):'';}(_0x164a75);if(_0x52d76f)return function(_0x31cfa8,_0x13f468){var _0x342ce3=_0xa0f4,_0x2df88b=_0x48c40f[_0x342ce3(0x694)](_0x31cfa8,_0x13f468);return _0x2df88b['dn']||(_0x2df88b['dn']=_0x2163d6(_0x31cfa8)),_0x2df88b;}(_0x164a75,_0x52d76f);var _0x2340f2=_0x27d0e7(_0x164a75);if(_0x2340f2)return _0x2e30e8(_0x164a75,_0x2340f2);var _0x158a21=_0xa1e936(_0x164a75);if(_0x158a21)return _0x10837d(_0x164a75,_0x158a21);var _0x2ff376=_0x398887(_0x164a75);if(_0x2ff376)return _0x1c82bc(_0x164a75,_0x2ff376);var _0x2aca45={};if(_0x2aca45[_0x4fc57e(0x542)]=_0x164a75,_0x2aca45[_0x4fc57e(0x6d0)]=_0x494045(_0x164a75),_0x2aca45['dn']=_0x427bfb(_0x164a75)||_0x2163d6(_0x164a75),_0x2aca45[_0x4fc57e(0x418)]=_0x55960a(_0x164a75),_0x2aca45[_0x4fc57e(0x693)]=_0xd650aa(_0x164a75),_0x2aca45[_0x4fc57e(0x52a)]=/雨水/[_0x4fc57e(0x528)](_0x164a75),_0x2aca45[_0x4fc57e(0x1f8)+_0x4fc57e(0x4ea)]=!/排水|污水|废水|雨水|给水|消防|消火栓|喷淋|中水|冷凝|燃气|煤气|天然气|液化气/[_0x4fc57e(0x528)](_0x164a75),_0x2aca45[_0x4fc57e(0x46e)+'us']=!/室内|室外|户外|外网|庭院|楼内|管井|地库/[_0x4fc57e(0x528)](_0x164a75),'铸铁'===_0x2aca45[_0x4fc57e(0x6d0)]){_0x2aca45[_0x4fc57e(0x68d)]=_0x4fc57e(0x456),_0x2aca45[_0x4fc57e(0x280)]=_0x478af2[_0x4fc57e(0x456)][_0x4fc57e(0x1e2)],_0x2aca45[_0x4fc57e(0x4db)]=_0x478af2[_0x4fc57e(0x456)][_0x4fc57e(0x542)];var _0x5d4c60=_0x518134(_0x164a75);_0x2aca45[_0x4fc57e(0x455)]=_0x5d4c60||_0x9dd36(_0x2aca45),_0x2aca45[_0x4fc57e(0x275)]=_0x2aca45[_0x4fc57e(0x455)],_0x2aca45[_0x4fc57e(0x746)+_0x4fc57e(0x53d)]=!!_0x5d4c60,_0x12e184(_0x2aca45)[_0x4fc57e(0x315)](_0x2aca45[_0x4fc57e(0x275)])<0x0&&(_0x2aca45[_0x4fc57e(0x1f9)+_0x4fc57e(0x71c)]=_0x2aca45[_0x4fc57e(0x275)],_0x2aca45[_0x4fc57e(0x275)]=_0x9dd36(_0x2aca45));}else{if(_0x4fc57e(0x60f)===_0x2aca45[_0x4fc57e(0x6d0)]){_0x2aca45[_0x4fc57e(0x68d)]=_0x4fc57e(0x27d),_0x2aca45[_0x4fc57e(0x280)]=_0x478af2[_0x4fc57e(0x27d)][_0x4fc57e(0x1e2)],_0x2aca45[_0x4fc57e(0x4db)]=_0x478af2[_0x4fc57e(0x27d)][_0x4fc57e(0x542)];var _0x36319a=/燃气|煤气|天然气|液化气|气源|瓦斯/[_0x4fc57e(0x528)](_0x164a75);_0x2aca45[_0x4fc57e(0x418)]=_0x36319a?_0x4fc57e(0x4a6):_0x4fc57e(0x73e),_0x2aca45[_0x4fc57e(0x455)]=_0x36319a?_0x4fc57e(0x71d):_0x4fc57e(0x718),_0x2aca45[_0x4fc57e(0x275)]=_0x2aca45[_0x4fc57e(0x455)],_0x2aca45[_0x4fc57e(0x746)+_0x4fc57e(0x53d)]=_0x36319a,_0x2aca45[_0x4fc57e(0x1f9)+_0x4fc57e(0x71c)]=null;}else{if(_0x564f17[_0x11c420[_0x2aca45[_0x4fc57e(0x6d0)]]]){_0x2aca45[_0x4fc57e(0x68d)]=_0x11c420[_0x2aca45[_0x4fc57e(0x6d0)]],_0x2aca45[_0x4fc57e(0x280)]=_0x478af2[_0x2aca45[_0x4fc57e(0x68d)]][_0x4fc57e(0x1e2)],_0x2aca45[_0x4fc57e(0x4db)]=_0x478af2[_0x2aca45[_0x4fc57e(0x68d)]][_0x4fc57e(0x542)],_0x2aca45[_0x4fc57e(0x52a)]=/雨水/[_0x4fc57e(0x528)](_0x164a75),_0x2aca45[_0x4fc57e(0x418)]=/燃气|煤气|天然气|液化气|气源|瓦斯/[_0x4fc57e(0x528)](_0x164a75)?_0x4fc57e(0x4a6):_0x2aca45[_0x4fc57e(0x52a)]?_0x4fc57e(0x6b8):_0x2aca45[_0x4fc57e(0x418)],_0x4fc57e(0x2df)===_0x2aca45[_0x4fc57e(0x68d)]&&_0x4fc57e(0x291)===_0x2aca45[_0x4fc57e(0x693)]&&(_0x2aca45[_0x4fc57e(0x4a0)+'me']=_0x4fc57e(0x6b8)===_0x2aca45[_0x4fc57e(0x418)]||_0x2aca45[_0x4fc57e(0x52a)],_0x2aca45[_0x4fc57e(0x418)]=_0x4fc57e(0x73e),_0x2aca45[_0x4fc57e(0x52a)]=!0x1),_0x4fc57e(0x2df)===_0x2aca45[_0x4fc57e(0x68d)]&&(_0x2aca45[_0x4fc57e(0x3e1)+'d']=_0x176251(_0x164a75,_0x2aca45[_0x4fc57e(0x418)]),_0x2aca45[_0x4fc57e(0x2f9)+_0x4fc57e(0x1d1)]=_0x554d7[_0x2aca45[_0x4fc57e(0x3e1)+'d']]||'塑料');var _0x11de59=_0x3ce39e(_0x164a75);_0x2aca45[_0x4fc57e(0x455)]=_0x11de59||_0x9dd36(_0x2aca45),_0x2aca45[_0x4fc57e(0x275)]=_0x2aca45[_0x4fc57e(0x455)],_0x2aca45[_0x4fc57e(0x746)+_0x4fc57e(0x53d)]=!!_0x11de59,_0x12e184(_0x2aca45)[_0x4fc57e(0x315)](_0x2aca45[_0x4fc57e(0x275)])<0x0&&(_0x2aca45[_0x4fc57e(0x1f9)+_0x4fc57e(0x71c)]=_0x2aca45[_0x4fc57e(0x275)],_0x2aca45[_0x4fc57e(0x275)]=_0x9dd36(_0x2aca45)),_0x4fc57e(0x434)===_0x2aca45[_0x4fc57e(0x68d)]&&(_0x2aca45[_0x4fc57e(0x3ce)+_0x4fc57e(0x72c)]=/钢骨架|钢丝网骨架|钢网骨架|钢塑|衬塑|涂塑/[_0x4fc57e(0x528)](_0x164a75)?_0x4fc57e(0x34a):_0x4fc57e(0x508));}else _0x2aca45[_0x4fc57e(0x68d)]=_0x4fc57e(0x4bd),_0x2aca45[_0x4fc57e(0x280)]='',_0x2aca45[_0x4fc57e(0x4db)]='',_0x2aca45[_0x4fc57e(0x275)]=null;}}return _0x2aca45[_0x4fc57e(0x29f)]='m',_0x5a6614&&_0x4e8a7b&&_0x4fc57e(0x446)!=typeof SPEC&&function(_0x28fcd4){var _0x225f81=_0x4fc57e;if(_0x28fcd4&&_0x28fcd4[_0x225f81(0x68d)]&&_0x28fcd4['dn']&&/^(castIron|galv|seamless|welded|copper|stainless|composite|plastic)$/[_0x225f81(0x528)](_0x28fcd4[_0x225f81(0x68d)])){var _0x11ce76=SPEC[_0x225f81(0x48b)](_0x4e8a7b,_0x28fcd4);_0x11ce76&&(_0x28fcd4[_0x225f81(0x2f2)]=_0x11ce76,_0x28fcd4[_0x225f81(0x285)+'ce']=_0x11ce76[_0x225f81(0x2f8)],_0x11ce76[_0x225f81(0x693)]&&_0x28fcd4[_0x225f81(0x46e)+'us']&&(_0x28fcd4[_0x225f81(0x693)]=_0x11ce76[_0x225f81(0x693)],_0x28fcd4[_0x225f81(0x591)+'c']=!0x0,_0x28fcd4[_0x225f81(0x46e)+'us']=!0x1),_0x11ce76[_0x225f81(0x418)]&&_0x28fcd4[_0x225f81(0x1f8)+_0x225f81(0x4ea)]&&(_0x225f81(0x4a6)===_0x11ce76[_0x225f81(0x418)]?(_0x28fcd4[_0x225f81(0x418)]=_0x225f81(0x4a6),_0x28fcd4[_0x225f81(0x3c8)+_0x225f81(0x6e6)]=!0x0,_0x28fcd4[_0x225f81(0x1f8)+_0x225f81(0x4ea)]=!0x1):_0x225f81(0x4be)===_0x11ce76[_0x225f81(0x418)]?(_0x28fcd4[_0x225f81(0x418)]=_0x225f81(0x73e),_0x28fcd4[_0x225f81(0x676)]=_0x225f81(0x4be),_0x28fcd4[_0x225f81(0x3c8)+_0x225f81(0x6e6)]=!0x0,_0x28fcd4[_0x225f81(0x1f8)+_0x225f81(0x4ea)]=!0x1):_0x225f81(0x73e)!==_0x11ce76[_0x225f81(0x418)]&&_0x225f81(0x6b8)!==_0x11ce76[_0x225f81(0x418)]&&_0x225f81(0x5ac)!==_0x11ce76[_0x225f81(0x418)]||(_0x28fcd4[_0x225f81(0x418)]=_0x225f81(0x5ac)===_0x11ce76[_0x225f81(0x418)]?_0x225f81(0x6b8):_0x11ce76[_0x225f81(0x418)],_0x28fcd4[_0x225f81(0x52a)]=_0x225f81(0x5ac)===_0x11ce76[_0x225f81(0x418)],_0x28fcd4[_0x225f81(0x3c8)+_0x225f81(0x6e6)]=!0x0,_0x28fcd4[_0x225f81(0x706)]=_0x11ce76[_0x225f81(0x418)],_0x28fcd4[_0x225f81(0x1f8)+_0x225f81(0x4ea)]=!0x1)),_0x225f81(0x2df)===_0x28fcd4[_0x225f81(0x68d)]&&(_0x225f81(0x291)===_0x28fcd4[_0x225f81(0x693)]&&(_0x28fcd4[_0x225f81(0x4a0)+'me']=_0x28fcd4[_0x225f81(0x4a0)+'me']||_0x225f81(0x6b8)===_0x28fcd4[_0x225f81(0x418)]||_0x28fcd4[_0x225f81(0x52a)],(_0x225f81(0x6b8)===_0x28fcd4[_0x225f81(0x418)]||_0x28fcd4[_0x225f81(0x52a)])&&(_0x28fcd4[_0x225f81(0x706)+_0x225f81(0x680)]=_0x28fcd4[_0x225f81(0x52a)]?_0x225f81(0x5ac):_0x225f81(0x6b8)),_0x28fcd4[_0x225f81(0x418)]=_0x225f81(0x73e),_0x28fcd4[_0x225f81(0x52a)]=!0x1),_0x28fcd4[_0x225f81(0x3e1)+'d']=_0x176251(_0x28fcd4[_0x225f81(0x542)],_0x28fcd4[_0x225f81(0x418)]),_0x28fcd4[_0x225f81(0x2f9)+_0x225f81(0x1d1)]=_0x554d7[_0x28fcd4[_0x225f81(0x3e1)+'d']]||'塑料'),_0x12e184(_0x28fcd4)[_0x225f81(0x315)](_0x11ce76[_0x225f81(0x275)])>=0x0?(_0x28fcd4[_0x225f81(0x275)]&&_0x28fcd4[_0x225f81(0x275)]!==_0x11ce76[_0x225f81(0x275)]&&(_0x28fcd4[_0x225f81(0x746)+_0x225f81(0x53d)]||_0x28fcd4[_0x225f81(0x5aa)+'d'])&&(_0x28fcd4[_0x225f81(0x716)+_0x225f81(0x441)]=_0x28fcd4[_0x225f81(0x275)]),_0x28fcd4[_0x225f81(0x275)]=_0x11ce76[_0x225f81(0x275)],_0x28fcd4[_0x225f81(0x605)+_0x225f81(0x69f)]=!0x0,_0x28fcd4[_0x225f81(0x1f9)+_0x225f81(0x71c)]=null):(_0x28fcd4[_0x225f81(0x70b)+_0x225f81(0x300)]=_0x11ce76[_0x225f81(0x275)],_0x28fcd4[_0x225f81(0x70b)+_0x225f81(0x300)+_0x225f81(0x39f)]=_0x11ce76[_0x225f81(0x44e)]));}}(_0x2aca45),_0x2aca45;}function _0x234e24(_0xa817ec,_0x5a899a){var _0x46c188=_0x261343;if(null==_0x5a899a||isNaN(_0x5a899a))return null;for(var _0x28eb57=0x0;_0x28eb57<_0xa817ec[_0x46c188(0x2d5)];_0x28eb57++)if(_0x5a899a<=_0xa817ec[_0x28eb57])return{'idx':_0x28eb57,'dn':_0xa817ec[_0x28eb57],'exact':_0xa817ec[_0x28eb57]===_0x5a899a};return{'idx':_0xa817ec[_0x46c188(0x2d5)]-0x1,'dn':_0xa817ec[_0xa817ec[_0x46c188(0x2d5)]-0x1],'exact':!0x1,'overflow':!0x0};}function _0x6c1a0a(_0x5a0bf9){var _0x546f78=_0x261343,_0x46baca=_0x5a0bf9['dn'],_0x590a0c=!(_0x46baca>0x0),_0x194347=_0x5a0bf9[_0x546f78(0x68d)];if(_0x546f78(0x593)===_0x194347){if(_0x590a0c)return{'code':_0x546f78(0x52f),'name':_0x546f78(0x23d)+_0x546f78(0x638),'inferred':!0x1,'noDn':!0x0,'unit':'个','factor':0x1};if(_0x46baca<=0x32){var _0x4a8d79=_0x4eb26f(_0x3ee6c4,_0x46baca);return{'code':_0x3ee6c4[_0x4a8d79][_0x546f78(0x1e2)],'name':_0x546f78(0x6a7)+_0x3ee6c4[_0x4a8d79][_0x546f78(0x277)],'inferred':_0x3ee6c4[_0x4a8d79][_0x546f78(0x5f0)]!==_0x46baca,'unit':'个','factor':0x1};}var _0x328ada=_0x4eb26f(_0x6404f0,_0x46baca);return{'code':_0x6404f0[_0x328ada][_0x546f78(0x1e2)],'name':_0x546f78(0x655)+'径'+_0x6404f0[_0x328ada][_0x546f78(0x277)],'inferred':_0x6404f0[_0x328ada][_0x546f78(0x5f0)]!==_0x46baca,'overRange':_0x46baca>0x190,'unit':'个','factor':0x1};}if(_0x546f78(0x43f)===_0x194347)return{'code':_0x546f78(0x1e9),'name':_0x546f78(0x658)+_0x546f78(0x6ef)+'以内','inferred':!0x1,'unit':'个','factor':0x1};if(_0x546f78(0x4b6)===_0x194347)return{'code':_0x546f78(0x38f),'name':_0x546f78(0x683)+_0x546f78(0x3ef),'inferred':!0x1,'unit':'个','factor':0x1};if(_0x546f78(0x236)===_0x194347)return{'code':_0x546f78(0x25f),'name':_0x546f78(0x299)+_0x546f78(0x6c3),'inferred':!0x1,'unit':'套','factor':0x1};if(_0x546f78(0x494)===_0x194347){var _0x5ee36b=_0x590a0c?0x0:_0x4eb26f(_0x3d26d7,_0x46baca);return{'code':_0x3d26d7[_0x5ee36b][_0x546f78(0x1e2)],'name':_0x546f78(0x2bd)+_0x3d26d7[_0x5ee36b][_0x546f78(0x277)],'inferred':!_0x590a0c&&_0x3d26d7[_0x5ee36b][_0x546f78(0x5f0)]!==_0x46baca,'noDn':_0x590a0c,'overRange':!_0x590a0c&&_0x46baca>0x96,'unit':'个','factor':0x1};}if(_0x546f78(0x29a)===_0x194347){var _0x261b60=_0x590a0c?0x0:_0x4eb26f(_0x11a794,_0x46baca);return{'code':_0x11a794[_0x261b60][_0x546f78(0x1e2)],'name':_0x546f78(0x38b)+_0x546f78(0x64f)+_0x11a794[_0x261b60][_0x546f78(0x277)],'inferred':!_0x590a0c&&_0x11a794[_0x261b60][_0x546f78(0x5f0)]!==_0x46baca,'noDn':_0x590a0c,'overRange':!_0x590a0c&&_0x46baca>0xc8,'unit':'个','factor':0x1};}if(_0x546f78(0x4bf)+_0x546f78(0x42f)===_0x194347){if(_0x590a0c)return{'code':_0x546f78(0x6de),'name':_0x546f78(0x6c1)+_0x546f78(0x5fa),'inferred':!0x1,'noDn':!0x0,'unit':'个','factor':0x1};if(_0x46baca<=0x32){var _0x468a44=_0x4eb26f(_0x3b836e,_0x46baca);return{'code':_0x3b836e[_0x468a44][_0x546f78(0x1e2)],'name':_0x546f78(0x6c1)+'直径'+_0x3b836e[_0x468a44][_0x546f78(0x277)],'inferred':_0x3b836e[_0x468a44][_0x546f78(0x5f0)]!==_0x46baca,'unit':'个','factor':0x1};}var _0x525352=_0x4eb26f(_0x4e21ed,_0x46baca);return{'code':_0x4e21ed[_0x525352][_0x546f78(0x1e2)],'name':_0x546f78(0x402)+'直径'+_0x4e21ed[_0x525352][_0x546f78(0x277)],'inferred':_0x4e21ed[_0x525352][_0x546f78(0x5f0)]!==_0x46baca,'overRange':_0x46baca>0x1f4,'unit':'个','factor':0x1};}return{'code':'','name':'','inferred':!0x1};}function _0x46e50d(_0x150384){var _0x3a2eec=_0x261343,_0x2d521b=_0x4cbb44(),_0x2fd792=_0x150384['dn'],_0x5451e0=_0x150384[_0x3a2eec(0x68d)];if(_0x3a2eec(0x593)===_0x5451e0){var _0x1631ef=(_0x2d521b[_0x3a2eec(0x567)]||{})[_0x150384[_0x3a2eec(0x367)]||_0x3a2eec(0x337)];if(_0x1631ef){var _0x5c4a5b=_0x2c0738(_0x1631ef[_0x3a2eec(0x643)],_0x2fd792);return{'price':_0x1631ef[_0x3a2eec(0x68f)][_0x5c4a5b],'source':_0x3a2eec(0x567),'basis':_0x3a2eec(0x56b)+_0x1631ef[_0x3a2eec(0x542)]+_0x3a2eec(0x3f9)+_0x1631ef[_0x3a2eec(0x643)][_0x5c4a5b]+'\x20'+_0x1631ef[_0x3a2eec(0x68f)][_0x5c4a5b]+_0x3a2eec(0x414)+(_0x2fd792>0x0&&_0x1631ef[_0x3a2eec(0x643)][_0x5c4a5b]!==_0x2fd792?_0x3a2eec(0x34c)+_0x2fd792+_0x3a2eec(0x276):'')};}var _0x24f44b=_0x2d521b[_0x3a2eec(0x337)]||{'dns':[0xf],'prices':[0x28]},_0x3b028e=_0x2c0738(_0x24f44b[_0x3a2eec(0x643)],_0x2fd792);return{'price':_0x24f44b[_0x3a2eec(0x68f)][_0x3b028e],'source':_0x3a2eec(0x337),'brand':_0x2d521b[_0x3a2eec(0x5a2)],'basis':_0x3a2eec(0x3d2)+_0x2d521b[_0x3a2eec(0x5a2)]+'）：'+_0x150384[_0x3a2eec(0x542)]+_0x3a2eec(0x3f9)+_0x24f44b[_0x3a2eec(0x643)][_0x3b028e]+'\x20'+_0x24f44b[_0x3a2eec(0x68f)][_0x3b028e]+(_0x3a2eec(0x639)+_0x3a2eec(0x420))};}if(_0x3a2eec(0x236)===_0x5451e0){var _0x5145ee=(_0x2d521b[_0x3a2eec(0x3d1)]||{})[_0x3a2eec(0x1d3)]||{'prices':[0x1e0],'brand':''};return{'price':_0x5145ee[_0x3a2eec(0x68f)][0x0],'source':_0x3a2eec(0x337),'brand':_0x5145ee[_0x3a2eec(0x5a2)],'basis':_0x3a2eec(0x3d2)+_0x5145ee[_0x3a2eec(0x5a2)]+(_0x3a2eec(0x1f0)+'\x20')+_0x5145ee[_0x3a2eec(0x68f)][0x0]+(_0x3a2eec(0x5d1)+_0x3a2eec(0x5f7))};}if(_0x3a2eec(0x4bf)+_0x3a2eec(0x42f)===_0x5451e0){var _0x4481f7=_0x2d521b[_0x3a2eec(0x5c5)]||{'dns':[0xf],'prices':[0xb4],'brand':''},_0x4ab0df=_0x2c0738(_0x4481f7[_0x3a2eec(0x643)],_0x2fd792);return{'price':_0x4481f7[_0x3a2eec(0x68f)][_0x4ab0df],'source':_0x3a2eec(0x337),'brand':_0x4481f7[_0x3a2eec(0x5a2)],'basis':_0x3a2eec(0x3d2)+_0x4481f7[_0x3a2eec(0x5a2)]+_0x3a2eec(0x250)+_0x4481f7[_0x3a2eec(0x643)][_0x4ab0df]+'\x20'+_0x4481f7[_0x3a2eec(0x68f)][_0x4ab0df]+_0x3a2eec(0x414)+(_0x2fd792>0x0&&_0x4481f7[_0x3a2eec(0x643)][_0x4ab0df]!==_0x2fd792?_0x3a2eec(0x34c)+_0x2fd792+_0x3a2eec(0x276):'')};}var _0x378e1b={'autoAir':_0x3a2eec(0x43f),'tempValve':_0x3a2eec(0x5c6),'floatValve':_0x3a2eec(0x629),'levelValve':_0x3a2eec(0x464)}[_0x5451e0],_0x48c00d=(_0x2d521b[_0x3a2eec(0x3d1)]||{})[_0x378e1b]||{'dns':[0x19],'prices':[0x0],'source':_0x3a2eec(0x337)},_0x17e308=_0x2c0738(_0x48c00d[_0x3a2eec(0x643)],_0x2fd792);return _0x3a2eec(0x567)===_0x48c00d[_0x3a2eec(0x6aa)]?{'price':_0x48c00d[_0x3a2eec(0x68f)][_0x17e308],'source':_0x3a2eec(0x567),'basis':_0x3a2eec(0x56b)+_0x48c00d[_0x3a2eec(0x542)]+_0x3a2eec(0x3f9)+_0x48c00d[_0x3a2eec(0x643)][_0x17e308]+'\x20'+_0x48c00d[_0x3a2eec(0x68f)][_0x17e308]+_0x3a2eec(0x414)}:{'price':_0x48c00d[_0x3a2eec(0x68f)][_0x17e308],'source':_0x3a2eec(0x337),'brand':_0x48c00d[_0x3a2eec(0x5a2)]||_0x2d521b[_0x3a2eec(0x5a2)],'basis':_0x3a2eec(0x3d2)+(_0x48c00d[_0x3a2eec(0x5a2)]||_0x2d521b[_0x3a2eec(0x5a2)])+'）：'+_0x48c00d[_0x3a2eec(0x542)]+_0x3a2eec(0x3f9)+_0x48c00d[_0x3a2eec(0x643)][_0x17e308]+'\x20'+_0x48c00d[_0x3a2eec(0x68f)][_0x17e308]+_0x3a2eec(0x414)};}function _0x4fa3c5(_0x45a87d){var _0x4c7446=_0x261343;if(!_0x45a87d)return{'code':'','name':'','inferred':!0x1};if(_0x5146df(_0x45a87d[_0x4c7446(0x68d)]))return _0x221e0d(_0x45a87d);if(_0x181832(_0x45a87d[_0x4c7446(0x68d)]))return _0x46a03a(_0x45a87d);if(_0x3d5baa(_0x45a87d[_0x4c7446(0x68d)]))return _0x6c1a0a(_0x45a87d);if(!0x0===_0x45a87d[_0x4c7446(0x3d1)])return _0x48c40f[_0x4c7446(0x354)](_0x45a87d);if(_0x564f17[_0x45a87d[_0x4c7446(0x68d)]]){var _0x12394d=function(_0x43bb5a){var _0x46e7c7=_0x4c7446,_0x3afdab=_0x564f17[_0x43bb5a[_0x46e7c7(0x68d)]];if(!_0x3afdab)return null;var _0x36cc49=_0x5c2075(_0x43bb5a),_0x2c10c2=null;return _0x3afdab[_0x46e7c7(0x5a3)](function(_0x3e6108){var _0x83a7cc=_0x46e7c7;_0x2c10c2||_0x3e6108[_0x83a7cc(0x693)]!==_0x43bb5a[_0x83a7cc(0x693)]||(_0x3e6108[_0x83a7cc(0x418)]||_0x83a7cc(0x73e))!==_0x36cc49||_0x3e6108[_0x83a7cc(0x275)]!==_0x43bb5a[_0x83a7cc(0x275)]||(_0x2c10c2=_0x3e6108);}),_0x2c10c2||_0x3afdab[_0x46e7c7(0x5a3)](function(_0x4b8955){var _0x166961=_0x46e7c7;_0x2c10c2||_0x4b8955[_0x166961(0x693)]!==_0x43bb5a[_0x166961(0x693)]||(_0x4b8955[_0x166961(0x418)]||_0x166961(0x73e))!==_0x36cc49||(_0x2c10c2=_0x4b8955);}),_0x2c10c2||_0x3afdab[_0x46e7c7(0x5a3)](function(_0x513c09){var _0x122a00=_0x46e7c7;_0x2c10c2||_0x513c09[_0x122a00(0x693)]!==_0x43bb5a[_0x122a00(0x693)]||(_0x2c10c2=_0x513c09);}),_0x2c10c2;}(_0x45a87d);if(!_0x12394d)return{'code':'','name':'','inferred':!0x1};if(null===_0x45a87d['dn']||void 0x0===_0x45a87d['dn']||isNaN(_0x45a87d['dn']))return{'code':'','name':_0x12394d[_0x4c7446(0x542)]+_0x4c7446(0x2c3),'inferred':!0x1,'needDn':!0x0};var _0x20c696=_0x234e24(_0x12394d[_0x4c7446(0x643)],_0x45a87d['dn']),_0x1daecb=_0x4c7446(0x43c)===_0x45a87d[_0x4c7446(0x68d)]||_0x4c7446(0x2df)===_0x45a87d[_0x4c7446(0x68d)]||_0x4c7446(0x434)===_0x45a87d[_0x4c7446(0x68d)]?_0x4c7446(0x333):_0x4c7446(0x64f);return{'code':'8-'+(_0x12394d[_0x4c7446(0x23c)]+_0x20c696[_0x4c7446(0x488)]),'name':_0x12394d[_0x4c7446(0x542)]+'\x20'+_0x1daecb+_0x20c696['dn']+_0x4c7446(0x428),'inferred':!_0x20c696[_0x4c7446(0x3d8)],'dnTier':_0x20c696['dn'],'unit':_0x4c7446(0x2d6),'factor':0xa,'group':_0x12394d};}if(_0x4c7446(0x456)!==_0x45a87d[_0x4c7446(0x68d)]&&_0x4c7446(0x27d)!==_0x45a87d[_0x4c7446(0x68d)])return{'code':'','name':'','inferred':!0x1};var _0xbb1f51=_0x36b240(_0x45a87d)[_0x1bf0fb(_0x45a87d)];if(!_0xbb1f51)return{'code':'','name':'','inferred':!0x1};var _0x40d7af=_0xbb1f51[_0x45a87d[_0x4c7446(0x275)]]||_0xbb1f51[_0x9dd36(_0x45a87d)];if(!_0x40d7af)return{'code':'','name':'','inferred':!0x1};if(null===_0x45a87d['dn']||void 0x0===_0x45a87d['dn']||isNaN(_0x45a87d['dn']))return{'code':'','name':_0x40d7af[_0x4c7446(0x542)]+_0x4c7446(0x2c3),'inferred':!0x1,'needDn':!0x0};for(var _0x578f23=-0x1,_0x1c798c=0x0;_0x1c798c<_0x40d7af[_0x4c7446(0x643)][_0x4c7446(0x2d5)];_0x1c798c++)if(_0x45a87d['dn']<=_0x40d7af[_0x4c7446(0x643)][_0x1c798c]){_0x578f23=_0x1c798c;break;}var _0x1afcca=!0x1;_0x578f23<0x0?(_0x578f23=_0x40d7af[_0x4c7446(0x643)][_0x4c7446(0x2d5)]-0x1,_0x1afcca=!0x0):_0x40d7af[_0x4c7446(0x643)][_0x578f23]!==_0x45a87d['dn']&&(_0x1afcca=!0x0);var _0x5f7315=_0x40d7af[_0x4c7446(0x643)][_0x578f23];return{'code':'8-'+(_0x40d7af[_0x4c7446(0x23c)]+_0x578f23),'name':_0x40d7af[_0x4c7446(0x542)]+_0x4c7446(0x473)+_0x5f7315+_0x4c7446(0x428),'inferred':_0x1afcca,'dnTier':_0x5f7315,'unit':_0x4c7446(0x2d6),'factor':0xa};}function _0x5d7763(_0x4b240e,_0x3398f9){var _0x842b75=_0x261343;if(_0x5146df(_0x4b240e[_0x842b75(0x68d)]))return[];var _0x4c1c30=[];if(!_0x3398f9||!_0x3398f9[_0x842b75(0x1e2)])return _0x4c1c30;if(_0x3d5baa(_0x4b240e[_0x842b75(0x68d)]))return _0x4c1c30;if(_0x181832(_0x4b240e[_0x842b75(0x68d)]))return _0x4c1c30;if(!0x0===_0x4b240e[_0x842b75(0x3d1)])return _0x48c40f[_0x842b75(0x381)](_0x4b240e,_0x3398f9);var _0x14f9ee=_0x3398f9[_0x842b75(0x22a)]||_0x4b240e['dn'];if(_0x842b75(0x71e)===_0x4b240e[_0x842b75(0x275)]){var _0x29e8cf=_0x234e24(_0x456d82,_0x14f9ee);if(_0x29e8cf){var _0x28bccd=Math[_0x842b75(0x5f0)](0x1,Math[_0x842b75(0x28b)](_0x4b240e[_0x842b75(0x687)]/0x6));_0x4c1c30[_0x842b75(0x346)]({'role':_0x842b75(0x701),'code':'8-'+(0xdc+_0x29e8cf[_0x842b75(0x488)]),'name':_0x842b75(0x66a)+_0x842b75(0x521)+_0x29e8cf['dn']+_0x842b75(0x428),'unit':_0x842b75(0x6b3),'factor':0xa,'qty':_0x28bccd,'note':_0x842b75(0x621)+_0x842b75(0x742)+_0x842b75(0x647)});}}var _0x30f7a2=_0x842b75(0x6b8)===_0x4b240e[_0x842b75(0x418)]?null:_0x234e24(_0x23d780,_0x14f9ee);return _0x30f7a2&&_0x4c1c30[_0x842b75(0x346)]({'role':_0x842b75(0x1d3),'code':'8-'+(0x1ea+_0x30f7a2[_0x842b75(0x488)]),'name':_0x842b75(0x2ec)+'径'+_0x30f7a2['dn']+_0x842b75(0x428),'unit':_0x842b75(0x630),'factor':0x64,'qty':_0x4b240e[_0x842b75(0x687)],'note':''}),_0x4c1c30;}function _0x1a608c(){var _0x8463aa=_0x261343;return(_0x8463aa(0x446)!=typeof window&&window[_0x8463aa(0x2d3)+_0x8463aa(0x65e)]?window[_0x8463aa(0x2d3)+_0x8463aa(0x65e)]:_0x8463aa(0x446)!=typeof window&&window[_0x8463aa(0x47a)+_0x8463aa(0x6b4)]||[])||[];}function _0x30c4ef(_0x3ed9ec){var _0x52ef65=_0x261343;for(var _0x4dd8ec=_0x1a608c(),_0x208f3c=0x0;_0x208f3c<_0x4dd8ec[_0x52ef65(0x2d5)];_0x208f3c++)if(_0x4dd8ec[_0x208f3c][_0x52ef65(0x4e8)]===_0x3ed9ec)return _0x4dd8ec[_0x208f3c];return _0x4dd8ec[0x0]||null;}function _0x2ab24c(_0xb7e76,_0xc9871f){var _0x5052fb=_0x261343,_0x35f2ea=Object[_0x5052fb(0x56d)](_0xb7e76)[_0x5052fb(0x62c)](Number)[_0x5052fb(0x42e)](function(_0x53dbb5,_0x5e3abd){return _0x53dbb5-_0x5e3abd;});if(!_0x35f2ea[_0x5052fb(0x2d5)])return null;if(void 0x0!==_0xb7e76[_0xc9871f])return{'price':_0xb7e76[_0xc9871f],'exact':!0x0,'tier':_0xc9871f};for(var _0x361be9=0x0;_0x361be9<_0x35f2ea[_0x5052fb(0x2d5)];_0x361be9++)if(_0xc9871f<=_0x35f2ea[_0x361be9])return{'price':_0xb7e76[_0x35f2ea[_0x361be9]],'exact':!0x1,'tier':_0x35f2ea[_0x361be9]};var _0x393d4c=_0x35f2ea[_0x35f2ea[_0x5052fb(0x2d5)]-0x1];return{'price':_0xb7e76[_0x393d4c],'exact':!0x1,'tier':_0x393d4c,'overflow':!0x0};}function _0x326dbe(_0x51a980,_0x5d671b){var _0x50fce0=_0x261343,_0x59920a=_0x30c4ef(_0x51a980);if(!_0x59920a||!_0x59920a[_0x50fce0(0x456)])return null;if(null===_0x5d671b['dn']||isNaN(_0x5d671b['dn']))return null;var _0x9f92be=_0x50fce0(0x6b8)===_0x5d671b[_0x50fce0(0x418)]?_0x59920a[_0x50fce0(0x456)][_0x50fce0(0x6b8)]:_0x59920a[_0x50fce0(0x456)][_0x50fce0(0x73e)];if(!_0x9f92be)return null;var _0x309189=_0x2ab24c(_0x9f92be[_0x50fce0(0x587)],_0x5d671b['dn']);if(!_0x309189)return null;if(_0x9f92be[_0x50fce0(0x269)]&&_0x9f92be[_0x50fce0(0x269)][_0x50fce0(0x315)](_0x309189[_0x50fce0(0x67a)])>=0x0)return{'price':_0x309189[_0x50fce0(0x587)],'source':_0x50fce0(0x567),'basis':'铸铁'+_0x3efe7b[_0x5d671b[_0x50fce0(0x418)]]+_0x50fce0(0x3e8)+_0x5d671b['dn']+(_0x50fce0(0x220)+_0x50fce0(0x48e))+_0x309189[_0x50fce0(0x587)][_0x50fce0(0x620)](0x2)+_0x50fce0(0x403)+(_0x309189[_0x50fce0(0x3d8)]?'':_0x50fce0(0x545)+_0x5d671b['dn']+_0x50fce0(0x6cb)+_0x309189[_0x50fce0(0x67a)]+_0x50fce0(0x546))};var _0xe31b06='铸铁'+_0x3efe7b[_0x5d671b[_0x50fce0(0x418)]]+_0x50fce0(0x3e8)+_0x5d671b['dn']+'：'+_0x9f92be[_0x50fce0(0x5a2)]+'，'+_0x309189[_0x50fce0(0x587)][_0x50fce0(0x620)](0x2)+_0x50fce0(0x615)+(_0x309189[_0x50fce0(0x3d8)]?'':_0x50fce0(0x545)+_0x5d671b['dn']+_0x50fce0(0x6cb)+_0x309189[_0x50fce0(0x67a)]+_0x50fce0(0x43a))+(_0x309189[_0x50fce0(0x215)]?_0x50fce0(0x4ba)+'核对':'');return{'price':_0x309189[_0x50fce0(0x587)],'source':_0x50fce0(0x337),'basis':_0xe31b06};}function _0x49e0b9(_0x9a5700,_0x74a85e){var _0x1613b9=_0x261343,_0x59dd9d=_0x30c4ef(_0x9a5700);if(!_0x59dd9d||!_0x59dd9d[_0x1613b9(0x27d)])return null;if(null===_0x74a85e['dn']||isNaN(_0x74a85e['dn']))return null;var _0x1b3dd8=_0x2ab24c(_0x59dd9d[_0x1613b9(0x27d)][_0x1613b9(0x587)],_0x74a85e['dn']);if(!_0x1b3dd8)return null;var _0x702c93=_0x1613b9(0x40b)+_0x74a85e['dn']+'（'+(_0x1613b9(0x71d)===_0x74a85e[_0x1613b9(0x275)]?'燃气':'给水')+'）：'+_0x59dd9d[_0x1613b9(0x27d)][_0x1613b9(0x5a2)]+'，'+_0x1b3dd8[_0x1613b9(0x587)][_0x1613b9(0x620)](0x2)+_0x1613b9(0x615)+(_0x1b3dd8[_0x1613b9(0x3d8)]?'':_0x1613b9(0x545)+_0x74a85e['dn']+_0x1613b9(0x6cb)+_0x1b3dd8[_0x1613b9(0x67a)]+_0x1613b9(0x43a))+(_0x1b3dd8[_0x1613b9(0x215)]?_0x1613b9(0x4ba)+'核对':'');return{'price':_0x1b3dd8[_0x1613b9(0x587)],'source':_0x1613b9(0x337),'basis':_0x702c93};}function _0x142fe3(_0x231c43,_0x2cbad3){var _0x306016=_0x261343,_0x2cb0e1=_0x30c4ef(_0x231c43);if(!_0x2cb0e1)return null;if(null===_0x2cbad3['dn']||isNaN(_0x2cbad3['dn']))return null;var _0x4e6675=null,_0x5e39b5='';if(_0x306016(0x57a)===_0x2cbad3[_0x306016(0x68d)]?(_0x4e6675=_0x2cb0e1[_0x306016(0x57a)],_0x5e39b5=_0x306016(0x3f4)):_0x306016(0x4b9)===_0x2cbad3[_0x306016(0x68d)]?(_0x4e6675=_0x2cb0e1[_0x306016(0x4b9)],_0x5e39b5=_0x306016(0x1fe)):_0x306016(0x43c)===_0x2cbad3[_0x306016(0x68d)]?(_0x4e6675=_0x2cb0e1[_0x306016(0x43c)],_0x5e39b5='铜管'):_0x306016(0x281)===_0x2cbad3[_0x306016(0x68d)]?(_0x4e6675=_0x2cb0e1[_0x306016(0x281)],_0x5e39b5=_0x306016(0x530)):_0x306016(0x434)===_0x2cbad3[_0x306016(0x68d)]?(_0x4e6675=(_0x2cb0e1[_0x306016(0x434)]||{})[_0x2cbad3[_0x306016(0x3ce)+_0x306016(0x72c)]||_0x306016(0x508)],_0x5e39b5=_0x306016(0x34a)===_0x2cbad3[_0x306016(0x3ce)+_0x306016(0x72c)]?_0x306016(0x2e8):_0x306016(0x2d1)):_0x306016(0x2df)===_0x2cbad3[_0x306016(0x68d)]&&(_0x4e6675=(_0x2cb0e1[_0x306016(0x2df)]||{})[_0x2cbad3[_0x306016(0x3e1)+'d']||_0x306016(0x1fa)],_0x5e39b5={'ppr':_0x306016(0x5ff),'pe':_0x306016(0x4cd),'pvc':_0x306016(0x506),'pvcDrain':_0x306016(0x5c7),'pvdf':_0x306016(0x4b3),'pb':_0x306016(0x3fa)}[_0x2cbad3[_0x306016(0x3e1)+'d']||_0x306016(0x1fa)]),!_0x4e6675||!_0x4e6675[_0x306016(0x587)])return null;var _0x4d71c8=_0x2ab24c(_0x4e6675[_0x306016(0x587)],_0x2cbad3['dn']);if(!_0x4d71c8)return null;var _0x38890f=_0x306016(0x2df)===_0x2cbad3[_0x306016(0x68d)]||_0x306016(0x434)===_0x2cbad3[_0x306016(0x68d)]?'De':'DN';if(_0x4e6675[_0x306016(0x269)]&&_0x4e6675[_0x306016(0x269)][_0x306016(0x315)](_0x4d71c8[_0x306016(0x67a)])>=0x0)return{'price':_0x4d71c8[_0x306016(0x587)],'source':_0x306016(0x567),'basis':_0x5e39b5+'\x20'+_0x38890f+_0x2cbad3['dn']+(_0x306016(0x220)+_0x306016(0x48e))+_0x4d71c8[_0x306016(0x587)][_0x306016(0x620)](0x2)+_0x306016(0x403)+(_0x4d71c8[_0x306016(0x3d8)]?'':_0x306016(0x5cc)+_0x38890f+_0x2cbad3['dn']+_0x306016(0x1db)+_0x38890f+_0x4d71c8[_0x306016(0x67a)]+_0x306016(0x546))};var _0x3db7a1=_0x5e39b5+'\x20'+_0x38890f+_0x2cbad3['dn']+'：'+_0x4e6675[_0x306016(0x5a2)]+'，'+_0x4d71c8[_0x306016(0x587)][_0x306016(0x620)](0x2)+_0x306016(0x615)+(_0x4d71c8[_0x306016(0x3d8)]?'':_0x306016(0x26d)+_0x38890f+_0x2cbad3['dn']+_0x306016(0x1db)+_0x38890f+_0x4d71c8[_0x306016(0x67a)]+_0x306016(0x43a))+(_0x4d71c8[_0x306016(0x215)]?_0x306016(0x4ba)+'核对':'');return{'price':_0x4d71c8[_0x306016(0x587)],'source':_0x306016(0x337),'basis':_0x3db7a1};}function _0x1820ea(_0x1a4459){var _0x4d1742=_0x261343;return _0x1a4459&&(_0x4d1742(0x456)===_0x1a4459[_0x4d1742(0x68d)]||_0x4d1742(0x27d)===_0x1a4459[_0x4d1742(0x68d)]||!!_0x564f17[_0x1a4459[_0x4d1742(0x68d)]]||_0x3d5baa(_0x1a4459[_0x4d1742(0x68d)])||_0x181832(_0x1a4459[_0x4d1742(0x68d)])||_0x5146df(_0x1a4459[_0x4d1742(0x68d)])||!0x0===_0x1a4459[_0x4d1742(0x3d1)]);}var _0x17f873=[_0x261343(0x337),_0x261343(0x42b),_0x261343(0x614),_0x261343(0x645)],_0x33428b=null,_0x5d21fb={},_0x39784f=null,_0x4cf233=null;function _0x487dba(){var _0x2161cf=_0x261343;return _0x2161cf(0x446)!=typeof window&&window[_0x2161cf(0x44d)]?window[_0x2161cf(0x44d)]:null;}function _0x35b64f(){_0x33428b=null,_0x39784f=null,_0x4cf233=null,_0x5d21fb={};}function _0x4809ac(_0xc2df44){var _0x982a32=_0x261343;if(_0xc2df44&&_0xc2df44[_0x982a32(0x542)]&&!(_0x17f873[_0x982a32(0x315)](_0xc2df44[_0x982a32(0x468)+'e'])<0x0)){var _0x4ca6ea=function(_0x3bec10){var _0x480444=_0x982a32,_0x457f1c=String(null==_0x3bec10?'':_0x3bec10)[_0x480444(0x247)]();if(!_0x457f1c)return null;var _0x3f058e=(function(){var _0x46e19e=_0x480444,_0x322d68=_0x487dba(),_0x4d1463=null;try{_0x46e19e(0x446)!=typeof window&&window[_0x46e19e(0x2c5)+'ge']&&(_0x4d1463=window[_0x46e19e(0x2c5)+'ge'][_0x46e19e(0x66f)](_0x46e19e(0x36c)));}catch(_0x197ca4){_0x4d1463=null;}if(_0x33428b&&_0x39784f===_0x322d68&&_0x4cf233===_0x4d1463)return _0x33428b;if(_0x39784f=_0x322d68,_0x4cf233=_0x4d1463,_0x5d21fb={},!_0x322d68)return _0x33428b=[];var _0x59890c=[];if(_0x4d1463)try{var _0x54633f=JSON[_0x46e19e(0x70c)](_0x4d1463);_0x59890c=_0x54633f&&_0x54633f[_0x46e19e(0x709)]||[];}catch(_0x5f4f98){_0x59890c=[];}return _0x33428b=_0x59890c[_0x46e19e(0x6c5)](function(_0x58de95){var _0x303978=_0x46e19e;return _0x58de95&&_0x303978(0x278)===_0x58de95[_0x303978(0x288)];});}());if(Object[_0x480444(0x1e4)][_0x480444(0x549)+_0x480444(0x4a9)][_0x480444(0x5c4)](_0x5d21fb,_0x457f1c))return _0x5d21fb[_0x457f1c];var _0x36278e=_0x487dba(),_0x544334=null,_0x1ff8a6=0x0;if(_0x36278e&&_0x3f058e[_0x480444(0x2d5)]&&_0x36278e[_0x480444(0x632)]&&_0x36278e[_0x480444(0x5a0)])for(var _0x8b4842=_0x36278e[_0x480444(0x632)](_0x457f1c),_0x1c65f9=0x0;_0x1c65f9<_0x3f058e[_0x480444(0x2d5)];_0x1c65f9++){var _0x281762=_0x36278e[_0x480444(0x5a0)](_0x8b4842,_0x36278e[_0x480444(0x632)](_0x3f058e[_0x1c65f9][_0x480444(0x542)]));_0x281762<=0x0||(_0x281762>_0x1ff8a6||_0x281762===_0x1ff8a6&&_0x544334&&String(_0x3f058e[_0x1c65f9][_0x480444(0x25c)])>String(_0x544334[_0x480444(0x25c)]))&&(_0x1ff8a6=_0x281762,_0x544334=_0x3f058e[_0x1c65f9]);}var _0x222e21=_0x544334&&_0x1ff8a6>=0xc?{'item':_0x544334,'score':_0x1ff8a6}:null;return _0x5d21fb[_0x457f1c]=_0x222e21,_0x222e21;}(_0xc2df44[_0x982a32(0x542)]);if(_0x4ca6ea){var _0x5cf877=Number(_0x4ca6ea[_0x982a32(0x395)][_0x982a32(0x587)]);!isFinite(_0x5cf877)||_0x5cf877<=0x0||(_0xc2df44[_0x982a32(0x587)]=_0x5cf877,_0xc2df44[_0x982a32(0x468)+'e']='db',_0xc2df44[_0x982a32(0x327)]=_0x4ca6ea[_0x982a32(0x395)][_0x982a32(0x5a2)]||'',_0xc2df44[_0x982a32(0x442)]=_0x982a32(0x59a)+(_0x4ca6ea[_0x982a32(0x395)][_0x982a32(0x5a2)]||_0x982a32(0x608))+'\x20¥'+_0x5cf877[_0x982a32(0x620)](0x2)+(_0x4ca6ea[_0x982a32(0x395)][_0x982a32(0x25c)]?_0x982a32(0x6f9)+_0x4ca6ea[_0x982a32(0x395)][_0x982a32(0x25c)]+'）':''));}}}function _0x7af238(_0x3564cf,_0x12ee2d){(function(_0x141b0d,_0x250186){var _0x4aabe3=_0xa0f4;if(_0x5146df(_0x141b0d[_0x4aabe3(0x68d)])){var _0x2cddbe=_0x41963d(_0x141b0d);return _0x141b0d[_0x4aabe3(0x587)]=_0x2cddbe[_0x4aabe3(0x587)],_0x141b0d[_0x4aabe3(0x468)+'e']=_0x2cddbe[_0x4aabe3(0x6aa)],_0x141b0d[_0x4aabe3(0x442)]=_0x2cddbe[_0x4aabe3(0x4bb)],void(_0x141b0d[_0x4aabe3(0x327)]=_0x2cddbe[_0x4aabe3(0x5a2)]||'');}if(_0x181832(_0x141b0d[_0x4aabe3(0x68d)])){var _0x21d884=_0x594319(_0x141b0d);return _0x141b0d[_0x4aabe3(0x587)]=_0x21d884[_0x4aabe3(0x587)],_0x141b0d[_0x4aabe3(0x468)+'e']=_0x21d884[_0x4aabe3(0x6aa)],_0x141b0d[_0x4aabe3(0x442)]=_0x21d884[_0x4aabe3(0x4bb)],void(_0x141b0d[_0x4aabe3(0x327)]=_0x21d884[_0x4aabe3(0x5a2)]||'');}if(_0x3d5baa(_0x141b0d[_0x4aabe3(0x68d)])){var _0x412e54=_0x46e50d(_0x141b0d);return _0x141b0d[_0x4aabe3(0x587)]=_0x412e54[_0x4aabe3(0x587)],_0x141b0d[_0x4aabe3(0x468)+'e']=_0x412e54[_0x4aabe3(0x6aa)],_0x141b0d[_0x4aabe3(0x442)]=_0x412e54[_0x4aabe3(0x4bb)],void(_0x141b0d[_0x4aabe3(0x327)]=_0x412e54[_0x4aabe3(0x5a2)]||'');}var _0x36171c=null;!0x0===_0x141b0d[_0x4aabe3(0x3d1)]?_0x36171c=_0x48c40f[_0x4aabe3(0x587)](_0x141b0d):_0x4aabe3(0x456)===_0x141b0d[_0x4aabe3(0x68d)]?_0x36171c=_0x326dbe(_0x250186,_0x141b0d):_0x4aabe3(0x27d)===_0x141b0d[_0x4aabe3(0x68d)]?_0x36171c=_0x49e0b9(_0x250186,_0x141b0d):_0x564f17[_0x141b0d[_0x4aabe3(0x68d)]]&&(_0x36171c=_0x142fe3(_0x250186,_0x141b0d)),_0x36171c?(_0x141b0d[_0x4aabe3(0x587)]=_0x36171c[_0x4aabe3(0x587)],_0x141b0d[_0x4aabe3(0x468)+'e']=_0x36171c[_0x4aabe3(0x6aa)],_0x141b0d[_0x4aabe3(0x442)]=_0x36171c[_0x4aabe3(0x4bb)]):(_0x141b0d[_0x4aabe3(0x587)]=null,_0x141b0d[_0x4aabe3(0x468)+'e']=_0x1820ea(_0x141b0d)?_0x4aabe3(0x42b):'na',_0x141b0d[_0x4aabe3(0x442)]='');}(_0x3564cf,_0x12ee2d),_0x4809ac(_0x3564cf));}function _0x748928(_0x1892ad){var _0x38973d=_0x261343;if(_0x5146df(_0x1892ad[_0x38973d(0x68d)])){var _0x2487ca=[];return _0x2487ca[_0x38973d(0x346)](_0x38973d(0x42a)+_0x1892ad[_0x38973d(0x542)]),_0x2487ca[_0x38973d(0x346)](_0x38973d(0x73c)+_0x664779[_0x1892ad[_0x38973d(0x68d)]][_0x38973d(0x68e)]),_0x664779[_0x1892ad[_0x38973d(0x68d)]][_0x38973d(0x3cd)]&&_0x2487ca[_0x38973d(0x346)](_0x38973d(0x40e)+_0x30f7c5(_0x1892ad)),_0x1892ad[_0x38973d(0x22a)]&&_0x2487ca[_0x38973d(0x346)](_0x38973d(0x6cc)+_0x1892ad[_0x38973d(0x22a)]),_0x2487ca[_0x38973d(0x346)](_0x38973d(0x48a)+(_0x1892ad[_0x38973d(0x327)]||'')),_0x2487ca[_0x38973d(0x346)](_0x38973d(0x72d)+(_0x3c02ba[_0x1892ad[_0x38973d(0x68d)]]||_0x38973d(0x501)+'试水')),_0x2487ca[_0x38973d(0x2ee)]('；');}if(_0x181832(_0x1892ad[_0x38973d(0x68d)])){var _0x1005d2=[];return _0x1005d2[_0x38973d(0x346)](_0x38973d(0x42a)+_0x1892ad[_0x38973d(0x542)]),_0x1005d2[_0x38973d(0x346)](_0x38973d(0x73c)+_0x1a2430[_0x1892ad[_0x38973d(0x68d)]]),_0x38973d(0x3c0)===_0x1892ad[_0x38973d(0x68d)]?(_0x1005d2[_0x38973d(0x346)](_0x38973d(0x37e)+_0x38973d(0x735)),_0x1005d2[_0x38973d(0x346)](_0x38973d(0x39d)+_0x38973d(0x40f)),_0x1005d2[_0x38973d(0x346)](_0x38973d(0x588)+_0x38973d(0x411))):(_0x1892ad['dn']?_0x1005d2[_0x38973d(0x346)](_0x38973d(0x33a)+_0x1892ad['dn']+_0x38973d(0x266)+_0x1892ad[_0x38973d(0x39c)]+'mm'):_0x1005d2[_0x38973d(0x346)](_0x38973d(0x27e)+_0x1892ad[_0x38973d(0x39c)]+'mm'),_0x1005d2[_0x38973d(0x346)](_0x38973d(0x48a)+(_0x1892ad[_0x38973d(0x327)]||'')),_0x1005d2[_0x38973d(0x346)](_0x38973d(0x72d)+(_0x38973d(0x1f7)+'r'===_0x1892ad[_0x38973d(0x68d)]?_0x38973d(0x724)+_0x38973d(0x520):_0x38973d(0x462)+_0x38973d(0x35a)))),_0x1005d2[_0x38973d(0x2ee)]('；');}if(_0x3d5baa(_0x1892ad[_0x38973d(0x68d)])){var _0x363cda=[];return _0x363cda[_0x38973d(0x346)](_0x38973d(0x42a)+_0x1892ad[_0x38973d(0x542)]),_0x363cda[_0x38973d(0x346)](_0x38973d(0x73c)+_0x3726cc[_0x1892ad[_0x38973d(0x68d)]]),_0x1892ad['dn']&&_0x363cda[_0x38973d(0x346)](_0x38973d(0x33a)+_0x1892ad['dn']),_0x363cda[_0x38973d(0x346)](_0x38973d(0x48a)+(_0x1892ad[_0x38973d(0x5a2)]||_0x38973d(0x459))),_0x363cda[_0x38973d(0x346)](_0x38973d(0x72d)+(_0x3fc059[_0x1892ad[_0x38973d(0x68d)]]||'')),_0x363cda[_0x38973d(0x2ee)]('；');}if(!0x0===_0x1892ad[_0x38973d(0x3d1)])return _0x48c40f[_0x38973d(0x27c)](_0x1892ad);var _0x159c75=[];return _0x159c75[_0x38973d(0x346)](_0x38973d(0x3e7)+(_0x38973d(0x291)===_0x1892ad[_0x38973d(0x693)]?'室外':'室内')),_0x159c75[_0x38973d(0x346)](_0x38973d(0x2a0)+(_0x1892ad[_0x38973d(0x2f9)+_0x38973d(0x1d1)]||_0x1892ad[_0x38973d(0x6d0)]||'铸铁')),_0x1892ad['dn']&&_0x159c75[_0x38973d(0x346)](_0x38973d(0x397)+_0xd47966(_0x1892ad)),_0x38973d(0x2df)===_0x1892ad[_0x38973d(0x68d)]&&_0x159c75[_0x38973d(0x346)](_0x38973d(0x58e)+(_0x1892ad[_0x38973d(0x52a)]?'雨水':_0x38973d(0x6b8)===_0x1892ad[_0x38973d(0x418)]?'排水':'给水')),_0x38973d(0x456)===_0x1892ad[_0x38973d(0x68d)]?(_0x159c75[_0x38973d(0x346)](_0x38973d(0x748)),_0x159c75[_0x38973d(0x346)](_0x38973d(0x3bb)+(_0x2fa4ed[_0x1892ad[_0x38973d(0x275)]]||_0x38973d(0x6bb))),_0x159c75[_0x38973d(0x346)](_0x38973d(0x6b8)===_0x1892ad[_0x38973d(0x418)]?_0x38973d(0x225):_0x38973d(0x5be))):_0x38973d(0x27d)===_0x1892ad[_0x38973d(0x68d)]?(_0x159c75[_0x38973d(0x346)](_0x38973d(0x576)),_0x159c75[_0x38973d(0x346)](_0x38973d(0x3bb)+(_0x38973d(0x71d)===_0x1892ad[_0x38973d(0x275)]?_0x38973d(0x4a7)+_0x38973d(0x385):_0x38973d(0x51f)+_0x38973d(0x1f6))),_0x159c75[_0x38973d(0x346)](_0x38973d(0x71d)===_0x1892ad[_0x38973d(0x275)]?_0x38973d(0x6df):_0x38973d(0x5be))):_0x564f17[_0x1892ad[_0x38973d(0x68d)]]&&(_0x159c75[_0x38973d(0x346)](_0x38973d(0x28a)+(_0x1be51b[_0x1892ad[_0x38973d(0x275)]]||'焊接')),_0x38973d(0x71e)===_0x1892ad[_0x38973d(0x275)]?_0x159c75[_0x38973d(0x346)](_0x38973d(0x4e4)):_0x38973d(0x502)!==_0x1892ad[_0x38973d(0x275)]&&_0x38973d(0x22f)!==_0x1892ad[_0x38973d(0x275)]&&_0x38973d(0x4e2)!==_0x1892ad[_0x38973d(0x275)]&&_0x38973d(0x398)!==_0x1892ad[_0x38973d(0x275)]&&_0x38973d(0x5c8)!==_0x1892ad[_0x38973d(0x275)]||_0x159c75[_0x38973d(0x346)](_0x38973d(0x474)),_0x38973d(0x4a6)===_0x1892ad[_0x38973d(0x418)]?_0x159c75[_0x38973d(0x346)](_0x38973d(0x6df)):_0x38973d(0x6b8)===_0x1892ad[_0x38973d(0x418)]?_0x159c75[_0x38973d(0x346)](_0x38973d(0x225)):_0x159c75[_0x38973d(0x346)](_0x38973d(0x24b)+_0x38973d(0x463))),_0x159c75[_0x38973d(0x2ee)]('；');}function _0xc350d0(_0x141583){var _0x50b8ef=_0x261343,_0x5c6636={},_0x23b9a4=[];return(_0x141583||[])[_0x50b8ef(0x5a3)](function(_0x11c329){var _0x125d33=_0x50b8ef;_0x11c329&&!_0x5c6636[_0x11c329]&&(_0x5c6636[_0x11c329]=0x1,_0x23b9a4[_0x125d33(0x346)](_0x11c329));}),_0x23b9a4[_0x50b8ef(0x2ee)]('；');}function _0xab6a7b(_0x125be6,_0x70845b){var _0x55afa6=_0x261343,_0x4bdd2a=[];if(!0x0===_0x125be6[_0x55afa6(0x3d1)]&&!(_0x125be6['dn']>0x0)&&[_0x55afa6(0x38e),_0x55afa6(0x3d5),_0x55afa6(0x53a)][_0x55afa6(0x315)](_0x125be6[_0x55afa6(0x68d)])>=0x0&&_0x4bdd2a[_0x55afa6(0x346)](_0x55afa6(0x29d)+_0x55afa6(0x496)+_0x55afa6(0x50d)),_0x125be6[_0x55afa6(0x605)+_0x55afa6(0x69f)]&&_0x125be6[_0x55afa6(0x2f2)]?(_0x4bdd2a[_0x55afa6(0x346)](_0x55afa6(0x322)+_0x125be6[_0x55afa6(0x2f2)][_0x55afa6(0x44e)]+'）'),_0x125be6[_0x55afa6(0x716)+_0x55afa6(0x441)]&&_0x4bdd2a[_0x55afa6(0x346)](_0x55afa6(0x516)+(_0x1be51b[_0x125be6[_0x55afa6(0x716)+_0x55afa6(0x441)]]||_0x125be6[_0x55afa6(0x716)+_0x55afa6(0x441)])+(_0x55afa6(0x50a)+'明')+_0x125be6[_0x55afa6(0x2f2)][_0x55afa6(0x44e)]+'套用')):_0x125be6[_0x55afa6(0x5aa)+'d']&&_0x125be6[_0x55afa6(0x2f2)]&&_0x125be6[_0x55afa6(0x275)]!==_0x125be6[_0x55afa6(0x2f2)][_0x55afa6(0x275)]?_0x4bdd2a[_0x55afa6(0x346)](_0x55afa6(0x6d6)+(_0x1be51b[_0x125be6[_0x55afa6(0x275)]]||_0x125be6[_0x55afa6(0x275)])+_0x55afa6(0x308)+_0x125be6[_0x55afa6(0x2f2)][_0x55afa6(0x44e)]+'）'):_0x125be6[_0x55afa6(0x70b)+_0x55afa6(0x300)]&&_0x4bdd2a[_0x55afa6(0x346)](_0x55afa6(0x26b)+(_0x125be6[_0x55afa6(0x70b)+_0x55afa6(0x300)+_0x55afa6(0x39f)]||_0x55afa6(0x1de))+(_0x55afa6(0x65d)+_0x55afa6(0x4d4))+(_0x1be51b[_0x125be6[_0x55afa6(0x275)]]||_0x125be6[_0x55afa6(0x275)])+_0x55afa6(0x721)),_0x125be6[_0x55afa6(0x591)+'c']&&_0x4bdd2a[_0x55afa6(0x346)](_0x55afa6(0x24d)+(_0x55afa6(0x291)===_0x125be6[_0x55afa6(0x693)]?'室外':'室内')+'）'),_0x125be6[_0x55afa6(0x3c8)+_0x55afa6(0x6e6)]&&(_0x55afa6(0x4be)===_0x125be6[_0x55afa6(0x676)]?_0x4bdd2a[_0x55afa6(0x346)](_0x55afa6(0x234)+_0x55afa6(0x400)+_0x55afa6(0x444)+_0x55afa6(0x584)):_0x4bdd2a[_0x55afa6(0x346)](_0x55afa6(0x30a)+'（'+(_0x55afa6(0x5ac)===_0x125be6[_0x55afa6(0x706)]?'雨水':_0x55afa6(0x6b8)===_0x125be6[_0x55afa6(0x706)]?'排水':_0x125be6[_0x55afa6(0x52a)]?'雨水':_0x3efe7b[_0x125be6[_0x55afa6(0x418)]])+'）')),_0x5146df(_0x125be6[_0x55afa6(0x68d)])){var _0x3e0f06=_0x664779[_0x125be6[_0x55afa6(0x68d)]];return _0x3e0f06[_0x55afa6(0x3cd)]&&!_0x125be6[_0x55afa6(0x61a)+_0x55afa6(0x313)]&&_0x4bdd2a[_0x55afa6(0x346)](_0x55afa6(0x4b4)+_0x30f7c5(_0x125be6)+(_0x55afa6(0x2cb)+_0x55afa6(0x407))+_0x3e0f06[_0x55afa6(0x3cd)][_0x55afa6(0x62c)](function(_0x399f8a){return _0x399f8a['l'];})[_0x55afa6(0x2ee)](_0x55afa6(0x1e8))+'）'),_0x3e0f06[_0x55afa6(0x564)]&&!_0x125be6[_0x55afa6(0x389)]&&_0x4bdd2a[_0x55afa6(0x346)](_0x55afa6(0x489)+_0x55afa6(0x55d)+_0x3e0f06[_0x55afa6(0x551)]+'（'+_0x70845b[_0x55afa6(0x1e2)]+(_0x55afa6(0x2b5)+_0x55afa6(0x553))),_0x3e0f06[_0x55afa6(0x564)]&&_0x125be6[_0x55afa6(0x389)]&&_0x70845b[_0x55afa6(0x22a)]&&_0x70845b[_0x55afa6(0x22a)]!==_0x125be6[_0x55afa6(0x389)]&&_0x4bdd2a[_0x55afa6(0x346)]('DN'+_0x125be6[_0x55afa6(0x389)]+(_0x55afa6(0x412)+'N')+_0x70845b[_0x55afa6(0x22a)]+_0x55afa6(0x369)),_0x3e0f06[_0x55afa6(0x5fe)]&&!_0x125be6[_0x55afa6(0x389)]&&_0x4bdd2a[_0x55afa6(0x346)](_0x55afa6(0x489)+_0x55afa6(0x2c2)+_0x55afa6(0x3c6)),_0xc350d0(_0x4bdd2a);}if(_0x55afa6(0x3c0)===_0x125be6[_0x55afa6(0x68d)])return _0x4bdd2a[_0x55afa6(0x346)](_0x55afa6(0x2b4)+_0x55afa6(0x4b2)+_0x55afa6(0x38c)+_0x55afa6(0x4d8)+_0x55afa6(0x366)+_0x55afa6(0x4c4)),_0xc350d0(_0x4bdd2a);if(_0x55afa6(0x1f7)+'r'===_0x125be6[_0x55afa6(0x68d)]||_0x55afa6(0x3eb)===_0x125be6[_0x55afa6(0x68d)])return _0x4bdd2a[_0x55afa6(0x346)]((_0x55afa6(0x1f7)+'r'===_0x125be6[_0x55afa6(0x68d)]?_0x55afa6(0x458):_0x55afa6(0x565))+(_0x55afa6(0x238)+_0x55afa6(0x457))+_0x125be6[_0x55afa6(0x39c)]+(_0x55afa6(0x5e5)+_0x55afa6(0x2f6)+_0x55afa6(0x45b)+_0x55afa6(0x633)+_0x55afa6(0x423))),_0xc350d0(_0x4bdd2a);if(_0x3d5baa(_0x125be6[_0x55afa6(0x68d)]))return _0x125be6['dn']||_0x55afa6(0x236)===_0x125be6[_0x55afa6(0x68d)]||_0x4bdd2a[_0x55afa6(0x346)](_0x55afa6(0x58c)+_0x55afa6(0x5b2)+_0x55afa6(0x699)+_0x70845b[_0x55afa6(0x1e2)]+_0x55afa6(0x31a)),_0x70845b[_0x55afa6(0x627)]&&_0x4bdd2a[_0x55afa6(0x346)](_0x55afa6(0x34f)+_0x55afa6(0x2cf)+_0x70845b[_0x55afa6(0x1e2)]+_0x55afa6(0x4fa)),_0x55afa6(0x236)===_0x125be6[_0x55afa6(0x68d)]&&_0x4bdd2a[_0x55afa6(0x346)](_0x55afa6(0x31b)+_0x55afa6(0x507)+_0x55afa6(0x2b1)+_0x55afa6(0x1ff)),_0x55afa6(0x593)!==_0x125be6[_0x55afa6(0x68d)]||_0x125be6[_0x55afa6(0x5a2)]||_0x4bdd2a[_0x55afa6(0x346)](_0x55afa6(0x33f)+_0x55afa6(0x6eb)),_0xc350d0(_0x4bdd2a);if(!0x0===_0x125be6[_0x55afa6(0x3d1)]){var _0x171a76=_0x48c40f[_0x55afa6(0x617)](_0x125be6,_0x70845b);return _0x171a76&&_0x4bdd2a[_0x55afa6(0x346)](_0x171a76),_0xc350d0(_0x4bdd2a);}if(!_0x1820ea(_0x125be6))return _0x4bdd2a[_0x55afa6(0x346)](_0x55afa6(0x4de)+_0x125be6[_0x55afa6(0x6d0)]+(_0x55afa6(0x562)+_0x55afa6(0x2e4)+_0x55afa6(0x255))),_0xc350d0(_0x4bdd2a);if((null===_0x125be6['dn']||void 0x0===_0x125be6['dn']||isNaN(_0x125be6['dn']))&&_0x4bdd2a[_0x55afa6(0x346)](_0x55afa6(0x2b7)+_0x55afa6(0x45f)+_0x55afa6(0x6ec)+_0x55afa6(0x24e)),_0x125be6[_0x55afa6(0x1f9)+_0x55afa6(0x71c)]){var _0x4f1d56=_0x1be51b[_0x125be6[_0x55afa6(0x1f9)+_0x55afa6(0x71c)]]||_0x2fa4ed[_0x125be6[_0x55afa6(0x1f9)+_0x55afa6(0x71c)]]||_0x55afa6(0x1de),_0x466232=_0x1be51b[_0x125be6[_0x55afa6(0x275)]]||_0x2fa4ed[_0x125be6[_0x55afa6(0x275)]]||_0x55afa6(0x6a2),_0x5c2611=_0x125be6[_0x55afa6(0x52a)]?'雨水':_0x3efe7b[_0x125be6[_0x55afa6(0x418)]];_0x4bdd2a[_0x55afa6(0x346)]('所选'+_0x56ba78[_0x125be6[_0x55afa6(0x693)]]+_0x5c2611+'无'+_0x4f1d56+_0x55afa6(0x471)+_0x466232+_0x55afa6(0x721));}if(_0x55afa6(0x27d)===_0x125be6[_0x55afa6(0x68d)]&&_0x55afa6(0x71d)===_0x125be6[_0x55afa6(0x275)]){var _0x5b3da3=_0x55afa6(0x291)===_0x125be6[_0x55afa6(0x693)]?_0x55afa6(0x719):_0x55afa6(0x69e);null!==_0x125be6['dn']&&(_0x55afa6(0x291)===_0x125be6[_0x55afa6(0x693)]?_0x125be6['dn']<0x19||_0x125be6['dn']>0x32:_0x125be6['dn']<0xf||_0x125be6['dn']>0x64)&&_0x4bdd2a[_0x55afa6(0x346)](_0x55afa6(0x336)+_0x56ba78[_0x125be6[_0x55afa6(0x693)]]+_0x55afa6(0x682)+_0x5b3da3+_0x55afa6(0x55c)+_0x125be6['dn']+_0x55afa6(0x1dc));}return null!==_0x125be6['dn']&&_0x70845b&&_0x70845b[_0x55afa6(0x1e2)]&&_0x70845b[_0x55afa6(0x22a)]&&_0x70845b[_0x55afa6(0x22a)]!==_0x125be6['dn']&&_0x4bdd2a[_0x55afa6(0x346)]('DN'+_0x125be6['dn']+_0x55afa6(0x2d2)+_0x70845b[_0x55afa6(0x22a)]+_0x55afa6(0x369)),_0x564f17[_0x125be6[_0x55afa6(0x68d)]]&&(_0x55afa6(0x43c)===_0x125be6[_0x55afa6(0x68d)]&&_0x55afa6(0x291)===_0x125be6[_0x55afa6(0x693)]&&_0x4bdd2a[_0x55afa6(0x346)](_0x55afa6(0x432)+_0x55afa6(0x35e)+_0x55afa6(0x6a6)),_0x55afa6(0x291)===_0x125be6[_0x55afa6(0x693)]&&_0x55afa6(0x71e)===_0x125be6[_0x55afa6(0x275)]&&_0x4bdd2a[_0x55afa6(0x346)](_0x55afa6(0x4b7)+_0x55afa6(0x4da)+_0x55afa6(0x57e)),_0x55afa6(0x2df)===_0x125be6[_0x55afa6(0x68d)]&&(_0x125be6[_0x55afa6(0x746)+_0x55afa6(0x53d)]||_0x125be6[_0x55afa6(0x5aa)+'d']||_0x125be6[_0x55afa6(0x605)+_0x55afa6(0x69f)]||_0x4bdd2a[_0x55afa6(0x346)](_0x55afa6(0x294)+'已按'+(_0x1be51b[_0x125be6[_0x55afa6(0x275)]]||'粘接')+(_0x55afa6(0x1e7)+_0x55afa6(0x244))),_0x55afa6(0x34b)===_0x125be6[_0x55afa6(0x275)]&&_0x4bdd2a[_0x55afa6(0x346)](_0x55afa6(0x519)+_0x55afa6(0x254)+_0x55afa6(0x382)+_0x55afa6(0x686)),_0x55afa6(0x291)===_0x125be6[_0x55afa6(0x693)]&&_0x125be6[_0x55afa6(0x4a0)+'me']&&_0x4bdd2a[_0x55afa6(0x346)](_0x55afa6(0x4c5)+_0x55afa6(0x296)+_0x55afa6(0x6be)+_0x55afa6(0x667)+'核对')),_0x55afa6(0x71e)===_0x125be6[_0x55afa6(0x275)]&&_0x4bdd2a[_0x55afa6(0x346)](_0x55afa6(0x47f)+'额'+((_0x125be6[_0x55afa6(0x381)]||[])[0x0]?'\x20'+_0x125be6[_0x55afa6(0x381)][0x0][_0x55afa6(0x1e2)]:'')+(_0x55afa6(0x241)+'估算')),_0x55afa6(0x4a6)===_0x125be6[_0x55afa6(0x418)]&&_0x4bdd2a[_0x55afa6(0x346)](_0x55afa6(0x3d3)+_0x55afa6(0x318)+_0x55afa6(0x4e5)),_0x55afa6(0x6b8)===_0x125be6[_0x55afa6(0x418)]&&_0x4bdd2a[_0x55afa6(0x346)](_0x55afa6(0x3c1)+_0x55afa6(0x373)+_0x55afa6(0x63d)+'充')),_0x125be6[_0x55afa6(0x1f8)+_0x55afa6(0x4ea)]&&!_0x125be6[_0x55afa6(0x3c8)+_0x55afa6(0x6e6)]&&(_0x55afa6(0x27d)===_0x125be6[_0x55afa6(0x68d)]?_0x4bdd2a[_0x55afa6(0x346)](_0x55afa6(0x206)+_0x55afa6(0x5a4)+_0x55afa6(0x58d)+'方式'):_0x55afa6(0x2df)===_0x125be6[_0x55afa6(0x68d)]?_0x4bdd2a[_0x55afa6(0x346)](_0x55afa6(0x3db)+'，按'+_0x3efe7b[_0x125be6[_0x55afa6(0x418)]]+(_0x55afa6(0x665)+_0x55afa6(0x720)+_0x55afa6(0x4ed))):_0x4bdd2a[_0x55afa6(0x346)](_0x55afa6(0x3db)+'，按'+_0x3efe7b[_0x125be6[_0x55afa6(0x418)]]+(_0x55afa6(0x568)+_0x55afa6(0x669)))),_0x125be6[_0x55afa6(0x46e)+'us']&&!_0x125be6[_0x55afa6(0x591)+'c']&&_0x4bdd2a[_0x55afa6(0x346)](_0x55afa6(0x72a)+_0x55afa6(0x201)+_0x55afa6(0x443)),_0x125be6[_0x55afa6(0x469)]&&_0x4bdd2a[_0x55afa6(0x346)](_0x55afa6(0x651)+_0x55afa6(0x598)),_0xc350d0(_0x4bdd2a);}function _0x1c325e(_0x3b08a1,_0x5c1641,_0x6ec2df){var _0x37f26e=_0x261343;for(var _0x5e642a=[],_0x191335=0x0,_0xa73adb='',_0x5b4d13=0x0;_0x5b4d13<_0x3b08a1[_0x37f26e(0x2d5)];_0x5b4d13++){var _0x13340a=_0x3b08a1[_0x5b4d13]||[],_0x40a3e0=_0x13340a[0x1],_0x5ef566=null==_0x40a3e0?'':String(_0x40a3e0)[_0x37f26e(0x247)]();if(_0x5ef566&&!(/序号/[_0x37f26e(0x528)](String(_0x13340a[0x0]||''))&&/名称/[_0x37f26e(0x528)](_0x5ef566)||/项目名称|管道名称|名称规格/[_0x37f26e(0x528)](_0x5ef566)&&!/\d/[_0x37f26e(0x528)](_0x5ef566)&&_0x5b4d13<0x5)){if(parseFloat(_0x13340a[0x2])>0x0||/\d/[_0x37f26e(0x528)](_0x5ef566)||''!==String(void 0x0===_0x13340a[0x0]||null===_0x13340a[0x0]?'':_0x13340a[0x0])[_0x37f26e(0x247)]()){var _0xbe349e=_0x6945a6(_0x5ef566);if(_0xbe349e){_0x191335++;var _0x5494f0=_0x13340a[0x0];_0xbe349e[_0x37f26e(0x618)]=null!=_0x5494f0&&''!==String(_0x5494f0)[_0x37f26e(0x247)]()?String(_0x5494f0)[_0x37f26e(0x247)]():String(_0x191335);var _0x2c51bb=_0x13340a[0x2],_0x53b2d1=parseFloat(_0x2c51bb);_0xbe349e[_0x37f26e(0x469)]=!0x1,(isNaN(_0x53b2d1)||_0x53b2d1<=0x0)&&(_0x53b2d1=0x1,_0xbe349e[_0x37f26e(0x469)]=!0x0);var _0x1cd7a2=void 0x0===_0x13340a[0x3]||null===_0x13340a[0x3]?'':String(_0x13340a[0x3])[_0x37f26e(0x247)]();if(_0x37f26e(0x1f7)+'r'===_0xbe349e[_0x37f26e(0x68d)]||_0x37f26e(0x3eb)===_0xbe349e[_0x37f26e(0x68d)]){var _0xd305bc=(_0xbe349e[_0x37f26e(0x39c)]||0x1e)/0x3e8;/m²|㎡|平方米|平米/[_0x37f26e(0x528)](_0x1cd7a2)?(_0x53b2d1*=_0xd305bc,_0xbe349e[_0x37f26e(0x673)]='m²'):/^(m|米|延米|延长米)$/[_0x37f26e(0x528)](_0x1cd7a2)&&_0xbe349e['dn']&&(_0x53b2d1=Math['PI']*(_0xbe349e['dn']/0x3e8+_0xd305bc)*_0xd305bc*_0x53b2d1,_0xbe349e[_0x37f26e(0x673)]='m'),_0x53b2d1=Math[_0x37f26e(0x696)](0x3e8*_0x53b2d1)/0x3e8;}_0xbe349e[_0x37f26e(0x687)]=_0x53b2d1;var _0x256267=_0x4fa3c5(_0xbe349e);_0xbe349e[_0x37f26e(0x4aa)]=_0x256267[_0x37f26e(0x1e2)],_0xbe349e[_0x37f26e(0x51c)]=_0x256267[_0x37f26e(0x542)],_0xbe349e[_0x37f26e(0x6ad)]=_0x256267[_0x37f26e(0x29f)]||_0xbe349e[_0x37f26e(0x29f)],_0xbe349e[_0x37f26e(0x422)+'r']=_0x256267[_0x37f26e(0x58f)]||0x1,_0xbe349e[_0x37f26e(0x2de)+'ed']=!!_0x256267[_0x37f26e(0x59c)],_0xbe349e[_0x37f26e(0x22a)]=_0x256267[_0x37f26e(0x22a)]||null,_0xbe349e[_0x37f26e(0x381)]=_0x5d7763(_0xbe349e,_0x256267),_0xbe349e[_0x37f26e(0x617)]=_0xab6a7b(_0xbe349e,_0x256267),_0x7af238(_0xbe349e,_0x5c1641),_0xbe349e[_0x37f26e(0x2a4)]=_0x748928(_0xbe349e),_0xbe349e[_0x37f26e(0x5bb)]=_0xa73adb,_0x5e642a[_0x37f26e(0x346)](_0xbe349e);}}else _0xa73adb=_0x5ef566;}}for(var _0x497c10,_0x4c672b=_0x3d33e3(_0x5e642a),_0x3f6f22=!0x1,_0x22e43d=0x0;_0x22e43d<_0x4c672b[_0x37f26e(0x2d5)];_0x22e43d++)_0x4c672b[_0x22e43d][_0x37f26e(0x21e)]&&(_0x3f6f22=!0x0);if(_0x3f6f22){for(var _0x265dbd=0x0;_0x265dbd<_0x4c672b[_0x37f26e(0x2d5)];_0x265dbd++)_0x4c672b[_0x265dbd][_0x37f26e(0x618)]=String(_0x265dbd+0x1);}return _0x4c672b[_0x37f26e(0x517)]=_0x5c1641,_0x4c672b[_0x37f26e(0x571)]=_0x6ec2df,_0x497c10=_0x4c672b,_0x35b64f(),(_0x497c10||[])[_0x37f26e(0x5a3)](_0x4809ac),_0x4c672b;}function _0x47dc42(_0x3dfac0){var _0x473593=_0x261343,_0x1618f4=_0x4fa3c5(_0x3dfac0);_0x3dfac0[_0x473593(0x4aa)]=_0x1618f4[_0x473593(0x1e2)],_0x3dfac0[_0x473593(0x51c)]=_0x1618f4[_0x473593(0x542)],_0x3dfac0[_0x473593(0x6ad)]=_0x1618f4[_0x473593(0x29f)]||_0x3dfac0[_0x473593(0x29f)],_0x3dfac0[_0x473593(0x422)+'r']=_0x1618f4[_0x473593(0x58f)]||0x1,_0x3dfac0[_0x473593(0x2de)+'ed']=!!_0x1618f4[_0x473593(0x59c)],_0x3dfac0[_0x473593(0x22a)]=_0x1618f4[_0x473593(0x22a)]||null,_0x3dfac0[_0x473593(0x381)]=_0x5d7763(_0x3dfac0,_0x1618f4),_0x3dfac0[_0x473593(0x617)]=_0xab6a7b(_0x3dfac0,_0x1618f4);}function _0x2245c7(_0x14a24e){var _0x3bdadf=_0x261343;return _0x14a24e?(null===_0x14a24e[_0x3bdadf(0x587)]||void 0x0===_0x14a24e[_0x3bdadf(0x587)]?0x0:(_0x14a24e[_0x3bdadf(0x587)]+(_0x14a24e[_0x3bdadf(0x25b)]&&_0x14a24e[_0x3bdadf(0x25b)][_0x3bdadf(0x587)]?_0x14a24e[_0x3bdadf(0x25b)][_0x3bdadf(0x587)]:0x0))*_0x14a24e[_0x3bdadf(0x687)])+function(_0x10e05e){var _0x438b91=_0x3bdadf,_0x18bf77=0x0;return(_0x10e05e&&_0x10e05e[_0x438b91(0x381)]||[])[_0x438b91(0x5a3)](function(_0xae09ab){var _0x32bca1=_0x438b91;_0xae09ab&&_0xae09ab[_0x32bca1(0x4ce)]&&_0xae09ab[_0x32bca1(0x4ce)][_0x32bca1(0x587)]&&(_0x18bf77+=_0xae09ab[_0x32bca1(0x4ce)][_0x32bca1(0x587)]*(_0xae09ab[_0x32bca1(0x5e6)]||0x0));}),_0x18bf77;}(_0x14a24e):0x0;}function _0x5e3c38(_0x175391){var _0x334126=_0x261343;return String(null==_0x175391?'':_0x175391)[_0x334126(0x6d2)](/[&<>"']/g,function(_0x13f977){var _0x2ce27e=_0x334126;return{'&':_0x2ce27e(0x45c),'<':_0x2ce27e(0x613),'>':_0x2ce27e(0x246),'\x22':_0x2ce27e(0x1ed),'\x27':_0x2ce27e(0x4c7)}[_0x13f977];});}function _0x38f8f9(_0x31da29,_0x5b7b60,_0x80b88b){var _0x3eb7c2=_0x261343;return _0x3eb7c2(0x2bf)+_0x3eb7c2(0x66e)+_0x31da29+'\x22'+(_0x31da29===_0x5b7b60?_0x3eb7c2(0x4e9):'')+'>'+_0x80b88b+_0x3eb7c2(0x626);}function _0xb56662(_0x3bb9df,_0xcd2099,_0x2c1fda){var _0x53b20f=_0x261343;return _0x53b20f(0x644)+_0x53b20f(0x6d5)+_0x53b20f(0x4a3)+_0x53b20f(0x5f2)+_0x3bb9df+(_0x53b20f(0x2f4)+'=\x22')+_0xcd2099+'\x22>'+_0x2c1fda+_0x53b20f(0x22e);}function _0xd47966(_0x220b77){var _0x330358=_0x261343;if(_0x5146df(_0x220b77[_0x330358(0x68d)])){var _0x1a36ee=_0x664779[_0x220b77[_0x330358(0x68d)]];return _0x1a36ee[_0x330358(0x3cd)]?_0x30f7c5(_0x220b77)||'成套':_0x1a36ee[_0x330358(0x564)]?'DN'+(_0x220b77[_0x330358(0x22a)]||_0x1a36ee[_0x330358(0x551)]):_0x1a36ee[_0x330358(0x5fe)]?(_0x330358(0x69c)===_0x220b77[_0x330358(0x708)]?_0x330358(0x30c):_0x330358(0x678))+_0x330358(0x3f9)+(_0x220b77[_0x330358(0x22a)]||0x64):'成套';}return _0x181832(_0x220b77[_0x330358(0x68d)])?_0x330358(0x3c0)===_0x220b77[_0x330358(0x68d)]?'—':(_0x220b77['dn']?'DN'+_0x220b77['dn']+'\x20':'')+'δ'+_0x220b77[_0x330358(0x39c)]:_0x3d5baa(_0x220b77[_0x330358(0x68d)])?_0x220b77['dn']?'DN'+_0x220b77['dn']:_0x330358(0x236)===_0x220b77[_0x330358(0x68d)]?'成套':'—':!0x0===_0x220b77[_0x330358(0x3d1)]?_0x48c40f[_0x330358(0x28c)](_0x220b77):null===_0x220b77['dn']||void 0x0===_0x220b77['dn']||isNaN(_0x220b77['dn'])?'—':(_0x330358(0x2df)===_0x220b77[_0x330358(0x68d)]||_0x330358(0x434)===_0x220b77[_0x330358(0x68d)]||_0x330358(0x43c)===_0x220b77[_0x330358(0x68d)]?'De':'DN')+_0x220b77['dn'];}function _0x2fc863(_0x498a55){var _0x4d4fc4=_0x261343;_0x283c32(_0x498a55);var _0x5f365f=document[_0x4d4fc4(0x738)+_0x4d4fc4(0x252)](_0x4d4fc4(0x29b));_0x5f365f[_0x4d4fc4(0x3f2)]='',_0x498a55[_0x4d4fc4(0x5a3)](function(_0x4198a2,_0x1e5e85){var _0x773b4f=_0x4d4fc4;_0x4198a2['_i']=_0x1e5e85;var _0x3462f0=document[_0x773b4f(0x3a4)+_0x773b4f(0x49a)]('tr');_0x4198a2[_0x773b4f(0x617)]&&(_0x3462f0[_0x773b4f(0x37f)]=_0x773b4f(0x383)),_0x3462f0[_0x773b4f(0x3f2)]=_0x773b4f(0x379)+_0x5e3c38(_0x4198a2[_0x773b4f(0x618)])+(_0x773b4f(0x377)+_0x773b4f(0x2a3)+_0x773b4f(0x4e6))+(_0x4198a2[_0x773b4f(0x2fe)]||_0x4198a2[_0x773b4f(0x280)]||'—')+(_0x773b4f(0x377)+_0x773b4f(0x3b6)+_0x773b4f(0x55b)+_0x773b4f(0x2e0))+_0x5e3c38(_0x4198a2[_0x773b4f(0x542)])+'\x22>'+_0x5e3c38(_0x4198a2[_0x773b4f(0x542)])+_0x773b4f(0x5c0)+function(_0x4834a1){var _0x23fc56=_0x773b4f;if(_0x5146df(_0x4834a1[_0x23fc56(0x68d)])){var _0x28b853=_0x664779[_0x4834a1[_0x23fc56(0x68d)]];if(_0x28b853[_0x23fc56(0x3cd)])return _0xb56662(_0x23fc56(0x6ee),_0x4834a1['_i'],_0x28b853[_0x23fc56(0x3cd)][_0x23fc56(0x62c)](function(_0x1c5585){var _0x375dbd=_0x23fc56;return _0x38f8f9(_0x1c5585['k'],_0x4834a1[_0x375dbd(0x582)],_0x1c5585['l']);})[_0x23fc56(0x2ee)](''));if(_0x28b853[_0x23fc56(0x5fe)])return _0xb56662(_0x23fc56(0x1d6),_0x4834a1['_i'],_0x38f8f9(_0x23fc56(0x61f),_0x4834a1[_0x23fc56(0x708)],_0x23fc56(0x678))+_0x38f8f9(_0x23fc56(0x69c),_0x4834a1[_0x23fc56(0x708)],_0x23fc56(0x30c)));if(_0x28b853[_0x23fc56(0x564)]){var _0x33dc7d=String(_0x4834a1[_0x23fc56(0x22a)]||_0x28b853[_0x23fc56(0x551)]);return _0xb56662(_0x23fc56(0x6ee),_0x4834a1['_i'],_0x28b853[_0x23fc56(0x564)][_0x23fc56(0x62c)](function(_0x1ad321){var _0x562af6=_0x23fc56;return _0x38f8f9(String(_0x1ad321[_0x562af6(0x5f0)]),_0x33dc7d,'DN'+_0x1ad321[_0x562af6(0x5f0)]+'以内');})[_0x23fc56(0x2ee)](''));}return _0x23fc56(0x485)+_0x23fc56(0x5d2)+_0x23fc56(0x22d)+_0x23fc56(0x3e2);}if(_0x181832(_0x4834a1[_0x23fc56(0x68d)]))return _0x23fc56(0x485)+_0x23fc56(0x5d2)+_0x23fc56(0x22d)+_0x23fc56(0x3e2);if(_0x3d5baa(_0x4834a1[_0x23fc56(0x68d)]))return _0x23fc56(0x485)+_0x23fc56(0x5d2)+_0x23fc56(0x22d)+_0x23fc56(0x3e2);if(!0x0===_0x4834a1[_0x23fc56(0x3d1)])return _0x48c40f[_0x23fc56(0x3d6)](_0x4834a1)?_0xb56662(_0x23fc56(0x207),_0x4834a1['_i'],_0x48c40f[_0x23fc56(0x3cd)](_0x4834a1)[_0x23fc56(0x62c)](function(_0x4d3953){var _0x141f7b=_0x23fc56;return _0x38f8f9(_0x4d3953['k'],_0x4834a1[_0x141f7b(0x583)],_0x4d3953['l']);})[_0x23fc56(0x2ee)]('')):_0x23fc56(0x485)+_0x23fc56(0x5d2)+_0x23fc56(0x22d)+_0x23fc56(0x3e2);if(!_0x1820ea(_0x4834a1))return _0x23fc56(0x485)+_0x23fc56(0x5d2)+_0x23fc56(0x1dd)+_0x23fc56(0x28f);var _0x4b06b1=_0x38f8f9('in',_0x4834a1[_0x23fc56(0x693)],'室内')+_0x38f8f9(_0x23fc56(0x291),_0x4834a1[_0x23fc56(0x693)],'室外'),_0x23ba19=_0x12e184(_0x4834a1)[_0x23fc56(0x62c)](function(_0x10384f){var _0x3a7173=_0x23fc56;return _0x38f8f9(_0x10384f,_0x4834a1[_0x3a7173(0x275)],_0x1be51b[_0x10384f]||_0x2fa4ed[_0x10384f]||_0x10384f);})[_0x23fc56(0x2ee)]('');if(_0x23fc56(0x2df)===_0x4834a1[_0x23fc56(0x68d)]){var _0x2d4637='';if(_0x23fc56(0x291)!==_0x4834a1[_0x23fc56(0x693)]){var _0x445b2d=_0x5c2075(_0x4834a1);_0x2d4637=_0xb56662(_0x23fc56(0x418),_0x4834a1['_i'],[_0x23fc56(0x5ac),_0x23fc56(0x6b8),_0x23fc56(0x73e)][_0x23fc56(0x62c)](function(_0x183856){return _0x38f8f9(_0x183856,_0x445b2d,_0x592854[_0x183856]);})[_0x23fc56(0x2ee)](''));}return _0x23fc56(0x595)+_0x23fc56(0x652)+_0x23fc56(0x480)+_0xb56662(_0x23fc56(0x693),_0x4834a1['_i'],_0x4b06b1)+_0x2d4637+_0xb56662(_0x23fc56(0x275),_0x4834a1['_i'],_0x23ba19)+_0x23fc56(0x53e);}return _0x23fc56(0x595)+_0x23fc56(0x652)+_0x23fc56(0x480)+_0xb56662(_0x23fc56(0x693),_0x4834a1['_i'],_0x4b06b1)+_0xb56662(_0x23fc56(0x275),_0x4834a1['_i'],_0x23ba19)+_0x23fc56(0x53e);}(_0x4198a2)+(_0x773b4f(0x377)+_0x773b4f(0x3b6)+_0x773b4f(0x6ab)+_0x773b4f(0x267)+_0x773b4f(0x5f1))+_0x5e3c38(_0x4198a2[_0x773b4f(0x2a4)]||'')+'\x22>'+_0x5e3c38(_0x4198a2[_0x773b4f(0x2a4)]||'—')+(_0x773b4f(0x377)+_0x773b4f(0x3b6)+_0x773b4f(0x681))+(_0x4198a2[_0x773b4f(0x4aa)]||'—')+(_0x4198a2[_0x773b4f(0x6e3)]?_0x773b4f(0x653)+_0x773b4f(0x1df)+_0x773b4f(0x3ab)+_0x773b4f(0x28f):'')+'\x20'+(_0x4198a2[_0x773b4f(0x2de)+'ed']?_0x773b4f(0x485)+_0x773b4f(0x3ca)+_0x773b4f(0x307)+_0x773b4f(0x376)+_0x773b4f(0x2e1)+_0x773b4f(0x6d9)+_0x773b4f(0x4f1)+_0x773b4f(0x5ae):'')+(_0x773b4f(0x377)+_0x773b4f(0x3b6)+_0x773b4f(0x515)+_0x773b4f(0x415))+_0x5e3c38(_0x4198a2[_0x773b4f(0x51c)]+(_0x4198a2[_0x773b4f(0x381)]&&_0x4198a2[_0x773b4f(0x381)][_0x773b4f(0x2d5)]?_0x773b4f(0x579)+_0x4198a2[_0x773b4f(0x381)][_0x773b4f(0x62c)](function(_0xa63320){var _0x539ce3=_0x773b4f;return _0xa63320[_0x539ce3(0x1e2)]+'\x20'+_0xa63320[_0x539ce3(0x542)];})[_0x773b4f(0x2ee)](_0x773b4f(0x579)):''))+'\x22>'+_0x5e3c38(_0x4198a2[_0x773b4f(0x51c)]||'—')+(_0x4198a2[_0x773b4f(0x381)]&&_0x4198a2[_0x773b4f(0x381)][_0x773b4f(0x2d5)]?_0x4198a2[_0x773b4f(0x381)][_0x773b4f(0x62c)](function(_0x7c3028){var _0x36f2c8=_0x773b4f;return _0x36f2c8(0x410)+_0x36f2c8(0x2e5)+_0x36f2c8(0x726)+'>＋'+_0x7c3028[_0x36f2c8(0x1e2)]+(_0x36f2c8(0x248)+_0x36f2c8(0x211)+_0x36f2c8(0x499)+_0x36f2c8(0x6fd)+_0x36f2c8(0x616)+'>')+_0x5e3c38(_0x7c3028[_0x36f2c8(0x542)][_0x36f2c8(0x6d2)](/^.*?管道\s*/,''))+_0x36f2c8(0x5f6);})[_0x773b4f(0x2ee)](''):'')+(_0x773b4f(0x377)+_0x773b4f(0x3b6)+_0x773b4f(0x5d8))+function(_0x4a3f46){var _0x3b986f=_0x773b4f;if(!_0x1820ea(_0x4a3f46))return _0x3b986f(0x485)+_0x3b986f(0x3ca)+_0x3b986f(0x298)+_0x3b986f(0x28f);if(null===_0x4a3f46[_0x3b986f(0x587)])return _0x3b986f(0x485)+_0x3b986f(0x3ca)+_0x3b986f(0x728)+_0x3b986f(0x25a);var _0x25edc7=_0x4a3f46[_0x3b986f(0x442)]?_0x3b986f(0x5fc)+String(_0x4a3f46[_0x3b986f(0x442)])[_0x3b986f(0x6d2)](/"/g,_0x3b986f(0x1ed))+'\x22':'';return _0x3b986f(0x645)===_0x4a3f46[_0x3b986f(0x468)+'e']?_0x3b986f(0x485)+_0x3b986f(0x3ca)+_0x3b986f(0x65a)+_0x25edc7+(_0x3b986f(0x723)+_0x3b986f(0x251))+_0x25edc7+'>¥'+_0x4a3f46[_0x3b986f(0x587)][_0x3b986f(0x620)](0x2)+_0x3b986f(0x5f6):'db'===_0x4a3f46[_0x3b986f(0x468)+'e']?_0x3b986f(0x485)+_0x3b986f(0x3ca)+_0x3b986f(0x636)+_0x25edc7+(_0x3b986f(0x487)+_0x3b986f(0x323))+_0x25edc7+'>¥'+_0x4a3f46[_0x3b986f(0x587)][_0x3b986f(0x620)](0x2)+_0x3b986f(0x5f6)+(_0x4a3f46[_0x3b986f(0x327)]?_0x3b986f(0x653)+_0x3b986f(0x745)+_0x3b986f(0x733)+_0x3b986f(0x216)+_0x3b986f(0x26c)+_0x5e3c38(_0x4a3f46[_0x3b986f(0x327)])+_0x3b986f(0x5f6):''):_0x3b986f(0x337)===_0x4a3f46[_0x3b986f(0x468)+'e']?_0x3b986f(0x485)+_0x3b986f(0x3ca)+_0x3b986f(0x740)+_0x25edc7+(_0x3b986f(0x5af)+_0x3b986f(0x739))+_0x25edc7+'>¥'+_0x4a3f46[_0x3b986f(0x587)][_0x3b986f(0x620)](0x2)+_0x3b986f(0x5f6)+(_0x4a3f46[_0x3b986f(0x25b)]?_0x3b986f(0x653)+_0x3b986f(0x731)+_0x3b986f(0x6cd)+_0x4a3f46[_0x3b986f(0x25b)][_0x3b986f(0x587)][_0x3b986f(0x620)](0x3)+_0x3b986f(0x5f6):''):_0x3b986f(0x674)===_0x4a3f46[_0x3b986f(0x468)+'e']?_0x3b986f(0x485)+_0x3b986f(0x3ca)+_0x3b986f(0x5f5)+_0x25edc7+(_0x3b986f(0x50e)+_0x3b986f(0x739))+_0x25edc7+'>¥'+_0x4a3f46[_0x3b986f(0x587)][_0x3b986f(0x620)](0x2)+_0x3b986f(0x5f6)+(_0x4a3f46[_0x3b986f(0x25b)]?_0x3b986f(0x653)+_0x3b986f(0x731)+_0x3b986f(0x5a5)+_0x3b986f(0x6f7)+_0x3b986f(0x240)+_0x3b986f(0x477)+_0x3b986f(0x3da)+_0x4a3f46[_0x3b986f(0x25b)][_0x3b986f(0x587)][_0x3b986f(0x620)](0x3)+_0x3b986f(0x5f6):''):_0x3b986f(0x485)+_0x3b986f(0x3ca)+_0x3b986f(0x401)+_0x25edc7+(_0x3b986f(0x6af)+_0x3b986f(0x739))+_0x25edc7+'>¥'+_0x4a3f46[_0x3b986f(0x587)][_0x3b986f(0x620)](0x2)+_0x3b986f(0x5f6);}(_0x4198a2)+_0x773b4f(0x5c0)+_0x4198a2[_0x773b4f(0x687)]+(_0x773b4f(0x377)+_0x773b4f(0x3b6)+_0x773b4f(0x3ee))+(_0x4198a2[_0x773b4f(0x617)]?_0x773b4f(0x1d4)+_0x773b4f(0x4ad)+_0x5e3c38(_0x4198a2[_0x773b4f(0x617)])+_0x773b4f(0x558)+_0x5e3c38(_0x4198a2[_0x773b4f(0x617)])+_0x773b4f(0x5f6):'')+_0x773b4f(0x554),_0x5f365f[_0x773b4f(0x33b)+'d'](_0x3462f0);}),function(_0xb1963b){var _0x25582c=_0x4d4fc4;document[_0x25582c(0x306)+_0x25582c(0x391)](_0x25582c(0x5bc)+_0x25582c(0x5cb)+_0x25582c(0x202))[_0x25582c(0x5a3)](function(_0x234ceb){var _0xc397e1=_0x25582c;_0x234ceb[_0xc397e1(0x710)+_0xc397e1(0x2d7)](_0xc397e1(0x2fd),function(){var _0x5b78e8=_0xc397e1,_0x2c70d8=parseInt(_0x234ceb[_0x5b78e8(0x2b0)+'te'](_0x5b78e8(0x317)),0xa),_0x5b5be5=_0x234ceb[_0x5b78e8(0x2b0)+'te'](_0x5b78e8(0x343)),_0x363fed=_0xb1963b[_0x2c70d8];if(_0x363fed){if(_0x5b78e8(0x693)===_0x5b5be5){var _0xe6c174=_0x363fed[_0x5b78e8(0x693)];_0x363fed[_0x5b78e8(0x693)]=_0x234ceb[_0x5b78e8(0x262)],_0x363fed[_0x5b78e8(0x46e)+'us']=!0x1,_0x5b78e8(0x2df)===_0x363fed[_0x5b78e8(0x68d)]&&(_0x5b78e8(0x291)===_0x363fed[_0x5b78e8(0x693)]?(_0x5b78e8(0x291)!==_0xe6c174&&(_0x363fed[_0x5b78e8(0x5b1)+'y']=_0x5c2075(_0x363fed)),_0x363fed[_0x5b78e8(0x4a0)+'me']=_0x5b78e8(0x6b8)===_0x363fed[_0x5b78e8(0x418)]||_0x363fed[_0x5b78e8(0x52a)],_0x363fed[_0x5b78e8(0x418)]=_0x5b78e8(0x73e),_0x363fed[_0x5b78e8(0x52a)]=!0x1):_0x5b78e8(0x291)===_0xe6c174&&_0x363fed[_0x5b78e8(0x5b1)+'y']&&(_0x363fed[_0x5b78e8(0x418)]=_0x5b78e8(0x5ac)===_0x363fed[_0x5b78e8(0x5b1)+'y']?_0x5b78e8(0x6b8):_0x363fed[_0x5b78e8(0x5b1)+'y'],_0x363fed[_0x5b78e8(0x52a)]=_0x5b78e8(0x5ac)===_0x363fed[_0x5b78e8(0x5b1)+'y'])),_0x12e184(_0x363fed)[_0x5b78e8(0x315)](_0x363fed[_0x5b78e8(0x275)])<0x0&&(_0x363fed[_0x5b78e8(0x275)]=_0x9dd36(_0x363fed)),_0x363fed[_0x5b78e8(0x1f9)+_0x5b78e8(0x71c)]=null;}else _0x5b78e8(0x418)===_0x5b5be5?(_0x363fed[_0x5b78e8(0x418)]=_0x234ceb[_0x5b78e8(0x262)],_0x363fed[_0x5b78e8(0x52a)]=_0x5b78e8(0x5ac)===_0x234ceb[_0x5b78e8(0x262)],_0x363fed[_0x5b78e8(0x1f8)+_0x5b78e8(0x4ea)]=!0x1,_0x363fed[_0x5b78e8(0x3c8)+_0x5b78e8(0x393)]=!0x0,_0x12e184(_0x363fed)[_0x5b78e8(0x315)](_0x363fed[_0x5b78e8(0x275)])<0x0&&(_0x363fed[_0x5b78e8(0x275)]=_0x9dd36(_0x363fed)),_0x363fed[_0x5b78e8(0x1f9)+_0x5b78e8(0x71c)]=null):_0x5b78e8(0x275)===_0x5b5be5?(_0x363fed[_0x5b78e8(0x275)]=_0x234ceb[_0x5b78e8(0x262)],_0x363fed[_0x5b78e8(0x5aa)+'d']=!0x0,_0x363fed[_0x5b78e8(0x605)+_0x5b78e8(0x69f)]=!0x1,_0x363fed[_0x5b78e8(0x1f9)+_0x5b78e8(0x71c)]=null):_0x5b78e8(0x6ee)===_0x5b5be5?_0x5146df(_0x363fed[_0x5b78e8(0x68d)])&&_0x664779[_0x363fed[_0x5b78e8(0x68d)]][_0x5b78e8(0x3cd)]?(_0x363fed[_0x5b78e8(0x582)]=_0x234ceb[_0x5b78e8(0x262)],_0x363fed[_0x5b78e8(0x61a)+_0x5b78e8(0x313)]=!0x0):_0x363fed[_0x5b78e8(0x389)]=parseInt(_0x234ceb[_0x5b78e8(0x262)],0xa):_0x5b78e8(0x207)===_0x5b5be5?_0x48c40f[_0x5b78e8(0x392)](_0x363fed,_0x234ceb[_0x5b78e8(0x262)]):_0x5b78e8(0x1d6)===_0x5b5be5&&(_0x363fed[_0x5b78e8(0x708)]=_0x234ceb[_0x5b78e8(0x262)],_0x363fed[_0x5b78e8(0x5da)+_0x5b78e8(0x21f)]=!0x0);_0x47dc42(_0x363fed),_0x7af238(_0x363fed,_0xb1963b[_0x5b78e8(0x517)]),_0x363fed[_0x5b78e8(0x2a4)]=_0x748928(_0x363fed),_0x2fc863(_0xb1963b);}});});}(_0x498a55);var _0x332c45=_0x498a55[_0x4d4fc4(0x6c5)](function(_0x220a63){var _0x375484=_0x4d4fc4;return _0x375484(0x456)===_0x220a63[_0x375484(0x68d)];})[_0x4d4fc4(0x2d5)],_0x40ba93=_0x498a55[_0x4d4fc4(0x2d5)]-_0x332c45-_0x498a55[_0x4d4fc4(0x6c5)](function(_0x4e46bb){var _0x4dadfe=_0x4d4fc4;return _0x4dadfe(0x27d)===_0x4e46bb[_0x4dadfe(0x68d)];})[_0x4d4fc4(0x2d5)],_0x4487b6=_0x498a55[_0x4d4fc4(0x6c5)](function(_0x30ddec){var _0x16011f=_0x4d4fc4;return _0x1820ea(_0x30ddec)&&null===_0x30ddec[_0x16011f(0x587)];})[_0x4d4fc4(0x2d5)],_0x2fb26a=_0x498a55[_0x4d4fc4(0x5ea)](function(_0x401679,_0x517fc9){return _0x401679+_0x2245c7(_0x517fc9);},0x0);document[_0x4d4fc4(0x738)+_0x4d4fc4(0x252)](_0x4d4fc4(0x226))[_0x4d4fc4(0x41d)+'t']=_0x498a55[_0x4d4fc4(0x2d5)];var _0x42c10c=_0x498a55[_0x4d4fc4(0x6c5)](function(_0x1a5bbf){var _0xb512f2=_0x4d4fc4;return _0xb512f2(0x27d)===_0x1a5bbf[_0xb512f2(0x68d)];})[_0x4d4fc4(0x2d5)];document[_0x4d4fc4(0x738)+_0x4d4fc4(0x252)](_0x4d4fc4(0x452))[_0x4d4fc4(0x41d)+'t']=_0x332c45;var _0x20e025=document[_0x4d4fc4(0x738)+_0x4d4fc4(0x252)](_0x4d4fc4(0x6c7));_0x20e025&&(_0x20e025[_0x4d4fc4(0x41d)+'t']=_0x42c10c),document[_0x4d4fc4(0x738)+_0x4d4fc4(0x252)](_0x4d4fc4(0x67e))[_0x4d4fc4(0x41d)+'t']=_0x40ba93,document[_0x4d4fc4(0x738)+_0x4d4fc4(0x252)](_0x4d4fc4(0x40d)+'nt')[_0x4d4fc4(0x41d)+'t']=_0x4487b6,document[_0x4d4fc4(0x738)+_0x4d4fc4(0x252)](_0x4d4fc4(0x229))[_0x4d4fc4(0x41d)+'t']='¥'+_0x2fb26a[_0x4d4fc4(0x620)](0x2);}function _0x5c240c(_0x5d63f6){var _0x1de18f=_0x261343;return Math[_0x1de18f(0x696)](0x2710*_0x5d63f6)/0x2710;}function _0x33e67f(_0x50e380){var _0x5f3a91=_0x261343;return null==_0x50e380?'':Number(Number(_0x50e380)[_0x5f3a91(0x620)](0x2));}function _0x502b74(_0x4281c4){var _0x8332c1=_0x261343;if(_0x18d1bd(_0x4281c4),_0xbfcce6)return _0x13eb7f(_0x4281c4);var _0x9e9bcb=[['序号',_0x8332c1(0x2ba),_0x8332c1(0x53c),_0x8332c1(0x3cb),_0x8332c1(0x4a2),_0x8332c1(0x1ea),'数量',_0x8332c1(0x707)]];_0x4281c4[_0x8332c1(0x5a3)](function(_0x11f760){var _0x14a7a8=_0x8332c1;_0x9e9bcb[_0x14a7a8(0x346)]([_0x11f760[_0x14a7a8(0x618)],_0x11f760[_0x14a7a8(0x2fe)]||_0x11f760[_0x14a7a8(0x280)],_0x11f760[_0x14a7a8(0x542)],_0x11f760[_0x14a7a8(0x4aa)],_0x11f760[_0x14a7a8(0x51c)],null===_0x11f760[_0x14a7a8(0x587)]?'':_0x33e67f(_0x11f760[_0x14a7a8(0x587)]),_0x11f760[_0x14a7a8(0x687)],_0x11f760[_0x14a7a8(0x2a4)]]),_0x11f760[_0x14a7a8(0x25b)]&&_0x9e9bcb[_0x14a7a8(0x346)](['',_0x11f760[_0x14a7a8(0x2fe)]||_0x11f760[_0x14a7a8(0x280)],_0x11f760[_0x14a7a8(0x25b)][_0x14a7a8(0x542)],'',_0x14a7a8(0x60e)+_0x14a7a8(0x396),_0x33e67f(_0x11f760[_0x14a7a8(0x25b)][_0x14a7a8(0x587)]),'','']),(_0x11f760[_0x14a7a8(0x381)]||[])[_0x14a7a8(0x5a3)](function(_0x4f7409){var _0x5c2035=_0x14a7a8;_0x9e9bcb[_0x5c2035(0x346)](['','','',_0x4f7409[_0x5c2035(0x1e2)],_0x4f7409[_0x5c2035(0x542)]+_0x5c2035(0x1f5)+_0x5c240c(_0x4f7409[_0x5c2035(0x5e6)]/(_0x4f7409[_0x5c2035(0x58f)]||0x1))+'\x20'+_0x4f7409[_0x5c2035(0x29f)]+'）','','','']),_0x4f7409[_0x5c2035(0x4ce)]&&_0x9e9bcb[_0x5c2035(0x346)](['',_0x11f760[_0x5c2035(0x2fe)]||_0x11f760[_0x5c2035(0x280)],_0x4f7409[_0x5c2035(0x4ce)][_0x5c2035(0x542)],'',_0x5c2035(0x497),_0x33e67f(_0x4f7409[_0x5c2035(0x4ce)][_0x5c2035(0x587)]),'','']);});});var _0x237ec0=_0x4281c4[_0x8332c1(0x5ea)](function(_0x4a0e37,_0x219725){return _0x4a0e37+_0x2245c7(_0x219725);},0x0);_0x9e9bcb[_0x8332c1(0x346)]([]),_0x9e9bcb[_0x8332c1(0x346)](['合计','','','','',_0x33e67f(_0x237ec0),'','']);var _0x349d88=XLSX[_0x8332c1(0x4f9)][_0x8332c1(0x279)+'et'](_0x9e9bcb);_0x349d88[_0x8332c1(0x451)]=[{'wch':0x8},{'wch':0xe},{'wch':0x2a},{'wch':0xa},{'wch':0x28},{'wch':0xc},{'wch':0x8},{'wch':0x42}];var _0x22a24a=XLSX[_0x8332c1(0x4f9)][_0x8332c1(0x406)]();XLSX[_0x8332c1(0x4f9)][_0x8332c1(0x3bd)+_0x8332c1(0x656)](_0x22a24a,_0x349d88,_0x8332c1(0x4f7)),XLSX[_0x8332c1(0x46b)](_0x22a24a,_0x8332c1(0x63f)+'_'+_0xb4cce8()+_0x8332c1(0x3a7));}function _0x13eb7f(_0x355d2d){var _0x4f6a78=_0x261343;_0x18d1bd(_0x355d2d),_0x283c32(_0x355d2d);var _0x1d9484=[['序号',_0x4f6a78(0x53c),_0x4f6a78(0x3cb),_0x4f6a78(0x4a2),_0x4f6a78(0x1ea),'数量']];_0x355d2d[_0x4f6a78(0x5a3)](function(_0x11c8ba){var _0x259a77=_0x4f6a78;_0x1d9484[_0x259a77(0x346)]([_0x11c8ba[_0x259a77(0x618)],_0x11c8ba[_0x259a77(0x542)],_0x11c8ba[_0x259a77(0x4aa)],_0x11c8ba[_0x259a77(0x51c)],null===_0x11c8ba[_0x259a77(0x587)]?'':_0x33e67f(_0x11c8ba[_0x259a77(0x587)]),_0x11c8ba[_0x259a77(0x687)]]),_0x11c8ba[_0x259a77(0x25b)]&&_0x1d9484[_0x259a77(0x346)](['',_0x11c8ba[_0x259a77(0x25b)][_0x259a77(0x542)],'',_0x259a77(0x60e)+_0x259a77(0x396),_0x33e67f(_0x11c8ba[_0x259a77(0x25b)][_0x259a77(0x587)]),'']),(_0x11c8ba[_0x259a77(0x381)]||[])[_0x259a77(0x5a3)](function(_0x5b6df1){var _0xd39e2a=_0x259a77;_0x1d9484[_0xd39e2a(0x346)](['','',_0x5b6df1[_0xd39e2a(0x1e2)],_0x5b6df1[_0xd39e2a(0x542)]+_0xd39e2a(0x1f5)+_0x5c240c(_0x5b6df1[_0xd39e2a(0x5e6)]/(_0x5b6df1[_0xd39e2a(0x58f)]||0x1))+'\x20'+_0x5b6df1[_0xd39e2a(0x29f)]+'）','','']),_0x5b6df1[_0xd39e2a(0x4ce)]&&_0x1d9484[_0xd39e2a(0x346)](['',_0x5b6df1[_0xd39e2a(0x4ce)][_0xd39e2a(0x542)],'',_0xd39e2a(0x497),_0x33e67f(_0x5b6df1[_0xd39e2a(0x4ce)][_0xd39e2a(0x587)]),'']);});});var _0x1ed3cb=_0x355d2d[_0x4f6a78(0x5ea)](function(_0x842b41,_0x3acfab){return _0x842b41+_0x2245c7(_0x3acfab);},0x0);_0x1d9484[_0x4f6a78(0x346)]([]),_0x1d9484[_0x4f6a78(0x346)](['合计','','','',_0x33e67f(_0x1ed3cb),'']);var _0x228bc1=XLSX[_0x4f6a78(0x4f9)][_0x4f6a78(0x279)+'et'](_0x1d9484);_0x228bc1[_0x4f6a78(0x451)]=[{'wch':0x8},{'wch':0x2a},{'wch':0xa},{'wch':0x28},{'wch':0xc},{'wch':0x8}];var _0x5d3dfc=XLSX[_0x4f6a78(0x4f9)][_0x4f6a78(0x406)]();XLSX[_0x4f6a78(0x4f9)][_0x4f6a78(0x3bd)+_0x4f6a78(0x656)](_0x5d3dfc,_0x228bc1,_0x4f6a78(0x324)),XLSX[_0x4f6a78(0x46b)](_0x5d3dfc,_0x4f6a78(0x6e8)+'经_'+_0xb4cce8()+_0x4f6a78(0x3a7));}_0x261343(0x446)!=typeof window&&(window[_0x261343(0x331)+_0x261343(0x43d)]=_0x35b64f),_0x261343(0x446)!=typeof window&&window[_0x261343(0x710)+_0x261343(0x2d7)]&&(window[_0x261343(0x710)+_0x261343(0x2d7)](_0x261343(0x46c),function(_0x43bb23){var _0x96af42=_0x261343;_0x43bb23&&null!==_0x43bb23[_0x96af42(0x2c1)]&&_0x96af42(0x36c)!==_0x43bb23[_0x96af42(0x2c1)]||_0x35b64f();}),_0x261343(0x446)!=typeof document&&document[_0x261343(0x710)+_0x261343(0x2d7)]&&document[_0x261343(0x710)+_0x261343(0x2d7)](_0x261343(0x685)+_0x261343(0x2fd),function(){var _0x12ced2=_0x261343;_0x12ced2(0x419)===document[_0x12ced2(0x685)+_0x12ced2(0x2ed)]&&_0x35b64f();}));var _0x92e6f2=_0x261343(0x6c9);function _0x18d1bd(_0x1f8243){var _0x112219=_0x261343;if(!_0x1f8243||!_0x1f8243[_0x112219(0x2d5)])return _0x1f8243;for(var _0x366214=0x0,_0x412053=0x0,_0x5b6a6f=0x0;_0x5b6a6f<_0x1f8243[_0x112219(0x2d5)];_0x5b6a6f++){var _0x50eab8=_0x1f8243[_0x5b6a6f];if(_0x50eab8){_0x50eab8[_0x112219(0x3e9)+_0x112219(0x361)]&&(_0x50eab8[_0x112219(0x4aa)]='',_0x50eab8[_0x112219(0x3e9)+_0x112219(0x361)]=!0x1),_0x50eab8[_0x112219(0x430)+'st']&&(_0x50eab8[_0x112219(0x280)]='',_0x50eab8[_0x112219(0x430)+'st']=!0x1);var _0x1ce28c=!(!_0x50eab8[_0x112219(0x4aa)]||!String(_0x50eab8[_0x112219(0x4aa)])[_0x112219(0x247)]()),_0x230487=!(!_0x50eab8[_0x112219(0x280)]||!String(_0x50eab8[_0x112219(0x280)])[_0x112219(0x247)]());if(_0x1ce28c||(_0x412053++,_0x50eab8[_0x112219(0x4aa)]='A-'+('0'+_0x412053)[_0x112219(0x6ac)](-0x2),_0x50eab8[_0x112219(0x51c)]=(_0x50eab8[_0x112219(0x542)]||'补项')+_0x112219(0x637),_0x50eab8[_0x112219(0x6ad)]=_0x50eab8[_0x112219(0x6ad)]||_0x50eab8[_0x112219(0x29f)],_0x50eab8[_0x112219(0x422)+'r']=_0x50eab8[_0x112219(0x422)+'r']||0x1,_0x50eab8[_0x112219(0x3e9)+_0x112219(0x361)]=!0x0),_0x230487||(_0x366214++,_0x50eab8[_0x112219(0x280)]=_0x92e6f2+('00'+_0x366214)[_0x112219(0x6ac)](-0x3),_0x50eab8[_0x112219(0x430)+'st']=!0x0),(_0x50eab8[_0x112219(0x3e9)+_0x112219(0x361)]||_0x50eab8[_0x112219(0x430)+'st'])&&(_0x50eab8[_0x112219(0x6e3)]=!0x0,!_0x50eab8[_0x112219(0x617)]||_0x50eab8[_0x112219(0x617)][_0x112219(0x315)](_0x112219(0x54d))<0x0)){var _0x36e29b=_0x112219(0x3fe)+_0x112219(0x744)+'单\x20'+String(_0x50eab8[_0x112219(0x280)])+_0x112219(0x5b6)+_0x50eab8[_0x112219(0x4aa)]+_0x112219(0x53f);_0x50eab8[_0x112219(0x617)]=_0x50eab8[_0x112219(0x617)]?_0x50eab8[_0x112219(0x617)]+'；'+_0x36e29b:_0x36e29b;}}}return _0x1f8243;}function _0x283c32(_0x5667e){var _0x4c4c82=_0x261343;_0x18d1bd(_0x5667e);var _0x5f3c6d={};_0x5667e[_0x4c4c82(0x5a3)](function(_0x2a0e7d){var _0x542158=_0x4c4c82,_0x35c0f4=String(_0x2a0e7d[_0x542158(0x280)]||'')[_0x542158(0x247)]();if(_0x35c0f4){_0x5f3c6d[_0x35c0f4]=(_0x5f3c6d[_0x35c0f4]||0x0)+0x1;var _0x5f40c2=_0x35c0f4[_0x542158(0x2d5)]<0x9?_0x35c0f4+new Array(0xa-_0x35c0f4[_0x542158(0x2d5)])[_0x542158(0x2ee)]('0'):_0x35c0f4[_0x542158(0x6ac)](0x0,0x9);_0x2a0e7d[_0x542158(0x2fe)]=_0x5f40c2+('00'+_0x5f3c6d[_0x35c0f4])[_0x542158(0x6ac)](-0x3);}else _0x2a0e7d[_0x542158(0x2fe)]=_0x35c0f4;});}function _0x16caad(_0x35fe66){var _0x422417=_0x261343;return!0x0===_0x35fe66[_0x422417(0x3d1)]&&_0x48c40f?_0x48c40f[_0x422417(0x67c)](_0x35fe66):_0x181832(_0x35fe66[_0x422417(0x68d)])?_0x1a2430[_0x35fe66[_0x422417(0x68d)]]:_0x5146df(_0x35fe66[_0x422417(0x68d)])?'洁具':_0x3d5baa(_0x35fe66[_0x422417(0x68d)])?'阀门':'管道';}function _0x18ce1b(_0xcebf6b){var _0x59c042=_0x261343;if(_0x18d1bd(_0xcebf6b),_0xbfcce6)return _0x31deea(_0xcebf6b);_0x283c32(_0xcebf6b);var _0x5958a0=[['序号',_0x59c042(0x53c),'类型','材质','型号','规格',_0x59c042(0x541),_0x59c042(0x3f7),_0x59c042(0x2a8),'类型','名称',_0x59c042(0x707),'单位',_0x59c042(0x3f7),_0x59c042(0x531)]],_0x11b374=0x0;_0xcebf6b[_0x59c042(0x5a3)](function(_0x1ef636){var _0x3fec45=_0x59c042,_0x19d58e=null!==_0x1ef636[_0x3fec45(0x587)]&&_0x1820ea(_0x1ef636),_0x3ff254=_0xd47966(_0x1ef636);if(_0x1ef636[_0x3fec45(0x4aa)]){_0x5958a0[_0x3fec45(0x346)]([_0x1ef636[_0x3fec45(0x618)],_0x1ef636[_0x3fec45(0x542)],_0x16caad(_0x1ef636),_0x1ef636[_0x3fec45(0x2f9)+_0x3fec45(0x1d1)]||_0x1ef636[_0x3fec45(0x6d0)],'',_0x3ff254,'',_0x1ef636[_0x3fec45(0x687)],_0x1ef636[_0x3fec45(0x2fe)]||_0x1ef636[_0x3fec45(0x280)],_0x3fec45(0x203),_0x1ef636[_0x3fec45(0x542)],_0x1ef636[_0x3fec45(0x2a4)],_0x1ef636[_0x3fec45(0x29f)],_0x1ef636[_0x3fec45(0x687)],_0x19d58e?_0x33e67f(_0x1ef636[_0x3fec45(0x587)]):'']);var _0x444c6e=_0x1ef636[_0x3fec45(0x422)+'r']||0x1,_0x37809a=0x0;_0x5958a0[_0x3fec45(0x346)]([_0x1ef636[_0x3fec45(0x618)]+'.'+ ++_0x37809a,'','','','','','','',_0x1ef636[_0x3fec45(0x4aa)],_0x3fec45(0x703),_0x1ef636[_0x3fec45(0x51c)],'',_0x1ef636[_0x3fec45(0x6ad)]||_0x1ef636[_0x3fec45(0x29f)],_0x5c240c(_0x1ef636[_0x3fec45(0x687)]/_0x444c6e),'']),_0x19d58e&&(_0x11b374++,_0x5958a0[_0x3fec45(0x346)]([_0x1ef636[_0x3fec45(0x618)]+'.'+ ++_0x37809a,'','','','','','','',_0x3fec45(0x399)+String(_0x11b374)[_0x3fec45(0x50b)](0x3,'0'),_0x3fec45(0x37d),_0x1ef636[_0x3fec45(0x542)],'',_0x1ef636[_0x3fec45(0x29f)],_0x1ef636[_0x3fec45(0x687)],_0x33e67f(_0x1ef636[_0x3fec45(0x587)])]),_0x1ef636[_0x3fec45(0x25b)]&&(_0x11b374++,_0x5958a0[_0x3fec45(0x346)]([_0x1ef636[_0x3fec45(0x618)]+'.'+ ++_0x37809a,'','','','','','','',_0x3fec45(0x399)+String(_0x11b374)[_0x3fec45(0x50b)](0x3,'0'),_0x3fec45(0x37d),_0x1ef636[_0x3fec45(0x25b)][_0x3fec45(0x542)],'',_0x1ef636[_0x3fec45(0x29f)],_0x1ef636[_0x3fec45(0x687)],_0x33e67f(_0x1ef636[_0x3fec45(0x25b)][_0x3fec45(0x587)])]))),(_0x1ef636[_0x3fec45(0x381)]||[])[_0x3fec45(0x5a3)](function(_0x5eb90f){var _0x45d3f8=_0x3fec45;_0x5958a0[_0x45d3f8(0x346)]([_0x1ef636[_0x45d3f8(0x618)]+'.'+ ++_0x37809a,'','','','','','','',_0x5eb90f[_0x45d3f8(0x1e2)],_0x45d3f8(0x703),_0x5eb90f[_0x45d3f8(0x542)],'',_0x5eb90f[_0x45d3f8(0x29f)],_0x5c240c(_0x5eb90f[_0x45d3f8(0x5e6)]/(_0x5eb90f[_0x45d3f8(0x58f)]||0x1)),'']),_0x5eb90f[_0x45d3f8(0x4ce)]&&(_0x11b374++,_0x5958a0[_0x45d3f8(0x346)]([_0x1ef636[_0x45d3f8(0x618)]+'.'+ ++_0x37809a,'','','','','','','',_0x45d3f8(0x399)+String(_0x11b374)[_0x45d3f8(0x50b)](0x3,'0'),_0x45d3f8(0x37d),_0x5eb90f[_0x45d3f8(0x4ce)][_0x45d3f8(0x542)],'',_0x5eb90f[_0x45d3f8(0x29f)],_0x5c240c(_0x5eb90f[_0x45d3f8(0x5e6)]/(_0x5eb90f[_0x45d3f8(0x58f)]||0x1)),_0x33e67f(_0x5eb90f[_0x45d3f8(0x4ce)][_0x45d3f8(0x587)])]));});}else _0x5958a0[_0x3fec45(0x346)]([_0x1ef636[_0x3fec45(0x618)],_0x1ef636[_0x3fec45(0x542)],_0x16caad(_0x1ef636),_0x1ef636[_0x3fec45(0x2f9)+_0x3fec45(0x1d1)]||_0x1ef636[_0x3fec45(0x6d0)],'',_0x3ff254,'',_0x1ef636[_0x3fec45(0x687)],'',_0x3fec45(0x2ab),_0x1ef636[_0x3fec45(0x542)],_0x1ef636[_0x3fec45(0x2a4)],_0x1ef636[_0x3fec45(0x29f)],_0x1ef636[_0x3fec45(0x687)],_0x19d58e?_0x33e67f(_0x1ef636[_0x3fec45(0x587)]):'']);});var _0x4ecb98=_0xcebf6b[_0x59c042(0x5ea)](function(_0x164dca,_0x82397c){return _0x164dca+_0x2245c7(_0x82397c);},0x0);_0x5958a0[_0x59c042(0x346)]([]),_0x5958a0[_0x59c042(0x346)](['合计','','','','','','','','','','','','','',_0x33e67f(_0x4ecb98)]);var _0x21e484=XLSX[_0x59c042(0x4f9)][_0x59c042(0x279)+'et'](_0x5958a0);_0x21e484[_0x59c042(0x451)]=[{'wch':0x8},{'wch':0x28},{'wch':0xa},{'wch':0x8},{'wch':0xc},{'wch':0x10},{'wch':0x9},{'wch':0x9},{'wch':0xd},{'wch':0xa},{'wch':0x28},{'wch':0x38},{'wch':0x6},{'wch':0x9},{'wch':0xc}];var _0x5c28e2=XLSX[_0x59c042(0x4f9)][_0x59c042(0x406)]();XLSX[_0x59c042(0x4f9)][_0x59c042(0x3bd)+_0x59c042(0x656)](_0x5c28e2,_0x21e484,_0x59c042(0x4f7)),XLSX[_0x59c042(0x46b)](_0x5c28e2,_0x59c042(0x2c7)+'达_'+_0xb4cce8()+_0x59c042(0x3a7));}function _0x31deea(_0x3cf66f){var _0x3c630e=_0x261343;_0x18d1bd(_0x3cf66f);var _0x39c6aa=[['序号',_0x3c630e(0x53c),'类型','材质','型号','规格',_0x3c630e(0x541),_0x3c630e(0x3f7),_0x3c630e(0x2a8),'类型','名称','单位',_0x3c630e(0x3f7),_0x3c630e(0x531)]],_0x410daa=0x0;_0x3cf66f[_0x3c630e(0x5a3)](function(_0x10c010){var _0x51ada2=_0x3c630e,_0x54dac1=null!==_0x10c010[_0x51ada2(0x587)]&&_0x1820ea(_0x10c010),_0x401045=_0xd47966(_0x10c010),_0x3b23b7=_0x16caad(_0x10c010),_0x4387aa=_0x10c010[_0x51ada2(0x2f9)+_0x51ada2(0x1d1)]||_0x10c010[_0x51ada2(0x6d0)];if(_0x10c010[_0x51ada2(0x4aa)]){var _0x46e1f1=0x0;_0x39c6aa[_0x51ada2(0x346)]([_0x10c010[_0x51ada2(0x618)],_0x10c010[_0x51ada2(0x542)],_0x3b23b7,_0x4387aa,'',_0x401045,'',_0x10c010[_0x51ada2(0x687)],_0x10c010[_0x51ada2(0x4aa)],_0x51ada2(0x703),_0x10c010[_0x51ada2(0x542)],_0x10c010[_0x51ada2(0x6ad)]||_0x10c010[_0x51ada2(0x29f)],_0x5c240c(_0x10c010[_0x51ada2(0x687)]/(_0x10c010[_0x51ada2(0x422)+'r']||0x1)),'']),_0x54dac1&&(_0x410daa++,_0x39c6aa[_0x51ada2(0x346)]([_0x10c010[_0x51ada2(0x618)]+'.'+ ++_0x46e1f1,'','','','','','','',_0x51ada2(0x399)+String(_0x410daa)[_0x51ada2(0x50b)](0x3,'0'),_0x51ada2(0x37d),_0x10c010[_0x51ada2(0x542)],_0x10c010[_0x51ada2(0x29f)],_0x10c010[_0x51ada2(0x687)],_0x33e67f(_0x10c010[_0x51ada2(0x587)])]),_0x10c010[_0x51ada2(0x25b)]&&(_0x410daa++,_0x39c6aa[_0x51ada2(0x346)]([_0x10c010[_0x51ada2(0x618)]+'.'+ ++_0x46e1f1,'','','','','','','',_0x51ada2(0x399)+String(_0x410daa)[_0x51ada2(0x50b)](0x3,'0'),_0x51ada2(0x37d),_0x10c010[_0x51ada2(0x25b)][_0x51ada2(0x542)],_0x10c010[_0x51ada2(0x29f)],_0x10c010[_0x51ada2(0x687)],_0x33e67f(_0x10c010[_0x51ada2(0x25b)][_0x51ada2(0x587)])]))),(_0x10c010[_0x51ada2(0x381)]||[])[_0x51ada2(0x5a3)](function(_0x1bd95a){var _0x44ebda=_0x51ada2;_0x39c6aa[_0x44ebda(0x346)]([_0x10c010[_0x44ebda(0x618)]+'.'+ ++_0x46e1f1,'','','','','','','',_0x1bd95a[_0x44ebda(0x1e2)],_0x44ebda(0x703),_0x1bd95a[_0x44ebda(0x542)],_0x1bd95a[_0x44ebda(0x29f)],_0x5c240c(_0x1bd95a[_0x44ebda(0x5e6)]/(_0x1bd95a[_0x44ebda(0x58f)]||0x1)),'']),_0x1bd95a[_0x44ebda(0x4ce)]&&(_0x410daa++,_0x39c6aa[_0x44ebda(0x346)]([_0x10c010[_0x44ebda(0x618)]+'.'+ ++_0x46e1f1,'','','','','','','',_0x44ebda(0x399)+String(_0x410daa)[_0x44ebda(0x50b)](0x3,'0'),_0x44ebda(0x37d),_0x1bd95a[_0x44ebda(0x4ce)][_0x44ebda(0x542)],_0x1bd95a[_0x44ebda(0x29f)],_0x5c240c(_0x1bd95a[_0x44ebda(0x5e6)]/(_0x1bd95a[_0x44ebda(0x58f)]||0x1)),_0x33e67f(_0x1bd95a[_0x44ebda(0x4ce)][_0x44ebda(0x587)])]));});}else _0x39c6aa[_0x51ada2(0x346)]([_0x10c010[_0x51ada2(0x618)],_0x10c010[_0x51ada2(0x542)],_0x3b23b7,_0x4387aa,'',_0x401045,'',_0x10c010[_0x51ada2(0x687)],'',_0x51ada2(0x2ab),_0x10c010[_0x51ada2(0x542)],_0x10c010[_0x51ada2(0x29f)],_0x10c010[_0x51ada2(0x687)],_0x54dac1?_0x33e67f(_0x10c010[_0x51ada2(0x587)]):'']);});var _0x33aec4=_0x3cf66f[_0x3c630e(0x5ea)](function(_0xf3f0a1,_0x26826f){return _0xf3f0a1+_0x2245c7(_0x26826f);},0x0);_0x39c6aa[_0x3c630e(0x346)]([]),_0x39c6aa[_0x3c630e(0x346)](['合计','','','','','','','','','','','','',_0x33e67f(_0x33aec4)]);var _0x3bedf7=XLSX[_0x3c630e(0x4f9)][_0x3c630e(0x279)+'et'](_0x39c6aa);_0x3bedf7[_0x3c630e(0x451)]=[{'wch':0x8},{'wch':0x28},{'wch':0xa},{'wch':0x8},{'wch':0xc},{'wch':0x10},{'wch':0x9},{'wch':0x9},{'wch':0xd},{'wch':0xa},{'wch':0x28},{'wch':0x6},{'wch':0x9},{'wch':0xc}];var _0x19f2cd=XLSX[_0x3c630e(0x4f9)][_0x3c630e(0x406)]();XLSX[_0x3c630e(0x4f9)][_0x3c630e(0x3bd)+_0x3c630e(0x656)](_0x19f2cd,_0x3bedf7,_0x3c630e(0x324)),XLSX[_0x3c630e(0x46b)](_0x19f2cd,_0x3c630e(0x271)+_0x3c630e(0x3ea)+_0xb4cce8()+_0x3c630e(0x3a7));}function _0xb4cce8(){var _0x5c5643=_0x261343,_0xbcd735=new Date();return _0xbcd735[_0x5c5643(0x371)+'r']()+String(_0xbcd735[_0x5c5643(0x590)]()+0x1)[_0x5c5643(0x50b)](0x2,'0')+String(_0xbcd735[_0x5c5643(0x1eb)]())[_0x5c5643(0x50b)](0x2,'0');}var _0x512aa4=[],_0x4e8a7b=null,_0x5a6614=!0x0;function _0x36fca9(){var _0x564378=_0x261343;return(document[_0x564378(0x306)+_0x564378(0x677)](_0x564378(0x54a)+_0x564378(0x35b)+_0x564378(0x5ed))||{})[_0x564378(0x262)]||_0x564378(0x654)+'a';}function _0x3f5443(){var _0x1c4f0f=_0x261343,_0x55949f=document[_0x1c4f0f(0x738)+_0x1c4f0f(0x252)](_0x1c4f0f(0x63b)+'ct');return _0x55949f?_0x55949f[_0x1c4f0f(0x262)]:(_0x1a608c()[0x0]||{})[_0x1c4f0f(0x4e8)];}function _0x1ef988(_0x55c4b4){var _0x39c03e=_0x261343,_0x3d59f0=document[_0x39c03e(0x738)+_0x39c03e(0x252)](_0x39c03e(0x4e0));if(_0x3d59f0){if(!_0x55c4b4||!_0x55c4b4['ok'])return _0x3d59f0[_0x39c03e(0x37f)]=_0x39c03e(0x6f4),void(_0x3d59f0[_0x39c03e(0x3f2)]='');var _0x7251df=_0x55c4b4[_0x39c03e(0x340)]||{},_0x59f6ad={'material':_0x39c03e(0x6d0),'system':'','joint':_0x39c03e(0x275),'loc':'','dn':'dn','measure':_0x39c03e(0x302)},_0x470ec5=_0x55c4b4[_0x39c03e(0x63c)][_0x39c03e(0x62c)](function(_0x882f71){var _0x48ead8=_0x39c03e;return _0x48ead8(0x485)+_0x48ead8(0x2dd)+'g\x20'+(_0x59f6ad[_0x882f71[_0x48ead8(0x5d9)]]||'')+'\x22>'+_0x5e3c38(_0x882f71[_0x48ead8(0x3bc)])+_0x48ead8(0x5f6);})[_0x39c03e(0x2ee)](''),_0x109fd4={'water':'给水','drain':'排水','rain':'雨水','gas':'燃气','fire':'消防'},_0x17cc6c={},_0x54c7e9=[];_0x55c4b4[_0x39c03e(0x65f)][_0x39c03e(0x5a3)](function(_0x5aff0b){var _0x2739a5=_0x39c03e,_0x848961=_0x5aff0b[_0x2739a5(0x352)+'y']||_0x2739a5(0x258);_0x17cc6c[_0x848961]||(_0x17cc6c[_0x848961]={'label':_0x5aff0b[_0x2739a5(0x2f9)+_0x2739a5(0x1d1)]||_0x2739a5(0x478),'items':[]},_0x54c7e9[_0x2739a5(0x346)](_0x848961)),_0x17cc6c[_0x848961][_0x2739a5(0x709)][_0x2739a5(0x346)](_0x5aff0b);});var _0x4ef780=_0x54c7e9[_0x39c03e(0x62c)](function(_0x2a27bf){var _0x1cf356=_0x39c03e,_0x1691c0=_0x17cc6c[_0x2a27bf],_0x503e25={},_0x211632=[];_0x1691c0[_0x1cf356(0x709)][_0x1cf356(0x5a3)](function(_0x12498a){var _0x3436ad=_0x1cf356,_0x56f561=[_0x12498a[_0x3436ad(0x275)],_0x12498a[_0x3436ad(0x418)]||'-',_0x12498a[_0x3436ad(0x490)]?_0x12498a[_0x3436ad(0x490)]['op']+_0x12498a[_0x3436ad(0x490)][_0x3436ad(0x6a4)]:'-'][_0x3436ad(0x2ee)]('|');_0x503e25[_0x56f561]||(_0x503e25[_0x56f561]=[],_0x211632[_0x3436ad(0x346)](_0x56f561)),_0x503e25[_0x56f561][_0x3436ad(0x346)](_0x12498a);});var _0x5834de=_0x211632[_0x1cf356(0x62c)](function(_0x5242d4){var _0xe9dbd0=_0x1cf356,_0x54b458=_0x503e25[_0x5242d4],_0x1867af=_0x54b458[0x0],_0x4178ab=[],_0x1bec53=_0x54b458[_0xe9dbd0(0x62c)](function(_0x2c163e){var _0x2a3f12=_0xe9dbd0;return _0x2c163e[_0x2a3f12(0x693)];});if(_0x1bec53[_0xe9dbd0(0x5d5)](Boolean)){var _0x94cd39=_0x1bec53[_0xe9dbd0(0x6c5)](function(_0x27b6f4,_0x10d1c2){var _0x594eaa=_0xe9dbd0;return _0x1bec53[_0x594eaa(0x315)](_0x27b6f4)===_0x10d1c2;});_0x4178ab[_0xe9dbd0(0x346)](_0x94cd39[_0xe9dbd0(0x2d5)]>0x1?_0xe9dbd0(0x476):_0xe9dbd0(0x291)===_0x94cd39[0x0]?'室外':'室内');}if(_0x1867af[_0xe9dbd0(0x418)]&&_0x4178ab[_0xe9dbd0(0x346)](_0x109fd4[_0x1867af[_0xe9dbd0(0x418)]]||''),_0x4178ab[_0xe9dbd0(0x346)](_0x1867af[_0xe9dbd0(0x44e)]),_0x1867af[_0xe9dbd0(0x490)]){var _0x485864={'ge':_0xe9dbd0(0x486),'gt':_0xe9dbd0(0x503),'le':_0xe9dbd0(0x24f),'lt':_0xe9dbd0(0x533)}[_0x1867af[_0xe9dbd0(0x490)]['op']]||'DN';_0x4178ab[_0xe9dbd0(0x346)](_0x485864+_0x1867af[_0xe9dbd0(0x490)][_0xe9dbd0(0x6a4)]);}return _0x54b458[_0xe9dbd0(0x49c)](function(_0x22898e){var _0x13d8b4=_0xe9dbd0;return _0x22898e[_0x13d8b4(0x59c)];})&&_0x4178ab[_0xe9dbd0(0x346)](_0xe9dbd0(0x1d9)),_0x4178ab[_0xe9dbd0(0x6c5)](Boolean)[_0xe9dbd0(0x2ee)]('\x20');})[_0x1cf356(0x2ee)](_0x1cf356(0x3cf));return _0x1cf356(0x595)+_0x1cf356(0x3a9)+_0x1cf356(0x1f3)+_0x5e3c38(_0x1691c0[_0x1cf356(0x277)])+_0x1cf356(0x405)+_0x5e3c38(_0x5834de)+(_0x1cf356(0x485)+_0x1cf356(0x3f1))+_0x5e3c38((_0x1691c0[_0x1cf356(0x709)][0x0][_0x1cf356(0x2f8)]||'')[_0x1cf356(0x6ac)](0x0,0x5a))+(_0x1cf356(0x42c)+_0x1cf356(0x4c6));})[_0x39c03e(0x2ee)]('');_0x3d59f0[_0x39c03e(0x37f)]=_0x39c03e(0x62e)+_0x39c03e(0x347),_0x3d59f0[_0x39c03e(0x3f2)]=_0x39c03e(0x2af)+_0x39c03e(0x342)+_0x39c03e(0x6d8)+_0x5e3c38(_0x55c4b4[_0x39c03e(0x2f7)]||_0x39c03e(0x447))+(_0x39c03e(0x68a)+_0x39c03e(0x6dc)+_0x39c03e(0x335)+_0x39c03e(0x5a1)+_0x39c03e(0x2ca)+_0x39c03e(0x311)+_0x39c03e(0x2f0))+(_0x7251df[_0x39c03e(0x1e1)]?_0x7251df[_0x39c03e(0x1e1)]+_0x39c03e(0x57f):'')+_0x39c03e(0x4f3)+_0x55c4b4[_0x39c03e(0x65f)][_0x39c03e(0x2d5)]+(_0x39c03e(0x704)+_0x39c03e(0x374)+_0x39c03e(0x43e)+_0x39c03e(0x357)+'>')+_0x470ec5+_0x39c03e(0x53e)+(_0x4ef780?_0x39c03e(0x595)+_0x39c03e(0x3a9)+_0x39c03e(0x59b)+_0x4ef780+_0x39c03e(0x53e):_0x39c03e(0x595)+_0x39c03e(0x3a9)+_0x39c03e(0x32a)+_0x39c03e(0x208)+_0x39c03e(0x51b)+_0x39c03e(0x559)+_0x39c03e(0x594)+_0x39c03e(0x54b)+_0x39c03e(0x5ec)+'>')+(_0x55c4b4[_0x39c03e(0x6ea)]&&_0x55c4b4[_0x39c03e(0x6ea)][_0x39c03e(0x41c)]>0.35?_0x39c03e(0x595)+_0x39c03e(0x529)+_0x39c03e(0x625)+_0x39c03e(0x3d4)+_0x39c03e(0x544)+_0x39c03e(0x5e9)+_0x55c4b4[_0x39c03e(0x6ea)][_0x39c03e(0x668)]+(_0x39c03e(0x230)+_0x39c03e(0x42d)+_0x39c03e(0x5a9)+_0x39c03e(0x417)+_0x39c03e(0x4a1)+'>'):'')+(_0x55c4b4[_0x39c03e(0x36f)]&&_0x55c4b4[_0x39c03e(0x36f)][_0x39c03e(0x45e)]&&_0x55c4b4[_0x39c03e(0x36f)][_0x39c03e(0x45e)]<0xa?_0x39c03e(0x595)+_0x39c03e(0x529)+_0x39c03e(0x625)+_0x39c03e(0x3d4)+_0x39c03e(0x544)+_0x39c03e(0x5ab)+'（'+_0x55c4b4[_0x39c03e(0x36f)][_0x39c03e(0x46f)]+_0x39c03e(0x287)+_0x55c4b4[_0x39c03e(0x36f)][_0x39c03e(0x45e)]+(_0x39c03e(0x4a8)+_0x39c03e(0x62b)+_0x39c03e(0x265)):'')+(_0x39c03e(0x595)+_0x39c03e(0x48c)+_0x39c03e(0x6b6)+_0x39c03e(0x670)+_0x39c03e(0x71f)+_0x39c03e(0x64c)+_0x39c03e(0x663)+_0x39c03e(0x41a))+(_0x5a6614?_0x39c03e(0x274):'')+(_0x39c03e(0x5e7)+_0x39c03e(0x409)+_0x39c03e(0x295)+_0x39c03e(0x495)+_0x39c03e(0x689)+_0x39c03e(0x1f1)+_0x39c03e(0x747)+_0x39c03e(0x467));var _0x280090=document[_0x39c03e(0x738)+_0x39c03e(0x252)](_0x39c03e(0x663)+'hk');_0x280090&&_0x280090[_0x39c03e(0x710)+_0x39c03e(0x2d7)](_0x39c03e(0x2fd),function(){var _0x50bba7=_0x39c03e;_0x5a6614=_0x280090[_0x50bba7(0x274)],_0x22b0af(!0x0);});var _0x1b0b63=document[_0x39c03e(0x738)+_0x39c03e(0x252)](_0x39c03e(0x368)+'tn');_0x1b0b63&&_0x1b0b63[_0x39c03e(0x710)+_0x39c03e(0x2d7)](_0x39c03e(0x286),function(){var _0x26ba42=_0x39c03e;_0x4e8a7b=null,_0x3d59f0[_0x26ba42(0x37f)]=_0x26ba42(0x6f4),_0x3d59f0[_0x26ba42(0x3f2)]='';var _0x5c5a88=document[_0x26ba42(0x738)+_0x26ba42(0x252)](_0x26ba42(0x6da));_0x5c5a88&&(_0x5c5a88[_0x26ba42(0x37f)]=_0x26ba42(0x375)+'s',_0x5c5a88[_0x26ba42(0x41d)+'t']='');var _0x10143b=document[_0x26ba42(0x738)+_0x26ba42(0x252)](_0x26ba42(0x416));_0x10143b&&(_0x10143b[_0x26ba42(0x262)]='');var _0x4a35de=document[_0x26ba42(0x738)+_0x26ba42(0x252)](_0x26ba42(0x214)+'ea');_0x4a35de&&(_0x4a35de[_0x26ba42(0x548)][_0x26ba42(0x3c4)]=_0x26ba42(0x634)),_0x22b0af(!0x0);});}}var _0x6b9819={'castIron':_0x261343(0x448),'galv':_0x261343(0x35c),'seamless':_0x261343(0x3f4),'welded':_0x261343(0x1fe),'copper':'铜管','stainless':_0x261343(0x530),'composite':_0x261343(0x557),'plastic':_0x261343(0x586),'bracket':_0x261343(0x32d),'insulRubber':_0x261343(0x458),'insulGlass':_0x261343(0x200),'other':'其他'};function _0x3cd6aa(){var _0x17de62=_0x261343,_0x1195a8=document[_0x17de62(0x738)+_0x17de62(0x252)](_0x17de62(0x214)+'ea');if(_0x1195a8){if(_0x4e8a7b&&_0x4e8a7b['ok']&&_0x512aa4&&_0x512aa4[_0x17de62(0x2d5)]){var _0x48c4dc=SPEC[_0x17de62(0x2e9)](_0x4e8a7b,_0x512aa4);_0x1195a8[_0x17de62(0x548)][_0x17de62(0x3c4)]=_0x17de62(0x28e),document[_0x17de62(0x738)+_0x17de62(0x252)](_0x17de62(0x465)+'st')[_0x17de62(0x3f2)]=_0x48c4dc[_0x17de62(0x62c)](function(_0x4133a9){var _0x2f7920=_0x17de62;return _0x2f7920(0x595)+_0x2f7920(0x631)+(_0x2f7920(0x617)===_0x4133a9[_0x2f7920(0x464)]?_0x2f7920(0x5a6):'ok'===_0x4133a9[_0x2f7920(0x464)]?_0x2f7920(0x69d):_0x2f7920(0x51e))+'\x22>'+(_0x2f7920(0x617)===_0x4133a9[_0x2f7920(0x464)]?'⚠️':'ok'===_0x4133a9[_0x2f7920(0x464)]?'✅':'ℹ️')+_0x2f7920(0x1fd)+_0x5e3c38(_0x4133a9[_0x2f7920(0x56a)])+_0x2f7920(0x3de)+_0x5e3c38(_0x4133a9[_0x2f7920(0x3bc)])+_0x2f7920(0x53e);})[_0x17de62(0x2ee)]('');}else _0x1195a8[_0x17de62(0x548)][_0x17de62(0x3c4)]=_0x17de62(0x634);}}async function _0x18f1c6(_0x42a48d){var _0x12f37f=_0x261343,_0x174652=document[_0x12f37f(0x738)+_0x12f37f(0x252)](_0x12f37f(0x6da));if(_0x174652&&_0x12f37f(0x446)!=typeof SPEC){_0x174652[_0x12f37f(0x37f)]=_0x12f37f(0x375)+_0x12f37f(0x55f),_0x174652[_0x12f37f(0x41d)+'t']=_0x12f37f(0x4fb)+_0x42a48d[_0x12f37f(0x542)]+(_0x12f37f(0x6a3)+_0x12f37f(0x73f)+_0x12f37f(0x470));try{var _0x1760f3=await SPEC[_0x12f37f(0x37a)+'e'](_0x42a48d);if(_0x1760f3[_0x12f37f(0x22b)])return _0x174652[_0x12f37f(0x37f)]=_0x12f37f(0x375)+_0x12f37f(0x6f6),void(_0x174652[_0x12f37f(0x41d)+'t']=_0x12f37f(0x552)+_0x42a48d[_0x12f37f(0x542)]+(_0x12f37f(0x6e1)+_0x12f37f(0x6ba)+_0x12f37f(0x329)+_0x12f37f(0x3f8)+_0x12f37f(0x66c)+_0x12f37f(0x1ec)+_0x12f37f(0x711)));var _0x2ff7cf=SPEC[_0x12f37f(0x424)](_0x1760f3[_0x12f37f(0x3bc)]);_0x2ff7cf[_0x12f37f(0x2f7)]=_0x42a48d[_0x12f37f(0x542)],_0x2ff7cf[_0x12f37f(0x340)]=_0x1760f3,_0x4e8a7b=_0x2ff7cf,_0x5a6614=!0x0;var _0x1d70e0=_0x1760f3[_0x12f37f(0x3bc)][_0x12f37f(0x6d2)](/\s/g,'')[_0x12f37f(0x2d5)];if(!_0x2ff7cf[_0x12f37f(0x65f)][_0x12f37f(0x2d5)])return _0x174652[_0x12f37f(0x37f)]=_0x12f37f(0x375)+_0x12f37f(0x6fa),_0x174652[_0x12f37f(0x41d)+'t']=_0x12f37f(0x6d7)+_0x42a48d[_0x12f37f(0x542)]+'」'+_0x1d70e0+(_0x12f37f(0x6b1)+_0x12f37f(0x41f)+_0x12f37f(0x345)+_0x12f37f(0x6c8)+_0x12f37f(0x5eb)+_0x12f37f(0x60c)+_0x12f37f(0x1fb)),_0x1ef988(_0x2ff7cf),void _0x22b0af(!0x0);_0x174652[_0x12f37f(0x37f)]=_0x12f37f(0x375)+_0x12f37f(0x1ef),_0x174652[_0x12f37f(0x41d)+'t']=_0x12f37f(0x358)+_0x42a48d[_0x12f37f(0x542)]+'」：'+_0x1d70e0+'\x20字'+(_0x1760f3[_0x12f37f(0x1e1)]?_0x12f37f(0x449)+_0x1760f3[_0x12f37f(0x1e1)]+'\x20页':'')+_0x12f37f(0x2b6)+_0x2ff7cf[_0x12f37f(0x31e)][_0x12f37f(0x2d5)]+_0x12f37f(0x611)+_0x2ff7cf[_0x12f37f(0x65f)][_0x12f37f(0x2d5)]+'\x20条'+(_0x1760f3[_0x12f37f(0x560)]?_0x12f37f(0x449)+_0x1760f3[_0x12f37f(0x560)]:''),_0x1ef988(_0x2ff7cf),_0x22b0af(!0x0);}catch(_0x4ddd38){_0x174652[_0x12f37f(0x37f)]=_0x12f37f(0x375)+_0x12f37f(0x6f6),_0x174652[_0x12f37f(0x41d)+'t']=_0x12f37f(0x5fb)+(_0x4ddd38&&_0x4ddd38[_0x12f37f(0x3a1)]||_0x4ddd38);}}}function _0x22b0af(_0x3a530b){var _0x53f7f4=_0x261343;if(window[_0x53f7f4(0x58a)]){var _0x5aed2f,_0x256e2c=_0x3a530b?null:(_0x5aed2f={},(_0x512aa4||[])[_0x53f7f4(0x5a3)](function(_0x14fb29){var _0x1e353a=_0x53f7f4;_0x14fb29&&void 0x0!==_0x14fb29[_0x1e353a(0x618)]&&(_0x5aed2f[_0x14fb29[_0x1e353a(0x618)]+'|'+_0x14fb29[_0x1e353a(0x542)]]={'loc':_0x14fb29[_0x1e353a(0x693)],'joint':_0x14fb29[_0x1e353a(0x275)],'medium':_0x14fb29[_0x1e353a(0x418)],'isRain':_0x14fb29[_0x1e353a(0x52a)],'mediumFromSel':_0x14fb29[_0x1e353a(0x3c8)+_0x1e353a(0x393)],'sanOpt':_0x14fb29[_0x1e353a(0x582)],'sanDn':_0x14fb29[_0x1e353a(0x389)],'sanForm':_0x14fb29[_0x1e353a(0x708)]});}),_0x5aed2f);_0x512aa4=_0x1c325e(window[_0x53f7f4(0x58a)],_0x3f5443(),_0x36fca9()),_0x256e2c&&function(_0x6978e4,_0x4aa9b9){var _0x5f1d97=_0x53f7f4;_0x4aa9b9&&_0x6978e4[_0x5f1d97(0x5a3)](function(_0x367981){var _0x36fd0b=_0x5f1d97,_0x792c7c=_0x4aa9b9[_0x367981[_0x36fd0b(0x618)]+'|'+_0x367981[_0x36fd0b(0x542)]];if(_0x792c7c){var _0x15b201=!0x1;_0x5146df(_0x367981[_0x36fd0b(0x68d)])?(void 0x0!==_0x792c7c[_0x36fd0b(0x582)]&&_0x792c7c[_0x36fd0b(0x582)]!==_0x367981[_0x36fd0b(0x582)]&&(_0x367981[_0x36fd0b(0x582)]=_0x792c7c[_0x36fd0b(0x582)],_0x367981[_0x36fd0b(0x61a)+_0x36fd0b(0x313)]=!0x0,_0x15b201=!0x0),void 0x0!==_0x792c7c[_0x36fd0b(0x389)]&&_0x792c7c[_0x36fd0b(0x389)]!==_0x367981[_0x36fd0b(0x389)]&&(_0x367981[_0x36fd0b(0x389)]=_0x792c7c[_0x36fd0b(0x389)],_0x15b201=!0x0),void 0x0!==_0x792c7c[_0x36fd0b(0x708)]&&_0x792c7c[_0x36fd0b(0x708)]!==_0x367981[_0x36fd0b(0x708)]&&(_0x367981[_0x36fd0b(0x708)]=_0x792c7c[_0x36fd0b(0x708)],_0x367981[_0x36fd0b(0x5da)+_0x36fd0b(0x21f)]=!0x0,_0x15b201=!0x0)):void 0x0!==_0x367981[_0x36fd0b(0x693)]&&_0x792c7c[_0x36fd0b(0x693)]&&(_0x792c7c[_0x36fd0b(0x693)]!==_0x367981[_0x36fd0b(0x693)]&&(_0x367981[_0x36fd0b(0x693)]=_0x792c7c[_0x36fd0b(0x693)],_0x367981[_0x36fd0b(0x46e)+'us']=!0x1,_0x15b201=!0x0),_0x792c7c[_0x36fd0b(0x3c8)+_0x36fd0b(0x393)]&&_0x792c7c[_0x36fd0b(0x418)]&&_0x792c7c[_0x36fd0b(0x418)]!==_0x367981[_0x36fd0b(0x418)]&&(_0x367981[_0x36fd0b(0x418)]=_0x792c7c[_0x36fd0b(0x418)],_0x367981[_0x36fd0b(0x52a)]=_0x36fd0b(0x5ac)===_0x792c7c[_0x36fd0b(0x418)],_0x367981[_0x36fd0b(0x1f8)+_0x36fd0b(0x4ea)]=!0x1,_0x367981[_0x36fd0b(0x3c8)+_0x36fd0b(0x393)]=!0x0,_0x15b201=!0x0),_0x792c7c[_0x36fd0b(0x275)]&&_0x792c7c[_0x36fd0b(0x275)]!==_0x367981[_0x36fd0b(0x275)]&&(_0x367981[_0x36fd0b(0x275)]=_0x792c7c[_0x36fd0b(0x275)],_0x367981[_0x36fd0b(0x5aa)+'d']=!0x0,_0x367981[_0x36fd0b(0x605)+_0x36fd0b(0x69f)]=!0x1,_0x367981[_0x36fd0b(0x1f9)+_0x36fd0b(0x71c)]=null,_0x15b201=!0x0)),_0x15b201&&(_0x47dc42(_0x367981),_0x7af238(_0x367981,_0x6978e4[_0x36fd0b(0x517)]),_0x367981[_0x36fd0b(0x2a4)]=_0x748928(_0x367981));}});}(_0x512aa4,_0x256e2c),_0x2fc863(_0x512aa4),_0x3cd6aa();var _0x7ab6e0=document[_0x53f7f4(0x738)+_0x53f7f4(0x252)](_0x53f7f4(0x2e2)),_0x2b1f46=document[_0x53f7f4(0x738)+_0x53f7f4(0x252)](_0x53f7f4(0x475)),_0x156f12=document[_0x53f7f4(0x738)+_0x53f7f4(0x252)](_0x53f7f4(0x23f));if(_0x512aa4[_0x53f7f4(0x2d5)]){_0x7ab6e0[_0x53f7f4(0x548)][_0x53f7f4(0x3c4)]=_0x53f7f4(0x28e),_0x2b1f46[_0x53f7f4(0x548)][_0x53f7f4(0x3c4)]=_0x53f7f4(0x610),_0x156f12[_0x53f7f4(0x548)][_0x53f7f4(0x3c4)]=_0x53f7f4(0x28e),_0x156f12[_0x53f7f4(0x37f)]=_0x53f7f4(0x6f3)+_0x53f7f4(0x4cc);var _0x3f42c6={};_0x512aa4[_0x53f7f4(0x5a3)](function(_0x27da10){var _0x128fe1=_0x53f7f4;_0x3f42c6[_0x27da10[_0x128fe1(0x68d)]]=(_0x3f42c6[_0x27da10[_0x128fe1(0x68d)]]||0x0)+0x1;});var _0x306811={'castIron':_0x53f7f4(0x448),'galv':_0x53f7f4(0x35c),'seamless':_0x53f7f4(0x3f4),'welded':_0x53f7f4(0x1fe),'copper':'铜管','stainless':_0x53f7f4(0x530),'composite':_0x53f7f4(0x557),'plastic':_0x53f7f4(0x586),'waterValve':'阀门','bracket':_0x53f7f4(0x32d),'insulRubber':_0x53f7f4(0x458),'insulGlass':_0x53f7f4(0x450),'other':_0x53f7f4(0x3f5)},_0x29720d={'bathtub':'浴缸','bidet':_0x53f7f4(0x623),'washbasin':_0x53f7f4(0x44f),'sink':_0x53f7f4(0x37b),'labSink':_0x53f7f4(0x543),'toilet':_0x53f7f4(0x6ca),'urinal':_0x53f7f4(0x6a0),'faucet':_0x53f7f4(0x660),'waterHeater':_0x53f7f4(0x6f5),'boiler':_0x53f7f4(0x5e3),'steamHeater':_0x53f7f4(0x5e2),'heatExchanger':_0x53f7f4(0x356),'flushDevice':_0x53f7f4(0x518),'handDryer':_0x53f7f4(0x290),'shower':_0x53f7f4(0x283),'showerRoom':_0x53f7f4(0x330),'floorDrain':'地漏','cleanout':_0x53f7f4(0x70e),'rainHead':_0x53f7f4(0x4c3),'siphonHead':_0x53f7f4(0x732),'waterDispenser':_0x53f7f4(0x2f1),'greaseTrap':_0x53f7f4(0x6c6)},_0xa9ef35=[];Object[_0x53f7f4(0x56d)](_0x306811)[_0x53f7f4(0x5a3)](function(_0x3f2dc6){var _0x4a50c6=_0x53f7f4;_0x3f42c6[_0x3f2dc6]&&_0xa9ef35[_0x4a50c6(0x346)](_0x306811[_0x3f2dc6]+'\x20'+_0x3f42c6[_0x3f2dc6]+'\x20条');}),Object[_0x53f7f4(0x56d)](_0x29720d)[_0x53f7f4(0x5a3)](function(_0x529ba7){var _0x404e6b=_0x53f7f4;_0x3f42c6[_0x529ba7]&&_0xa9ef35[_0x404e6b(0x346)](_0x29720d[_0x529ba7]+'\x20'+_0x3f42c6[_0x529ba7]+'\x20条');}),_0x156f12[_0x53f7f4(0x41d)+'t']=_0x53f7f4(0x2ac)+_0x512aa4[_0x53f7f4(0x2d5)]+_0x53f7f4(0x427)+_0xa9ef35[_0x53f7f4(0x2ee)]('、')+(_0x53f7f4(0x6b5)+_0x53f7f4(0x45a)+_0x53f7f4(0x48d)+_0x53f7f4(0x601)+_0x53f7f4(0x440)+_0x53f7f4(0x26e)+_0x53f7f4(0x52c)+_0x53f7f4(0x301)+_0x53f7f4(0x534));}else _0x7ab6e0[_0x53f7f4(0x548)][_0x53f7f4(0x3c4)]=_0x53f7f4(0x634),_0x2b1f46[_0x53f7f4(0x548)][_0x53f7f4(0x3c4)]=_0x53f7f4(0x634),_0x156f12[_0x53f7f4(0x548)][_0x53f7f4(0x3c4)]=_0x53f7f4(0x28e),_0x156f12[_0x53f7f4(0x37f)]=_0x53f7f4(0x6f3)+_0x53f7f4(0x619)+'r',_0x156f12[_0x53f7f4(0x41d)+'t']=_0x53f7f4(0x23e)+_0x53f7f4(0x1d2)+_0x53f7f4(0x5fd)+_0x53f7f4(0x66b)+_0x53f7f4(0x2a2);}else _0x3cd6aa();}function _0x5d3458(_0x1cfec6){var _0x20c1ba=_0x261343,_0x4f3b6d=new FileReader();_0x4f3b6d[_0x20c1ba(0x4ee)]=function(_0x1a4db2){var _0x1fd2b4=_0x20c1ba;try{var _0x486da5=new Uint8Array(_0x1a4db2[_0x1fd2b4(0x205)][_0x1fd2b4(0x64a)]),_0x51ea43=XLSX[_0x1fd2b4(0x61e)](_0x486da5,{'type':_0x1fd2b4(0x498)}),_0x2f31e9=_0x51ea43[_0x1fd2b4(0x2db)][_0x51ea43[_0x1fd2b4(0x5c1)][0x0]],_0x22f0a1=XLSX[_0x1fd2b4(0x4f9)][_0x1fd2b4(0x292)+_0x1fd2b4(0x1d8)](_0x2f31e9,{'header':0x1,'defval':''});window[_0x1fd2b4(0x58a)]=_0x22f0a1,document[_0x1fd2b4(0x738)+_0x1fd2b4(0x252)](_0x1fd2b4(0x284))[_0x1fd2b4(0x224)][_0x1fd2b4(0x4b5)](_0x1fd2b4(0x68c)),document[_0x1fd2b4(0x738)+_0x1fd2b4(0x252)](_0x1fd2b4(0x3e0)+'a')[_0x1fd2b4(0x548)][_0x1fd2b4(0x3c4)]=_0x1fd2b4(0x72e),_0x22b0af(),function(_0x49f617,_0x14c40e){var _0x1cdf3a=_0x1fd2b4,_0x26417a=document[_0x1cdf3a(0x738)+_0x1cdf3a(0x252)](_0x1cdf3a(0x380)),_0x4c04a7=document[_0x1cdf3a(0x738)+_0x1cdf3a(0x252)](_0x1cdf3a(0x4df));if(_0x26417a&&_0x4c04a7){var _0x29fffa=_0x512aa4||[];_0x26417a[_0x1cdf3a(0x37f)]=_0x1cdf3a(0x375)+_0x1cdf3a(0x1ef),_0x26417a[_0x1cdf3a(0x41d)+'t']=_0x1cdf3a(0x358)+_0x49f617+'」：'+(_0x14c40e?_0x14c40e[_0x1cdf3a(0x2d5)]:0x0)+_0x1cdf3a(0x4e3)+_0x29fffa[_0x1cdf3a(0x2d5)]+'\x20项';var _0x13dfc9={},_0x5b68c0=[];_0x29fffa[_0x1cdf3a(0x5a3)](function(_0x8e816b){var _0x15116b=_0x1cdf3a,_0x3a7b41=_0x8e816b[_0x15116b(0x68d)]||_0x15116b(0x4bd),_0x5cabb9=_0x6b9819[_0x3a7b41];_0x5cabb9||(_0x5cabb9=_0x5146df(_0x3a7b41)?_0x15116b(0x25e):_0x3d5baa(_0x3a7b41)?_0x15116b(0x20f):'其他'),_0x13dfc9[_0x5cabb9]||(_0x13dfc9[_0x5cabb9]=0x0,_0x5b68c0[_0x15116b(0x346)](_0x5cabb9)),_0x13dfc9[_0x5cabb9]++;});var _0x4d8dd6=_0x5b68c0[_0x1cdf3a(0x62c)](function(_0x40a0a3){var _0x4dfd28=_0x1cdf3a;return _0x4dfd28(0x485)+_0x4dfd28(0x2dd)+_0x4dfd28(0x349)+'\x22>'+_0x5e3c38(_0x40a0a3)+'\x20'+_0x13dfc9[_0x40a0a3]+_0x4dfd28(0x5f6);})[_0x1cdf3a(0x2ee)](''),_0x2a1dd4=0x0,_0x1b47a4=0x0;_0x29fffa[_0x1cdf3a(0x5a3)](function(_0x57c5ef){var _0x44769e=_0x1cdf3a;/^031001/[_0x44769e(0x528)](_0x57c5ef[_0x44769e(0x280)]||'')&&(_0x2a1dd4+=Number(_0x57c5ef[_0x44769e(0x687)])||0x0),_0x57c5ef[_0x44769e(0x4d0)+'ce']&&_0x1b47a4++;}),_0x4c04a7[_0x1cdf3a(0x37f)]=_0x1cdf3a(0x62e)+_0x1cdf3a(0x347),_0x4c04a7[_0x1cdf3a(0x3f2)]=_0x1cdf3a(0x2af)+_0x1cdf3a(0x342)+_0x1cdf3a(0x3aa)+_0x5e3c38(_0x49f617)+(_0x1cdf3a(0x68a)+_0x1cdf3a(0x580)+_0x1cdf3a(0x575))+_0x29fffa[_0x1cdf3a(0x2d5)]+(_0x1cdf3a(0x6a5)+_0x1cdf3a(0x73a)+_0x1cdf3a(0x23a)+_0x1cdf3a(0x219))+(_0x4d8dd6||_0x1cdf3a(0x485)+_0x1cdf3a(0x2dd)+_0x1cdf3a(0x4ff)+_0x1cdf3a(0x5dc))+(_0x1cdf3a(0x2e6)+_0x1cdf3a(0x72f)+_0x1cdf3a(0x3ed)+_0x1cdf3a(0x595)+_0x1cdf3a(0x3a9)+_0x1cdf3a(0x242)+_0x1cdf3a(0x535)+_0x1cdf3a(0x228)+'b>')+_0x2a1dd4[_0x1cdf3a(0x620)](0x1)+_0x1cdf3a(0x649)+(_0x1b47a4?_0x1cdf3a(0x2ea)+_0x1b47a4+_0x1cdf3a(0x413):'')+(_0x1cdf3a(0x2e6)+_0x1cdf3a(0x60a)+_0x1cdf3a(0x1e3)+_0x1cdf3a(0x43b)+_0x1cdf3a(0x692)+_0x1cdf3a(0x2eb)+_0x1cdf3a(0x540)+_0x1cdf3a(0x21b)+_0x1cdf3a(0x717));}}(_0x1cfec6[_0x1fd2b4(0x542)],_0x22f0a1);}catch(_0x14faa9){var _0x362616=document[_0x1fd2b4(0x738)+_0x1fd2b4(0x252)](_0x1fd2b4(0x23f));_0x362616[_0x1fd2b4(0x548)][_0x1fd2b4(0x3c4)]=_0x1fd2b4(0x28e),_0x362616[_0x1fd2b4(0x37f)]=_0x1fd2b4(0x6f3)+_0x1fd2b4(0x619)+'r',_0x362616[_0x1fd2b4(0x41d)+'t']=_0x1fd2b4(0x4f6)+_0x14faa9[_0x1fd2b4(0x3a1)];}},_0x4f3b6d[_0x20c1ba(0x221)+_0x20c1ba(0x34e)](_0x1cfec6);}_0x261343(0x446)!=typeof document&&document[_0x261343(0x710)+_0x261343(0x2d7)](_0x261343(0x4f4)+_0x261343(0x729),function(){var _0x3ccb84=_0x261343;if(_0xbfcce6){document[_0x3ccb84(0x609)][_0x3ccb84(0x224)][_0x3ccb84(0x4b5)](_0x3ccb84(0x233)),document[_0x3ccb84(0x56a)]=document[_0x3ccb84(0x56a)][_0x3ccb84(0x6d2)](_0x3ccb84(0x6d1),_0x3ccb84(0x4d6))[_0x3ccb84(0x6d2)](_0x3ccb84(0x2fa),_0x3ccb84(0x602));var _0x49d4d0=document[_0x3ccb84(0x306)+_0x3ccb84(0x677)](_0x3ccb84(0x21d));_0x49d4d0&&(_0x49d4d0[_0x3ccb84(0x41d)+'t']=_0x49d4d0[_0x3ccb84(0x41d)+'t'][_0x3ccb84(0x6d2)](_0x3ccb84(0x6d1),_0x3ccb84(0x4d6)));var _0x1087bb=document[_0x3ccb84(0x306)+_0x3ccb84(0x677)](_0x3ccb84(0x1fc));_0x1087bb&&(_0x1087bb[_0x3ccb84(0x41d)+'t']=_0x3ccb84(0x2ef)+_0x3ccb84(0x69b)+_0x3ccb84(0x39b)+_0x3ccb84(0x472)+_0x3ccb84(0x6e2)+_0x3ccb84(0x695));var _0x394989=document[_0x3ccb84(0x3a4)+_0x3ccb84(0x49a)](_0x3ccb84(0x73d));_0x394989[_0x3ccb84(0x37f)]=_0x3ccb84(0x4d2),_0x394989[_0x3ccb84(0x3f2)]=_0x3ccb84(0x3ba)+_0x3ccb84(0x482)+_0x3ccb84(0x5b7)+_0x3ccb84(0x328)+_0x3ccb84(0x684)+_0x3ccb84(0x4ec)+_0x3ccb84(0x421)+_0x3ccb84(0x6a9)+_0x3ccb84(0x58b);var _0x1a6df3=document[_0x3ccb84(0x306)+_0x3ccb84(0x677)](_0x3ccb84(0x3b7));_0x1a6df3&&_0x1a6df3[_0x3ccb84(0x363)+'re'](_0x394989,_0x1a6df3[_0x3ccb84(0x5bf)]);}var _0x2be005=document[_0x3ccb84(0x738)+_0x3ccb84(0x252)](_0x3ccb84(0x63b)+'ct');_0x1a608c()[_0x3ccb84(0x5a3)](function(_0x40ff0b){var _0xb8d82=_0x3ccb84,_0x194c34=document[_0xb8d82(0x3a4)+_0xb8d82(0x49a)](_0xb8d82(0x712));_0x194c34[_0xb8d82(0x262)]=_0x40ff0b[_0xb8d82(0x4e8)],_0x194c34[_0xb8d82(0x41d)+'t']=_0x40ff0b[_0xb8d82(0x4c8)+'el'],_0x2be005[_0xb8d82(0x33b)+'d'](_0x194c34);}),_0x2be005[_0x3ccb84(0x710)+_0x3ccb84(0x2d7)](_0x3ccb84(0x2fd),function(){_0x22b0af();});var _0x51ceea=document[_0x3ccb84(0x738)+_0x3ccb84(0x252)](_0x3ccb84(0x6f0)),_0x34bd08=document[_0x3ccb84(0x738)+_0x3ccb84(0x252)](_0x3ccb84(0x284));_0x51ceea[_0x3ccb84(0x710)+_0x3ccb84(0x2d7)](_0x3ccb84(0x2fd),function(_0x51f69c){var _0x4f449c=_0x3ccb84,_0x2ac9ea=_0x51f69c[_0x4f449c(0x205)][_0x4f449c(0x52b)][0x0];_0x2ac9ea&&_0x5d3458(_0x2ac9ea);}),_0x34bd08[_0x3ccb84(0x710)+_0x3ccb84(0x2d7)](_0x3ccb84(0x286),function(){var _0x202a66=_0x3ccb84;_0x51ceea[_0x202a66(0x286)]();}),_0x34bd08[_0x3ccb84(0x710)+_0x3ccb84(0x2d7)](_0x3ccb84(0x53b),function(_0x13cafe){var _0x3d6278=_0x3ccb84;_0x13cafe[_0x3d6278(0x30b)+_0x3d6278(0x49e)](),_0x34bd08[_0x3d6278(0x224)][_0x3d6278(0x4b5)](_0x3d6278(0x53b));}),_0x34bd08[_0x3ccb84(0x710)+_0x3ccb84(0x2d7)](_0x3ccb84(0x2bc),function(){var _0x1e8042=_0x3ccb84;_0x34bd08[_0x1e8042(0x224)][_0x1e8042(0x483)](_0x1e8042(0x53b));}),_0x34bd08[_0x3ccb84(0x710)+_0x3ccb84(0x2d7)](_0x3ccb84(0x24a),function(_0x365bfb){var _0x41663c=_0x3ccb84;_0x365bfb[_0x41663c(0x30b)+_0x41663c(0x49e)](),_0x34bd08[_0x41663c(0x224)][_0x41663c(0x483)](_0x41663c(0x53b));var _0x1a99ed=_0x365bfb[_0x41663c(0x31d)+'er'][_0x41663c(0x52b)][0x0];_0x1a99ed&&_0x5d3458(_0x1a99ed);});var _0x5b1858=document[_0x3ccb84(0x738)+_0x3ccb84(0x252)](_0x3ccb84(0x416)),_0x20fb05=document[_0x3ccb84(0x738)+_0x3ccb84(0x252)](_0x3ccb84(0x606));_0x5b1858&&_0x20fb05&&(_0x5b1858[_0x3ccb84(0x710)+_0x3ccb84(0x2d7)](_0x3ccb84(0x2fd),function(_0x3a5221){var _0x2bd2bc=_0x3ccb84,_0x460ae2=_0x3a5221[_0x2bd2bc(0x205)][_0x2bd2bc(0x52b)][0x0];_0x460ae2&&_0x18f1c6(_0x460ae2);}),_0x20fb05[_0x3ccb84(0x710)+_0x3ccb84(0x2d7)](_0x3ccb84(0x286),function(){var _0x14140c=_0x3ccb84;_0x5b1858[_0x14140c(0x286)]();}),_0x20fb05[_0x3ccb84(0x710)+_0x3ccb84(0x2d7)](_0x3ccb84(0x53b),function(_0x1622eb){var _0x2fb6b7=_0x3ccb84;_0x1622eb[_0x2fb6b7(0x30b)+_0x2fb6b7(0x49e)](),_0x20fb05[_0x2fb6b7(0x224)][_0x2fb6b7(0x4b5)](_0x2fb6b7(0x53b));}),_0x20fb05[_0x3ccb84(0x710)+_0x3ccb84(0x2d7)](_0x3ccb84(0x2bc),function(){var _0x1cf111=_0x3ccb84;_0x20fb05[_0x1cf111(0x224)][_0x1cf111(0x483)](_0x1cf111(0x53b));}),_0x20fb05[_0x3ccb84(0x710)+_0x3ccb84(0x2d7)](_0x3ccb84(0x24a),function(_0x59f954){var _0x38b5a6=_0x3ccb84;_0x59f954[_0x38b5a6(0x30b)+_0x38b5a6(0x49e)](),_0x20fb05[_0x38b5a6(0x224)][_0x38b5a6(0x483)](_0x38b5a6(0x53b));var _0xec082=_0x59f954[_0x38b5a6(0x31d)+'er'][_0x38b5a6(0x52b)][0x0];_0xec082&&_0x18f1c6(_0xec082);})),document[_0x3ccb84(0x306)+_0x3ccb84(0x391)](_0x3ccb84(0x54a)+_0x3ccb84(0x35b)+'\x22]')[_0x3ccb84(0x5a3)](function(_0x4026d1){var _0xa934e5=_0x3ccb84;_0x4026d1[_0xa934e5(0x710)+_0xa934e5(0x2d7)](_0xa934e5(0x2fd),function(){_0x22b0af();});}),document[_0x3ccb84(0x738)+_0x3ccb84(0x252)](_0x3ccb84(0x5c9))[_0x3ccb84(0x710)+_0x3ccb84(0x2d7)](_0x3ccb84(0x286),function(){var _0x10efa6=_0x3ccb84;window[_0x10efa6(0x58a)]=null,_0x512aa4=[],document[_0x10efa6(0x738)+_0x10efa6(0x252)](_0x10efa6(0x2e2))[_0x10efa6(0x548)][_0x10efa6(0x3c4)]=_0x10efa6(0x634),document[_0x10efa6(0x738)+_0x10efa6(0x252)](_0x10efa6(0x475))[_0x10efa6(0x548)][_0x10efa6(0x3c4)]=_0x10efa6(0x634),document[_0x10efa6(0x738)+_0x10efa6(0x252)](_0x10efa6(0x3e0)+'a')[_0x10efa6(0x548)][_0x10efa6(0x3c4)]=_0x10efa6(0x634),document[_0x10efa6(0x738)+_0x10efa6(0x252)](_0x10efa6(0x23f))[_0x10efa6(0x548)][_0x10efa6(0x3c4)]=_0x10efa6(0x634),document[_0x10efa6(0x738)+_0x10efa6(0x252)](_0x10efa6(0x214)+'ea')[_0x10efa6(0x548)][_0x10efa6(0x3c4)]=_0x10efa6(0x634),_0x51ceea[_0x10efa6(0x262)]='',document[_0x10efa6(0x738)+_0x10efa6(0x252)](_0x10efa6(0x29b))[_0x10efa6(0x3f2)]='',document[_0x10efa6(0x738)+_0x10efa6(0x252)](_0x10efa6(0x284))[_0x10efa6(0x548)][_0x10efa6(0x3c4)]=_0x10efa6(0x28e),document[_0x10efa6(0x738)+_0x10efa6(0x252)](_0x10efa6(0x284))[_0x10efa6(0x224)][_0x10efa6(0x483)](_0x10efa6(0x68c));var _0x12cf8e=document[_0x10efa6(0x738)+_0x10efa6(0x252)](_0x10efa6(0x380));_0x12cf8e[_0x10efa6(0x37f)]=_0x10efa6(0x375)+'s',_0x12cf8e[_0x10efa6(0x41d)+'t']='',document[_0x10efa6(0x738)+_0x10efa6(0x252)](_0x10efa6(0x4df))[_0x10efa6(0x37f)]=_0x10efa6(0x6f4),document[_0x10efa6(0x738)+_0x10efa6(0x252)](_0x10efa6(0x4df))[_0x10efa6(0x3f2)]='';}),document[_0x3ccb84(0x738)+_0x3ccb84(0x252)](_0x3ccb84(0x6fc))[_0x3ccb84(0x710)+_0x3ccb84(0x2d7)](_0x3ccb84(0x286),function(){var _0x45adfd=_0x3ccb84;_0x512aa4[_0x45adfd(0x2d5)]&&(_0x45adfd(0x4d7)===_0x36fca9()?_0x502b74(_0x512aa4):_0x18ce1b(_0x512aa4));});}),_0x261343(0x446)!=typeof window&&(window[_0x261343(0x657)]={'parseRows':_0x1c325e,'matchQuota':_0x4fa3c5,'buildItem':_0x6945a6,'recomputeQuota':_0x47dc42,'getPeriods':_0x1a608c,'exportGLD':_0x18ce1b,'exportJianjing':_0x502b74,'getData':function(){return _0x512aa4;},'setAOA':function(_0x5cb805){var _0xf3ff59=_0x261343;return window[_0xf3ff59(0x58a)]=_0x5cb805,_0x2fc863(_0x512aa4=_0x1c325e(_0x5cb805,_0x3f5443(),_0x36fca9())),_0x512aa4;},'setLoc':function(_0x43c1ce,_0x358c97){var _0x4e890d=_0x261343,_0x4c320a=_0x512aa4[_0x43c1ce];_0x4c320a[_0x4e890d(0x693)]=_0x358c97,_0x4c320a[_0x4e890d(0x46e)+'us']=!0x1,_0x12e184(_0x4c320a)[_0x4e890d(0x315)](_0x4c320a[_0x4e890d(0x275)])<0x0&&(_0x4c320a[_0x4e890d(0x275)]=_0x9dd36(_0x4c320a)),_0x4c320a[_0x4e890d(0x1f9)+_0x4e890d(0x71c)]=null,_0x47dc42(_0x4c320a),_0x7af238(_0x4c320a,_0x512aa4[_0x4e890d(0x517)]),_0x4c320a[_0x4e890d(0x2a4)]=_0x748928(_0x4c320a),_0x2fc863(_0x512aa4);},'setJoint':function(_0x1147ac,_0x31cbb0){var _0x546558=_0x261343,_0x732233=_0x512aa4[_0x1147ac];_0x732233[_0x546558(0x275)]=_0x31cbb0,_0x732233[_0x546558(0x1f9)+_0x546558(0x71c)]=null,_0x47dc42(_0x732233),_0x7af238(_0x732233,_0x512aa4[_0x546558(0x517)]),_0x732233[_0x546558(0x2a4)]=_0x748928(_0x732233),_0x2fc863(_0x512aa4);}}),_0x261343(0x446)!=typeof module&&module[_0x261343(0x213)]&&(module[_0x261343(0x213)]={'annotateListCode12':_0x283c32,'LIST':_0x478af2,'CAST_IRON':_0x4ccaa5,'GALV':_0x2d2d1b,'JOINT_CN':_0x2fa4ed,'buildItem':_0x6945a6,'matchQuota':_0x4fa3c5,'parseRows':_0x1c325e,'parseDN':_0x427bfb,'parseMedium':_0x55960a,'parseLoc':_0xd650aa,'parseJoint':_0x518134,'materialOf':_0x494045,'jointsOf':_0x12e184,'defaultJoint':_0x9dd36,'lookupCastIronPrice':_0x326dbe,'lookupGalvPrice':_0x49e0b9,'lookupPipePrice':_0x142fe3,'getPeriods':_0x1a608c,'pipeKey':_0x1bf0fb,'isPriced':_0x1820ea,'PIPE_GROUPS':_0x564f17,'parsePipeJoint':_0x3ce39e,'JOINT_CN2':_0x1be51b,'plasticKindOf':_0x176251,'MEDIUM_CN3':_0x592854,'setSpec':function(_0x37bf35,_0x6596c){_0x4e8a7b=_0x37bf35||null,_0x5a6614=!0x1!==_0x6596c;},'getSpec':function(){return _0x4e8a7b;},'analyzeSpec':function(_0x4d73b9,_0x4256f5){var _0x5cac61=_0x261343;return SPEC[_0x5cac61(0x2e9)](_0x4d73b9||_0x4e8a7b,_0x4256f5);},'featureText':_0x748928,'buildWarn':_0xab6a7b,'exportGLD':_0x18ce1b,'exportJianjing':_0x502b74,'exportGLDGs':_0x31deea,'exportJianjingGs':_0x13eb7f,'V_LIST':_0x1671df,'V_LABEL':_0x3726cc,'isValveCat':_0x3d5baa,'valveCatOf':_0x398887,'buildValveItem':_0x1c82bc,'matchValveQuota':_0x6c1a0a,'valvePrice':_0x46e50d,'V_WTHREAD':_0x3ee6c4,'V_WFLANGE':_0x6404f0,'V_FLOAT':_0x3d26d7,'V_LEVEL':_0x11a794,'V_STHREAD':_0x3b836e,'V_SFLANGE':_0x4e21ed,'AUX_LIST':_0x1e8216,'AUX_LABEL':_0x1a2430,'isAuxCat':_0x181832,'auxCatOf':_0xa1e936,'buildAuxItem':_0x10837d,'matchAuxQuota':_0x46a03a,'auxPrice':_0x594319,'bracketWeightPerM':_0x4c1aa1,'withBracket':_0x3d33e3,'S_DEF':_0x664779,'S_WORK':_0x3c02ba,'isSanCat':_0x5146df,'sanCatOf':_0x27d0e7,'buildSanItem':_0x2e30e8,'matchSanQuota':_0x221e0d,'sanPrice':_0x41963d,'sanOptLabel':_0x30f7c5,'SP':_0x48c40f});}()));
+/* ============================================================
+ * 给排水专业智能组价系统 - 核心逻辑
+ * 依据：天津市安装工程工程量清单计价指引（2025版，2025-10-01施行）
+ *       配套 天津市安装工程预算基价 第八册 给排水、采暖、燃气工程 DBD29-308-2020
+ *
+ * 已实现：铸铁管（031001001）、镀锌钢管（031001002）
+ *   第八册 第一章 给排水、采暖管道安装
+ *   一、室外管道
+ *     7. 承插铸铁给水管（青铅接口）      8-90 ~ 8-99   DN75~500
+ *     8. 承插铸铁给水管（膨胀水泥接口）  8-100 ~ 8-109 DN75~500
+ *     9. 承插铸铁给水管（石棉水泥接口）  8-110 ~ 8-119 DN75~500
+ *    10. 承插铸铁给水管（胶圈接口）      8-120 ~ 8-128 DN100~500（无DN75）
+ *    11. 承插铸铁排水管（石棉水泥接口）  8-129 ~ 8-134 DN50~200（50/75/100/125/150/200）
+ *    12. 承插铸铁排水管（水泥接口）      8-135 ~ 8-140 DN50~200
+ *   二、室内管道
+ *     9. 承插铸铁给水管（青铅接口）      8-336 ~ 8-341 DN75~300
+ *    10. 承插铸铁给水管（膨胀水泥接口）  8-342 ~ 8-347 DN75~300
+ *    11. 承插铸铁给水管（石棉水泥接口）  8-348 ~ 8-353 DN75~300
+ *    12. 承插铸铁排水管（石棉水泥接口）  8-354 ~ 8-359 DN50~250（50/75/100/150/200/250）
+ *    13. 承插铸铁排水管（水泥接口）      8-360 ~ 8-365 DN50~250
+ *   注：室内给水无胶圈接口子目；排水只有石棉水泥/水泥两种接口子目。
+ *
+ * 镀锌钢管（清单 031001002 镀锌钢管，单位 10m）
+ *     室外管道 镀锌钢管(螺纹连接)        8-1    ~ 8-11   DN15~150（15/20/25/32/40/50/65/80/100/125/150）
+ *     室内管道 镀锌钢管(螺纹连接)        8-173  ~ 8-183  DN15~150（同上11档）
+ *     室外燃气镀锌钢管(螺纹连接)         8-1128 ~ 8-1131 DN25/32/40/50
+ *     室内燃气镀锌钢管(螺纹连接)         8-1132 ~ 8-1140 DN15/20/25/32/40/50/65/80/100
+ *
+ * 价格库见 data/prices.js
+ * ============================================================ */
+
+(function () {
+  'use strict';
+
+  // ---------- 概算模式 ----------
+  // 概算计价不套清单编码、不生成项目特征：URL 带 ?mode=gs 时启用。
+  // 界面隐藏「清单编码」「项目特征」两列；广联达导出删清单行与项目特征列；
+  // 建经导出删清单编码列与项目特征列。无该参数（预算模式）时行为完全不变。
+  var GS_MODE = /[?&]mode=gs(?:&|$)/.test((typeof location !== 'undefined' && location.search) || '');
+
+  // ---------- 清单编码 ----------
+  // ===== 补充规则共享模块（js/special.js）：给排水 / 暖通 / 消防 三站同源 =====
+  var SP = (typeof window !== 'undefined' && window.PIPE_SPECIAL) ||
+    (typeof require === 'function' ? require('./special.js') : null);
+  // 本站已有原生实现的类别交给原生逻辑（洁具洗脸盆 / 淋浴器 / 扫除口），其余全部走共享模块
+  if (SP) SP.setNative(['washSink', 'floorCleanout']);
+
+  var LIST = {
+    castIron: { code: '031001001', name: '铸铁管' },
+    galv: { code: '031001002', name: '镀锌钢管' },
+    seamless: { code: '031001003', name: '无缝钢管' },
+    welded: { code: '031001004', name: '焊接钢管' },
+    copper: { code: '031001005', name: '铜管' },
+    stainless: { code: '031001006', name: '不锈钢管' },
+    composite: { code: '031001007', name: '复合管' },
+    plastic: { code: '031001008', name: '塑料管' },
+    preInsul: { code: '030801020', name: '低压直埋保温管道' },
+    levelGauge: { code: '031002001', name: '金属阀门' },
+    pressGauge: { code: '030601002', name: '压力仪表' },
+    pressGaugeElec: { code: '030601002', name: '压力仪表' },
+    flexJoint: { code: '031002008', name: '软接头（软管）' }
+  };
+
+  // ---------- 阀门及管道附件（与暖通站同口径）----------
+  var V_LIST = {
+    waterValve: { code: '031002001', name: '金属阀门' },
+    autoAir: { code: '031002303', name: '自动排气阀' },
+    tempValve: { code: '031002306', name: '散热器温控阀' },
+    floatValve: { code: '031002301', name: '法兰浮球阀' },
+    levelValve: { code: '031002302', name: '液压水位控制阀' },
+    flushValve: { code: '031002304', name: '口部冲洗阀' },
+    solenoidValve: { code: '031002305', name: '电磁阀' }
+  };
+  var V_LABEL = {
+    waterValve: '金属阀门', autoAir: '自动排气阀', tempValve: '散热器温控阀',
+    floatValve: '法兰浮球阀', levelValve: '液压水位控制阀', flushValve: '口部冲洗阀', solenoidValve: '电磁阀'
+  };
+  var V_WORK = {
+    waterValve: '阀体安装、螺纹/法兰连接、试压、调试',
+    autoAir: '阀体安装、螺纹连接、试压、调试',
+    tempValve: '温控阀及传感器安装、连接、调试',
+    floatValve: '阀体安装、法兰连接、试压、调试',
+    levelValve: '阀体安装、法兰连接、试压、调试',
+    flushValve: '壁龛（地坑）门框及扇（盖）制作安装、阀安装、刷油、水压试验',
+    solenoidValve: '阀体安装、螺纹/法兰连接、接线、试压、调试'
+  };
+  function TT(max, code, label) { return { max: max, code: code, label: label }; }
+  var V_WTHREAD = [TT(15, '8-579', '15mm以内'), TT(20, '8-580', '20mm以内'), TT(25, '8-581', '25mm以内'),
+    TT(32, '8-582', '32mm以内'), TT(40, '8-583', '40mm以内'), TT(50, '8-584', '50mm以内')];
+  var V_WFLANGE = [TT(65, '8-620', '65mm以内'), TT(80, '8-621', '80mm以内'), TT(100, '8-622', '100mm以内'),
+    TT(125, '8-623', '125mm以内'), TT(150, '8-624', '150mm以内'), TT(200, '8-625', '200mm以内'),
+    TT(250, '8-626', '250mm以内'), TT(300, '8-627', '300mm以内'), TT(350, '8-628', '350mm以内'),
+    TT(400, '8-629', '400mm以内')];
+  var V_FLOAT = [TT(32, '8-612', '32mm以内'), TT(50, '8-613', '50mm以内'), TT(80, '8-614', '80mm以内'),
+    TT(100, '8-615', '100mm以内'), TT(150, '8-616', '150mm以内')];
+  var V_LEVEL = [TT(50, '8-645', '50mm以内'), TT(80, '8-646', '80mm以内'), TT(100, '8-647', '100mm以内'),
+    TT(150, '8-648', '150mm以内'), TT(200, '8-649', '200mm以内')];
+  var V_STHREAD = [TT(15, '8-603', '15mm以内'), TT(20, '8-604', '20mm以内'), TT(25, '8-605', '25mm以内'),
+    TT(32, '8-606', '32mm以内'), TT(40, '8-607', '40mm以内'), TT(50, '8-608', '50mm以内')];
+  var V_SFLANGE = [TT(32, '8-630', '32mm以内'), TT(40, '8-631', '40mm以内'), TT(50, '8-632', '50mm以内'),
+    TT(65, '8-633', '65mm以内'), TT(80, '8-634', '80mm以内'), TT(100, '8-635', '100mm以内'),
+    TT(125, '8-636', '125mm以内'), TT(150, '8-637', '150mm以内'), TT(200, '8-638', '200mm以内'),
+    TT(250, '8-639', '250mm以内'), TT(300, '8-640', '300mm以内'), TT(350, '8-641', '350mm以内'),
+    TT(400, '8-642', '400mm以内'), TT(450, '8-643', '450mm以内'), TT(500, '8-644', '500mm以内')];
+
+  function valveCfg() {
+    return (typeof window !== 'undefined' && window.PIPE_VALVE_PRICES) || {};
+  }
+  function isValveCat(c) { return !!V_LIST[c]; }
+  // 国标公称直径系列（用于「阀门-300」这类只给数字的写法校验）
+  var DN_STD = [15,20,25,32,40,50,65,80,100,125,150,200,250,300,350,400,450,500,600,700,800,900,1000,1200,1400,1600,1800,2000];
+  function parseVDn(name) {
+    var s2 = String(name || '');
+    var m = s2.match(/(?:DN|dn|De|de|D|Φ|φ|Ø)\s*[-－]?\s*(\d{2,4})/);
+    if (m) return parseInt(m[1], 10);
+    m = s2.match(/(\d{2,4})\s*(?:mm|MM|毫米)/);
+    if (m) return parseInt(m[1], 10);
+    // 水阀「阀门-300」写法：-300 即 DN300（与暖通站圆形风道阀门同口径）
+    // 只认国标 DN 系列，避免 -16(压力) / -220(电压) 之类被误判为公称直径
+    m = s2.match(/[-－—–_]\s*(\d{2,4})\s*(MPa|Mpa|mpa|PN|℃|°C|V|伏|公斤|元|个|台|套|片)?\s*$/);
+    if (m) {
+      var dv = parseInt(m[1], 10);
+      var isPress = /MPa|Mpa|mpa|PN|公斤|压力/.test(s2);
+      var isVolt = /电动|电磁/.test(s2) && [12, 24, 36, 110, 220, 380].indexOf(dv) >= 0;
+      if (!m[2] && !isPress && !isVolt && DN_STD.indexOf(dv) >= 0) return dv;
+    }
+    return null;
+  }
+  function valveKindOf(name) {
+    var s2 = String(name || '');
+    if (/闸阀/.test(s2)) return 'gate';
+    if (/截止阀/.test(s2)) return 'globe';
+    if (/蝶阀/.test(s2)) return 'butterfly';
+    if (/止回阀|逆止阀/.test(s2)) return 'check';
+    if (/Y型过滤器|y型过滤器|过滤器/.test(s2)) return 'strainer';
+    if (/球阀/.test(s2)) return 'ball';
+    return 'market';
+  }
+  // 阀门识别（给排水站无风阀，含"阀"且带 DN 即可判为水阀）
+  function valveCatOf(name) {
+    var n = String(name || '');
+    if (/口部冲洗/.test(n)) return 'flushValve';
+    if (/电磁阀/.test(n)) return 'solenoidValve';
+    if (/自动排气阀|放风阀/.test(n)) return 'autoAir';
+    if (/温控阀/.test(n)) return 'tempValve';
+    if (/浮球阀/.test(n)) return 'floatValve';
+    if (/水位控制阀/.test(n)) return 'levelValve';
+    if (/闸阀|截止阀|蝶阀|球阀|止回阀|逆止阀|Y型过滤器|y型过滤器|过滤器|软接头|橡胶软接头|补偿器|波纹补偿器|平衡阀|减压阀|水阀/.test(n)) return 'waterValve';
+    if (/阀/.test(n) && parseVDn(n) && !/阀门井|阀室|阀门套/.test(n)) return 'waterValve';
+    return null;
+  }
+  function buildValveItem(name, cat) {
+    var it = {};
+    it.name = name;
+    it.category = cat;
+    it.isValve = true;
+    it.listCode = V_LIST[cat].code;
+    it.listName = V_LIST[cat].name;
+    it.material = V_LABEL[cat];
+    it.dn = parseVDn(name);
+    it.unit = (cat === 'flushValve') ? '套' : '个';
+    it.valveKind = valveKindOf(name);
+    var vc = valveCfg();
+    if (cat === 'waterValve') {
+      var inf = (vc.info || {})[it.valveKind];
+      it.brand = inf ? '' : (vc.brand || '');
+    } else if (cat === 'solenoidValve') {
+      it.brand = (vc.solenoid || {}).brand || '';
+    } else if (cat === 'flushValve') {
+      it.brand = ((vc.special || {}).flush || {}).brand || '';
+    } else {
+      var key = { autoAir: 'autoAir', tempValve: 'temp', floatValve: 'float', levelValve: 'level' }[cat];
+      var sp = (vc.special || {})[key] || {};
+      it.brand = (sp.source === 'info') ? '' : (sp.brand || vc.brand || '');
+    }
+    return it;
+  }
+  function nearIdxV(arr, v) {
+    if (!(v > 0)) return 0;
+    for (var i = 0; i < arr.length; i++) if (v <= arr[i]) return i;
+    return arr.length - 1;
+  }
+  function tierIdxV(tiers, dn) {
+    for (var i = 0; i < tiers.length; i++) if (dn <= tiers[i].max) return i;
+    return tiers.length - 1;
+  }
+
+  // ---------- 管道支架 / 保温绝热（与暖通站同口径）----------
+  var AUX_LIST = {
+    bracket: { code: '031301005', name: '支/吊架、基础型钢' },
+    insulRubber: { code: '031208002', name: '其他管道绝热' },
+    insulGlass: { code: '031208002', name: '其他管道绝热' }
+  };
+  var AUX_LABEL = { bracket: '管道支架', insulRubber: '橡塑保温', insulGlass: '离心玻璃棉' };
+  function auxCfg() {
+    return (typeof window !== 'undefined' && window.PIPE_AUX_PRICES) || {};
+  }
+  function isAuxCat(c) { return !!AUX_LIST[c]; }
+  // 保温/支架优先于管道识别（"橡塑保温管""管道支架"都含"管"）
+  function auxCatOf(name) {
+    var n = String(name || '');
+    if (/橡塑/.test(n)) return 'insulRubber';
+    if (/玻璃棉/.test(n)) return 'insulGlass';
+    if (/管道支架|支吊架|支架制作|支架安装|支架制安/.test(n)) return 'bracket';
+    return null;
+  }
+  function buildAuxItem(name, cat) {
+    var it = {};
+    it.name = name;
+    it.category = cat;
+    it.isAux = true;
+    it.listCode = AUX_LIST[cat].code;
+    it.listName = AUX_LIST[cat].name;
+    it.material = AUX_LABEL[cat];
+    it.dn = parseDN(name);
+    it.unit = (cat === 'bracket') ? 'kg' : 'm³';
+    var cfg = auxCfg();
+    if (cat === 'insulRubber') it.insulThk = (cfg.insul && cfg.insul.rubber.thk) || 30;
+    if (cat === 'insulGlass') it.insulThk = (cfg.insul && cfg.insul.glass.thk) || 40;
+    return it;
+  }
+  function matchAuxQuota(it) {
+    var c = it.category;
+    if (c === 'bracket') return { code: '7-138', name: '管道支吊架制作、安装 管道支吊架', inferred: false, unit: '100kg', factor: 100 };
+    if (c === 'insulRubber') return { code: '11-582', name: '管道橡塑保温壳安装（管道） D133以内', inferred: false, unit: 'm³', factor: 1 };
+    if (c === 'insulGlass') return { code: '11-647', name: '带铝箔离心玻璃棉安装 通风管道 厚度40mm', inferred: false, unit: 'm³', factor: 1 };
+    return { code: '', name: '', inferred: false };
+  }
+  function auxPrice(it) {
+    var cfg = auxCfg();
+    if (it.category === 'bracket') {
+      var b = cfg.bracket || { steel: 4.2 };
+      return { price: b.steel, source: 'info', basis: '信息价：型钢（角钢、槽钢）' + b.steel + '元/kg' };
+    }
+    var k = it.category === 'insulRubber' ? 'rubber' : 'glass';
+    var m = (cfg.insul || {})[k] || { price: 0, brand: '', name: '' };
+    return {
+      price: m.price, source: 'market', brand: m.brand,
+      basis: '市场价（' + m.brand + '）：' + m.name + ' ' + m.price + '元/m³'
+    };
+  }
+  function bracketWeightPerM(dn) {
+    var t = (auxCfg().bracket || {}).weightPerM || [{ max: 9999, w: 0.6 }];
+    if (!(dn > 0)) return 0.60;
+    for (var i = 0; i < t.length; i++) if (dn <= t[i].max) return t[i].w;
+    return t[t.length - 1].w;
+  }
+  // 管道清单全部套完后自动补「管道支架」一行；原表已含支架则不重复
+  // 管道支架：按系统分别补项（系统来自清单里的分组标题行，如「给水管道」「中水管道」；
+  // 无分组标题时全表算一个系统），每个系统在其最后一条管道清单之后插入一条支架，
+  // 位置紧跟管道，不放到全表末尾
+  function withBracket(items) {
+    var hasBracket = false;
+    for (var i = 0; i < items.length; i++) if (items[i].category === 'bracket') hasBracket = true;
+    if (hasBracket) return items;
+    var order = [], map = {};
+    for (var j = 0; j < items.length; j++) {
+      var it = items[j];
+      var key = it.system || '';
+      if (!map[key]) { map[key] = { key: key, lastPipe: -1, len: 0, kg: 0 }; order.push(map[key]); }
+      if (isAuxCat(it.category) || isValveCat(it.category) || isSanCat(it.category)) continue;
+      if (!(it.quantity > 0)) continue;
+      map[key].lastPipe = j;
+      map[key].len += it.quantity;
+      map[key].kg += it.quantity * bracketWeightPerM(it.dn);
+    }
+    var groups = order.filter(function (g) { return g.lastPipe >= 0 && g.kg > 0; });
+    if (!groups.length) return items;
+    // 从后往前插，避免插入后前面分组的下标失效
+    groups.sort(function (a, b) { return b.lastPipe - a.lastPipe; });
+    groups.forEach(function (g) {
+      var kg = Math.round(g.kg * 10) / 10;
+      if (!(kg > 0)) return;
+      var it = buildAuxItem('管道支架', 'bracket');
+      it.index = '';
+      it.quantity = kg;
+      it.loc = null; it.joint = null;
+      var q = matchAuxQuota(it);
+      it.quotaCode = q.code; it.quotaName = q.name; it.quotaUnit = q.unit; it.quotaFactor = q.factor;
+      it.codeInferred = false; it.extras = [];
+      var pr = auxPrice(it);
+      it.price = pr.price; it.priceSource = pr.source; it.priceBasis = pr.basis; it.priceBrand = pr.brand || '';
+      it.system = g.key;
+      it.autoAdded = true;
+      it.warn = '管道支架为自动补项' + (g.key ? '（' + g.key + '）' : '') + '：按管道总长 ' + Math.round(g.len) +
+        'm 与管径分档含量估算约 ' + kg + 'kg（0.45~3.2kg/m），定额 7-138 计量单位为 100kg，请按图纸支架实际重量调整';
+      it.features = featureText(it);
+      items.splice(g.lastPipe + 1, 0, it);
+    });
+    return items;
+  }
+
+  // ---------- 其他管材定额组（2026-11-02 补充）----------
+  // 每组：loc 室内/室外；joint 连接方式；medium 介质（water/gas/drain/rain，默认 water）
+  //       start 首个子目号；dns 依次对应的管径档；name 子目名称
+  var GROOVE_FITTING = { start: 220, dns: [65, 80, 100, 125, 150, 200, 250], name: '室内管道 钢管沟槽连接管件', unit: '10个', factor: 10 };
+  var PIPE_FLUSH = { start: 490, dns: [50, 100, 200, 300, 400, 500], name: '管道消毒冲洗', unit: '100m', factor: 100 };
+  var PLASTIC_OUT_DNS = [32, 40, 50, 63, 75, 90, 110, 125, 160, 200, 250, 315];
+  var PLASTIC_IN_DNS = [20, 25, 32, 40, 50, 63, 75, 90, 110, 125, 160];
+  var PLASTIC_DRAIN_DNS = [50, 75, 110, 160, 200, 250];
+  var PIPE_GROUPS = {
+    seamless: [
+      { loc: 'out', joint: 'weld', start: 23, dns: [32, 40, 50, 65, 80, 100, 125, 150, 200, 250, 300, 350, 400], name: '室外管道 钢管(焊接)' },
+      { loc: 'in', joint: 'weld', start: 195, dns: [32, 40, 50, 65, 80, 100, 125, 150, 200, 250, 300], name: '室内管道 钢管(焊接)' },
+      { loc: 'in', joint: 'groove', start: 206, dns: [65, 80, 100, 125, 150, 200, 250], name: '室内管道 钢管(沟槽连接)' }
+    ],
+    welded: [
+      { loc: 'out', joint: 'weld', start: 23, dns: [32, 40, 50, 65, 80, 100, 125, 150, 200, 250, 300, 350, 400], name: '室外管道 钢管(焊接)' },
+      { loc: 'in', joint: 'weld', start: 195, dns: [32, 40, 50, 65, 80, 100, 125, 150, 200, 250, 300], name: '室内管道 钢管(焊接)' },
+      { loc: 'in', joint: 'groove', start: 206, dns: [65, 80, 100, 125, 150, 200, 250], name: '室内管道 钢管(沟槽连接)' }
+    ],
+    copper: [
+      { loc: 'in', joint: 'press', start: 309, dns: [18, 22, 28, 35, 42, 54, 76, 89, 108], name: '室内管道 铜管(卡压连接)' },
+      { loc: 'in', joint: 'oxy', start: 318, dns: [18, 22, 28, 35, 42, 54, 76, 89, 108], name: '室内管道 铜管(氧乙炔焊)' },
+      { loc: 'in', joint: 'braze', start: 327, dns: [18, 22, 28, 35, 42, 54, 76, 89, 108], name: '室内管道 铜管(钎焊)' }
+    ],
+    stainless: [
+      { loc: 'in', joint: 'press', start: 261, dns: [15, 20, 25, 32, 40, 50, 65, 80, 100], name: '室内管道 薄壁不锈钢管(卡压连接)' },
+      { loc: 'in', joint: 'sleeve', start: 270, dns: [15, 20, 25, 32, 40, 50, 65, 80, 100], name: '室内管道 薄壁不锈钢管(卡套连接)' },
+      { loc: 'in', joint: 'argon', start: 279, dns: [15, 20, 25, 32, 40, 50, 65, 80, 100], name: '室内管道 薄壁不锈钢管(承插氩弧焊)' },
+      { loc: 'in', joint: 'thread', start: 288, dns: [15, 20, 25, 32, 40, 50, 65, 80, 100], name: '室内管道 不锈钢管(螺纹连接)' },
+      { loc: 'in', joint: 'arc', start: 297, dns: [15, 20, 25, 32, 40, 50, 65, 80, 100, 125, 150, 200], name: '室内管道 不锈钢管(对接电弧焊)' },
+      { loc: 'in', joint: 'argon', medium: 'gas', start: 1141, dns: [25, 32, 40, 50, 65, 80, 100], name: '室内燃气不锈钢管(承插氩弧焊)' },
+      { loc: 'in', joint: 'sleeve', medium: 'gas', start: 1148, dns: [15, 20, 25, 32, 40, 50], name: '室内燃气不锈钢管(卡套连接)' },
+      { loc: 'in', joint: 'press', medium: 'gas', start: 1154, dns: [15, 20, 25, 32, 40, 50], name: '室内燃气不锈钢管(卡压连接)' }
+    ],
+    composite: [
+      { loc: 'out', joint: 'electro', start: 81, dns: [32, 40, 50, 63, 75, 90, 110, 125, 160], name: '室外管道 钢骨架塑料复合管(电熔连接)' },
+      { loc: 'in', joint: 'press', start: 227, dns: [20, 25, 32, 40, 50, 63], name: '室内管道 铝塑复合管(卡压连接)' },
+      { loc: 'in', joint: 'sleeve', start: 233, dns: [20, 25, 32, 40, 50, 63], name: '室内管道 铝塑复合管(卡套连接)' },
+      { loc: 'in', joint: 'fusion', start: 239, dns: [20, 25, 32, 40, 50, 63, 75, 90, 110, 125, 160], name: '室内管道 铝塑复合管(热熔连接)' },
+      { loc: 'in', joint: 'electro', start: 250, dns: [20, 25, 32, 40, 50, 63, 75, 90, 110, 125, 160], name: '室内管道 钢骨架塑料复合管(电熔连接)' }
+    ],
+    plastic: [
+      { loc: 'out', joint: 'fusion', start: 36, dns: PLASTIC_OUT_DNS, name: '室外管道 塑料给水管(热熔连接)' },
+      { loc: 'out', joint: 'electro', start: 48, dns: PLASTIC_OUT_DNS, name: '室外管道 塑料给水管(电熔连接)' },
+      { loc: 'out', joint: 'glue', start: 60, dns: PLASTIC_OUT_DNS, name: '室外管道 塑料给水管(粘接)' },
+      { loc: 'in', joint: 'fusion', start: 410, dns: PLASTIC_IN_DNS, name: '室内管道 塑料给水管(热熔连接)' },
+      { loc: 'in', joint: 'electro', start: 421, dns: PLASTIC_IN_DNS, name: '室内管道 塑料给水管(电熔连接)' },
+      { loc: 'in', joint: 'glue', start: 432, dns: PLASTIC_IN_DNS, name: '室内管道 塑料给水管(粘接)' },
+      { loc: 'in', joint: 'glue', medium: 'drain', start: 377, dns: PLASTIC_DRAIN_DNS, name: '室内管道 塑料排水管(粘接)' },
+      { loc: 'in', joint: 'fusion', medium: 'drain', start: 383, dns: PLASTIC_DRAIN_DNS, name: '室内管道 塑料排水管(热熔连接)' },
+      { loc: 'in', joint: 'nut', medium: 'drain', start: 389, dns: PLASTIC_DRAIN_DNS, name: '室内管道 塑料排水管(螺母密封圈连接)' },
+      { loc: 'in', joint: 'glue', medium: 'rain', start: 405, dns: [75, 110, 160, 200, 250], name: '室内管道 塑料雨水管(粘接)' }
+    ]
+  };
+  var JOINT_CN2 = {
+    weld: '焊接', groove: '沟槽连接（卡箍）', press: '卡压连接', sleeve: '卡套连接',
+    argon: '承插氩弧焊', thread: '螺纹连接', arc: '对接电弧焊', oxy: '氧乙炔焊',
+    braze: '钎焊', fusion: '热熔连接', electro: '电熔连接', glue: '粘接', nut: '螺母密封圈连接'
+  };
+  // 塑料管连接方式展示顺序：室外按热熔/电熔/粘接，室内按粘接/热熔/电熔/螺母密封圈
+  var PLASTIC_JOINT_ORDER = {
+    out: ['fusion', 'electro', 'glue'],
+    in: ['glue', 'fusion', 'electro', 'nut']
+  };
+  var MEDIUM_CN3 = { rain: '雨水管', drain: '排水管', water: '给水管' };
+
+  // ---------- 铸铁管定额矩阵 ----------
+  // start：该接口形式第一个子目号；dns：依次对应的公称直径档
+  var CAST_IRON = {
+    out_water: {
+      lead: { start: 90, dns: [75, 100, 150, 200, 250, 300, 350, 400, 450, 500], name: '室外管道 承插铸铁给水管(青铅接口)' },
+      expand: { start: 100, dns: [75, 100, 150, 200, 250, 300, 350, 400, 450, 500], name: '室外管道 承插铸铁给水管(膨胀水泥接口)' },
+      asbestos: { start: 110, dns: [75, 100, 150, 200, 250, 300, 350, 400, 450, 500], name: '室外管道 承插铸铁给水管(石棉水泥接口)' },
+      rubber: { start: 120, dns: [100, 150, 200, 250, 300, 350, 400, 450, 500], name: '室外管道 承插铸铁给水管(胶圈接口)' }
+    },
+    out_drain: {
+      asbestos: { start: 129, dns: [50, 75, 100, 125, 150, 200], name: '室外管道 承插铸铁排水管(石棉水泥接口)' },
+      cement: { start: 135, dns: [50, 75, 100, 125, 150, 200], name: '室外管道 承插铸铁排水管(水泥接口)' }
+    },
+    in_water: {
+      lead: { start: 336, dns: [75, 100, 150, 200, 250, 300], name: '室内管道 承插铸铁给水管(青铅接口)' },
+      expand: { start: 342, dns: [75, 100, 150, 200, 250, 300], name: '室内管道 承插铸铁给水管(膨胀水泥接口)' },
+      asbestos: { start: 348, dns: [75, 100, 150, 200, 250, 300], name: '室内管道 承插铸铁给水管(石棉水泥接口)' }
+    },
+    in_drain: {
+      asbestos: { start: 354, dns: [50, 75, 100, 150, 200, 250], name: '室内管道 承插铸铁排水管(石棉水泥接口)' },
+      cement: { start: 360, dns: [50, 75, 100, 150, 200, 250], name: '室内管道 承插铸铁排水管(水泥接口)' }
+    }
+  };
+
+  // ---------- 镀锌钢管定额矩阵 ----------
+  var GALV = {
+    out_water: { thread: { start: 1, dns: [15, 20, 25, 32, 40, 50, 65, 80, 100, 125, 150], name: '室外管道 镀锌钢管(螺纹连接)' } },
+    in_water: {
+      thread: { start: 173, dns: [15, 20, 25, 32, 40, 50, 65, 80, 100, 125, 150], name: '室内管道 镀锌钢管(螺纹连接)' },
+      groove: { start: 206, dns: [65, 80, 100, 125, 150, 200, 250], name: '室内管道 镀锌钢管(沟槽连接)' }
+    },
+    out_gas: { thread: { start: 1128, dns: [25, 32, 40, 50], name: '室外燃气镀锌钢管(螺纹连接)' } },
+    in_gas: { thread: { start: 1132, dns: [15, 20, 25, 32, 40, 50, 65, 80, 100], name: '室内燃气镀锌钢管(螺纹连接)' } }
+  };
+
+  var JOINT_CN = { lead: '青铅接口', expand: '膨胀水泥接口', asbestos: '石棉水泥接口', rubber: '胶圈接口', cement: '水泥接口', thread: '螺纹连接', gas_thread: '螺纹连接（燃气）' };
+  var JOINT_ORDER = ['asbestos', 'cement', 'lead', 'expand', 'rubber'];
+  var JOINT_ORDER_GALV = ['thread', 'groove', 'gas_thread'];
+  var LOC_CN = { in: '室内', out: '室外' };
+  var MEDIUM_CN = { water: '给水', drain: '排水', rain: '雨水', gas: '燃气' };
+
+  function ruleTable(it) { return it && it.category === 'galv' ? GALV : CAST_IRON; }
+  // 定额分组键：铸铁 → 室内外+给排水；镀锌 → 室内外+给水/燃气（按所选连接方式区分燃气）
+  function pipeKey(it) {
+    var loc = it.loc === 'out' ? 'out_' : 'in_';
+    if (it.category === 'galv') return loc + (it.joint === 'gas_thread' ? 'gas' : 'water');
+    return loc + (it.medium === 'drain' ? 'drain' : 'water');
+  }
+  var JOINT_PREFER = ['weld', 'groove', 'press', 'fusion', 'electro', 'glue', 'argon', 'arc', 'sleeve', 'thread', 'oxy', 'braze'];
+  function jointsOf(it) {
+    // 镀锌钢管：室内另有沟槽连接子目（DN65 以上常用），室外仅螺纹
+    if (it && it.category === 'galv') {
+      return it.loc === 'in' ? ['thread', 'groove', 'gas_thread'] : ['thread', 'gas_thread'];
+    }
+    if (it && PIPE_GROUPS[it.category]) {
+      var gs = PIPE_GROUPS[it.category];
+      var mk = mediumKeyOf(it);
+      var out = [];
+      gs.forEach(function (g) {
+        if (g.loc !== it.loc) return;
+        if ((g.medium || 'water') !== mk) return;
+        if (out.indexOf(g.joint) < 0) out.push(g.joint);
+      });
+      if (!out.length && it.category !== 'plastic') {
+        // 介质无对应子目：回退到同部位给水/排水组（塑料管不回落，介质由用户在选型列指定）
+        gs.forEach(function (g) {
+          if (g.loc !== it.loc) return;
+          var m = g.medium || 'water';
+          if (m === 'gas') return;
+          if (out.indexOf(g.joint) < 0) out.push(g.joint);
+        });
+      }
+      if (it.category === 'plastic') {
+        var ord = PLASTIC_JOINT_ORDER[it.loc] || PLASTIC_JOINT_ORDER.in;
+        out.sort(function (a, b) { return ord.indexOf(a) - ord.indexOf(b); });
+        return out;
+      }
+      out.sort(function (a, b) { return JOINT_PREFER.indexOf(a) - JOINT_PREFER.indexOf(b); });
+      return out;
+    }
+    var tbl = ruleTable(it)[pipeKey(it)] || {};
+    var order = it && it.category === 'galv' ? JOINT_ORDER_GALV : JOINT_ORDER;
+    return order.filter(function (j) { return !!tbl[j]; });
+  }
+  function defaultJoint(it) {
+    var list = jointsOf(it);
+    if (it && it.category === 'galv') return list.indexOf('thread') >= 0 ? 'thread' : (list[0] || 'thread');
+    if (it && PIPE_GROUPS[it.category]) {
+      // 优先名称中已注明的连接方式
+      var pj = parsePipeJoint(it.name || '');
+      if (pj && list.indexOf(pj) >= 0) return pj;
+      if (it.category === 'plastic') {
+        // 名称未注明时：排水/雨水按粘接，PVC-U 给水按粘接，其余给水按热熔
+        var mk = mediumKeyOf(it);
+        if (mk === 'drain' || mk === 'rain' || it.plasticKind === 'pvc' || it.plasticKind === 'pvcDrain') {
+          if (list.indexOf('glue') >= 0) return 'glue';
+        }
+        if (list.indexOf('fusion') >= 0) return 'fusion';
+      }
+      return list[0] || '';
+    }
+    return list.indexOf('asbestos') >= 0 ? 'asbestos' : (list[0] || 'asbestos');
+  }
+
+  // ---------- 名称解析 ----------
+  function isCastIron(name) {
+    return /铸铁|离心浇筑灰口铁|机制离心|球墨铸铁|灰口铁/.test(name || '');
+  }
+
+  function parseDN(name) {
+    var s = String(name || '').replace(/[（(]/g, ' ').replace(/[）)]/g, ' ');
+    var m = s.match(/(?:DN|dn|De|de|D|Φ|φ|Ø)\s*[-－]?\s*(\d{2,4})/);
+    if (m) return parseInt(m[1], 10);
+    m = s.match(/(\d{2,4})\s*(?:mm|MM|毫米)/);
+    if (m) return parseInt(m[1], 10);
+    m = s.match(/[×xX*]\s*(\d{2,3})\b/); // 极少见写法
+    if (m) return parseInt(m[1], 10);
+    return null;
+  }
+
+  function parseMedium(name) {
+    var s = name || '';
+    if (/燃气|煤气|天然气|液化气|气源|瓦斯/.test(s)) return 'gas';
+    if (/排水|污水|废水|雨水|冷凝水|冷凝|通气管|透气|地漏|潜污/.test(s)) return 'drain';
+    if (/给水|生活给水|生产给水|消防|消火栓|喷淋|中水/.test(s)) return 'water';
+    if (/排水/.test(s)) return 'drain';
+    return 'water';
+  }
+
+  function parseLoc(name) {
+    var s = name || '';
+    if (/室外|户外|室外埋地|埋地|外网|庭院|厂区|小区|室外管网/.test(s)) return 'out';
+    if (/室内|楼内|管井|地库|地下车库|卫生间|厨房|设备间|管道井/.test(s)) return 'in';
+    return 'in';
+  }
+
+  function parseJoint(name) {
+    var s = name || '';
+    if (/青铅/.test(s)) return 'lead';
+    if (/膨胀水泥/.test(s)) return 'expand';
+    if (/石棉水泥|石棉/.test(s)) return 'asbestos';
+    if (/胶圈|橡胶圈|柔性接口|卡箍|机械接口|法兰接口/.test(s)) return 'rubber';
+    if (/水泥接口|水泥捻口|水泥/.test(s)) return 'cement';
+    return null;
+  }
+
+  // 材质归类
+  function materialOf(name) {
+    var s = name || '';
+    if (isCastIron(s)) return '铸铁';
+    if (/不锈钢/.test(s)) return '不锈钢';
+    if (/无缝/.test(s)) return '无缝钢';       // 含"内外壁热浸镀锌无缝钢管"
+    if (/镀锌钢管|热浸镀锌|热镀锌|镀锌焊接钢管|内外壁热浸镀锌|镀锌管/.test(s)) return '镀锌钢';
+    // 塑料管：PVDF / 聚乙烯 / 聚丙烯 / 聚丁烯 / 聚氯乙烯 等通用塑料及工程塑料（031001008）
+    // 钢骨架、钢塑、铝塑、衬塑、涂塑属复合管，须先排除
+    if (!/钢骨架|钢丝网骨架|钢网骨架|钢塑|铝塑|衬塑|涂塑|钢带增强/.test(s) &&
+      /PVDF|聚偏二氟乙烯|聚乙烯|聚丙烯|聚丁烯|聚氯乙烯|PPR|PP-R|PE管|HDPE|PVC|UPVC|U-PVC|PB管|PEX|塑料管|塑料给水|塑料排水|塑料雨水/.test(s)) return '塑料';
+    if (/复合管|复合给水管|复合排水管|钢塑|铝塑|衬塑|涂塑|钢丝网骨架|钢网骨架|钢骨架/.test(s)) return '复合';
+    if (/铜管|紫铜|黄铜管/.test(s)) return '铜';
+    if (/焊接钢管|钢管/.test(s)) return '焊接钢';
+    return '其他';
+  }
+
+  // 塑料管细分：pvdf 聚偏二氟乙烯 / ppr / pe / pb 聚丁烯 / pvc 给水 / pvcDrain 排水
+  var PLASTIC_LABEL = {
+    pvdf: 'PVDF（聚偏二氟乙烯）', ppr: 'PP-R（聚丙烯）', pe: 'PE（聚乙烯）',
+    pb: 'PB（聚丁烯）', pvc: 'PVC-U（聚氯乙烯）', pvcDrain: 'PVC-U（聚氯乙烯）'
+  };
+  function plasticKindOf(name, medium) {
+    var s = String(name || '');
+    if (medium === 'drain' || /排水|雨水|污水|废水|冷凝水/.test(s)) medium = 'drain';
+    if (/PVDF|聚偏二氟乙烯/.test(s)) return 'pvdf';
+    if (/PB管|聚丁烯/.test(s)) return 'pb';
+    if (/PPR|PP-R|聚丙烯/.test(s)) return 'ppr';
+    if (/PE管|HDPE|聚乙烯/.test(s)) return 'pe';
+    if (/PVC|UPVC|U-PVC|聚氯乙烯/.test(s)) return (medium === 'drain') ? 'pvcDrain' : 'pvc';
+    if (medium === 'drain') return 'pvcDrain';
+    return 'ppr';
+  }
+
+  // 连接方式解析（其他管材）
+  function parsePipeJoint(name) {
+    var s = name || '';
+    if (/沟槽|卡箍|卡环|机械卡箍/.test(s)) return 'groove';
+    if (/卡压|卡凸/.test(s)) return 'press';
+    if (/卡套/.test(s)) return 'sleeve';
+    if (/承插氩弧焊|氩弧焊|氩电联焊/.test(s)) return 'argon';
+    if (/对接电弧焊|电弧焊|手工电弧焊/.test(s)) return 'arc';
+    if (/氧乙炔焊|气焊/.test(s)) return 'oxy';
+    if (/钎焊|银钎焊/.test(s)) return 'braze';
+    if (/电熔/.test(s)) return 'electro';
+    if (/热熔/.test(s)) return 'fusion';
+    if (/粘接|胶粘|承插粘接/.test(s)) return 'glue';
+    if (/螺母密封圈|螺母压紧|密封圈连接|压盖密封/.test(s)) return 'nut';
+    if (/螺纹|丝扣|丝接/.test(s)) return 'thread';
+    if (/焊接|焊口/.test(s)) return 'weld';
+    return null;
+  }
+
+  // 其他管材的介质键（water/gas/drain/rain）
+  function mediumKeyOf(it) {
+    if (it.medium === 'gas') return 'gas';
+    if (it.medium === 'drain') return it.isRain ? 'rain' : 'drain';
+    return 'water';
+  }
+
+  // ============================================================
+  // 卫生器具（洁具）—— 2026-11-05 补充
+  // 清单：031003001~031003011 / 031003014 / 031003018 / 031003019
+  // 定额：第八册 卫生器具安装（8-831~8-1007…）；烘手器走第二册 2-1878
+  // 定额计量单位按 10 组 / 10 个 / 10 台（factor=10），导出时自动换算
+  // ============================================================
+  var S_DEF = {
+    bathtub:      { code: '031003001', lname: '浴缸', unit: '组', qunit: '10组', factor: 10,
+                    q: '8-831', qn: '搪瓷浴盆 冷热水' },
+    bidet:        { code: '031003002', lname: '净身盆', unit: '组', qunit: '10组', factor: 10,
+                    q: '8-837', qn: '净身盆 冷热水' },
+    washbasin:    { code: '031003003', lname: '洗脸盆', unit: '组', qunit: '10组', factor: 10,
+                    opts: [ { k: 'normal', l: '普通（钢管组成）', q: '8-839', qn: '洗脸盆 钢管组成 冷热水' },
+                            { k: 'sensor', l: '感应（光电控台式）', q: '8-846', qn: '光电控洗脸盆 台式' } ] },
+    sink:         { code: '031003004', lname: '洗涤盆', unit: '组', qunit: '10组', factor: 10,
+                    q: '8-848', qn: '洗涤盆 单嘴' },
+    labSink:      { code: '031003005', lname: '化验盆', unit: '组', qunit: '10组', factor: 10,
+                    q: '8-855', qn: '化验盆 单联' },
+    toilet:       { code: '031003006', lname: '大便器', unit: '组', qunit: '10组', factor: 10,
+                    opts: [ { k: 'squat', l: '蹲式（脚踏阀冲洗）', q: '8-879', qn: '蹲式大便器 脚踏阀冲洗' },
+                            { k: 'seat',  l: '坐式（带水箱坐便器）', q: '8-884', qn: '坐式大便器 带水箱坐便器' } ] },
+    urinal:       { code: '031003007', lname: '小便器', unit: '组', qunit: '10组', factor: 10,
+                    q: '8-889', qn: '小便器 挂斗式 感应自动冲洗阀' },
+    faucet:       { code: '031003008', lname: '其他成品卫生器具', unit: '个', qunit: '10个', factor: 10,
+                    q: '8-938', qn: '水龙头 公称直径15mm以内' },
+    waterHeater:  { code: '031003008', lname: '其他成品卫生器具', unit: '台', qunit: '10台', factor: 10,
+                    opts: [ { k: 'RS15',  l: 'RS15 挂式', q: '8-959', qn: '电热水器 挂式 RS15型' },
+                            { k: 'RS30',  l: 'RS30 挂式', q: '8-960', qn: '电热水器 挂式 RS30型' },
+                            { k: 'RS50W', l: 'RS50 挂式', q: '8-961', qn: '电热水器 挂式 RS50型' },
+                            { k: 'RS50L', l: 'RS50 立式', q: '8-962', qn: '电热水器 立式 RS50型' },
+                            { k: 'RS100', l: 'RS100 立式', q: '8-963', qn: '电热水器 立式 RS100型' },
+                            { k: 'RS300', l: 'RS300 立式', q: '8-964', qn: '电热水器 立式 RS300型' } ] },
+    boiler:       { code: '031003008', lname: '其他成品卫生器具', unit: '台', qunit: '10台', factor: 10,
+                    q: '8-965', qn: '电开水炉 立式 KSA型' },
+    steamHeater:  { code: '031003008', lname: '其他成品卫生器具', unit: '台', qunit: '10台', factor: 10,
+                    opts: [ { k: '1', l: '1#', q: '8-967', qn: '蒸汽间断式加热器 1#' },
+                            { k: '2', l: '2#', q: '8-968', qn: '蒸汽间断式加热器 2#' },
+                            { k: '3', l: '3#', q: '8-969', qn: '蒸汽间断式加热器 3#' } ] },
+    heatExchanger:{ code: '031003008', lname: '其他成品卫生器具', unit: '台', qunit: '10台', factor: 10,
+                    opts: [ { k: '1', l: '1#', q: '8-970', qn: '容积式热交换器 1#' },
+                            { k: '2', l: '2#', q: '8-971', qn: '容积式热交换器 2#' },
+                            { k: '3', l: '3#', q: '8-972', qn: '容积式热交换器 3#' },
+                            { k: '4', l: '4#', q: '8-973', qn: '容积式热交换器 4#' },
+                            { k: '5', l: '5#', q: '8-974', qn: '容积式热交换器 5#' },
+                            { k: '6', l: '6#', q: '8-975', qn: '容积式热交换器 6#' },
+                            { k: '7', l: '7#', q: '8-976', qn: '容积式热交换器 7#' } ] },
+    flushDevice:  { code: '031003008', lname: '其他成品卫生器具', unit: '套', qunit: '10套', factor: 10,
+                    q: '8-988', qn: '感应式冲洗器 明装' },
+    handDryer:    { code: '031003009', lname: '烘手器', unit: '个', qunit: '10个', factor: 10,
+                    q: '2-1878', qn: '小电器安装接线 烘手器' },
+    shower:       { code: '031003010', lname: '淋浴器', unit: '组', qunit: '10组', factor: 10,
+                    q: '8-861', qn: '淋浴器 钢管组成 冷热水' },
+    showerRoom:   { code: '031003011', lname: '淋浴间', unit: '套', qunit: '10套', factor: 10,
+                    q: '8-869', qn: '淋浴间 整体淋浴室安装 冷热水' },
+    floorDrain:   { code: '031003014', lname: '给、排水附件', unit: '个', qunit: '10个', factor: 10, defDn: 100,
+                    tiers: [ { max: 50,  q: '8-941', qn: '地漏 公称直径50mm以内' },
+                             { max: 75,  q: '8-942', qn: '地漏 公称直径75mm以内' },
+                             { max: 100, q: '8-943', qn: '地漏 公称直径100mm以内' },
+                             { max: 150, q: '8-944', qn: '地漏 公称直径150mm以内' } ] },
+    cleanout:     { code: '031003014', lname: '给、排水附件', unit: '个', qunit: '10个', factor: 10, defDn: 100,
+                    tiers: [ { max: 50,  q: '8-945', qn: '地面扫除口 公称直径50mm以内' },
+                             { max: 75,  q: '8-946', qn: '地面扫除口 公称直径75mm以内' },
+                             { max: 100, q: '8-947', qn: '地面扫除口 公称直径100mm以内' },
+                             { max: 125, q: '8-948', qn: '地面扫除口 公称直径125mm以内' },
+                             { max: 150, q: '8-949', qn: '地面扫除口 公称直径150mm以内' } ] },
+    rainHead:     { code: '031003014', lname: '给、排水附件', unit: '个', qunit: '10个', factor: 10, defDn: 150,
+                    tiers: [ { max: 100, q: '8-950', qn: '普通雨水斗 公称直径100mm以内' },
+                             { max: 125, q: '8-951', qn: '普通雨水斗 公称直径125mm以内' },
+                             { max: 150, q: '8-952', qn: '普通雨水斗 公称直径150mm以内' } ] },
+    siphonHead:   { code: '031003014', lname: '给、排水附件', unit: '个', qunit: '10个', factor: 10, defDn: 150,
+                    tiers: [ { max: 50,  q: '8-953', qn: '虹吸式雨水斗 公称直径50mm以内' },
+                             { max: 100, q: '8-954', qn: '虹吸式雨水斗 公称直径100mm以内' },
+                             { max: 150, q: '8-955', qn: '虹吸式雨水斗 公称直径150mm以内' } ] },
+    waterDispenser:{ code: '031003018', lname: '饮水器', unit: '台', qunit: '10台', factor: 10,
+                    q: '8-987', qn: '饮水器' },
+    greaseTrap:   { code: '031003019', lname: '隔油器', unit: '台', qunit: '10台', factor: 10, defDn: 100,
+                    forms: { ground: { l: '地上式', tiers: [ { max: 50,  q: '8-1007', qn: '隔油器 地上式 DN50' },
+                                                             { max: 80,  q: '8-1008', qn: '隔油器 地上式 DN80' },
+                                                             { max: 100, q: '8-1009', qn: '隔油器 地上式 DN100' } ] },
+                             hang:   { l: '悬挂式', tiers: [ { max: 50,  q: '8-1010', qn: '隔油器 悬挂式 DN50' },
+                                                             { max: 100, q: '8-1011', qn: '隔油器 悬挂式 DN100' },
+                                                             { max: 150, q: '8-1012', qn: '隔油器 悬挂式 DN150' } ] } } }
+  };
+
+  var S_WORK = {
+    bathtub: '浴盆安装、冷热水连接、排水配件安装、试水',
+    bidet: '净身盆安装、冷热水连接、排水配件安装、试水',
+    washbasin: '盆体安装、冷热水龙头安装、角阀与排水配件安装、试水',
+    sink: '盆体安装、龙头安装、排水配件安装、试水',
+    labSink: '化验盆安装、化验龙头安装、排水配件安装、试水',
+    toilet: '大便器安装、水箱及冲洗阀安装、冲洗管连接、试水',
+    urinal: '小便器安装、感应冲洗阀安装、排水连接、试水',
+    faucet: '水龙头安装、生料带密封、通水试验',
+    waterHeater: '热水器就位固定、进出水管连接、安全阀安装、通电试运行',
+    boiler: '开水炉就位固定、进出水管连接、通电试运行',
+    steamHeater: '加热器就位固定、蒸汽与凝结水管连接、疏水器安装、试压',
+    heatExchanger: '换热器就位固定、冷热水与蒸汽管连接、安全阀与温控安装、试压',
+    flushDevice: '感应冲洗器安装、电磁阀接线、通水调试',
+    handDryer: '烘手器固定、电源接线、试运行',
+    shower: '淋浴器组装、冷热水管连接、花洒安装、试水',
+    showerRoom: '整体淋浴间就位、给排水连接、密封打胶、试水',
+    floorDrain: '地漏安装、找坡配合、水封检查',
+    cleanout: '扫除口安装、盖板固定、密封检查',
+    rainHead: '雨水斗安装、与雨水管连接、密封检查',
+    siphonHead: '虹吸雨水斗安装、整流器安装、与雨水管连接、密封检查',
+    waterDispenser: '饮水器就位固定、进水管连接、通电试运行',
+    greaseTrap: '隔油器就位固定、进出水管连接、通水试验'
+  };
+
+  function isSanCat(c) { return !!S_DEF[c]; }
+  function sanCfg() { return (typeof window !== 'undefined' && window.PIPE_SANITARY_PRICES) || {}; }
+
+  // 洁具识别：具体项优先（淋浴间 > 淋浴器、虹吸雨水斗 > 雨水斗、容积式热交换器 > 热交换器）
+  function sanCatOf(name) {
+    var n = String(name || '');
+    if (!n) return null;
+    if (/淋浴间|整体淋浴/.test(n)) return 'showerRoom';
+    if (/虹吸/.test(n) && /雨水斗/.test(n)) return 'siphonHead';
+    if (/雨水斗/.test(n)) return 'rainHead';
+    if (/地漏/.test(n)) return 'floorDrain';
+    if (/扫除口/.test(n)) return 'cleanout';
+    if (/隔油池|隔油器/.test(n)) return 'greaseTrap';
+    if (/热交换器/.test(n)) return 'heatExchanger';
+    if (/加热器/.test(n)) return 'steamHeater';
+    if (/开水炉/.test(n)) return 'boiler';
+    if (/热水器/.test(n)) return 'waterHeater';
+    if (/饮水机|饮水器|直饮水/.test(n)) return 'waterDispenser';
+    if (/烘手器|烘干器/.test(n)) return 'handDryer';
+    if (/冲洗器/.test(n)) return 'flushDevice';
+    if (/洗脸盆|洗手盆|手盆|洗手池|刷手池|洗脸池/.test(n)) return 'washbasin';
+    if (/洗涤盆|洗涤池|盥洗池|洗涤槽/.test(n)) return 'sink';
+    if (/化验盆|化验池/.test(n)) return 'labSink';
+    if (/净身盆/.test(n)) return 'bidet';
+    if (/浴缸|浴盆/.test(n)) return 'bathtub';
+    if (/大便器|坐便器|座便器|蹲便器/.test(n)) return 'toilet';
+    if (/小便器|小便斗/.test(n)) return 'urinal';
+    if (/淋浴器|花洒|淋浴/.test(n)) return 'shower';
+    if (/水龙头|龙头/.test(n)) return 'faucet';
+    return null;
+  }
+
+  function buildSanItem(name, cat) {
+    var d = S_DEF[cat];
+    var it = {};
+    it.name = name;
+    it.category = cat;
+    it.isSan = true;
+    it.listCode = d.code;
+    it.listName = d.lname;
+    it.material = d.lname;
+    it.unit = d.unit;
+    it.sanDn = parseVDn(name);
+    it.sanOptFromName = false;
+    if (d.opts) {
+      var pick = d.opts[0].k;
+      if (cat === 'toilet') {
+        if (/坐便|坐式|座便/.test(name)) { pick = 'seat'; it.sanOptFromName = true; }
+        else if (/蹲/.test(name)) { pick = 'squat'; it.sanOptFromName = true; }
+        else { pick = 'squat'; }
+      } else if (cat === 'washbasin') {
+        pick = /感应/.test(name) ? 'sensor' : 'normal';
+        it.sanOptFromName = true;
+      } else if (cat === 'waterHeater') {
+        if (/RS\s*300/i.test(name)) { pick = 'RS300'; it.sanOptFromName = true; }
+        else if (/RS\s*100/i.test(name)) { pick = 'RS100'; it.sanOptFromName = true; }
+        else if (/RS\s*50/i.test(name)) { pick = /立式/.test(name) ? 'RS50L' : 'RS50W'; it.sanOptFromName = true; }
+        else if (/RS\s*30/i.test(name)) { pick = 'RS30'; it.sanOptFromName = true; }
+        else if (/RS\s*15/i.test(name)) { pick = 'RS15'; it.sanOptFromName = true; }
+        else { pick = 'RS50W'; }
+      } else if (cat === 'steamHeater') {
+        var m1 = String(name).match(/([123])\s*#/);
+        if (m1) { pick = m1[1]; it.sanOptFromName = true; }
+      } else if (cat === 'heatExchanger') {
+        var m2 = String(name).match(/([1-7])\s*#/);
+        if (m2) { pick = m2[1]; it.sanOptFromName = true; }
+      }
+      it.sanOpt = pick;
+    }
+    if (d.forms) {
+      it.sanForm = /悬挂/.test(name) ? 'hang' : 'ground';
+      it.sanFormFromName = /悬挂|地上/.test(name);
+    }
+    return it;
+  }
+
+  function sanOptLabel(it) {
+    var d = S_DEF[it.category];
+    if (!d || !d.opts) return '';
+    for (var i = 0; i < d.opts.length; i++) if (d.opts[i].k === it.sanOpt) return d.opts[i].l;
+    return d.opts[0].l;
+  }
+
+  function matchSanQuota(it) {
+    var d = S_DEF[it.category];
+    var res = { inferred: false, unit: d.qunit, factor: d.factor };
+    if (d.opts) {
+      var o = null;
+      for (var i = 0; i < d.opts.length; i++) if (d.opts[i].k === it.sanOpt) o = d.opts[i];
+      if (!o) o = d.opts[0];
+      res.code = o.q; res.name = o.qn;
+      return res;
+    }
+    if (d.tiers) {
+      var dn = it.sanDn || d.defDn;
+      var idx = d.tiers.length - 1;
+      for (var j = 0; j < d.tiers.length; j++) { if (dn <= d.tiers[j].max) { idx = j; break; } }
+      res.code = d.tiers[idx].q; res.name = d.tiers[idx].qn;
+      res.dnTier = d.tiers[idx].max;
+      res.inferred = !it.sanDn || d.tiers[idx].max !== dn;
+      return res;
+    }
+    if (d.forms) {
+      var f = d.forms[it.sanForm] || d.forms.ground;
+      var dn2 = it.sanDn || d.defDn || 100;
+      var k2 = f.tiers.length - 1;
+      for (var k = 0; k < f.tiers.length; k++) { if (dn2 <= f.tiers[k].max) { k2 = k; break; } }
+      res.code = f.tiers[k2].q; res.name = f.tiers[k2].qn;
+      res.dnTier = f.tiers[k2].max;
+      res.inferred = !it.sanDn;
+      return res;
+    }
+    res.code = d.q; res.name = d.qn;
+    return res;
+  }
+
+  function sanPrice(it) {
+    var cfg = sanCfg();
+    var d = S_DEF[it.category];
+    var m = (cfg.items || {})[it.category] || {};
+    var brand = m.brand || cfg.brand || '';
+    var nm = m.name || d.lname;
+    if (d.opts) {
+      var p = (m.opts || {})[it.sanOpt];
+      var lbl = sanOptLabel(it);
+      return { price: p, source: 'market', brand: brand,
+        basis: '市场价（' + brand + '）：' + nm + ' ' + lbl + ' ' + p + ' 元/' + d.unit };
+    }
+    if (d.tiers) {
+      var key = String(it.dnTier || d.defDn);
+      var p2 = (m.prices || {})[key];
+      return { price: p2, source: 'market', brand: brand,
+        basis: '市场价（' + brand + '）：' + nm + ' DN' + key + ' ' + p2 + ' 元/' + d.unit };
+    }
+    if (d.forms) {
+      var fk = it.sanForm === 'hang' ? 'hang' : 'ground';
+      var key2 = String(it.dnTier || 100);
+      var p3 = ((m.forms || {})[fk] || {})[key2];
+      return { price: p3, source: 'market', brand: brand,
+        basis: '市场价（' + brand + '）：' + nm + ' ' + (fk === 'hang' ? '悬挂式' : '地上式') + ' DN' + key2 + ' ' + p3 + ' 元/' + d.unit };
+    }
+    return { price: m.price, source: 'market', brand: brand,
+      basis: '市场价（' + brand + '）：' + nm + ' ' + m.price + ' 元/' + d.unit };
+  }
+
+  var MAT_CAT = { '无缝钢': 'seamless', '焊接钢': 'welded', '铜': 'copper', '不锈钢': 'stainless', '复合': 'composite', '塑料': 'plastic' };
+
+  // ---------- 建条目 ----------
+  // ===== 补充规则（2026-11-24 主人指定口径）：统一走共享模块 js/special.js =====
+  function specialCatOf(name) { return SP ? SP.catOf(name) : ''; }
+
+  function buildSpecialItem(name, cat) {
+    var it = SP.buildItem(name, cat);
+    if (!it.dn) it.dn = parseVDn(name);
+    return it;
+  }
+
+  function buildItem(name) {
+    if (!name) return null;
+    var sc = specialCatOf(name);
+    if (sc) return buildSpecialItem(name, sc);
+    // 卫生器具（洁具）优先识别
+    var scat = sanCatOf(name);
+    if (scat) return buildSanItem(name, scat);
+    // 保温绝热 / 管道支架优先（名称里也含"管"字）
+    var acat = auxCatOf(name);
+    if (acat) return buildAuxItem(name, acat);
+    // 阀门及管道附件优先（与暖通站同口径）
+    var vcat = valveCatOf(name);
+    if (vcat) return buildValveItem(name, vcat);
+    var it = {};
+    it.name = name;
+    it.material = materialOf(name);
+    it.dn = parseDN(name) || parseVDn(name);   // 水表/倒流防止器等「-150」写法兜底
+    it.medium = parseMedium(name);
+    it.loc = parseLoc(name);
+    it.isRain = /雨水/.test(name);
+    it.mediumAmbiguous = !/排水|污水|废水|雨水|给水|消防|消火栓|喷淋|中水|冷凝|燃气|煤气|天然气|液化气/.test(name);
+    it.locAmbiguous = !/室内|室外|户外|外网|庭院|楼内|管井|地库/.test(name);
+
+    if (it.material === '铸铁') {
+      it.category = 'castIron';
+      it.listCode = LIST.castIron.code;
+      it.listName = LIST.castIron.name;
+      var j = parseJoint(name);
+      it.jointAuto = j || defaultJoint(it);
+      it.joint = it.jointAuto;
+      it.jointFromName = !!j;
+      var allow = jointsOf(it);
+      if (allow.indexOf(it.joint) < 0) {
+        it.jointFallback = it.joint;
+        it.joint = defaultJoint(it);
+      }
+    } else if (it.material === '镀锌钢') {
+      it.category = 'galv';
+      it.listCode = LIST.galv.code;
+      it.listName = LIST.galv.name;
+      var isGas = /燃气|煤气|天然气|液化气|气源|瓦斯/.test(name);
+      it.medium = isGas ? 'gas' : 'water';
+      it.jointAuto = isGas ? 'gas_thread' : 'thread';
+      it.joint = it.jointAuto;
+      it.jointFromName = isGas;
+      it.jointFallback = null;
+    } else if (PIPE_GROUPS[MAT_CAT[it.material]]) {
+      it.category = MAT_CAT[it.material];
+      it.listCode = LIST[it.category].code;
+      it.listName = LIST[it.category].name;
+      it.isRain = /雨水/.test(name);
+      it.medium = /燃气|煤气|天然气|液化气|气源|瓦斯/.test(name) ? 'gas' : (it.isRain ? 'drain' : it.medium);
+      // 室外塑料管仅有给水管子目（8-36~8-71），介质固定为给水（须在连接方式解析前确定）
+      if (it.category === 'plastic' && it.loc === 'out') {
+        it.wasDrainName = (it.medium === 'drain' || it.isRain);
+        it.medium = 'water'; it.isRain = false;
+      }
+      // 塑料管细分（用于主材价、项目特征与默认连接方式），须在连接方式解析前确定
+      if (it.category === 'plastic') {
+        it.plasticKind = plasticKindOf(name, it.medium);
+        it.materialLabel = PLASTIC_LABEL[it.plasticKind] || '塑料';
+      }
+      var pj = parsePipeJoint(name);
+      it.jointAuto = pj || defaultJoint(it);
+      it.joint = it.jointAuto;
+      it.jointFromName = !!pj;
+      var allow2 = jointsOf(it);
+      if (allow2.indexOf(it.joint) < 0) {
+        it.jointFallback = it.joint;
+        it.joint = defaultJoint(it);
+      }
+      // 塑料管材质细分（用于主材价与项目特征）
+      if (it.category === 'composite') {
+        it.compositeKind = /钢骨架|钢丝网骨架|钢网骨架|钢塑|衬塑|涂塑/.test(name) ? 'steelmesh' : 'alplastic';
+      }
+    } else {
+      it.category = 'other';
+      it.listCode = '';
+      it.listName = '';
+      it.joint = null;
+    }
+    it.unit = 'm';
+    // 图纸说明优先：部位 / 介质 / 连接方式
+    if (SPEC_APPLY && ACTIVE_SPEC && typeof SPEC !== 'undefined') applySpecRule(it);
+    return it;
+  }
+
+  // 档位定位：返回 { idx, dn }
+  function tierOf(dns, dn) {
+    if (dn === null || dn === undefined || isNaN(dn)) return null;
+    for (var i = 0; i < dns.length; i++) if (dn <= dns[i]) return { idx: i, dn: dns[i], exact: dns[i] === dn };
+    return { idx: dns.length - 1, dn: dns[dns.length - 1], exact: false, overflow: true };
+  }
+
+  // 其他管材：按部位+介质+连接方式定位定额组
+  function groupOf(it) {
+    var gs = PIPE_GROUPS[it.category];
+    if (!gs) return null;
+    var mk = mediumKeyOf(it);
+    var hit = null;
+    gs.forEach(function (g) { if (!hit && g.loc === it.loc && (g.medium || 'water') === mk && g.joint === it.joint) hit = g; });
+    if (!hit) gs.forEach(function (g) { if (!hit && g.loc === it.loc && (g.medium || 'water') === mk) hit = g; });
+    if (!hit) gs.forEach(function (g) { if (!hit && g.loc === it.loc) hit = g; });
+    return hit;
+  }
+
+  // ---------- 定额匹配 ----------
+  // 阀门定额：通用 8-579~584/8-620~629；特殊阀 8-682/8-686/8-612~616/8-645~649/8-1260；电磁阀 8-603~608/8-630~644
+  function matchValveQuota(it) {
+    var dn = it.dn, noDn = !(dn > 0);
+    var c = it.category;
+    if (c === 'waterValve') {
+      if (noDn) return { code: '8-579', name: '螺纹阀门 公称直径15mm以内', inferred: false, noDn: true, unit: '个', factor: 1 };
+      if (dn <= 50) {
+        var wi = tierIdxV(V_WTHREAD, dn);
+        return { code: V_WTHREAD[wi].code, name: '螺纹阀门 公称直径' + V_WTHREAD[wi].label, inferred: V_WTHREAD[wi].max !== dn, unit: '个', factor: 1 };
+      }
+      var wf = tierIdxV(V_WFLANGE, dn);
+      return {
+        code: V_WFLANGE[wf].code, name: '焊接法兰阀门 公称直径' + V_WFLANGE[wf].label,
+        inferred: V_WFLANGE[wf].max !== dn, overRange: dn > 400, unit: '个', factor: 1
+      };
+    }
+    if (c === 'autoAir') return { code: '8-682', name: '自动排气阀、手动放风阀 公称直径25mm以内', inferred: false, unit: '个', factor: 1 };
+    if (c === 'tempValve') return { code: '8-686', name: '散热器温控阀 公称直径25mm以内', inferred: false, unit: '个', factor: 1 };
+    if (c === 'flushValve') return { code: '8-1260', name: '口部冲洗阀制作、安装 壁龛式', inferred: false, unit: '套', factor: 1 };
+    if (c === 'floatValve') {
+      var fi = noDn ? 0 : tierIdxV(V_FLOAT, dn);
+      return { code: V_FLOAT[fi].code, name: '法兰浮球阀 公称直径' + V_FLOAT[fi].label, inferred: !noDn && V_FLOAT[fi].max !== dn, noDn: noDn, overRange: !noDn && dn > 150, unit: '个', factor: 1 };
+    }
+    if (c === 'levelValve') {
+      var li = noDn ? 0 : tierIdxV(V_LEVEL, dn);
+      return { code: V_LEVEL[li].code, name: '法兰液压水位控制阀 公称直径' + V_LEVEL[li].label, inferred: !noDn && V_LEVEL[li].max !== dn, noDn: noDn, overRange: !noDn && dn > 200, unit: '个', factor: 1 };
+    }
+    if (c === 'solenoidValve') {
+      if (noDn) return { code: '8-603', name: '螺纹电磁阀安装 公称直径15mm以内', inferred: false, noDn: true, unit: '个', factor: 1 };
+      if (dn <= 50) {
+        var si = tierIdxV(V_STHREAD, dn);
+        return { code: V_STHREAD[si].code, name: '螺纹电磁阀安装 公称直径' + V_STHREAD[si].label, inferred: V_STHREAD[si].max !== dn, unit: '个', factor: 1 };
+      }
+      var sf = tierIdxV(V_SFLANGE, dn);
+      return {
+        code: V_SFLANGE[sf].code, name: '法兰电磁阀安装 公称直径' + V_SFLANGE[sf].label,
+        inferred: V_SFLANGE[sf].max !== dn, overRange: dn > 500, unit: '个', factor: 1
+      };
+    }
+    return { code: '', name: '', inferred: false };
+  }
+
+  // 阀门主材价：有信息价取信息价（不标品牌），无信息价取市场价并给参考品牌
+  function valvePrice(it) {
+    var vc = valveCfg(), dn = it.dn, c = it.category;
+    if (c === 'waterValve') {
+      var t = (vc.info || {})[it.valveKind || 'market'];
+      if (t) {
+        var i1 = nearIdxV(t.dns, dn);
+        return {
+          price: t.prices[i1], source: 'info',
+          basis: '信息价：' + t.name + ' DN' + t.dns[i1] + ' ' + t.prices[i1] + '元/个' +
+            (dn > 0 && t.dns[i1] !== dn ? '（DN' + dn + '按相邻档取定）' : '')
+        };
+      }
+      var mk = vc.market || { dns: [15], prices: [40] };
+      var i2 = nearIdxV(mk.dns, dn);
+      return {
+        price: mk.prices[i2], source: 'market', brand: vc.brand,
+        basis: '市场价（' + vc.brand + '）：' + it.name + ' DN' + mk.dns[i2] + ' ' + mk.prices[i2] + '元/个（该阀种无信息价，按市场价计）'
+      };
+    }
+    if (c === 'flushValve') {
+      var fl = (vc.special || {}).flush || { prices: [480], brand: '' };
+      return { price: fl.prices[0], source: 'market', brand: fl.brand, basis: '市场价（' + fl.brand + '）：口部冲洗阀 成套 ' + fl.prices[0] + '元/套（定额 8-1260 按套计）' };
+    }
+    if (c === 'solenoidValve') {
+      var so = vc.solenoid || { dns: [15], prices: [180], brand: '' };
+      var i4 = nearIdxV(so.dns, dn);
+      return {
+        price: so.prices[i4], source: 'market', brand: so.brand,
+        basis: '市场价（' + so.brand + '）：电磁阀 DN' + so.dns[i4] + ' ' + so.prices[i4] + '元/个' +
+          (dn > 0 && so.dns[i4] !== dn ? '（DN' + dn + '按相邻档取定）' : '')
+      };
+    }
+    var key = { autoAir: 'autoAir', tempValve: 'temp', floatValve: 'float', levelValve: 'level' }[c];
+    var sp = (vc.special || {})[key] || { dns: [25], prices: [0], source: 'market' };
+    var i3 = nearIdxV(sp.dns, dn);
+    if (sp.source === 'info') {
+      return { price: sp.prices[i3], source: 'info', basis: '信息价：' + sp.name + ' DN' + sp.dns[i3] + ' ' + sp.prices[i3] + '元/个' };
+    }
+    return {
+      price: sp.prices[i3], source: 'market', brand: sp.brand || vc.brand,
+      basis: '市场价（' + (sp.brand || vc.brand) + '）：' + sp.name + ' DN' + sp.dns[i3] + ' ' + sp.prices[i3] + '元/个'
+    };
+  }
+
+  function matchQuota(it) {
+    if (!it) return { code: '', name: '', inferred: false };
+    if (isSanCat(it.category)) return matchSanQuota(it);
+    if (isAuxCat(it.category)) return matchAuxQuota(it);
+    if (isValveCat(it.category)) return matchValveQuota(it);
+
+    if (it.special === true) return SP.matchQuota(it);   // 补充规则类别统一走共享模块
+    if (PIPE_GROUPS[it.category]) {
+      var g = groupOf(it);
+      if (!g) return { code: '', name: '', inferred: false };
+      if (it.dn === null || it.dn === undefined || isNaN(it.dn)) {
+        return { code: '', name: g.name + '（管径待识别）', inferred: false, needDn: true };
+      }
+      var t = tierOf(g.dns, it.dn);
+      var dnLabel = (it.category === 'copper' || it.category === 'plastic' || it.category === 'composite') ? '公称外径' : '公称直径';
+      return {
+        code: '8-' + (g.start + t.idx),
+        name: g.name + ' ' + dnLabel + t.dn + 'mm以内',
+        inferred: !t.exact,
+        dnTier: t.dn,
+        unit: '10m',
+        factor: 10,
+        group: g
+      };
+    }
+    if (it.category !== 'castIron' && it.category !== 'galv') return { code: '', name: '', inferred: false };
+    var tbl = ruleTable(it)[pipeKey(it)];
+    if (!tbl) return { code: '', name: '', inferred: false };
+    var def = tbl[it.joint] || tbl[defaultJoint(it)];
+    if (!def) return { code: '', name: '', inferred: false };
+    if (it.dn === null || it.dn === undefined || isNaN(it.dn)) {
+      return { code: '', name: def.name + '（管径待识别）', inferred: false, needDn: true };
+    }
+    var idx = -1;
+    for (var i = 0; i < def.dns.length; i++) { if (it.dn <= def.dns[i]) { idx = i; break; } }
+    var inferred = false;
+    if (idx < 0) { idx = def.dns.length - 1; inferred = true; }
+    else if (def.dns[idx] !== it.dn) inferred = true;
+    var dn = def.dns[idx];
+    return {
+      code: '8-' + (def.start + idx),
+      name: def.name + ' 公称直径' + dn + 'mm以内',
+      inferred: inferred,
+      dnTier: dn,
+      unit: '10m',
+      factor: 10
+    };
+  }
+
+  // ---------- 附加定额（沟槽管件 / 管道消毒冲洗）----------
+  function buildExtraQuotas(it, quota) {
+    if (isSanCat(it.category)) return [];
+    var arr = [];
+    if (!quota || !quota.code) return arr;
+    if (isValveCat(it.category)) return arr;   // 阀门及附件不计管道消毒冲洗/沟槽管件
+    if (isAuxCat(it.category)) return arr;     // 支架/保温不计管道消毒冲洗/沟槽管件
+    if (it.special === true) return SP.extras(it, quota);   // 补充规则类别：泵控制柜 / 防水套管安装等
+    var tierDn = quota.dnTier || it.dn;
+    if (it.joint === 'groove') {
+      var f = tierOf(GROOVE_FITTING.dns, tierDn);
+      if (f) {
+        var cnt = Math.max(1, Math.ceil(it.quantity / 6));
+        arr.push({
+          role: 'fitting', code: '8-' + (GROOVE_FITTING.start + f.idx),
+          name: GROOVE_FITTING.name + ' 公称直径' + f.dn + 'mm以内',
+          unit: GROOVE_FITTING.unit, factor: GROOVE_FITTING.factor,
+          qty: cnt, note: '管件数量按6m定尺估算（每6m一个管件），请按图纸调整'
+        });
+      }
+    }
+    var fl = (it.medium === 'drain') ? null : tierOf(PIPE_FLUSH.dns, tierDn);
+    if (fl) {
+      arr.push({
+        role: 'flush', code: '8-' + (PIPE_FLUSH.start + fl.idx),
+        name: PIPE_FLUSH.name + ' 公称直径' + fl.dn + 'mm以内',
+        unit: PIPE_FLUSH.unit, factor: PIPE_FLUSH.factor,
+        qty: it.quantity, note: ''
+      });
+    }
+    return arr;
+  }
+
+  // ---------- 价格 ----------
+  function getPeriods() {
+    var arr = (typeof window !== 'undefined' && window.PIPE_PRICE_PERIODS) ? window.PIPE_PRICE_PERIODS
+      : ((typeof window !== 'undefined' && window.CABLE_PRICE_PERIODS) || []);
+    return arr || [];
+  }
+  function getPeriod(periodKey) {
+    var arr = getPeriods();
+    for (var i = 0; i < arr.length; i++) if (arr[i].period === periodKey) return arr[i];
+    return arr[0] || null;
+  }
+  function interpPrice(table, key) {
+    var keys = Object.keys(table).map(Number).sort(function (a, b) { return a - b; });
+    if (!keys.length) return null;
+    if (table[key] !== undefined) return { price: table[key], exact: true, tier: key };
+    for (var i = 0; i < keys.length; i++) {
+      if (key <= keys[i]) return { price: table[keys[i]], exact: false, tier: keys[i] };
+    }
+    var last = keys[keys.length - 1];
+    return { price: table[last], exact: false, tier: last, overflow: true };
+  }
+
+  function lookupCastIronPrice(periodKey, it) {
+    var p = getPeriod(periodKey);
+    if (!p || !p.castIron) return null;
+    if (it.dn === null || isNaN(it.dn)) return null;
+    var grp = it.medium === 'drain' ? p.castIron.drain : p.castIron.water;
+    if (!grp) return null;
+    var r = interpPrice(grp.price, it.dn);
+    if (!r) return null;
+    var isInfo = !!(grp.infoDns && grp.infoDns.indexOf(r.tier) >= 0);
+    if (isInfo) {
+      return { price: r.price, source: 'info',
+        basis: '铸铁' + MEDIUM_CN[it.medium] + '管 DN' + it.dn + '：天津市工程造价信息（除税）' + r.price.toFixed(2) + '元/m' +
+          (r.exact ? '' : '；信息价无DN' + it.dn + '档，按DN' + r.tier + '档取定') };
+    }
+    var basis = '铸铁' + MEDIUM_CN[it.medium] + '管 DN' + it.dn + '：' + grp.brand + '，' + r.price.toFixed(2) + '元/m（除税）' +
+      (r.exact ? '' : '；信息价无DN' + it.dn + '档，按DN' + r.tier + '档就近取定') +
+      (r.overflow ? '；已超常用最大档，请核对' : '');
+    return { price: r.price, source: 'market', basis: basis };
+  }
+
+  function lookupGalvPrice(periodKey, it) {
+    var p = getPeriod(periodKey);
+    if (!p || !p.galv) return null;
+    if (it.dn === null || isNaN(it.dn)) return null;
+    var r = interpPrice(p.galv.price, it.dn);
+    if (!r) return null;
+    var basis = '镀锌钢管 DN' + it.dn + '（' + (it.joint === 'gas_thread' ? '燃气' : '给水') + '）：' + p.galv.brand +
+      '，' + r.price.toFixed(2) + '元/m（除税）' +
+      (r.exact ? '' : '；信息价无DN' + it.dn + '档，按DN' + r.tier + '档就近取定') +
+      (r.overflow ? '；已超常用最大档，请核对' : '');
+    return { price: r.price, source: 'market', basis: basis };
+  }
+
+  var PIPE_PRICE_META = {
+    seamless: function (p) { return p.seamless; },
+    welded: function (p) { return p.welded; },
+    copper: function (p) { return p.copper; },
+    stainless: function (p) { return p.stainless; },
+    composite: function (p) { return (p.composite || {})['alplastic']; },
+    plastic: function (p) { return (p.plastic || {})['ppr']; }
+  };
+
+  function lookupPipePrice(periodKey, it) {
+    var p = getPeriod(periodKey);
+    if (!p) return null;
+    if (it.dn === null || isNaN(it.dn)) return null;
+    var grp = null, label = '';
+    if (it.category === 'seamless') { grp = p.seamless; label = '无缝钢管'; }
+    else if (it.category === 'welded') { grp = p.welded; label = '焊接钢管'; }
+    else if (it.category === 'copper') { grp = p.copper; label = '铜管'; }
+    else if (it.category === 'stainless') { grp = p.stainless; label = '不锈钢管'; }
+    else if (it.category === 'composite') {
+      grp = (p.composite || {})[it.compositeKind || 'alplastic'];
+      label = it.compositeKind === 'steelmesh' ? '钢骨架塑料复合管' : '铝塑复合管';
+    } else if (it.category === 'plastic') {
+      grp = (p.plastic || {})[it.plasticKind || 'ppr'];
+      label = { ppr: 'PP-R给水管', pe: 'PE给水管', pvc: 'PVC-U给水管', pvcDrain: 'PVC-U排水管',
+        pvdf: 'PVDF管', pb: 'PB给水管' }[it.plasticKind || 'ppr'];
+    }
+    if (!grp || !grp.price) return null;
+    var r = interpPrice(grp.price, it.dn);
+    if (!r) return null;
+    var dnLabel = (it.category === 'plastic' || it.category === 'composite') ? 'De' : 'DN';
+    var isInfo = !!(grp.infoDns && grp.infoDns.indexOf(r.tier) >= 0);
+    if (isInfo) {
+      return { price: r.price, source: 'info',
+        basis: label + ' ' + dnLabel + it.dn + '：天津市工程造价信息（除税）' + r.price.toFixed(2) + '元/m' +
+          (r.exact ? '' : '；信息价无' + dnLabel + it.dn + '档，按' + dnLabel + r.tier + '档取定') };
+    }
+    var basis = label + ' ' + dnLabel + it.dn + '：' + grp.brand + '，' + r.price.toFixed(2) + '元/m（除税）' +
+      (r.exact ? '' : '；价格库无' + dnLabel + it.dn + '档，按' + dnLabel + r.tier + '档就近取定') +
+      (r.overflow ? '；已超常用最大档，请核对' : '');
+    return { price: r.price, source: 'market', basis: basis };
+  }
+
+  function isPriced(it) { return it && (it.category === 'castIron' || it.category === 'galv' || !!PIPE_GROUPS[it.category] || isValveCat(it.category) || isAuxCat(it.category) || isSanCat(it.category) || it.special === true); }
+
+  function recomputePriceCore(it, periodKey) {
+    if (isSanCat(it.category)) {
+      var sp = sanPrice(it);
+      it.price = sp.price; it.priceSource = sp.source; it.priceBasis = sp.basis; it.priceBrand = sp.brand || '';
+      return;
+    }
+    if (isAuxCat(it.category)) {
+      var ap = auxPrice(it);
+      it.price = ap.price; it.priceSource = ap.source; it.priceBasis = ap.basis; it.priceBrand = ap.brand || '';
+      return;
+    }
+    if (isValveCat(it.category)) {
+      var vp = valvePrice(it);
+      it.price = vp.price; it.priceSource = vp.source; it.priceBasis = vp.basis; it.priceBrand = vp.brand || '';
+      return;
+    }
+    var info = null;
+    if (it.special === true) info = SP.price(it);
+    else if (it.category === 'castIron') info = lookupCastIronPrice(periodKey, it);
+    else if (it.category === 'galv') info = lookupGalvPrice(periodKey, it);
+    else if (PIPE_GROUPS[it.category]) info = lookupPipePrice(periodKey, it);
+    if (info) {
+      it.price = info.price; it.priceSource = info.source; it.priceBasis = info.basis;
+    } else {
+      it.price = null;
+      it.priceSource = isPriced(it) ? 'pending' : 'na';
+      it.priceBasis = '';
+    }
+  }
+
+  // ============================================================
+  // 价格数据库联动：信息价 > 数据库价 > 市场价
+  // 数据源为门户「价格数据库」写入的 localStorage（同源共享，键 priceDB.v1）
+  // ============================================================
+  var DB_PROF = 'plumbing';
+  var DB_MIN_SCORE = 12;                                  // 匹配阈值，低于此分不采用
+  var DB_OVERRIDE = ['market', 'pending', 'manual', 'estimated'];
+  var _dbPool = null, _dbHit = {}, _dbPoolDB = null, _dbPoolRaw = null;
+
+  function dbLib() { return (typeof window !== 'undefined' && window.PriceDB) ? window.PriceDB : null; }
+  function dbRefresh() { _dbPool = null; _dbPoolDB = null; _dbPoolRaw = null; _dbHit = {}; }
+
+  function dbPool() {
+    var cur = dbLib();
+    // 直接读同源 localStorage（键 priceDB.v1），不依赖库内部存储实现
+    var raw = null;
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) raw = window.localStorage.getItem('priceDB.v1');
+    } catch (e) { raw = null; }
+    if (_dbPool && _dbPoolDB === cur && _dbPoolRaw === raw) return _dbPool;   // 数据未变，复用快照
+    _dbPoolDB = cur; _dbPoolRaw = raw; _dbHit = {};                          // 数据变了，命中缓存作废
+    if (!cur) { _dbPool = []; return _dbPool; }
+    var items = [];
+    if (raw) { try { var d = JSON.parse(raw); items = (d && d.items) || []; } catch (e2) { items = []; } }
+    _dbPool = items.filter(function (x) { return x && x.prof === DB_PROF; });
+    return _dbPool;
+  }
+
+  // 单条名称查询（结果按名称缓存，一次组价只打分一次）
+  function dbHitOf(name) {
+    var key = String(name === null || name === undefined ? '' : name).trim();
+    if (!key) return null;
+    var pool = dbPool();   // 每次都同步数据快照（内容未变时开销极小）
+    if (Object.prototype.hasOwnProperty.call(_dbHit, key)) return _dbHit[key];
+    var DB = dbLib(), best = null, bestScore = 0;
+    if (DB && pool.length && DB.feat && DB.scoreF) {
+      var qf = DB.feat(key);
+      for (var i = 0; i < pool.length; i++) {
+        var s = DB.scoreF(qf, DB.feat(pool[i].name));
+        if (s <= 0) continue;
+        if (s > bestScore || (s === bestScore && best && String(pool[i].date) > String(best.date))) { bestScore = s; best = pool[i]; }
+      }
+    }
+    var res = (best && bestScore >= DB_MIN_SCORE) ? { item: best, score: bestScore } : null;
+    _dbHit[key] = res;
+    return res;
+  }
+
+  // 数据库兜底：仅当当前价为市场价/待询价/需人工/估算价时覆盖，信息价永不动
+  function dbPriceApply(it) {
+    if (!it || !it.name) return;
+    if (DB_OVERRIDE.indexOf(it.priceSource) < 0) return;
+    var hit = dbHitOf(it.name);
+    if (!hit) return;
+    var p = Number(hit.item.price);
+    if (!isFinite(p) || p <= 0) return;
+    it.price = p;
+    it.priceSource = 'db';
+    it.priceBrand = hit.item.brand || '';
+    it.priceBasis = '价格数据库：' + (hit.item.brand || '未标品牌') + ' ¥' + p.toFixed(2) +
+      (hit.item.date ? '（报价 ' + hit.item.date + '）' : '');
+  }
+
+  // 批量补价（数据变动后重新组价时调用）
+  function dbApplyAll(items) {
+    dbRefresh();
+    (items || []).forEach(dbPriceApply);
+  }
+
+  if (typeof window !== 'undefined') window.__priceDbRefresh = dbRefresh;   // 数据变更后手动刷新
+
+  if (typeof window !== 'undefined' && window.addEventListener) {
+    window.addEventListener('storage', function (e) {
+      if (!e || e.key === null || e.key === 'priceDB.v1') dbRefresh();
+    });
+    // 门户价格库页面可能先写入再跳转，页面可见时刷新一次快照
+    if (typeof document !== 'undefined' && document.addEventListener) {
+      document.addEventListener('visibilitychange', function () {
+        if (document.visibilityState === 'visible') dbRefresh();
+      });
+    }
+  }
+
+  var _recomputePriceCore = recomputePriceCore;
+  function recomputePrice(it, periodKey) {
+    _recomputePriceCore(it, periodKey);
+    dbPriceApply(it);
+  }
+
+
+  // ---------- 项目特征 ----------
+  function featureText(it) {
+    if (isSanCat(it.category)) {
+      var sf = [];
+      sf.push('名称:' + it.name);
+      sf.push('类型:' + S_DEF[it.category].lname);
+      if (S_DEF[it.category].opts) sf.push('型号:' + sanOptLabel(it));
+      if (it.dnTier) sf.push('规格:DN' + it.dnTier);
+      sf.push('品牌参考:' + (it.priceBrand || ''));
+      sf.push('其他:' + (S_WORK[it.category] || '器具安装、配件安装、试水'));
+      return sf.join('；');
+    }
+    if (isAuxCat(it.category)) {
+      var af = [];
+      af.push('名称:' + it.name);
+      af.push('类型:' + AUX_LABEL[it.category]);
+      if (it.category === 'bracket') {
+        af.push('计量:按型钢重量 kg 计');
+        af.push('主材:型钢（信息价 4.20 元/kg）');
+        af.push('其他:除锈、刷油、制作、安装、固定');
+      } else {
+        if (it.dn) af.push('规格型号:DN' + it.dn + ' 厚度' + it.insulThk + 'mm');
+        else af.push('厚度:' + it.insulThk + 'mm');
+        af.push('品牌参考:' + (it.priceBrand || ''));
+        af.push('其他:' + (it.category === 'insulRubber' ? '保温壳安装、粘接、接缝处理' : '带铝箔玻璃棉铺贴、绑扎、接缝处理'));
+      }
+      return af.join('；');
+    }
+    if (isValveCat(it.category)) {
+      var vf = [];
+      vf.push('名称:' + it.name);
+      vf.push('类型:' + V_LABEL[it.category]);
+      if (it.dn) vf.push('规格型号:DN' + it.dn);
+      vf.push('品牌参考:' + (it.brand || '信息价（不标品牌）'));
+      vf.push('其他:' + (V_WORK[it.category] || ''));
+      return vf.join('；');
+    }
+    if (it.special === true) return SP.feature(it);
+    var parts = [];
+    parts.push('安装部位:' + (it.loc === 'out' ? '室外' : '室内'));
+    parts.push('材质:' + (it.materialLabel || it.material || '铸铁'));
+    if (it.dn) parts.push('型号规格:' + specCell(it));
+    if (it.category === 'plastic') {
+      parts.push('输送介质:' + (it.isRain ? '雨水' : (it.medium === 'drain' ? '排水' : '给水')));
+    }
+    if (it.category === 'castIron') {
+      parts.push('连接形式:承插');
+      parts.push('接口材料:' + (JOINT_CN[it.joint] || '石棉水泥接口'));
+      parts.push(it.medium === 'drain' ? '灌水试验、通球试验' : '水压试验、水冲洗');
+    } else if (it.category === 'galv') {
+      parts.push('连接形式:螺纹连接');
+      parts.push('接口材料:' + (it.joint === 'gas_thread' ? '聚四氟乙烯生料带（燃气管道）' : '铅油麻丝、聚四氟乙烯生料带'));
+      parts.push(it.joint === 'gas_thread' ? '气压试验、空气吹扫' : '水压试验、水冲洗');
+    } else if (PIPE_GROUPS[it.category]) {
+      parts.push('连接形式:' + (JOINT_CN2[it.joint] || '焊接'));
+      if (it.joint === 'groove') parts.push('沟槽管件另计');
+      else if (it.joint === 'weld' || it.joint === 'arc' || it.joint === 'argon' || it.joint === 'oxy' || it.joint === 'braze') parts.push('接口材料:焊条/焊丝');
+      if (it.medium === 'gas') parts.push('气压试验、空气吹扫');
+      else if (it.medium === 'drain') parts.push('灌水试验、通球试验');
+      else parts.push('水压试验、水冲洗、消毒冲洗');
+    }
+    return parts.join('；');
+  }
+
+  // ---------- 核对提示 ----------
+  // 核对提示去重（同一提示只保留一次）
+  function wjoin(w) {
+    var seen = {}, out = [];
+    (w || []).forEach(function (x) {
+      if (!x || seen[x]) return;
+      seen[x] = 1; out.push(x);
+    });
+    return out.join('；');
+  }
+  function buildWarn(it, quota) {
+    var w = [];
+    if (it.special === true && !(it.dn > 0) && ['preInsul', 'ppDrain', 'flexJoint'].indexOf(it.category) >= 0) {
+      w.push('名称未识别到管径，请在名称中补充 DN/De 规格');
+    }
+    // 图纸说明优先：连接方式/安装部位来自说明时标注依据
+    if (it.jointFromSpec && it.specRule) {
+      w.push('连接方式依图纸说明（' + it.specRule.jointLabel + '）');
+      if (it.specJointConflict) {
+        w.push('名称所写' + (JOINT_CN2[it.specJointConflict] || it.specJointConflict) + '与说明不一致，已按说明' + it.specRule.jointLabel + '套用');
+      }
+    } else if (it.jointPicked && it.specRule && it.joint !== it.specRule.joint) {
+      w.push('已手选' + (JOINT_CN2[it.joint] || it.joint) + '，覆盖图纸说明（' + it.specRule.jointLabel + '）');
+    } else if (it.specJointUnavailable) {
+      w.push('说明要求' + (it.specJointUnavailableLabel || '该连接方式') + '，本站该管材无对应子目，已按' + (JOINT_CN2[it.joint] || it.joint) + '套用，请核对');
+    }
+    if (it.locFromSpec) w.push('安装部位依图纸说明（' + (it.loc === 'out' ? '室外' : '室内') + '）');
+    if (it.mediumFromSpec) {
+      if (it.specSystem === 'fire') w.push('依图纸说明为消防给水管道，本站按给水口径套用（消防水建议用消防专业站）');
+      else w.push('系统/介质依图纸说明（' + (it.specMedium === 'rain' ? '雨水' : it.specMedium === 'drain' ? '排水' : (it.isRain ? '雨水' : MEDIUM_CN[it.medium])) + '）');
+    }
+    if (isSanCat(it.category)) {
+      var sd = S_DEF[it.category];
+      if (sd.opts && !it.sanOptFromName) {
+        w.push('名称未注型号，已按 ' + sanOptLabel(it) + ' 计列，可在「选型」列切换（' + sd.opts.map(function (x) { return x.l; }).join(' / ') + '）');
+      }
+      if (sd.tiers && !it.sanDn) w.push('名称未注公称直径，已按 DN' + sd.defDn + '（' + quota.code + '）计列，可在「选型」列切换');
+      if (sd.tiers && it.sanDn && quota.dnTier && quota.dnTier !== it.sanDn) w.push('DN' + it.sanDn + ' 无对应档，已按 DN' + quota.dnTier + '以内子目套用，请核对');
+      if (sd.forms && !it.sanDn) w.push('名称未注公称直径，已按 DN100 计列，可在「选型」列切换');
+      return wjoin(w);
+    }
+    if (it.category === 'bracket') {
+      w.push('管道支架工程量按管道长度与管径分档含量估算，定额 7-138 计量单位 100kg，请按图纸支架实际重量调整');
+      return wjoin(w);
+    }
+    if (it.category === 'insulRubber' || it.category === 'insulGlass') {
+      w.push((it.category === 'insulRubber' ? '橡塑保温' : '离心玻璃棉') + '按保温体积（m³）计，厚度按 ' + it.insulThk +
+        'mm 取定；单位列填 m² 按面积×厚度折算，填 m 且含 DN 按 π×(DN+δ)×δ×L 折算');
+      return wjoin(w);
+    }
+    if (isValveCat(it.category)) {
+      if (!it.dn && it.category !== 'flushValve') w.push('名称未注公称直径（如 DN100），已按本类最小档 ' + quota.code + ' 计列，请核对');
+      if (quota.overRange) w.push('公称直径超本类最大档，已取顶档 ' + quota.code + '，请核对');
+      if (it.category === 'flushValve') w.push('口部冲洗阀按 8-1260（壁龛式）计列，如为地坑式请改选 8-1261');
+      if (it.category === 'waterValve' && !it.brand) w.push('该阀种取信息价，页面不标品牌');
+      return wjoin(w);
+    }
+    if (it.special === true) {
+      var sw = SP.warn(it, quota);
+      if (sw) w.push(sw);
+      return wjoin(w);
+    }
+    if (!isPriced(it)) {
+      w.push('该材质（' + it.material + '）的清单/定额匹配逻辑待补充，暂只输出名称与长度，请手工套用');
+      return wjoin(w);
+    }
+    if (it.dn === null || it.dn === undefined || isNaN(it.dn)) {
+      w.push('未识别公称直径，请在项目名称中注明（如 DN100 / DN150）');
+    }
+    if (it.jointFallback) {
+      var jf = JOINT_CN2[it.jointFallback] || JOINT_CN[it.jointFallback] || '该连接方式';
+      var jt = JOINT_CN2[it.joint] || JOINT_CN[it.joint] || '默认连接方式';
+      var mcn = it.isRain ? '雨水' : MEDIUM_CN[it.medium];
+      w.push('所选' + LOC_CN[it.loc] + mcn + '无' + jf + '子目，已按' + jt + '套用，请核对');
+    }
+    if (it.category === 'galv' && it.joint === 'gas_thread') {
+      var gasRange = it.loc === 'out' ? 'DN25~50' : 'DN15~100';
+      if (it.dn !== null && (it.loc === 'out' ? (it.dn < 25 || it.dn > 50) : (it.dn < 15 || it.dn > 100))) {
+        w.push('燃气镀锌钢管' + LOC_CN[it.loc] + '子目仅' + gasRange + '，DN' + it.dn + '超出范围，请核对');
+      }
+    }
+    if (it.dn !== null && quota && quota.code && quota.dnTier && quota.dnTier !== it.dn) {
+      w.push('DN' + it.dn + '无对应档，按 DN' + quota.dnTier + '以内子目套用，请核对');
+    }
+    if (PIPE_GROUPS[it.category]) {
+      if (it.category === 'copper' && it.loc === 'out') w.push('第八册铜管无室外子目，已按室内铜管子目套用，请核对');
+      if (it.loc === 'out' && it.joint === 'groove') w.push('室外管道无沟槽连接子目，已按室外钢管(焊接)套用，请核对');
+      if (it.category === 'plastic') {
+        if (!it.jointFromName && !it.jointPicked && !it.jointFromSpec) w.push('名称未注明连接方式，已按' + (JOINT_CN2[it.joint] || '粘接') + '计列，可在「安装部位/接口形式」列切换');
+        if (it.joint === 'nut') w.push('螺母密封圈连接子目 8-389~8-394 按子目序号连续推定，请对照基价表核对');
+        if (it.loc === 'out' && it.wasDrainName) w.push('第八册室外塑料管仅设给水管子目（8-36~8-71），已按室外塑料给水管套用，请核对');
+      }
+      if (it.joint === 'groove') w.push('沟槽连接已附加管件定额' + ((it.extras || [])[0] ? ' ' + it.extras[0].code : '') + '，管件数量按6m定尺估算');
+      if (it.medium === 'gas') w.push('已附加管道消毒冲洗，燃气管一般不计取，如无需请删除该定额行');
+      if (it.medium === 'drain') w.push('排水管道应做灌水/通球试验，本站未含该定额，请在计价软件中补充');
+    }
+    if (it.mediumAmbiguous && !it.mediumFromSpec) {
+      if (it.category === 'galv') w.push('名称未注明给水/燃气，按给水套用，燃气管道请在选型列切换连接方式');
+      else if (it.category === 'plastic') w.push('名称未注明给水/排水，按' + MEDIUM_CN[it.medium] + '套用，可在「安装部位/接口形式」列改选管道类型');
+      else w.push('名称未注明给水/排水，按' + MEDIUM_CN[it.medium] + '套用，如不符请在名称中注明');
+    }
+    if (it.locAmbiguous && !it.locFromSpec) w.push('名称未注明室内/室外，按室内套用，可在选型列切换');
+    if (it.qtyWarn) w.push('工程量缺失，暂按1m计，请核对');
+    return wjoin(w);
+  }
+
+  // ---------- 解析整表 ----------
+  function parseRows(aoa, periodKey, format) {
+    var results = [];
+    var autoIdx = 0;
+    var curSystem = '';   // 当前系统分组名（来自清单里的分组标题行，如「给水管道」「中水管道」）
+    for (var r = 0; r < aoa.length; r++) {
+      var row = aoa[r] || [];
+      var rawName = row[1];
+      var name = (rawName === undefined || rawName === null) ? '' : String(rawName).trim();
+      if (!name) continue;
+      if (/序号/.test(String(row[0] || '')) && /名称/.test(name)) continue;
+      if (/项目名称|管道名称|名称规格/.test(name) && !/\d/.test(name) && r < 5) continue;
+
+      // 分组标题行（如「给水管道」「中水管道」「排水管道」）：无序号、无工程量、名称不含数字，
+      // 不是清单项——记为当前系统分组名后跳过，管道支架按系统分别补项
+      var qtyPre = parseFloat(row[2]);
+      if (!(qtyPre > 0) && !/\d/.test(name) && String(row[0] === undefined || row[0] === null ? '' : row[0]).trim() === '') {
+        curSystem = name; continue;
+      }
+
+      var it = buildItem(name);
+      if (!it) continue;
+
+      autoIdx++;
+      var seqRaw = row[0];
+      it.index = (seqRaw !== undefined && seqRaw !== null && String(seqRaw).trim() !== '') ? String(seqRaw).trim() : String(autoIdx);
+
+      var qtyRaw = row[2];
+      var qty = parseFloat(qtyRaw);
+      it.qtyWarn = false;
+      if (isNaN(qty) || qty <= 0) { qty = 1; it.qtyWarn = true; }
+      // 保温绝热：D 列可填 m²（面积）或 m（管长），自动折算为 m³
+      var unitRaw = row[3] === undefined || row[3] === null ? '' : String(row[3]).trim();
+      if (it.category === 'insulRubber' || it.category === 'insulGlass') {
+        var delta = (it.insulThk || 30) / 1000;
+        if (/m²|㎡|平方米|平米/.test(unitRaw)) {
+          qty = qty * delta;
+          it.unitFrom = 'm²';
+        } else if (/^(m|米|延米|延长米)$/.test(unitRaw) && it.dn) {
+          qty = Math.PI * (it.dn / 1000 + delta) * delta * qty;
+          it.unitFrom = 'm';
+        }
+        qty = Math.round(qty * 1000) / 1000;
+      }
+      it.quantity = qty;
+
+      var quota = matchQuota(it);
+      it.quotaCode = quota.code;
+      it.quotaName = quota.name;
+      it.quotaUnit = quota.unit || it.unit;
+      it.quotaFactor = quota.factor || 1;
+      it.codeInferred = !!quota.inferred;
+      it.dnTier = quota.dnTier || null;
+      it.extras = buildExtraQuotas(it, quota);
+      it.warn = buildWarn(it, quota);
+
+      recomputePrice(it, periodKey);
+      it.features = featureText(it);
+      it.system = curSystem;   // 所属系统分组，管道支架按系统分套
+      results.push(it);
+    }
+    var out = withBracket(results);
+    // 有自动补项（支架）插入时，清单序号统一重排为连续 1..n
+    var hasAuto = false;
+    for (var qa = 0; qa < out.length; qa++) if (out[qa].autoAdded) hasAuto = true;
+    if (hasAuto) for (var qb = 0; qb < out.length; qb++) out[qb].index = String(qb + 1);
+    out._periodKey = periodKey;
+    out._format = format;
+    dbApplyAll(out);   // 价格数据库兜底（信息价不动，市场价/待询价按库价覆盖）
+    return out;
+  }
+
+  function recomputeQuota(it) {
+    var q = matchQuota(it);
+    it.quotaCode = q.code;
+    it.quotaName = q.name;
+    it.quotaUnit = q.unit || it.unit;
+    it.quotaFactor = q.factor || 1;
+    it.codeInferred = !!q.inferred;
+    it.dnTier = q.dnTier || null;
+    it.extras = buildExtraQuotas(it, q);
+    it.warn = buildWarn(it, q);
+  }
+
+  // ============================================================
+  // 渲染
+  // ============================================================
+  // 单行合计：主管材 + 管件主材（PP排水管双主材）
+  // 附加定额自带主材金额（如泵的同期小屏控制箱主材）
+  function extraMatAmt(d) {
+    var s = 0;
+    (d && d.extras || []).forEach(function (x) {
+      if (x && x.mat && x.mat.price) s += x.mat.price * (x.qty || 0);
+    });
+    return s;
+  }
+  function lineAmt(d) {
+    if (!d) return 0;
+    var base = (d.price === null || d.price === undefined) ? 0 : (d.price + (d.mat2 && d.mat2.price ? d.mat2.price : 0)) * d.quantity;
+    return base + extraMatAmt(d);
+  }
+  function priceText(item) {
+    if (!isPriced(item)) return '<span class="tag tag-na">未计价</span>';
+    if (item.price === null) return '<span class="tag tag-pending">待询价</span>';
+    var tip = item.priceBasis ? ' title="' + String(item.priceBasis).replace(/"/g, '&quot;') + '"' : '';
+    if (item.priceSource === 'estimated') return '<span class="tag tag-est"' + tip + '>估</span> <span' + tip + '>¥' + item.price.toFixed(2) + '</span>';
+    if (item.priceSource === 'db') return '<span class="tag tag-db"' + tip + '>数据库价</span> <span' + tip + '>¥' + item.price.toFixed(2) + '</span>' + (item.priceBrand ? ' <span class="price-brand" title="价格数据库报价品牌">' + escapeHtml(item.priceBrand) + '</span>' : '');
+    if (item.priceSource === 'market') return '<span class="tag tag-market"' + tip + '>市场价</span> <span' + tip + '>¥' + item.price.toFixed(2) + '</span>' + (item.mat2 ? ' <span class="mat2-hint">＋管件¥' + item.mat2.price.toFixed(3) + '</span>' : '');
+    if (item.priceSource === 'fixed') return '<span class="tag tag-fixed"' + tip + '>固定价</span> <span' + tip + '>¥' + item.price.toFixed(2) + '</span>' + (item.mat2 ? ' <span class="mat2-hint" title="该定额下需两个主材：管材 + 管件，导出表格分两行">＋管件¥' + item.mat2.price.toFixed(3) + '</span>' : '');
+    return '<span class="tag tag-info"' + tip + '>信息价</span> <span' + tip + '>¥' + item.price.toFixed(2) + '</span>';
+  }
+  function inferTag(it) {
+    return it.codeInferred ? '<span class="tag tag-infer" title="定额编号按公称直径档位就近推算，请对照2020预算基价第八册子目表核对">推</span>' : '';
+  }
+  function escapeHtml(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+  function opt(val, cur, label) {
+    return '<option value="' + val + '"' + (val === cur ? ' selected' : '') + '>' + label + '</option>';
+  }
+  function sel(act, idx, html) {
+    return '<select class="cell-select" data-act="' + act + '" data-idx="' + idx + '">' + html + '</select>';
+  }
+
+  // 安装部位 / 接口形式 列
+  function layCell(it) {
+    if (isSanCat(it.category)) {
+      var sd = S_DEF[it.category];
+      if (sd.opts) {
+        return sel('variant', it._i, sd.opts.map(function (x) { return opt(x.k, it.sanOpt, x.l); }).join(''));
+      }
+      if (sd.forms) {
+        return sel('form', it._i, opt('ground', it.sanForm, '地上式') + opt('hang', it.sanForm, '悬挂式'));
+      }
+      if (sd.tiers) {
+        var cur = String(it.dnTier || sd.defDn);
+        return sel('variant', it._i, sd.tiers.map(function (t) {
+          return opt(String(t.max), cur, 'DN' + t.max + '以内');
+        }).join(''));
+      }
+      return '<span class="lay-static">—</span>';
+    }
+    if (isAuxCat(it.category)) return '<span class="lay-static">—</span>';
+    if (isValveCat(it.category)) return '<span class="lay-static">—</span>';
+    if (it.special === true) {
+      if (SP.hasOpts(it)) {
+        return sel('spopt', it._i, SP.opts(it).map(function (x) { return opt(x.k, it.specialOpt, x.l); }).join(''));
+      }
+      return '<span class="lay-static">—</span>';
+    }
+    if (!isPriced(it)) {
+      return '<span class="lay-static">待补充</span>';
+    }
+    var locHtml = opt('in', it.loc, '室内') + opt('out', it.loc, '室外');
+    var js = jointsOf(it);
+    var jointHtml = js.map(function (j) { return opt(j, it.joint, JOINT_CN2[j] || JOINT_CN[j] || j); }).join('');
+    // 塑料管三级联动：室内外 →（室内）雨水/排水/给水管 → 连接方式；（室外）室内外 → 连接方式
+    if (it.category === 'plastic') {
+      var medSel = '';
+      if (it.loc !== 'out') {
+        var mk0 = mediumKeyOf(it);
+        medSel = sel('medium', it._i, ['rain', 'drain', 'water'].map(function (m) {
+          return opt(m, mk0, MEDIUM_CN3[m]);
+        }).join(''));
+      }
+      return '<div class="lay-stack">' + sel('loc', it._i, locHtml) + medSel + sel('joint', it._i, jointHtml) + '</div>';
+    }
+    return '<div class="lay-stack">' +
+      sel('loc', it._i, locHtml) + sel('joint', it._i, jointHtml) + '</div>';
+  }
+
+  function specCell(it) {
+    if (isSanCat(it.category)) {
+      var sd = S_DEF[it.category];
+      if (sd.opts) return sanOptLabel(it) || '成套';
+      if (sd.tiers) return 'DN' + (it.dnTier || sd.defDn);
+      if (sd.forms) return (it.sanForm === 'hang' ? '悬挂式' : '地上式') + ' DN' + (it.dnTier || 100);
+      return '成套';
+    }
+    if (isAuxCat(it.category)) {
+      if (it.category === 'bracket') return '—';
+      return (it.dn ? 'DN' + it.dn + ' ' : '') + 'δ' + it.insulThk;
+    }
+    if (isValveCat(it.category)) return it.dn ? 'DN' + it.dn : (it.category === 'flushValve' ? '成套' : '—');
+    if (it.special === true) return SP.spec(it);
+    if (it.dn === null || it.dn === undefined || isNaN(it.dn)) return '—';
+    var p = (it.category === 'plastic' || it.category === 'composite' || it.category === 'copper') ? 'De' : 'DN';
+    return p + it.dn;
+  }
+
+  function renderTable(data) {
+    annotateListCode12(data);
+    var tbody = document.getElementById('tableBody');
+    tbody.innerHTML = '';
+    data.forEach(function (item, i) {
+      item._i = i;
+      var tr = document.createElement('tr');
+      if (item.warn) tr.className = 'row-warn';
+      tr.innerHTML =
+        '<td>' + escapeHtml(item.index) + '</td>' +
+        '<td class="col-lc">' + (item.listCode12 || item.listCode || '—') + '</td>' +
+        '<td class="cell-name" title="' + escapeHtml(item.name) + '">' + escapeHtml(item.name) + '</td>' +
+        '<td>' + layCell(item) + '</td>' +
+        '<td class="cell-feature col-feat" title="' + escapeHtml(item.features || '') + '">' + escapeHtml(item.features || '—') + '</td>' +
+        '<td class="cell-qcode">' + (item.quotaCode || '—') + (item.isFallback ? ' <span class="tag tag-fb">补项</span>' : '') + ' ' + inferTag(item) + '</td>' +
+        '<td class="cell-qname" title="' + escapeHtml(item.quotaName + ((item.extras && item.extras.length) ? ' ＋ ' + item.extras.map(function (x) { return x.code + ' ' + x.name; }).join(' ＋ ') : '')) + '">' +
+          escapeHtml(item.quotaName || '—') +
+          ((item.extras && item.extras.length) ? item.extras.map(function (x) {
+            return '<br><span class="tag tag-info">＋' + x.code + '</span> <span style="font-size:12px;color:#5b6b73">' + escapeHtml(x.name.replace(/^.*?管道\s*/, '')) + '</span>';
+          }).join('') : '') + '</td>' +
+        '<td class="cell-price">' + priceText(item) + '</td>' +
+        '<td>' + item.quantity + '</td>' +
+        '<td class="cell-warn">' + (item.warn ? '<span title="' + escapeHtml(item.warn) + '">⚠️ ' + escapeHtml(item.warn) + '</span>' : '') + '</td>';
+      tbody.appendChild(tr);
+    });
+
+    bindRowSelects(data);
+
+    var cast = data.filter(function (d) { return d.category === 'castIron'; }).length;
+    var other = data.length - cast - data.filter(function (d) { return d.category === 'galv'; }).length;
+    var pending = data.filter(function (d) { return isPriced(d) && d.price === null; }).length;
+    var total = data.reduce(function (s, d) { return s + lineAmt(d); }, 0);
+
+    document.getElementById('totalCount').textContent = data.length;
+    var galv = data.filter(function (d) { return d.category === 'galv'; }).length;
+    document.getElementById('catCast').textContent = cast;
+    var galvEl = document.getElementById('catGalv');
+    if (galvEl) galvEl.textContent = galv;
+    document.getElementById('catOther').textContent = other;
+    document.getElementById('pendingCount').textContent = pending;
+    document.getElementById('totalPrice').textContent = '¥' + total.toFixed(2);
+  }
+
+  function bindRowSelects(data) {
+    document.querySelectorAll('#tableBody select.cell-select').forEach(function (s) {
+      s.addEventListener('change', function () {
+        var idx = parseInt(s.getAttribute('data-idx'), 10);
+        var act = s.getAttribute('data-act');
+        var it = data[idx];
+        if (!it) return;
+        if (act === 'loc') {
+          var prevLoc = it.loc;
+          it.loc = s.value;
+          it.locAmbiguous = false;
+          if (it.category === 'plastic') {
+            if (it.loc === 'out') {
+              // 室外仅有给水管子目：记住室内所选介质，切回室内时恢复
+              if (prevLoc !== 'out') it.mediumInKey = mediumKeyOf(it);
+              it.wasDrainName = (it.medium === 'drain' || it.isRain);
+              it.medium = 'water'; it.isRain = false;
+            } else if (prevLoc === 'out' && it.mediumInKey) {
+              it.medium = it.mediumInKey === 'rain' ? 'drain' : it.mediumInKey;
+              it.isRain = it.mediumInKey === 'rain';
+            }
+          }
+          var allow = jointsOf(it);
+          if (allow.indexOf(it.joint) < 0) it.joint = defaultJoint(it);
+          it.jointFallback = null;
+        } else if (act === 'medium') {
+          it.medium = s.value;
+          it.isRain = s.value === 'rain';
+          it.mediumAmbiguous = false;
+          it.mediumFromSel = true;
+          var allowM = jointsOf(it);
+          if (allowM.indexOf(it.joint) < 0) it.joint = defaultJoint(it);
+          it.jointFallback = null;
+        } else if (act === 'joint') {
+          it.joint = s.value;
+          it.jointPicked = true;
+          it.jointFromSpec = false;
+          it.jointFallback = null;
+        } else if (act === 'variant') {
+          if (isSanCat(it.category) && S_DEF[it.category].opts) {
+            it.sanOpt = s.value;
+            it.sanOptFromName = true;
+          } else {
+            it.sanDn = parseInt(s.value, 10);
+          }
+        } else if (act === 'spopt') {
+          SP.setOpt(it, s.value);
+        } else if (act === 'form') {
+          it.sanForm = s.value;
+          it.sanFormFromName = true;
+        }
+        recomputeQuota(it);
+        recomputePrice(it, data._periodKey);
+        it.features = featureText(it);
+        renderTable(data);
+      });
+    });
+  }
+
+  // ============================================================
+  // 导出
+  // ============================================================
+  function round4(v) { return Math.round(v * 10000) / 10000; }
+  function num2(v) { return v === null || v === undefined ? '' : Number(Number(v).toFixed(2)); }
+
+  function exportJianjing(data) {
+    applyFallbackCodes(data);
+    if (GS_MODE) return exportJianjingGs(data);
+    var wsData = [['序号', '清单编码', '项目名称', '定额编码', '定额名称', '主材价格', '数量', '项目特征']];
+    data.forEach(function (it) {
+      wsData.push([it.index, it.listCode12 || it.listCode, it.name, it.quotaCode, it.quotaName,
+        it.price === null ? '' : num2(it.price), it.quantity, it.features]);
+      if (it.mat2) {
+        wsData.push(['', it.listCode12 || it.listCode, it.mat2.name, '', '（管件主材，与管道同量计列）',
+          num2(it.mat2.price), '', '']);
+      }
+      (it.extras || []).forEach(function (x) {
+        wsData.push(['', '', '', x.code, x.name + '（数量' + round4(x.qty / (x.factor || 1)) + ' ' + x.unit + '）', '', '', '']);
+        if (x.mat) wsData.push(['', it.listCode12 || it.listCode, x.mat.name, '', '（附加定额主材）', num2(x.mat.price), '', '']);
+      });
+    });
+    var total = data.reduce(function (s, d) { return s + lineAmt(d); }, 0);
+    wsData.push([]);
+    wsData.push(['合计', '', '', '', '', num2(total), '', '']);
+
+    var ws = XLSX.utils.aoa_to_sheet(wsData);
+    ws['!cols'] = [{ wch: 8 }, { wch: 14 }, { wch: 42 }, { wch: 10 }, { wch: 40 }, { wch: 12 }, { wch: 8 }, { wch: 66 }];
+    var wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, '清单定额报价表');
+    XLSX.writeFile(wb, '清单定额报价表_建经_' + today() + '.xlsx');
+  }
+
+  // 概算模式建经导出：删除「清单编码」「项目特征」两列，其余列与预算模式一致
+  function exportJianjingGs(data) {
+    applyFallbackCodes(data);
+    annotateListCode12(data);
+    var wsData = [['序号', '项目名称', '定额编码', '定额名称', '主材价格', '数量']];
+    data.forEach(function (it) {
+      wsData.push([it.index, it.name, it.quotaCode, it.quotaName,
+        it.price === null ? '' : num2(it.price), it.quantity]);
+      if (it.mat2) {
+        wsData.push(['', it.mat2.name, '', '（管件主材，与管道同量计列）', num2(it.mat2.price), '']);
+      }
+      (it.extras || []).forEach(function (x) {
+        wsData.push(['', '', x.code, x.name + '（数量' + round4(x.qty / (x.factor || 1)) + ' ' + x.unit + '）', '', '']);
+        if (x.mat) wsData.push(['', x.mat.name, '', '（附加定额主材）', num2(x.mat.price), '']);
+      });
+    });
+    var total = data.reduce(function (s, d) { return s + lineAmt(d); }, 0);
+    wsData.push([]);
+    wsData.push(['合计', '', '', '', num2(total), '']);
+
+    var ws = XLSX.utils.aoa_to_sheet(wsData);
+    ws['!cols'] = [{ wch: 8 }, { wch: 42 }, { wch: 10 }, { wch: 40 }, { wch: 12 }, { wch: 8 }];
+    var wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, '定额报价表');
+    XLSX.writeFile(wb, '概算_定额报价表_建经_' + today() + '.xlsx');
+  }
+
+  // 清单编码统一补足 12 位：9 位标准码直接追加三位顺序号；
+  // 不足 9 位的（如补充码 03B001）先右补 0 至 9 位，再追加顺序号，保证输出恒为 12 位。
+  // 同一编码按清单出现顺序 001/002/003…递增，不同编码各自从 001 起；空编码保持空。
+  // ============================================================
+  // 补项兜底：清单号 / 定额号无法准确匹配时，统一按下列规则输出
+  //   清单编码 = 030801801 + 三位顺序号（001/002/003…，按补项出现顺序）
+  //   定额编码 = A-01 / A-02 / A-03…
+  //   表格与导出统一标注「补项」，便于人工复核
+  // ============================================================
+  var FB_LIST_BASE = '030801801';
+  function applyFallbackCodes(data) {
+    if (!data || !data.length) return data;
+    var lseq = 0, qseq = 0;
+    for (var i = 0; i < data.length; i++) {
+      var it = data[i];
+      if (!it) continue;
+      if (it.fallbackQuota) { it.quotaCode = ''; it.fallbackQuota = false; }
+      if (it.fallbackList) { it.listCode = ''; it.fallbackList = false; }
+      var hasQ = !!(it.quotaCode && String(it.quotaCode).trim());
+      var hasL = !!(it.listCode && String(it.listCode).trim());
+      if (!hasQ) {
+        qseq++;
+        it.quotaCode = 'A-' + ('0' + qseq).slice(-2);
+        it.quotaName = (it.name || '补项') + '（补项）';
+        it.quotaUnit = it.quotaUnit || it.unit;
+        it.quotaFactor = it.quotaFactor || 1;
+        it.fallbackQuota = true;
+      }
+      if (!hasL) {
+        lseq++;
+        it.listCode = FB_LIST_BASE + ('00' + lseq).slice(-3);
+        it.fallbackList = true;
+      }
+      if (it.fallbackQuota || it.fallbackList) {
+        it.isFallback = true;
+        if (!it.warn || it.warn.indexOf('补项：') < 0) {
+          var fbMsg = '补项：无准确匹配的清单号/定额号，已按清单 ' + String(it.listCode) +
+            ' + 定额 ' + it.quotaCode + ' 兜底，请人工核对';
+          it.warn = it.warn ? (it.warn + '；' + fbMsg) : fbMsg;
+        }
+      }
+    }
+    return data;
+  }
+
+  function annotateListCode12(data) {
+    applyFallbackCodes(data);
+    var seq = {};
+    data.forEach(function (it) {
+      var c = String(it.listCode || '').trim();
+      if (!c) { it.listCode12 = c; return; }
+      seq[c] = (seq[c] || 0) + 1;
+      var base = c.length < 9 ? c + new Array(10 - c.length).join('0') : c.slice(0, 9);
+      it.listCode12 = base + ('00' + seq[c]).slice(-3);
+    });
+  }
+
+  function kindOf(it) {
+    if (it.special === true && SP) return SP.typeLabel(it);
+    if (isAuxCat(it.category)) return AUX_LABEL[it.category];
+    if (isSanCat(it.category)) return '洁具';
+    if (isValveCat(it.category)) return '阀门';
+    return '管道';
+  }
+
+  function exportGLD(data) {
+    applyFallbackCodes(data);
+    if (GS_MODE) return exportGLDGs(data);
+    annotateListCode12(data);
+    var wsData = [['序号', '项目名称', '类型', '材质', '型号', '规格', '截面mm2', '工程量',
+      '项目编码', '类型', '名称', '项目特征', '单位', '工程量', '主材单价']];
+
+    var zIdx = 0;
+    data.forEach(function (it) {
+      var hasPrice = it.price !== null && isPriced(it);
+      var specVal = specCell(it);
+
+      if (!it.quotaCode) {
+        wsData.push([
+          it.index, it.name, kindOf(it), (it.materialLabel || it.material), '', specVal, '', it.quantity,
+          '', '待人工处理', it.name, it.features, it.unit, it.quantity,
+          hasPrice ? num2(it.price) : ''
+        ]);
+        return;
+      }
+      wsData.push([
+        it.index, it.name, kindOf(it), (it.materialLabel || it.material), '', specVal, '', it.quantity,
+        it.listCode12 || it.listCode, '清单行', it.name, it.features, it.unit, it.quantity,
+        hasPrice ? num2(it.price) : ''
+      ]);
+      var qFactor = it.quotaFactor || 1;
+      var sub = 0;
+      wsData.push([
+        it.index + '.' + (++sub), '', '', '', '', '', '', '',
+        it.quotaCode, '定额行', it.quotaName, '', it.quotaUnit || it.unit,
+        round4(it.quantity / qFactor), ''
+      ]);
+      // 主材行紧跟其对应定额行；附加定额（消毒冲洗/沟槽管件等无主材）排在其后，
+      // 避免导入软件时把主材误判为挂在冲洗定额下
+      if (hasPrice) {
+        zIdx++;
+        wsData.push([
+          it.index + '.' + (++sub), '', '', '', '', '', '', '',
+          'Z00741-' + String(zIdx).padStart(3, '0'), '子目下设备', it.name, '', it.unit, it.quantity, num2(it.price)
+        ]);
+        if (it.mat2) {
+          zIdx++;
+          wsData.push([
+            it.index + '.' + (++sub), '', '', '', '', '', '', '',
+            'Z00741-' + String(zIdx).padStart(3, '0'), '子目下设备', it.mat2.name, '', it.unit, it.quantity, num2(it.mat2.price)
+          ]);
+        }
+      }
+      (it.extras || []).forEach(function (x) {
+        wsData.push([
+          it.index + '.' + (++sub), '', '', '', '', '', '', '',
+          x.code, '定额行', x.name, '', x.unit, round4(x.qty / (x.factor || 1)), ''
+        ]);
+        if (x.mat) {
+          zIdx++;
+          wsData.push([
+            it.index + '.' + (++sub), '', '', '', '', '', '', '',
+            'Z00741-' + String(zIdx).padStart(3, '0'), '子目下设备', x.mat.name, '', x.unit,
+            round4(x.qty / (x.factor || 1)), num2(x.mat.price)
+          ]);
+        }
+      });
+    });
+
+    var total = data.reduce(function (s, d) { return s + lineAmt(d); }, 0);
+    wsData.push([]);
+    wsData.push(['合计', '', '', '', '', '', '', '', '', '', '', '', '', '', num2(total)]);
+
+    var ws = XLSX.utils.aoa_to_sheet(wsData);
+    ws['!cols'] = [
+      { wch: 8 }, { wch: 40 }, { wch: 10 }, { wch: 8 }, { wch: 12 }, { wch: 16 }, { wch: 9 }, { wch: 9 },
+      { wch: 13 }, { wch: 10 }, { wch: 40 }, { wch: 56 }, { wch: 6 }, { wch: 9 }, { wch: 12 }
+    ];
+    var wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, '清单定额报价表');
+    XLSX.writeFile(wb, '清单定额报价表_广联达_' + today() + '.xlsx');
+  }
+
+  // 概算模式广联达导出：删除清单行（清单编码整行）与「项目特征」整列，其余列顺序不变。
+  // 每条项目以定额行为首行（A 列序号、B 列保留项目名称），主材/附加定额依次 1.1、1.2……
+  function exportGLDGs(data) {
+    applyFallbackCodes(data);
+    var wsData = [['序号', '项目名称', '类型', '材质', '型号', '规格', '截面mm2', '工程量',
+      '项目编码', '类型', '名称', '单位', '工程量', '主材单价']];
+    var zIdx = 0;
+    data.forEach(function (it) {
+      var hasPrice = it.price !== null && isPriced(it);
+      var specVal = specCell(it);
+      var kind = kindOf(it);
+      var mat = it.materialLabel || it.material;
+
+      if (!it.quotaCode) {
+        wsData.push([it.index, it.name, kind, mat, '', specVal, '', it.quantity,
+          '', '待人工处理', it.name, it.unit, it.quantity, hasPrice ? num2(it.price) : '']);
+        return;
+      }
+      var sub = 0;
+      wsData.push([it.index, it.name, kind, mat, '', specVal, '', it.quantity,
+        it.quotaCode, '定额行', it.name, it.quotaUnit || it.unit,
+        round4(it.quantity / (it.quotaFactor || 1)), '']);
+      if (hasPrice) {
+        zIdx++;
+        wsData.push([it.index + '.' + (++sub), '', '', '', '', '', '', '',
+          'Z00741-' + String(zIdx).padStart(3, '0'), '子目下设备', it.name, it.unit, it.quantity, num2(it.price)]);
+        if (it.mat2) {
+          zIdx++;
+          wsData.push([it.index + '.' + (++sub), '', '', '', '', '', '', '',
+            'Z00741-' + String(zIdx).padStart(3, '0'), '子目下设备', it.mat2.name, it.unit, it.quantity, num2(it.mat2.price)]);
+        }
+      }
+      (it.extras || []).forEach(function (x) {
+        wsData.push([it.index + '.' + (++sub), '', '', '', '', '', '', '',
+          x.code, '定额行', x.name, x.unit, round4(x.qty / (x.factor || 1)), '']);
+        if (x.mat) {
+          zIdx++;
+          wsData.push([it.index + '.' + (++sub), '', '', '', '', '', '', '',
+            'Z00741-' + String(zIdx).padStart(3, '0'), '子目下设备', x.mat.name, x.unit,
+            round4(x.qty / (x.factor || 1)), num2(x.mat.price)]);
+        }
+      });
+    });
+
+    var total = data.reduce(function (s, d) { return s + lineAmt(d); }, 0);
+    wsData.push([]);
+    wsData.push(['合计', '', '', '', '', '', '', '', '', '', '', '', '', num2(total)]);
+
+    var ws = XLSX.utils.aoa_to_sheet(wsData);
+    ws['!cols'] = [
+      { wch: 8 }, { wch: 40 }, { wch: 10 }, { wch: 8 }, { wch: 12 }, { wch: 16 }, { wch: 9 }, { wch: 9 },
+      { wch: 13 }, { wch: 10 }, { wch: 40 }, { wch: 6 }, { wch: 9 }, { wch: 12 }
+    ];
+    var wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, '定额报价表');
+    XLSX.writeFile(wb, '概算_定额报价表_广联达_' + today() + '.xlsx');
+  }
+
+  function today() {
+    var d = new Date();
+    return d.getFullYear() + String(d.getMonth() + 1).padStart(2, '0') + String(d.getDate()).padStart(2, '0');
+  }
+
+  // ============================================================
+  // 初始化 & 事件
+  // ============================================================
+  var exportData = [];
+
+  // ============================================================
+  // 图纸说明（js/spec.js）：说明优先于名称推断
+  // ============================================================
+  var ACTIVE_SPEC = null;      // 当前生效的说明解析结果
+  var SPEC_APPLY = true;       // 「按说明自动套用」开关
+
+  // 将说明规则套用到单条清单：部位 / 介质 / 连接方式
+  function applySpecRule(it) {
+    if (!it || !it.category || !it.dn) return;
+    if (!/^(castIron|galv|seamless|welded|copper|stainless|composite|plastic)$/.test(it.category)) return;
+    var r = SPEC.matchItem(ACTIVE_SPEC, it);
+    if (!r) return;
+    it.specRule = r;
+    it.specEvidence = r.evidence;
+
+    // 安装部位：名称未注明时采用说明
+    if (r.loc && it.locAmbiguous) {
+      it.loc = r.loc;
+      it.locFromSpec = true;
+      it.locAmbiguous = false;
+    }
+    // 介质：名称未注明时采用说明
+    // 消防水本站无独立子目，按给水口径套用并标注来源；燃气有独立子目，需真正切到燃气
+    if (r.medium && it.mediumAmbiguous) {
+      if (r.medium === 'gas') {
+        it.medium = 'gas'; it.mediumFromSpec = true; it.mediumAmbiguous = false;
+      } else if (r.medium === 'fire') {
+        it.medium = 'water'; it.specSystem = 'fire'; it.mediumFromSpec = true; it.mediumAmbiguous = false;
+      } else if (r.medium === 'water' || r.medium === 'drain' || r.medium === 'rain') {
+        it.medium = (r.medium === 'rain') ? 'drain' : r.medium;
+        it.isRain = r.medium === 'rain';
+        it.mediumFromSpec = true;
+        it.specMedium = r.medium;
+        it.mediumAmbiguous = false;
+      }
+    }
+    // 塑料管：室外仅设给水管子目；材质细分随介质变化
+    if (it.category === 'plastic') {
+      if (it.loc === 'out') {
+        it.wasDrainName = it.wasDrainName || (it.medium === 'drain' || it.isRain);
+        if (it.medium === 'drain' || it.isRain) it.specMediumForced = it.isRain ? 'rain' : 'drain';
+        it.medium = 'water'; it.isRain = false;
+      }
+      it.plasticKind = plasticKindOf(it.name, it.medium);
+      it.materialLabel = PLASTIC_LABEL[it.plasticKind] || '塑料';
+    }
+    // 连接方式：说明优先
+    var allow = jointsOf(it);
+    if (allow.indexOf(r.joint) >= 0) {
+      // 只有名称显式写了连接方式、或用户手选过，才算"与说明不一致"
+      if (it.joint && it.joint !== r.joint && (it.jointFromName || it.jointPicked)) it.specJointConflict = it.joint;
+      it.joint = r.joint;
+      it.jointFromSpec = true;
+      it.jointFallback = null;
+    } else {
+      it.specJointUnavailable = r.joint;
+      it.specJointUnavailableLabel = r.jointLabel;
+    }
+  }
+
+  function currentFormat() {
+    return (document.querySelector('input[name="software"]:checked') || {}).value || 'guanglianda';
+  }
+  function currentPeriod() {
+    var el = document.getElementById('periodSelect');
+    return el ? el.value : (getPeriods()[0] || {}).period;
+  }
+
+  // 切换导出格式 / 信息价期号时，保留用户手选的室内外、接口形式、洁具选型
+  function snapChoices(data) {
+    var m = {};
+    (data || []).forEach(function (it) {
+      if (!it || it.index === undefined) return;
+      m[it.index + '|' + it.name] = { loc: it.loc, joint: it.joint, medium: it.medium, isRain: it.isRain, mediumFromSel: it.mediumFromSel, sanOpt: it.sanOpt, sanDn: it.sanDn, sanForm: it.sanForm };
+    });
+    return m;
+  }
+  function applyChoices(data, snap) {
+    if (!snap) return;
+    data.forEach(function (it) {
+      var s = snap[it.index + '|' + it.name];
+      if (!s) return;
+      var dirty = false;
+      if (isSanCat(it.category)) {
+        if (s.sanOpt !== undefined && s.sanOpt !== it.sanOpt) { it.sanOpt = s.sanOpt; it.sanOptFromName = true; dirty = true; }
+        if (s.sanDn !== undefined && s.sanDn !== it.sanDn) { it.sanDn = s.sanDn; dirty = true; }
+        if (s.sanForm !== undefined && s.sanForm !== it.sanForm) { it.sanForm = s.sanForm; it.sanFormFromName = true; dirty = true; }
+      } else if (it.loc !== undefined && s.loc) {
+        if (s.loc !== it.loc) { it.loc = s.loc; it.locAmbiguous = false; dirty = true; }
+        if (s.mediumFromSel && s.medium && s.medium !== it.medium) {
+          it.medium = s.medium; it.isRain = s.medium === 'rain'; it.mediumAmbiguous = false; it.mediumFromSel = true; dirty = true;
+        }
+        if (s.joint && s.joint !== it.joint) { it.joint = s.joint; it.jointPicked = true; it.jointFromSpec = false; it.jointFallback = null; dirty = true; }
+      }
+      if (dirty) {
+        recomputeQuota(it);
+        recomputePrice(it, data._periodKey);
+        it.features = featureText(it);
+      }
+    });
+  }
+
+  // ============================================================
+  // 图纸说明：上传、解读卡片、对比分析
+  // ============================================================
+  // 依据引用只取「含材质 + 采用」的那一句，避免把前后文整段带出来
+  function pickEvidence(ev, kw) {
+    if (!ev) return '';
+    var ps = String(ev).split(/[。；;]/).map(function (x) { return x.trim(); }).filter(function (x) { return x.length >= 4; });
+    if (!ps.length) return String(ev).slice(0, 90);
+    var k = String(kw || '').replace(/[（(].*$/, '');
+    var hit = null, i;
+    for (i = 0; i < ps.length; i++) {
+      if (k && ps[i].indexOf(k) >= 0 && ps[i].indexOf('采用') >= 0) { hit = ps[i]; break; }
+    }
+    if (!hit) {
+      for (i = 0; i < ps.length; i++) { if (ps[i].indexOf('采用') >= 0) { hit = ps[i]; break; } }
+    }
+    if (!hit) hit = ps[0];
+    return hit.length > 92 ? hit.slice(0, 92) + '…' : hit;
+  }
+
+  function renderSpecCard(spec) {
+    var card = document.getElementById('specCard');
+    if (!card) return;
+    if (!spec || !spec.ok) { card.className = 'spec-card'; card.innerHTML = ''; return; }
+    var ex = spec.extract || {};
+    var tagCls = { material: 'material', system: '', joint: 'joint', loc: '', dn: 'dn', measure: 'measure' };
+    var tags = spec.keywords.map(function (k) {
+      return '<span class="spec-tag ' + (tagCls[k.type] || '') + '">' + escapeHtml(k.text) + '</span>';
+    }).join('');
+    var MED = { water: '给水', drain: '排水', rain: '雨水', gas: '燃气', fire: '消防' };
+    var groups = {}, order = [];
+    spec.rules.forEach(function (r) {
+      var key = r.materialKey || 'generic';
+      if (!groups[key]) { groups[key] = { label: r.materialLabel || '通用（未指定管材）', items: [] }; order.push(key); }
+      groups[key].items.push(r);
+    });
+    var rulesHtml = order.map(function (k) {
+      var g = groups[k];
+      // 同材质下「同连接方式+同介质+同管径条件」的多条合并，部位取交集
+      var byKey = {}, keyOrder = [];
+      g.items.forEach(function (r) {
+        var kk = [r.joint, r.medium || '-', r.dnCond ? (r.dnCond.op + r.dnCond.val) : '-'].join('|');
+        if (!byKey[kk]) { byKey[kk] = []; keyOrder.push(kk); }
+        byKey[kk].push(r);
+      });
+      var txt = keyOrder.map(function (kk) {
+        var arr = byKey[kk], r0 = arr[0], parts = [];
+        var locs = arr.map(function (x) { return x.loc; });
+        var allHaveLoc = locs.every(Boolean);
+        if (allHaveLoc) {
+          var uniq = locs.filter(function (v, i) { return locs.indexOf(v) === i; });
+          parts.push(uniq.length > 1 ? '室内外' : (uniq[0] === 'out' ? '室外' : '室内'));
+        }
+        if (r0.medium) parts.push(MED[r0.medium] || '');
+        parts.push(r0.jointLabel);
+        if (r0.dnCond) {
+          var opCn = { ge: 'DN≥', gt: 'DN>', le: 'DN≤', lt: 'DN<' }[r0.dnCond.op] || 'DN';
+          parts.push(opCn + r0.dnCond.val);
+        }
+        if (arr.some(function (x) { return x.inferred; })) parts.push('（推断）');
+        return parts.filter(Boolean).join(' ');
+      }).join(' ／ ');
+      return '<div class="spec-rule"><b>' + escapeHtml(g.label) + '</b> → ' + escapeHtml(txt) +
+        '<span class="ev">依据：' + escapeHtml(pickEvidence(g.items[0].evidence, g.label)) + '</span></div>';
+    }).join('');
+    var pts = spec.points || [];
+    var ptsHtml = '';
+    if (pts.length) {
+      var lvCn = { critical: '必查', important: '注意', normal: '参考' };
+      ptsHtml = '<div class="sp-head">造价要点<span>共 ' + pts.length + ' 类，按对造价影响排序</span></div>' +
+        pts.map(function (p) {
+          return '<div class="sp-item ' + p.level + '">' +
+            '<div class="sp-top"><span class="sp-lv">' + (lvCn[p.level] || '') + '</span>' +
+            '<b>' + escapeHtml(p.label) + '</b>' +
+            (p.detail ? '<span class="sp-detail">' + escapeHtml(p.detail) + '</span>' : '') +
+            '</div>' +
+            '<div class="sp-hint">' + escapeHtml(p.hint || '') + '</div>' +
+            ((p.evidence && p.evidence.length) ? '<div class="sp-ev">“' + escapeHtml(p.evidence[0]) + '”</div>' : '') +
+            '</div>';
+        }).join('');
+    }
+    card.className = 'spec-card show';
+    card.innerHTML =
+      '<h4><span class="file">📄 ' + escapeHtml(spec.fileName || '图纸说明') + '</span>' +
+      '<span style="font-weight:400;font-size:12px;color:#8a9ba1">' + (ex.pages ? ex.pages + ' 页 · ' : '') + '识别 ' + spec.rules.length + ' 条连接方式</span></h4>' +
+      '<div class="spec-tags">' + tags + '</div>' +
+      ptsHtml +
+      (rulesHtml ? '<div class="spec-rules">' + rulesHtml + '</div>'
+        : '<div class="spec-rule" style="color:#b9770e">未识别到「管材 + 连接方式」的明确表述，可在「安装部位/接口形式」列手动选择。</div>') +
+      ((spec.conf && spec.conf.lowRatio > 0.35)
+        ? '<div class="spec-status warn" style="margin:6px 0 0">有 ' + spec.conf.low + ' 条连接方式未能在邻近位置找到对应管材（文字顺序可能被打乱），已按就近配对，建议逐条核对。</div>' : '') +
+      ((spec.frag && spec.frag.avgLine && spec.frag.avgLine < 10)
+        ? '<div class="spec-status warn" style="margin:6px 0 0">文字提取较碎片（' + spec.frag.lines + ' 行，平均每行 ' + spec.frag.avgLine + ' 字），已按上下文就近配对，识别结果建议核对。</div>' : '') +
+      '<div class="spec-actions">' +
+      '<label><input type="checkbox" id="specApplyChk" ' + (SPEC_APPLY ? 'checked' : '') + '> 按说明自动套用连接方式</label>' +
+      '<button type="button" id="specClearBtn">清除说明</button></div>';
+    var chk = document.getElementById('specApplyChk');
+    if (chk) chk.addEventListener('change', function () { SPEC_APPLY = chk.checked; refreshAll(true); });
+    var clr = document.getElementById('specClearBtn');
+    if (clr) clr.addEventListener('click', function () {
+      ACTIVE_SPEC = null;
+      card.className = 'spec-card';
+      card.innerHTML = '';
+      var st = document.getElementById('specStatus');
+      if (st) { st.className = 'spec-status'; st.textContent = ''; }
+      var f = document.getElementById('specFile');
+      if (f) f.value = '';
+      var area = document.getElementById('analysisArea');
+      if (area) area.style.display = 'none';
+      refreshAll(true);
+    });
+  }
+
+  var QTY_CAT_CN = {
+    castIron: '铸铁管', galv: '镀锌钢管', seamless: '无缝钢管', welded: '焊接钢管',
+    copper: '铜管', stainless: '不锈钢管', composite: '复合管', plastic: '塑料管',
+    bracket: '管道支架', insulRubber: '橡塑保温', insulGlass: '玻璃棉保温', other: '其他'
+  };
+
+  function renderQtyCard(fileName, aoa) {
+    var qs = document.getElementById('qtyStatus');
+    var card = document.getElementById('qtyCard');
+    if (!qs || !card) return;
+    var items = exportData || [];
+    qs.className = 'spec-status ok';
+    qs.textContent = '已识别「' + fileName + '」：' + (aoa ? aoa.length : 0) + ' 行 · ' + items.length + ' 项';
+    var cnt = {}, order = [];
+    items.forEach(function (it) {
+      var k = it.category || 'other';
+      var cn = QTY_CAT_CN[k];
+      if (!cn) cn = isSanCat(k) ? '卫生器具' : (isValveCat(k) ? '阀门及附件' : '其他');
+      if (!cnt[cn]) { cnt[cn] = 0; order.push(cn); }
+      cnt[cn]++;
+    });
+    var tags = order.map(function (cn) {
+      return '<span class="spec-tag material">' + escapeHtml(cn) + ' ' + cnt[cn] + '</span>';
+    }).join('');
+    var pipeLen = 0, pending = 0;
+    items.forEach(function (it) {
+      if (/^031001/.test(it.listCode || '')) pipeLen += Number(it.quantity) || 0;
+      if (it.pendingPrice) pending++;
+    });
+    card.className = 'spec-card show';
+    card.innerHTML =
+      '<h4><span class="file">📊 ' + escapeHtml(fileName) + '</span>' +
+      '<span class="meta">' + items.length + ' 项</span></h4>' +
+      '<div class="spec-tags">' + (tags || '<span class="spec-tag">未识别到管材项目</span>') + '</div>' +
+      '<div class="spec-rules"><div class="spec-rule">' +
+      '<div class="sr-main">管道合计 <b>' + pipeLen.toFixed(1) + '</b> m' +
+      (pending ? ' · 待询价 <b>' + pending + '</b> 项' : '') + '</div>' +
+      '<div class="ev">工程量按 A列序号 / B列名称 / C列数量 读取，单位默认 m；识别结果见下方表格，可逐行改选型</div>' +
+      '</div></div>';
+  }
+
+  function renderAnalysis() {
+    var area = document.getElementById('analysisArea');
+    if (!area) return;
+    if (!ACTIVE_SPEC || !ACTIVE_SPEC.ok || !exportData || !exportData.length) { area.style.display = 'none'; return; }
+    var list = SPEC.analyze(ACTIVE_SPEC, exportData);
+    area.style.display = 'block';
+    document.getElementById('analysisList').innerHTML = list.map(function (x) {
+      var cls = x.level === 'warn' ? 'an-warn' : (x.level === 'ok' ? 'an-ok' : 'an-info');
+      var icon = x.level === 'warn' ? '⚠️' : (x.level === 'ok' ? '✅' : 'ℹ️');
+      return '<div class="an-item ' + cls + '">' + icon + ' <b>' + escapeHtml(x.title) + '</b>：' + escapeHtml(x.text) + '</div>';
+    }).join('');
+  }
+
+  var PENDING_FILE = null;   // 文字层读不出时留着，供 OCR 兜底
+  var OCR_RUNNING = false;
+
+  // 单个文件取文本：有文字层直接提取，图片或无文字层的 PDF 走 OCR
+  async function ocrOne(file, onProg) {
+    var isImg = /^image\//.test(file.type || '') || /\.(png|jpe?g|webp|bmp)$/i.test(file.name || '');
+    if (isImg) return await SPEC.ocrImage(file, onProg);
+    var r = await SPEC.extractFile(file);
+    if (!r.empty && r.text && r.text.replace(/\s/g, '').length >= 20) {
+      return { text: r.text, pages: r.pages || 0, engine: 'text-layer' };
+    }
+    return await SPEC.ocrPdf(await file.arrayBuffer(), onProg);
+  }
+
+  // 批量：一次传多张截图 / 多个 PDF，逐个取文本后合并解析
+  async function loadSpecBatch(files) {
+    var st = document.getElementById('specStatus');
+    if (!st || typeof SPEC === 'undefined') return;
+    if (OCR_RUNNING) {
+      st.className = 'spec-status warn';
+      st.textContent = '上一个文件还在识别中，等它完成再传下一批。';
+      return;
+    }
+    var list = Array.prototype.slice.call(files || []);
+    if (!list.length) return;
+    OCR_RUNNING = true;
+    var t0 = Date.now();
+    var texts = [], okNames = [], fail = [], skipped = [], totalPages = 0;
+    try {
+      for (var i = 0; i < list.length; i++) {
+        var f = list[i];
+        var tag = '（' + (i + 1) + '/' + list.length + '）';
+        st.className = 'spec-status loading';
+        st.textContent = tag + '正在处理「' + f.name + '」…';
+        try {
+          var r = await ocrOne(f, (function (tg) {
+            return function (o) {
+              var t = tg + (o.note || '识别中…');
+              if (o.total && o.page) t += '（' + Math.round((o.page / o.total) * 100) + '%）';
+              st.className = 'spec-status loading';
+              st.textContent = t;
+            };
+          })(tag));
+          var c = ((r && r.text) || '').replace(/\s/g, '').length;
+          if (c < 20) { skipped.push(f.name); }   // 空白页/纯图页，静默跳过，不当失败
+          else { texts.push(r.text); okNames.push(f.name); totalPages += (r.pages || 0); }
+        } catch (e) {
+          fail.push(f.name);
+        }
+      }
+      var merged = texts.join('\n');
+      var chars = merged.replace(/\s/g, '').length;
+      if (chars < 30) {
+        st.className = 'spec-status err';
+        st.textContent = '这 ' + list.length + ' 个文件都没读出可用文字。可能是截图太小、字太密，或者图里本来就没有说明文字。';
+        return;
+      }
+      var spec = SPEC.parseText(merged);
+      spec.fileName = '批量 ' + okNames.length + ' 个文件';
+      spec.extract = { pages: totalPages, note: '批量识别' };
+      ACTIVE_SPEC = spec;
+      SPEC_APPLY = true;
+      var secs = Math.round((Date.now() - t0) / 1000);
+      var np = (spec.points || []).length;
+      var extra = [];
+      if (skipped.length) extra.push('另有 ' + skipped.length + ' 个文件没有文字，已跳过');
+      if (fail.length) extra.push('打不开：' + fail.join('、'));
+      st.className = fail.length ? 'spec-status warn' : 'spec-status ok';
+      st.textContent = '批量识别完成：' + okNames.length + '/' + list.length + ' 个文件 · ' + chars + ' 字 · 造价要点 ' +
+        np + ' 类 · 管材 ' + spec.materials.length + ' 类 · 连接方式 ' + spec.rules.length + ' 条 · 耗时 ' + secs + ' 秒' +
+        (extra.length ? '；' + extra.join('；') : '');
+      renderSpecCard(spec);
+      refreshAll(true);
+    } catch (e) {
+      st.className = 'spec-status err';
+      st.textContent = '批量识别失败：' + ((e && e.message) || e);
+    } finally {
+      OCR_RUNNING = false;
+    }
+  }
+
+  async function loadSpec(file) {
+    var st = document.getElementById('specStatus');
+    if (!st || typeof SPEC === 'undefined') return;
+    PENDING_FILE = file;
+    st.className = 'spec-status loading';
+    st.textContent = '正在解析「' + file.name + '」…（PDF 逐页提取文字，文件不上传服务器）';
+    try {
+      var res = await SPEC.extractFile(file);
+      if (res.diag === 'image') {
+        // 截图直接进 OCR，不用再点按钮
+        runOcr();
+        return;
+      }
+      if (res.empty) {
+        st.className = 'spec-status err';
+        var dg = res.diag;
+        var ocrRow = '<div class="ocr-row"><button type="button" class="btn-mini" id="specOcrBtn">用 OCR 识别（本地，不联网）</button>' +
+          '<span class="ocr-tip">单页约 3-10 秒（首次要加载 11MB 引擎，之后走缓存）；小字准确率 85-90%，关键参数建议对照原图核</span></div>';
+        if (dg === 'thumb') {
+          st.innerHTML = '「' + escapeHtml(file.name) + '」是<b>图纸目录 / 索引页</b>：整页只有一张拼版缩略图，12 张图纸被缩小排在一起，每张只有两三厘米宽，原图上的字被缩到了零点几磅——<b>里面没有可读的说明正文</b>，放大多少倍都认不出来。<br>' +
+            '<b>要读说明，得拿那 12 张原图：</b>① 在 CAD 里打开说明图，<b>打印 → PDF</b>（不要用「打印到一张 A4」的拼版），每张 A1 出一页，12 页一起传上来，有文字层就直接读；② 或在快速看图里逐张放大截图，<b>一次选中多张一起拖进来</b>（现在支持批量），会自动排队识别；③ 能复制的文字直接粘到下方输入框。' + ocrRow;
+        } else if (dg === 'vector') {
+          st.innerHTML = '「' + escapeHtml(file.name) + '」<b>没有文字层</b>：文件里没有字体对象、也没有嵌入图片，说明文字在导出时被转成了曲线（快速看图、部分虚拟打印机导出的 PDF 就是这样，看着清楚但机器读不出字）。<br>' +
+            '<b>三个办法：</b>① 直接点下面的 OCR 识别，把曲线还原成文字；② 用 CAD「打印 → PDF」而不是截图导出，出来就是文字版；③ 把说明文字粘贴到下方输入框，解析最快。' + ocrRow;
+        } else if (dg === 'scan') {
+          st.innerHTML = '「' + escapeHtml(file.name) + '」是<b>扫描件 / 图片版 PDF</b>：页面是整张图片，没有文字层，浏览器读不出文字。<br>' +
+            '<b>三个办法：</b>① 直接点下面的 OCR 识别；② 用 CAD 打印生成文字版 PDF；③ 把说明文字粘贴到下方输入框。' + ocrRow;
+        } else if (dg === 'badmap') {
+          var pgN = res.pages || 1;
+          st.innerHTML = '「' + escapeHtml(file.name) + '」<b>有字体，但缺编码对照表</b>：文字确实在文件里，只是没带「字形→字符」的映射（ToUnicode），任何软件提取出来都是乱码——CAD 转 PDF 时用了不嵌映射的字体就会这样。<br>' +
+            (pgN <= 12
+              ? '<b>正在自动用 OCR 还原</b>（共 ' + pgN + ' 页），也可以改用 CAD「打印 → PDF」重出一份，那样能直接读。'
+              : '共 ' + pgN + ' 页，整份 OCR 会比较慢，建议只把说明那几页单独导出来再传，或点下面按钮识别前 12 页。') + ocrRow;
+          if (pgN <= 12) {
+            setTimeout(function () { runOcr(); }, 400);
+          }
+        } else {
+          st.innerHTML = '未能从「' + escapeHtml(file.name) + '」提取到可读文字。可改用文字版 PDF、粘贴说明文字，或尝试 OCR。' + ocrRow;
+        }
+        var pbox = document.getElementById('specPasteBox');
+        if (pbox) pbox.open = true;
+        return;
+      }
+      var spec = SPEC.parseText(res.text);
+      spec.fileName = file.name;
+      spec.extract = res;
+      ACTIVE_SPEC = spec;
+      SPEC_APPLY = true;
+      var chars = res.text.replace(/\s/g, '').length;
+      if (!spec.rules.length) {
+        st.className = 'spec-status warn';
+        st.textContent = '已提取「' + file.name + '」' + chars + ' 字，但未识别到「…采用…连接」这类管材/连接方式表述，仍按名称规则套用；可在说明中补充管材与连接方式，或直接在上方表格逐行选择。';
+        renderSpecCard(spec);
+        refreshAll(true);
+        return;
+      }
+      st.className = 'spec-status ok';
+      st.textContent = '已识别「' + file.name + '」：' + chars + ' 字' + (res.pages ? ' · ' + res.pages + ' 页' : '') +
+        ' · 造价要点 ' + (spec.points || []).length + ' 类 · 管材 ' + spec.materials.length + ' 类 · 连接方式 ' + spec.rules.length + ' 条' + (res.note ? ' · ' + res.note : '');
+      renderSpecCard(spec);
+      refreshAll(true);
+    } catch (err) {
+      st.className = 'spec-status err';
+      st.textContent = '解析失败：' + ((err && err.message) || err);
+    }
+  }
+
+
+  // OCR 兜底：文字层读不出时，把 PDF 渲染成位图再识别
+  async function runOcr() {
+    var st = document.getElementById('specStatus');
+    if (!st || !PENDING_FILE || OCR_RUNNING) return;
+    if (typeof SPEC === 'undefined' || !SPEC.ocrPdf) {
+      st.className = 'spec-status err';
+      st.textContent = 'OCR 组件未加载，请刷新页面重试。';
+      return;
+    }
+    OCR_RUNNING = true;
+    var t0 = Date.now();
+    st.className = 'spec-status loading';
+    st.textContent = '准备 OCR…';
+    try {
+      var isImg = /^image\//.test(PENDING_FILE.type || '') || /\.(png|jpe?g|webp|bmp)$/i.test(PENDING_FILE.name || '');
+      var onProg = function (o) {
+        var txt = o.note || '识别中…';
+        if (o.total && o.page) {
+          var pct = o.phase === 'ocr'
+            ? Math.round(((o.page - 0.5) / o.total) * 100)
+            : Math.round(((o.page - 1) / o.total) * 100);
+          txt += '（' + pct + '%）';
+        }
+        st.className = 'spec-status loading';
+        st.textContent = txt;
+      };
+      var res = isImg
+        ? await SPEC.ocrImage(PENDING_FILE, onProg)
+        : await SPEC.ocrPdf(await PENDING_FILE.arrayBuffer(), onProg);
+      var chars = res.text.replace(/\s/g, '').length;
+      if (chars < 30) {
+        st.className = 'spec-status err';
+        st.innerHTML = 'OCR 只识别到 ' + chars + ' 个字符，这张图可能分辨率不够或线条太密。<br>' +
+          '建议：① 在快速看图里放大到能看清文字再导出；② 把说明分区域截图后粘贴；③ 直接用文字版 PDF。';
+        return;
+      }
+      var spec = SPEC.parseText(res.text);
+      spec.fileName = (PENDING_FILE.name || 'PDF') + '（OCR）';
+      spec.extract = { pages: res.pages, note: 'OCR 识别' };
+      ACTIVE_SPEC = spec;
+      SPEC_APPLY = true;
+      var np = (spec.points || []).length;
+      var secs = Math.round((Date.now() - t0) / 1000);
+      st.className = 'spec-status ok';
+      st.textContent = 'OCR 识别完成：' + chars + ' 字 · ' + res.pages + ' 页 · 造价要点 ' + np + ' 类 · 管材 ' +
+        spec.materials.length + ' 类 · 连接方式 ' + spec.rules.length + ' 条 · 耗时 ' + secs + ' 秒。' +
+        'OCR 难免错字，关键参数（管径、功率、间距）建议对照原图核一遍。';
+      renderSpecCard(spec);
+      refreshAll(true);
+    } catch (e) {
+      st.className = 'spec-status err';
+      st.textContent = 'OCR 失败：' + ((e && e.message) || e);
+    } finally {
+      OCR_RUNNING = false;
+    }
+  }
+
+  // 粘贴文本通道：绕开 PDF 文字层问题，任何来源的文字都能进来解析
+  function loadSpecText(text, name) {
+    var st = document.getElementById('specStatus');
+    if (!st || typeof SPEC === 'undefined') return;
+    var t = String(text || '').trim();
+    if (t.replace(/\s/g, '').length < 20) {
+      st.className = 'spec-status err';
+      st.textContent = '粘贴的内容太短了，至少贴一段完整的说明文字（管材、设备、施工要求都行）。';
+      return;
+    }
+    var spec = SPEC.parseText(t);
+    spec.fileName = name || '粘贴的说明文字';
+    spec.extract = { pages: 0, note: '来自粘贴文本' };
+    ACTIVE_SPEC = spec;
+    SPEC_APPLY = true;
+    var chars = t.replace(/\s/g, '').length;
+    var np = (spec.points || []).length;
+    st.className = 'spec-status ok';
+    st.textContent = '已解析粘贴文字：' + chars + ' 字 · 造价要点 ' + np + ' 类 · 管材 ' + spec.materials.length +
+      ' 类 · 连接方式 ' + spec.rules.length + ' 条';
+    renderSpecCard(spec);
+    refreshAll(true);
+  }
+
+  function refreshAll(skipSnap) {
+    if (!window._rawAOA) { renderAnalysis(); return; }
+    var snap = skipSnap ? null : snapChoices(exportData);
+    exportData = parseRows(window._rawAOA, currentPeriod(), currentFormat());
+    if (snap) applyChoices(exportData, snap);
+    renderTable(exportData);
+    renderAnalysis();
+    var area = document.getElementById('resultArea');
+    var btn = document.getElementById('btnGroup');
+    var bar = document.getElementById('statusBar');
+    if (exportData.length) {
+      area.style.display = 'block';
+      btn.style.display = 'flex';
+      bar.style.display = 'block';
+      bar.className = 'status-bar status-ok';
+      var cnt = {};
+      exportData.forEach(function (d) { cnt[d.category] = (cnt[d.category] || 0) + 1; });
+      var nameMap = { castIron: '铸铁管', galv: '镀锌钢管', seamless: '无缝钢管', welded: '焊接钢管', copper: '铜管', stainless: '不锈钢管', composite: '复合管', plastic: '塑料管', waterValve: '阀门', bracket: '管道支架', insulRubber: '橡塑保温', insulGlass: '玻璃棉', other: '其他材质' };
+      var sanNames = { bathtub: '浴缸', bidet: '净身盆', washbasin: '洗脸盆', sink: '洗涤盆', labSink: '化验盆', toilet: '大便器', urinal: '小便器', faucet: '水龙头', waterHeater: '电热水器', boiler: '电开水炉', steamHeater: '蒸汽加热器', heatExchanger: '热交换器', flushDevice: '冲洗器', handDryer: '烘手器', shower: '淋浴器', showerRoom: '淋浴间', floorDrain: '地漏', cleanout: '扫除口', rainHead: '雨水斗', siphonHead: '虹吸雨水斗', waterDispenser: '饮水器', greaseTrap: '隔油器' };
+      var parts = [];
+      Object.keys(nameMap).forEach(function (k) { if (cnt[k]) parts.push(nameMap[k] + ' ' + cnt[k] + ' 条'); });
+      Object.keys(sanNames).forEach(function (k) { if (cnt[k]) parts.push(sanNames[k] + ' ' + cnt[k] + ' 条'); });
+      bar.textContent = '成功解析 ' + exportData.length + ' 条：' + parts.join('、') +
+        '；「安装部位/接口形式」列可切换室内外、连接方式及洁具选型，定额与主材价实时重算（洁具定额按 10 组 / 10 个 / 10 台 计量，导出自动换算）；黄色行为需人工核对项';
+    } else {
+      area.style.display = 'none';
+      btn.style.display = 'none';
+      bar.style.display = 'block';
+      bar.className = 'status-bar status-err';
+      bar.textContent = '未在B列识别到管道项目名称，请检查表头是否为：A序号 / B项目名称 / C长度（m）';
+    }
+  }
+
+  if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded', function () {
+    if (GS_MODE) {
+      document.body.classList.add('gs-mode');
+      document.title = document.title.replace('智能组价系统', '概算组价系统').replace('智能组价平台', '概算组价平台');
+      var h1 = document.querySelector('.header h1');
+      if (h1) h1.textContent = h1.textContent.replace('智能组价系统', '概算组价系统');
+      var hd = document.querySelector('.header p');
+      if (hd) hd.textContent = '概算计价：不套清单编码、不生成项目特征，按项目名称直接套用定额与主材 · 主材价优先信息价、其次市场价 · 全部本地计算';
+      var tip = document.createElement('div');
+      tip.className = 'gs-tip';
+      tip.innerHTML = '📌 <b>概算模式</b>　不套用清单编码与项目特征：广联达导出已删除清单行与项目特征列，建经导出已删除清单编码列与项目特征列；主材价优先取天津市信息价，缺项按市场价。';
+      var content = document.querySelector('.content');
+      if (content) content.insertBefore(tip, content.firstChild);
+    }
+    var selEl = document.getElementById('periodSelect');
+    getPeriods().forEach(function (p) {
+      var o = document.createElement('option');
+      o.value = p.period;
+      o.textContent = p.releaseLabel;
+      selEl.appendChild(o);
+    });
+    selEl.addEventListener('change', function () { refreshAll(); });
+
+    var fileInput = document.getElementById('excelFile');
+    var uploadArea = document.getElementById('uploadArea');
+
+    fileInput.addEventListener('change', function (e) {
+      var file = e.target.files[0];
+      if (file) readFile(file);
+    });
+
+    uploadArea.addEventListener('click', function () { fileInput.click(); });
+    uploadArea.addEventListener('dragover', function (e) { e.preventDefault(); uploadArea.classList.add('dragover'); });
+    uploadArea.addEventListener('dragleave', function () { uploadArea.classList.remove('dragover'); });
+    uploadArea.addEventListener('drop', function (e) {
+      e.preventDefault();
+      uploadArea.classList.remove('dragover');
+      var f = e.dataTransfer.files[0];
+      if (f) readFile(f);
+    });
+
+    // 图纸说明上传（左侧）
+    var specInput = document.getElementById('specFile');
+    var specArea = document.getElementById('specArea');
+    if (specInput && specArea) {
+      specInput.addEventListener('change', function (e) {
+        var fs = e.target.files;
+        if (!fs || !fs.length) return;
+        if (fs.length > 1) loadSpecBatch(fs); else loadSpec(fs[0]);
+        try { e.target.value = ''; } catch (err) {}   // 清空，允许重复选同一批
+      });
+      specArea.addEventListener('click', function () { specInput.click(); });
+      specArea.addEventListener('dragover', function (e) { e.preventDefault(); specArea.classList.add('dragover'); });
+      specArea.addEventListener('dragleave', function () { specArea.classList.remove('dragover'); });
+      specArea.addEventListener('drop', function (e) {
+        e.preventDefault();
+        specArea.classList.remove('dragover');
+        var fs = e.dataTransfer.files;
+        if (!fs || !fs.length) return;
+        if (fs.length > 1) loadSpecBatch(fs); else loadSpec(fs[0]);
+      });
+    }
+
+    // 粘贴文本解析：绕开 PDF 文字层
+    // OCR 按钮由 innerHTML 动态生成，用委托绑定
+    document.addEventListener('click', function (e) {
+      var t = e.target;
+      if (t && t.id === 'specOcrBtn') { e.preventDefault(); runOcr(); }
+    });
+
+    var pasteBtn = document.getElementById('specPasteBtn');
+    var pasteTxt = document.getElementById('specPasteText');
+    if (pasteBtn && pasteTxt) {
+      pasteBtn.addEventListener('click', function () { loadSpecText(pasteTxt.value, '粘贴的说明文字'); });
+      var pcBtn = document.getElementById('specPasteClear');
+      if (pcBtn) pcBtn.addEventListener('click', function () { pasteTxt.value = ''; pasteTxt.focus(); });
+    }
+
+    document.querySelectorAll('input[name="software"]').forEach(function (r) {
+      r.addEventListener('change', function () { refreshAll(); });
+    });
+
+    document.getElementById('resetBtn').addEventListener('click', function () {
+      window._rawAOA = null;
+      exportData = [];
+      document.getElementById('resultArea').style.display = 'none';
+      document.getElementById('btnGroup').style.display = 'none';
+      document.getElementById('summaryArea').style.display = 'none';
+      document.getElementById('statusBar').style.display = 'none';
+      document.getElementById('analysisArea').style.display = 'none';
+      fileInput.value = '';
+      document.getElementById('tableBody').innerHTML = '';
+      document.getElementById('uploadArea').style.display = 'block';
+      document.getElementById('uploadArea').classList.remove('mini');
+      var qs0 = document.getElementById('qtyStatus');
+      qs0.className = 'spec-status'; qs0.textContent = '';
+      document.getElementById('qtyCard').className = 'spec-card';
+      document.getElementById('qtyCard').innerHTML = '';
+    });
+
+    document.getElementById('exportBtn').addEventListener('click', function () {
+      if (!exportData.length) return;
+      if (currentFormat() === 'jianjing') exportJianjing(exportData);
+      else exportGLD(exportData);
+    });
+  });
+
+  function readFile(file) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      try {
+        var data = new Uint8Array(e.target.result);
+        var wb = XLSX.read(data, { type: 'array' });
+        var ws = wb.Sheets[wb.SheetNames[0]];
+        var aoa = XLSX.utils.sheet_to_json(ws, { header: 1, defval: '' });
+        window._rawAOA = aoa;
+        document.getElementById('uploadArea').classList.add('mini');
+        document.getElementById('summaryArea').style.display = 'grid';
+        refreshAll();
+        renderQtyCard(file.name, aoa);
+      } catch (err) {
+        var bar = document.getElementById('statusBar');
+        bar.style.display = 'block';
+        bar.className = 'status-bar status-err';
+        bar.textContent = '文件解析失败：' + err.message;
+      }
+    };
+    reader.readAsArrayBuffer(file);
+  }
+
+  // 本地调试/自动化句柄（纯前端、本地计算）
+  if (typeof window !== 'undefined') {
+    window.__pipe = {
+      parseRows: parseRows, matchQuota: matchQuota, buildItem: buildItem,
+      recomputeQuota: recomputeQuota, getPeriods: getPeriods,
+      exportGLD: exportGLD, exportJianjing: exportJianjing,
+      getData: function () { return exportData; },
+      setAOA: function (aoa) {
+        window._rawAOA = aoa;
+        exportData = parseRows(aoa, currentPeriod(), currentFormat());
+        renderTable(exportData);
+        return exportData;
+      },
+      setLoc: function (i, v) {
+        var it = exportData[i]; it.loc = v; it.locAmbiguous = false;
+        var allow = jointsOf(it);
+        if (allow.indexOf(it.joint) < 0) it.joint = defaultJoint(it);
+        it.jointFallback = null;
+        recomputeQuota(it); recomputePrice(it, exportData._periodKey); it.features = featureText(it);
+        renderTable(exportData);
+      },
+      setJoint: function (i, v) {
+        var it = exportData[i]; it.joint = v; it.jointFallback = null;
+        recomputeQuota(it); recomputePrice(it, exportData._periodKey); it.features = featureText(it);
+        renderTable(exportData);
+      }
+    };
+  }
+
+  // 暴露给Node测试
+  if (typeof module !== 'undefined' && module.exports) {
+    module.exports = {
+      annotateListCode12: annotateListCode12,
+      LIST: LIST, CAST_IRON: CAST_IRON, GALV: GALV, JOINT_CN: JOINT_CN,
+      buildItem: buildItem, matchQuota: matchQuota, parseRows: parseRows,
+      parseDN: parseDN, parseMedium: parseMedium, parseLoc: parseLoc, parseJoint: parseJoint,
+      materialOf: materialOf, jointsOf: jointsOf, defaultJoint: defaultJoint,
+      lookupCastIronPrice: lookupCastIronPrice, lookupGalvPrice: lookupGalvPrice,
+      lookupPipePrice: lookupPipePrice, getPeriods: getPeriods,
+      pipeKey: pipeKey, isPriced: isPriced, PIPE_GROUPS: PIPE_GROUPS,
+      parsePipeJoint: parsePipeJoint, JOINT_CN2: JOINT_CN2, plasticKindOf: plasticKindOf, MEDIUM_CN3: MEDIUM_CN3,
+      setSpec: function (spec, apply) { ACTIVE_SPEC = spec || null; SPEC_APPLY = apply !== false; },
+      getSpec: function () { return ACTIVE_SPEC; },
+      analyzeSpec: function (spec, items) { return SPEC.analyze(spec || ACTIVE_SPEC, items); },
+      featureText: featureText, buildWarn: buildWarn,
+      exportGLD: exportGLD, exportJianjing: exportJianjing,
+      exportGLDGs: exportGLDGs, exportJianjingGs: exportJianjingGs,
+      V_LIST: V_LIST, V_LABEL: V_LABEL, isValveCat: isValveCat, valveCatOf: valveCatOf,
+      buildValveItem: buildValveItem, matchValveQuota: matchValveQuota, valvePrice: valvePrice,
+      V_WTHREAD: V_WTHREAD, V_WFLANGE: V_WFLANGE, V_FLOAT: V_FLOAT, V_LEVEL: V_LEVEL,
+      V_STHREAD: V_STHREAD, V_SFLANGE: V_SFLANGE,
+      AUX_LIST: AUX_LIST, AUX_LABEL: AUX_LABEL, isAuxCat: isAuxCat, auxCatOf: auxCatOf,
+      buildAuxItem: buildAuxItem, matchAuxQuota: matchAuxQuota, auxPrice: auxPrice,
+      bracketWeightPerM: bracketWeightPerM, withBracket: withBracket,
+      S_DEF: S_DEF, S_WORK: S_WORK, isSanCat: isSanCat, sanCatOf: sanCatOf,
+      buildSanItem: buildSanItem, matchSanQuota: matchSanQuota, sanPrice: sanPrice,
+      sanOptLabel: sanOptLabel, SP: SP
+    };
+  }
+})();

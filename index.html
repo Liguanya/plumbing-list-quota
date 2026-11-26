@@ -89,6 +89,35 @@
         .spec-tag.joint { background: #fff3e0; color: #b26a00; }
         .spec-tag.measure { background: #f3e5f5; color: #6a1b9a; }
         .spec-tag.dn { background: #e8f5e9; color: #2e7d32; }
+        /* 造价要点 */
+        .sp-head { display: flex; align-items: baseline; gap: 8px; margin: 14px 0 8px; font-size: 13px; font-weight: 700; color: #0d3d44; }
+        .sp-head span { font-weight: 400; font-size: 11px; color: #7c9299; }
+        .sp-item { border-left: 3px solid #cfe0e3; padding: 7px 10px 7px 11px; margin-bottom: 6px; background: #fff; border-radius: 0 6px 6px 0; }
+        .sp-item.critical { border-left-color: #c0392b; background: #fff8f7; }
+        .sp-item.important { border-left-color: #d68910; background: #fffdf6; }
+        .sp-item.normal { border-left-color: #8fa8b0; }
+        .sp-top { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; }
+        .sp-top b { font-size: 13px; color: #12262b; }
+        .sp-lv { font-size: 10px; padding: 1px 6px; border-radius: 8px; background: #eceff1; color: #546e7a; font-weight: 700; flex-shrink: 0; }
+        .sp-item.critical .sp-lv { background: #fdecea; color: #b3261e; }
+        .sp-item.important .sp-lv { background: #fef5e7; color: #a06a00; }
+        .sp-detail { font-size: 11px; color: #2e7d32; background: #e8f5e9; padding: 1px 7px; border-radius: 8px; font-family: ui-monospace, Menlo, Consolas, monospace; }
+        .sp-hint { font-size: 12px; color: #4a5c63; line-height: 1.65; margin-top: 4px; }
+        .sp-ev { font-size: 11px; color: #8a9ba1; margin-top: 4px; line-height: 1.5; font-style: italic; }
+        /* 粘贴文本通道 */
+        .paste-box { margin-top: 10px; border: 1px dashed #cfe0e3; border-radius: 8px; padding: 8px 10px; background: #fbfefe; }
+        .paste-box summary { cursor: pointer; font-size: 12px; color: #1a5e63; font-weight: 600; outline: none; }
+        .paste-box[open] summary { margin-bottom: 8px; }
+        .paste-box textarea { width: 100%; box-sizing: border-box; border: 1px solid #d5e5e6; border-radius: 6px; padding: 8px; font-size: 12px; line-height: 1.65; font-family: inherit; resize: vertical; color: #223; }
+        .paste-box textarea:focus { outline: none; border-color: #0d7d75; }
+        .paste-actions { display: flex; align-items: center; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
+        .btn-mini { font-size: 12px; padding: 5px 13px; border-radius: 6px; border: 1px solid #0d7d75; background: #0d7d75; color: #fff; cursor: pointer; font-weight: 600; }
+        .btn-mini:hover { background: #0a6b64; }
+        .btn-mini.ghost { background: #fff; color: #0d7d75; }
+        .btn-mini.ghost:hover { background: #eef7f6; }
+        .paste-tip { font-size: 11px; color: #8a9ba1; }
+        .ocr-row { margin-top: 10px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+        .ocr-tip { font-size: 11px; color: #8a9ba1; }
         .spec-rules { border-top: 1px dashed #cfe8e4; padding-top: 10px; display: flex; flex-direction: column; gap: 6px; }
         .spec-rule { font-size: 12.5px; color: #37505a; line-height: 1.6; }
         .spec-rule b { color: #0d3d44; }
@@ -133,7 +162,7 @@
                 <h3>📋 使用说明与价格参考</h3>
                 <ul>
                     <li>上传给排水工程量清单 Excel（.xlsx/.xls），<strong>A列=序号</strong>、<strong>B列=项目名称（材质/管径/接口形式）</strong>、<strong>C列=数量</strong>、<strong>D列=单位（可选，m/m²/m³）</strong>，首行可为表头；阀门写 <code>蝶阀-300</code> 时，-300 即 DN300（也可写 <code>DN300</code>），按国标 DN 系列识别，压力/电压等后缀不按管径处理；系统按项目名称<strong>自动识别材质、公称直径与连接方式</strong>并套用清单与定额，结果支持<strong>「广联达 / 建经科技」</strong>两种格式导出。</li>
-                    <li><strong>图纸说明优先</strong>：左侧可先上传<strong>图纸说明</strong>（PDF / DWG / DXF / TXT），平台按段落上下文识别<strong>管材、连接方式、安装部位、系统、管径分档、试验与措施要求</strong>——CAD 提取的换行不会割裂「管材…接口为…连接」的对应关系，同一句里多条管径分档（<code>≥DN65卡箍／&lt;DN65螺纹</code>、<code>DN100及以上／DN80及以下</code>）会分别成条，管材与连接方式分处两句时按就近上下文配对；再上传右侧工程量清单，管道连接方式等按说明自动套用，无需逐条手选；说明与清单不一致时会给出<strong>对比分析</strong>（漏系统、漏材质、漏保温套管、管径越界等）。说明解析全部在本地完成，文件不上传服务器。</li>
+                    <li><strong>图纸说明优先</strong>：左侧可先上传<strong>图纸说明</strong>（PDF / DWG / DXF / TXT），平台按段落上下文识别<strong>管材、连接方式、安装部位、系统、管径分档、试验与措施要求</strong>——CAD 提取的换行不会割裂「管材…接口为…连接」的对应关系，同一句里多条管径分档（<code>≥DN65卡箍／&lt;DN65螺纹</code>、<code>DN100及以上／DN80及以下</code>）会分别成条，管材与连接方式分处两句时按就近上下文配对；同时抽取<strong>造价要点</strong>——拆除与清运、抗震支吊架、设备供货参数、不含项与另行委托、保温绝热、套管与防火封堵、试压冲洗消毒、管道支架、防腐刷漆、管材分界、计量远传、水质处理共 12 类，按对造价的影响分<strong>必查／注意／参考</strong>三档，每条附原文依据和「为什么值钱」的提示；再上传右侧工程量清单，管道连接方式等按说明自动套用，无需逐条手选；说明与清单不一致时会给出<strong>对比分析</strong>（漏系统、漏材质、漏保温套管、管径越界，以及清单缺拆除清运、缺抗震支架、设备参数不符、保温材质与说明不一致、清单项与说明「不含项」冲突等）。<strong>一次可以选多个文件</strong>（12 张说明截图、12 个单页 PDF 都行），平台排队逐个识别后合并成一份说明再解析。<strong>PDF 读不出文字时平台会明确告诉你是哪一种</strong>：文字被转成曲线的矢量化导出件、整页图片的扫描件、缺编码对照表的字体、还是<strong>整页只有缩略图的图纸目录页</strong>——前三种可一键调用<strong>本地 OCR</strong>（tesseract 中文引擎，纯浏览器运行、不联网、不传文件，A4 单页约 3-10 秒；<strong>A1 说明图会自动先找栏</strong>——按垂直投影把 2～4 栏分开，每栏单独高分辨率渲染再识别，栏与栏的文字不会串成一句，被 OCR 拆断的行会自动接回同一段），第四种会直接告诉你「正文不在这一页」。也可把说明文字直接粘进输入框走同一条解析链路。说明解析全部在本地完成，文件不上传服务器。</li>
                     <li><strong>塑料管</strong>：名称含 PVDF、聚乙烯（PE）、聚丙烯（PP-R）、聚丁烯（PB）、聚氯乙烯（PVC-U）等关键词的管道按塑料管组价，<strong>「安装部位/接口形式」列为三级联动</strong>——一级选<strong>室内/室外</strong>；室外二级直接选<strong>连接方式</strong>（热熔 / 电熔 / 粘接，公称外径 32~315mm）；室内二级选<strong>雨水管 / 排水管 / 给水管</strong>，三级选<strong>连接方式</strong>（排水：粘接 / 热熔 / 螺母密封圈；雨水：粘接；给水：热熔 / 电熔 / 粘接），切换后定额、主材价与项目特征实时重算。名称中也可直接写明，如 <code>室内聚乙烯PE给水管 De110 热熔连接</code>。</li>
                     <li><strong>价格参考</strong>：天津市工程造价信息（2026年1—10期）、<strong>价格数据库</strong>与市场价——取价优先级：<strong>信息价 → 数据库价 → 市场价</strong>；页面顶部「信息价期号」可选择期次（默认最新一期），切换后主材价按该期信息价重新计算；信息价有的按信息价计入（页面不标品牌）；信息价缺项的，先取门户「价格数据库」中本专业询价单价格并标注报价品牌，库中无对应条目时按国产中高档市场价并给出参考品牌。</li>
                 </ul>
@@ -157,10 +186,19 @@
                     <div class="upload-area" id="specArea">
                         <div class="upload-icon">📐</div>
                         <div class="upload-text">点击上传或拖拽图纸说明</div>
-                        <div class="upload-hint">支持 .pdf、.dwg、.dxf、.txt；自动提取管材、连接方式、安装部位、试验要求</div>
-                        <input type="file" id="specFile" accept=".pdf,.dwg,.dxf,.txt,.md">
+                        <div class="upload-hint">支持 .pdf / .dwg / .dxf / .txt / 截图(.png .jpg)；<b>可一次选多个文件</b>，自动排队识别后合并解析；文字层读不出可一键 OCR；提取管材、连接方式 + 12 类造价要点</div>
+                        <input type="file" id="specFile" multiple accept=".pdf,.dwg,.dxf,.txt,.md,.png,.jpg,.jpeg,.webp,.bmp">
                     </div>
                     <div class="spec-status" id="specStatus"></div>
+                    <details class="paste-box" id="specPasteBox">
+                        <summary>PDF 读不出文字？把说明文字粘进来</summary>
+                        <textarea id="specPasteText" rows="6" placeholder="从 CAD、PDF 阅读器或快速看图中全选复制说明文字，粘贴到这里。管材、设备、施工要求、范围说明都可以，粘贴后会自动提取造价要点。"></textarea>
+                        <div class="paste-actions">
+                            <button type="button" class="btn-mini" id="specPasteBtn">解析这段文字</button>
+                            <button type="button" class="btn-mini ghost" id="specPasteClear">清空</button>
+                            <span class="paste-tip">文字不出本机，全部在浏览器里算</span>
+                        </div>
+                    </details>
                     <div class="spec-card" id="specCard"></div>
                 </div>
                 <div class="input-col">
